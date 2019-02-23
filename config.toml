@@ -12,7 +12,7 @@ title = "localghost"
     fadeInIndex                  = false                   # Turn on/off the fade-in effect on the index page even if fade-in was otherwise turned off
     dateFormat                   = "2 Jan 2006"
     email                        = "sophie@localghost.dev"   # E-mail address for contact section
-    customCSS                    = ["overrides.css"]             # Include custom css files placed under assets/
+    customCSS                    = ["overrides.css", "nav.css"]             # Include custom css files placed under assets/
     footerText                   = "Built using [Hugo](http://gohugo.io/) with a theme based on [**Introduction**](https://github.com/vickylai/hugo-theme-introduction/)."
 
 

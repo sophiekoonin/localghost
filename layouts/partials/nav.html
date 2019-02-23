@@ -1,6 +1,4 @@
 <!-- Begin Nav bar -->
-<div class="container">
-    <hr>
     <nav class="navbar" role="navigation" aria-label="main navigation">
         {{ $isHome := .Page.IsHome }}
         <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
@@ -8,42 +6,45 @@
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
-        <div class="navbar-menu {{ if $isHome }}has-content-centered{{ end }}" id="navMenu">
+        <ul class="navbar-menu" id="navMenu">
             <!-- look for custom menu and include it -->
             {{ if .Site.Menus.main }}
             {{ range .Site.Menus.main }}
             {{ if .HasChildren }}
-            <a class="navbar-item"  href="{{ .URL }}">
+            <li class="navbar-item">
+            <a href="{{ .URL }}">
                 {{ .Pre }}
                 {{ .Name }}
                 {{ .Post }}
-            </a>
+            </a></li>
             {{ range .Children }}
             <!-- TODO: style children diffrent then parents-->
-            <a class="navbar-item" href="{{ .URL }}">
-                {{ .Pre }}
-                {{ .Name }}
-                {{ .Post }}
-            </a>
+            <li class="navbar-item">
+                <a href="{{ .URL }}">
+                    {{ .Pre }}
+                    {{ .Name }}
+                    {{ .Post }}
+                </a></li>
             {{ end }}
             {{ else }}
-            <a class="navbar-item" href="{{ .URL }}">
-                {{ .Pre }}
-                {{ .Name }}
-                {{ .Post }}
-            </a>
+            <li class="navbar-item">
+                <a href="{{ .URL }}">
+                    {{ .Pre }}
+                    {{ .Name }}
+                    {{ .Post }}
+                </a></li>
             {{ end }}
             {{ end }}
             {{ else }}
             <!-- use default menu -->
             {{ if not $isHome }}
-            <a class="navbar-item" href="{{ "/" | relLangURL }}">{{ i18n "nav_main" . }}</a>
+            <li class="navbar-item"><a href="{{ "/" | relLangURL }}">{{ i18n "nav_main" . }}</a></li>
             {{ end }}
 
             {{ with .Site.GetPage "/home" }}
             {{ range sort (.Resources.ByType "page") "Params.weight" }}
             {{ if ne .Name "contact.md" }}
-            <a class="navbar-item" href="{{ if $isHome }}#{{ .File.TranslationBaseName }}{{ else }}{{ printf "/#%s" (.File.TranslationBaseName | urlize) | relLangURL }}{{ end }}">{{ .Title }}</a>
+            <li class="navbar-item"><a href="{{ if $isHome }}#{{ .File.TranslationBaseName }}{{ else }}{{ printf "/#%s" (.File.TranslationBaseName | urlize) | relLangURL }}{{ end }}">{{ .Title }}</a></li>
             {{ end }}
             {{ end }}
             {{ end }}
@@ -53,15 +54,15 @@
             {{ with .Site.GetPage "/projects" }}
             {{ $totalProjects := (len .Pages) }}
             {{ if $isHome }}
-            <a class="navbar-item" href="{{ printf "#%s" (.Title | urlize) }}">{{ .Title }}</a>
+            <li class="navbar-item"><a href="{{ printf "#%s" (.Title | urlize) }}">{{ .Title }}</a></li>
             {{ else }}
-            <a class="navbar-item" href="{{ .Permalink }}">
+            <li class="navbar-item"><a href="{{ .Permalink }}">
                 {{ if $pageIsInProjects }}
                 {{ i18n "nav_backToSection" . }}
                 {{ else }}
                 {{ .Title }}
                 {{ end }}
-            </a>
+            </a></li>
             {{ end }}
             {{ end }}
             {{ end }}
@@ -70,37 +71,31 @@
             {{ if not (and $pageIsInBlog (eq .Page.Kind "section")) }}
             {{ with .Site.GetPage "/blog" }}
             {{ if $isHome }}
-            <a class="navbar-item" href="{{ printf "#%s" (.Title | urlize) }}">{{ .Title }}</a>
+            <li class="navbar-item"><a href="{{ printf "#%s" (.Title | urlize) }}">{{ .Title }}</a></li>
             {{ else }}
-            <a class="navbar-item" href="{{ .Permalink }}">
+            <li class="navbar-item"><a href="{{ .Permalink }}">
                 {{ if $pageIsInBlog }}
                 {{ i18n "nav_backToSection" . }}
                 {{ else }}
                 {{ .Title | singularize}}
                 {{ end }}
-            </a>
+            </a></li>
             {{ end }}
             {{ end }}
             {{ end }}
 
             {{ with .Site.GetPage "/home" }}
             {{ with .Resources.GetMatch "contact.md" }}
-            <a class="navbar-item" href="{{ if $isHome }}#{{ .File.TranslationBaseName }}{{ else }}{{ printf "/#%s" (.File.TranslationBaseName | urlize) | relLangURL }}{{ end }}">{{ .Title }}</a>
+            <li class="navbar-item"><a href="{{ if $isHome }}#{{ .File.TranslationBaseName }}{{ else }}{{ printf "/#%s" (.File.TranslationBaseName | urlize) | relLangURL }}{{ end }}">{{ .Title }}</a></li>
             {{ end }}
             {{ end }}
 
-            {{ range $.Site.Home.AllTranslations.ByWeight }}
-            {{ if ne .Language.LanguageName $.Language.LanguageName }}
-            <a class="navbar-item" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
-            {{ end }}
-            {{ end }}
 
             {{ if and .Site.Params.showRSSButton .Site.RSSLink }}
-            <a class="navbar-item" href="{{ .Site.RSSLink }}"><i class="fas fa-rss"></i></a>
+            <li class="navbar-item"><a href="{{ .Site.RSSLink }}"><i class="fas fa-rss"></i></a></li>
             {{ end }}
             {{ end }}
-        </div>
+        </ul>
     </nav>
-    <hr>
 </div>
 <!-- End Nav bar -->

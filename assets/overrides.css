@@ -12,6 +12,10 @@ body {
   padding: 0;
 }
 
+.section {
+  padding-top: 0;
+}
+
 a {
   color: #7c4ea7;  
 }

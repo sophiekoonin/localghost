@@ -1,0 +1,8 @@
+nav {
+  justify-content: flex-end;
+  padding-right: 1em;
+}
+
+.navbar-item a {
+  font-weight: 500;
+}

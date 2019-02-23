@@ -7,7 +7,9 @@
         {{ partial "head/css.html" . }}
     </head>
     <body>
-        <section id="top" class="section">
+        {{ partial "nav.html" . }}
+    
+        <section id="main" class="section">
             {{ with .Site.GetPage "/home" }}
             <div class="hero">
                 <!-- Super sweet Hero body title -->
@@ -15,7 +17,7 @@
                     <div class="container has-text-centered">
                         <!-- Title and tagline -->
                         <h1 class="bold-title">
-                            {{ .Title }}
+                            <a href="/">{{ .Title }}</a>
                         </h1>
                         <div class="subtitle">
                             {{ .Content }}
@@ -35,7 +37,6 @@
             <!-- Done with Hero -->
             <div>
                 <!-- Tell them all about it! -->
-                {{ partial "nav.html" . }}
 
                 {{ with .Site.GetPage "/home" }}
                 {{ $home := . }}
