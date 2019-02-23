@@ -1,0 +1,21 @@
+.bold-title {
+  font-family: 'VT323', monospace;
+  text-transform: lowercase;
+  margin: 0;
+}
+
+body {
+  font-family: 'Maven Pro', sans-serif;
+}
+
+.hero-body {
+  padding: 0;
+}
+
+a {
+  color: #7c4ea7;  
+}
+
+a:hover {
+  color: #fa72d1;
+}

@@ -1,0 +1,9 @@
+{{ define "main" }}
+    <div class="container markdown top-pad">
+        {{ .Content }}
+    </div>
+    <!-- End post content -->
+    <div class="disqus">
+        {{ template "_internal/disqus.html" . }}
+    </div>
+{{ end }}
