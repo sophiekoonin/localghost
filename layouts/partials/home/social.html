@@ -1,7 +1,9 @@
-<div class="social-icons">
+<ul class="social-icons">
     {{ range .Site.Params.social }}
+    <li>
     <a href="{{ .url }}" {{ .html_attributes | safeHTMLAttr }}>
         <i class="{{ .icon_pack}} fa-{{ .icon}}"></i>
     </a>
+    </li>
     {{ end }}
-</div>
+</ul>

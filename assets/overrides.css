@@ -23,3 +23,14 @@ a {
 a:hover {
   color: #fa72d1;
 }
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin-bottom: 1em;
+}
+
+.social-icons li {
+  margin: 0 0.5em;
+}

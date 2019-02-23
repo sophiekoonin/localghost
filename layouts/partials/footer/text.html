@@ -1,7 +1,10 @@
 <div class="section" id="footer">
+    <!-- Some social icons -->
+    {{ partial "home/social.html" . }}
+    <!-- End top social icons -->
     <div class="container has-text-centered">
-    {{ with .Site.Params.footerText }}
+        {{ with .Site.Params.footerText }}
         {{ . | markdownify }}
-    {{ end }}
+        {{ end }}
     </div>
 </div>
