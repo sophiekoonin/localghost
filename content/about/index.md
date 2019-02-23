@@ -1,5 +1,5 @@
 ---
-title: "All posts"
+title: "About"
 menu: "main"
 ---
 

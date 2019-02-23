@@ -1,0 +1,18 @@
+{{ with .Site.GetPage "/home" }}
+
+<header class="hero">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <!-- Title and tagline -->
+            <h1 class="bold-title">
+                <a href="/">{{ .Title }}</a>
+            </h1>
+            <div class="subtitle">
+                {{ .Content }}
+            </div>
+            <!-- End title and tagline -->
+
+        </div>
+    </div>
+</header>
+{{ end }}
