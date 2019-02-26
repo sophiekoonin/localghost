@@ -28,6 +28,7 @@
         </section>
         {{ block "js-include" . }}
         {{ partial "footer/scripts.html" . }}
+        {{ partial "footer/cookiebanner.html" .}}
         {{ end }}
         <!-- Include page specific scripts -->
         {{ block "customScripts" . }}
