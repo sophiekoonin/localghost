@@ -14,7 +14,7 @@ That’s me right now. I’m currently preparing my first ever conference talk f
 
 Just a few.
 
-![What a thing to wake up to.](/images/240108-01.jpeg")*What a thing to wake up to.*
+![What a thing to wake up to.](images/240108-01.jpeg)*What a thing to wake up to.*
 
 I got so many fantastic tips and suggestions—including some from experienced speakers like [Sarah Drasner](undefined), [Dan Abramov](undefined) and [Anjuan Simmons](undefined) — that one user suggested I turn it into a blog post. So here it is. (Thanks to [@sayzlim](http://www.twitter.com/sayzlim) for the suggestion!)
 
@@ -24,7 +24,7 @@ These tips have come from the tech community, but I think the majority of them c
 
 You’ve got the outline of your talk that you submitted to the Call for Papers, but how do you turn it into a full talk? Whether your talk is full-length or a shorter lightning talk, it can be quite stressful when you’re deciding what should go in and what you should leave out.
 
-**Find someone with speaking experience to help you put together your talk. **The organisers of ReactFest put me in touch with a lovely volunteer who offered to give me some pointers. Find a friend, mentor or colleague with experience of giving conference talks, and ask if they will help you out.
+**Find someone with speaking experience to help you put together your talk.** The organisers of ReactFest put me in touch with a lovely volunteer who offered to give me some pointers. Find a friend, mentor or colleague with experience of giving conference talks, and ask if they will help you out.
 
 One thing that came up repeatedly on Twitter was the concept of storytelling. Rather than just listing ideas or treating the talk like a tutorial, you want to **tell a story**. This makes the talk so much more engaging, and more likely to be remembered.
 

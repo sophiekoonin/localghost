@@ -52,6 +52,10 @@ title = "localghost"
         icon = "paper-plane" # icon name without the 'fa-'
         icon_pack = "fas"
 
+[params.readingtime]
+    one = "{{ .Count }} minute read"
+    other = "{{ .Count }} minutes read"
+
 # If you don't want to use the default menu, you can define one by yourself
 # [[menu.main]]
 #     name    = "Home"
