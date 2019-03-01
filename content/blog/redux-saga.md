@@ -292,19 +292,14 @@ You can also pass different values into `iterator.next()` to influence condition
 You probably {{< bold >}}don't{{< /bold >}} need redux-saga if:
 
 * Your application is really small and has few side effects
-
 * You don’t have complex data fetches
-
 * You are using thunks or observables or something similar and you are perfectly happy with these things
 
 You might want to try redux-saga if:
 
 * You are making data fetches which then do other fetches/complicated things with the fetched data
-
 * You are doing test-driven development and/or writing unit tests
-
 * You want to keep your actions pure and your components free of business logic
-
 * You’ve had enough of Promises
 
 Happy iterating!

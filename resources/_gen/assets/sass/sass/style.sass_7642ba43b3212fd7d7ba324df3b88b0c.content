@@ -7229,7 +7229,6 @@ hr {
   list-style: none; }
 
 .markdown li {
-  list-style: none;
   margin-left: 0;
   line-height: 2em;
   padding-left: 0;
@@ -7239,8 +7238,8 @@ hr {
   vertical-align: middle;
   content: '';
   display: inline-block;
-  height: 1em;
-  width: 1em;
+  height: 0.7em;
+  width: 0.7em;
   background-image: url(/icons/heart-bullet.svg);
   background-size: contain;
   background-repeat: no-repeat;
