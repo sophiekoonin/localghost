@@ -7292,7 +7292,8 @@ hr {
   background-color: #f7f7f7; }
 
 .markdown pre {
-  border-radius: 3px; }
+  border-radius: 3px;
+  margin-bottom: 1.5rem; }
 
 .markdown code {
   font-family: "Roboto Mono", monospace; }
@@ -7301,6 +7302,13 @@ hr {
   display: block;
   margin: 2rem auto;
   max-width: 100%; }
+
+.markdown .caption {
+  display: block;
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1.5rem; }
 
 .modal-background {
   background-color: rgba(255, 255, 255, 0.9); }

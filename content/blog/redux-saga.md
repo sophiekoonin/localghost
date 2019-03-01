@@ -20,7 +20,7 @@ I’m going to assume you know what Redux is. I’m not sure why you’d be look
 
 ### The only list you’ll ever need
 
-![Image description: a web page featuring a list of “Dogs of the Week” , with pictures of four dogs accompanied by their name, age, breed and favourite toy.](/img/redux-saga/dogsoftheweek.png)
+![A web page featuring a list of “Dogs of the Week” , with pictures of four dogs accompanied by their name, age, breed and favourite toy.](/img/redux-saga/dogsoftheweek.png)
 
 Here’s my example React application: a list of dogs with vital information. All the dogs are based on real dogs I have known and loved, but I did pinch the pictures from the internet so please let me know if I need to credit anyone.
 
@@ -32,11 +32,11 @@ In the world of programming, a {{< bold >}}side effect{{< /bold >}} is something
 
 Here’s a diagram with a basic example of an application without side effects. In React, this could be a container (controller) passing a hard-coded image URL to the component (view). Or this all might just happen inside the component itself. The important thing is that the image URL is hard-coded and not fetched from anywhere. The whole thing is synchronous: that is, code is executed line by line and happens in order.
 
-![Image description: The image shows a controller talking to a view. The controller is instructing the view to display a picture of a dog. The view displays the picture of the dog.](/img/redux-saga/view-controller.png)
+![The image shows a controller talking to a view. The controller is instructing the view to display a picture of a dog. The view displays the picture of the dog.](/img/redux-saga/view-controller.png)
 
 In an application with side effects, this would be a little different. Imagine our dog picture is fetched from an API somewhere. Before the view can display the image, the controller needs to talk to the API to get the image.
 
-![Image description: The image shows a controller talking to a view. The controller says “wait, let me go and get this picture”. The controller then fetches the picture from the API and tells the view to display the picture it has just fetched. The view displays the picture of the dog.](/img/redux-saga/fetch.png)
+![The image shows a controller talking to a view. The controller says “wait, let me go and get this picture”. The controller then fetches the picture from the API and tells the view to display the picture it has just fetched. The view displays the picture of the dog.](/img/redux-saga/fetch.png)
 
 Things just got asynchronous: so that we don’t block the flow of the application, the API fetch needs to happen outside of the main flow of the application and return its result when it can. We want the application to continue executing while this happens.
 
@@ -127,7 +127,7 @@ test('dispatches fetchFavouriteToysRequested with the fetched dogs if response i
 
 Oh right, this is why I don’t like thunks. You have to mock EVERYTHING. You end up with test setups that are twice as long as the actual code. On a previous project I worked on, we had a thunk which performed a fetch and then dispatched two subsequent thunks with the data it received. We got into quite a mess mocking it and testing all the calls.
 
-![Image description: a dog tangled up in some window blinds.](/img/redux-saga/window-blinds.jpeg)
+![A dog tangled up in some window blinds.](/img/redux-saga/window-blinds.jpeg)
 
 ### Introducing redux-saga
 
@@ -190,14 +190,15 @@ Generators can be paused and resumed at any time, and their states are saved whi
 
 Sagas are triggered using special watcher functions, which plug into the middleware and listen for particular actions being dispatched.
 
-![Image description: dog watching TV](/img/redux-saga/watch.jpeg)*This dog is watching for patDogRequested, obviously.*
+{{< imgcaption src="/img/redux-saga/watch.jpeg" title="Dog watching TV" caption="This dog is watching for patDogRequested, obviously.">}}
 
 {{< highlight javascript >}}
 function* watchForFetchDogsRequested() {
   yield takeLatest('FETCH_DOGS_REQUESTED', fetchDogs)
 }
 {{< /highlight >}}
-c
+
+
 When the action is dispatched, the saga middleware will execute the `fetchDogs` saga. takeLatest means that only the most recent action is used; if the `fetchDogs` saga has been kicked off, and a new `fetchDogsRequested` action is dispatched, the previous task will be cancelled and a new one started. This is useful for fetching the most up-to-date information.
 
 You can also use takeEvery, which is similar except it triggers the saga for every action it receives rather than just the latest. For example, with the action `patDogRequested`, you’d probably want to use `takeEvery` because you want to give those dogs every single head pat that is coming to them.
@@ -218,31 +219,29 @@ const res = yield call(api.fetchDogs)
   }
 }
 {{< /highlight >}}
-c
+
+
 The key here is the `call` function. It’s part of the redux-saga library of {{< bold >}}effects{{< /bold >}}, and all behave the same way, returning objects with descriptions of code. In this case, `call` is an instruction to call a function. These objects are like instructions for the saga middleware, which will execute them step-by-step in the saga.
 
 ### redux-saga effects
 
 As well as `call`, here are some other handy effects you can use to tame your wild async code:
 
-* `race` allows you to trigger two asynchronous tasks at the same time, and whichever one finishes first ‘wins’, causing the other one to be cancelled. For example, if you’re making an api call that doesn’t have a timeout on it, you might want to impose one this way.
+* `race` allows you to trigger two asynchronous tasks at the same time, and whichever one finishes first 'wins’, causing the other one to be cancelled. For example, if you’re making an api call that doesn’t have a timeout on it, you might want to impose one this way.
 
 {{< highlight javascript >}}
-const { response, timeout } = yield **race**({
+const { response, timeout } = yield race({
   response: call(api.patDog, dogId),
-  timeout: delay(1000, ‘oh no’)
+  timeout: delay(1000, 'oh no')
 })
 {{< /highlight >}}
-c
+
+
 * `put` dispatches an action to the store
-
 * `select` calls a selector to get a value from the state
-
 * `fork` triggers a task in a separate thread
-
 * `cancel` allows you to cancel a previously triggered saga
-
-* `all` allows you to trigger several tasks in parallel and won’t return until they have all finished (a bit like `Promise.all`) which is particularly useful for calling several selectors:
+* `all` allows you to trigger several tasks in parallel and won't return until they have all finished (a bit like `Promise.all`) which is particularly useful for calling several selectors:
 
 {{< highlight javascript >}}
 const [
@@ -253,46 +252,45 @@ const [
     select(getFavouriteToy)
 ])
 {{< /highlight >}}
-c
 
 ### Testing sagas
 
-This, in my opinion, is where sagas really shine. If you’re doing TDD, having a library which is easy to test is a godsend.
+This, in my opinion, is where sagas really shine. If you're doing TDD, having a library which is easy to test is a godsend.
 
 Since each step of the saga returns an object, and the saga itself is a generator, we can simply invoke the saga to get an `Iterator` object and call its `next()` function to access each step. Then we can assert on the value of the object that each step returns.
 
 Here, we are checking the value of the first step of the saga to make sure its value is equal to the object returned by `call(api.fetchDogs)`:
 
 {{< highlight javascript >}}
-import { call } from ‘redux-saga/effects’
+import { call } from 'redux-saga/effects'
 test('calls fetchDogs API', () => {
     const iterator = fetchDogs()
     expect(iterator.next().value).toEqual(call(api.fetchDogs))
 })
 {{< /highlight >}}
-c
+
+
 Or, if you are using Jest, you could use snapshot testing to match the value of the iterator step which is even easier. And no mocking required!
 
-You can also test branching logic. In a saga with a `try/catch` block, you can call `iterator.throw()` and make sure that it’s doing the right thing when an error occurs:
+You can also test branching logic. In a saga with a `try/catch` block, you can call `iterator.throw()` and make sure that it's doing the right thing when an error occurs:
 
 {{< highlight javascript >}}
 test('dispatches fetchDogsFailed if the call fails', () => {
     const iterator = fetchDogs()
     iterator.next()
-    expect(iterator.throw(‘oh no’).value)
-        .toEqual(call(fetchDogsFailed(‘oh no’)))
+    expect(iterator.throw('oh no').value)
+        .toEqual(call(fetchDogsFailed('oh no')))
 })
 {{< /highlight >}}
-c
 
-You can also pass different values into `iterator.next()` to influence conditional logic such as if statements. It’s all very clever.
+You can also pass different values into `iterator.next()` to influence conditional logic such as if statements. It's all very clever.
 
 ### Conclusion
 
 You probably {{< bold >}}don't{{< /bold >}} need redux-saga if:
 
 * Your application is really small and has few side effects
-* You don’t have complex data fetches
+* You don't have complex data fetches
 * You are using thunks or observables or something similar and you are perfectly happy with these things
 
 You might want to try redux-saga if:
@@ -300,6 +298,6 @@ You might want to try redux-saga if:
 * You are making data fetches which then do other fetches/complicated things with the fetched data
 * You are doing test-driven development and/or writing unit tests
 * You want to keep your actions pure and your components free of business logic
-* You’ve had enough of Promises
+* You've had enough of Promises
 
 Happy iterating!
