@@ -3,6 +3,11 @@ DefaultContentLanguage           = "en"                    # Default language fo
 # disqusshortname                 = ""                       # https://gohugo.io/content-management/comments
 # googleAnalytics                 = ""                       # https://gohugo.io/templates/internal/#google-analytics
 title = "localghost"
+pygmentsOptions = ""
+pygmentsUseClasses = true
+linenos = true
+pluralizeListTitles = false
+
 
 [params]
     themeStyle                   = "light"                 # Choose "light" or "dark"
@@ -12,9 +17,8 @@ title = "localghost"
     fadeInIndex                  = false                   # Turn on/off the fade-in effect on the index page even if fade-in was otherwise turned off
     dateFormat                   = "2 Jan 2006"
     email                        = "sophie@localghost.dev"   # E-mail address for contact section
-    customCSS                    = ["overrides.css", "nav.css", "blog.css"]             # Include custom css files placed under assets/
+    customCSS                    = ["overrides.css", "syntax.css", "nav.css", "blog.css"]             # Include custom css files placed under assets/
     footerText                   = "Built using [Hugo](http://gohugo.io/) with a theme based on [**Introduction**](https://github.com/vickylai/hugo-theme-introduction/)."
-
 
 
     # Configure the home page
@@ -87,3 +91,4 @@ title = "localghost"
   [privacy.youtube]
     disable = false
     privacyEnhanced = true
+

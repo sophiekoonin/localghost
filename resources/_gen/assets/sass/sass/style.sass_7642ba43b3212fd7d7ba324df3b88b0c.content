@@ -7229,10 +7229,22 @@ hr {
   list-style: none; }
 
 .markdown li {
-  list-style-type: disc;
-  margin-left: 1.5em;
-  list-style-position: outside;
-  padding-left: 1em; }
+  list-style: none;
+  margin-left: 0;
+  line-height: 2em;
+  padding-left: 0;
+  vertical-align: middle; }
+
+.markdown li:before {
+  vertical-align: middle;
+  content: '';
+  display: inline-block;
+  height: 1.5em;
+  width: 1.5em;
+  background-image: url(/icons/heart-bullet.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 0.5em; }
 
 .markdown em {
   font-style: italic; }
@@ -7282,6 +7294,9 @@ hr {
 
 .markdown pre {
   border-radius: 3px; }
+
+.markdown code {
+  font-family: "Roboto Mono", monospace; }
 
 .markdown img {
   display: block;

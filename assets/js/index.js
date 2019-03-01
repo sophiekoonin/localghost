@@ -1,45 +1,60 @@
 // Nav burger animation
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function() {
   // Get all "navbar-burger" elements
-  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"), 0);
+  var $navbarBurgers = Array.prototype.slice.call(
+    document.querySelectorAll('.navbar-burger'),
+    0
+  );
   // Check if there are any navbar burgers
   if ($navbarBurgers.length > 0) {
     // Add a click event on each of them
-    $navbarBurgers.forEach(function ($el) {
-      $el.addEventListener("click", function () {
+    $navbarBurgers.forEach(function($el) {
+      $el.addEventListener('click', function() {
         // Get the target from the "data-target" attribute
         var target = $el.dataset.target;
         var $target = document.getElementById(target);
         // Toggle the class on both the "navbar-burger" and the "navbar-menu"
-        $el.classList.toggle("is-active");
-        $target.classList.toggle("is-active");
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
       });
     });
   }
 });
 
 // Bitty scrolling links script
-$("a[href^=\"#\"]").click(function(e) {
-    e.preventDefault();
-    $("html, body").animate({
-        scrollTop: $(document.getElementById(this.hash.substr(1))).offset().top
-    }, 500);
-    $("#nav-menu").removeClass("is-active");
-    return true;
-})
+$('a[href^="#"]').click(function(e) {
+  e.preventDefault();
+  $('html, body').animate(
+    {
+      scrollTop: $(document.getElementById(this.hash.substr(1))).offset().top
+    },
+    500
+  );
+  $('#nav-menu').removeClass('is-active');
+  return true;
+});
 
 // Modal closer
-$(".card").click(function () {
-    $($(this).attr("data-target")).addClass("is-active");
-    $("html").addClass("modal-open");
+$('.card').click(function() {
+  $($(this).attr('data-target')).addClass('is-active');
+  $('html').addClass('modal-open');
 });
-$(".modal-close").click(function () {
-    $($(this).attr("data-target")).removeClass("is-active");
-    $("html").removeClass("modal-open");
+$('.modal-close').click(function() {
+  $($(this).attr('data-target')).removeClass('is-active');
+  $('html').removeClass('modal-open');
 });
 $(document).keypress(function(e) {
-    if(e.which == 0) {
-        $(".modal.is-active").removeClass("is-active");
-        $("html").removeClass("modal-open");
-    }
+  if (e.which == 0) {
+    $('.modal.is-active').removeClass('is-active');
+    $('html').removeClass('modal-open');
+  }
 });
+function* getDog = () => {
+  try {
+    const res = yield call(api.fetchDogs)
+    const dogsWithToys = yield all(res.dogs.map(dog => fetchFavouriteToy(dog)))
+    yield put(fetchDogsSucceeded(dogsWithToys))
+  } catch (error) {
+    yield put(fetchDogsFailed(error))
+  }
+}
