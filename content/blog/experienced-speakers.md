@@ -1,5 +1,6 @@
 ---
-title: "Things Experienced Speakers Wish They'd Known: Tips For First-Time Conference Speakers"
+title: "Things Experienced Speakers Wish They'd Known"
+subtitle: "Tips For First-Time Conference Speakers"
 date: 2018-01-24T15:00:00Z
 tags: ['conferences', 'talks', 'advice', 'twitter']
 ---

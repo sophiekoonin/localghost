@@ -1,23 +1,25 @@
 html, body
     background-color: $background
     font-family: 'Nunito Sans', sans-serif
-
+    font-size: 1em;
 
 html.modal-open
     overflow: hidden
 
 a
     color: $primary
+    text-decoration: underline
     &:hover
         color: $link-hover
         font-style: none
     &:active
         color: $primary
 
-h1, h2, .title, .subtitle
+h1, h2, .title, .post-subtitle
+    font-family: "Alef", sans-serif
     color: $h-color
-    font-family: 'Rokkitt'
-    font-weight: 600
+    font-weight: 400
+    line-height: 1.2em
 
 .title
     font-weight: 400
@@ -35,7 +37,10 @@ hr
     height: 1px
 
 .container
-    max-width: 1000px
+    max-width: 800px
+
+.title.small-bottom-margin
+    margin-bottom: 1rem
 
 .noborder
     border-radius: 0px
@@ -66,6 +71,8 @@ hr
     @include mobile
         font-size: 3rem
         text-align: center
+    a
+        color: #9673D3
 
 .top-pad
     padding-top: 1rem
@@ -86,8 +93,28 @@ hr
     font-size: 1rem
     line-height: 2rem
 
-.date 
+.post-subtitle
+    font-size: 1.5rem
+    display: inline-block
+    margin-bottom: 1rem
+
+.post-date
+    a
+        text-decoration: none
+
+    a:hover::before    
+        font-family: "Font Awesome 5 Solid"
+        content: "\f0c1"
+        color: #1da1f2
+        display: inline-block
+        padding-right: 3px
+        vertical-align: middle
+        font-weight: 900
+        font-size: 1.5rem
+
+.date
     font-style: italic
+
 
 .social-icons
     padding: 0 10px
@@ -107,6 +134,9 @@ hr
         vertical-align: baseline
         margin: 0 5px
 
+    a 
+        text-decoration: none
+        padding: 0 0.5rem
 .navbar-burger
     margin-right: auto
 
@@ -150,8 +180,19 @@ hr
 .has-content-centered
     justify-content: center
 
-h2.title 
-    font-size: $size-1
+.hero a 
+    text-decoration: none
+
+a.tweet 
+    background: #9673D3
+    color: #ffffff
+    text-decoration: none
+    font-weight: 600
+    padding: 0.5rem 1rem 
+    border-radius: 3px   
+
+h1.title 
+    font-size: 2.5rem
     @include mobile
         font-size: $size-3
 
@@ -164,14 +205,14 @@ h2.title
         @include mobile
             font-size: $size-2
     h2
-        font-size: $size-2
+        font-size: $size-3
         line-height: 1em
         margin-top: 1.5em
-        margin-bottom: 0.5em
+        margin-bottom: 0.8em
         @include mobile
             font-size: $size-4
     h3
-        font-size: $size-3
+        font-size: 1.5rem
         @include mobile
             font-size: $size-4
     h4
@@ -219,8 +260,12 @@ h2.title
         cursor: help
         border-bottom: 1px dotted #808080
     blockquote
-        padding: .5rem 1rem
-        margin: .8rem 0
+        max-width: 80%
+    
+        @include mobile
+            max-width: 100%
+        padding: 1rem 1rem
+        margin: 1.5rem auto
         background: rgba(245, 245, 245, 0.5)    
         color: #7a7a7a
         border-left: .3rem solid #e5e5e5
@@ -253,3 +298,13 @@ h2.title
         text-align: center
         width: 100%
         margin-bottom: 1.5rem
+
+    ul.tags
+        display: flex
+        align-items: center
+        margin-left: 0
+    li.star-bullet:before
+        background-image: url(/icons/star.svg)
+        vertical-align: unset
+    li.star-bullet
+        padding: 1rem
