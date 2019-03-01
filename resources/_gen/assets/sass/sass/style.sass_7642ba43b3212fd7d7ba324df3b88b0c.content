@@ -1852,7 +1852,6 @@ a.navbar-item,
   .navbar-link::after {
     display: none; }
   .navbar-menu {
-    background-color: #ffffff;
     box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
     padding: 0.5rem 0; }
     .navbar-menu.is-active {
@@ -7040,7 +7039,7 @@ readers do not read off random characters that represent icons */
 
 html, body {
   background-color: #ffffff;
-  font-family: 'Maven Pro', sans-serif; }
+  font-family: 'Nunito Sans', sans-serif; }
 
 html.modal-open {
   overflow: hidden; }
@@ -7054,7 +7053,9 @@ a {
     color: #7c4ea7; }
 
 h1, h2, .title, .subtitle {
-  color: #222222; }
+  color: #222222;
+  font-family: 'Rokkitt';
+  font-weight: 600; }
 
 .title {
   font-weight: 400; }
@@ -7125,6 +7126,9 @@ hr {
   font-size: 1rem;
   line-height: 2rem; }
 
+.date {
+  font-style: italic; }
+
 .social-icons {
   padding: 0 10px; }
 
@@ -7187,8 +7191,15 @@ hr {
 .has-content-centered {
   justify-content: center; }
 
+h2.title {
+  font-size: 3rem; }
+  @media screen and (max-width: 768px) {
+    h2.title {
+      font-size: 2rem; } }
+
 .markdown p {
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  line-height: 2em; }
 
 .markdown h1 {
   font-size: 3rem; }
@@ -7199,11 +7210,11 @@ hr {
 .markdown h2 {
   font-size: 2.5rem;
   line-height: 1em;
-  margin-top: 1em;
+  margin-top: 1.5em;
   margin-bottom: 0.5em; }
   @media screen and (max-width: 768px) {
     .markdown h2 {
-      font-size: 2rem; } }
+      font-size: 1.5rem; } }
 
 .markdown h3 {
   font-size: 2rem; }

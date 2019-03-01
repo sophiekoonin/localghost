@@ -1,6 +1,6 @@
 html, body
     background-color: $background
-    font-family: 'Maven Pro', sans-serif
+    font-family: 'Nunito Sans', sans-serif
 
 
 html.modal-open
@@ -16,6 +16,8 @@ a
 
 h1, h2, .title, .subtitle
     color: $h-color
+    font-family: 'Rokkitt'
+    font-weight: 600
 
 .title
     font-weight: 400
@@ -84,6 +86,9 @@ hr
     font-size: 1rem
     line-height: 2rem
 
+.date 
+    font-style: italic
+
 .social-icons
     padding: 0 10px
 
@@ -145,9 +150,15 @@ hr
 .has-content-centered
     justify-content: center
 
+h2.title 
+    font-size: $size-1
+    @include mobile
+        font-size: $size-3
+
 .markdown
     p
         margin-bottom: 1em
+        line-height: 2em;
     h1
         font-size: $size-1
         @include mobile
@@ -155,10 +166,10 @@ hr
     h2
         font-size: $size-2
         line-height: 1em
-        margin-top: 1em
+        margin-top: 1.5em
         margin-bottom: 0.5em
         @include mobile
-            font-size: $size-3
+            font-size: $size-4
     h3
         font-size: $size-3
         @include mobile
