@@ -49,12 +49,3 @@ $(document).keypress(function(e) {
     $('html').removeClass('modal-open');
   }
 });
-function* getDog = () => {
-  try {
-    const res = yield call(api.fetchDogs)
-    const dogsWithToys = yield all(res.dogs.map(dog => fetchFavouriteToy(dog)))
-    yield put(fetchDogsSucceeded(dogsWithToys))
-  } catch (error) {
-    yield put(fetchDogsFailed(error))
-  }
-}
