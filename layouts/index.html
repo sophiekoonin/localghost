@@ -19,13 +19,12 @@
             {{ if .Site.Params.home.showLatest | default true }}
                 {{ range first 10 .Pages.ByPublishDate.Reverse }}
                 <article class="summary">
-                    <h3 class="title is-3 latest-post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-                    <span class="date">{{ if .Params.date }}{{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }}{{ end }}</span>    
+                        <span class="date">{{ if .Params.date }}{{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }}{{ end }}</span>    
+
+                    <h3 class="title is-3 post-title {{if .Params.Subtitle}}small-bottom-margin{{end}} "><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                    {{if .Params.Subtitle }}<span class="post-subtitle">{{ .Params.Subtitle }}</span>{{ end }}
                     <div class="markdown">
-                        {{ .Summary }}
-                        {{ if .Truncated }}
-                        <a href="{{ .Permalink }}">Read more...</a>
-                        {{ end }}
+                        {{ .Content }}
                     </div>
                 </article>
             {{ end }}
