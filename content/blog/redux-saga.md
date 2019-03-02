@@ -4,7 +4,7 @@ date: 2018-03-15T15:00:00Z
 tags: ['redux', 'react', 'javascript']
 ---
 
-I recently gave my first ever conference talk at ReactFest, woohoo! (Greatly helped by the excellent tips I got from the Twitter tech community — check out my previous post to see them: Things Experienced Speakers Wish They’d Known: Tips For First-Time Conference Speakers). I thought I’d share what I talked about — a brief overview of the redux-saga side effect management middleware for Redux — in the form of a blog post to help anyone who’s desperately Googling redux-saga in the hope of understanding what function* actually means. I was in your place once, friend. Don’t worry, soon all will become clear and you’ll be evangelising to anyone who will listen (and some who won’t) about the healing properties of the yield keyword.
+I recently gave my first ever conference talk at ReactFest, woohoo! (Greatly helped by the excellent tips I got from the Twitter tech community — check out my previous post to see them: Things Experienced Speakers Wish They’d Known: Tips For First-Time Conference Speakers). I thought I’d share what I talked about — a brief overview of the redux-saga side effect management middleware for Redux — in the form of a blog post to help anyone who’s desperately Googling redux-saga in the hope of understanding what `function*` actually means. I was in your place once, friend. Don’t worry, soon all will become clear and you’ll be evangelising to anyone who will listen (and some who won’t) about the healing properties of the yield keyword.
 
 Redux-sagas are great for many reasons but I think the biggest advantage is how easy they are to test, and you’ll see why.
 

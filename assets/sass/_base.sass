@@ -1,7 +1,7 @@
 html, body
     background-color: $background
     font-family: 'Nunito Sans', sans-serif
-    font-size: 1em;
+    font-size: 1.05em;
 
 html.modal-open
     overflow: hidden
@@ -17,9 +17,15 @@ a
 
 h1, h2, .title, .post-subtitle
     font-family: "Alef", sans-serif
-    color: $h-color
+    color: #5bcbb3 
     font-weight: 400
     line-height: 1.2em
+
+h3
+    a
+        font-weight: 600
+        text-decoration: none
+        
 
 .title
     font-weight: 400
@@ -101,16 +107,17 @@ hr
 .post-date
     a
         text-decoration: none
-
-    a:hover::before    
-        font-family: "Font Awesome 5 Solid"
+        color: $body-color
+    a::before    
+        font-family: "Font Awesome 5 Free"
         content: "\f0c1"
-        color: #1da1f2
+        color: #9c9c9c
         display: inline-block
         padding-right: 3px
         vertical-align: middle
         font-weight: 900
-        font-size: 1.5rem
+        font-size: 1rem
+        line-height: 1rem
 
 .date
     font-style: italic
