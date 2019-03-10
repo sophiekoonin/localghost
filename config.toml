@@ -17,7 +17,7 @@ pluralizeListTitles = false
     fadeInIndex                  = false                   # Turn on/off the fade-in effect on the index page even if fade-in was otherwise turned off
     dateFormat                   = "2 Jan 2006"
     email                        = "sophie@localghost.dev"   # E-mail address for contact section
-    customCSS                    = ["overrides.css", "syntax.css", "blog.css"]             # Include custom css files placed under assets/
+    customCSS                    = ["syntax.css"]             # Include custom css files placed under assets/
     footerText                   = "Built using [Hugo](http://gohugo.io/) with a theme based on [**Introduction**](https://github.com/vickylai/hugo-theme-introduction/)."
 
 
@@ -46,15 +46,12 @@ pluralizeListTitles = false
     [[params.social]]
         url   = "https://twitter.com/type__error"
         icon  = "twitter" # icon name without the 'fa-'
-        icon_pack = "fab"
     [[params.social]]
         url   = "https://linkedin.com/in/SophieKoonin"
-        icon  = "linkedin-in" # icon name without the 'fa-'
-        icon_pack = "fab"
+        icon  = "linkedin" # icon name without the 'fa-'
     [[params.social]]
         url = "mailto:youremail@email.com"  # For a direct email link, use "mailto:test@example.org".
         icon = "paper-plane" # icon name without the 'fa-'
-        icon_pack = "fas"
 
 [params.readingtime]
     one = "{{ .Count }} minute read"

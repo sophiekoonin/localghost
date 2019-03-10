@@ -1,4 +1,4 @@
-{{ $bundleRaw := resources.Get "/sass/style.sass" | resources.ExecuteAsTemplate "/css/main.tmp.css" . }}
+{{ $bundleRaw := resources.Get "/scss/style.scss" | resources.ExecuteAsTemplate "/css/main.tmp.css" . }}
 
 {{ if .Site.IsServer }}
 {{ $cssOpts := (dict "targetPath" "/css/main.css" "enableSourceMap" true ) }}
