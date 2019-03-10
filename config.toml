@@ -50,7 +50,7 @@ pluralizeListTitles = false
         url   = "https://linkedin.com/in/SophieKoonin"
         icon  = "linkedin" # icon name without the 'fa-'
     [[params.social]]
-        url = "mailto:youremail@email.com"  # For a direct email link, use "mailto:test@example.org".
+        url = "mailto:sophie@localghost.dev"  # For a direct email link, use "mailto:test@example.org".
         icon = "email" # icon name without the 'fa-'
 
 [params.readingtime]
