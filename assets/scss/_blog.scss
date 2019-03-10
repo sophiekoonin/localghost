@@ -1,0 +1,31 @@
+span.heavy {
+  font-weight: 500;
+}
+
+span.image-caption {
+  font-style: italic;
+}
+
+img + .image-caption {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+
+.markdown .twitter-tweet {
+  font-family: inherit;
+  color:#000;
+  font-size: 1em;  
+
+  &::before {
+    content: "";
+    background-image: url("/img/icons/twitter-blue.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    height: auto;
+    padding-right: 25px;
+    vertical-align: middle;
+}
+}

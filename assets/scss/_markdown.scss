@@ -1,0 +1,30 @@
+.markdown {
+  &.single-page li {
+    list-style-type: none;
+    margin-left: 0;
+    line-height: 2em;
+    padding-left: 0;
+    vertical-align: middle;
+
+    &:before {
+      vertical-align: middle;
+      content: '';
+      display: inline-block;
+      height: 1.5em;
+      width: 1.5em;
+      background-image: url(/icons/speech-heart.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-right: 0.5em;
+    }
+  }
+
+  img.image-right {
+    @media screen and (min-width: 600px) {
+      max-width: 250px;
+      float: right;
+    }
+    box-shadow: none;
+    border: 0;
+  }
+}

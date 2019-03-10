@@ -1,0 +1,15 @@
+.hero {
+  img {
+    border: 0;
+    box-shadow: none;
+    max-width: 150px; 
+  }
+  .hero-body {
+    padding: 0;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
