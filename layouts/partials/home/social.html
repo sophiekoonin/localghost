@@ -1,8 +1,9 @@
 <ul class="social-icons">
+    {{ $baseURL := .Site.BaseURL }}
     {{ range .Site.Params.social }}
     <li>
     <a href="{{ .url }}" {{ .html_attributes | safeHTMLAttr }}>
-        <img src="{{.Site.BaseURL}}img/icons/{{ .icon}}.svg"/>
+        <img src="{{$baseURL}}img/icons/{{ .icon}}.svg"/>
     </a>
     </li>
     {{ end }}

@@ -12,10 +12,10 @@
         {{ end }}
     </head>
         <body>
+            {{ partial "nav.html" . }}
             <section id="main" class="section">
             {{ partial "header/header.html" . }}
         
-            {{ partial "nav.html" . }}
 
             {{ block "main" . }}
             {{ end }}
