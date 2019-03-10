@@ -1,6 +1,8 @@
 <div class="section" id="footer">
     <!-- Some social icons -->
-    {{ partial "home/social.html" . }}
+    <ul class="social-icons">
+        {{ partial "home/social.html" . }}
+    </ul>
     <!-- End top social icons -->
     <div class="container has-text-centered">
         {{ with .Site.Params.footerText }}

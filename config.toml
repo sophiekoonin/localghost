@@ -51,7 +51,7 @@ pluralizeListTitles = false
         icon  = "linkedin" # icon name without the 'fa-'
     [[params.social]]
         url = "mailto:youremail@email.com"  # For a direct email link, use "mailto:test@example.org".
-        icon = "paper-plane" # icon name without the 'fa-'
+        icon = "email" # icon name without the 'fa-'
 
 [params.readingtime]
     one = "{{ .Count }} minute read"

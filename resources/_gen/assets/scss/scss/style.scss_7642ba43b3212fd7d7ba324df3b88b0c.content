@@ -3434,7 +3434,8 @@ hr {
   height: 1px; }
 
 .container {
-  max-width: 800px; }
+  max-width: 800px;
+  padding-top: 3rem; }
 
 .title.small-bottom-margin {
   margin-bottom: 1rem; }
@@ -3771,7 +3772,7 @@ nav.navbar {
   margin-right: 1em; }
 
 span.heavy {
-  font-weight: 500; }
+  font-weight: 700; }
 
 span.image-caption {
   font-style: italic; }
@@ -3812,12 +3813,14 @@ span.bold {
   justify-content: center;
   list-style-type: none;
   margin-bottom: 1em; }
-  .social-icons li {
-    margin: 0 0.5em; }
-  .social-icons img {
+
+.social-icon {
+  margin: 0 0.5em; }
+  .social-icon img {
     box-shadow: none;
     border: 0;
-    width: 1.25rem; }
+    width: 1rem;
+    height: 100%; }
 
 .markdown.single-page li {
   list-style-type: none;
