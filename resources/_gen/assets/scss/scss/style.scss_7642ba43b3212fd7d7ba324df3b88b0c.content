@@ -3410,7 +3410,7 @@ a {
 
 h1, h2, .title, .post-subtitle {
   font-family: "Alef", sans-serif;
-  color: #5bcbb3;
+  color: #c94ab4;
   font-weight: 400;
   line-height: 1.2em; }
 
@@ -3688,7 +3688,7 @@ h1.title {
   margin: 1.5rem auto;
   background: rgba(245, 245, 245, 0.5);
   color: #7a7a7a;
-  border-left: 0.3rem solid #e5e5e5; }
+  border-left: 0.3rem solid #15e0e7; }
   @media screen and (max-width: 768px) {
     .markdown blockquote {
       max-width: 100%; } }
