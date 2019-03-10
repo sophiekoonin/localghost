@@ -3430,8 +3430,8 @@ img {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); }
 
 hr {
-  background-color: #dbdbdb;
-  height: 1px; }
+  height: 1px;
+  background-color: #dbdbdb; }
 
 .container {
   max-width: 800px;
@@ -3788,7 +3788,7 @@ img + .image-caption {
   font-size: 1em; }
   .markdown .twitter-tweet::before {
     content: "";
-    background-image: url("/img/icons/twitter-blue.svg");
+    background-image: url("/icons/twitter-blue.svg");
     background-size: contain;
     background-repeat: no-repeat;
     width: 1.5rem;

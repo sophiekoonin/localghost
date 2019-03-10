@@ -2,7 +2,7 @@
     {{ range .Site.Params.social }}
     <li class="social-icon">
     <a href="{{ .url }}" alt="{{.icon}}" {{ .html_attributes | safeHTMLAttr }}>
-        <img src="{{$baseURL}}img/icons/{{ .icon}}.svg"/>
+        <img src="{{$baseURL}}icons/{{ .icon}}.svg"/>
     </a>
     </li>
     {{ end }}
