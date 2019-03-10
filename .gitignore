@@ -1,2 +1,4 @@
 public/
-resources/_gen/assets/js/*
+resources/_gen/assets/js/
+resources/_gen/assets/scss/
+resources/_gen/assets/sass/
