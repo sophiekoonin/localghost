@@ -171,3 +171,5 @@ If you're looking to get into the world of conference speaking, a great place to
 I also recommend taking a look at Jo Francetti's [guide to Public Speaking For Beginners](https://medium.com/samsung-internet-dev/public-speaking-for-beginners-8bdee16123ba) and Emily Webber's [list of things that speakers need from conference organisers](https://github.com/ewebber/whatspeakersneed/blob/master/index.md).
 
 Thank you to everyone who contributed to the enormous Twitter thread that led to the creation of this post. If I have forgotten to credit anyone, or you would prefer not to be included, please get in touch.
+
+*italic* **bold**

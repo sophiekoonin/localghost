@@ -1,20 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        {{ partial "head/metadata.html" . }}
-        {{ partial "head/openGraph.html" . }}
-        {{ partial "head/favicons.html" . }}
-        {{ partial "head/css.html" . }}
-    </head>
-<body>
-    <section id="main" class="section">
-    {{ partial "header/header.html" . }}
-
-    {{ partial "nav.html" . }}
-    
-    <!-- Begin Blog container -->
+{{ define "main" }}
     {{ with .Site.GetPage "/blog" }}
-
     <main class="container container-blog"  id="top">
             {{ if .Site.Params.home.showLatest | default true }}
                 {{ range first 10 .Pages.ByPublishDate.Reverse }}
@@ -32,17 +17,8 @@
             </main>
    
     {{end}}
-    <!-- End Blog container -->
     <div class="container has-text-centered"><a href="{{ .RSSLink }}" title="RSS"><span class="fas fa-rss"></span></a></div>
-    {{ partial "top-icon.html" . }}
-    
 
     <!-- End Blog section -->
     
-    <div class="container"><hr></div>
-
-    {{ partial "footer/text.html" . }}
-    </section>
-    {{ partial "footer/scripts.html" . }}
-    </body>
-</html>
+{{end}}

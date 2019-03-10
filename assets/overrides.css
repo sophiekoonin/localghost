@@ -24,7 +24,6 @@
 span.bold {
   font-weight: 500;
 }
-
 .markdown.single-page li {
   list-style-type: none;
   margin-left: 0;
@@ -54,4 +53,17 @@ span.bold {
     max-width: 250px;
     float: right;
   }
+}
+.hero-body {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero img {
+  border: 0;
+  box-shadow: none;
+  max-width: 150px; 
 }
