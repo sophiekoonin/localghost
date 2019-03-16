@@ -3861,4 +3861,7 @@ span.bold {
   justify-content: center;
   align-items: center; }
 
+.image-profile {
+  border-radius: 50%; }
+
 /*# sourceMappingURL=main.css.map */

@@ -3,7 +3,7 @@ title: "About"
 menu: "main"
 ---
 
-<img class="image-right" src="images/profile.png" aria-hidden="true">
+<img class="image-right image-profile" src="images/profile.jpg" aria-hidden="true">
 My name is Sophie. I'm a software engineer at [Monzo Bank](https://www.monzo.com), working with React and Go, helping to make money work for everyone. Before that, I was an engineer at John Lewis, making sofas look nice with React and Kotlin. 
 
 Widening participation in tech is really important to me. I'm a mentor at [Node Girls London](https://nodegirls.com/), an occasional tutor at [Code First: Girls](https://www.codefirstgirls.org.uk/), and have previously mentored at Coder Dojo sessions with John Lewis. 
