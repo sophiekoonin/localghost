@@ -1,5 +1,5 @@
 {{ define "main" }}
-    {{ with .Site.GetPage "/blog" }}
+    {{ with .Site.GetPage "/posts" }}
     <main class="container container-blog"  id="top">
             {{ if .Site.Params.home.showLatest | default true }}
                 {{ range first 10 .Pages.ByPublishDate.Reverse }}
@@ -11,6 +11,8 @@
                     <div class="markdown">
                         {{ .Content }}
                     </div>
+                    {{ partial "top-icon-with-hr.html" . }}
+
                 </article>
             {{ end }}
             {{ end }}

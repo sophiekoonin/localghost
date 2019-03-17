@@ -72,6 +72,9 @@ pluralizeListTitles = false
 [params.taxonomies]
   tag = "tags"
 
+[permalinks]
+  posts = "/:year/:month/:title/"
+
 [privacy]
   [privacy.googleAnalytics]
     anonymizeIP = false
