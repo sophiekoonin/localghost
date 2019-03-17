@@ -3824,13 +3824,13 @@ span.bold {
     width: 1rem;
     height: 100%; }
 
-.markdown.single-page li {
+.markdown.single-page#about li {
   list-style-type: none;
   margin-left: 0;
   line-height: 2em;
   padding-left: 0;
   vertical-align: middle; }
-  .markdown.single-page li:before {
+  .markdown.single-page#about li:before {
     vertical-align: middle;
     content: '';
     display: inline-block;

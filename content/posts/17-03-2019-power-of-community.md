@@ -7,9 +7,9 @@ tags: ['community', 'talks', 'advice', 'twitter']
 
 In January I took part in a panel at [YouEqualTech](https://www.youequaltech.com/) discussing "The Power of Community". 
 
-The word "community" can mean a lot of things, and indeed while writing this post I've written it so many times that it's ceased to have any meaning for me whatsoever, but it's important to me because I have benefitted so much from the incredible people in the tech community. They've encouraged me to break out of my bubble (and my comfort zone) and understand what I'm looking for in a role, as well as realising what I'm capable of achieving. "The community" is also how I ended up singing a [Babel-themed cover of Hallelujah](https://github.com/babel/babel/blob/master/SONG.md) on a stage in the basement of Ticketmaster at a [JavaScript comedy night](https://smoosh.fun) with someone I'd met the day before, but that's a story for another day. 
+The word "community" can mean a lot of things, and indeed while writing this post I've written it so many times that it's ceased to have any meaning for me whatsoever, but it's important to me because I have benefitted so much from the incredible people in the tech community. They've encouraged me to break out of my bubble (and my comfort zone) and understand what I'm looking for in a role, as well as helping me see what I'm capable of achieving. "The community" is also how I ended up singing a [Babel-themed cover of Hallelujah](https://github.com/babel/babel/blob/master/SONG.md) on a stage in the basement of Ticketmaster at a [JavaScript comedy night](https://smoosh.fun) with someone I'd met the day before, but that's a story for another day. 
 
-I wanted to share this experience with others, so they might be able to get as much out of it as I do. I've narrowed it down to three different communities you can tap into, allowing you to break out of your bubble and find lovely people to share your knowledge with. 
+I wanted to share this experience with others, so they could get as much out of it as I do. I've narrowed it down to three different communities you can tap into, allowing you to break out of your bubble and find lovely people to share your knowledge with. 
 
 The way I see it, there are three main categories that form my community:
 
@@ -51,18 +51,18 @@ The tech community in London has had the most profound effect on my professional
 
 Community events are really powerful because they provide a fantastic opportunity to learn, meet people, and find out what it's like for other people who do the same thing as you. 
 
-A friend of mine in the industry asked me if all developers coded nonstop in their spare time. It turned out that she hadn't really met any other devs outside of her small company, so she thought that was just what she had to do to get anywhere. Meeting others in the community allows you to get a bigger picture of how others work (spoiler alert: it's massively varied) and understand whether what you think is expected of you is actually common practice. 
+A friend of mine in the industry asked me if all developers coded nonstop in their spare time. It turned out that she hadn't really met any other devs outside of her small company, so she thought that was just what she had to do to get anywhere. Meeting others in the community allows you to get a bigger picture of how others work (spoiler alert: it's massively varied). Your idea of what's expected of you might not actually be common practice after all. 
 
 It's very easy and really rewarding to give back to the community, whether that's by giving talks, mentoring others or even just getting your company to host a meetup. For me, mentoring at things like [Code First Girls](https://www.codefirstgirls.co.uk) has helped me to tackle my impostor syndrome by showing me that I actually know what I'm talking about! 
 
-## Bringing it all together
-
-So how has the community benefitted me? 
+## So how has the community benefitted me? 
 
 Last year I was looking for a new challenge, so I was hunting around for new engineering roles. An ex-colleague gave me some brilliant advice for the interview process, while another ex-colleague invited me for an interview at his new organisation. I got a job offer, but wasn't sure - I ended up asking my friends from the London tech community what they thought about the offer and they helped me to identify what kind of salary I should be asking for.
 
 I went onto the Sponsors page of [Codebar](https://www.codebar.com) to see who had previously hosted sessions - it was important to me to work somewhere that was open to hosting meetups, and Codebar is a pretty great one. A name that came up a lot was Monzo, a company that I already respected (I had been a Monzo customer for a while by that point).  
 
 The advice that I got from my ex-colleague, as well as the picture of the industry I'd gathered from conversations with friends on Twitter and at meetups, helped me to shape the questions I asked in the interview (as well as the idea of what I was looking for in the offer). Combining that with my own knowledge and experience, I felt like I knew exactly what I was looking for. And it worked - I got the job. 
+
+## Bringing it all together
 
 Building relationships in these communities is one of the best things I've ever done for myself (and my social life!). I hope you can get as much as I have from these amazing people around us - at work, online, in the local area - and have the confidence to give what you've got to offer. And I hope that one day you'll be writing a blog post or giving a talk to share what you've learnt with everyone else. 
