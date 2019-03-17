@@ -1,10 +1,10 @@
-<div class="section" id="footer">
+<div class="top-pad" id="footer">
     <!-- Some social icons -->
     <ul class="social-icons">
         {{ partial "home/social.html" . }}
     </ul>
     <!-- End top social icons -->
-    <div class="container has-text-centered">
+    <div class="has-text-centered">
         {{ with .Site.Params.footerText }}
         {{ . | markdownify }}
         {{ end }}

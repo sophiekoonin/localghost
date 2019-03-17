@@ -6,7 +6,7 @@
                 <article class="summary">
                         <span class="date">{{ if .Params.date }}{{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }}{{ end }}</span>    
 
-                    <h3 class="title is-3 post-title {{if .Params.Subtitle}}small-bottom-margin{{end}} "><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                    <h2 class="title is-3 post-title {{if .Params.Subtitle}}small-bottom-margin{{end}} "><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
                     {{if .Params.Subtitle }}<span class="post-subtitle">{{ .Params.Subtitle }}</span>{{ end }}
                     <div class="markdown">
                         {{ .Content }}
@@ -19,8 +19,6 @@
             </main>
    
     {{end}}
-    <div class="container has-text-centered"><a href="{{ .RSSLink }}" title="RSS"><span class="fas fa-rss"></span></a></div>
-
     <!-- End Blog section -->
     
 {{end}}

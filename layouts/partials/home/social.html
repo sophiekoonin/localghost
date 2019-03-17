@@ -1,9 +1,11 @@
-    {{ $baseURL := .Site.BaseURL }}
-    {{ range .Site.Params.social }}
-    <li class="social-icon">
+ {{ $baseURL := .Site.BaseURL }}
+{{ range .Site.Params.social }}
+<li class="social-icon">
     <a href="{{ .url }}" alt="{{.icon}}" {{ .html_attributes | safeHTMLAttr }}>
-        <img src="{{$baseURL}}icons/{{ .icon}}.svg"/>
+        <img src="{{$baseURL}}icons/{{ .icon}}.svg" />
     </a>
-    </li>
-    {{ end }}
-
+</li>
+{{ end }}
+<li class="social-icon">
+    <a href="{{ .RSSLink }}" title="RSS"><img src="{{.Site.BaseURL}}icons/rss.svg" /></a>
+</li>

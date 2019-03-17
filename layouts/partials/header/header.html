@@ -3,10 +3,11 @@
 <header class="hero">
     <div class="hero-body">
             <!-- Title and tagline -->
-            <img src="{{.Site.BaseURL}}img/mac.svg" aria-hidden="true">
+            <a href="{{ .Site.BaseURL}}"><img src="{{.Site.BaseURL}}img/mac.svg" aria-hidden="true">
             <span class="bold-title">
-                <a href="/">{{ .Title }}</a>
+                {{ .Title }}
             </span>
+        </a>
             <!-- End title and tagline -->
         </div>
     </div>
