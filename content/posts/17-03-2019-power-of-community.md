@@ -1,7 +1,7 @@
 ---
 title: "Building Your Community"
 date: "2019-03-17"
-draft: true
+hide: true
 tags: ['community', 'talks', 'advice', 'twitter']
 ---
 

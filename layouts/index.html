@@ -3,6 +3,7 @@
     <main class="container container-blog"  id="top">
             {{ if .Site.Params.home.showLatest | default true }}
                 {{ range first 10 .Pages.ByPublishDate.Reverse }}
+                {{ if not .Params.hide }}
                 <article class="summary">
                         <span class="date">{{ if .Params.date }}{{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }}{{ end }}</span>    
 
@@ -14,6 +15,7 @@
                     {{ partial "top-icon-with-hr.html" . }}
 
                 </article>
+            {{ end }}
             {{ end }}
             {{ end }}
             </main>
