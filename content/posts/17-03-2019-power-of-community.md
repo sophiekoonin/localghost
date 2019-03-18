@@ -65,7 +65,9 @@ The advice that I got from my ex-colleague, as well as the picture of the indust
 
 ## Bringing it all together
 
-Building relationships in these communities is one of the best things I've ever done for myself (and my social life!) I hope you can get as much as I have from these amazing people around us - at work, online, in the local area - and have the confidence to give what you've got to offer. And I hope that one day you'll be writing a blog post or giving a talk to share what you've learnt with everyone else. 
+Building your community is one of the best things you can do for yourself and your professional development. By making friends and connections with people at work, online, and in your local community, you'll find that not only do you have a great view of what's going on in the industry, but you'll have made some good friends as well! 
+
+I hope you can get as much as I have from these amazing people around us and have the confidence to give what you've got to offer. And I hope that one day you'll be writing a blog post or giving a talk to share what you've learnt with everyone else. 
 
 Looking to get stuck in? Here are some great places to start:
 * [Donut](https://www.donut.com/) - a Slack integration that will randomly pair people up for 1:1s
