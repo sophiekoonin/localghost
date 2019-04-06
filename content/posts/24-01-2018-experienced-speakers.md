@@ -17,7 +17,7 @@ Just a few.
 
 {{< img src="/img/experienced-speakers/240108-01.jpeg" alt="347 new interactions on Twitter" caption="What a thing to wake up to." class="big" >}}
 
-I got so many fantastic tips and suggestions—including some from experienced speakers like [Sarah Drasner](https://www.twitter.com/sarah_edo), [Dan Abramov](https://www.twitter.com/dan_abramov) and [Anjuan Simmons](https://www.twitter.com/anjuan) — that one user suggested I turn it into a blog post. So here it is. (Thanks to [@sayzlim](http://www.twitter.com/sayzlim) for the suggestion!)
+I got so many fantastic tips and suggestions—including some from experienced speakers like [Sarah Drasner](https://www.twitter.com/sarah_edo), [Dan Abramov](https://www.twitter.com/dan_abramov) and [Anjuan Simmons](https://www.twitter.com/anjuan) — that one user suggested I turn it into a blog post. So here it is. (Thanks to [@sayzlim](https://www.twitter.com/sayzlim) for the suggestion!)
 
 These tips have come from the tech community, but I think the majority of them can apply to any public speaking event.
 
@@ -47,7 +47,7 @@ If you're putting code in your slides, {{<b>}}don't go overboard.{{</b>}} Someti
 
 ## Practice makes perfect
 
-Something that came up over and over again: {{<b>}}rehearse your talk!{{</b>}} Do it on your own, give it to your cat, make your colleagues listen to it and get their feedback. I got my fiancé to listen to my talk about [redux-saga](http://redux-saga.js.org), and even though he didn't know the content, he gave me some really helpful feedback about _how_ I was delivering the talk. {{<b>}}Your manner of delivery is just as important as what you're saying.{{</b>}}
+Something that came up over and over again: {{<b>}}rehearse your talk!{{</b>}} Do it on your own, give it to your cat, make your colleagues listen to it and get their feedback. I got my fiancé to listen to my talk about [redux-saga](https://redux-saga.js.org), and even though he didn't know the content, he gave me some really helpful feedback about _how_ I was delivering the talk. {{<b>}}Your manner of delivery is just as important as what you're saying.{{</b>}}
 
 Local developer meetups can be a fantastic place to {{<b>}}try out your talk{{</b>}} before the conference and gather some feedback/see how it lands — a bit like how comedians try out new material in smaller venues before festivals and tours.
 
@@ -89,7 +89,7 @@ A demo can be a fantastic way of, well, demonstrating a technical concept. But t
 
 {{<tweet 955561991329923072 >}}
 
-Mac users can use [Kap](https://getkap.co/) to record screen captures in video or GIF format. There's also [Kazam](https://launchpad.net/kazam) for Linux and [CamStudio](http://camstudio.org/) for Windows.
+Mac users can use [Kap](https://getkap.co/) to record screen captures in video or GIF format. There's also [Kazam](https://launchpad.net/kazam) for Linux and [CamStudio](https://camstudio.org/) for Windows.
 
 In some cases screen captures might even be better than live demos:
 
@@ -99,7 +99,7 @@ And as [@fforres](https://twitter.com/fforres/status/955624874298494976) points 
 
 ## On the day
 
-The dress code at tech conferences can be pretty casual, but if you're wearing a dress, make sure it has pockets as you'll need to attach a mic battery pack! [@knitcodemonkey](http://www.twitter.com/knitcodemonkey) says: "Wear something with a collar and a waistband for the mic. Wear comfy shoes."
+The dress code at tech conferences can be pretty casual, but if you're wearing a dress, make sure it has pockets as you'll need to attach a mic battery pack! [@knitcodemonkey](https://www.twitter.com/knitcodemonkey) says: "Wear something with a collar and a waistband for the mic. Wear comfy shoes."
 
 {{<b>}}Bring a water bottle{{</b>}} and don't forget to drink from it to keep your voice happy.
 
@@ -155,7 +155,7 @@ Sarah Drasner recommends not taking questions during your first talk:
 
 {{<tweet 955779489140703232 >}}
 
-That said, it's a personal choice — if you feel comfortable (and time allows it) you can take as many questions as you want. An excellent tip from [@bradwaynemartin](http://www.twitter.com/bradwaynemartin): {{<b>}}always repeat the questions back to the audience{{</b>}}, as the microphone won't pick them up.
+That said, it's a personal choice — if you feel comfortable (and time allows it) you can take as many questions as you want. An excellent tip from [@bradwaynemartin](https://www.twitter.com/bradwaynemartin): {{<b>}}always repeat the questions back to the audience{{</b>}}, as the microphone won't pick them up.
 
 But if anyone does challenge any decisions you made, you can fire this straight back:
 
