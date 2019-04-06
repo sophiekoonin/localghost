@@ -3765,6 +3765,9 @@ nav.navbar {
 span.heavy {
   font-weight: 700; }
 
+.markdown figure.big img {
+  width: unset; }
+
 .markdown figure img {
   width: 40%;
   border-radius: 0;

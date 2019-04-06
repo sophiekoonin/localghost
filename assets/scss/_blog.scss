@@ -3,6 +3,11 @@ span.heavy {
 }
 
 .markdown figure {
+  &.big {
+    img {
+      width: unset;
+    }
+  }
   img {
     width: 40%;
     border-radius: 0;
