@@ -151,18 +151,6 @@ hr {
     text-decoration: none;
     color: $body-color;
   }
-
-  a::before {
-    font-family: "Font Awesome 5 Free";
-    content: "";
-    color: #9c9c9c;
-    display: inline-block;
-    padding-right: 3px;
-    vertical-align: middle;
-    font-weight: 900;
-    font-size: 1rem;
-    line-height: 1rem;
-  }
 }
 
 .date {
@@ -196,9 +184,9 @@ hr {
 }
 
 .blog-share {
+  display: flex;
   a {
     text-decoration: none;
-    padding: 0 0.5rem;
   }
 }
 

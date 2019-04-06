@@ -2,14 +2,23 @@ span.heavy {
   font-weight: 700;
 }
 
-span.image-caption {
-  font-style: italic;
+.markdown figure {
+  img {
+    width: 40%;
+    border-radius: 0;
+    box-shadow: none;
+    border: 0;
+    margin-bottom: 1rem;
+  }
+  figcaption {
+    font-style: italic;
+  }
 }
 
-img + .image-caption {
-  width: 100%;
-  display: block;
-  text-align: center;
+.markdown .blog-share {
+  img {
+    margin: 0;
+  }
 }
 
 

@@ -19,7 +19,7 @@ pluralizeListTitles = false
     email                        = "sophie@localghost.dev"   # E-mail address for contact section
     customCSS                    = ["syntax.css"]             # Include custom css files placed under assets/
     footerText                   = "Built using [Hugo](http://gohugo.io/) with a theme based on [**Introduction**](https://github.com/vickylai/hugo-theme-introduction/)."
-
+    twitterUsername = "@type__error"
 
     # Configure the home page
     [params.home]
