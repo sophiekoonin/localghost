@@ -1,7 +1,6 @@
 ---
 title: Why software engineers should know their audience
 date: 2019-04-06
-hide: true
 tags: ['engineering', 'work', 'communication']
 ---
 
