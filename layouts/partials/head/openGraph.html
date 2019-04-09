@@ -1,17 +1,14 @@
 <meta property="og:title" content="{{ .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end }}" />
 <meta property="og:type" content="website" />
-<meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}"/>
+<meta property="og:description" content="{{ if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}"/>
 <meta property="og:url" content="{{ .Permalink }}"/>
 <meta property="og:site_name" content="{{ .Site.Title }}"/>
+<meta property="og:locale" content="en_GB"/>
 
 {{ with .Resources.ByType "image" }}
 {{ range first 5 (sort . "Params.weight") }}
 <meta property="og:image" content="{{ .Permalink }}"/>
 {{ end }}
 {{ else }}
-{{ with .Site.GetPage "page" "/home" }}
-{{ range first 5 (.Resources.ByType "image") }}
-<meta property="og:image" content="{{ .Permalink }}"/>
-{{ end }}
-{{ end }}
+<meta property="og:image" content="{{ .Site.BaseURL }}img/mac.svg"/>
 {{ end }}

@@ -26,7 +26,7 @@ We'd just spent ten minutes with the rest of the team - including our product ma
 
 You'd be surprised how easy it is to start talking in jargon without even realising for even the smallest of updates. Next time you give a standup update, ask yourself: if I weren't technical, would I know what I was talking about?
 
-{{< img src="/img/eli5/xkcd-eli5.png" alt="Two characters are talking. Left: What've you been up to? Right: Doing tons of math for my thesis. Left: Can you explain it like I'm five? Right: Oh my God, where are your parents?" caption="source: xkcd" >}}
+{{< img src="*/xkcd-eli5.png" alt="Two characters are talking. Left: What've you been up to? Right: Doing tons of math for my thesis. Left: Can you explain it like I'm five? Right: Oh my God, where are your parents?" caption="source: xkcd" >}}
 
 How much technical detail do you really need to go into? If your standup tends to be "here's what I did yesterday and here's what I'm doing today", do you need to say:
 

@@ -20,6 +20,7 @@ pluralizeListTitles = false
     customCSS                    = ["syntax.css"]             # Include custom css files placed under assets/
     footerText                   = "Built using [Hugo](https://gohugo.io/) with a theme based on [**Introduction**](https://github.com/vickylai/hugo-theme-introduction/)."
     twitterUsername = "@type__error"
+    description = "One engineer's thoughts on tech, coding and the community"
 
     # Configure the home page
     [params.home]
