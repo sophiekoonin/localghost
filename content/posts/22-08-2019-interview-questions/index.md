@@ -15,6 +15,8 @@ Tech job interviews are often different flavours of the same thing, regardless o
 
 It might be tempting to just skip over this with a "no, thank you" - maybe the job description gave you enough information for now - but you should always ask **at least one question**. It's a surprisingly important part of the interview. Firstly, it's an opportunity for you to squash any worries you might have, or find out the answers to anything that wasn't quite clear before. Secondly, it's a chance for you to peek into how things *really* are at Company X before you get too far in and realise you've Made A Huge Mistake. An interview should be as much you interviewing *them* as it is them interviewing you, as you need to find out whether the company is a good fit for *you*.
 
+Of course, you don't have to wait until the very end of the interview to ask questions - it's great to ask relevant questions throughout (though be careful that you don't end up answering every question with another question)!
+
 ## What your questions say about you
 
 This part of the interview is not just for your benefit: the questions you ask tell the interviewer more about you than you might think. For starters, it shows how engaged you are, what your priorities are and the kind of things you value in your role. It's an opportunity to show off your knowledge and experience by asking questions tailored to the work that you're looking for. 
