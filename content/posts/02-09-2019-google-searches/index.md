@@ -95,6 +95,9 @@ Obviously these weren't all googled in a row (although you can probably spot tha
 
 {{< img src="*/thecorrs-search.png" alt="Image of many many Google search results for The Corrs">}}
 
+{{< img src="*/thecors.png" alt="The CORS." caption="Worth it" >}}
+
+
 `git patch trailing whitespace` - I was sent a git patch with some whitespace that prevented it from actually patching
 
 `jsx annotation` 
