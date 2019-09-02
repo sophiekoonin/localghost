@@ -228,12 +228,19 @@ Thursday was a whole lot of fun D:
 `next rename static`
 
 `install gcloud cli`
+
 `method patch` - couldn't remember what the HTTP method `PATCH` does. 
+
 `nextjs env`
+
 `next.js environment variables`
+
 `next js docs`
+
 `editing data with hooks` - literally no idea what I was trying to google here but this was past 5pm so I was evidently quite tired
+
 `react form submit`
+
 `dayjs` - I needed the documentation again.
 
 What I'm trying to show with all this is that you can do something 100 times but still not remember how to do it off the top of your head. I've built plenty of forms in React but couldn't remember how `onSubmit` worked on the Friday evening at 5:30pm. I constantly have to google JS string methods. Cookies are terrible. (Incidentally, we fixed the cookie issue by running everything in a docker container and tunneling with `ngrok`, so everything's on the same domain.)
