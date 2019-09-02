@@ -245,4 +245,5 @@ Thursday was a whole lot of fun D:
 
 `dayjs` - I needed the documentation again.
 
-What I'm trying to show with all this is that you can do something 100 times but still not remember how to do it off the top of your head. I've built plenty of forms in React but couldn't remember how `onSubmit` worked on the Friday evening at 5:30pm. I constantly have to google JS string methods. Cookies are terrible. (Incidentally, we fixed the cookie issue by running everything in a docker container and tunneling with `ngrok`, so everything's on the same domain.)
+What I'm trying to show with all this is that you can do something 100 times but still not remember how to do it off the top of your head. Never be ashamed of googling, even if it seems like the most basic thing you're looking up. I can never remember how `Date` works.
+ I've built plenty of forms in React but couldn't remember how `onSubmit` worked on the Friday evening at 5:30pm. I constantly have to google JS string methods. Cookies are terrible. (Incidentally, we fixed the cookie issue by running everything in a docker container and tunneling with `ngrok`, so everything's on the same domain.)
