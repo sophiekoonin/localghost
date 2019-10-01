@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "hugo --gc --minify --baseURL=https://localghost.dev/"
+command = "hugo --gc --minify --cleanDestinationDir --baseURL=https://localghost.dev/"
 
 [context.production.environment]
 HUGO_VERSION = "0.58.3"
