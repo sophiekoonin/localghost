@@ -3,7 +3,7 @@ publish = "public"
 command = "hugo --gc --minify --baseURL=https://localghost.dev/"
 
 [context.production.environment]
-HUGO_VERSION = "0.54.0"
+HUGO_VERSION = "0.58.3"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
 
