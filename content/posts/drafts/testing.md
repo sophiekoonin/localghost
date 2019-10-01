@@ -1,6 +1,7 @@
 ---
 title: "Testing interactive applications with React Testing Library"
 date: "2019-09-12"
+draft: true
 # hide: true
 tags: ['react', 'javascript', 'testing', 'code']
 ---
