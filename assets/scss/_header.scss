@@ -1,23 +1,43 @@
 .header {
   grid-area: header;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  justify-content: center;
+
   padding: 0;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
   img {
     border: 0;
     box-shadow: none;
     max-width: 150px; 
   }
+  
   a {
-    grid-column: 2/2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+  }
+
+  .logo {
+    grid-column: 2/2;
+    position: relative;
+
+    .ghost {
+      position: absolute;
+      right: 25px;
+      top: 0;
+      transform: rotate(-45deg);
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      animation: haunt 6s ease-in-out infinite;
+
+    }
   }
 }
 
@@ -52,5 +72,14 @@
   }
   50% { 
       border-color: orange; 
+  }
+}
+
+@keyframes haunt { 
+  from, to {
+    top: 0px;
+  }
+  50% {
+    top: 25px;
   }
 }

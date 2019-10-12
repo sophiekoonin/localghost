@@ -1,17 +1,4 @@
 .wrapper {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-areas: 
-    "header"
-    "content"
-    "sidebar"
-    "footer";
-
-  @media (min-width: $tablet) {
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas: 
-      "header  header"
-      "content sidebar"
-      "footer  footer";
-  }
+  display: flex;
+  flex-direction: column;
 }
