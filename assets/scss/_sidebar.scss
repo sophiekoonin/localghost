@@ -1,3 +1,13 @@
 .sidebar {
   grid-area: sidebar;
+  padding: 2rem;
+
+  .profile {
+    border: 1px solid lighten($mid-pink, 40%);
+    border-radius: 5px;
+    padding: 1rem;
+    p {
+      margin: 0;
+    }
+  }
 }

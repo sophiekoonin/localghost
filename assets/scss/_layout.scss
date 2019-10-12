@@ -6,8 +6,6 @@
     "content"
     "sidebar"
     "footer";
-  grid-template-columns: 1fr;
-  grid-template-rows: 10vh 1fr 0.3fr;
 
   @media (min-width: $tablet) {
     grid-template-columns: 3fr 1fr;

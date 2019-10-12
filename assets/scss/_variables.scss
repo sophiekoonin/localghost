@@ -1,12 +1,13 @@
 $body-color: #2c2c2c;
 $background: #ffffff;
-$primary: rgb(105, 78, 151);
+$mid-purple: rgb(105, 78, 151);
 $secondary: #dbdbdb;
 $h-color: #222222;
 $link-hover: #fa72d1;
+$mid-pink: #c94ab4;
 
 $family-sans-serif: Nunito Sans, sans-serif;
-$code: $primary;
+$code: $mid-purple;
 $title-weight: 300;
 $navbar-background-color: $background;
 $navbar-item-hover-background-color: $background;
@@ -15,3 +16,4 @@ $weight-bold: 600;
 
 $tablet: 769px;
 $desktop: 960px;
+

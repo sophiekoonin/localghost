@@ -16,7 +16,7 @@ html.modal-open {
 }
 
 a {
-  color: $primary;
+  color: $mid-purple;
   text-decoration: underline;
 
   &:hover {
@@ -25,13 +25,13 @@ a {
   }
 
   &:active {
-    color: $primary;
+    color: $mid-purple;
   }
 }
 
 h1, h2, .title, .post-subtitle {
   font-family: "Alef", sans-serif;
-  color: #c94ab4;
+  color: $mid-pink;
   font-weight: 400;
   line-height: 1.2em;
 }
@@ -104,11 +104,10 @@ hr {
   font-family: "VT323", monospace;
   text-transform: lowercase;
   margin: 0;
-  color:  rgb(105, 78, 151);
 
 
   @media screen and (min-width: 567px) {
-    font-size: 3rem;
+    font-size: 5rem;
     text-align: center;
   }
 }

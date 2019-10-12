@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   padding: 0;
+
   img {
     border: 0;
     box-shadow: none;
@@ -28,7 +29,7 @@
   display: inline-block;
   overflow: hidden;
   letter-spacing: 2px;
- animation: typing 5s steps(30, end), blink .75s step-end infinite;
+  animation: typing 5s steps(30, end), blink .75s step-end infinite;
   white-space: nowrap;
   font-size: 30px;
   font-weight: 700;
