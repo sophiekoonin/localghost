@@ -1,9 +1,9 @@
 .header {
+  grid-area: header;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   justify-content: center;
-  grid-row: 1/1;
   padding: 0;
   img {
     border: 0;

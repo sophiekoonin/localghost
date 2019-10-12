@@ -1,6 +1,6 @@
 {{ define "main" }}
     {{ with .Site.GetPage "/posts" }}
-    <main class="posts" id="top">
+    <main class="main content" id="top">
         {{ if .Site.Params.home.showLatest | default true }}
         {{ range first 3 .Pages.ByPublishDate.Reverse }}
         {{ if not .Params.hide }}
