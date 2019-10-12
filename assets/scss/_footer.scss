@@ -1,3 +1,16 @@
 .footer {
   grid-area: footer;
+
+  .footer-text {
+    font-size: 0.8em;
+
+    a {
+      color: $body-color;
+    }
+
+    .fab {
+      font-size: 0.8em;
+      vertical-align: baseline;
+    }
+  }
 }

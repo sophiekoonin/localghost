@@ -17,7 +17,7 @@ nav.navbar {
 
   ul {
     list-style-type: none;
-    
+
     @media screen and (min-width: $desktop) {
       display: flex;
       margin-right: 2rem;
@@ -26,13 +26,20 @@ nav.navbar {
   }
 }
 
-.navbar-item a {
-  font-weight: 500;
-  font-size: 1rem;
-  text-decoration: none;
+.navbar-item {
+  font-size: 0.8rem;
+  a {
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+  }
 }
 
 .navbar-burger {
   margin: 0;
   margin-right: 1em;
+
+  &:hover {
+    background-color: $navbar-background-color;
+  }
 }

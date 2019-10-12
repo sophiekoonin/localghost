@@ -186,31 +186,7 @@ hr {
   }
 }
 
-.navbar-burger {
-  margin-right: auto;
-}
 
-.navbar-burger:hover {
-  background-color: $navbar-background-color;
-}
-
-.navbar-item {
-  text-transform: uppercase;
-  font-size: 14px;
-}
-
-.footer-text {
-  font-size: 0.8em;
-
-  a {
-    color: $body-color;
-  }
-
-  .fab {
-    font-size: 0.8em;
-    vertical-align: baseline;
-  }
-}
 
 .tags-list {
   width: 70%;

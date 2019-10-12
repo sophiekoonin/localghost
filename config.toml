@@ -18,7 +18,6 @@ pluralizeListTitles = false
     dateFormat                   = "2 Jan 2006"
     email                        = "sophie@localghost.dev"   # E-mail address for contact section
     customCSS                    = ["syntax.css"]             # Include custom css files placed under assets/
-    footerText                   = "Built using [Hugo](https://gohugo.io/) with a theme based on [**Introduction**](https://github.com/vickylai/hugo-theme-introduction/)."
     twitterUsername = "@type__error"
     description = "One engineer's thoughts on tech, coding and the community"
 
