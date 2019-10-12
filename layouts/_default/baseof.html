@@ -11,25 +11,28 @@
         {{ block "customCSS" . }}
         {{ end }}
     </head>
-        <body>
-            {{ partial "nav.html" . }}
-            <section id="main" class="section">
+    <body>
+        <div class="wrapper">
             {{ partial "header/header.html" . }}
-        
 
             {{ block "main" . }}
             {{ end }}
 
+            {{ block "sidebar" . }}
+            {{ partial "sidebar.html" . }}
+            {{ end }}
+            
             {{ block "footer" . }}
             {{ partial "footer/text.html" . }}
             {{ end }}
-            </div>
-        </section>
-        {{ block "js-include" . }}
-        {{ partial "footer/scripts.html" . }}
-        {{ end }}
-        <!-- Include page specific scripts -->
-        {{ block "customScripts" . }}
-        {{ end }}
+            
+            {{ block "js-include" . }}
+            {{ partial "footer/scripts.html" . }}
+            {{ end }}
+
+            <!-- Include page specific scripts -->
+            {{ block "customScripts" . }}
+            {{ end }}
+        </div>
     </body>
 </html>

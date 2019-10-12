@@ -1,9 +1,9 @@
 nav.navbar {
   padding-right: 1em;
   padding: 1em 0;
-  margin: 0 auto;
+  grid-column: 3/3;
 
-  @media screen and (max-width: $tablet) {
+  @media screen and (max-width: 769px) {
     display: flex;
     justify-content: flex-end;
     &.is-active {
@@ -16,6 +16,8 @@ nav.navbar {
   }
 
   ul {
+    list-style-type: none;
+    
     @media screen and (min-width: $desktop) {
       display: flex;
       margin-right: 2rem;

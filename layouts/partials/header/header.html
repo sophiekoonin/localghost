@@ -1,15 +1,12 @@
 {{ with .Site.GetPage "/home" }}
 
-<header class="hero">
-    <div class="hero-body">
-            <!-- Title and tagline -->
-            <a href="{{ .Site.BaseURL}}">
-            <span class="bold-title">
-                {{ .Title }}
-            </span>
-        </a>
-            <!-- End title and tagline -->
-        </div>
-    </div>
+<header class="header">
+    <!-- Title and tagline -->
+    <a href="{{ .Site.BaseURL}}">
+        <h1 class="header-text">{{ .Title }}</h1>
+    </a>
+
+    {{ partial "nav.html" $ }}
+    <!-- End title and tagline -->
 </header>
 {{ end }}

@@ -89,7 +89,7 @@ hr {
 .avatar {
   border: none;
 
-  @include mobile {
+  @media screen and (min-width: 567px) {
     max-width: 50%;
   }
 }
@@ -98,21 +98,18 @@ hr {
   border: none;
 }
 
-.bold-title {
+.header-text {
   font-size: 6rem;
   line-height: 1.2;
   font-family: "VT323", monospace;
   text-transform: lowercase;
   margin: 0;
+  color:  rgb(105, 78, 151);
 
-  @include mobile {
+
+  @media screen and (min-width: 567px) {
     font-size: 3rem;
     text-align: center;
-  }
-
-
-  a {
-    color:  rgb(105, 78, 151);
   }
 }
 
@@ -222,7 +219,7 @@ hr {
   text-align: center;
   font-size: 1.5rem;
 
-  @include mobile {
+  @media screen and (min-width: 567px) {
     width: 100%;
   }
 }
@@ -231,7 +228,7 @@ hr {
   font-size: 1.5rem;
   margin-right: 1.5rem;
 
-  @include mobile {
+  @media screen and (min-width: 567px) {
     font-size: 1.5rem;
     margin-right: 1rem;
   }
@@ -266,8 +263,8 @@ a.tweet {
 h1.title {
   font-size: 2.5rem;
 
-  @include mobile {
-    font-size: $size-3;
+  @media screen and (min-width: 567px) {
+    font-size: 2rem;
   }
 }
 
@@ -278,46 +275,46 @@ h1.title {
   }
 
   h1 {
-    font-size: $size-1;
+    font-size: 3rem;
 
-    @include mobile {
-      font-size: $size-2;
+    @media screen and (min-width: 567px) {
+      font-size: 2.5rem;
     }
   }
 
   h2 {
-    font-size: $size-3;
+    font-size: 2rem;
     line-height: 1em;
     margin-top: 1.5em;
     margin-bottom: 0.8em;
 
-    @include mobile {
-      font-size: $size-4;
+    @media screen and (min-width: 567px) {
+      font-size: 1.5rem;
     }
   }
 
   h3 {
     font-size: 1.5rem;
 
-    @include mobile {
-      font-size: $size-4;
+    @media screen and (min-width: 567px) {
+      font-size: 1.5rem;
     }
   }
 
   h4 {
-    font-size: $size-4;
+    font-size: 1.5rem;
 
-    @include mobile {
-      font-size: $size-5;
+    @media screen and (min-width: 567px) {
+      font-size: 1.25rem;
     }
   }
 
   h5 {
-    font-size: $size-5;
+    font-size: 1.25rem;
   }
 
   h6 {
-    font-size: $size-6;
+    font-size: 1rem;
   }
 
   ul {
@@ -375,7 +372,7 @@ h1.title {
   blockquote {
     max-width: 80%;
 
-    @include mobile {
+    @media screen and (min-width: 567px) {
       max-width: 100%;
     }
 

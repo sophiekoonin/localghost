@@ -1,28 +1,27 @@
 <!-- Begin Nav bar -->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        {{ $isHome := .Page.IsHome }}
-        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-        <ul class="navbar-menu" id="navMenu">
-            <!-- look for custom menu and include it -->
-            {{ if .Site.Menus.main }}
-            {{ if not $isHome }}
-            <li class="navbar-item"><a href="{{ "/" | relLangURL }}">Back</a></li>
-            {{ end }}
-            {{ range .Site.Menus.main }}
-            <li class="navbar-item">
-                <a href="{{ .URL }}">
-                    {{ .Pre }}
-                    {{ .Name }}
-                    {{ .Post }}
-                </a></li>
-            {{ end }}
-            {{ end }}
-            {{ partial "home/social.html" .}}
-        </ul>
-    </nav>
-</div>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    {{ $isHome := .Page.IsHome }}
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="navbar-menu" id="navMenu">
+        <!-- look for custom menu and include it -->
+        {{ if .Site.Menus.main }}
+        {{ if not $isHome }}
+        <li class="navbar-item"><a href="{{ "/" | relLangURL }}">Back</a></li>
+        {{ end }}
+        {{ range .Site.Menus.main }}
+        <li class="navbar-item">
+            <a href="{{ .URL }}">
+                {{ .Pre }}
+                {{ .Name }}
+                {{ .Post }}
+            </a></li>
+        {{ end }}
+        {{ end }}
+        {{ partial "home/social.html" .}}
+    </ul>
+</nav>
 <!-- End Nav bar -->

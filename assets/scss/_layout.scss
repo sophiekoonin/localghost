@@ -1,0 +1,10 @@
+.wrapper {
+  display: grid;
+  grid-template-areas: 
+    "header"
+    "main"
+    "sidebar"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 10vh 1fr 0.3fr;;
+}
