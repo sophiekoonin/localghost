@@ -1,7 +1,9 @@
 .content {
-  padding: 2rem;
   grid-area: content;
-  border-radius: 15px;
   background: #fff; 
   margin-left: 2rem;
+
+  @media (min-width: $tablet) {
+    padding: 2rem;
+  }
 }

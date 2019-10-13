@@ -98,19 +98,6 @@ hr {
   border: none;
 }
 
-.header-text {
-  font-size: 6rem;
-  line-height: 1.2;
-  font-family: "VT323", monospace;
-  text-transform: lowercase;
-  margin: 0;
-
-
-  @media screen and (min-width: 567px) {
-    font-size: 5rem;
-    text-align: center;
-  }
-}
 
 .top-pad {
   padding-top: 1rem;

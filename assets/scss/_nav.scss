@@ -1,4 +1,4 @@
-nav.navbar {
+.navbar {
   padding-right: 1em;
   padding: 1em 0;
   grid-column: 3/3;
@@ -24,16 +24,25 @@ nav.navbar {
     }
     justify-content: flex-end;
   }
-}
 
-.navbar-item {
-  font-size: 0.8rem;
-  a {
-    font-weight: 500;
-    font-size: 1rem;
-    text-decoration: none;
+
+  .social-icon {
+    display: none;
+    @media (min-width: $tablet) {
+      display: inline;
+    }
+  }
+
+  .navbar-item {
+    font-size: 0.8rem;
+    a {
+      font-weight: 500;
+      font-size: 1rem;
+      text-decoration: none;
+    }
   }
 }
+
 
 .navbar-burger {
   margin: 0;

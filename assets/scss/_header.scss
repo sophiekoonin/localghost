@@ -26,9 +26,22 @@
     grid-column: 2/2;
     position: relative;
 
+    .header-text {
+      font-size: 4rem;
+      line-height: 1.2;
+      font-family: "VT323", monospace;
+      text-transform: lowercase;
+      margin: 0;
+    
+      @media screen and (min-width: $tablet) {
+        font-size: 5rem;
+        text-align: center;
+      }
+    }
+
     .ghost {
       position: absolute;
-      right: 25px;
+      right: 10px;
       top: 0;
       transform: rotate(-45deg);
       fill-rule: evenodd;
@@ -37,6 +50,9 @@
       stroke-linejoin: round;
       animation: haunt 6s ease-in-out infinite;
 
+      @media screen and (min-width: $tablet) {
+        right: 35px;
+      }
     }
   }
 }
@@ -77,9 +93,11 @@
 
 @keyframes haunt { 
   from, to {
-    top: 0px;
+    top: 5px;
   }
   50% {
     top: 25px;
   }
 }
+
+
