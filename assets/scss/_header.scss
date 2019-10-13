@@ -39,22 +39,29 @@
       }
     }
 
-    .ghost {
+    #ghost {
+      -webkit-appearance: none;
+      border: 0;
+      background: none;
+      svg {
+        transform: rotate(-45deg);
+        fill-rule: evenodd;
+        clip-rule: evenodd;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
       position: absolute;
       right: 10px;
       top: 0;
-      transform: rotate(-45deg);
-      fill-rule: evenodd;
-      clip-rule: evenodd;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      animation: haunt 6s ease-in-out infinite;
-
       @media screen and (min-width: $tablet) {
         right: 35px;
       }
     }
   }
+}
+
+.haunt {
+  animation: haunt 6s ease-in-out infinite;
 }
 
 .typewriter {

@@ -15,11 +15,11 @@
         <div class="wrapper">
             {{ partial "header/header.html" . }}
 
-            {{ block "main" . }}
-            {{ end }}
-
             {{ block "sidebar" . }}
             {{ partial "sidebar.html" . }}
+            {{ end }}
+            
+            {{ block "main" . }}
             {{ end }}
             
             {{ block "footer" . }}

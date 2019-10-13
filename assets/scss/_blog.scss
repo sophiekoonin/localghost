@@ -26,20 +26,43 @@ span.heavy {
   }
 }
 
-
 .markdown .twitter-tweet {
   font-family: inherit;
-  color:#000;
-  font-size: 1em;  
+  color: #000;
+  font-size: 1em;
 
   &::before {
-    content: "";
-    background-image: url("/icons/twitter-blue.svg");
+    content: '';
+    background-image: url('/icons/twitter-blue.svg');
     background-size: contain;
     background-repeat: no-repeat;
     width: 1.5rem;
     height: auto;
     padding-right: 25px;
     vertical-align: middle;
+  }
 }
+
+.post {
+  &-title {
+    margin-bottom: 0.5em;
+  }
+
+  &-subtitle {
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  &-data {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  &-date {
+    a {
+      text-decoration: none;
+      color: $body-color;
+    }
+  }
 }
