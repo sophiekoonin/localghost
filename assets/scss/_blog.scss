@@ -2,7 +2,28 @@
   font-weight: 700;
 }
 
+
+.strong-post-title {
+  font-weight: $weight-bold;
+}
+
+
+.date {
+  font-size: 1.25em;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.5em;
+  display: inline-block;
+}
+
+
 .post {
+  &-item {
+    display: block;
+    list-style: none;
+    list-style-position: outside;
+    margin-left: 0;
+  }
+
   &-title {
     margin-bottom: 0.5em;
   }
@@ -23,5 +44,33 @@
       text-decoration: none;
       color: $body-color;
     }
+  }
+}
+
+.tags-list {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.5rem;
+
+  @media screen and (min-width: 567px) {
+    width: 100%;
+  }
+}
+
+.blog-share {
+  display: flex;
+  a {
+    text-decoration: none;
+  }
+}
+
+.tag-cloud {
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+
+  @media screen and (min-width: 567px) {
+    font-size: 1.5rem;
+    margin-right: 1rem;
   }
 }
