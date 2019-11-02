@@ -1,46 +1,5 @@
-span.heavy {
+.heavy {
   font-weight: 700;
-}
-
-.markdown figure {
-  &.big {
-    img {
-      width: unset;
-    }
-  }
-  img {
-    width: 40%;
-    border-radius: 0;
-    box-shadow: none;
-    border: 0;
-    margin-bottom: 1rem;
-  }
-  figcaption {
-    font-style: italic;
-  }
-}
-
-.markdown .blog-share {
-  img {
-    margin: 0;
-  }
-}
-
-.markdown .twitter-tweet {
-  font-family: inherit;
-  color: #000;
-  font-size: 1em;
-
-  &::before {
-    content: '';
-    background-image: url('/icons/twitter-blue.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 1.5rem;
-    height: auto;
-    padding-right: 25px;
-    vertical-align: middle;
-  }
 }
 
 .post {

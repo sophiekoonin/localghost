@@ -61,7 +61,7 @@
 }
 
 .haunt {
-  animation: haunt 6s ease-in-out infinite;
+  animation: haunt 3s ease-in-out;
 }
 
 .typewriter {
@@ -100,7 +100,7 @@
 
 @keyframes haunt { 
   from, to {
-    top: 5px;
+    top: 0px;
   }
   50% {
     top: 25px;

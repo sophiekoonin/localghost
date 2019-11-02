@@ -2,3 +2,16 @@
   display: flex;
   flex-direction: column;
 }
+
+.container {
+  max-width: 800px;
+  padding-top: 3rem;
+}
+
+.top-pad {
+  padding-top: 1rem;
+}
+
+.bottom-pad {
+  padding-bottom: 1rem;
+}

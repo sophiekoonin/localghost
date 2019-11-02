@@ -4,17 +4,6 @@ html, body {
   font-size: 1.05em;
 }
 
-html.modal-open {
-  overflow: hidden;
-}
-.modal-background {
-  background-color: rgba(256, 256, 256, 0.9);
-}
-
-.modal-close {
-  background-color: #000000;
-}
-
 a {
   color: $mid-purple;
   text-decoration: underline;
@@ -29,11 +18,15 @@ a {
   }
 }
 
-h1, h2, .title, .post-subtitle {
+@mixin heading {
   font-family: "Alef", sans-serif;
   color: $mid-pink;
   font-weight: 400;
   line-height: 1.2em;
+}
+
+h1, h2 {
+  @include heading;
 }
 
 h2 {
@@ -41,10 +34,6 @@ h2 {
     font-weight: 600;
     text-decoration: none;
   }
-}
-
-.title {
-  font-weight: 400;
 }
 
 ul {
@@ -55,56 +44,6 @@ img {
   border-radius: 5px;
   border: 1px solid $secondary;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-hr {
-  height: 1px;
-  background-color: #dbdbdb;
-}
-
-.container {
-  max-width: 800px;
-  padding-top: 3rem;
-}
-
-.title.small-bottom-margin {
-  margin-bottom: 1rem;
-}
-
-.noborder {
-  border-radius: 0px;
-  border: none;
-  box-shadow: none;
-}
-
-.hidden {
-  display: none;
-}
-
-.img-responsive {
-  border-radius: 5px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-.avatar {
-  border: none;
-
-  @media screen and (min-width: 567px) {
-    max-width: 50%;
-  }
-}
-
-.thumbnail {
-  border: none;
-}
-
-
-.top-pad {
-  padding-top: 1rem;
-}
-
-.bottom-pad {
-  padding-bottom: 1rem;
 }
 
 .strong-post-title {

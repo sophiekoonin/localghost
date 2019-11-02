@@ -1,5 +1,4 @@
 .markdown {
-
   &.single-page#about li {
     list-style-type: none;
     margin-left: 0;
@@ -27,5 +26,44 @@
     }
     box-shadow: none;
     border: 0;
+  }
+
+  figure {
+    &.big {
+      img {
+        width: unset;
+      }
+    }
+    img {
+      width: 40%;
+      border-radius: 0;
+      box-shadow: none;
+      border: 0;
+      margin-bottom: 1rem;
+    }
+    figcaption {
+      font-style: italic;
+    }
+  }
+  .blog-share {
+    img {
+      margin: 0;
+    }
+  }
+  .twitter-tweet {
+    font-family: inherit;
+    color: #000;
+    font-size: 1em;
+
+    &::before {
+      content: '';
+      background-image: url('/icons/twitter-blue.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 1.5rem;
+      height: auto;
+      padding-right: 25px;
+      vertical-align: middle;
+    }
   }
 }
