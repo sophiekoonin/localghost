@@ -1,31 +1,46 @@
-html, body {
+html,
+body {
   background-color: $background;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 1.05em;
+  color: $body-color;
 }
 
 a {
-  color: $mid-purple;
-  text-decoration: underline;
-
-  &:hover {
-    color: $link-hover;
-    font-style: none;
-  }
+  text-decoration: none;
 
   &:active {
     color: $mid-purple;
   }
 }
 
+@mixin wavy-underline {
+  background: linear-gradient(to bottom, $mid-pink 0%, $mid-pink 100%);
+  padding-bottom: 3px;
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 1px 1px;
+  text-decoration: none;
+  color: $mid-pink;
+
+  &:hover {
+    background-image: url('/squiggle.svg');
+    background-position: 0 100%;
+    background-size: auto 6px;
+    background-repeat: repeat-x;
+    text-decoration: none;
+  }
+}
+
 @mixin heading {
-  font-family: "Alef", sans-serif;
+  font-family: 'Alef', sans-serif;
   color: $mid-pink;
   font-weight: 400;
   line-height: 1.2em;
 }
 
-h1, h2 {
+h1,
+h2 {
   @include heading;
 }
 
@@ -44,4 +59,16 @@ img {
   border-radius: 5px;
   border: 1px solid $secondary;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.squiggle {
+  animation: shift 0.6s linear infinite;
+}
+@keyframes shift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-20px);
+  }
 }

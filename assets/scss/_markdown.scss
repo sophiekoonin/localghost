@@ -2,6 +2,10 @@
   p {
     margin-bottom: 1em;
     line-height: 1.75em;
+
+    a {
+      @include wavy-underline;
+    }
   }
 
   h1 {
@@ -62,7 +66,7 @@
 
   li:before {
     vertical-align: middle;
-    content: "";
+    content: '';
     display: inline-block;
     height: 0.7em;
     width: 0.7em;
@@ -124,7 +128,8 @@
     border-collapse: collapse;
   }
 
-  td, th {
+  td,
+  th {
     padding: 0.25rem 0.5rem;
     border: 1px solid #e5e5e5;
     text-align: center;
@@ -141,7 +146,7 @@
   }
 
   code {
-    font-family: "Roboto Mono", monospace;
+    font-family: 'Roboto Mono', monospace;
   }
 
   img {
@@ -158,22 +163,31 @@
     margin-bottom: 1.5rem;
   }
 
-  ul.tags {
+  .tags {
     display: flex;
+    flex-direction: column;
     align-items: center;
     margin-left: 0;
+
+    @media screen and (min-width: $tablet) {
+      flex-direction: row;
+    }
   }
 
-  li.star-bullet:before {
-    background-image: url(/icons/star.svg);
-    vertical-align: unset;
-  }
+  .star-bullet {
+    padding-right: 0.5rem;
+    &:first-child:before {
+      @media screen and (min-width: $tablet) {
+        background-image: none;
+      }
+    }
+      &:before {
+        background-image: url(/icons/star.svg);
+        vertical-align: unset;
+      }
+    }
 
-  li.star-bullet {
-    padding: 1rem;
-  }
-  
-  &.single-page#about li {
+  .single-page#about li {
     list-style-type: none;
     margin-left: 0;
     line-height: 2em;
@@ -224,7 +238,6 @@
     font-family: inherit;
     color: #000;
     font-size: 1em;
-    
 
     &::before {
       content: '';

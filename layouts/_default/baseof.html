@@ -19,7 +19,9 @@
             {{ partial "sidebar.html" . }}
             {{ end }}
             
+            <main>
             {{ block "main" . }}
+            </main>
             {{ end }}
             
             {{ block "footer" . }}

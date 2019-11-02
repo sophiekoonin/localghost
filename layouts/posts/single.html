@@ -1,6 +1,6 @@
 
 {{ define "main" }}
-    <div class="container">
+    <article class="blog-container">
     <div class="post-date">
             {{ if .Params.date }} <a href="{{ .Permalink }}">{{ .Date.Format .Site.Params.dateFormat }}</a>{{ end }}
         </div>
@@ -8,7 +8,6 @@
            {{ .Title }}
         </h1>
         {{if .Params.Subtitle }}<span class="post-subtitle">{{ .Params.Subtitle }}</span>{{ end }}
-    </div>
     <!-- Begin blog post content -->
     <div class="container markdown top-pad">
         {{ .Content }}
@@ -38,6 +37,7 @@
             </ul>
             {{ end }}
     </div>
+    </article>
     
     <!-- End blog post content -->
 

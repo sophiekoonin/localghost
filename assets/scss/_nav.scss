@@ -23,7 +23,7 @@
       margin-right: 2rem;
     }
     justify-content: flex-end;
-  }
+  
 
 
   .social-icon {
@@ -34,15 +34,19 @@
   }
 
   .navbar-item {
-    font-size: 0.8rem;
+    font-family: "VT323";
+    font-size: 1rem;
+    &:not(:last-of-type) {
+      padding-right: 1rem;
+    }
     a {
+      @include wavy-underline;
       font-weight: 500;
       font-size: 1rem;
-      text-decoration: none;
     }
   }
 }
-
+}
 
 .navbar-burger {
   margin: 0;
