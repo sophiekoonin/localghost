@@ -11,9 +11,9 @@
   img {
     border: 0;
     box-shadow: none;
-    max-width: 150px; 
+    max-width: 150px;
   }
-  
+
   a {
     display: flex;
     flex-direction: column;
@@ -29,10 +29,10 @@
     .header-text {
       font-size: 4rem;
       line-height: 1.2;
-      font-family: "VT323", monospace;
+      font-family: 'VT323', monospace;
       text-transform: lowercase;
       margin: 0;
-    
+
       @media screen and (min-width: $tablet) {
         font-size: 5rem;
         text-align: center;
@@ -72,7 +72,7 @@
   display: inline-block;
   overflow: hidden;
   letter-spacing: 2px;
-  animation: typing 5s steps(30, end), blink .75s step-end infinite;
+  animation: typing 5s steps(30, end), blink 0.75s step-end infinite;
   white-space: nowrap;
   font-size: 30px;
   font-weight: 700;
@@ -80,31 +80,82 @@
   box-sizing: border-box;
 }
 
-@keyframes typing {
-  from { 
-      width: 0% 
-  }
-  to { 
-      width: 100% 
+.filterwrapper {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.glitch-filter {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin: 0;
+  min-width: 490px;
+}
+
+.glitch-filter-example__heading {
+  margin: 0;
+  margin-bottom: 1em;
+  padding: 0;
+  display: block;
+  position: relative;
+}
+
+.glitch-filter-text {
+  filter: url(#filter);
+  fill: $mid-purple;
+  font-size: 100px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+@mixin createRandomKeyframes($numberOfKeys) {
+  $delta: round(100 / $numberOfKeys);
+
+  @for $i from 1 through $numberOfKeys {
+    $time: ($i * $delta - random($delta)) +'%';
+    #{$time} {
+      stroke-width: random(200) + px;
+    }
   }
 }
 
-@keyframes blink {
-  from, to { 
-      border-color: transparent 
-  }
-  50% { 
-      border-color: orange; 
-  }
+.top-r,
+.bot-r,
+.top-g,
+.bot-g {
+  stroke: #ffffff;
 }
 
-@keyframes haunt { 
-  from, to {
-    top: 0px;
-  }
-  50% {
-    top: 25px;
-  }
+@keyframes topani {
+  @include createRandomKeyframes(10 + random(5));
+}
+
+@keyframes botani {
+  @include createRandomKeyframes(10 + random(5));
 }
 
 
+.top-r {
+  stroke-width: 100px;
+  animation: topani 2.75s linear 1s;
+}
+
+.bot-r {
+  stroke-width: 100px;
+  animation: botani 2.5s linear 1s;
+}
+
+.top-g {
+  stroke-width: 50px;
+  animation: topani 2.5s linear reverse 1s;
+}
+
+.bot-g {
+  stroke-width: 50%;
+  animation: botani 2s linear reverse 1s;
+}

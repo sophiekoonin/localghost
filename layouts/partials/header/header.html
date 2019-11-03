@@ -1,12 +1,15 @@
 {{ with .Site.GetPage "/home" }}
-
+{{ partial "header/glitch.html" . }}
 <header class="header">
     <!-- Title and tagline -->
     <div class="logo">
     <a href="{{ .Site.BaseURL}}">
-        <h1 class="header-text">{{ .Title }}</h1>
+        <h1 class="header-text"> 
+            <svg class="glitch-filter" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%">
+                <text class="glitch-filter-text" y="50%" text-anchor="middle" x="50%" transform="translate(0 34)">localghost</text>
+            </svg>
+        </h1>
     </a>
-    {{ partial "header/ghost.html" . }}
     </div>
     {{ partial "nav.html" $ }}
     <!-- End title and tagline -->

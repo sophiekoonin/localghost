@@ -1,7 +1,6 @@
 ---
 title: "About"
 menu: "main"
-slug: "about"
 ---
 
 <img class="image-right image-profile" src="images/profile.jpg" aria-hidden="true">
