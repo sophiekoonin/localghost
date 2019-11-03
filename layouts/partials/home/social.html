@@ -1,11 +1,18 @@
- {{ $baseURL := .Site.BaseURL }}
-{{ range .Site.Params.social }}
-<li class="social-icon">
-    <a href="{{ .url }}" title="{{ .icon }}" alt="{{ .icon }}" {{ .html_attributes | safeHTMLAttr }}>
-        <img src="{{$baseURL}}icons/{{ .icon}}.svg" />
+<li class="social-icon star-bullet">
+    <a href="https://twitter.com/{{ .Site.Params.twitterUsername}}" title="Twitter" alt="Twitter" >
+        {{ partial "social/twitter.html" . }}
     </a>
 </li>
-{{ end }}
 <li class="social-icon">
-    <a href="{{ .RSSLink }}" title="RSS" alt="RSS"><img src="{{.Site.BaseURL}}icons/rss.svg" /></a>
+    <a href="https://linkedin.com/SophieKoonin" title="LinkedIn" alt="LinkedIn">
+        {{ partial "social/linkedin.html" . }}
+    </a>
+</li>
+<li class="social-icon">
+    <a href="mailto:{{ .Site.Params.email }}" title="Email" alt="Email">
+       {{ partial "social/email.html" . }}
+    </a>
+</li>
+<li class="social-icon">
+    <a href="{{ .RSSLink }}" title="RSS" alt="RSS">{{ partial "social/rss.html" . }}</a>
 </li>

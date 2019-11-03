@@ -1,20 +1,20 @@
 
 {{ define "main" }}
-    <article class="blog-container">
-    <div class="post-date">
-            {{ if .Params.date }} <a href="{{ .Permalink }}">{{ .Date.Format .Site.Params.dateFormat }}</a>{{ end }}
-        </div>
-        <h1 class="title top-pad {{if .Params.Subtitle}}small-bottom-margin{{end}} strong-post-title">
+    <article>
+        <h2 class="post-title {{if .Params.Subtitle}}small-bottom-margin{{end}}">
            {{ .Title }}
-        </h1>
+        </h2>
         {{if .Params.Subtitle }}<span class="post-subtitle">{{ .Params.Subtitle }}</span>{{ end }}
+          <span class="post-date">
+            {{ if .Params.date }}{{ .Date.Format .Site.Params.dateFormat }}{{ end }}
+        </span>
     <!-- Begin blog post content -->
-    <div class="container markdown top-pad">
+    <div class="markdown top-pad">
         {{ .Content }}
     </div>
     {{ partial "separator.html" . }}
 
-    <div class="container markdown">
+    <div class="markdown">
         <div class="blog-share">
                 Share this post:
                 <a class="social-icon" href="https://twitter.com/intent/tweet?text={{ .Title }}%20by%20{{.Site.Params.twitterUsername}}%20{{ .Permalink }}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">

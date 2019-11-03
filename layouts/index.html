@@ -1,6 +1,6 @@
 {{ define "main" }}
     {{ with .Site.GetPage "/posts" }}
-    <ul class="posts-list" id="top">
+    <ol class="posts-list" id="top">
         {{ if .Site.Params.home.showLatest | default true }}
         {{ range first 3 .Pages.ByPublishDate.Reverse }}
         {{ if not .Params.hide }}
@@ -18,7 +18,7 @@
         {{ end }}
         {{ end }}
         {{ partial "top-icon.html" . }}
-    </ul>
+    </ol>
     {{end}}
 
     <!-- End Blog section -->

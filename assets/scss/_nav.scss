@@ -1,58 +1,68 @@
 .navbar {
-  padding-right: 1em;
   padding: 1em 0;
-  grid-column: 3/3;
-
-  @media screen and (max-width: 769px) {
-    display: flex;
-    justify-content: flex-end;
-    &.is-active {
-      flex-direction: column;
-      align-items: flex-end;
-    }
-    .navbar-menu.is-active {
-      width: 100%;
-    }
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 1rem;
   }
 
   ul {
     list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 1rem;
 
-    @media screen and (min-width: $desktop) {
-      display: flex;
-      margin-right: 2rem;
-    }
-    justify-content: flex-end;
-  
-
-
-  .social-icon {
-    display: none;
-    @media (min-width: $tablet) {
-      display: inline;
-    }
-  }
-
-  .navbar-item {
-    font-family: "VT323";
-    font-size: 1rem;
-    &:not(:last-of-type) {
-      padding-right: 1rem;
-    }
-    a {
-      @include wavy-underline;
-      font-weight: 500;
+    .navbar-item {
+      &:not(:first-of-type):before {
+        @include icon-bullet('/icons/star.svg');
+      }
+      font-family: 'VT323';
       font-size: 1rem;
+      padding-right: 0.7em;
+
+      &.no-pad {
+        padding-right: 0.2em;
+      }
+      a {
+        @include wavy-underline;
+        font-weight: 500;
+        font-size: 1rem;
+      }
     }
   }
 }
+
+.social-icons {
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin-bottom: 1em;
 }
 
-.navbar-burger {
-  margin: 0;
-  margin-right: 1em;
+.social-icon {
+  line-height: 0;
+  &.star-bullet:before {
+    @include icon-bullet('/icons/star.svg');
+  }
+  padding: 0 0.5rem;
+  a {
+    line-height: 0;
+    color: $mid-pink;
+    &:hover {
+      color: $turquoise;
+    }
+  }
+  svg {
+    width: 15px;
+  }
 
-  &:hover {
-    background-color: $navbar-background-color;
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: inline;
   }
 }

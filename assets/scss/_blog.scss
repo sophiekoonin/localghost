@@ -1,30 +1,12 @@
 .posts-list {
   list-style-type: none;
+  margin: 0 auto;
   padding: 0;
-  max-width: 1000px;
-  margin: 0 auto;
+  .summary {
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+  }
 }
-.heavy {
-  font-weight: 700;
-}
-
-.blog-container {
-  margin: 0 auto;
-  max-width: 800px;
-}
-
-.strong-post-title {
-  font-weight: $weight-bold;
-}
-
-
-.date {
-  font-size: 1.25em;
-  color: rgba(0, 0, 0, 0.5);
-  margin-bottom: 0.5em;
-  display: inline-block;
-}
-
 
 .post {
   &-item {
@@ -34,8 +16,25 @@
     margin-left: 0;
   }
 
+  &-date {
+    font-size: 0.9rem;
+    color: $mid-grey;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0.5em 0;
+  }
+
+  &-metadata {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $tablet) {
+      flex-direction: row;
+    }
+  }
+
   &-title {
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
     a {
       color: $mid-purple;
     }
@@ -50,13 +49,6 @@
   &-data {
     font-size: 1rem;
     line-height: 2rem;
-  }
-
-  &-date {
-    a {
-      text-decoration: none;
-      color: $body-color;
-    }
   }
 }
 
@@ -86,4 +78,34 @@
     font-size: 1.5rem;
     margin-right: 1rem;
   }
+}
+.tags {
+  display: flex;
+  margin: 0.5em 0;
+  list-style-type: none;
+  font-size: 0.9rem;
+  flex-direction: row;
+  @media screen and (min-width: 567px) {
+    margin-left: 1rem;
+  }
+  .text {
+    color: $mid-grey;
+    text-transform: uppercase;
+  }
+
+  a {
+    @include wavy-underline($mid-purple);
+  }
+  li {
+    padding-right: 0.5rem;
+    &:not(:first-of-type):before {
+      @include icon-bullet('/icons/star.svg');
+      vertical-align: unset;
+    }
+
+    &:first-of-type {
+        margin-left: 0.5rem;
+    }
+  }
+  
 }

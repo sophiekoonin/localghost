@@ -1,15 +1,6 @@
 {{ define "main" }}
-    <div class="container markdown top-pad">
-        {{ .Content }}
-    </div>
-    <div class="container">
-        <ul>
-            {{ range .Pages.ByPublishDate.Reverse }}
-            <li>
-                <a href="{{ .Permalink }}">{{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }} | {{ .Title }}</a>
-            </li>
-            {{ end }}
-        </ul>
-    </div>
-</body>
+<article>
+    <h2 class="title is-2 top-pad">All posts</h2>
+    {{ partialCached "blog/li.html" . }}
+</article>
 {{ end }}

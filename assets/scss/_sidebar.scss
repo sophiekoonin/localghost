@@ -1,13 +1,13 @@
-.sidebar {
-  grid-area: sidebar;
+.profile {
+  background: #fff;
+  border-radius: 15px;
   padding: 2rem;
+  margin: 0 auto;
+  max-width: 750px;
+  margin-bottom: 1rem;
+  p {
+  line-height: 1.75rem;
 
-  .profile {
-    background: #fff; 
-    border-radius: 15px;
-    padding: 1rem;
-    p {
-      margin: 0;
-    }
+    margin: 0;
   }
 }

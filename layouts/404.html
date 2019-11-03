@@ -1,9 +1,9 @@
 {{ define "title" }}
-    <h1 class="bold-title is-1">{{ i18n "404_title" . }}</h1>
+    <h2 class="bold-title is-1">{{ i18n "404_title" . }}</h2>
 {{ end }}
 
 {{ define "main" }}
-    <div class="container markdown top-pad">
+    <div class="markdown top-pad">
         {{ i18n "404_description" . | markdownify }}
     </div>
 {{ end }}

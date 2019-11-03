@@ -4,6 +4,8 @@ body {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 1.05em;
   color: $body-color;
+  width: 100%;
+  margin: 0;
 }
 
 a {
@@ -14,21 +16,25 @@ a {
   }
 }
 
-@mixin wavy-underline {
-  background: linear-gradient(to bottom, $mid-pink 0%, $mid-pink 100%);
-  padding-bottom: 3px;
-  background-position: 0 100%;
-  background-repeat: repeat-x;
-  background-size: 1px 1px;
-  text-decoration: none;
-  color: $mid-pink;
-
-  &:hover {
-    background-image: url('/squiggle.svg');
+@mixin wavy-underline($color: $mid-pink) {
+  color: $color;
+  text-decoration: underline; 
+  
+  @media screen and (min-width: $tablet) {
+    background: linear-gradient(to bottom, $color 0%, $color 100%);
+    padding-bottom: 3px;
     background-position: 0 100%;
-    background-size: auto 6px;
     background-repeat: repeat-x;
+    background-size: 1px 1px;
     text-decoration: none;
+
+    &:hover {
+      background-image: url('/squiggle.svg');
+      background-position: 0 100%;
+      background-size: auto 6px;
+      background-repeat: repeat-x;
+      text-decoration: none;
+    }
   }
 }
 

@@ -1,25 +1,20 @@
 <!-- Begin Nav bar -->
 <nav class="navbar" role="navigation" aria-label="main navigation">
     {{ $isHome := .Page.IsHome }}
-    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-    </a>
     <ul class="navbar-menu" id="navMenu">
         <!-- look for custom menu and include it -->
         {{ if .Site.Menus.main }}
         {{ if not $isHome }}
-        <li class="navbar-item"><a href="{{ "/" | relLangURL }}">Back</a></li>
+        <li class="navbar-item"><a href="{{ "/" | relLangURL }}">Home</a></li>
         {{ end }}
-        {{ range .Site.Menus.main }}
         <li class="navbar-item">
-            <a href="{{ .URL }}">
-                {{ .Pre }}
-                {{ .Name }}
-                {{ .Post }}
+            <a href="/about">
+                About
             </a></li>
-        {{ end }}
+        <li class="navbar-item no-pad">
+            <a href="/posts">
+                Posts
+            </a></li>
         {{ end }}
         {{ partial "home/social.html" .}}
     </ul>

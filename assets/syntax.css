@@ -8,7 +8,7 @@
 /* Keyword */ .chroma .k { color: #C2FFDF }
 /* KeywordConstant */ .chroma .kc { color: #C2FFDF }
 /* KeywordDeclaration */ .chroma .kd { color: #C2FFDF }
-/* KeywordNamespace */ .chroma .kn { color: #f92672 }
+/* KeywordNamespace */ .chroma .kn { color: #ffb3cf }
 /* KeywordPseudo */ .chroma .kp { color: #C2FFDF }
 /* KeywordReserved */ .chroma .kr { color: #C2FFDF }
 /* KeywordType */ .chroma .kt { color: #C2FFDF }
@@ -18,8 +18,8 @@
 /* NameDecorator */ .chroma .nd { color: #a6e22e }
 /* NameException */ .chroma .ne { color: #a6e22e }
 /* NameFunction */ .chroma .nf { color: #fad0f7 }
-/* NameOther */ .chroma .nx { color: #fad0f7 }
-/* NameTag */ .chroma .nt { color: #f92672 }
+/* NameOther */ .chroma .nx { color: #f8f8f2 }
+/* NameTag */ .chroma .nt { color: #ffb3cf }
 /* Literal */ .chroma .l { color: #ae81ff }
 /* LiteralDate */ .chroma .ld { color: #e6db74 }
 /* LiteralString */ .chroma .s { color: #fff79f }

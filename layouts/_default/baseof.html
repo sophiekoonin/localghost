@@ -19,10 +19,10 @@
             {{ partial "sidebar.html" . }}
             {{ end }}
             
-            <main>
+            <main class="main-container">
             {{ block "main" . }}
-            </main>
             {{ end }}
+            </main>
             
             {{ block "footer" . }}
             {{ partial "footer/text.html" . }}

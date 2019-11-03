@@ -1,12 +1,5 @@
 .header {
-  grid-area: header;
-
   padding: 0;
-
-  @media (min-width: $tablet) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 
   img {
     border: 0;
@@ -14,70 +7,23 @@
     max-width: 150px;
   }
 
-  a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-  }
+  .header-text {
+    font-size: 4rem;
+    font-family: 'VT323', monospace;
+    text-transform: lowercase;
+    margin: 0;
+    line-height: 0;
 
-  .logo {
-    grid-column: 2/2;
-    position: relative;
-
-    .header-text {
-      font-size: 4rem;
-      line-height: 1.2;
-      font-family: 'VT323', monospace;
-      text-transform: lowercase;
-      margin: 0;
-
-      @media screen and (min-width: $tablet) {
-        font-size: 5rem;
-        text-align: center;
-      }
-    }
-
-    #ghost {
-      -webkit-appearance: none;
-      border: 0;
-      background: none;
-      svg {
-        transform: rotate(-45deg);
-        fill-rule: evenodd;
-        clip-rule: evenodd;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-      }
-      position: absolute;
-      right: 10px;
-      top: 0;
-      @media screen and (min-width: $tablet) {
-        right: 35px;
-      }
+    @media screen and (min-width: $tablet) {
+      font-size: 7rem;
+      text-align: center;
+      padding-top: 2rem;
     }
   }
-}
 
-.haunt {
-  animation: haunt 3s ease-in-out;
-}
-
-.typewriter {
-  display: inline-block;
-}
-
-.typewriter-text {
-  display: inline-block;
-  overflow: hidden;
-  letter-spacing: 2px;
-  animation: typing 5s steps(30, end), blink 0.75s step-end infinite;
-  white-space: nowrap;
-  font-size: 30px;
-  font-weight: 700;
-  border-right: 4px solid orange;
-  box-sizing: border-box;
+  .navbar {
+    padding: 0;
+  }
 }
 
 .filterwrapper {
@@ -88,29 +34,16 @@
 }
 
 .glitch-filter {
-  display: block;
-  position: relative;
-  text-align: center;
-  margin: 0;
-  min-width: 490px;
-}
-
-.glitch-filter-example__heading {
-  margin: 0;
-  margin-bottom: 1em;
-  padding: 0;
-  display: block;
-  position: relative;
-}
-
-.glitch-filter-text {
-  filter: url(#filter);
-  fill: $mid-purple;
-  font-size: 100px;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  display: block;
+  width: 100%;
+  height: 100px;
+  &-text {
+    filter: url(#filter);
+    fill: $mid-purple;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
 }
 
 @mixin createRandomKeyframes($numberOfKeys) {
@@ -138,7 +71,6 @@
 @keyframes botani {
   @include createRandomKeyframes(10 + random(5));
 }
-
 
 .top-r {
   stroke-width: 100px;

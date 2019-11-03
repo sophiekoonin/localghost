@@ -6,6 +6,10 @@
     @include wavy-underline;
   }
 
+  p:first-of-type {
+    margin-top: 0;
+  }
+
   h1 {
     font-size: 3rem;
 
@@ -63,15 +67,7 @@
   }
 
   li:before {
-    vertical-align: middle;
-    content: '';
-    display: inline-block;
-    height: 0.7em;
-    width: 0.7em;
-    background-image: url(/icons/heart-bullet.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-right: 0.5em;
+    @include icon-bullet()
   }
 
   em {
@@ -141,6 +137,9 @@
   pre {
     border-radius: 3px;
     margin-bottom: 1.5rem;
+    white-space: pre-wrap !important;
+    overflow: scroll;
+    padding: 1rem;
   }
 
   code {
@@ -159,30 +158,6 @@
     text-align: center;
     width: 100%;
     margin-bottom: 1.5rem;
-  }
-
-  .tags {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 0;
-
-    @media screen and (min-width: $tablet) {
-      flex-direction: row;
-    }
-  }
-
-  .star-bullet {
-    padding-right: 0.5rem;
-    &:first-child:before {
-      @media screen and (min-width: $tablet) {
-        background-image: none;
-      }
-    }
-    &:before {
-      background-image: url(/icons/star.svg);
-      vertical-align: unset;
-    }
   }
 
   .single-page#about li {

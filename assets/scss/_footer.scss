@@ -1,16 +1,12 @@
 .footer {
-  grid-area: footer;
-
-  .footer-text {
-    font-size: 0.8em;
+  .footer-link {
+    font-size: 0.75rem;
 
     a {
-      color: $body-color;
+      @include wavy-underline;
     }
-
-    .fab {
-      font-size: 0.8em;
-      vertical-align: baseline;
-    }
+  }
+  .social-icon {
+    display: inline;  
   }
 }

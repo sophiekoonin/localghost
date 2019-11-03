@@ -3,13 +3,11 @@
 {{ end }}
 
 {{ define "main" }}
-    <div class="container">
-        <ul>
-            {{ range .Pages.ByPublishDate.Reverse }}
-            <li>
-                <a href="{{ .Permalink }}">{{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }} | {{ .Title }}</a>
-            </li>
-            {{ end }}
-        </ul>
-    </div>
+    <ul>
+        {{ range .Pages.ByPublishDate.Reverse }}
+        <li>
+            <a href="{{ .Permalink }}">{{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }} | {{ .Title }}</a>
+        </li>
+        {{ end }}
+    </ul>
 {{ end }}
