@@ -1,7 +1,12 @@
+.posts-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
 .heavy {
   font-weight: 700;
 }
-
 
 .blog-container {
   margin: 0 auto;
@@ -31,6 +36,9 @@
 
   &-title {
     margin-bottom: 0.5em;
+    a {
+      color: $mid-purple;
+    }
   }
 
   &-subtitle {

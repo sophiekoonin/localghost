@@ -1,11 +1,9 @@
 .markdown {
-  p {
-    margin-bottom: 1em;
-    line-height: 1.75em;
+  margin-bottom: 1em;
+  line-height: 1.75em;
 
-    a {
-      @include wavy-underline;
-    }
+  a {
+    @include wavy-underline;
   }
 
   h1 {
@@ -181,11 +179,11 @@
         background-image: none;
       }
     }
-      &:before {
-        background-image: url(/icons/star.svg);
-        vertical-align: unset;
-      }
+    &:before {
+      background-image: url(/icons/star.svg);
+      vertical-align: unset;
     }
+  }
 
   .single-page#about li {
     list-style-type: none;

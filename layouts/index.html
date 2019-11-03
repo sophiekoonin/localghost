@@ -1,24 +1,25 @@
 {{ define "main" }}
     {{ with .Site.GetPage "/posts" }}
-    <main class="main content" id="top">
+    <ul class="posts-list" id="top">
         {{ if .Site.Params.home.showLatest | default true }}
         {{ range first 3 .Pages.ByPublishDate.Reverse }}
         {{ if not .Params.hide }}
+        <li>
             <article class="summary">
                 <h2 class="post-title {{if .Params.Subtitle}}small-bottom-margin{{end}} "><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
                 {{if .Params.Subtitle }}<span class="post-subtitle">{{ .Params.Subtitle }}</span>{{ end }}
                 <span class="date">{{ if .Params.date }}{{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }}{{ end }}</span>    
-                <div class="markdown">
+                <p class="markdown">
                     {{ .Summary }}
                 <a href={{ .URL }}>Continue reading...</a>
-
-                </div>
-                {{ partial "top-icon-with-hr.html" . }}
             </article>
+        </li>
         {{ end }}
         {{ end }}
         {{ end }}
-    </main>
+        {{ partial "top-icon.html" . }}
+    </ul>
     {{end}}
+
     <!-- End Blog section -->
 {{end}}
