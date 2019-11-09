@@ -1,17 +1,33 @@
-html,
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background: $pastel-pink;
-  background: linear-gradient(0deg, $pastel-pink 0%, $pastel-purple 100%);
   font-family: $family-sans-serif;
   font-size: 1.05em;
+  background-color: #ffffff;  
   color: $body-color;
-  width: 100%;
   margin: 0;
+  min-height: 100vh;
+
+  &:after {
+    content: "";
+    position: fixed;
+    user-select: none;
+    pointer-events: none;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 999;
+    border: $pastel-pink solid .8rem;
+    border-image: linear-gradient(to bottom, $pastel-pink 0%, $pastel-purple 100%) 1;
+    // border-bottom-width: 0;
+  }
 }
 
 a {
   text-decoration: none;
-
   &:active {
     color: $mid-purple;
   }
