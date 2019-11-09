@@ -87,3 +87,12 @@ img {
 .link-to-top {
   text-align: center;
 }
+
+.separator {
+  background-image: url("/squiggle.svg");
+  background-repeat: repeat-x;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  height: 8px;
+}

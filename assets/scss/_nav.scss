@@ -19,7 +19,7 @@
       &:not(:first-of-type):before {
         @include icon-bullet('/icons/star.svg');
       }
-      font-family: 'VT323';
+      font-family: 'Alef', sans-serif;
       font-size: 1rem;
       padding-right: 0.7em;
 
