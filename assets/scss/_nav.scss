@@ -27,7 +27,7 @@
         padding-right: 0.2em;
       }
       a {
-        @include wavy-underline;
+        @include gradient-underline;
         font-weight: 500;
         font-size: 1rem;
       }

@@ -1,11 +1,7 @@
 html,
 body {
   background: $pastel-pink;
-  background: linear-gradient(
-    0deg,
-    $pastel-pink 0%,
-    $pastel-purple 100%
-  );
+  background: linear-gradient(0deg, $pastel-pink 0%, $pastel-purple 100%);
   font-family: $family-sans-serif;
   font-size: 1.05em;
   color: $body-color;
@@ -21,25 +17,34 @@ a {
   }
 }
 
-@mixin wavy-underline($color: $mid-pink) {
-  color: $color;
-  text-decoration: underline;
+@mixin gradient-underline($color: $mid-pink) {
+  color: transparent;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  text-shadow: 0 0 $color, 0.08em 0 0 #fff, 0 0, -0.08em 0 0 #fff;
+  vertical-align: bottom;
 
-  @media screen and (min-width: $tablet) {
-    background: linear-gradient(to bottom, $color 0%, $color 100%);
-    padding-bottom: 3px;
-    background-position: 0 100%;
-    background-repeat: repeat-x;
-    background-size: 1px 1px;
-    text-decoration: none;
+  &:after {
+    background: linear-gradient(to bottom, rgba($color, 0.8), rgba($color, 0.8)) center 1.08em / 100% 2px no-repeat;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 3px;
+    width: 400%;
+    will-change: transform;
+  }
 
-    &:hover {
-      background-image: url('/squiggle.svg');
-      background-position: 0 100%;
-      background-size: auto 6px;
-      background-repeat: repeat-x;
-      text-decoration: none;
-    }
+  &:hover:after {
+    animation: underline-gradient 3s linear infinite;
+    background-image: linear-gradient(
+      90deg,
+      rgba($pastel-purple, 0.8) 15%,
+      rgba($mid-purple, 0.6) 35%,
+      rgba($turquoise, 0.8) 85%
+    );
   }
 }
 
@@ -72,27 +77,25 @@ img {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.squiggle {
-  animation: shift 0.6s linear infinite;
-}
-@keyframes shift {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-20px);
-  }
-}
-
 .link-to-top {
   text-align: center;
+  margin-top: 1rem;
 }
 
 .separator {
-  background-image: url("/squiggle.svg");
+  background-image: url('/squiggle-blue.svg');
   background-repeat: repeat-x;
-  width: 50%;
+  width: 33%;
   margin: 0 auto;
   margin-top: 2rem;
   height: 8px;
+}
+
+@keyframes underline-gradient {
+  0% {
+    transform: translate3d(0%, 0%, 0);
+  }
+  100% {
+    transform: translate3d(-75%, 0%, 0);
+  }
 }

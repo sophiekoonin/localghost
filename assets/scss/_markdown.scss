@@ -3,7 +3,7 @@
   line-height: 1.75em;
 
   a {
-    @include wavy-underline;
+    @include gradient-underline;
   }
 
   p:first-of-type {

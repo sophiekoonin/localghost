@@ -94,7 +94,7 @@
   }
 
   a {
-    @include wavy-underline($mid-purple);
+    @include gradient-underline($mid-purple);
   }
   li {
     padding-right: 0.5rem;

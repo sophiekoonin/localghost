@@ -3,7 +3,7 @@
     font-size: 0.75rem;
 
     a {
-      @include wavy-underline;
+      @include gradient-underline;
     }
   }
   .social-icon {
