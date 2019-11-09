@@ -1,8 +1,7 @@
 {{ define "main" }}
-    <article class="markdown single-page" id="{{ lower .Params.Slug }}">
-        <h2>{{ .Title }}</h2>
+    <article class="markdown full-width" id="{{ lower .Params.Slug }}">
+        <h2 class="page-title">{{ .Title }}</h2>
         <span class="date">{{ if .Params.date }}{{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }}{{ end }}</span>    
         {{ .Content }}
-        {{ partial "top-icon.html" . }}
     </article>
 {{ end }}

@@ -1,6 +1,8 @@
 .header {
   padding: 0;
-
+  @media screen and (min-width: $tablet) {
+    margin-top: 2rem;
+  }
   img {
     border: 0;
     box-shadow: none;
@@ -31,7 +33,6 @@
   z-index: -1;
   pointer-events: none;
   opacity: 0;
-  max-width: 95%;
 }
 
 .glitch-filter {

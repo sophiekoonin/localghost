@@ -11,7 +11,12 @@
 @font-face {
   font-family: "Nunito Sans";
   src: url("/fonts/NunitoSans-Bold.woff") format('woff2');
-  font-weight: 700;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("/fonts/NunitoSans-Black.woff") format('woff2');
+  font-weight: 800;
 }
 
 @font-face {

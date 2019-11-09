@@ -21,8 +21,7 @@ body {
     top: 0;
     z-index: 999;
     border: $pastel-pink solid .8rem;
-    border-image: linear-gradient(to bottom, $pastel-pink 0%, $pastel-purple 100%) 1;
-    // border-bottom-width: 0;
+    border-image: linear-gradient(to bottom, $pastel-pink 0%, $pastel-purple 50%, $turquoise 100%) 1;
   }
 }
 
@@ -64,23 +63,23 @@ a {
   }
 }
 
-@mixin heading {
-  font-family: 'Alef', sans-serif;
+h1 {
+  font-weight: 200;
+}
+
+h2 {
   color: $mid-pink;
-  font-weight: 400;
+  font-weight: 800;
   line-height: 1.2em;
-}
-
-h1,
-h2 {
-  @include heading;
-}
-
-h2 {
   a {
-    font-weight: 600;
+    font-weight: 800;
     text-decoration: none;
   }
+}
+
+h3 {
+  color: $mid-pink;
+  font-weight: 800;
 }
 
 ul {

@@ -5,15 +5,45 @@
   .summary {
     margin-bottom: 1rem;
     padding-top: 1rem;
+    .post-date {
+      font-size: 1rem;
+    }
   }
+
+  @media screen and (min-width: $desktop) {
+    margin: 0;
+    max-width: 60%;
+  }
+}
+
+.read-more-link {
+  @include gradient-underline;
+}
+
+.all-posts-list {
+  padding: 0;
+  list-style-type: none;
 }
 
 .post {
   &-item {
     display: block;
-    list-style: none;
-    list-style-position: outside;
     margin-left: 0;
+    line-height: 1.75rem;
+    font-size: 1.15rem;
+    a {
+      color: $mid-pink;
+      text-decoration: underline;
+      @media screen and (min-width: $desktop) {
+        @include gradient-underline;
+      }
+    }
+  }
+
+  &-subtitle-group {
+    span {
+      display: block;
+    }
   }
 
   &-date {
@@ -41,9 +71,8 @@
   }
 
   &-subtitle {
+    color: $mid-purple;
     font-size: 1.5rem;
-    display: inline-block;
-    margin-bottom: 1rem;
   }
 
   &-data {
@@ -104,8 +133,7 @@
     }
 
     &:first-of-type {
-        margin-left: 0.5rem;
+      margin-left: 0.5rem;
     }
   }
-  
 }

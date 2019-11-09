@@ -1,21 +1,14 @@
 <!-- Begin Nav bar -->
 <nav class="navbar" role="navigation" aria-label="main navigation">
-    {{ $isHome := .Page.IsHome }}
     <ul class="navbar-menu" id="navMenu">
-        <!-- look for custom menu and include it -->
-        {{ if .Site.Menus.main }}
-        {{ if not $isHome }}
-        <li class="navbar-item"><a href="{{ "/" | relLangURL }}">Home</a></li>
-        {{ end }}
         <li class="navbar-item">
-            <a href="/about">
-                About
-            </a></li>
-        <li class="navbar-item no-pad">
             <a href="/posts">
                 Posts
             </a></li>
-        {{ end }}
+        <li class="navbar-item">
+            <a href="/talks">
+            Talks
+            </a></li>
         {{ partial "home/social.html" .}}
     </ul>
 </nav>

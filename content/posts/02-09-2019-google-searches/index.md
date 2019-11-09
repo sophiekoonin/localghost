@@ -2,16 +2,17 @@
 title: Everything I googled in a week as a professional software engineer
 date: 2019-09-02
 tags: ['engineering', 'work']
+summary: "In an attempt to dispel the idea that if you have to google stuff you're not a proper engineer, this is a list of nearly everything I googled in a week at work, where I'm a software engineer with several years' experience."
+
 ---
 
 In an attempt to dispel the idea that if you have to google stuff you're not a proper engineer, this is a list of nearly everything I googled in a week at work, where I'm a software engineer with several years' experience. 
-
 
 {{< img src="*/ground.png" alt="Threw it on the ground." >}}
 
 Obviously these weren't all googled in a row (although you can probably spot that a few were), but throughout the day. I can't remember the context of everything I was googling, but hopefully it'll make you feel a little better next time you have to google something. 
 
-## Monday 
+### Monday 
 `npm react-testing-library` - during a React upgrade, looking at dependencies to see latest versions and checking for breaking changes.
 
 `Expecting a parsed GraphQL document. Perhaps you need to wrap the query string in a "gql" tag?` - said React upgrade then started causing some super fun errors.
@@ -36,7 +37,7 @@ Obviously these weren't all googled in a row (although you can probably spot tha
 
 `shame gif` - an important part of any presentation
 
-## Tuesday
+### Tuesday
 `javascript get array of unique dates` - if I have an array of `Date`s, how can I filter them so they are unique? (`reduce`, naturally, but I can rarely use that without googling it first)
 
 `date to locale string`
@@ -87,7 +88,7 @@ Obviously these weren't all googled in a row (although you can probably spot tha
 
 `next.js hooks` - we can use them, right? (we can, and I did)
 
-## Wednesday
+### Wednesday
 `cors` - today is going to be bleak
 
 `the corrs` - once I hit some CORS errors I decided I needed to make a meme, and I needed to find the perfect image. It took a surprisingly long time.
@@ -137,7 +138,7 @@ Obviously these weren't all googled in a row (although you can probably spot tha
 
 🍪
 
-## Thursday
+### Thursday
 `"log in with google" localhost` - was having all sorts of problems getting this to work
 
 `httpserverrequest javascript` - I have a feeling this was something to do with Flow types
@@ -188,7 +189,7 @@ Obviously these weren't all googled in a row (although you can probably spot tha
 
 Thursday was a whole lot of fun D:
 
-## Friday 
+### Friday 
 `provisional headers are shown` - still at it.
 
 `sending cookies from localhost` - have I mentioned that I hate cookies?

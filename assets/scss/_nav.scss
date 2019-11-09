@@ -7,7 +7,7 @@
     margin-right: 1rem;
   }
 
-  ul {
+  .navbar-menu {
     list-style-type: none;
     display: flex;
     align-items: center;
@@ -15,21 +15,26 @@
     margin: 0 auto;
     padding-top: 1rem;
 
+    @media screen and (min-width: $tablet) {
+      padding-top: 2rem;
+      padding-right: 1.5rem;      
+    }
+
     .navbar-item {
-      &:not(:first-of-type):before {
-        @include icon-bullet('/icons/star.svg');
-      }
-      font-family: 'Alef', sans-serif;
+      text-transform: uppercase;
       font-size: 1rem;
-      padding-right: 0.7em;
+      padding-right: 1rem;
 
       &.no-pad {
         padding-right: 0.2em;
       }
       a {
-        @include gradient-underline;
-        font-weight: 500;
+        color: $mid-pink;
+        font-weight: 800;
         font-size: 1rem;
+        &:hover {
+          color: $turquoise; 
+        }
       }
     }
   }
@@ -45,9 +50,6 @@
 
 .social-icon {
   line-height: 0;
-  &.star-bullet:before {
-    @include icon-bullet('/icons/star.svg');
-  }
   padding: 0 0.5rem;
   a {
     line-height: 0;

@@ -12,17 +12,18 @@
         {{ end }}
     </head>
     <body id="top">
-        <div class="wrapper">
             {{ partial "header/header.html" . }}
-
+            
+            <main class="main-container">
             {{ block "sidebar" . }}
             {{ partial "sidebar.html" . }}
             {{ end }}
-            
-            <main class="main-container">
+
             {{ block "main" . }}
             {{ end }}
+
             </main>
+
             
             {{ block "footer" . }}
             {{ partial "footer/text.html" . }}
@@ -35,6 +36,5 @@
             <!-- Include page specific scripts -->
             {{ block "customScripts" . }}
             {{ end }}
-        </div>
     </body>
 </html>

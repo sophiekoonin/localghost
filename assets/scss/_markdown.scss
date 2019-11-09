@@ -2,9 +2,13 @@
   margin-bottom: 1em;
   line-height: 1.75em;
 
+  @media screen and (min-width: $tablet) {
+    font-size: 1.15rem;
+  }
+
   a {
     @include gradient-underline;
-  }
+}
 
   p:first-of-type {
     margin-top: 0;
@@ -21,12 +25,7 @@
   h2 {
     font-size: 2rem;
     line-height: 1em;
-    margin-top: 1.5em;
     margin-bottom: 0.8em;
-
-    @media screen and (min-width: 567px) {
-      font-size: 1.5rem;
-    }
   }
 
   h3 {
@@ -61,7 +60,6 @@
 
   li {
     margin-left: 0;
-    line-height: 2em;
     padding-left: 0;
     vertical-align: middle;
   }
@@ -75,7 +73,7 @@
   }
 
   strong {
-    font-weight: 700;
+    font-weight: 600;
   }
 
   hr {
@@ -192,15 +190,20 @@
   figure {
     &.big {
       img {
-        width: unset;
+        max-width: unset;
       }
     }
+    margin: 0;
+    
     img {
-      width: 40%;
       border-radius: 0;
       box-shadow: none;
       border: 0;
       margin-bottom: 1rem;
+      @media screen and (min-width: $tablet) {
+        max-width: 60%;
+      }
+    
     }
     figcaption {
       font-style: italic;

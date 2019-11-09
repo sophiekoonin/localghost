@@ -1,13 +1,36 @@
 .profile {
-  background: #fff;
-  border-radius: 15px;
-  padding: 2rem;
-  margin: 0 auto;
-  max-width: 750px;
-  margin-bottom: 1rem;
-  p {
-  line-height: 1.75rem;
+   margin-bottom: 3rem;
+   margin: 0 auto;
+   @media screen and (min-width: $tablet) {
+    max-width: 50%;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 33%;
+    margin: 0;
+  }
 
+  h3 {
+    color: $mid-purple;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  .separator {
+    margin: 1rem auto;
+  }
+  .photo {
+    border-radius: 50%;
+    max-width: 75px;
+    float: left;
+    margin-right: 1.5rem;
+    border: 2px solid $mid-purple;
+  }
+
+  a {
+    @include gradient-underline;
+  }
+
+  p {
+    font-size: 1rem;
     margin: 0;
   }
 }

@@ -1,17 +1,24 @@
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-  min-height: 100%;
-}
-
 .main-container {
   margin: 0 auto;
-  padding: 0 2rem;
   max-width: 100vw;
+  padding: 2rem;
+  @media screen and (min-width: $desktop) {
+    padding: 3rem 6rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+.full-width {
   @media screen and (min-width: $tablet) {
-    padding: 0;
-    max-width: 800px;
+    padding: 2rem;
+    .page-title {
+      font-size: 1.8rem;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 60%;
   }
 }
 
