@@ -38,7 +38,7 @@ The application lets you read information about gigs, edit this information, cre
 
 Here's our `Gig` component. It's basically functioning as a wrapper for smaller components - `GigDetails` and `GigTodos`. It handles all the data fetching and is also where the functions to update/delete things are defined and passed into the child components. 
 
-```
+{{< highlight react >}}
 export default function Gig({ id }) {
   const [loading, setLoading] = useState(true)
   const [gig, setGig] = useState()
@@ -116,7 +116,6 @@ export default function Gig({ id }) {
         </span>
         {slackChannel != null && (
           <>
-            <span>・</span>
             <a
               href={`${env.slackURL}/messages/${slackChannel.channel_id}`}
               target="_blank"
@@ -147,7 +146,7 @@ export default function Gig({ id }) {
     </section>
   )
 }
-```
+{{</ highlight >}}
 
 
 

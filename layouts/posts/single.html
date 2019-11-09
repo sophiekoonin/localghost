@@ -1,13 +1,23 @@
-
 {{ define "main" }}
     <article>
         <h2 class="post-title {{if .Params.Subtitle}}small-bottom-margin{{end}}">
            {{ .Title }}
         </h2>
+        <div class="post-metadata">
         {{if .Params.Subtitle }}<span class="post-subtitle">{{ .Params.Subtitle }}</span>{{ end }}
           <span class="post-date">
             {{ if .Params.date }}{{ .Date.Format .Site.Params.dateFormat }}{{ end }}
         </span>
+        {{ if .Params.tags }}
+            {{ $len := (len .Params.tags) }}
+            <ul class="tags">
+                <span class="text">Tag{{ if gt $len 1 }}s{{ end }}:</span>
+                {{ range $index, $tag := .Params.tags }}
+                <li class="star-bullet"><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>{{ if ne (add $index 1) $len }}{{ end }}</li>
+                {{ end }}
+            </ul>
+            {{ end }}
+    </div>
     <!-- Begin blog post content -->
     <div class="markdown top-pad">
         {{ .Content }}
@@ -27,15 +37,6 @@
                     <img src="{{$.Site.BaseURL}}icons/linkedin-blue.svg" />
                 </a>
             </div>
-            {{ if .Params.tags }}
-            {{ $len := (len .Params.tags) }}
-            <ul class="tags">
-                Tag{{ if gt $len 1 }}s{{ end }}:
-                {{ range $index, $tag := .Params.tags }}
-                <li class="star-bullet"><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>{{ if ne (add $index 1) $len }}{{ end }}</li>
-                {{ end }}
-            </ul>
-            {{ end }}
     </div>
     </article>
     

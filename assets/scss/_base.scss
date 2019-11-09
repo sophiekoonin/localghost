@@ -1,7 +1,12 @@
 html,
 body {
-  background-color: $background;
-  font-family: 'Nunito Sans', sans-serif;
+  background: $pastel-pink;
+  background: linear-gradient(
+    0deg,
+    $pastel-pink 0%,
+    $pastel-purple 100%
+  );
+  font-family: $family-sans-serif;
   font-size: 1.05em;
   color: $body-color;
   width: 100%;
@@ -18,8 +23,8 @@ a {
 
 @mixin wavy-underline($color: $mid-pink) {
   color: $color;
-  text-decoration: underline; 
-  
+  text-decoration: underline;
+
   @media screen and (min-width: $tablet) {
     background: linear-gradient(to bottom, $color 0%, $color 100%);
     padding-bottom: 3px;
