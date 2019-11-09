@@ -3,11 +3,10 @@
   max-width: 100vw;
   padding: 2rem;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   @media screen and (min-width: $desktop) {
-    padding: 3rem 6rem;
-    flex-direction: row;
-    justify-content: space-between;
+    max-width: 80%;
+    // padding: 3rem 6rem;
   }
 }
 
@@ -21,12 +20,9 @@
   }
   @media screen and (min-width: $desktop) {
     max-width: 60%;
+    margin: 0 auto;
   }
-}
-
-.container {
-  max-width: 800px;
-  padding-top: 3rem;
+ 
 }
 
 .top-pad {

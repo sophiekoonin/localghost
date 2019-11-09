@@ -8,10 +8,15 @@
 
   a {
     @include gradient-underline;
-}
+  }
 
-  p:first-of-type {
-    margin-top: 0;
+  p {
+    &:first-of-type {
+      margin-top: 0;
+    }
+    code {
+      color: $mid-purple;
+    }
   }
 
   h1 {

@@ -3,4 +3,7 @@
     <h2 class="page-title">All posts</h2>
     {{ partialCached "blog/li.html" . }}
 </article>
+{{ block "sidebar" . }}
+{{ partial "sidebar.html" . }}
+{{ end }}
 {{ end }}

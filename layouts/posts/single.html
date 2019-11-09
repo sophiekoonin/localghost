@@ -1,5 +1,6 @@
 {{ define "main" }}
     <article class="full-width">
+        <div class="post-body">
         <h2 class="post-title page-title {{if .Params.Subtitle}}small-bottom-margin{{end}}">
            {{ .Title }}
         </h2>
@@ -17,14 +18,12 @@
                 {{ end }}
             </ul>
             {{ end }}
-    </div>
+        </div>
     <!-- Begin blog post content -->
-    <div class="markdown top-pad">
-        {{ .Content }}
-    </div>
-    {{ partial "separator.html" . }}
+        <div class="markdown top-pad">
+            {{ .Content }}
+        </div>
 
-    <div class="markdown">
         <div class="blog-share">
                 Share this post:
                 <a class="social-icon" href="https://twitter.com/intent/tweet?text={{ .Title }}%20by%20{{.Site.Params.twitterUsername}}%20{{ .Permalink }}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
@@ -36,8 +35,13 @@
                 <a class="social-icon" href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}&summary={{ .Summary }}&source=localghost.dev"  onclick="window.open(this.href, 'linkedin-share','width=580,height=296');return false;">
                     <img src="{{$.Site.BaseURL}}icons/linkedin-blue.svg" />
                 </a>
-            </div>
+        </div>
+
+    {{ partial "separator.html" . }}
     </div>
+    {{ block "sidebar" . }}
+    {{ partial "sidebar.html" . }}
+    {{ end }}
     </article>
     
     <!-- End blog post content -->

@@ -4,4 +4,7 @@
         <span class="date">{{ if .Params.date }}{{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }}{{ end }}</span>    
         {{ .Content }}
     </article>
+    {{ block "sidebar" . }}
+    {{ partial "sidebar.html" . }}
+    {{ end }}
 {{ end }}

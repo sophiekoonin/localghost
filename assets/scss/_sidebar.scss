@@ -1,12 +1,8 @@
 .profile {
-   margin-bottom: 3rem;
-   margin: 0 auto;
-   @media screen and (min-width: $tablet) {
+  margin-bottom: 3rem;
+  margin: 0 auto;
+  @media screen and (min-width: $tablet) {
     max-width: 50%;
-  }
-  @media screen and (min-width: $desktop) {
-    max-width: 33%;
-    margin: 0;
   }
 
   h3 {
@@ -17,13 +13,6 @@
   .separator {
     margin: 1rem auto;
   }
-  .photo {
-    border-radius: 50%;
-    max-width: 75px;
-    float: left;
-    margin-right: 1.5rem;
-    border: 2px solid $mid-purple;
-  }
 
   a {
     @include gradient-underline;
@@ -33,4 +22,19 @@
     font-size: 1rem;
     margin: 0;
   }
+}
+
+.intro {
+  margin: 0 auto;
+  .big-text {
+    font-size: 1.5rem;
+    display: block;
+  }
+}
+.photo {
+  border-radius: 50%;
+  max-width: 75px;
+  float: left;
+  margin-right: 1.5rem;
+  border: 2px solid $mid-purple;
 }

@@ -114,3 +114,24 @@ img {
     transform: translate3d(-75%, 0%, 0);
   }
 }
+
+.skip-link {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+
+  &:focus {
+    margin-left: 2rem;
+    clip: auto;
+    width: auto;
+    height: auto;
+    overflow: auto;
+    position: absolute;
+    background: lighten($turquoise, 30%); 
+    padding: 0.5rem;
+    color: #000000;  
+  }
+}

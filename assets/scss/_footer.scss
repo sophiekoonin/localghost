@@ -1,5 +1,24 @@
 .footer {
-  .footer-link {
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 2rem;
+
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+  }
+  .social-icons {
+    margin: 0;
+  }
+
+  li {
+    &:last-of-type {
+      padding-right: 0;
+    }
     font-size: 1rem;
     padding-right: 1rem;
 

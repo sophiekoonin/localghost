@@ -11,7 +11,6 @@
   }
 
   @media screen and (min-width: $desktop) {
-    margin: 0;
     max-width: 60%;
   }
 }
@@ -30,6 +29,7 @@
     display: block;
     margin-left: 0;
     line-height: 1.75rem;
+    margin-bottom: 0.75rem;
     font-size: 1.15rem;
     a {
       color: $mid-pink;
