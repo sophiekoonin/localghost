@@ -2,15 +2,17 @@
   margin: 0 auto;
   max-width: 100vw;
   padding: 2rem;
+  display: flex;
+  flex-direction: column-reverse;
   @media screen and (min-width: $desktop) {
     padding: 3rem 6rem;
-    display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: space-between;
   }
 }
 
 .full-width {
+  padding-top: 1rem;
   @media screen and (min-width: $tablet) {
     padding: 2rem;
     .page-title {

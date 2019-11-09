@@ -14,14 +14,12 @@
     <body id="top">
             {{ partial "header/header.html" . }}
             
-            <main class="main-container">
+            <main class="main-container" id="content">
+            {{ block "main" . }}
+            {{ end }}
             {{ block "sidebar" . }}
             {{ partial "sidebar.html" . }}
             {{ end }}
-
-            {{ block "main" . }}
-            {{ end }}
-
             </main>
 
             
