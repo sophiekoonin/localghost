@@ -12,9 +12,11 @@
   .header-text {
     font-size: 4rem;
     font-family: 'VT323', monospace;
+    font-display: swap;
+    color: $mid-purple;
     text-transform: lowercase;
     margin: 0;
-    line-height: 0;
+    // line-height: 0;
 
     @media screen and (min-width: $tablet) {
       font-size: 7rem;
@@ -28,68 +30,68 @@
   }
 }
 
-.filterwrapper {
-  position: absolute;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0;
-}
+// .filterwrapper {
+//   position: absolute;
+//   z-index: -1;
+//   pointer-events: none;
+//   opacity: 0;
+// }
 
-.glitch-filter {
-  width: 100%;
-  height: 100px;
-  &-text {
-    filter: url(#filter);
-    fill: $mid-purple;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    display: block;
-  }
-}
+// .glitch-filter {
+//   width: 100%;
+//   height: 100px;
+//   &-text {
+//     filter: url(#filter);
+//     fill: $mid-purple;
+//     text-align: center;
+//     margin: 0;
+//     padding: 0;
+//     display: block;
+//   }
+// }
 
-@mixin createRandomKeyframes($numberOfKeys) {
-  $delta: round(100 / $numberOfKeys);
+// @mixin createRandomKeyframes($numberOfKeys) {
+//   $delta: round(100 / $numberOfKeys);
 
-  @for $i from 1 through $numberOfKeys {
-    $time: ($i * $delta - random($delta)) +'%';
-    #{$time} {
-      stroke-width: random(200) + px;
-    }
-  }
-}
+//   @for $i from 1 through $numberOfKeys {
+//     $time: ($i * $delta - random($delta)) +'%';
+//     #{$time} {
+//       stroke-width: random(200) + px;
+//     }
+//   }
+// }
 
-.top-r,
-.bot-r,
-.top-g,
-.bot-g {
-  stroke: #ffffff;
-}
+// .top-r,
+// .bot-r,
+// .top-g,
+// .bot-g {
+//   stroke: #ffffff;
+// }
 
-@keyframes topani {
-  @include createRandomKeyframes(10 + random(5));
-}
+// @keyframes topani {
+//   @include createRandomKeyframes(10 + random(5));
+// }
 
-@keyframes botani {
-  @include createRandomKeyframes(10 + random(5));
-}
+// @keyframes botani {
+//   @include createRandomKeyframes(10 + random(5));
+// }
 
-.top-r {
-  stroke-width: 100px;
-  animation: topani 2.75s linear 1s;
-}
+// .top-r {
+//   stroke-width: 100px;
+//   animation: topani 2.75s linear 1s;
+// }
 
-.bot-r {
-  stroke-width: 100px;
-  animation: botani 2.5s linear 1s;
-}
+// .bot-r {
+//   stroke-width: 100px;
+//   animation: botani 2.5s linear 1s;
+// }
 
-.top-g {
-  stroke-width: 50px;
-  animation: topani 2.5s linear reverse 1s;
-}
+// .top-g {
+//   stroke-width: 50px;
+//   animation: topani 2.5s linear reverse 1s;
+// }
 
-.bot-g {
-  stroke-width: 50%;
-  animation: botani 2s linear reverse 1s;
-}
+// .bot-g {
+//   stroke-width: 50%;
+//   animation: botani 2s linear reverse 1s;
+// }
