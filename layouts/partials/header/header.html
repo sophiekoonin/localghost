@@ -2,13 +2,14 @@
 {{ partial "header/glitch.html" . }}
 <header class="header">
     <!-- Title and tagline -->
-        <h1 class="header-text"> 
-            <svg class="glitch-filter" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <a href="{{ .Site.BaseURL}}">   
-                    <text class="glitch-filter-text" y="50%" text-anchor="middle" x="50%" transform="translate(0 34)">localghost</text>
-                </a>
+    <h1 class="header-text">
+        <a href="{{ .Site.BaseURL}}">
+            <svg class="glitch-filter" version="1.1" xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink">
+                <text class="glitch-filter-text" y="50%" text-anchor="middle" x="50%" transform="translate(0 34)">localghost</text>
             </svg>
-        </h1>
+
+        </a>
+    </h1>
     {{ partial "nav.html" $ }}
     <!-- End title and tagline -->
 </header>
