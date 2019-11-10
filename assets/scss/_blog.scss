@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 0;
   .summary {
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
     padding-top: 1rem;
     .post-date {
       font-size: 1rem;
@@ -82,14 +82,18 @@
 }
 
 .tags-list {
-  width: 70%;
-  margin: 0 auto;
-  text-align: center;
   font-size: 1.5rem;
-
-  @media screen and (min-width: 567px) {
-    width: 100%;
+  list-style-type: none;
+  li {
+    margin-bottom: 0.75rem;
+    &:before {
+      @include icon-bullet;
+    }
+    a {
+      @include gradient-underline;
+    }
   }
+
 }
 
 .blog-share {

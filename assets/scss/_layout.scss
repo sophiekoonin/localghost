@@ -4,9 +4,8 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $tablet) {
     max-width: 80%;
-    // padding: 3rem 6rem;
   }
 }
 

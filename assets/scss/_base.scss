@@ -5,6 +5,7 @@
 body {
   font-family: $family-sans-serif;
   font-size: 1.05em;
+  font-display: swap;
   background-color: #ffffff;  
   color: $body-color;
   margin: 0;
@@ -102,7 +103,6 @@ img {
   background-repeat: repeat-x;
   width: 33%;
   margin: 0 auto;
-  margin-top: 2rem;
   height: 8px;
 }
 

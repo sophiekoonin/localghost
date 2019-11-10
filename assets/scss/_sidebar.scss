@@ -26,9 +26,36 @@
 
 .intro {
   margin: 0 auto;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  @media screen and (min-width: $tablet) {
+    min-width: 40%;
+    max-width: 80%;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 45%;
+  }
+  a {
+    @include gradient-underline;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
   .big-text {
+    font-weight: 700;
+    color: $mid-purple;
     font-size: 1.5rem;
     display: block;
+    margin-top: 2rem;
+  }
+  .intro-photo {
+    -webkit-shape-outside:circle();
+    shape-outside:circle();
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    margin-right: 1rem;
+    float: left;
   }
 }
 .photo {
@@ -36,5 +63,5 @@
   max-width: 75px;
   float: left;
   margin-right: 1.5rem;
-  border: 2px solid $mid-purple;
+  border: 2px solid $pastel-purple;
 }
