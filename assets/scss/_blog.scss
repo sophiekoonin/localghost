@@ -10,9 +10,7 @@
     }
   }
 
-  @media screen and (min-width: $desktop) {
-    max-width: 60%;
-  }
+  @include full-width;
 }
 
 .read-more-link {

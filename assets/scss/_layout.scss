@@ -9,6 +9,18 @@
   }
 }
 
+@mixin full-width {
+
+  @media screen and (min-width: $desktop) {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: $desktop-lg) {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+}
+
 .full-width {
   padding-top: 1rem;
   @media screen and (min-width: $tablet) {
@@ -19,10 +31,8 @@
       font-size: 1.8rem;
     }
   }
-  @media screen and (min-width: $desktop) {
-    max-width: 60%;
-    margin: 0 auto;
-  }
+@include full-width;
+
 }
 
 .top-pad {

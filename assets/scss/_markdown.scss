@@ -195,7 +195,7 @@
   figure {
     &.big {
       img {
-        max-width: unset;
+        max-width: 100%;
       }
     }
     margin: 0;
@@ -219,7 +219,14 @@
     font-family: inherit;
     color: #000;
     font-size: 1em;
+    a {
+      @include gradient-underline;
+    }
 
+    @media screen and (max-width: $tablet) {
+      max-width: 100%;
+      margin: 1.5rem 0;
+    }
     &::before {
       content: '';
       background-image: url('/icons/twitter-blue.svg');
