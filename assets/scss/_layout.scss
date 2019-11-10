@@ -13,6 +13,8 @@
   padding-top: 1rem;
   @media screen and (min-width: $tablet) {
     padding: 2rem;
+    padding-bottom: 0;
+
     .page-title {
       font-size: 1.8rem;
     }
@@ -21,7 +23,6 @@
     max-width: 60%;
     margin: 0 auto;
   }
- 
 }
 
 .top-pad {

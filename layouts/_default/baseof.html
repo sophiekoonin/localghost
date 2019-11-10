@@ -12,13 +12,14 @@
         {{ end }}
     </head>
     <body id="top">
-       <a href="#content" class="skip-link">Skip to main content</a>
+    <a href="#content" class="skip-link">Skip to main content</a>
             {{ partial "header/header.html" . }}
             
             <main class="main-container" id="content">
             {{ block "main" . }}
             {{ end }}
             </main>
+            {{ partial "top-icon.html" . }}
 
             
             {{ block "footer" . }}

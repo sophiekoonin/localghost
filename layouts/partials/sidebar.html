@@ -1,10 +1,13 @@
 <aside class="profile">
     {{ partial "separator.html" .}}
-
+<div class="flex-wrapper">
   <img class="photo" src="/img/photo.jpg" aria-hidden="true" />
+  <div>
   <h3>Sophie Koonin</h3>
-  <p>software developer, musician, habitual mess-maker.
-    {{ partial "home/social.html" .}}
+  <p>software developer, musician, habitual mess&#8209;maker.
+  </div>
+</div>
+{{ partial "home/social.html" .}}
 
     {{ partial "separator.html" .}}
 </aside>

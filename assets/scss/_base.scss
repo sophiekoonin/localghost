@@ -34,33 +34,38 @@ a {
 }
 
 @mixin gradient-underline($color: $mid-pink) {
-  color: transparent;
-  display: inline-block;
-  overflow: hidden;
-  position: relative;
-  text-decoration: none;
-  text-shadow: 0 0 $color, 0.08em 0 0 #fff, 0 0, -0.08em 0 0 #fff;
-  vertical-align: bottom;
-
-  &:after {
-    background: linear-gradient(to bottom, rgba($color, 0.8), rgba($color, 0.8)) center 1.08em / 100% 2px no-repeat;
-    content: '';
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 3px;
-    width: 400%;
-    will-change: transform;
-  }
-
-  &:hover:after {
-    animation: underline-gradient 3s linear infinite;
-    background-image: linear-gradient(
-      90deg,
-      rgba($pastel-purple, 0.8) 15%,
-      rgba($mid-purple, 0.6) 35%,
-      rgba($turquoise, 0.8) 85%
-    );
+  color: $color;
+  text-decoration: underline;
+  
+  @media screen and(min-width: $desktop) {
+    color: transparent;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    text-shadow: 0 0 $color, 0.08em 0 0 #fff, 0 0, -0.08em 0 0 #fff;
+    vertical-align: bottom;
+  
+    &:after {
+      background: linear-gradient(to bottom, rgba($color, 0.8), rgba($color, 0.8)) center 1.08em / 100% 2px no-repeat;
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 3px;
+      width: 400%;
+      will-change: transform;
+    }
+  
+    &:hover:after {
+      animation: underline-gradient 3s linear infinite;
+      background-image: linear-gradient(
+        90deg,
+        rgba($pastel-purple, 0.8) 15%,
+        rgba($mid-purple, 0.6) 35%,
+        rgba($turquoise, 0.8) 85%
+      );
+    }
   }
 }
 
@@ -69,6 +74,9 @@ h1 {
 }
 
 h2 {
+  @media screen and (max-width: $desktop) {
+    margin-top: 0;
+  }
   color: $mid-pink;
   font-weight: 800;
   line-height: 1.2em;
@@ -95,7 +103,21 @@ img {
 
 .link-to-top {
   text-align: center;
-  margin-top: 1rem;
+  margin: 1rem 0;
+  .top-icon {
+    color: $dark-turquoise;
+    margin-bottom: 2rem;
+    vertical-align: baseline;
+  
+    &:hover {
+      color: $turquoise;
+    }
+    svg {
+      margin: 0 5px;
+      height: 20px;
+      width: 20px;
+    }
+  }
 }
 
 .separator {
@@ -135,3 +157,6 @@ img {
     color: #000000;  
   }
 }
+
+
+

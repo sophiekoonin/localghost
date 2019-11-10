@@ -1,49 +1,61 @@
 {{ define "main" }}
-    <article class="full-width">
-        <div class="post-body">
+<article class="full-width">
+    <div class="post-body">
         <h2 class="post-title page-title {{if .Params.Subtitle}}small-bottom-margin{{end}}">
-           {{ .Title }}
+            {{ .Title }}
         </h2>
-        <div class="post-metadata">
         {{if .Params.Subtitle }}<span class="post-subtitle">{{ .Params.Subtitle }}</span>{{ end }}
-          <span class="post-date">
-            {{ if .Params.date }}{{ .Date.Format .Site.Params.dateFormat }}{{ end }}
-        </span>
-        {{ if .Params.tags }}
+        <div class="post-metadata">
+            <span class="post-date">
+                {{ if .Params.date }}{{ .Date.Format .Site.Params.dateFormat }}{{ end }}
+            </span>
+            {{ if .Params.tags }}
             {{ $len := (len .Params.tags) }}
             <ul class="tags">
                 <span class="text">Tag{{ if gt $len 1 }}s{{ end }}:</span>
                 {{ range $index, $tag := .Params.tags }}
-                <li class="star-bullet"><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>{{ if ne (add $index 1) $len }}{{ end }}</li>
+                <li class="star-bullet"><a
+                        href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>{{ if ne (add $index 1) $len }}{{ end }}
+                </li>
                 {{ end }}
             </ul>
             {{ end }}
         </div>
-    <!-- Begin blog post content -->
+        <!-- Begin blog post content -->
         <div class="markdown top-pad">
             {{ .Content }}
         </div>
 
         <div class="blog-share">
-                Share this post:
-                <a class="social-icon" href="https://twitter.com/intent/tweet?text={{ .Title }}%20by%20{{.Site.Params.twitterUsername}}%20{{ .Permalink }}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                    <img src="{{$.Site.BaseURL}}icons/twitter-blue.svg" />
-                </a>
-                <a class="social-icon" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"  onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                    <img src="{{$.Site.BaseURL}}icons/facebook.svg" />
-                </a>
-                <a class="social-icon" href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}&summary={{ .Summary }}&source=localghost.dev"  onclick="window.open(this.href, 'linkedin-share','width=580,height=296');return false;">
-                    <img src="{{$.Site.BaseURL}}icons/linkedin-blue.svg" />
-                </a>
+            <span class="share-text">Share this post:</span>
+            <ul class="share-options">
+                <li><a class="twitter"
+                        href="https://twitter.com/intent/tweet?text={{ .Title }}%20by%20{{.Site.Params.twitterUsername}}%20{{ .Permalink }}"
+                        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                        {{ partial "social/twitter.html" . }}
+                    </a></li>
+                <li>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"
+                        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                        {{ partial "social/facebook.html" . }}
+                    </a>
+                </li>
+                <li>
+                    <a class="linkedin"
+                        href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}&summary={{ .Summary }}&source=localghost.dev"
+                        onclick="window.open(this.href, 'linkedin-share','width=580,height=296');return false;">
+                        {{ partial "social/linkedin.html" . }}
+                    </a>
+                </li>
+            </ul>
         </div>
 
-    {{ partial "separator.html" . }}
     </div>
     {{ block "sidebar" . }}
     {{ partial "sidebar.html" . }}
     {{ end }}
-    </article>
-    
-    <!-- End blog post content -->
+</article>
+
+<!-- End blog post content -->
 
 {{ end }}

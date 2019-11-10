@@ -1,6 +1,10 @@
 .profile {
   margin-bottom: 3rem;
   margin: 0 auto;
+  .flex-wrapper {
+    display: flex;
+    align-items: center;
+  }
   @media screen and (min-width: $tablet) {
     max-width: 50%;
   }
@@ -33,7 +37,7 @@
     max-width: 80%;
   }
   @media screen and (min-width: $desktop) {
-    max-width: 45%;
+    max-width: 50%;
   }
   a {
     @include gradient-underline;
@@ -50,8 +54,10 @@
     margin-top: 2rem;
   }
   .intro-photo {
-    -webkit-shape-outside:circle();
-    shape-outside:circle();
+    @media screen and (min-width: $desktop) {
+      -webkit-shape-outside: circle();
+      shape-outside: circle();
+    }
     margin-top: 2rem;
     margin-bottom: 0.5rem;
     margin-right: 1rem;
@@ -61,7 +67,7 @@
 .photo {
   border-radius: 50%;
   max-width: 75px;
-  float: left;
+  max-height: 75px;
   margin-right: 1.5rem;
   border: 2px solid $pastel-purple;
 }

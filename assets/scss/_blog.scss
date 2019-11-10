@@ -93,13 +93,44 @@
       @include gradient-underline;
     }
   }
-
 }
 
 .blog-share {
+  padding-top: 1rem;
   display: flex;
-  a {
-    text-decoration: none;
+  justify-content: center;
+  align-items: baseline;
+  .share-text {
+    font-weight: 600;
+  }
+  .share-options {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    margin-left: 1rem;
+
+    li {
+      padding-right: 1rem;
+      svg {
+        width: 15px;
+      }
+      a {
+        text-decoration: none;
+        color: $mid-pink;
+        &:hover {
+          color: $pastel-pink !important;
+        }
+        &.twitter {
+          color: #1da1f2;
+        }
+        &.facebook {
+          color: #3b5998; 
+        }
+        &.linkedin {
+          color: #0077B5;   
+        }
+      }
+    }
   }
 }
 
@@ -114,6 +145,7 @@
 }
 .tags {
   display: flex;
+  flex-wrap: wrap;
   margin: 0.5em 0;
   list-style-type: none;
   font-size: 0.9rem;
