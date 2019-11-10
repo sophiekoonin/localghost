@@ -33,14 +33,17 @@
 
 .intro {
   margin: 0 auto;
-  margin-bottom: 2rem;
+  padding: 2rem;
+  // margin-bottom: 2rem;
   font-size: 1.1rem;
   @media screen and (min-width: $tablet) {
-    min-width: 40%;
     max-width: 80%;
   }
   @media screen and (min-width: $desktop) {
-    max-width: 50%;
+    max-width: 60%;
+  }
+  @media screen and (min-width: $desktop-lg) {
+    max-width: 35%;
   }
   a {
     @include gradient-underline;
@@ -57,12 +60,12 @@
     margin-top: 2rem;
   }
   .intro-photo {
-    @media screen and (min-width: $desktop) {
-      -webkit-shape-outside: circle();
-      shape-outside: circle();
-    }
+    // @media screen and (min-width: $desktop) {
+    //   -webkit-shape-outside: circle();
+    //   shape-outside: circle();
+    // }
     margin-top: 2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     margin-right: 1rem;
     float: left;
   }
