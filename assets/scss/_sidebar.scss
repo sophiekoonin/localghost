@@ -9,6 +9,9 @@
     max-width: 50%;
   }
 
+  @media screen and (min-width: $desktop-lg) {
+    max-width: 30%;
+  }
   h3 {
     color: $mid-purple;
     font-size: 1.5rem;
