@@ -1,16 +1,19 @@
 .profile {
   margin-bottom: 3rem;
   margin: 0 auto;
+  padding: 0 1.5rem;
   .flex-wrapper {
     display: flex;
     align-items: center;
   }
   @media screen and (min-width: $tablet) {
     max-width: 50%;
+    padding: 0;
   }
 
   @media screen and (min-width: $desktop-lg) {
     max-width: 30%;
+    padding: 0;
   }
   h3 {
     color: $mid-purple;
@@ -60,10 +63,6 @@
     margin-top: 2rem;
   }
   .intro-photo {
-    // @media screen and (min-width: $desktop) {
-    //   -webkit-shape-outside: circle();
-    //   shape-outside: circle();
-    // }
     margin-top: 2rem;
     margin-bottom: 1rem;
     margin-right: 1rem;
@@ -74,6 +73,9 @@
   border-radius: 50%;
   max-width: 75px;
   max-height: 75px;
-  margin-right: 1.5rem;
+  margin-right: 1rem;
   border: 2px solid $pastel-purple;
+  @media screen and (min-width: $tablet) {
+    margin-right: 1.5rem;
+  }
 }
