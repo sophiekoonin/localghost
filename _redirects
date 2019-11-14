@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://localghost.netlify.com/* https://localghost.dev/:splat 301!
