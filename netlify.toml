@@ -29,3 +29,9 @@ HUGO_VERSION = "0.54.0"
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"
 
+[[redirects]]
+  from = "https://localghost.netlify.com"
+  to = "https://localghost.dev"
+  status = 301
+  force = false
+  query = {path = ":path"}
