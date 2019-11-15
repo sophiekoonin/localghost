@@ -6,7 +6,7 @@
     font-size: 1.15rem;
   }
 
-  a {
+  a:not(.plain) {
     @include gradient-underline;
   }
 
@@ -201,8 +201,6 @@
     margin: 0;
     
     img {
-      border-radius: 0;
-      box-shadow: none;
       border: 0;
       margin-bottom: 1rem;
       @media screen and (min-width: $tablet) {
