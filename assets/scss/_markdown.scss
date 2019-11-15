@@ -101,6 +101,9 @@
   }
 
   blockquote {
+    p {
+      margin: 0;
+    }
     max-width: 80%;
 
     @media screen and (min-width: 567px) {
@@ -110,8 +113,7 @@
     padding: 1rem 1rem;
     margin: 1.5rem auto;
     background: rgba(245, 245, 245, 0.5);
-    color: #5c5c5c;
-    border-left: 0.3rem solid #15e0e7;
+    border-left: 0.3rem solid $turquoise;
 
     blockquote p:last-child {
       margin-bottom: 0;
@@ -156,6 +158,7 @@
   }
 
   .caption {
+    font-size: 0.9rem;
     display: block;
     font-style: italic;
     text-align: center;
