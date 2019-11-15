@@ -3,7 +3,7 @@ title: "The FF stands for F**king Fantastic: a recap of FFConf 2019"
 date: 2019-11-15
 draft: true
 tags: ['conferences']
-summary: "summary goes here"
+summary: "Now in its 11th year, ffconf is one of the biggest events of the year for web developers across the UK. Yet somehow I’ve managed to miss it every year since I got into tech, because of some reason or another - last year I was at the week-long blockchain sales pitch that is Web Summit - so I was understandably very excited to finally be going this year."
 ---
 
 Now in its 11th year, [ffconf](https://ffconf.org) is one of the biggest events of the year for web developers across the UK (and further afield). Yet somehow I've managed to miss it every year since I got into tech, because of some reason or another - last year I was at the week-long blockchain sales pitch that is Web Summit - so I was understandably very excited to finally be going this year. It takes place at the lovely [Duke of York's Picturehouse](https://www.picturehouses.com/cinema/duke-of-york-s-picturehouse) in Brighton - the first conference I've attended that had cupholders in the seats! (Fun fact, I applied for a job there once.)
@@ -51,7 +51,9 @@ Opening the conference was author and communications consultant Sharon Steed. Sh
   <figcaption class="caption">Sharon Steed (photo: Trys Mudford)</figcaption>
 </figure>
 
-She compared empathy to love; "the thing everyone understands, but nobody can explain". It's intangible, but it's also a choice: we can _choose_ to have empathy for others (and we should). (Her tales of new love were accompanied by _that_ picture of [Britney and Justin in denim](https://www.eonline.com/news/729308/britney-spears-justin-timberlake-s-denim-date-happened-15-years-ago-today), which was an all around win for me.)
+She compared empathy to love; "the thing everyone understands, but nobody can explain". It's intangible, but it's also a choice: we can _choose_ to have empathy for others (and we should). (Her tales of new love were accompanied by _that_ picture of Britney and Justin in denim, which was an all around win for me.)
+
+{{< img src="*/sharonsteed-1.jpg" alt="" >}}
 
 So, what to take away from Sharon's talk? We should **foster environments of collaboration and inclusion**. People need to feel safe in order to speak honestly - having open lines of communication and being transparent from the start will help this. She also pointed out that teams don't always need to work in the same way: people should be able to do things on their own terms. 
 
@@ -72,6 +74,8 @@ Amina's talk focused on the barriers to entry for under-represented people in th
 Her words were powerful, and the measured way she spoke really conveyed the gravity of what she was saying. In the last 11 years, the proportion of women and non-white students in computer science has not improved: last year, only 20% of computer science students were female, and only 15% were non-white. And a computer science degree is already a privileged platform to launch your career from. What about those who don't go down that path? 
 
 She spoke of the generosity of strangers: the bootcamp alumni who all answered her questions when she contacted them out of the blue, happy to give advice. And while bootcamps are a great way to fast-track your career into tech, they're also very exclusionary for anyone with caring responsibilities, and they can be very expensive. She spoke of her experiences raising a baby while also learning to code, which frankly blew my mind - learning to code is really hard (don't let anyone tell you otherwise!) so to do that while also looking after a very young child is just phenomenal. 
+
+{{< img src="*/aminaadewusi-1.jpg" alt="" >}}
 
 For those who self-teach, it can be hard to get a job once you've learned the skills. Tech recruitment can be unforgiving, with high expectations, long interview processes and unreasonable deadlines (Amina recalled being sent a tech test on a Friday, with the expectation she'd send it back on the Monday!). It's not just the time it takes, either - the interview process can be very intimidating and sometimes discriminatory. 
 
@@ -121,7 +125,16 @@ Some top git tips here to take away:
 
 Laura highlighted the ridiculous amount of information that various sites have about all of us just through embedded scripts and images. And even though this data is anonymised, a study showed it was possible to actually re-identify people from this data based on their browsing habits. Scary, right?
 
+<figure>
+  <a href="https://www.flickr.com/photos/remysharp/49054212948/in/album-72157711751196107/" title="View this image on Flickr" class="plain">
+    <img src="https://live.staticflickr.com/65535/49054212948_48bb29c813_w.jpg" alt="Laura Kalbag at ffconf" />
+  </a>
+  <figcaption class="caption">Laura Kalbag (photo: Trys Mudford)</figcaption>
+</figure>
+
 She touched on the Cambridge Analytica scandal - "tracking affects democracy" - and how companies can manipulate people through precise targeting based on their interests, knowing exactly what will make them tick. Facebook's latest ad campaign got a shout out for being totally hypocritical - when you choose to share something with "Only Me" or "Friends" you're also sharing it with Facebook! 
+
+{{< img src="*/lisakalbag-1.jpg" alt="">}}
 
 Companies make it worse by having incomprehensible terms and conditions, filled with legal jargon. When you consider that 1 in 6 people in England have very poor literacy skills (source: [National Literacy Trust](https://literacytrust.org.uk/parents-and-families/adult-literacy/)) it's especially problematic. Sites like Facebook are a lifeline for many people, but if they can't understand what they're signing up for is it really consent? 
 
@@ -129,13 +142,20 @@ While we can't escape technology - Laura argued there is no longer a distinction
 
 > "Friends don't let friends get tracked by corporations."
 
-I knew from the title that this talk would be worrying, but I didn't anticipate just how unsettled I'd feel afterwards! As someone whose life has been basically entirely managed by Google products for years, I realised I needed to make a change. Laura suggested [switching.software](https://switching.software) as a resource for alternatives to common "big tech" products, and I can now happily say I've moved to Fastmail after being a Gmail user for 15 years. 
-
+I knew from the title that this talk would be worrying, but I didn't anticipate just how unsettled I'd feel afterwards! As someone whose life has been basically entirely managed by Google products for years, I realised I needed to make a change. Laura suggested [switching.software](https://switching.software) as a resource for alternatives to common "big tech" products, which is a great place to start.
 
 ### Harry Roberts - From Milliseconds to Millions: A Look at the Numbers Powering Web Performance
 > "How do you *know* the site is slow?"
 
 A talk with a rather different tone from the last one - a focus on Harry's experience as a web performance consultant. Performance is definitely one of those things I know I should know more about, so I was geared up for the next couple of talks to help me boost that knowledge a little bit. 
+
+<figure>
+  <a href="https://www.flickr.com/photos/remysharp/49054730331/in/album-72157711751196107/" title="View this image on Flickr" class="plain">
+    <img src="https://live.staticflickr.com/65535/49054730331_c8ba40ded7_w.jpg" alt="Harry Roberts at ffconf" />
+  </a>
+  <figcaption class="caption">Harry Roberts (photo: Trys Mudford)</figcaption>
+</figure>
+
 
 Harry had the great suggestion of keeping a list of questions that you can ask all potential clients, so that you can better understand the problem. In his case, things like: "How do you know the site is slow?". You could do this for any kind of consulting work - knowing exactly what to ask is hugely important. You can shape these questions over time, knowing exactly where to look next time and what doesn't work. 
 
@@ -146,17 +166,81 @@ I found it particularly interesting how he identified a performance issue locali
 Harry advocated for normalising performance - making it part of our everyday work. It can be a hard thing to argue for, when your managers are pushing for more new features, but if you can show them the numbers, it's hard to argue.
 
 ### Anna Migas - Effortless Performance Debugging
+> "If [the browser] fails to load the frames fast enough, we'll experience jank."
 
-Unfortunately for Anna, technology was not on our side, and the Lighthouse audit wouldn't work - but she still showed us the power of Chrome dev tools and I picked up some handy tricks 
+Continuing my crash course in performance, Anna showed us with a live demo how we can use the power of Chrome Dev Tools to debug some common performance issues. Using the Profiler tab she showed how we can identify how loading is progressing and the performance of animations during interactions. You can see at-a-glance what's taking the longest time to load, plus it also has some helpful metrics such as the time to [First Meaningful Paint](https://developers.google.com/web/tools/lighthouse/audits/first-meaningful-paint).
+
+<figure>
+  <a href="https://www.flickr.com/photos/remysharp/49054944937/in/album-72157711751196107/" title="View this image on Flickr" class="plain">
+    <img src="https://live.staticflickr.com/65535/49054944937_d87fd371d8_w.jpg" alt="Anna Migas at ffconf" />
+  </a>
+  <figcaption class="caption">Anna Migas (photo: Trys Mudford)</figcaption>
+</figure>
+
+In the spirit of the Live Demo, Anna was going to show us how the Lighthouse integration in Chrome can audit performance issues on web apps, but sadly technology was not on our side and Lighthouse wouldn't work (it seemed it wasn't just Anna though). Despite this hiccup, there were still a lot of really useful tips I took away from her talk: 
+
+* Look through Network tab to see what's been downloaded, and in what order
+* Block elements using the request blocking tab to see the impact of not loading them
+* Using `font-display: swap` to show a fallback font before the font is loaded
+* Using a lazy-loading library to only load pictures as you need them
+* Using an image's intrinsic ratio to show placeholders and prevent text from jumping around as images load
+* Splitting CSS into a critical path stylesheet and others that can be loaded separately
+
+{{< img src="*/annamigas-1.jpg" alt="" >}}
+
 
 ### Charlotte Dann - Taking The Web Off The Screen
+> "You'd think that art is an expressive process, and adding this binary middle step seems incongruous, but... computers are better adapted to the design process than any traditional artistic medium."
 
+I actually didn't make many notes for this talk because I was so engrossed in the incredible visuals Charlotte was showing us. As I mentioned before, I'm a big fan of coding for artistic reasons, even if I don't really do it myself much. I'm not particularly "good" at SVG or any kind of web animation, so it blows me away when I see what people can do with canvas, SVG and JS.
 
+<figure>
+  <a href="https://www.flickr.com/photos/remysharp/49054950652/in/album-72157711751196107/" title="View this image on Flickr" class="plain">
+    <img src="https://live.staticflickr.com/65535/49054950652_645f381878_w.jpg" alt="Charlotte Dann at ffconf" />
+  </a>
+  <figcaption class="caption">Charlotte Dann (photo: Trys Mudford)</figcaption>
+</figure>
+
+In Charlotte's case, she bridges the gap between digital and physical art, using what she designs using generative CSS to produce prints and even intricate jewellery. She's made jigsaw puzzles which she's laser cut out, got a pen plotter to draw abstract designs onto pieces of paper for that precise yet hand-drawn look. 
+
+Using `nth-child` pseudoselectors, she showed us how you can create an abstract pattern from a series of squares and circles. She's done a few of these, and used them as wall art for her studio! 
+
+{{< img src="*/charlottedann-1.jpg" alt="" >}}
+
+She's also the founder of [Hexatope](https://hexatope.io/), a web app that lets you draw beautiful patterns on a hexagonal grid and get them cast into silver and gold jewellery. The designs are incredible, and it's really fun to play with. 
+
+I absolutely love hearing about things like this, and it's inspired me to get more involved in creative coding. If only people spent as much time doing things like this as they did arguing about which framework is best.
 
 ### Suz Hinton - Adventures in reinventing interfaces
 > "I want less mass-produced surveillance bullshit and more Harry Potter magic."
 
+I was super excited for Suz's talk, as I've followed her online for some time and I think her hardware projects are amazing, so it was great to see some of them demoed. She demonstrated how we can use web APIs to interact with non-standard interfaces like printers and other hardware. 
 
+<figure>
+  <a href="https://www.flickr.com/photos/remysharp/49054951142/in/album-72157711751196107/" title="View this image on Flickr" class="plain">
+    <img src="https://live.staticflickr.com/65535/49054951142_95abc9eb9e_w.jpg" alt="Suz Hinton at ffconf" />
+  </a>
+  <figcaption class="caption">Suz Hinton (photo: Trys Mudford)</figcaption>
+</figure>
 
+Using a thermal receipt printer, the Web Media API and the Web USB API, Suz recreated her very own Gameboy Printer! She also showed off her web app that lets you upload Arduino programs directly to the Arduino via the browser, which made me think I should dig out the Arduino I've had in a drawer for several years and never used. (We've all got a drawer like that.)
 
+{{< img src="*/suzhinton-1.jpg" alt="" >}}
 
+The tone of the talk shifted considerably when Suz started talking about ownership over computers and data. She cited a 1985 ruling by the Federal Communications Commission which allocated the 900MHz frequency band to industrial, scientific and medical uses. Amateur radio users were allowed to use the band if they liked, as long as it didn't interfere with the protected uses. 
+
+However, now the FCC have proposed that private companies should be able to use these bands. And guess who's jumped straight in there? Everyone's favourite Big Bad Retailer, Amazon. 
+
+Amazon's new [Sidewalk](https://techcrunch.com/2019/09/25/amazon-sidewalk-is-a-new-long-range-wireless-network-for-your-stuff/) network functions on this 900MHz band. Even the 700-odd Amazon employees testing the products managed to form a localised network on the 900MHz frequency stretching across much of the Los Angeles Basin. Meaning they've basically made a frequency jammer. (Bear in mind frequency jammers are illegal in many countries.) If hundreds of thousands of Amazon customers start buying these products which operate on this frequency, what's going to happen to all those medical devices that rely on this band? 
+
+> "This is the scariest thing I've ever heard."
+
+At this point Suz started crying, which really drove home just how fucked we might be if this stuff keeps happening. "We are pretending that these devices are supposed to be helping people, and these people have no idea that they are actually contributing to a privately owned network that companies like this can do whatever they want with."
+
+It's our job to make sure that we are fighting against things like this - "we've done a bad job at educating people". We should be building more "Harry Potter magic" instead of buying corporate home technology, Suz argued - she namechecked [Samantha Goldstein](http://samanthagoldste.in/), who built a stained glass panel that goes cloudy if it's raining.
+
+I'm thoroughly convinced, and I feel like I should probably get rid of the Google Home that's sitting in my living room right now. 
+
+## Reflections
+
+I came away from ffconf inspired and filled with a desire to build weird shit: I want to learn to do things with hardware, make pretty patterns with CSS, and teach my niece how to do the same just for the hell of it. I also came away feeling terrified by corporate surveillance and the absolute disregard for ethics in technology under the guise of convenience. Being a developer isn't just about building stuff and sending it off into the world and moving onto the next thing: we've got a responsibility to make sure that the tech we're building is doing good, not harm, and that people are educated about the implications if we do start building creepy stuff like Sidewalk. As Laura Kalbag put it: be the advocate, and question the default. We know what these products and these companies are doing, so it's our job to tell everyone about it. 
