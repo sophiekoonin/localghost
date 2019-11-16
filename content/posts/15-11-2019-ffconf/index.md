@@ -1,12 +1,12 @@
 ---
-title: "The FF stands for F**king Fantastic: a recap of FFConf 2019"
+title: "ffconf 2019: future friends beside the seaside"
 date: 2019-11-15
 draft: true
 tags: ['conferences']
-summary: "Now in its 11th year, ffconf is one of the biggest events of the year for web developers across the UK. Yet somehow I’ve managed to miss it every year since I got into tech, because of some reason or another - last year I was at the week-long blockchain sales pitch that is Web Summit - so I was understandably very excited to finally be going this year."
+summary: "Now in its 11th year, ffconf is one of the biggest events in the conference calendar for web developers across the UK. Yet somehow I’ve managed to miss every one since I got into tech, because of some reason or another - last year I was at the week-long blockchain sales pitch that is Web Summit - so I was understandably very excited to finally be going."
 ---
 
-Now in its 11th year, [ffconf](https://ffconf.org) is one of the biggest events of the year for web developers across the UK (and further afield). Yet somehow I've managed to miss it every year since I got into tech, because of some reason or another - last year I was at the week-long blockchain sales pitch that is Web Summit - so I was understandably very excited to finally be going this year. It takes place at the lovely [Duke of York's Picturehouse](https://www.picturehouses.com/cinema/duke-of-york-s-picturehouse) in Brighton - the first conference I've attended that had cupholders in the seats! (Fun fact, I applied for a job there once.)
+Now in its 11th year, [ffconf](https://ffconf.org) is one of the biggest events in the conference calendar for web developers across the UK (and further afield). Yet somehow I've managed to miss every one since I got into tech, because of some reason or another - last year I was at the week-long blockchain sales pitch that is Web Summit - so I was understandably very excited to finally be going. It takes place at the lovely [Duke of York's Picturehouse](https://www.picturehouses.com/cinema/duke-of-york-s-picturehouse) in Brighton - the first conference I've attended that had cupholders in the seats! (Fun fact, I applied for a job there once.)
 
 <figure>
   <a href="https://www.flickr.com/photos/remysharp/49054723761/in/album-72157711751196107/" title="View this image on Flickr" class="plain">
@@ -16,7 +16,7 @@ Now in its 11th year, [ffconf](https://ffconf.org) is one of the biggest events 
 </figure>
 
 
-One of the best things about attending conferences is seeing friendly faces from the community, and this particular subset of the JS community is so lovely. It does give you hope (and a refreshing break from some of the other conferences and meetups I've attended in the past few years which have had 97% more posturing). Obviously I spend a lot of time in the London bubble so it's great to meet folks from other tech communities, and going to the [Async](https://asyncjs.com/) meetup the night before was a great way to do that.
+One of the best things about attending conferences is seeing friendly faces from the community, and this particular subset of the JS community is so lovely. It does give you hope (and a refreshing break from some of the other conferences and meetups I've attended in the past few years which have had 97% more posturing). I spend a lot of time in the London bubble so it's great to meet folks from other tech communities, and going to the [Async](https://asyncjs.com/) meetup the night before was a great way to do that.
 
 <figure>
   <a href="https://www.flickr.com/photos/remysharp/49054939337/in/album-72157711751196107/" title="View this image on Flickr" class="plain">
@@ -32,13 +32,13 @@ What made these talks _especially_ good was that they focused more on people and
 
 I've been thinking a lot recently about the *reasons* that people learn to code - and in fact, I submitted to the ffconf CFP with a talk about this, which I'm going to try and polish up and submit elsewhere. When I started doing web development, I didn't really know what I was doing or why I was doing it - I thought it'd be cool to make a website, and how else was I going to get my Neopets shop to play music and have a flashy background? 
 
-It seems like a lot of the coding for creativity's sake has been lost in favour of learning the latest, greatest technology for the sake of advancing your career and being able to say that you're using it. I could go on, and I probably will in another blog post, but seeing people up on stage doing ridiculous and beautiful things with code gives me hope for creative coding (and, most importantly, it inspires me to do some too). 
+It seems like a lot of the coding for creativity's sake has been lost in favour of learning the latest, greatest technology in order to advance your career and to be able to say that you're using it. I could go on, and I probably will in another blog post, but seeing people up on stage doing ridiculous and beautiful things with code gives me hope for creative coding (and, most importantly, it inspires me to do some too). 
 
 I came home from ffconf and restyled my entire website with ludicrous link effects and a gradient border. It's not quite making jewellery from SVGs but it's a start.
 
 Here's a bit of what I took away from each of the ffconf talks. I haven't included many photos because my phone's camera is atrocious in low light, but I've borrowed some nice pictures from the official photos by Trys Mudford on [Remy Sharp's Flickr](https://flickr.com/photos/remysharp/albums/72157711751196107).
 
-### Sharon Steed - Engaging Empathy
+### [Sharon Steed - Engaging Empathy](https://ffconf.org/talks/empathy/)
 
 > "Empathy: the thing you have to do to not be an asshole in the office."
 
@@ -59,7 +59,7 @@ So, what to take away from Sharon's talk? We should **foster environments of col
 
 Sharon also described what she called the "Key Empathy Behaviours": patience, perspective and connection. As long as we are being present and remembering the **why** of what we're doing, understanding where others are coming from, and speak for **intention** and not impact, we'll be able to engage empathy and make everyone feel like they belong.
 
-### Amina Adewusi - What does it take to become a developer in 2020?
+### [Amina Adewusi - What does it take to become a developer in 2020?](https://ffconf.org/talks/what-does-it-take/)
 > "We need a recruitment revolution."
 
 Amina's talk focused on the barriers to entry for under-represented people in the industry: a topic that has come up time and time again but doesn't really seem to be getting any better (especially for people of colour). 
@@ -77,7 +77,7 @@ She spoke of the generosity of strangers: the bootcamp alumni who all answered h
 
 {{< img src="*/aminaadewusi-1.jpg" alt="" >}}
 
-For those who self-teach, it can be hard to get a job once you've learned the skills. Tech recruitment can be unforgiving, with high expectations, long interview processes and unreasonable deadlines (Amina recalled being sent a tech test on a Friday, with the expectation she'd send it back on the Monday!). It's not just the time it takes, either - the interview process can be very intimidating and sometimes discriminatory. 
+For those who self-teach, it's hard to get a job once you've learned the skills. More often than not, recruitment is unforgiving, with high expectations, long interview processes and unreasonable deadlines (Amina recalled being sent a tech test on a Friday, with the expectation she'd send it back on the Monday!). It's not just the time it takes, either - the interview process can be very intimidating and sometimes discriminatory. 
 
 As Amina put it: **this is a call to action**. How can we, as experienced engineers, help the next generation of developers get a foothold? Some of her excellent suggestions:
 
@@ -88,7 +88,7 @@ As Amina put it: **this is a call to action**. How can we, as experienced engine
 * observe the ["pacman" rule](https://www.ericholscher.com/blog/2017/aug/2/pacman-rule-conferences/) when talking to people at events
 
 
-### Alice Bartlett - Getting more from Git
+### [Alice Bartlett - Getting more from Git](https://ffconf.org/talks/getting-more-from-git/)
 > "My process is 'try stuff until it works and don't ask any questions'."
 
 Somehow, Alice turned a pretty dry subject - git - into one of the most relatable and entertaining talks I've ever seen. 
@@ -120,7 +120,7 @@ Some top git tips here to take away:
 * ...but don't write an essay about the change, keep it concise
 * commit messages should be meaningful and say _why_ the change happened
 
-### Laura Kalbag - 8 Unbelievable Things You Never Knew About Tracking
+### [Laura Kalbag - 8 Unbelievable Things You Never Knew About Tracking](https://ffconf.org/talks/privacy/)
 > "We're asked to give up everything, or get nothing."
 
 Laura highlighted the ridiculous amount of information that various sites have about all of us just through embedded scripts and images. And even though this data is anonymised, a study showed it was possible to actually re-identify people from this data based on their browsing habits. Scary, right?
@@ -134,7 +134,7 @@ Laura highlighted the ridiculous amount of information that various sites have a
 
 She touched on the Cambridge Analytica scandal - "tracking affects democracy" - and how companies can manipulate people through precise targeting based on their interests, knowing exactly what will make them tick. Facebook's latest ad campaign got a shout out for being totally hypocritical - when you choose to share something with "Only Me" or "Friends" you're also sharing it with Facebook! 
 
-{{< img src="*/lisakalbag-1.jpg" alt="">}}
+{{< img src="*/laurakalbag-1.jpg" alt="">}}
 
 Companies make it worse by having incomprehensible terms and conditions, filled with legal jargon. When you consider that 1 in 6 people in England have very poor literacy skills (source: [National Literacy Trust](https://literacytrust.org.uk/parents-and-families/adult-literacy/)) it's especially problematic. Sites like Facebook are a lifeline for many people, but if they can't understand what they're signing up for is it really consent? 
 
@@ -144,7 +144,7 @@ While we can't escape technology - Laura argued there is no longer a distinction
 
 I knew from the title that this talk would be worrying, but I didn't anticipate just how unsettled I'd feel afterwards! As someone whose life has been basically entirely managed by Google products for years, I realised I needed to make a change. Laura suggested [switching.software](https://switching.software) as a resource for alternatives to common "big tech" products, which is a great place to start.
 
-### Harry Roberts - From Milliseconds to Millions: A Look at the Numbers Powering Web Performance
+### [Harry Roberts - From Milliseconds to Millions: A Look at the Numbers Powering Web Performance](https://ffconf.org/talks/from-milliseconds-to-millions/)
 > "How do you *know* the site is slow?"
 
 A talk with a rather different tone from the last one - a focus on Harry's experience as a web performance consultant. Performance is definitely one of those things I know I should know more about, so I was geared up for the next couple of talks to help me boost that knowledge a little bit. 
@@ -165,7 +165,7 @@ I found it particularly interesting how he identified a performance issue locali
 
 Harry advocated for normalising performance - making it part of our everyday work. It can be a hard thing to argue for, when your managers are pushing for more new features, but if you can show them the numbers, it's hard to argue.
 
-### Anna Migas - Effortless Performance Debugging
+### [Anna Migas - Effortless Performance Debugging](https://ffconf.org/talks/from-milliseconds-to-millions/)
 > "If [the browser] fails to load the frames fast enough, we'll experience jank."
 
 Continuing my crash course in performance, Anna showed us with a live demo how we can use the power of Chrome Dev Tools to debug some common performance issues. Using the Profiler tab she showed how we can identify how loading is progressing and the performance of animations during interactions. You can see at-a-glance what's taking the longest time to load, plus it also has some helpful metrics such as the time to [First Meaningful Paint](https://developers.google.com/web/tools/lighthouse/audits/first-meaningful-paint).
@@ -189,7 +189,7 @@ In the spirit of the Live Demo, Anna was going to show us how the Lighthouse int
 {{< img src="*/annamigas-1.jpg" alt="" >}}
 
 
-### Charlotte Dann - Taking The Web Off The Screen
+### [Charlotte Dann - Taking The Web Off The Screen](https://ffconf.org/talks/taking-the-web-off-the-screen/)
 > "You'd think that art is an expressive process, and adding this binary middle step seems incongruous, but... computers are better adapted to the design process than any traditional artistic medium."
 
 I actually didn't make many notes for this talk because I was so engrossed in the incredible visuals Charlotte was showing us. As I mentioned before, I'm a big fan of coding for artistic reasons, even if I don't really do it myself much. I'm not particularly "good" at SVG or any kind of web animation, so it blows me away when I see what people can do with canvas, SVG and JS.
@@ -211,7 +211,7 @@ She's also the founder of [Hexatope](https://hexatope.io/), a web app that lets 
 
 I absolutely love hearing about things like this, and it's inspired me to get more involved in creative coding. If only people spent as much time doing things like this as they did arguing about which framework is best.
 
-### Suz Hinton - Adventures in reinventing interfaces
+### [Suz Hinton - Adventures in reinventing interfaces](https://ffconf.org/talks/nerdverse/)
 > "I want less mass-produced surveillance bullshit and more Harry Potter magic."
 
 I was super excited for Suz's talk, as I've followed her online for some time and I think her hardware projects are amazing, so it was great to see some of them demoed. She demonstrated how we can use web APIs to interact with non-standard interfaces like printers and other hardware. 
