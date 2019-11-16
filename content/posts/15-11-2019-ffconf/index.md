@@ -28,7 +28,7 @@ One of the best things about attending conferences is seeing friendly faces from
 
 (I also got to meet [Suz Hinton](https://noopkat.com) at the afterparty and didn't make a fool of myself, so that is always a plus. She's extremely lovely.)
 
-What made these talks _especially_ good was that they focused more on people and stories. My favourite kind of conference talk is one where people show something amazing they built, and share their experiences of building it (a good example from JSConf EU 2019 is [Bringing back dialup: the internet over SMS](https://www.youtube.com/watch?v=ZsBAkSxwU5c) by Alexandra Sunderland). I don't need to necessarily come away with an exact step-by-step guide on how to do the thing, and it might not even be a practical thing for me to ever attempt, but I want to know all about it because it's amazing. 
+What made these talks _especially_ good was that they focused more on people and stories. My favourite kind of conference talk is one where people show something amazing they built, and share their experiences of building it (a good example from JSConf EU 2019 is [Bringing back dialup: the internet over SMS](https://www.youtube.com/watch?v=ZsBAkSxwU5c) by Alexandra Sunderland). I don't need to come away with an exact step-by-step guide on how to do the thing (I'll never remember it all anyway), and it might not even be a practical thing for me to ever attempt, but I want to know all about it because it's amazing. 
 
 I've been thinking a lot recently about the *reasons* that people learn to code - and in fact, I submitted to the ffconf CFP with a talk about this, which I'm going to try and polish up and submit elsewhere. When I started doing web development, I didn't really know what I was doing or why I was doing it - I thought it'd be cool to make a website, and how else was I going to get my Neopets shop to play music and have a flashy background? 
 
@@ -235,7 +235,7 @@ Amazon's new [Sidewalk](https://techcrunch.com/2019/09/25/amazon-sidewalk-is-a-n
 
 > "This is the scariest thing I've ever heard."
 
-At this point Suz started crying, which really drove home just how fucked we might be if this stuff keeps happening. "We are pretending that these devices are supposed to be helping people, and these people have no idea that they are actually contributing to a privately owned network that companies like this can do whatever they want with."
+At this point Suz started crying, which really drove home just how doomed we'll be if this stuff keeps happening. "We are pretending that these devices are supposed to be helping people, and these people have no idea that they are actually contributing to a privately owned network that companies like this can do whatever they want with."
 
 It's our job to make sure that we are fighting against things like this - "we've done a bad job at educating people". We should be building more "Harry Potter magic" instead of buying corporate home technology, Suz argued - she namechecked [Samantha Goldstein](http://samanthagoldste.in/), who built a stained glass panel that goes cloudy if it's raining.
 
@@ -243,4 +243,8 @@ I'm thoroughly convinced, and I feel like I should probably get rid of the Googl
 
 ## Reflections
 
-I came away from ffconf inspired and filled with a desire to build weird shit: I want to learn to do things with hardware, make pretty patterns with CSS, and teach my niece how to do the same just for the hell of it. I also came away feeling terrified by corporate surveillance and the absolute disregard for ethics in technology under the guise of convenience. Being a developer isn't just about building stuff and sending it off into the world and moving onto the next thing: we've got a responsibility to make sure that the tech we're building is doing good, not harm, and that people are educated about the implications if we do start building creepy stuff like Sidewalk. As Laura Kalbag put it: be the advocate, and question the default. We know what these products and these companies are doing, so it's our job to tell everyone about it. 
+I came away from ffconf inspired and filled with a desire to build weird stuff: I want to learn to do things with hardware, make pretty patterns with CSS, and teach my niece how to do the same just for the hell of it. 
+
+I also came away feeling terrified by corporate surveillance and the absolute disregard for ethics in technology under the guise of convenience. 
+
+Being a developer isn't just about building flashy stuff and sending it off into the world and moving onto the next thing: we've got a responsibility to make sure that the tech we're building is doing good, not harm, and that people are educated about the implications if we do start building creepy stuff like Sidewalk. As Laura Kalbag put it: **be the advocate, and question the default**. We know what these products and these companies are doing, so it's our job to tell everyone about it. 
