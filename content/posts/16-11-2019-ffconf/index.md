@@ -1,7 +1,6 @@
 ---
 title: "ffconf 2019: future friends beside the seaside"
-date: 2019-11-15
-draft: true
+date: 2019-11-16
 tags: ['conferences']
 summary: "Now in its 11th year, ffconf is one of the biggest events in the conference calendar for web developers across the UK. Yet somehow I’ve managed to miss every one since I got into tech, because of some reason or another - last year I was at the week-long blockchain sales pitch that is Web Summit - so I was understandably very excited to finally be going."
 ---
@@ -38,7 +37,7 @@ I came home from ffconf and restyled my entire website with ludicrous link effec
 
 Here's a bit of what I took away from each of the ffconf talks. I haven't included many photos because my phone's camera is atrocious in low light, but I've borrowed some nice pictures from the official photos by Trys Mudford on [Remy Sharp's Flickr](https://flickr.com/photos/remysharp/albums/72157711751196107).
 
-### [Sharon Steed - Engaging Empathy](https://ffconf.org/talks/empathy/)
+### Sharon Steed - Engaging Empathy
 
 > "Empathy: the thing you have to do to not be an asshole in the office."
 
@@ -59,7 +58,9 @@ So, what to take away from Sharon's talk? We should **foster environments of col
 
 Sharon also described what she called the "Key Empathy Behaviours": patience, perspective and connection. As long as we are being present and remembering the **why** of what we're doing, understanding where others are coming from, and speak for **intention** and not impact, we'll be able to engage empathy and make everyone feel like they belong.
 
-### [Amina Adewusi - What does it take to become a developer in 2020?](https://ffconf.org/talks/what-does-it-take/)
+ffconf talk page: [Engaging Empathy](https://ffconf.org/talks/empathy/)
+
+### Amina Adewusi - What does it take to become a developer in 2020?
 > "We need a recruitment revolution."
 
 Amina's talk focused on the barriers to entry for under-represented people in the industry: a topic that has come up time and time again but doesn't really seem to be getting any better (especially for people of colour). 
@@ -87,8 +88,9 @@ As Amina put it: **this is a call to action**. How can we, as experienced engine
 * be mindful when recruiting - don't assume everyone has all the time in the world
 * observe the ["pacman" rule](https://www.ericholscher.com/blog/2017/aug/2/pacman-rule-conferences/) when talking to people at events
 
+ffconf talk page: [What does it take to become a developer in 2020?](https://ffconf.org/talks/what-does-it-take/)
 
-### [Alice Bartlett - Getting more from Git](https://ffconf.org/talks/getting-more-from-git/)
+### Alice Bartlett - Getting more from Git
 > "My process is 'try stuff until it works and don't ask any questions'."
 
 Somehow, Alice turned a pretty dry subject - git - into one of the most relatable and entertaining talks I've ever seen. 
@@ -120,7 +122,9 @@ Some top git tips here to take away:
 * ...but don't write an essay about the change, keep it concise
 * commit messages should be meaningful and say _why_ the change happened
 
-### [Laura Kalbag - 8 Unbelievable Things You Never Knew About Tracking](https://ffconf.org/talks/privacy/)
+ffconf talk page: [Getting more from Git](https://ffconf.org/talks/getting-more-from-git/)
+
+### Laura Kalbag - 8 Unbelievable Things You Never Knew About Tracking
 > "We're asked to give up everything, or get nothing."
 
 Laura highlighted the ridiculous amount of information that various sites have about all of us just through embedded scripts and images. And even though this data is anonymised, a study showed it was possible to actually re-identify people from this data based on their browsing habits. Scary, right?
@@ -144,7 +148,9 @@ While we can't escape technology - Laura argued there is no longer a distinction
 
 I knew from the title that this talk would be worrying, but I didn't anticipate just how unsettled I'd feel afterwards! As someone whose life has been basically entirely managed by Google products for years, I realised I needed to make a change. Laura suggested [switching.software](https://switching.software) as a resource for alternatives to common "big tech" products, which is a great place to start.
 
-### [Harry Roberts - From Milliseconds to Millions: A Look at the Numbers Powering Web Performance](https://ffconf.org/talks/from-milliseconds-to-millions/)
+ffconf talk page: [8 Unbelievable Things You Never Knew About Tracking](https://ffconf.org/talks/privacy/)
+
+### Harry Roberts - From Milliseconds to Millions: A Look at the Numbers Powering Web Performance
 > "How do you *know* the site is slow?"
 
 A talk with a rather different tone from the last one - a focus on Harry's experience as a web performance consultant. Performance is definitely one of those things I know I should know more about, so I was geared up for the next couple of talks to help me boost that knowledge a little bit. 
@@ -165,7 +171,9 @@ I found it particularly interesting how he identified a performance issue locali
 
 Harry advocated for normalising performance - making it part of our everyday work. It can be a hard thing to argue for, when your managers are pushing for more new features, but if you can show them the numbers, it's hard to argue.
 
-### [Anna Migas - Effortless Performance Debugging](https://ffconf.org/talks/from-milliseconds-to-millions/)
+ffconf talk page: [From Milliseconds to Millions: A Look at the Numbers Powering Web Performance](https://ffconf.org/talks/from-milliseconds-to-millions/)
+
+### Anna Migas - Effortless Performance Debugging
 > "If [the browser] fails to load the frames fast enough, we'll experience jank."
 
 Continuing my crash course in performance, Anna showed us with a live demo how we can use the power of Chrome Dev Tools to debug some common performance issues. Using the Profiler tab she showed how we can identify how loading is progressing and the performance of animations during interactions. You can see at-a-glance what's taking the longest time to load, plus it also has some helpful metrics such as the time to [First Meaningful Paint](https://developers.google.com/web/tools/lighthouse/audits/first-meaningful-paint).
@@ -188,8 +196,9 @@ In the spirit of the Live Demo, Anna was going to show us how the Lighthouse int
 
 {{< img src="*/annamigas-1.jpg" alt="" >}}
 
+ffconf talk page: [Effortless Performance Debugging](https://ffconf.org/talks/effortless-performance-debugging/)
 
-### [Charlotte Dann - Taking The Web Off The Screen](https://ffconf.org/talks/taking-the-web-off-the-screen/)
+### Charlotte Dann - Taking The Web Off The Screen
 > "You'd think that art is an expressive process, and adding this binary middle step seems incongruous, but... computers are better adapted to the design process than any traditional artistic medium."
 
 I actually didn't make many notes for this talk because I was so engrossed in the incredible visuals Charlotte was showing us. As I mentioned before, I'm a big fan of coding for artistic reasons, even if I don't really do it myself much. I'm not particularly "good" at SVG or any kind of web animation, so it blows me away when I see what people can do with canvas, SVG and JS.
@@ -211,7 +220,9 @@ She's also the founder of [Hexatope](https://hexatope.io/), a web app that lets 
 
 I absolutely love hearing about things like this, and it's inspired me to get more involved in creative coding. If only people spent as much time doing things like this as they did arguing about which framework is best.
 
-### [Suz Hinton - Adventures in reinventing interfaces](https://ffconf.org/talks/nerdverse/)
+ffconf talk page: [Taking The Web Off The Screen](https://ffconf.org/talks/taking-the-web-off-the-screen/)
+
+### Suz Hinton - Adventures in reinventing interfaces
 > "I want less mass-produced surveillance bullshit and more Harry Potter magic."
 
 I was super excited for Suz's talk, as I've followed her online for some time and I think her hardware projects are amazing, so it was great to see some of them demoed. She demonstrated how we can use web APIs to interact with non-standard interfaces like printers and other hardware. 
@@ -238,6 +249,8 @@ Amazon's new [Sidewalk](https://techcrunch.com/2019/09/25/amazon-sidewalk-is-a-n
 At this point Suz started crying, which really drove home just how doomed we'll be if this stuff keeps happening. "We are pretending that these devices are supposed to be helping people, and these people have no idea that they are actually contributing to a privately owned network that companies like this can do whatever they want with."
 
 It's our job to make sure that we are fighting against things like this - "we've done a bad job at educating people". We should be building more "Harry Potter magic" instead of buying corporate home technology, Suz argued - she namechecked [Samantha Goldstein](http://samanthagoldste.in/), who built a stained glass panel that goes cloudy if it's raining.
+
+ffconf talk page: [Adventures in reinventing interfaces](https://ffconf.org/talks/nerdverse/)
 
 ## Reflections
 
