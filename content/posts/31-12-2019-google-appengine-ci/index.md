@@ -1,6 +1,7 @@
 ---
 title: "Deploying your Google AppEngine app with CircleCI"
 subtitle: "Managing environment variables with CircleCI Contexts and a bit of bash magic"
+summary: "How to set up CircleCI to inject environment variables and deploy your Google AppEngine app, as well as managing different deployment environments."
 date: "2019-12-31"
 tags: ['google cloud', 'circleci', 'tutorial']
 ---
