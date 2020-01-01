@@ -1,19 +1,30 @@
 {{ define "main" }}
+{{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 6 }}
 {{ partial "separator.html" . }}
-    {{ with .Site.GetPage "/posts" }}
     <ol class="posts-list">
-        {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
-        {{ template "_internal/pagination.html" . }}
-        {{ range $paginator.Pages }}
-        {{ if not .Params.hide }}
+    {{ range $paginator.Pages }}
         <li>
         {{ partial "blog/summary.html" . }}
         </li>
-        {{ end }}       
         {{ partial "separator.html" .}}
-
         {{ end }}
     </ol>
-    {{end}}
-    <!-- End Blog section -->
+    <nav class="pagination-nav" aria-label="Page navigation">
+    <ul>
+      {{ if $paginator.HasPrev }}
+        <li class="pagination__item pagination__item--previous">
+            <a href="{{ $paginator.Prev.URL }}" class="pagination__link pagination__link--previous">
+            <span aria-hidden="true">←</span> Previous page
+            </a>
+        </li>
+    {{ end }}
+    {{ if $paginator.HasNext }}
+    <li class="pagination__item pagination__item--next">
+        <a href="{{ $paginator.Next.URL }}" class="pagination__link pagination__link--next">
+        Next page <span aria-hidden="true">→</span>
+        </a>
+    </li>
+    {{ end }}
+    </ul>
+  </nav>
 {{end}}

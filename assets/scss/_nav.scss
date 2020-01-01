@@ -60,3 +60,27 @@ li.social-icon {
     width: 20px;
   }
 }
+
+.pagination-nav {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  ul {
+    list-style-type: none;
+    display: inline-flex;
+    li {
+      a {
+        color: $mid-pink;
+        &:hover {
+          color: $turquoise; 
+        }
+      }
+      &:not(:last-of-type):first-of-type {
+        padding-right: 0.6rem;
+      }
+      &:not(:first-of-type):before {
+        @include icon-bullet();
+      }
+    }
+  }
+}
