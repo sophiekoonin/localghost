@@ -1,5 +1,5 @@
 {{ $image := .Page.Resources.GetMatch (.Get "src") }}
 <figure {{with .Get "class" }} class="{{.}}"{{end}}>
-  <a href="{{ if $image}}{{$image.RelPermalink }}{{end}}" target="_blank" rel="noopener noreferrer"><img src="{{ if $image}}{{$image.RelPermalink }}{{end}}" {{ with .Get "alt" }} alt="{{.}}" {{ end }}/></a>
+  <a href="{{ if $image}}{{$image.RelPermalink }}{{end}}" class="plain" target="_blank" rel="noopener noreferrer"><img src="{{ if $image}}{{$image.RelPermalink }}{{end}}" {{ with .Get "alt" }} alt="{{.}}" {{ end }}/></a>
   <figcaption class="caption">{{ .Get "caption" }}</figcaption>
 </figure>
