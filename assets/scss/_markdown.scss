@@ -14,9 +14,6 @@
     &:first-of-type {
       margin-top: 0;
     }
-    code {
-      color: $mid-purple;
-    }
   }
 
   h1 {
@@ -31,14 +28,12 @@
     font-size: 2rem;
     line-height: 1em;
     margin-bottom: 0.8em;
+    padding-top: 2rem;
   }
 
   h3 {
+    padding-top: 1.5rem;
     font-size: 1.5rem;
-
-    @media screen and (min-width: 567px) {
-      font-size: 1.5rem;
-    }
   }
 
   h4 {
@@ -65,12 +60,17 @@
 
   li {
     margin-left: 0;
+    margin-bottom: 1rem;
     padding-left: 0;
     vertical-align: middle;
   }
 
   li:before {
-    @include icon-bullet()
+    @include icon-bullet();
+  }
+
+  li > ul > li:before {
+    @include icon-bullet('/icons/star.svg');
   }
 
   em {
@@ -145,10 +145,15 @@
     white-space: pre-wrap !important;
     overflow: scroll;
     padding: 1rem;
+
+    &.chroma code {
+      color: inherit;
+    }
   }
 
   code {
     font-family: 'Roboto Mono', monospace;
+    color: $mid-purple;
   }
 
   img {
@@ -202,14 +207,13 @@
       }
     }
     margin: 0;
-    
+
     img {
       border: 0;
       margin-bottom: 1rem;
       @media screen and (min-width: $tablet) {
         max-width: 60%;
       }
-    
     }
     figcaption {
       font-style: italic;

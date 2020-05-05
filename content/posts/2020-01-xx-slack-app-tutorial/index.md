@@ -84,8 +84,8 @@ Before you can post to Slack from the app, you'll need to authenticate with Slac
 
 **Scopes** are specific permissions that your app has which dictate exactly what it can do on Slack. For example, the `chat:write` scope allows the app to post a message. You can see the full list of scopes on the [API documentation](https://api.slack.com/scopes).
 
-At the time of writing, the "new" more granular scopes are in beta, but we're going to use them because they're more secure (they ask for less information). Click the "Update scopes" button - this will take you to a page where you can select the scopes you want.
+At the time of writing, the "new" more granular scopes are in beta, but we're going to use them because they ask for less information outright. Click the "Update scopes" button - this will take you to a page where you can select the scopes you want.
 
 In this "new scopes" world, scopes are split into two categories - **bot token scopes** and **user token scopes**. You
 
-You can change these scopes and add new ones at any time, but for now, choose these **bot token scopes**. 
+You can change these scopes and add new ones at any time, but for now, choose these **bot token scopes**, as we'll be interacting with the Slack workspace as a bot, not as a user.
