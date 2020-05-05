@@ -2,7 +2,7 @@
 title: "Defending yourself against cross-site scripting attacks with Content-Security-Policy"
 date: '2020-05-03'
 tags: ['security']
-summary: "A guide to the cross-site scripting (XSS) attacks and the HTTP Content-Security-Policy header, what it does, how to use it, and how it protects us."
+summary: "A guide to cross-site scripting (XSS) attacks and the HTTP Content-Security-Policy header, what it does, how to use it, and how it protects us."
 ---
 
 I spent an entire day last week wrestling with a PDF-rendering library in React which was refusing to work in production. Locally it ran just fine, but as soon as we built our app in production mode, it wasn't doing anything. Looking at the console, the errors it was spitting out made my heart sink. I'd seen these before.
