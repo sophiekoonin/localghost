@@ -112,8 +112,6 @@ Some of the methods we can use to prevent XSS attacks on our websites include:
 
 {{< img src="*/gandalf.png" caption="CSP is basically Browser Gandalf." alt="" >}}
 
-It's worth emphasising here that CSP is *one way* of protecting your website against XSS - it's not enough on its own.
-
 A CSP meta tag may look a bit like this, for a site with Google Analytics and some Twitter/Facebook embeds, and images from a CDN:
 
 {{< highlight html >}}
@@ -140,6 +138,8 @@ script-src: 'self' https://othersite.com;
 ```
 
 I won't go through every single directive - there are a lot - but I'll outline some of the most common ones, and what rules they might enforce. Plus, the good old caveat that Internet Explorer only supports *one* directive (`sandbox`), and that's with the legacy `X-Content-Security-Policy` header. 
+
+As long as you're employing multiple methods of defence against XSS, including CSP, you can protect yourself (yes, *even* in IE). It's important to emphasise here that CSP is *one way* of protecting your website against XSS - it's not enough on its own.
 
 
 ### Fetch directives
@@ -237,13 +237,26 @@ When is it safe to add new sources to a CSP header? Perhaps you've included an i
 If you're using `styled-components`, which renders `<style>` tags into the page, rather than enabling `unsafe-inline` for styles you can define a nonce by setting it as a Webpack global (`__webpack_nonce__`). The caveats: this is apparently undocumented, and only works with server-side rendered code. So you might have to enable `unsafe-inline` for that one.
 
 ### Environment-based CSP
-If you run different environments for development and production, consider serving different CSP headers for different environments. For example, your `image-src` directive might point to a non-prod CDN  if `process.env.NODE_ENV !== 'production`, but the production CDN otherwise. Similarly, if you use a local server at `localhost:6060` as an API for development but your production app points to a hosted API somewhere else, you might want to add `localhost:6060` to your CSP *only for the development environment*. 
+If you run different environments for development and production, you may want to consider serving different CSP headers for different environments. For example, your `image-src` directive might point to a non-prod CDN  if `process.env.NODE_ENV !== 'production`, but the production CDN otherwise. Similarly, if you use a local server at `localhost:6060` as an API for development but your production app points to a hosted API somewhere else, you might want to add `localhost:6060` to your CSP *only for the development environment*. 
+
+There are some frameworks, such as Hugo and Next.JS, which rely on inline scripts for hot reloading. In this case, it's fine to add `unsafe-inline` to your `script-src` **in development**. 
+
+For example, if you use Hugo and want to enable live reloading with your CSP, as well as scripts imported from the site itself, you can use `.Site.IsServer` (though this only works if you use server mode for development and not production):
+
+{{< highlight html >}}
+<meta http-equiv="Content-Security-Policy"
+    content="default-src 'none'; [...] script-src 'self' {{ if eq .Site.IsServer true }}'unsafe-inline'{{ end}} {{ .Site.BaseURL }};">
+{{< /highlight >}}
+
 
 ## The moral of the story
 So, how did I get around the `unsafe-eval` warnings I was seeing in the console?
 
 Unfortunately... the only solution was to chuck out that library and find something else. There are no workarounds for a library that uses `eval`. 
 
+When adding a CSP header to a site, start out with the principle of least privilege: only permit *exactly* what you need, nothing more. When in doubt, be overly restrictive, and see what console errors you're getting. 
+
+If you're working on a site or app that has a CSP header set, don't be tempted to add sources just to make console errors go away. Make sure you know exactly what you're allowing.
 
 And promise me you will never, ever enable `unsafe-eval`. 
 
