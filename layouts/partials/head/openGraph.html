@@ -1,14 +1,21 @@
 <meta property="og:title" content="{{ .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end }}" />
 <meta property="og:type" content="website" />
-<meta property="og:description" content="{{ if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}"/>
-<meta property="og:url" content="{{ .Permalink }}"/>
-<meta property="og:site_name" content="{{ .Site.Title }}"/>
-<meta property="og:locale" content="en_GB"/>
+<meta property="og:description"
+  content="{{ if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="og:locale" content="en_GB" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="localghost">
+<meta name="twitter:site" content="@type__error">
+<meta name="twitter:description"
+  content="{{ if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
 {{ with .Resources.ByType "image" }}
 {{ range first 5 (sort . "Params.weight") }}
-<meta property="og:image" content="{{ .Permalink }}"/>
+<meta property=" og:image" content="{{ .Permalink }}" />
 {{ end }}
 {{ else }}
-<meta property="og:image" content="{{ .Site.BaseURL }}img/og-ghost.png"/>
+<meta property="og:image" content="{{ .Site.BaseURL }}img/og-ghost.png" />
 {{ end }}
