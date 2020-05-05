@@ -6,7 +6,7 @@
 <meta property="og:site_name" content="{{ .Site.Title }}" />
 <meta property="og:locale" content="en_GB" />
 
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="localghost">
 <meta name="twitter:site" content="@type__error">
 <meta name="twitter:description"
@@ -14,8 +14,10 @@
 
 {{ with .Resources.ByType "image" }}
 {{ range first 5 (sort . "Params.weight") }}
-<meta property=" og:image" content="{{ .Permalink }}" />
+<meta property="og:image" content="{{ .Permalink }}" />
+<meta property="twitter:image" content="{{ .Permalink }}" />
 {{ end }}
 {{ else }}
 <meta property="og:image" content="{{ .Site.BaseURL }}img/og-ghost.png" />
+<meta property="twitter:image" content="{{ .Site.BaseURL }}img/og-ghost.png" />
 {{ end }}
