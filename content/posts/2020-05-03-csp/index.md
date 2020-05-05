@@ -1,16 +1,9 @@
 ---
 title: "Defending yourself against cross-site scripting attacks with Content-Security-Policy"
 date: '2020-05-03'
-draft: true
 tags: ['security']
-summary: "A guide to the HTTP Content-Security-Policy header, what it does, how to use it, and how it protects us from cross-site scripting vulnerabilities."
+summary: "A guide to the cross-site scripting (XSS) attacks and the HTTP Content-Security-Policy header, what it does, how to use it, and how it protects us."
 ---
-
-I spent an entire day last week wrestling with a PDF-rendering library in React which was refusing to work in production. Locally it ran just fine, but as soon as we built our app in production mode, it wasn't doing anything. Looking at the console, the errors it was spitting out made my heart sink. I'd seen these before.
-
-{{< img src="*/eval-error.png" caption="The dreaded console error" alt="Console error: Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: script-src 'self'." >}}
-
-This was an error caused by our  `Content-Security-Policy`  (CSP) header, telling our browser that something in the library should be blocked - specifically, an `eval()` function within one of the dependencies of our PDF-rendering library. I did what any self-respecting developer would do and complained at anyone who would listen - okay, I posted on Twitter - and then discovered that a lot of other developers weren't aware of what CSP was or what it was for. So I thought I'd write a post about it. 
 
 
 <!-- omit in toc -->
@@ -33,11 +26,15 @@ This was an error caused by our  `Content-Security-Policy`  (CSP) header, tellin
   - [Environment-based CSP](#environment-based-csp)
 - [The moral of the story](#the-moral-of-the-story)
 - [References & further reading](#references--further-reading)
+I spent an entire day last week wrestling with a PDF-rendering library in React which was refusing to work in production. Locally it ran just fine, but as soon as we built our app in production mode, it wasn't doing anything. Looking at the console, the errors it was spitting out made my heart sink. I'd seen these before.
 
-## Cross-site scripting (XSS)
+{{< img src="*/eval-error.png" caption="The dreaded console error" alt="Console error: Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: script-src 'self'." >}}
+
+This was an error caused by our  `Content-Security-Policy`  (CSP) header, telling our browser that something in the library should be blocked - specifically, an `eval()` function within one of the dependencies of our PDF-rendering library. I did what any self-respecting developer would do and complained at anyone who would listen - okay, I posted on Twitter - and then discovered that a lot of other developers weren't aware of what CSP was or what it was for. So I thought I'd write a post about it. 
 
 The error messages I was getting were protecting me against a common web security vulnerability - **cross-site scripting attacks** (XSS). As a web developer, it's really important to be aware of what XSS is and how to prevent it. 
 
+## Cross-site scripting (XSS)
 XSS involves someone injecting malicious code into an unsuspecting website, which then executes on the victim's computer. 
 
 This injected code can do things like:
@@ -69,22 +66,20 @@ This is where malicious user input in a request is sent back in the immediate se
 
 **Example**: someone posts a link online to a shopping website, with a search term in the URL so it takes you directly to the catalog page. But they've also included some `<script>` tags in the query string.
 
-```
-https://niche-tshirts.com/shirts?q=extreme+ironing<script>/* sneaky code */</script>
-```
+`https://niche-tshirts.com/shirts?q=extreme+ironing<script>/* sneaky code */</script>`
 
 When the server receives the request, it takes the entire query string and uses that as the search parameter. In the HTML that it returns, it renders:
 
-```html
+{{< highlight html >}}
 <p>You searched for: amateur paleontology<script>/* sneaky code */</script></p>
-```
+{{< /highlight >}}
 
 Then, your poor unsuspecting browser will execute what's between those script tags, and the attacker will be able to gain access to your access token and anything else they've managed to scrape. 
 
 ### DOM-based XSS 
 Finally, DOM-based XSS is when JavaScript running on the page uses data from somewhere the attacker can control, such as `window.location` (the URL of the page). Say we have some JS on our page which takes `window.location` and then executes some function with it:
 
-https://niche-tshirts.com/shirts?q=spelunking
+`https://niche-tshirts.com/shirts?q=spelunking`
 
 {{< highlight javascript >}}
 const params = new URLSearchParams(document.location.search.substring(1))
@@ -251,6 +246,8 @@ For example, if you use Hugo and want to enable live reloading with your CSP, as
 
 ## The moral of the story
 So, how did I get around the `unsafe-eval` warnings I was seeing in the console?
+
+{{< img src="*/ron-swanson.webp" alt="" >}}
 
 Unfortunately... the only solution was to chuck out that library and find something else. There are no workarounds for a library that uses `eval`. 
 
