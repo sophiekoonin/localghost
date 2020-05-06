@@ -13,7 +13,7 @@
   content="{{ if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
 {{ with .Resources.ByType "image" }}
-{{ range first 5 (sort . "Params.weight") }}
+{{ range first 1 (sort . "Params.weight") }}
 <meta property="og:image" content="{{ .Permalink }}" />
 <meta property="twitter:image" content="{{ .Permalink }}" />
 {{ end }}
