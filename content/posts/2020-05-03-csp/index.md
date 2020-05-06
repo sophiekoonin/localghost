@@ -121,6 +121,7 @@ A CSP meta tag may look a bit like this, for a site with Google Analytics and so
 
 The CSP header or meta tag content is always a string containing a semicolon-separated list of rules.
 
+
 A policy has a list of **directives** which are usually suffixed with `-src`, and refer to different kinds of rules for resources and content on the page.
 Some common categories of directive are:
   - [fetch directives](#fetch-directives): which resource types may be loaded, and where from 
@@ -135,6 +136,8 @@ script-src: 'self' https://othersite.com;
 ```
 
 I won't go through every single directive - there are a lot - but I'll outline some of the most common ones, and what rules they might enforce. Plus, the good old caveat that Internet Explorer only supports *one* directive (`sandbox`), and that's with the legacy `X-Content-Security-Policy` header. 
+
+While the HTTP header and meta tags are mostly the same, the main differences are that HTTP headers have wider browser support, support all of the directives (meta tags support *most* of the directives) and may be cached by proxies (meta tags won't be).
 
 As long as you're employing multiple methods of defence against XSS, including CSP, you can protect yourself (yes, *even* in IE). It's important to emphasise here that CSP is *one way* of protecting your website against XSS - it's not enough on its own.
 
@@ -186,8 +189,8 @@ Most directives have the same possible list of sources. With the exception of **
 * a **scheme source**: what scheme (protocol) it's okay to fetch resources from. Chiefly `https:` or `http:`. 
 * `'unsafe-inline'`: whether inline `<style>`/`<script>` tags are allowed. I've only really used this for `script-src` and `style-src` before. I'll talk more about why inline style and script tags are a security risk later in the article. 
 * `'unsafe-eval'`: whether or not JS is allowed to use the  `eval()` function, which executes arbitrary code from whatever string is passed in. I'll go into more detail about why this is a bad thing in a later section. 
-* `nonce` - you may specify an **unguessable** cryptographic nonce (a base-64 encoded string) which you can then pass into inline styles or scripts as an attribute to allow them to load on the page. This means you can use inline `<style>`/`<script>` tags without indiscriminately allowing *all* inline styles - effectively marking only a specific set of inline styles as "safe". This **must** be randomly generated and unguessable, otherwise it's basically pointless as anyone can guess the hash and pop it in their injected scripts. 
-* hashes - e.g. `sha256-<your hash value>`. This is a base64-encoded representation of your inline styles or scripts, so the browser can check the hash against its own hash of the `<style>`/`<script>` to make sure it's the real deal. Anything that doesn't match the hash will be ignored.
+* `nonce` - you may specify an **unguessable** cryptographic nonce (a base-64 encoded string) which you can then pass into inline styles or scripts as an attribute to allow them to load on the page. This means you can use inline `<style nonce="mysecretstring">`/`<script>` tags without indiscriminately allowing *all* inline styles - effectively marking only a specific set of inline styles as "safe". This **must** be randomly generated and unguessable, otherwise it's basically pointless as anyone can guess the hash and pop it in their injected scripts. 
+* hashes - e.g. `sha256-<your hash value>`. This is a base64-encoded representation of your inline styles or scripts, so the browser can check the hash against its own hash of the `<style>`/`<script>` to make sure it's the real deal. Anything that doesn't match the hash will be ignored. Hashes are static, while nonces are generated server-side on every page load. 
 * `none` - no URLs match, no nothing may be loaded at all. For example, I don't use iframes on this site at all, so I'd have `frame-src: none`.
 
 #### `unsafe-inline` and the risks of inline styles
@@ -212,7 +215,7 @@ While enabling `unsafe-inline` for styles is not the end of the world, it's a ba
 
 
 ### How to create a CSP header
-In a static site, you can add a meta tag to your site's `<head>` like the example I quoted before:
+In a static site, you can add a meta tag to your site's `<head>`:
 
 {{< highlight html >}}
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; manifest-src 'none'; prefetch-src 'none'; worker-src 'none'; object-src 'self'; font-src *; connect-src 'self' https://www.google-analytics.com; img-src 'self' https://some-cdn.com; script-src 'self' 'sha256-flsjfljlkfjaspdjfsdkgs' https://platform.twitter.com https://www.google-analytics.com https://connect.facebook.net https://staticxx.facebook.com; style-src 'self' 'nonce-adsfasdfasfsadf' https://platform.twitter.com">
