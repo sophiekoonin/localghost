@@ -7,7 +7,7 @@
 <meta property="og:locale" content="en_GB" />
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="localghost">
+<meta name="twitter:title" content="{{ .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end }}">
 <meta name="twitter:site" content="@type__error">
 <meta name="twitter:description"
   content="{{ if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
