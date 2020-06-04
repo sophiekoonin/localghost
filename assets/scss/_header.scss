@@ -34,6 +34,12 @@
 .glitch {
   color: $mid-purple;
   position: relative;
+  text-decoration: none;
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
 }
 .glitch::before,
 .glitch::after {
