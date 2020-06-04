@@ -7,7 +7,6 @@
   }
 
   a:not(.plain) {
-    @include gradient-underline;
   }
 
   p {
@@ -225,7 +224,6 @@
     color: #000;
     font-size: 1em;
     a {
-      @include gradient-underline;
     }
 
     @media screen and (max-width: $tablet) {

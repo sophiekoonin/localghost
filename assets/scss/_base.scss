@@ -33,50 +33,9 @@ body {
 }
 
 a {
-  text-decoration: none;
+  color: $mid-pink;
   &:active {
     color: $mid-purple;
-  }
-}
-
-@mixin gradient-underline($color: $mid-pink) {
-  color: $color;
-  text-decoration: underline;
-
-  @media screen and(min-width: $desktop) {
-    color: transparent;
-    display: inline-block;
-    overflow: hidden;
-    position: relative;
-    text-decoration: none;
-    text-shadow: 0 0 $color, 0.08em 0 0 #fff, 0 0, -0.08em 0 0 #fff;
-    vertical-align: bottom;
-
-    &:after {
-      background: linear-gradient(
-          to bottom,
-          rgba($color, 0.8),
-          rgba($color, 0.8)
-        )
-        center 1.08em / 100% 2px no-repeat;
-      content: '';
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 4px;
-      width: 400%;
-      will-change: transform;
-    }
-
-    &:hover:after {
-      animation: underline-gradient 3s linear infinite;
-      background-image: linear-gradient(
-        90deg,
-        rgba($pastel-purple, 0.8) 15%,
-        rgba($mid-purple, 0.6) 35%,
-        rgba($turquoise, 0.8) 85%
-      );
-    }
   }
 }
 
@@ -140,15 +99,6 @@ img {
   width: 33%;
   margin: 0 auto;
   height: 8px;
-}
-
-@keyframes underline-gradient {
-  0% {
-    transform: translate3d(0%, 0%, 0);
-  }
-  100% {
-    transform: translate3d(-75%, 0%, 0);
-  }
 }
 
 .skip-link {

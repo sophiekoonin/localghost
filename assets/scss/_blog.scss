@@ -14,7 +14,6 @@
 }
 
 .read-more-link {
-  @include gradient-underline;
 }
 
 .all-posts-list {
@@ -33,7 +32,6 @@
       color: $mid-pink;
       text-decoration: underline;
       @media screen and (min-width: $desktop) {
-        @include gradient-underline;
       }
     }
   }
@@ -88,7 +86,6 @@
       @include icon-bullet;
     }
     a {
-      @include gradient-underline;
     }
   }
 }
@@ -122,10 +119,10 @@
           color: #1da1f2;
         }
         &.facebook {
-          color: #3b5998; 
+          color: #3b5998;
         }
         &.linkedin {
-          color: #0077B5;   
+          color: #0077b5;
         }
       }
     }
@@ -164,11 +161,6 @@
   list-style-type: none;
   flex-direction: row;
 
-
-
-  a{
-    @include gradient-underline($mid-purple);
-  }
   li {
     padding-right: 0.5rem;
     &:not(:first-of-type):before {
