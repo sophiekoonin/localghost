@@ -1,26 +1,139 @@
-$body-color: #565656;
-$background: #ffffff;
-$mid-purple: #694e97;
-$pastel-pink: #ffade6;
-$pastel-purple: #ccb1ff;
+$grey-darkest: #292929;
+$grey-dark: #565656;
+$grey-mid: #757575;
+$grey-light: #dbdbdb;
+$white: #ffffff;
+
+$purple-dark: #484066;
+$purple-grey: #696286;
+$purple-mid: #694e97;
+$purple-bright: #6a35c5;
+$purple-light-bright: #b48cff;
+$purple-light: #ccb1ff;
 $secondary: #dbdbdb;
 $h-color: #222222;
-$link-hover: #fa72d1;
-$mid-pink: #BC38A6;
-$mid-grey: #757575;  
-$light-grey: #fafafa;
-$turquoise: #25dbcc; 
-$dark-turquoise: #01a59f;
+
+$pink-dark: #bc38a6;
+$pink-bright: #ff3ab3;
+$pink-mid: #fa72d1;
+$pink-light: #ffade6;
+
+$blue-light: #4accff;
+$turquoise: #46f0e2;
+$turquoise-light: #46f0e2;
+$turquoise-dark: #01a59f;
+
+$chartreuse: #bafd9b;
+
+$background-color: 'background-color';
+$link-color: 'link-color';
+$body-color: 'body-color';
+$header-color: 'header-color';
+$h1-color: 'h1-color';
+$h2-color: 'h2-color';
+$h3-color: 'h3-color';
+$h4-color: 'h4-color';
+$link-hover-color: 'link-hover-color';
+$post-subtitle-color: 'post-subtitle-color';
+$accent-color: 'accent-color';
+$accent-hover-color: 'accent-hover-color';
+$date-color: 'date-color';
+$light-theme: 'light-theme';
+$dark-theme: 'dark-theme';
+$inline-code-color: 'inline-code-color';
+$code-block-background-color: 'code-block-background-color';
+$blockquote-background-color: 'blockquote-background-color';
+
+$themes: (
+  $light-theme: (
+    $background-color: $white,
+    $link-color: $pink-dark,
+    $body-color: $grey-dark,
+    $header-color: $purple-mid,
+    $h1-color: $pink-dark,
+    $h2-color: $pink-dark,
+    $h3-color: $purple-mid,
+    $h4-color: $purple-mid,
+    $link-hover-color: $pink-mid,
+    $post-subtitle-color: $purple-mid,
+    $accent-color: $turquoise-dark,
+    $accent-hover-color: $turquoise,
+    $date-color: $grey-mid,
+    $inline-code-color: $purple-mid,
+    $code-block-background-color: $purple-grey,
+    $blockquote-background-color: rgba(245, 245, 245, 0.5),
+  ),
+  $dark-theme: (
+    $background-color: $grey-darkest,
+    $link-color: $turquoise-light,
+    $body-color: $white,
+    $header-color: $turquoise,
+    $h1-color: $pink-bright,
+    $h2-color: $pink-bright,
+    $h3-color: $purple-light-bright,
+    $h4-color: $blue-light,
+    $link-hover-color: $chartreuse,
+    $post-subtitle-color: $turquoise,
+    $accent-color: $chartreuse,
+    $accent-hover-color: $pink-bright,
+    $date-color: $grey-light,
+    $inline-code-color: $purple-light-bright,
+    $code-block-background-color: $purple-dark,
+    $blockquote-background-color: lighten($grey-darkest, 10),
+  ),
+);
 
 $family-sans-serif: Nunito Sans, sans-serif;
-$code: $mid-purple;
 $title-weight: 300;
-$navbar-background-color: $background;
-$navbar-item-hover-background-color: $background;
-$navbar-item-hover-color: $secondary;
 $weight-bold: 600;
 
 $tablet: 768px;
 $desktop: 960px;
-$desktop-lg: 1025px
+$desktop-lg: 1025px;
 
+/* https://dev.to/chicio/add-dark-mode-support-on-your-website-with-sass-and-prefers-color-scheme-media-query-2p1 */
+@mixin themeProperty(
+  $theme,
+  $property,
+  $color,
+  $additionalPropertiesPositionIsFront,
+  $additionalProperties
+) {
+  @if $additionalPropertiesPositionIsFront {
+    #{$property}: unquote(
+      $additionalProperties + ' ' + map-get($theme, $color)
+    );
+  } @else {
+    #{$property}: unquote(
+      map-get($theme, $color) + ' ' + $additionalProperties
+    );
+  }
+}
+
+@mixin theme(
+  $property,
+  $color,
+  $additionalPropertiesPositionIsFront: false,
+  $additionalProperties: ''
+) {
+  $light: map-get($themes, $light-theme);
+  $dark: map-get($themes, $dark-theme);
+
+  @include themeProperty(
+    $light,
+    $property,
+    $color,
+    $additionalPropertiesPositionIsFront,
+    $additionalProperties
+  );
+
+  @media (prefers-color-scheme: dark) {
+    @include themeProperty(
+      $dark,
+      $property,
+      $color,
+      $additionalPropertiesPositionIsFront,
+      $additionalProperties
+    );
+  }
+}

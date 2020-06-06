@@ -3,11 +3,11 @@
 }
 
 body {
+  @include theme('color', $body-color);
+  @include theme('background', $background-color);
   font-family: $family-sans-serif;
   font-size: 1em;
   font-display: swap;
-  background-color: #ffffff;
-  color: $body-color;
   margin: 0;
   min-height: 100vh;
 
@@ -21,21 +21,33 @@ body {
     bottom: 0;
     top: 0;
     z-index: 999;
-    border: $pastel-pink solid 0.8rem;
+    border: $pink-light solid 0.8rem;
     border-image: linear-gradient(
         to bottom,
-        $pastel-pink 0%,
-        $pastel-purple 50%,
+        $pink-light 0%,
+        $purple-light 50%,
         $turquoise 100%
       )
       1;
+    @media (prefers-color-scheme: dark) {
+      border: $pink-bright solid 0.8rem;
+      border-image: linear-gradient(
+          to bottom,
+          $pink-bright 0%,
+          $purple-bright 50%,
+          $turquoise 100%
+        )
+        1;
+    }
   }
 }
 
 a {
-  color: $mid-pink;
-  &:active {
-    color: $mid-purple;
+  @include theme('color', $link-color);
+  &:active,
+  &:hover,
+  &:focus {
+    @include theme('color', $link-hover-color);
   }
 }
 
@@ -47,7 +59,7 @@ h2 {
   @media screen and (max-width: $desktop) {
     margin-top: 0;
   }
-  color: $mid-pink;
+  @include theme('color', $h2-color);
   font-weight: 800;
   line-height: 1.2em;
   a {
@@ -57,12 +69,12 @@ h2 {
 }
 
 h3 {
-  color: $mid-pink;
+  @include theme('color', $h3-color);
   font-weight: 800;
 }
 
 h4 {
-  color: $mid-purple;
+  @include theme('color', $h4-color);
 }
 ul {
   padding: 0;
@@ -78,12 +90,12 @@ img {
   text-align: center;
   margin: 1rem 0;
   .top-icon {
-    color: $dark-turquoise;
+    @include theme('color', $accent-color);
     margin-bottom: 2rem;
     vertical-align: baseline;
 
     &:hover {
-      color: $turquoise;
+      @include theme('color', $accent-hover-color);
     }
     svg {
       margin: 0 5px;

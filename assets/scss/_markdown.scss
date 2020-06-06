@@ -5,8 +5,8 @@
   @media screen and (min-width: $tablet) {
     font-size: 1.05rem;
   }
-
-  a:not(.plain) {
+  .chroma {
+    @include theme('background-color', $code-block-background-color);
   }
 
   p {
@@ -65,7 +65,7 @@
   }
 
   li:before {
-    @include icon-bullet();
+    @include heart-bullet();
   }
 
   li > ul > li:before {
@@ -100,6 +100,7 @@
   }
 
   blockquote {
+    @include theme('background', $blockquote-background-color);
     p {
       margin: 0;
     }
@@ -111,7 +112,6 @@
 
     padding: 1rem 1rem;
     margin: 1.5rem auto;
-    background: rgba(245, 245, 245, 0.5);
     border-left: 0.3rem solid $turquoise;
 
     blockquote p:last-child {
@@ -151,8 +151,9 @@
   }
 
   code {
+    @include theme('color', $inline-code-color);
+
     font-family: 'Roboto Mono', monospace;
-    color: $mid-purple;
   }
 
   img {

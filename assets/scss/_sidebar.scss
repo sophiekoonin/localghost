@@ -16,7 +16,7 @@
     padding: 0;
   }
   h3 {
-    color: $mid-purple;
+    @include theme('color', $h3-color);
     font-size: 1.5rem;
     margin: 0;
   }
@@ -55,7 +55,7 @@
   }
   .big-text {
     font-weight: 700;
-    color: $mid-purple;
+    @include theme('color', $header-color);
     font-size: 1.5rem;
     display: block;
     margin-top: 2rem;
@@ -72,7 +72,7 @@
   max-width: 75px;
   max-height: 75px;
   margin-right: 1rem;
-  border: 2px solid $pastel-purple;
+  border: 2px solid $purple-light;
   @media screen and (min-width: $tablet) {
     margin-right: 1.5rem;
   }

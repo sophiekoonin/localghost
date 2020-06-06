@@ -10,11 +10,12 @@
   }
 
   .header-text {
+    @include theme('color', $header-color);
+
     font-size: 4rem;
     text-align: center;
     font-family: 'VT323', monospace;
     font-display: swap;
-    color: $mid-purple;
     text-transform: lowercase;
     margin: 0;
     padding-top: 2rem;
@@ -32,7 +33,7 @@
 }
 
 .glitch {
-  color: $mid-purple;
+  @include theme('color', $header-color);
   position: relative;
   text-decoration: none;
   &:hover,
@@ -40,30 +41,40 @@
   &:active {
     text-decoration: none;
   }
-}
-.glitch::before,
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-}
-.glitch::before {
-  left: 2px;
-  text-shadow: -2px 0 $turquoise;
-  clip: rect(24px, 550px, 90px, 0);
-  animation: glitch-anim-2 3s linear forwards;
-}
-.glitch::after {
-  left: -2px;
-  text-shadow: -2px 0 $pastel-pink;
-  clip: rect(85px, 550px, 140px, 0);
-  animation: glitch-anim 2.5s linear forwards;
-}
 
+  &::before,
+  &::after {
+    @include theme('background', $background-color);
+
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &::before {
+    left: 2px;
+    text-shadow: -2px 0 $turquoise;
+    clip: rect(24px, 550px, 90px, 0);
+    animation: glitch-anim-2 3s linear forwards;
+  }
+  &::after {
+    left: -2px;
+    text-shadow: -2px 0 $pink-light;
+    clip: rect(85px, 550px, 140px, 0);
+    animation: glitch-anim 2.5s linear forwards;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    &::before {
+      text-shadow: -2px 0 $chartreuse;
+    }
+    &::after {
+      text-shadow: -2px 0 $pink-bright;
+    }
+  }
+}
 @keyframes glitch-anim {
   0% {
     clip: rect(116px, 9999px, 55px, 0);

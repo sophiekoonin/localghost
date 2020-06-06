@@ -11,12 +11,12 @@
 
     @media screen and (min-width: $tablet) {
       padding-top: 1rem;
-      padding-right: 0.5rem;      
+      padding-right: 0.5rem;
     }
 
     li.navbar-item {
       &:not(:first-of-type):before {
-        @include icon-bullet();
+        @include heart-bullet();
       }
       text-transform: uppercase;
       font-size: 1.5rem;
@@ -26,11 +26,17 @@
         padding-right: 0;
       }
       a {
-        color: $mid-pink;
         font-weight: 800;
         font-size: 1.25rem;
         &:hover {
-          color: $turquoise; 
+          color: $turquoise;
+        }
+
+        @media (prefers-color-scheme: dark) {
+          color: $chartreuse;
+          &:hover {
+            color: $pink-bright;
+          }
         }
       }
     }
@@ -51,9 +57,15 @@ li.social-icon {
 
   a {
     line-height: 0;
-    color: $mid-pink;
     &:hover {
       color: $turquoise;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      color: $chartreuse;
+      &:hover {
+        color: $pink-bright;
+      }
     }
   }
   svg {
@@ -70,16 +82,15 @@ li.social-icon {
     display: inline-flex;
     li {
       a {
-        color: $mid-pink;
         &:hover {
-          color: $turquoise; 
+          color: $turquoise;
         }
       }
       &:not(:last-of-type):first-of-type {
         padding-right: 0.6rem;
       }
       &:not(:first-of-type):before {
-        @include icon-bullet();
+        @include heart-bullet();
       }
     }
   }
