@@ -1,6 +1,6 @@
 ---
 title: "Things Experienced Speakers Wish They'd Known"
-subtitle: "Tips For First-Time Conference Speakers"
+subtitle: 'Tips For First-Time Conference Speakers'
 date: 2018-01-24T15:00:00Z
 tags: ['conferences', 'talks', 'advice', 'twitter']
 summary: "Preparing for my first ever conference talk in 2018, I compiled a list of helpful tips from experienced speakers, and thought I'd share them with the world."
@@ -79,8 +79,6 @@ Don't assume the organisers will provide the adaptor you need to connect your la
 ## To demo or not to demo?
 
 This was a bit of a divisive one — should you have a live demo in your talk?
-
-{{<tweet 955555727095074816 >}}
 
 {{<tweet 955595332993216512 >}}
 

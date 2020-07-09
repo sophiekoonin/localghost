@@ -5,8 +5,8 @@
     list-style-type: none;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 0 auto;
+    justify-content: flex-end;
+    margin-right: 2rem;
     padding-top: 1rem;
 
     @media screen and (min-width: $tablet) {
@@ -15,12 +15,9 @@
     }
 
     li.navbar-item {
-      &:not(:first-of-type):before {
-        @include heart-bullet();
-      }
+      transform: rotate(-45deg);
       text-transform: uppercase;
       font-size: 1.5rem;
-      padding-right: 1rem;
 
       &:last-of-type {
         padding-right: 0;
@@ -29,15 +26,15 @@
         font-weight: 800;
         font-size: 1.25rem;
         &:hover {
-          color: $turquoise;
+          color: $caribbean-green;
         }
 
-        @media (prefers-color-scheme: dark) {
-          color: $chartreuse;
-          &:hover {
-            color: $pink-bright;
-          }
-        }
+        // @media (prefers-color-scheme: dark) {
+        //   color: $caribbean-green;
+        //   &:hover {
+        //     color: $blush;
+        //   }
+        // }
       }
     }
   }
@@ -58,13 +55,13 @@ li.social-icon {
   a {
     line-height: 0;
     &:hover {
-      color: $turquoise;
+      color: $caribbean-green;
     }
 
     @media (prefers-color-scheme: dark) {
-      color: $chartreuse;
+      color: $caribbean-green;
       &:hover {
-        color: $pink-bright;
+        color: $blush;
       }
     }
   }
@@ -83,7 +80,7 @@ li.social-icon {
     li {
       a {
         &:hover {
-          color: $turquoise;
+          color: $caribbean-green;
         }
       }
       &:not(:last-of-type):first-of-type {

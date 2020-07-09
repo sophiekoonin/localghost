@@ -1,24 +1,7 @@
 .main-container {
-  margin: 0 auto;
-  max-width: 100vw;
+  grid-area: content;
+  // margin: 0 auto;
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  @media screen and (min-width: $tablet) {
-    max-width: 80%;
-  }
-}
-
-@mixin full-width {
-
-  @media screen and (min-width: $desktop) {
-    max-width: 80%;
-    margin: 0 auto;
-  }
-  @media screen and (min-width: $desktop-lg) {
-    max-width: 70%;
-    margin: 0 auto;
-  }
 }
 
 .full-width {
@@ -31,8 +14,6 @@
       font-size: 1.8rem;
     }
   }
-@include full-width;
-
 }
 
 .top-pad {

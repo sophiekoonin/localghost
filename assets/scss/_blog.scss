@@ -9,8 +9,6 @@
       font-size: 1rem;
     }
   }
-
-  @include full-width;
 }
 
 .all-posts-list {
@@ -109,7 +107,7 @@
           color: #0077b5;
         }
         &:hover {
-          color: $turquoise;
+          color: $caribbean-green;
         }
       }
     }

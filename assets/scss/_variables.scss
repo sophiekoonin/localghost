@@ -1,29 +1,15 @@
-$grey-darkest: #292929;
-$grey-dark: #565656;
-$grey-mid: #757575;
-$grey-light: #dbdbdb;
-$white: #ffffff;
-
-$purple-dark: #484066;
-$purple-grey: #696286;
-$purple-mid: #694e97;
-$purple-bright: #6a35c5;
-$purple-light-bright: #b48cff;
-$purple-light: #ccb1ff;
-$secondary: #dbdbdb;
-$h-color: #222222;
-
-$pink-dark: #bc38a6;
-$pink-bright: #ff3ab3;
-$pink-mid: #fa72d1;
-$pink-light: #ffade6;
-
-$blue-light: #4accff;
-$turquoise: #46f0e2;
-$turquoise-light: #46f0e2;
-$turquoise-dark: #01a59f;
-
-$chartreuse: #bafd9b;
+$champagne-pink: hsla(22, 17%, 93%, 1);
+$caribbean-green: hsla(164, 97%, 84%, 1);
+$caribbean-green-light: hsla(164, 97%, 90%, 1);
+$light-cyan: hsla(158, 76%, 90%, 1);
+$blush: hsla(342, 76%, 65%, 1);
+$cherry-blossom: hsla(350, 100%, 86%, 1);
+$purple-90: hsla(251, 78%, 90%, 1);
+$purple-80: hsla(251, 78%, 80%, 1);
+$purple-67: hsla(251, 78%, 67%, 1);
+$gunmetal: hsla(212, 14%, 19%, 1);
+$grey-mid: hsla(270, 4%, 44%, 1);
+$jet: hsla(270, 4%, 22%, 1);
 
 $background-color: 'background-color';
 $link-color: 'link-color';
@@ -46,40 +32,40 @@ $blockquote-background-color: 'blockquote-background-color';
 
 $themes: (
   $light-theme: (
-    $background-color: $white,
-    $link-color: $pink-dark,
-    $body-color: $grey-dark,
-    $header-color: $purple-mid,
-    $h1-color: $pink-dark,
-    $h2-color: $pink-dark,
-    $h3-color: $purple-mid,
-    $h4-color: $purple-mid,
-    $link-hover-color: $pink-mid,
-    $post-subtitle-color: $purple-mid,
-    $accent-color: $turquoise-dark,
-    $accent-hover-color: $turquoise,
+    $background-color: $champagne-pink,
+    $link-color: $blush,
+    $body-color: $jet,
+    $header-color: $purple-67,
+    $h1-color: $purple-67,
+    $h2-color: $purple-67,
+    $h3-color: $blush,
+    $h4-color: $blush,
+    $link-hover-color: $blush,
+    $post-subtitle-color: $blush,
+    $accent-color: $caribbean-green,
+    $accent-hover-color: $caribbean-green-light,
     $date-color: $grey-mid,
-    $inline-code-color: $purple-mid,
-    $code-block-background-color: $purple-grey,
+    $inline-code-color: $blush,
+    $code-block-background-color: $purple-67,
     $blockquote-background-color: rgba(245, 245, 245, 0.5),
   ),
   $dark-theme: (
-    $background-color: $grey-darkest,
-    $link-color: $turquoise-light,
-    $body-color: $white,
-    $header-color: $turquoise,
-    $h1-color: $pink-bright,
-    $h2-color: $pink-bright,
-    $h3-color: $purple-light-bright,
-    $h4-color: $blue-light,
-    $link-hover-color: $chartreuse,
-    $post-subtitle-color: $turquoise,
-    $accent-color: $chartreuse,
-    $accent-hover-color: $pink-bright,
-    $date-color: $grey-light,
-    $inline-code-color: $purple-light-bright,
-    $code-block-background-color: $purple-dark,
-    $blockquote-background-color: lighten($grey-darkest, 10),
+    $background-color: $light-cyan,
+    $link-color: $blush,
+    $body-color: $jet,
+    $header-color: $purple-90,
+    $h1-color: $purple-67,
+    $h2-color: $purple-67,
+    $h3-color: $blush,
+    $h4-color: $blush,
+    $link-hover-color: $blush,
+    $post-subtitle-color: $blush,
+    $accent-color: $caribbean-green,
+    $accent-hover-color: $caribbean-green-light,
+    $date-color: $grey-mid,
+    $inline-code-color: $blush,
+    $code-block-background-color: $purple-67,
+    $blockquote-background-color: rgba(245, 245, 245, 0.5),
   ),
 );
 

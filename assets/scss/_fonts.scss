@@ -1,30 +1,35 @@
 @font-face {
-  font-family: "Nunito Sans";
-  src: url("/fonts/NunitoSans-Regular.woff") format('woff2');
+  font-family: 'Nunito Sans';
+  src: url('/fonts/NunitoSans-Regular.woff') format('woff2');
 }
 @font-face {
-  font-family: "Nunito Sans";
-  src: url("/fonts/NunitoSans-Italic.woff") format('woff2');
+  font-family: 'Nunito Sans';
+  src: url('/fonts/NunitoSans-Italic.woff') format('woff2');
   font-style: italic;
 }
 
 @font-face {
-  font-family: "Nunito Sans";
-  src: url("/fonts/NunitoSans-Bold.woff") format('woff2');
+  font-family: 'Nunito Sans';
+  src: url('/fonts/NunitoSans-Bold.woff') format('woff2');
   font-weight: 600;
 }
 @font-face {
-  font-family: "Nunito Sans";
-  src: url("/fonts/NunitoSans-Black.woff") format('woff2');
+  font-family: 'Nunito Sans';
+  src: url('/fonts/NunitoSans-Black.woff') format('woff2');
   font-weight: 800;
 }
 
 @font-face {
-  font-family: "VT323";
-  src: url("/fonts/VT323-Regular.woff") format('woff2');
+  font-family: 'VT323';
+  src: url('/fonts/VT323-Regular.woff') format('woff2');
 }
 
 @font-face {
-  font-family: "Alef";
-  src: url("/fonts/Alef-Regular.woff") format('woff2');
+  font-family: 'Alef';
+  src: url('/fonts/Alef-Regular.woff') format('woff2');
+}
+
+@font-face {
+  font-family: 'Burtons Script';
+  src: url('/fonts/Burtons-Script.woff') format('woff2');
 }
