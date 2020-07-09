@@ -7,7 +7,8 @@ $cherry-blossom: hsla(350, 100%, 86%, 1);
 $purple-90: hsla(251, 78%, 90%, 1);
 $purple-80: hsla(251, 78%, 80%, 1);
 $purple-67: hsla(251, 78%, 67%, 1);
-$gunmetal: hsla(212, 14%, 19%, 1);
+$purple-50: hsla(251, 78%, 50%, 1);
+$gunmetal: hsla(212, 14%, 12%, 1);
 $grey-mid: hsla(270, 4%, 44%, 1);
 $jet: hsla(270, 4%, 22%, 1);
 
@@ -35,7 +36,7 @@ $themes: (
     $background-color: $champagne-pink,
     $link-color: $blush,
     $body-color: $jet,
-    $header-color: $purple-67,
+    $header-color: $purple-90,
     $h1-color: $purple-67,
     $h2-color: $purple-67,
     $h3-color: $blush,
@@ -50,12 +51,12 @@ $themes: (
     $blockquote-background-color: rgba(245, 245, 245, 0.5),
   ),
   $dark-theme: (
-    $background-color: $light-cyan,
+    $background-color: $gunmetal,
     $link-color: $blush,
-    $body-color: $jet,
+    $body-color: white,
     $header-color: $purple-90,
-    $h1-color: $purple-67,
-    $h2-color: $purple-67,
+    $h1-color: $blush,
+    $h2-color: $caribbean-green,
     $h3-color: $blush,
     $h4-color: $blush,
     $link-hover-color: $blush,

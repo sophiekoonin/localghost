@@ -1,23 +1,25 @@
 .navbar {
-  padding: 1em 0;
-
+  padding: 0;
+  grid-area: 1 / 3 / 1/ 4;
   .navbar-menu {
     list-style-type: none;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    margin-right: 2rem;
+    justify-content: space-evenly;
     padding-top: 1rem;
+    font-family: 'Literata';
 
-    @media screen and (min-width: $tablet) {
+    @include mq($from: tablet) {
       padding-top: 1rem;
-      padding-right: 0.5rem;
+      justify-content: flex-end;
+      padding-right: 2rem;
     }
 
     li.navbar-item {
-      transform: rotate(-45deg);
-      text-transform: uppercase;
-      font-size: 1.5rem;
+      @include mq($from: tablet) {
+        transform: rotate(-45deg);
+      }
+      font-size: 2rem;
 
       &:last-of-type {
         padding-right: 0;
@@ -25,16 +27,16 @@
       a {
         font-weight: 800;
         font-size: 1.25rem;
+        text-decoration: none;
         &:hover {
           color: $caribbean-green;
         }
-
-        // @media (prefers-color-scheme: dark) {
-        //   color: $caribbean-green;
-        //   &:hover {
-        //     color: $blush;
-        //   }
-        // }
+        @media (prefers-color-scheme: dark) {
+          color: $caribbean-green;
+          &:hover {
+            color: $cherry-blossom;
+          }
+        }
       }
     }
   }

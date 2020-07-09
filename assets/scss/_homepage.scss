@@ -1,0 +1,14 @@
+.profile-wrapper {
+  h2 {
+    margin-top: -2.5rem;
+    @include mq($from: tablet) {
+      font-size: 3rem;
+      margin-top: -3.2rem;
+    }
+  }
+  border-radius: 5px;
+  font-size: 1.1rem;
+  background: rgba($purple-67, 0.5);
+  grid-area: 1/2/2/3;
+  padding: 1.5rem 2rem;
+}

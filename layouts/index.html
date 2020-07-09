@@ -1,30 +1,13 @@
 {{ define "main" }}
-{{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 6 }}
-{{ partial "separator.html" . }}
-    <ol class="posts-list">
-    {{ range $paginator.Pages }}
-        <li>
-        {{ partial "blog/summary.html" . }}
-        </li>
-        {{ partial "separator.html" .}}
-        {{ end }}
-    </ol>
-    <nav class="pagination-nav" aria-label="Page navigation">
-    <ul>
-      {{ if $paginator.HasPrev }}
-        <li class="pagination__item pagination__item--previous">
-            <a href="{{ $paginator.Prev.URL }}" class="pagination__link pagination__link--previous">
-            <span aria-hidden="true">←</span> Previous page
-            </a>
-        </li>
-    {{ end }}
-    {{ if $paginator.HasNext }}
-    <li class="pagination__item pagination__item--next">
-        <a href="{{ $paginator.Next.URL }}" class="pagination__link pagination__link--next">
-        Next page <span aria-hidden="true">→</span>
-        </a>
-    </li>
-    {{ end }}
-    </ul>
-  </nav>
+<article class="first-section">
+  <div class="profile-wrapper">
+    <h2>Sophie Koonin</h2>
+    <p>Doggo ipsum shoober borking doggo h*ck bork borkdrive doing me a frighten, corgo ur givin me a spook pats. Doggo
+      I
+      am bekom fat blop shoob heckin mlem borkf, snoot very jealous pupper what a nice floof shoober woofer. Fluffer
+      stop
+      it fren long water shoob extremely cuuuuuute doge many pats snoot blep, pupperino ruff the neighborhood pupper
+      maximum borkdrive boofers. Doge heckin blep vvv dat tungg tho floofs, long woofer pats boofers doggo.</p>
+  </div>
+</article>
 {{end}}

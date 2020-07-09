@@ -1,49 +1,50 @@
+@mixin neon-glow($color) {
+  text-shadow: 0vw 0vw 0vw $color, 0vw 0vw 0vw $color, 0vw 0vw 0vw $color,
+    0.1vw 0vw 0.1vw $color, 0.1vw 0vw 0.1vw $color, 0.1vw 0vw 0.1vw $color,
+    0.1vw 0vw 2vw $color, 0.1vw 0vw 2vw $color, 0.1vw 0vw 2vw $color,
+    0.1vw 0vw 1vw darken($color, 15), 0.1vw 0vw 1vw darken($color, 15),
+    0.1vw 0vw 5vw darken($color, 15), 0.1vw 0vw 5vw darken($color, 15);
+}
 .header {
   padding: 0;
-  grid-area: header;
-  @media screen and (min-width: $tablet) {
-    margin-top: 2rem;
-  }
-  img {
-    border: 0;
-    box-shadow: none;
-    max-width: 150px;
+  margin-top: 2rem;
+
+  @include mq($from: tablet) {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
   }
 
   .header-text {
+    grid-area: 1 / 2 / 1 / 3;
     @include theme('color', $header-color);
 
     font-size: 4rem;
     font-family: 'Burtons Script', cursive;
     font-display: swap;
-    text-shadow: 0vw 0vw 0vw $purple-80, 0vw 0vw 0vw $purple-80,
-      0vw 0vw 0vw $purple-80, 0.1vw 0vw 0.1vw $purple-80,
-      0.1vw 0vw 0.1vw $purple-80, 0.1vw 0vw 0.1vw $purple-80,
-      0.1vw 0vw 2vw $purple-80, 0.1vw 0vw 2vw $purple-80,
-      0.1vw 0vw 2vw $purple-80, 0.1vw 0vw 1vw $purple-67,
-      0.1vw 0vw 1vw $purple-67, 0.1vw 0vw 5vw $purple-67,
-      0.1vw 0vw 5vw $purple-67;
+    text-align: center;
     text-transform: lowercase;
     margin: 0;
-    padding-top: 2rem;
-    a {
-      @include theme('color', $header-color);
-
-      text-decoration: none;
-    }
     @media screen and (min-width: $tablet) {
-      font-size: 7rem;
-      padding-top: 2rem;
+      font-size: 8rem;
     }
   }
-
-  .navbar {
-    padding: 0;
+}
+.neon {
+  @include theme('color', $header-color);
+  text-decoration: none;
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+  @include neon-glow($purple-80);
+  &:hover {
+    color: lighten($cherry-blossom, 10);
+    @include neon-glow($cherry-blossom);
   }
 }
 
 // .glitch {
-//   @include theme('color', $header-color);
 //   position: relative;
 //   text-decoration: none;
 //   &:hover,

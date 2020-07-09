@@ -1,6 +1,32 @@
 {{ define "main" }}
 <article class="full-width">
     <h2 class="page-title">All posts</h2>
-    {{ partialCached "blog/li.html" . }}
+    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 6 }}
+    <ol class="posts-list">
+        {{ range $paginator.Pages }}
+        <li>
+            {{ partial "blog/summary.html" . }}
+        </li>
+        {{ partial "separator.html" .}}
+        {{ end }}
+    </ol>
+    <nav class="pagination-nav" aria-label="Page navigation">
+        <ul>
+            {{ if $paginator.HasPrev }}
+            <li class="pagination__item pagination__item--previous">
+                <a href="{{ $paginator.Prev.URL }}" class="pagination__link pagination__link--previous">
+                    <span aria-hidden="true">←</span> Previous page
+                </a>
+            </li>
+            {{ end }}
+            {{ if $paginator.HasNext }}
+            <li class="pagination__item pagination__item--next">
+                <a href="{{ $paginator.Next.URL }}" class="pagination__link pagination__link--next">
+                    Next page <span aria-hidden="true">→</span>
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </nav>
 </article>
 {{end}}

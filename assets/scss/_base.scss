@@ -10,8 +10,6 @@ body {
   font-display: swap;
   margin: 0;
   min-height: 100vh;
-  display: grid;
-  grid-template-areas: '. header header header header' '. content content . .' 'footer footer footer footer footer';
 
   // &:after {
   //   content: '';
@@ -51,6 +49,13 @@ a {
   &:focus {
     @include theme('color', $link-hover-color);
   }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Literata', serif;
 }
 
 h1 {
