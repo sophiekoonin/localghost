@@ -1,13 +1,15 @@
 .navbar {
   padding: 0;
-  grid-area: 1 / 3 / 1/ 4;
+  grid-area: 1 / 30/ 5 / 40;
+  justify-self: end;
   .navbar-menu {
     list-style-type: none;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     padding-top: 1rem;
-    font-family: 'Literata';
+    font-family: 'VT323', monospace;
+    text-transform: lowercase;
 
     @include mq($from: tablet) {
       padding-top: 1rem;
@@ -19,14 +21,14 @@
       @include mq($from: tablet) {
         transform: rotate(-45deg);
       }
-      font-size: 2rem;
+      font-size: 3rem;
 
       &:last-of-type {
         padding-right: 0;
       }
       a {
         font-weight: 800;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         text-decoration: none;
         &:hover {
           color: $caribbean-green;
