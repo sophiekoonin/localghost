@@ -1,14 +1,33 @@
-.profile-wrapper {
-  h2 {
-    margin-top: -2.5rem;
-    @include mq($from: tablet) {
-      font-size: 3rem;
-      margin-top: -3.2rem;
+.first-section {
+  @include mq($from: tablet) {
+    max-height: 100vh;
+    display: grid;
+    grid-template-columns: 0.25fr 1fr 1fr 0.25fr;
+    column-gap: 1.5rem;
+    grid-template-rows: 1fr 1fr;
+  }
+  .h2-name {
+    display: flex;
+    align-items: baseline;
+    grid-area: 1/3/2/4;
+    height: 100%;
+  }
+
+  .profile-wrapper {
+    @include theme('background-color', $content-box-color);
+
+    border-radius: 5px;
+    font-size: 1.1rem;
+    grid-area: 1/2/2/3;
+    padding: 1.5rem 2rem;
+    p {
+      line-height: 1.8rem;
     }
   }
-  border-radius: 5px;
-  font-size: 1.1rem;
-  background: rgba($purple-67, 0.5);
-  grid-area: 1/2/2/3;
-  padding: 1.5rem 2rem;
+  img {
+    border: 0;
+    box-shadow: none;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 80%);
+    grid-area: 1/3/2/4;
+  }
 }

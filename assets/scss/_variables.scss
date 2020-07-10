@@ -8,6 +8,7 @@ $purple-90: hsla(251, 78%, 90%, 1);
 $purple-80: hsla(251, 78%, 80%, 1);
 $purple-67: hsla(251, 78%, 67%, 1);
 $purple-50: hsla(251, 78%, 50%, 1);
+$gunmetal-20: hsla(212, 14%, 20%, 1);
 $gunmetal: hsla(212, 14%, 12%, 1);
 $grey-mid: hsla(270, 4%, 44%, 1);
 $jet: hsla(270, 4%, 22%, 1);
@@ -30,6 +31,7 @@ $dark-theme: 'dark-theme';
 $inline-code-color: 'inline-code-color';
 $code-block-background-color: 'code-block-background-color';
 $blockquote-background-color: 'blockquote-background-color';
+$content-box-color: 'content-box-color';
 
 $themes: (
   $light-theme: (
@@ -49,9 +51,10 @@ $themes: (
     $inline-code-color: $blush,
     $code-block-background-color: $purple-67,
     $blockquote-background-color: rgba(245, 245, 245, 0.5),
+    $content-box-color: $cherry-blossom,
   ),
   $dark-theme: (
-    $background-color: $gunmetal,
+    $background-color: $gunmetal-20,
     $link-color: $blush,
     $body-color: white,
     $header-color: $purple-90,
@@ -67,10 +70,11 @@ $themes: (
     $inline-code-color: $blush,
     $code-block-background-color: $purple-67,
     $blockquote-background-color: rgba(245, 245, 245, 0.5),
+    $content-box-color: $gunmetal,
   ),
 );
 
-$family-sans-serif: Nunito Sans, sans-serif;
+$family-sans-serif: Muli, sans-serif;
 $title-weight: 300;
 $weight-bold: 600;
 

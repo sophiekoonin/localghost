@@ -1,9 +1,8 @@
 .main-container {
   margin-top: 2rem;
   @include mq($from: tablet) {
-    margin-top: 5rem;
+    margin-top: 8rem;
   }
-  grid-area: content;
   padding: 2rem;
 }
 
@@ -25,14 +24,4 @@
 
 .bottom-pad {
   padding-bottom: 1rem;
-}
-
-.first-section {
-  @include mq($from: tablet) {
-    max-height: 100vh;
-    display: grid;
-    grid-template-columns: 0.25fr 1fr 1fr 0.25fr;
-    column-gap: 1.5rem;
-    grid-template-rows: 1fr 1fr;
-  }
 }
