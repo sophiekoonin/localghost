@@ -3,11 +3,13 @@ $caribbean-green: hsla(164, 97%, 84%, 1);
 $caribbean-green-light: hsla(164, 97%, 90%, 1);
 $light-cyan: hsla(158, 76%, 90%, 1);
 $blush: hsla(342, 76%, 65%, 1);
+$magenta: hsla(303, 88, 50, 1);
 $cherry-blossom: hsla(350, 100%, 86%, 1);
 $purple-90: hsla(251, 78%, 90%, 1);
 $purple-80: hsla(251, 78%, 80%, 1);
 $purple-67: hsla(251, 78%, 67%, 1);
 $purple-50: hsla(251, 78%, 50%, 1);
+$midnight: hsla(239, 50, 20, 1);
 $gunmetal-20: hsla(212, 14%, 20%, 1);
 $gunmetal: hsla(212, 14%, 12%, 1);
 $grey-mid: hsla(270, 4%, 44%, 1);
@@ -54,7 +56,7 @@ $themes: (
     $content-box-color: $cherry-blossom,
   ),
   $dark-theme: (
-    $background-color: $gunmetal-20,
+    $background-color: $gunmetal,
     $link-color: $blush,
     $body-color: white,
     $header-color: $purple-90,

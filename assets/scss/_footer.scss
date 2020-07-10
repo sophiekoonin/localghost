@@ -6,6 +6,8 @@
   align-items: center;
   width: 100%;
   padding-bottom: 2rem;
+  height: 50vh;
+  background: radial-gradient(circle at bottom, $magenta, $midnight 85%);
 
   @media screen and (min-width: $tablet) {
     flex-direction: row;

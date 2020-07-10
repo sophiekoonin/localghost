@@ -1,0 +1,115 @@
+<svg viewBox="0 0 200 410" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+  <defs>
+    <path id="window" d="M37 123h26v16H37z" />
+  </defs>
+  <!-- off: 344a5e -->
+  <!-- on: bfe4fc -->
+  <path fill="#232557" d="M80 80h163v410H80z" transform="translate(-80 -80)" id="face" />
+  <path d="M194 90l37 40v370h-38l1-410z" fill="#0a0c33" transform="translate(-31 -90)" id="shadow" />
+  <g id="windows-14">
+    <use xlink:href="#window" transform="matrix(.91406 0 0 1 -26.703 -100)" fill="#bfe4fc" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 4.031 -100)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 34.797 -100)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 65.531 -100)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 96.297 -100)" />
+  </g>
+  <g id="windows-13">
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 -26.703 -74)" />
+    <use xlink:href="#window" fill="#344a5e" transform="matrix(.91406 0 0 1 4.031 -74)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 34.797 -74)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 65.531 -74)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 96.297 -74)" />
+  </g>
+  <g id="windows-12">
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 -26.703 -48)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 4.031 -48)" />
+    <use xlink:href="#window" fill="#344a5e" transform="matrix(.91406 0 0 1 34.797 -48)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 65.531 -48)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 96.297 -48)" />
+  </g>
+  <g id="windows-11">
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 -26.703 -22)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 4.031 -22)" />
+    <use xlink:href="#window" fill="#344a5e" transform="matrix(.91406 0 0 1 34.797 -22)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 65.531 -22)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 96.297 -22)" />
+  </g>
+  <g id="windows-10">
+    <use xlink:href="#window" fill="#344a5e" transform="matrix(.91406 0 0 1 -26.703 4)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 4.031 4)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 34.797 4)" />
+    <use xlink:href="#window" fill="#344a5e" transform="matrix(.91406 0 0 1 65.531 4)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 96.297 4)" />
+  </g>
+  <g id="windows-9">
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 -26.703 30)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 4.031 30)" />
+    <use xlink:href="#window" fill="#344a5e" transform="matrix(.91406 0 0 1 34.797 30)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 65.531 30)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 96.297 30)" />
+  </g>
+  <g id="windows-8">
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 -26.703 56)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 4.031 56)" />
+    <use xlink:href="#window" fill="#344a5e" transform="matrix(.91406 0 0 1 34.797 56)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 65.531 56)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 96.297 56)" />
+  </g>
+  <g id="windows-7">
+    <use xlink:href="#window" fill="#344a5e" transform="matrix(.91406 0 0 1 -26.703 82)" />
+    <use xlink:href="#window" fill="#344a5e" transform="matrix(.91406 0 0 1 4.031 82)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 34.797 82)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 65.531 82)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 96.297 82)" />
+  </g>
+  <g id="window-6">
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 -26.703 108)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 4.031 108)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 34.797 108)" />
+    <use xlink:href="#window" fill="#344a5e" transform="matrix(.91406 0 0 1 65.531 108)" />
+    <use xlink:href="#window" fill="#344a5e" transform="matrix(.91406 0 0 1 96.297 108)" />
+  </g>
+  <g id="windows-5">
+    <use xlink:href="#window" fill="#344a5e" transform="matrix(.91406 0 0 1 -26.703 134)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 4.031 134)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 34.797 134)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 65.531 134)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 96.297 134)" />
+  </g>
+  <g id="windows-4">
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 -26.703 160)" />
+    <use xlink:href="#window" fill="#344a5e" transform="matrix(.91406 0 0 1 4.031 160)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 34.797 160)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 65.531 160)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 96.297 160)" />
+  </g>
+  <g id="windows-3">
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 -26.703 186)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 4.031 186)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 34.797 186)" />
+    <use xlink:href="#window" fill="#344a5e" transform="matrix(.91406 0 0 1 65.531 186)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 96.297 186)" />
+  </g>
+  <g id="windows-2">
+    <use xlink:href="#window" fill="#344a5e" transform="matrix(.91406 0 0 1 -26.82 212)" />
+    <use xlink:href="#window" fill="#344a5e" transform="matrix(.91406 0 0 1 3.914 212)" />
+    <use xlink:href="#window" fill="#344a5e" transform="matrix(.91406 0 0 1 34.68 212)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 65.414 212)" />
+    <use xlink:href="#window" fill="#344a5e" transform="matrix(.91406 0 0 1 96.18 212)" />
+  </g>
+  <g id="windows-1">
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 -26.82 238)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 3.914 238)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 34.68 238)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 65.414 238)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 96.18 238)" />
+  </g>
+  <g id="windows-0">
+    <use xlink:href="#window" fill="#344a5e" transform="matrix(.91406 0 0 1 -26.82 264)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 3.914 264)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 34.68 264)" />
+    <use xlink:href="#window" fill="#344a5e" transform="matrix(.91406 0 0 1 65.414 264)" />
+    <use xlink:href="#window" fill="#bfe4fc" transform="matrix(.91406 0 0 1 96.18 264)" />
+  </g>
+</svg>
