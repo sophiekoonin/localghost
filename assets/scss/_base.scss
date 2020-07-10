@@ -10,36 +10,6 @@ body {
   font-display: swap;
   margin: 0;
   min-height: 100vh;
-
-  // &:after {
-  //   content: '';
-  //   position: fixed;
-  //   user-select: none;
-  //   pointer-events: none;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   top: 0;
-  //   z-index: 999;
-  //   border: $blush solid 0.8rem;
-  //   border-image: linear-gradient(
-  //       to bottom,
-  //       $blush 0%,
-  //       $purple-light 50%,
-  //       $caribbean-green 100%
-  //     )
-  //     1;
-  //   @media (prefers-color-scheme: dark) {
-  //     border: $blush solid 0.8rem;
-  //     border-image: linear-gradient(
-  //         to bottom,
-  //         $blush 0%,
-  //         $purple-bright 50%,
-  //         $caribbean-green 100%
-  //       )
-  //       1;
-  //   }
-  // }
 }
 
 a {
@@ -55,7 +25,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Literata', serif;
+  font-family: 'VT323', monospace;
 }
 
 h1 {
@@ -66,6 +36,7 @@ h2 {
   @media screen and (max-width: $desktop) {
     margin-top: 0;
   }
+  font-size: 3rem;
   @include theme('color', $h2-color);
   font-weight: 800;
   line-height: 1.2em;
