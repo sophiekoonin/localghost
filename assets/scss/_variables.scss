@@ -4,7 +4,13 @@
   --aqua-90: hsla(164, 97%, 90%, 1);
   --light-cyan: hsla(158, 76%, 90%, 1);
   --blush: hsla(342, 76%, 65%, 1);
-  --magenta: hsla(303, 88, 50, 1);
+  --magenta-90: hsla(303, 88%, 90%, 1);
+  --magenta-80: hsla(303, 88%, 80%, 1);
+  --magenta-70: hsla(303, 88%, 70%, 1);
+  --magenta: hsla(303, 88%, 50%, 1);
+  --lime-90: hsla(125, 88%, 90%, 1);
+  --lime-70: hsla(125, 88%, 70%, 1);
+  --lime-50: hsla(125, 88%, 50%, 1);
   --cherry-blossom-70: hsla(350, 100%, 70%, 1);
   --cherry-blossom-86: hsla(350, 100%, 86%, 1);
   --cherry-blossom-96: hsla(350, 100%, 96%, 1);
@@ -12,9 +18,11 @@
   --purple-80: hsla(251, 78%, 80%, 1);
   --purple-67: hsla(251, 78%, 67%, 1);
   --purple-50: hsla(251, 78%, 50%, 1);
-  --midnight: hsla(239, 50%, 20%, 1);
+  --midnight-20: hsla(239, 50%, 20%, 1);
+  --midnight-10: hsla(239, 50%, 10%, 1);
   --gunmetal-20: hsla(212, 14%, 20%, 1);
   --gunmetal: hsla(212, 14%, 12%, 1);
+  --gunmetal-5: hsla(212, 14%, 5%, 1);
   --grey-mid: hsla(270, 4%, 44%, 1);
 }
 
@@ -59,10 +67,10 @@ $themes: (
     $content-box-color: var(--cherry-blossom-86),
   ),
   $dark-theme: (
-    $background-color: var(--gunmetal),
+    $background-color: var(--midnight-10),
     $link-color: var(--blush),
     $body-color: white,
-    $header-color: var(--purple-90),
+    $header-color: var(--magenta-90),
     $h1-color: var(--blush),
     $h2-color: var(--aqua-84),
     $h3-color: var(--blush),

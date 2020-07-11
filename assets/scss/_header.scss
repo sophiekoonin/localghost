@@ -12,7 +12,7 @@
     var(--aqua-90)
   );
   @include darkmode {
-    background: linear-gradient(var(--gunmetal), var(--midnight));
+    background: linear-gradient(var(--gunmetal-5), var(--midnight-10));
   }
   padding-top: 2rem;
   height: 50vh;
@@ -108,5 +108,13 @@
   &:hover {
     color: var(--cherry-blossom-96);
     @include neon-glow(var(--cherry-blossom-86), var(--cherry-blossom-70));
+  }
+
+  @include darkmode {
+    @include neon-glow(var(--magenta-70), var(--magenta));
+    &:hover {
+      color: var(--lime-90);
+      @include neon-glow(var(--lime-70), var(--lime-50));
+    }
   }
 }
