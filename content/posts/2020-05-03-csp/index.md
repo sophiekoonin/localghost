@@ -15,7 +15,7 @@ The error messages I was getting were protecting me against a common web securit
 
 <!-- omit in toc -->
 
-### Contents
+## Contents
 
 - [Contents](#contents)
 - [Cross-site scripting (XSS)](#cross-site-scripting-xss)
@@ -37,7 +37,7 @@ The error messages I was getting were protecting me against a common web securit
 - [The moral of the story](#the-moral-of-the-story)
 - [References & further reading](#references--further-reading)
 
-### Cross-site scripting (XSS)
+## Cross-site scripting (XSS)
 
 XSS involves someone injecting malicious code into an unsuspecting website, which then executes on the victim's computer.
 
@@ -51,7 +51,7 @@ On websites that store sensitive information, such as banking or shopping websit
 
 The Open Web Application Security Project (OWASP) recognises three different methods of XSS: **stored**, **reflected** and **DOM-based**.
 
-#### Stored XSS
+### Stored XSS
 
 Stored XSS refers to malicious code sent in the server response from something like a database.
 
@@ -65,7 +65,7 @@ If the website isn't sanitizing any user input (stripping it of any HTML tags) a
 
 There's a really interesting [episode of the podcast Darknet Diaries](https://darknetdiaries.com/episode/61/) featuring Samy, the (accidental) creator of a MySpace worm that used XSS to get people's profiles to automatically add him as a friend. This is a great example of stored XSS, because it all started with something he posted on his own profile (which was then stored in MySpace's database).
 
-#### Reflected XSS
+### Reflected XSS
 
 This is where malicious user input in a request is sent back in the immediate server response, executing on the receiving client's browser.
 
@@ -82,7 +82,7 @@ When the server receives the request, it takes the entire query string and uses 
 
 Then, your poor unsuspecting browser will execute what's between those script tags, and the attacker will be able to gain access to your access token and anything else they've managed to scrape.
 
-#### DOM-based XSS
+### DOM-based XSS
 
 Finally, DOM-based XSS is when JavaScript running on the page uses data from somewhere the attacker can control, such as `window.location` (the URL of the page). Say we have some JS on our page which takes `window.location` and then executes some function with it:
 
@@ -99,7 +99,7 @@ If our attacker from before sends another link with the `<script>` tags in the q
 
 Unlike the previous two examples, this all happens client-side - the server isn't involved at all.
 
-#### Preventing XSS
+### Preventing XSS
 
 Some of the methods we can use to prevent XSS attacks on our websites include:
 
@@ -110,7 +110,7 @@ Some of the methods we can use to prevent XSS attacks on our websites include:
 - use [HttpOnly cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Secure_and_HttpOnly_cookies) for sensitive data so that the JavaScript `Document.cookie` API can't access them
 - and... set up a `Content-Security-Policy` header!
 
-### Content-Security-Policy is a set of rules about permitted content on a website
+## Content-Security-Policy is a set of rules about permitted content on a website
 
 `Content-Security-Policy` is an additional layer of security on a site, preventing things like malicious scripts from being run by defining strict rules about what content you can and can't have on a website. It can be one of the HTTP headers that we can send from the web server to the client (browser), or a meta tag in the `<head>` of an HTML page. A browser will read the CSP and check whether the scripts, stylesheets and various other resources it's executing or displaying conform to the rules in the policy. If not, it won't load them.
 
@@ -147,7 +147,7 @@ While the HTTP header and meta tags are mostly the same, the main differences ar
 
 As long as you're employing multiple methods of defence against XSS, including CSP, you can protect yourself (yes, _even_ in IE). It's important to emphasise here that CSP is _one way_ of protecting your website against XSS - it's not enough on its own.
 
-#### Fetch directives
+### Fetch directives
 
 These directives govern which resource types may be loaded, and where from. Things like images, scripts, styles and frames will be defined here.
 
@@ -167,7 +167,7 @@ Any of these directives may also have a wildcard value (`*`), which basically me
 
 `default-src`: the fallback if any of the rules don't match the resource
 
-#### Document directives
+### Document directives
 
 Document directives restrict the use of plugins (such as with `<embed>`) and let us enable sandbox mode.
 
@@ -175,13 +175,13 @@ Document directives restrict the use of plugins (such as with `<embed>`) and let
 
 `sandbox`: literally the only directive that IE supports! This allows you to restrict the browser environment on the page, effectively blocking _everything_ - popups, scripts, forms, you name it. It has different sources from the rest of the directives - you can specify exactly what should be enabled in sandbox mode. Take a look at the [MDN documentation on sandbox](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox) for more information.
 
-#### Navigation directives
+### Navigation directives
 
 `form-action`: if you're using traditional HTML forms with `action` attributes, this directive specifies the URIs you're allowed to submit to.
 
 `frame-ancestors`: specifies which pages or URIs are allowed to embed iframes and other frame/embeddable content.
 
-#### Sources
+### Sources
 
 Most directives have the same possible list of sources. With the exception of **host source** and **scheme source**, they are all specified in single quotes.
 
@@ -197,7 +197,7 @@ Most directives have the same possible list of sources. With the exception of **
 - hashes - e.g. `sha256-<your hash value>`. This is a base64-encoded representation of your inline styles or scripts, so the browser can check the hash against its own hash of the `<style>`/`<script>` to make sure it's the real deal. Anything that doesn't match the hash will be ignored. Hashes are static, while nonces are generated server-side on every page load.
 - `none` - no URLs match, no nothing may be loaded at all. For example, I don't use iframes on this site at all, so I'd have `frame-src: none`.
 
-#### `unsafe-inline` and the risks of inline styles
+### `unsafe-inline` and the risks of inline styles
 
 But why would we have to explicitly enable `unsafe-inline` for `style-src`, and why are inline `<style>` tags considered "unsafe"?
 
@@ -213,13 +213,13 @@ Ultimately, allowing `unsafe-inline` is a calculated risk: if you really can't g
 
 There's a helpful [StackOverflow answer](https://stackoverflow.com/a/31759553) which explains this in more detail.
 
-#### Scripts, `unsafe-inline` and `unsafe-eval`: why `eval()` is evil
+### Scripts, `unsafe-inline` and `unsafe-eval`: why `eval()` is evil
 
 While enabling `unsafe-inline` for styles is not the end of the world, it's a bad idea to allow it for scripts. A lot of harm can be done with an inline script that's been injected into your code - with a `connect-src` directive defined as well it would mean that that script couldn't connect to any other sources, but it could still cause havoc, such as pretending to be you and updating user-generated content.
 
 `eval()`, on the other hand, should be avoided at all costs. It takes a string as a parameter, and blindly executes it as Javascript. There's literally a section in the MDN article about `eval()` called ["Never use eval()!"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#Never_use_eval!). This opens up a whole host of security vulnerabilities - if `unsafe-eval` is enabled, anyone can execute arbitrary code in your application. Yikes.
 
-### How to create a CSP header
+## How to create a CSP header
 
 In a static site, you can add a meta tag to your site's `<head>`:
 
@@ -232,7 +232,7 @@ If you're running an app with an Express server, you can easily set it as one of
 
 The safest method is to have the most restrictive CSP possible, and only add new sources if you're completely sure. Include a `default-src: 'none'` so that if no rule matches a resource, it will be blocked.
 
-### Adding to a CSP header
+## Adding to a CSP header
 
 When is it safe to add new sources to a CSP header? Perhaps you've included an image or stylesheet in your code, and your browser is refusing to render it because it violates the CSP. Before adding the URL as a source, consider:
 
@@ -241,11 +241,11 @@ When is it safe to add new sources to a CSP header? Perhaps you've included an i
 - could you host the file on an already approved source?
 - could you add the CSS file to your repo instead?
 
-#### styled-components and `unsafe-inline`
+### styled-components and `unsafe-inline`
 
 If you're using `styled-components`, which renders `<style>` tags into the page, rather than enabling `unsafe-inline` for styles you can define a nonce by setting it as a Webpack global (`__webpack_nonce__`). The caveats: this is apparently undocumented, and only works with server-side rendered code. So you might have to enable `unsafe-inline` for that one.
 
-#### Environment-based CSP
+### Environment-based CSP
 
 If you run different environments for development and production, you may want to consider serving different CSP headers for different environments. For example, your `image-src` directive might point to a non-prod CDN if `process.env.NODE_ENV !== 'production`, but the production CDN otherwise. Similarly, if you use a local server at `localhost:6060` as an API for development but your production app points to a hosted API somewhere else, you might want to add `localhost:6060` to your CSP _only for the development environment_.
 
@@ -259,7 +259,7 @@ For example, if you use Hugo and want to enable live reloading with your CSP, as
     content="default-src 'none'; [...] script-src 'self' {{ if eq .Site.IsServer true }}'unsafe-inline'{{ end}} {{ .Site.BaseURL }};">
 {{< /highlight >}}
 
-### The moral of the story
+## The moral of the story
 
 So, how did I get around the `unsafe-eval` warnings I was seeing in the console?
 
@@ -273,7 +273,7 @@ If you're working on a site or app that has a CSP header set, don't be tempted t
 
 And promise me you will never, ever enable `unsafe-eval`.
 
-### References & further reading
+## References & further reading
 
 [Cloudflare - What is Cross-Site Scripting?](https://www.cloudflare.com/learning/security/threats/cross-site-scripting/)
 
