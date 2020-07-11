@@ -30,14 +30,15 @@
 
 @mixin dark-colors {
   --background-color: var(--midnight-10);
-  --link-color: var(--blush);
+  --link-color: var(--purple-80);
   --body-color: white;
   --header-color: var(--magenta-90);
   --h1-color: var(--blush);
   --h2-color: var(--aqua-84);
   --h3-color: var(--blush);
   --h4-color: var(--blush);
-  --link-hover-color: var(--blush);
+  --nav-link-color: var(--aqua-84);
+  --link-hover-color: var(--cherry-blossom-86);
   --post-subtitle-color: var(--blush);
   --accent-color: var(--aqua-84);
   --accent-hover-color: var(--aqua-90);
@@ -65,6 +66,7 @@
   --h2-color: var(--purple-67);
   --h3-color: var(--blush);
   --h4-color: var(--blush);
+  --nav-link-color: var(--purple-67);
   --link-hover-color: var(--blush);
   --post-subtitle-color: var(--blush);
   --accent-color: var(--aqua-84);

@@ -28,19 +28,14 @@
       }
       a {
         font-weight: 800;
-        font-size: 1.5rem;
+        font-size: 2rem;
+        color: var(--nav-link-color);
         text-decoration: none;
         &:hover {
-          color: var(--aqua-84);
+          color: var(--link-hover-color);
         }
         &:focus {
           text-decoration: underline;
-        }
-        @media (prefers-color-scheme: dark) {
-          color: var(--aqua-84);
-          &:hover {
-            color: var(--cherry-blossom-86);
-          }
         }
       }
     }
