@@ -1,17 +1,14 @@
-@mixin icon-bullet($icon-url) {
+@mixin icon-bullet($icon) {
   content: '';
   display: inline-block;
   height: 0.7em;
   width: 0.7em;
-  background-image: url($icon-url);
+  background-image: url('/icons/#{$icon}.svg');
   background-size: contain;
   background-repeat: no-repeat;
   margin-right: 0.5em;
 }
 
 @mixin heart-bullet() {
-  @include icon-bullet('/icons/heart-bullet.svg');
-  @media (prefers-color-scheme: dark) {
-    @include icon-bullet('/icons/heart-bullet-dark.svg');
-  }
+  @include icon-bullet('heart-bullet');
 }

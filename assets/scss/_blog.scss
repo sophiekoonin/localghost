@@ -149,7 +149,7 @@
   li {
     padding-right: 0.5rem;
     &:not(:first-of-type):before {
-      @include icon-bullet('/icons/star.svg');
+      @include icon-bullet('star');
       vertical-align: unset;
     }
 

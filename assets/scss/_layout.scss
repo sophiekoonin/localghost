@@ -1,8 +1,4 @@
 .main-container {
-  margin-top: 2rem;
-  @include mq($from: tablet) {
-    margin-top: 8rem;
-  }
   padding: 2rem;
 }
 

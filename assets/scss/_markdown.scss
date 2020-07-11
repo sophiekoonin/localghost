@@ -69,7 +69,7 @@
   }
 
   li > ul > li:before {
-    @include icon-bullet('/icons/star.svg');
+    @include icon-bullet('star');
   }
 
   em {

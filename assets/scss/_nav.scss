@@ -1,34 +1,45 @@
 .navbar {
   padding: 0;
-  grid-area: 3 / 30/ 6 / 40;
-  justify-self: end;
+  grid-area: 3 / 1/ 4 / 40;
+  @include mq($from: desktop) {
+    justify-self: end;
+  }
   .navbar-menu {
+    margin: 0;
     list-style-type: none;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     padding-top: 1rem;
     font-family: 'VT323', monospace;
     text-transform: lowercase;
 
-    @include mq($from: tablet) {
+    @include mq($from: desktop) {
       padding-top: 1rem;
+      width: auto;
       justify-content: flex-end;
       padding-right: 2rem;
     }
 
     li.navbar-item {
-      @include mq($from: tablet) {
+      @include mq($until: desktop) {
+        padding-right: 1.5rem;
+
+        &:last-of-type {
+          padding-right: 0;
+        }
+        &:not(:first-of-type):before {
+          @include heart-bullet;
+        }
+      }
+      @include mq($from: desktop) {
+        font-size: 2rem;
         transform: rotate(-45deg);
       }
-      font-size: 3rem;
+      font-size: 1.5rem;
 
-      &:last-of-type {
-        padding-right: 0;
-      }
       a {
         font-weight: 800;
-        font-size: 2rem;
         color: var(--nav-link-color);
         text-decoration: none;
         &:hover {
