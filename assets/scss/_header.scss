@@ -1,9 +1,8 @@
 @mixin neon-glow($color1, $color2) {
-  text-shadow: 0vw 0vw 0vw $color1, 0vw 0vw 0vw $color1, 0vw 0vw 0vw $color1,
-    0.1vw 0vw 0.1vw $color1, 0.1vw 0vw 0.1vw $color1, 0.1vw 0vw 0.1vw $color1,
-    0.1vw 0vw 2vw $color1, 0.1vw 0vw 2vw $color1, 0.1vw 0vw 2vw $color1,
-    0.1vw 0vw 1vw $color2, 0.1vw 0vw 1vw $color2, 0.1vw 0vw 5vw $color2,
-    0.1vw 0vw 5vw $color2;
+  text-shadow: 0 0 0 $color1, 0 0 0 $color1, 0 0 0 $color1, 1px 0 1px $color1,
+    1px 0 1px $color1, 1px 0 1px $color1, 1px 0 20px $color1, 1px 0 20px $color1,
+    1px 0 20px $color1, 1px 0 10px $color2, 1px 0 10px $color2,
+    1px 0 50px $color2, 1px 0 50px $color2;
 }
 .header {
   background: var(--header-gradient);

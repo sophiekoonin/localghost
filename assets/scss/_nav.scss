@@ -33,6 +33,9 @@
         &:hover {
           color: var(--aqua-84);
         }
+        &:focus {
+          text-decoration: underline;
+        }
         @media (prefers-color-scheme: dark) {
           color: var(--aqua-84);
           &:hover {
@@ -92,6 +95,9 @@ li.social-icon {
       }
       &:not(:first-of-type):before {
         @include heart-bullet();
+      }
+      &:focus {
+        text-decoration: underline;
       }
     }
   }
