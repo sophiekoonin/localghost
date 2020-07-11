@@ -70,7 +70,7 @@
   max-width: 75px;
   max-height: 75px;
   margin-right: 1rem;
-  border: 2px solid $purple-80;
+  border: 2px solid var(--purple-80);
   @media screen and (min-width: $tablet) {
     margin-right: 1.5rem;
   }

@@ -1,19 +1,22 @@
-$champagne-pink: hsla(22, 17%, 93%, 1);
-$caribbean-green: hsla(164, 97%, 84%, 1);
-$caribbean-green-light: hsla(164, 97%, 90%, 1);
-$light-cyan: hsla(158, 76%, 90%, 1);
-$blush: hsla(342, 76%, 65%, 1);
-$magenta: hsla(303, 88, 50, 1);
-$cherry-blossom: hsla(350, 100%, 86%, 1);
-$purple-90: hsla(251, 78%, 90%, 1);
-$purple-80: hsla(251, 78%, 80%, 1);
-$purple-67: hsla(251, 78%, 67%, 1);
-$purple-50: hsla(251, 78%, 50%, 1);
-$midnight: hsla(239, 50, 20, 1);
-$gunmetal-20: hsla(212, 14%, 20%, 1);
-$gunmetal: hsla(212, 14%, 12%, 1);
-$grey-mid: hsla(270, 4%, 44%, 1);
-$jet: hsla(270, 4%, 22%, 1);
+:root {
+  --champagne-pink: hsla(22, 17%, 93%, 1);
+  --aqua-84: hsla(164, 97%, 84%, 1);
+  --aqua-90: hsla(164, 97%, 90%, 1);
+  --light-cyan: hsla(158, 76%, 90%, 1);
+  --blush: hsla(342, 76%, 65%, 1);
+  --magenta: hsla(303, 88, 50, 1);
+  --cherry-blossom-70: hsla(350, 100%, 70%, 1);
+  --cherry-blossom-86: hsla(350, 100%, 86%, 1);
+  --cherry-blossom-96: hsla(350, 100%, 96%, 1);
+  --purple-90: hsla(251, 78%, 90%, 1);
+  --purple-80: hsla(251, 78%, 80%, 1);
+  --purple-67: hsla(251, 78%, 67%, 1);
+  --purple-50: hsla(251, 78%, 50%, 1);
+  --midnight: hsla(239, 50%, 20%, 1);
+  --gunmetal-20: hsla(212, 14%, 20%, 1);
+  --gunmetal: hsla(212, 14%, 12%, 1);
+  --grey-mid: hsla(270, 4%, 44%, 1);
+}
 
 $background-color: 'background-color';
 $link-color: 'link-color';
@@ -37,42 +40,42 @@ $content-box-color: 'content-box-color';
 
 $themes: (
   $light-theme: (
-    $background-color: $champagne-pink,
-    $link-color: $blush,
-    $body-color: $jet,
-    $header-color: $purple-90,
-    $h1-color: $purple-67,
-    $h2-color: $purple-67,
-    $h3-color: $blush,
-    $h4-color: $blush,
-    $link-hover-color: $blush,
-    $post-subtitle-color: $blush,
-    $accent-color: $caribbean-green,
-    $accent-hover-color: $caribbean-green-light,
-    $date-color: $grey-mid,
-    $inline-code-color: $blush,
-    $code-block-background-color: $purple-67,
+    $background-color: var(--aqua-90),
+    $link-color: var(--blush),
+    $body-color: var(--gunmetal),
+    $header-color: var(--purple-90),
+    $h1-color: var(--purple-67),
+    $h2-color: var(--purple-67),
+    $h3-color: var(--blush),
+    $h4-color: var(--blush),
+    $link-hover-color: var(--blush),
+    $post-subtitle-color: var(--blush),
+    $accent-color: var(--aqua-84),
+    $accent-hover-color: var(--aqua-90),
+    $date-color: var(--grey-mid),
+    $inline-code-color: var(--blush),
+    $code-block-background-color: var(--purple-67),
     $blockquote-background-color: rgba(245, 245, 245, 0.5),
-    $content-box-color: $cherry-blossom,
+    $content-box-color: var(--cherry-blossom-86),
   ),
   $dark-theme: (
-    $background-color: $gunmetal,
-    $link-color: $blush,
+    $background-color: var(--gunmetal),
+    $link-color: var(--blush),
     $body-color: white,
-    $header-color: $purple-90,
-    $h1-color: $blush,
-    $h2-color: $caribbean-green,
-    $h3-color: $blush,
-    $h4-color: $blush,
-    $link-hover-color: $blush,
-    $post-subtitle-color: $blush,
-    $accent-color: $caribbean-green,
-    $accent-hover-color: $caribbean-green-light,
-    $date-color: $grey-mid,
-    $inline-code-color: $blush,
-    $code-block-background-color: $purple-67,
+    $header-color: var(--purple-90),
+    $h1-color: var(--blush),
+    $h2-color: var(--aqua-84),
+    $h3-color: var(--blush),
+    $h4-color: var(--blush),
+    $link-hover-color: var(--blush),
+    $post-subtitle-color: var(--blush),
+    $accent-color: var(--aqua-84),
+    $accent-hover-color: var(--aqua-90),
+    $date-color: var(--grey-mid),
+    $inline-code-color: var(--blush),
+    $code-block-background-color: var(--purple-67),
     $blockquote-background-color: rgba(245, 245, 245, 0.5),
-    $content-box-color: $gunmetal,
+    $content-box-color: var(--gunmetal),
   ),
 );
 
@@ -128,5 +131,11 @@ $desktop-lg: 1025px;
       $additionalPropertiesPositionIsFront,
       $additionalProperties
     );
+  }
+}
+
+@mixin darkmode {
+  @media (prefers-color-scheme: dark) {
+    @content;
   }
 }

@@ -31,12 +31,12 @@
         font-size: 1.5rem;
         text-decoration: none;
         &:hover {
-          color: $caribbean-green;
+          color: var(--aqua-84);
         }
         @media (prefers-color-scheme: dark) {
-          color: $caribbean-green;
+          color: var(--aqua-84);
           &:hover {
-            color: $cherry-blossom;
+            color: var(--cherry-blossom-86);
           }
         }
       }
@@ -59,13 +59,13 @@ li.social-icon {
   a {
     line-height: 0;
     &:hover {
-      color: $caribbean-green;
+      color: var(--aqua-84);
     }
 
     @media (prefers-color-scheme: dark) {
-      color: $caribbean-green;
+      color: var(--aqua-84);
       &:hover {
-        color: $blush;
+        color: var(--blush);
       }
     }
   }
@@ -84,7 +84,7 @@ li.social-icon {
     li {
       a {
         &:hover {
-          color: $caribbean-green;
+          color: var(--aqua-84);
         }
       }
       &:not(:last-of-type):first-of-type {

@@ -1,6 +1,6 @@
 <svg viewBox="0 0 3 3" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"
   stroke-linejoin="round" stroke-miterlimit="2">
-  <path fill="#fff" d="M1 0h1v1H1z" />
-  <path fill="#fff" d="M0 1h1v1H0z" />
-  <path fill="#fff" d="M1 2h1v1H1z" />
-  <path fill="#fff" d="M2 1h1v1H2z" /></svg>
+  <path fill="currentColo" d="M1 0h1v1H1z" />
+  <path fill="currentColo" d="M0 1h1v1H0z" />
+  <path fill="currentColo" d="M1 2h1v1H1z" />
+  <path fill="currentColo" d="M2 1h1v1H2z" /></svg>
