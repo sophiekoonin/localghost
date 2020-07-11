@@ -19,8 +19,10 @@
   --purple-50: hsla(251, 78%, 50%, 1);
   --midnight-20: hsla(239, 50%, 20%, 1);
   --midnight-10: hsla(239, 50%, 10%, 1);
+  --midnight-desat-12: hsla(239, 15%, 12%, 0.75);
   --gunmetal-20: hsla(212, 14%, 20%, 1);
   --gunmetal: hsla(212, 14%, 12%, 1);
+  --gunmetal-translucent: hsla(212, 14%, 12%, 0.75);
   --gunmetal-5: hsla(212, 14%, 5%, 1);
   --gunmetal-85: hsla(212, 14%, 85%, 1);
   --gunmetal-75: hsla(212, 14%, 75%, 1);
@@ -33,7 +35,7 @@
   --link-color: var(--purple-80);
   --body-color: white;
   --header-color: var(--magenta-90);
-  --h1-color: var(--blush);
+  --h1-color: var(--cherry-blossom-86);
   --h2-color: var(--aqua-84);
   --h3-color: var(--blush);
   --h4-color: var(--blush);
@@ -43,10 +45,10 @@
   --accent-color: var(--aqua-84);
   --accent-hover-color: var(--aqua-90);
   --date-color: var(--grey-mid);
-  --inline-code-color: var(--blush);
+  --inline-code-color: var(--lime-70);
   --code-block-background-color: var(--purple-67);
   --blockquote-background-color: rgba(245, 245, 245, 0.5);
-  --content-box-color: var(--gunmetal);
+  --content-box-color: var(--midnight-desat-12);
   --header-gradient: linear-gradient(var(--gunmetal-5), var(--midnight-10));
   --footer-background: linear-gradient(var(--midnight-10), var(--midnight-20));
   --header-glow-color-1: var(--magenta-70);
@@ -55,6 +57,7 @@
   --header-glow-hover-color-1: var(--lime-70);
   --header-glow-hover-color-2: var(--lime-50);
   --header-stars-display: inline;
+  --separator: url('/squiggle-blue.svg');
 }
 
 :root {
@@ -69,7 +72,7 @@
   --nav-link-color: var(--purple-67);
   --link-hover-color: var(--blush);
   --post-subtitle-color: var(--blush);
-  --accent-color: var(--aqua-84);
+  --accent-color: var(--magenta-70);
   --accent-hover-color: var(--aqua-90);
   --date-color: var(--grey-mid);
   --inline-code-color: var(--blush);
@@ -79,14 +82,16 @@
     var(--aqua-90)
   );
   --code-block-background-color: var(--purple-67);
-  --blockquote-background-color: rgba(245, 245, 245, 0.5);
-  --content-box-color: white;
+  --blockquote-background-color: rgba(153, 119, 119, 0.5);
+  --footer-background: linear-gradient(var(--aqua-90), var(--lime-90));
+  --content-box-color: rgba(255, 255, 255, 0.75);
   --header-glow-color-1: var(--purple-80);
   --header-glow-color-2: var(--purple-67);
   --header-hover-color: var(--cherry-blossom-96);
   --header-glow-hover-color-1: var(--cherry-blossom-86);
   --header-glow-hover-color-2: var(--cherry-blossom-70);
   --header-stars-display: none;
+  --separator: url('/squiggle-blue.svg');
 }
 
 @media (prefers-color-scheme: dark) {
@@ -102,7 +107,8 @@
   @include dark-colors;
 }
 
-$family-sans-serif: Muli, sans-serif;
+$family-sans-serif: 'Muli', sans-serif;
+$family-serif: 'DM Serif Display', sans-serif;
 $title-weight: 300;
 $weight-bold: 600;
 

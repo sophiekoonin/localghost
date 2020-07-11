@@ -4,6 +4,7 @@
   padding: 0;
   .summary {
     margin-bottom: 2.5rem;
+
     padding-top: 1rem;
     .post-date {
       font-size: 1rem;
@@ -17,6 +18,11 @@
 }
 
 .post {
+  &-body {
+    background: var(--content-box-color);
+    border-radius: 15px;
+    padding: 1.5rem;
+  }
   &-item {
     display: block;
     margin-left: 0;

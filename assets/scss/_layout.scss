@@ -1,8 +1,9 @@
 .full-width {
-  max-width: 860px;
-  margin: 0 auto;
+  max-width: 800px;
   padding-top: 1rem;
+  margin: 1rem;
   @media screen and (min-width: $desktop) {
+    margin: 0 auto;
     width: 80vw;
     padding: 2rem;
     padding-bottom: 0;
@@ -15,4 +16,8 @@
 
 .bottom-pad {
   padding-bottom: 1rem;
+}
+
+.page-title {
+  margin-bottom: 2rem;
 }

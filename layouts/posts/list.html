@@ -1,6 +1,6 @@
 {{ define "main" }}
 <article class="full-width">
-    <h2 class="page-title">All posts</h2>
+    <h1 class="page-title">All posts</h1>
     {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 6 }}
     <ol class="posts-list">
         {{ range $paginator.Pages }}

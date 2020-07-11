@@ -2,9 +2,6 @@
   margin-bottom: 1em;
   line-height: 1.75em;
 
-  @media screen and (min-width: $tablet) {
-    font-size: 1.05rem;
-  }
   .chroma {
     background-color: var(--code-block-background-color);
   }
@@ -204,8 +201,6 @@
     font-family: inherit;
     color: #000;
     font-size: 1em;
-    a {
-    }
 
     @media screen and (max-width: $tablet) {
       max-width: 100%;

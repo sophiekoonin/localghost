@@ -11,9 +11,14 @@
   justify-items: center;
   padding-top: 2rem;
   @include mq($from: desktop) {
+    height: 50vh;
     display: grid;
     grid-template-columns: repeat(40, 1fr);
     grid-template-rows: repeat(10, 1fr);
+  }
+
+  @include mq($from: extrawide) {
+    height: 40vh;
   }
 
   .header-text {

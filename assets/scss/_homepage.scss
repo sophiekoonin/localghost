@@ -1,8 +1,29 @@
 .first-section {
   @include mq($from: tablet) {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    max-height: 100vh;
+    margin-top: 2.5rem;
+    padding: 0 2rem;
+  }
+}
+.content-box {
+  background: var(--content-box-color);
+  border-radius: 15px;
+  padding: 1.5rem;
+  h2,
+  h3 {
+    margin-top: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+  @include mq($from: desktop) {
+    h2 {
+      margin-top: -3.3rem;
+    }
+    h3 {
+      margin-top: -2.5rem;
+    }
+    padding: 1rem;
+    width: 40vw;
   }
 }

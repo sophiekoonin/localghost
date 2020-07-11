@@ -89,11 +89,19 @@
     </svg> -->
 
     <!-- Title -->
+    {{ if .IsHome}}
     <h1 class="header-text">
         <a href="{{ .Site.BaseURL}}" class="neon" data-text="localghost">
             Localghost
         </a>
     </h1>
+    {{else}}
+    <span class="header-text">
+        <a href="{{ .Site.BaseURL}}" class="neon" data-text="localghost">
+            Localghost
+        </a>
+    </span>
+    {{ end}}
     <label for="toggle-checkbox" class="darkmode-toggle">
         <span class="visually-hidden">Toggle dark mode</span>
         <input type="checkbox" id="toggle-checkbox" />
