@@ -5,6 +5,7 @@ const STORAGE_KEY = 'user-color-scheme';
 const COLOR_MODE_KEY = '--color-mode';
 
 const darkModeCheckbox = document.querySelector('#toggle-checkbox');
+const toggleSlider = document.querySelector('.toggle-slider');
 const getCSSCustomProp = (propKey) => {
   let response = getComputedStyle(document.documentElement).getPropertyValue(
     propKey
@@ -29,6 +30,9 @@ const applySetting = (passedSetting) => {
     currentSetting = getCSSCustomProp(COLOR_MODE_KEY);
   }
   darkModeCheckbox.checked = currentSetting === 'dark';
+  if (!toggleSlider.classList.contains('with-transition')) {
+    toggleSlider.classList.add('with-transition');
+  }
 };
 
 const toggleSetting = () => {

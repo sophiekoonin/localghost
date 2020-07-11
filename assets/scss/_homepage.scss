@@ -5,34 +5,4 @@
     grid-template-rows: repeat(5, 1fr);
     max-height: 100vh;
   }
-
-  .profile-wrapper {
-    grid-area: 2/1/3/3;
-    height: 60vh;
-    width: 45vw;
-    img {
-      width: 100%;
-    }
-    @include mq($from: extrawide) {
-      width: 30vw;
-      height: 40vh;
-    }
-    font-size: 1rem;
-    position: relative;
-    &-inner {
-      margin-top: 0.5rem;
-      position: absolute;
-      left: 12%;
-      top: 12%;
-      padding: 0.5rem;
-      width: 85%;
-      height: 60%;
-      overflow: none;
-      line-height: 1.5rem;
-      p,
-      h2 {
-        margin: 0;
-      }
-    }
-  }
 }

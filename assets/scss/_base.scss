@@ -38,10 +38,9 @@ h1 {
 }
 
 h2 {
-  @media screen and (max-width: $desktop) {
-    margin-top: 0;
-  }
+  margin: 0;
   font-size: 3rem;
+  font-size: unquote('min(max(3rem, 4vw), 60px)');
   color: var(--h2-color);
   font-weight: 800;
   line-height: 1.2em;
@@ -53,6 +52,8 @@ h2 {
 
 h3 {
   color: var(--h3-color);
+  font-size: 2rem;
+  font-size: unquote('min(max(2rem, 4vw), 40px)');
   font-weight: 800;
 }
 

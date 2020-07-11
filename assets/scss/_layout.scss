@@ -1,16 +1,11 @@
-.main-container {
-  padding: 2rem;
-}
-
 .full-width {
+  max-width: 860px;
+  margin: 0 auto;
   padding-top: 1rem;
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $desktop) {
+    width: 80vw;
     padding: 2rem;
     padding-bottom: 0;
-
-    .page-title {
-      font-size: 1.8rem;
-    }
   }
 }
 
