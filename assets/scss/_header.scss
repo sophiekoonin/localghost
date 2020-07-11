@@ -6,14 +6,7 @@
     0.1vw 0vw 5vw $color2;
 }
 .header {
-  background: linear-gradient(
-    var(--purple-90),
-    var(--aqua-84) 75%,
-    var(--aqua-90)
-  );
-  @include darkmode {
-    background: linear-gradient(var(--gunmetal-5), var(--midnight-10));
-  }
+  background: var(--header-gradient);
   padding-top: 2rem;
   height: 50vh;
   align-items: center;
@@ -31,7 +24,7 @@
 
   .header-text {
     grid-area: 2 / 11 / 6 / 31;
-    @include theme('color', $header-color);
+    color: var(--header-color);
 
     font-size: 4rem;
     font-family: 'Burtons Script', cursive;
@@ -39,19 +32,64 @@
     text-align: center;
     text-transform: lowercase;
     margin: 0;
-    @media screen and (min-width: $tablet) {
+    @include mq($from: tablet) {
       font-size: 7rem;
+    }
+  }
+
+  .darkmode-toggle {
+    display: block;
+    grid-area: 1/39/2/40;
+    &:focus-within {
+      .toggle-slider {
+        box-shadow: 0 0 2px 4px var(--sky-blue-60);
+      }
+      input:checked + .toggle-slider {
+        box-shadow: 0 0 2px 4px var(--gunmetal-85);
+      }
+    }
+    input {
+      opacity: 0;
+      position: absolute;
+      &:checked + .toggle-slider {
+        border: 2px solid var(--gunmetal-75);
+        background-color: var(--gunmetal-85);
+        &:after {
+          left: calc(1rem - 2px);
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 432 427' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='1.5'%3E%3Cg id='SUN' transform='translate(-424.047 -239.811)'%3E%3Ccircle cx='640.753' cy='452.963' r='113.272' fill='%23e6e6e6' stroke='%23000' stroke-width='8'/%3E%3Cpath id='sun-shadow' d='M746.735 456.266c-21 129-212.959 115.208-212-3 1.865 136.625 200 145 212 3z' fill='%23ccc' stroke='%23ccc' stroke-width='8'/%3E%3Cpath id='sun-mouth' d='M624.71 460.049c.891 25.907 34.414 21.584 32.626.901' fill='none' stroke='%23000' stroke-width='8'/%3E%3Cpath id='sun-eye' d='M576.005 426.898c-6.87.006-20.616 3.651-20.612 20.054.004 17.057 13.742 21.669 20.612 21.664 6.871-.005 20.613-5.817 20.613-21.696 0-15.879-13.742-20.027-20.613-20.022z'/%3E%3Cpath d='M705.501 426.898c-6.87.006-20.616 3.651-20.612 20.054.004 17.057 13.742 21.669 20.612 21.664 6.871-.005 20.613-5.817 20.613-21.696 0-15.879-13.742-20.027-20.613-20.022z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+      }
+    }
+    .toggle-slider {
+      cursor: pointer;
+      display: flex;
+      width: 3rem;
+      position: relative;
+      border-radius: 25px;
+      height: 1.5rem;
+      border: 2px solid var(--sky-blue-60);
+      background-color: var(--sky-blue-75);
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 2.3rem;
+        height: 2.3rem;
+        position: absolute;
+        top: -0.5rem;
+        left: -0.5rem;
+        border-radius: 50%;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 432 427' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='1.5'%3E%3Cg id='SUN' transform='translate(-424.047 -239.811)'%3E%3Ccircle cx='640.753' cy='452.963' r='113.272' fill='%23ffe300' stroke='%23000' stroke-width='8'/%3E%3Cpath id='sun-shadow' d='M746.735 456.266c-21 129-212.959 115.208-212-3 1.865 136.625 200 145 212 3z' fill='%23ffb900' stroke='%23ffb900' stroke-width='8'/%3E%3Cpath id='sun-mouth' d='M624.71 460.049c.891 25.907 34.414 21.584 32.626.901' fill='none' stroke='%23000' stroke-width='8'/%3E%3Cg id='shine' fill='%23ffe300' stroke='%23000' stroke-width='8'%3E%3Cpath d='M495.247 311.376a6.126 6.126 0 00-8.66 0l-2.165 2.165a6.128 6.128 0 000 8.66l45.806 45.805a6.126 6.126 0 008.66 0l2.165-2.165a6.125 6.125 0 000-8.659l-45.806-45.806z'/%3E%3Cpath d='M648.408 249.934a6.127 6.127 0 00-6.124-6.123h-3.061a6.127 6.127 0 00-6.124 6.123v64.779a6.127 6.127 0 006.124 6.124h3.061a6.127 6.127 0 006.124-6.124v-64.779z'/%3E%3Cpath d='M434.171 431.37a6.127 6.127 0 00-6.124 6.123v3.062a6.127 6.127 0 006.124 6.124h64.779a6.127 6.127 0 006.123-6.124v-3.062a6.126 6.126 0 00-6.123-6.123h-64.779z'/%3E%3Cpath d='M780.449 439.024a6.127 6.127 0 00-6.124 6.124v3.061a6.127 6.127 0 006.124 6.124h64.779a6.127 6.127 0 006.123-6.124v-3.061a6.127 6.127 0 00-6.123-6.124h-64.779z'/%3E%3Cpath d='M797.102 316.401a6.126 6.126 0 000-8.66l-2.165-2.165a6.126 6.126 0 00-8.66 0l-45.805 45.806a6.126 6.126 0 000 8.66l2.165 2.165a6.127 6.127 0 008.659 0l45.806-45.806z'/%3E%3Cpath d='M786.277 594.55a6.128 6.128 0 008.66 0l2.165-2.165a6.126 6.126 0 000-8.66l-45.806-45.806a6.127 6.127 0 00-8.659 0l-2.165 2.165a6.126 6.126 0 000 8.66l45.805 45.806z'/%3E%3Cpath d='M630.991 656.597a6.127 6.127 0 006.123 6.124h3.062a6.127 6.127 0 006.124-6.124v-64.778a6.127 6.127 0 00-6.124-6.124h-3.062a6.127 6.127 0 00-6.123 6.124v64.778z'/%3E%3Cpath d='M484.422 583.725a6.128 6.128 0 000 8.66l2.165 2.165a6.128 6.128 0 008.66 0l45.806-45.806a6.126 6.126 0 000-8.66l-2.165-2.165a6.128 6.128 0 00-8.66 0l-45.806 45.806z'/%3E%3C/g%3E%3Cpath id='sun-eye' d='M576.005 426.898c-6.87.006-20.616 3.651-20.612 20.054.004 17.057 13.742 21.669 20.612 21.664 6.871-.005 20.613-5.817 20.613-21.696 0-15.879-13.742-20.027-20.613-20.022z'/%3E%3Cpath d='M705.501 426.898c-6.87.006-20.616 3.651-20.612 20.054.004 17.057 13.742 21.669 20.612 21.664 6.871-.005 20.613-5.817 20.613-21.696 0-15.879-13.742-20.027-20.613-20.022z'/%3E%3C/g%3E%3C/svg%3E");
+        @media (prefers-reduced-motion: no-preference) {
+          transition: all 300ms ease-in;
+        }
+      }
     }
   }
 }
 .star {
-  display: none;
-  @include darkmode {
-    display: inline;
-    color: #ffffff;
-  }
+  display: --header-stars-display;
+  color: #ffffff;
 }
-
 #star-1 {
   grid-area: 3/2/4/3;
 }
@@ -97,24 +135,19 @@
 }
 
 .neon {
-  @include theme('color', $header-color);
+  color: var(--header-color);
   text-decoration: none;
   &:hover,
   &:focus,
   &:active {
     text-decoration: none;
   }
-  @include neon-glow(var(--purple-80), var(--purple-67));
+  @include neon-glow(var(--header-glow-color-1), var(--header-glow-color-2));
   &:hover {
-    color: var(--cherry-blossom-96);
-    @include neon-glow(var(--cherry-blossom-86), var(--cherry-blossom-70));
-  }
-
-  @include darkmode {
-    @include neon-glow(var(--magenta-70), var(--magenta));
-    &:hover {
-      color: var(--lime-90);
-      @include neon-glow(var(--lime-70), var(--lime-50));
-    }
+    color: var(--header-hover-color);
+    @include neon-glow(
+      var(--header-glow-hover-color-1),
+      var(--header-glow-hover-color-2)
+    );
   }
 }

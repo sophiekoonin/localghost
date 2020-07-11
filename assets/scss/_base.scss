@@ -3,21 +3,21 @@
 }
 
 body {
-  @include theme('color', $body-color);
-  @include theme('background', $background-color);
   font-family: $family-sans-serif;
   font-size: 1em;
   font-display: swap;
   margin: 0;
   min-height: 100vh;
+  background: var(--background-color);
+  color: var(--body-color);
 }
 
 a {
-  @include theme('color', $link-color);
+  color: var(--link-color);
   &:active,
   &:hover,
   &:focus {
-    @include theme('color', $link-hover-color);
+    color: var(--link-hover-color);
   }
 }
 
@@ -37,7 +37,7 @@ h2 {
     margin-top: 0;
   }
   font-size: 3rem;
-  @include theme('color', $h2-color);
+  color: var(--h2-color);
   font-weight: 800;
   line-height: 1.2em;
   a {
@@ -47,12 +47,12 @@ h2 {
 }
 
 h3 {
-  @include theme('color', $h3-color);
+  color: var(--h3-color);
   font-weight: 800;
 }
 
 h4 {
-  @include theme('color', $h4-color);
+  color: var(--h4-color);
 }
 ul {
   padding: 0;
@@ -68,12 +68,12 @@ img {
   text-align: center;
   margin: 1rem 0;
   .top-icon {
-    @include theme('color', $accent-color);
+    color: var(--accent-color);
     margin-bottom: 2rem;
     vertical-align: baseline;
 
     &:hover {
-      @include theme('color', $accent-hover-color);
+      color: var(--accent-hover-color);
     }
     svg {
       margin: 0 5px;

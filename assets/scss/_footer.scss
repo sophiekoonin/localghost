@@ -6,9 +6,7 @@
   width: 100%;
   padding-bottom: 2rem;
   height: 50vh;
-  @include darkmode {
-    background: linear-gradient(var(--midnight-10), var(--midnight-20));
-  }
+  background: var(--footer-background);
   @media screen and (min-width: $tablet) {
     flex-direction: row;
     align-items: baseline;

@@ -32,7 +32,7 @@
   }
 
   &-date {
-    @include theme('color', $date-color);
+    color: var(--date-color);
     font-size: 0.9rem;
     text-transform: uppercase;
     display: inline-block;
@@ -50,13 +50,13 @@
 
   &-title {
     a {
-      @include theme('color', $h2-color);
+      color: var(--h2-color);
     }
     margin-bottom: 0;
   }
 
   &-subtitle {
-    @include theme('color', $post-subtitle-color);
+    color: var(--post-subtitle-color);
     font-size: 1.35rem;
   }
 
@@ -135,7 +135,7 @@
   }
 
   .text {
-    @include theme('color', $date-color);
+    color: var(--date-color);
     text-transform: uppercase;
   }
 }

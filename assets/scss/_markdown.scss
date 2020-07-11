@@ -6,7 +6,7 @@
     font-size: 1.05rem;
   }
   .chroma {
-    @include theme('background-color', $code-block-background-color);
+    background-color: var(--code-block-background-color);
   }
 
   p {
@@ -100,7 +100,7 @@
   }
 
   blockquote {
-    @include theme('background', $blockquote-background-color);
+    background: var(--blockquote-background-color);
     p {
       margin: 0;
     }
@@ -151,7 +151,7 @@
   }
 
   code {
-    @include theme('color', $inline-code-color);
+    color: var(--inline-code-color);
 
     font-family: 'Roboto Mono', monospace;
   }

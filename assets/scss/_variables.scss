@@ -2,12 +2,11 @@
   --champagne-pink: hsla(22, 17%, 93%, 1);
   --aqua-84: hsla(164, 97%, 84%, 1);
   --aqua-90: hsla(164, 97%, 90%, 1);
-  --light-cyan: hsla(158, 76%, 90%, 1);
   --blush: hsla(342, 76%, 65%, 1);
   --magenta-90: hsla(303, 88%, 90%, 1);
   --magenta-80: hsla(303, 88%, 80%, 1);
   --magenta-70: hsla(303, 88%, 70%, 1);
-  --magenta: hsla(303, 88%, 50%, 1);
+  --magenta-50: hsla(303, 88%, 50%, 1);
   --lime-90: hsla(125, 88%, 90%, 1);
   --lime-70: hsla(125, 88%, 70%, 1);
   --lime-50: hsla(125, 88%, 50%, 1);
@@ -23,69 +22,80 @@
   --gunmetal-20: hsla(212, 14%, 20%, 1);
   --gunmetal: hsla(212, 14%, 12%, 1);
   --gunmetal-5: hsla(212, 14%, 5%, 1);
-  --grey-mid: hsla(270, 4%, 44%, 1);
+  --gunmetal-85: hsla(212, 14%, 85%, 1);
+  --gunmetal-75: hsla(212, 14%, 75%, 1);
+  --sky-blue-75: hsla(201, 80%, 75%, 1);
+  --sky-blue-60: hsla(201, 80%, 60%, 1);
 }
 
-$background-color: 'background-color';
-$link-color: 'link-color';
-$body-color: 'body-color';
-$header-color: 'header-color';
-$h1-color: 'h1-color';
-$h2-color: 'h2-color';
-$h3-color: 'h3-color';
-$h4-color: 'h4-color';
-$link-hover-color: 'link-hover-color';
-$post-subtitle-color: 'post-subtitle-color';
-$accent-color: 'accent-color';
-$accent-hover-color: 'accent-hover-color';
-$date-color: 'date-color';
-$light-theme: 'light-theme';
-$dark-theme: 'dark-theme';
-$inline-code-color: 'inline-code-color';
-$code-block-background-color: 'code-block-background-color';
-$blockquote-background-color: 'blockquote-background-color';
-$content-box-color: 'content-box-color';
+@mixin dark-colors {
+  --background-color: var(--midnight-10);
+  --link-color: var(--blush);
+  --body-color: white;
+  --header-color: var(--magenta-90);
+  --h1-color: var(--blush);
+  --h2-color: var(--aqua-84);
+  --h3-color: var(--blush);
+  --h4-color: var(--blush);
+  --link-hover-color: var(--blush);
+  --post-subtitle-color: var(--blush);
+  --accent-color: var(--aqua-84);
+  --accent-hover-color: var(--aqua-90);
+  --date-color: var(--grey-mid);
+  --inline-code-color: var(--blush);
+  --code-block-background-color: var(--purple-67);
+  --blockquote-background-color: rgba(245, 245, 245, 0.5);
+  --content-box-color: var(--gunmetal);
+  --header-gradient: linear-gradient(var(--gunmetal-5), var(--midnight-10));
+  --footer-background: linear-gradient(var(--midnight-10), var(--midnight-20));
+  --header-glow-color-1: var(--purple-80);
+  --header-glow-color-2: var(--purple-67);
+  --header-hover-color: var(--cherry-blossom-96);
+  --header-glow-hover-color-1: var(--cherry-blossom-86);
+  --header-glow-hover-color-2: var(--cherry-blossom-70);
+  --header-stars-display: inline;
+}
 
-$themes: (
-  $light-theme: (
-    $background-color: var(--aqua-90),
-    $link-color: var(--blush),
-    $body-color: var(--gunmetal),
-    $header-color: var(--purple-90),
-    $h1-color: var(--purple-67),
-    $h2-color: var(--purple-67),
-    $h3-color: var(--blush),
-    $h4-color: var(--blush),
-    $link-hover-color: var(--blush),
-    $post-subtitle-color: var(--blush),
-    $accent-color: var(--aqua-84),
-    $accent-hover-color: var(--aqua-90),
-    $date-color: var(--grey-mid),
-    $inline-code-color: var(--blush),
-    $code-block-background-color: var(--purple-67),
-    $blockquote-background-color: rgba(245, 245, 245, 0.5),
-    $content-box-color: var(--cherry-blossom-86),
-  ),
-  $dark-theme: (
-    $background-color: var(--midnight-10),
-    $link-color: var(--blush),
-    $body-color: white,
-    $header-color: var(--magenta-90),
-    $h1-color: var(--blush),
-    $h2-color: var(--aqua-84),
-    $h3-color: var(--blush),
-    $h4-color: var(--blush),
-    $link-hover-color: var(--blush),
-    $post-subtitle-color: var(--blush),
-    $accent-color: var(--aqua-84),
-    $accent-hover-color: var(--aqua-90),
-    $date-color: var(--grey-mid),
-    $inline-code-color: var(--blush),
-    $code-block-background-color: var(--purple-67),
-    $blockquote-background-color: rgba(245, 245, 245, 0.5),
-    $content-box-color: var(--gunmetal),
-  ),
-);
+:root {
+  --background-color: var(--aqua-90);
+  --link-color: var(--blush);
+  --body-color: var(--gunmetal);
+  --header-color: var(--purple-90);
+  --h1-color: var(--purple-67);
+  --h2-color: var(--purple-67);
+  --h3-color: var(--blush);
+  --h4-color: var(--blush);
+  --link-hover-color: var(--blush);
+  --post-subtitle-color: var(--blush);
+  --accent-color: var(--aqua-84);
+  --accent-hover-color: var(--aqua-90);
+  --date-color: var(--grey-mid);
+  --inline-code-color: var(--blush);
+  --header-gradient: linear-gradient(
+    var(--purple-90),
+    var(--aqua-84) 75%,
+    var(--aqua-90)
+  );
+  --code-block-background-color: var(--purple-67);
+  --blockquote-background-color: rgba(245, 245, 245, 0.5);
+  --content-box-color: var(--cherry-blossom-86);
+  --header-glow-color-1: var(--magenta-70);
+  --header-glow-color-2: var(--magenta-50);
+  --header-hover-color: var(--lime-90);
+  --header-glow-hover-color-1: var(--lime-70);
+  --header-glow-hover-color-2: var(--lime-50);
+  --header-stars-display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: 'dark';
+  }
+
+  :root:not([data-user-color-scheme]) {
+    @include dark-colors;
+  }
+}
 
 $family-sans-serif: Muli, sans-serif;
 $title-weight: 300;
@@ -95,55 +105,14 @@ $tablet: 768px;
 $desktop: 960px;
 $desktop-lg: 1025px;
 
-/* https://dev.to/chicio/add-dark-mode-support-on-your-website-with-sass-and-prefers-color-scheme-media-query-2p1 */
-@mixin themeProperty(
-  $theme,
-  $property,
-  $color,
-  $additionalPropertiesPositionIsFront,
-  $additionalProperties
-) {
-  @if $additionalPropertiesPositionIsFront {
-    #{$property}: unquote(
-      $additionalProperties + ' ' + map-get($theme, $color)
-    );
-  } @else {
-    #{$property}: unquote(
-      map-get($theme, $color) + ' ' + $additionalProperties
-    );
-  }
-}
-
-@mixin theme(
-  $property,
-  $color,
-  $additionalPropertiesPositionIsFront: false,
-  $additionalProperties: ''
-) {
-  $light: map-get($themes, $light-theme);
-  $dark: map-get($themes, $dark-theme);
-
-  @include themeProperty(
-    $light,
-    $property,
-    $color,
-    $additionalPropertiesPositionIsFront,
-    $additionalProperties
-  );
-
-  @media (prefers-color-scheme: dark) {
-    @include themeProperty(
-      $dark,
-      $property,
-      $color,
-      $additionalPropertiesPositionIsFront,
-      $additionalProperties
-    );
-  }
-}
-
-@mixin darkmode {
-  @media (prefers-color-scheme: dark) {
-    @content;
-  }
+.visually-hidden {
+  display: block;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(1px);
+  white-space: nowrap;
+  position: absolute;
 }
