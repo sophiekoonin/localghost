@@ -16,7 +16,7 @@
   --purple-90: hsla(251, 78%, 90%, 1);
   --purple-80: hsla(251, 78%, 80%, 1);
   --purple-67: hsla(251, 78%, 67%, 1);
-  --purple-50: hsla(251, 78%, 50%, 1);
+  --blue: hsla(245, 78%, 50%, 1);
   --midnight-20: hsla(239, 50%, 20%, 1);
   --midnight-10: hsla(239, 50%, 10%, 1);
   --midnight-desat-12: hsla(239, 15%, 12%, 0.75);
@@ -31,7 +31,11 @@
 }
 
 @mixin dark-colors {
-  --background-color: var(--midnight-10);
+  --background-color: linear-gradient(
+    var(--midnight-10),
+    var(--blue),
+    var(--magenta-70)
+  );
   --link-color: var(--purple-80);
   --body-color: white;
   --header-color: var(--magenta-90);
@@ -49,8 +53,8 @@
   --code-block-background-color: var(--purple-67);
   --blockquote-background-color: rgba(245, 245, 245, 0.5);
   --content-box-color: var(--midnight-desat-12);
-  --header-gradient: linear-gradient(var(--gunmetal-5), var(--midnight-10));
-  --footer-background: linear-gradient(var(--midnight-10), var(--midnight-20));
+  // --header-gradient: linear-gradient(var(--gunmetal-5), var(--midnight-20));
+  // --footer-background: linear-gradient(var(--midnight-20), var(--purple-67));
   --header-glow-color-1: var(--magenta-70);
   --header-glow-color-2: var(--magenta-50);
   --header-hover-color: var(--lime-90);
@@ -61,7 +65,13 @@
 }
 
 :root {
-  --background-color: var(--aqua-90);
+  --background-color: linear-gradient(
+    var(--purple-80),
+    var(--purple-90),
+    var(--aqua-84),
+    var(--aqua-90),
+    var(--cherry-blossom-96)
+  );
   --link-color: var(--blush);
   --body-color: var(--gunmetal);
   --header-color: var(--purple-90);
@@ -76,14 +86,14 @@
   --accent-hover-color: var(--aqua-90);
   --date-color: var(--grey-mid);
   --inline-code-color: var(--blush);
-  --header-gradient: linear-gradient(
-    var(--purple-90),
-    var(--aqua-84) 75%,
-    var(--aqua-90)
-  );
+  // --header-gradient: linear-gradient(
+  //   var(--purple-90),
+  //   var(--aqua-84) 75%,
+  //   var(--aqua-90)
+  // );
   --code-block-background-color: var(--purple-67);
   --blockquote-background-color: rgba(153, 119, 119, 0.5);
-  --footer-background: linear-gradient(var(--aqua-90), var(--lime-90));
+  // --footer-background: linear-gradient(var(--aqua-90), var(--lime-90));
   --content-box-color: rgba(255, 255, 255, 0.75);
   --header-glow-color-1: var(--purple-80);
   --header-glow-color-2: var(--purple-67);
