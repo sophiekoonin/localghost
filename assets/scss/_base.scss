@@ -6,6 +6,9 @@
   display: none !important;
 }
 
+svg.defs {
+  display: none;
+}
 body {
   font-family: $family-sans-serif;
   font-size: 1rem;

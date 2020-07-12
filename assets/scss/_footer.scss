@@ -18,8 +18,11 @@
 
   .footer-text {
     grid-row: 1 / span 1;
-    grid-column: 1 / span 8;
     justify-self: center;
+    grid-column: 1 / span 4;
+    @include mq($from: desktop) {
+      grid-column: 1 / span 8;
+    }
   }
 
   li {
@@ -33,9 +36,14 @@
     line-height: 0;
     align-self: end;
     justify-self: center;
+    grid-row: 2 / span 2;
   }
+
   #skyscraper-1 {
-    grid-area: 2/4/4/5;
+    grid-column: 2 / span 1;
+    @include mq($from: desktop) {
+      grid-column: 4 / span 1;
+    }
     .sky1-topfront {
       color: hsl(249, 100%, 81%);
     }
@@ -56,31 +64,39 @@
     }
   }
   #skyscraper-2 {
-    grid-area: 2/5/4/6;
+    grid-column: 3 / span 1;
+    justify-self: start;
+    @include mq($from: desktop) {
+      grid-column: 5 / span 1;
+      justify-self: center;
+    }
     .sky2-front {
       color: hsl(221, 18%, 45%);
     }
     .sky2-side {
-      color: hsl(222, 28%, 26%);
+      color: hsl(222, 72%, 26%);
     }
     .sky2-frontshadow {
-      color: hsl(222, 25%, 36%);
+      color: hsl(222, 60%, 36%);
     }
     .sky2-frontstripe {
-      color: hsl(222, 45%, 60%);
+      color: hsl(222, 72%, 63%);
     }
     .sky2-sidestripe {
-      color: hsl(222, 34%, 45%);
+      color: hsl(222, 72%, 45%);
     }
     .sky2-top-side {
-      color: hsl(222, 18%, 50%);
+      color: hsl(222, 72%, 50%);
     }
     .sky2-top-front {
-      color: hsl(222, 47%, 77%);
+      color: hsl(222, 72%, 77%);
     }
   }
   #skyscraper-3 {
-    grid-area: 2/6/4/8;
+    grid-column: 3 / span 2;
+    @include mq($from: desktop) {
+      grid-column: 6 / span 2;
+    }
     .sky2-side {
       color: hsl(298, 95%, 25%) !important;
     }
