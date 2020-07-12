@@ -40,10 +40,10 @@
 
   .darkmode-toggle {
     display: block;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     position: absolute;
-    top: 0.5rem;
-    right: 1rem;
+    top: 0;
+    right: 0.5rem;
     @include mq($from: desktop) {
       position: unset;
       grid-area: 1/39/2/40;

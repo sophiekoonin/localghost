@@ -62,6 +62,7 @@
   --header-glow-hover-color-2: var(--lime-50);
   --header-stars-display: inline;
   --separator: url('/squiggle-blue.svg');
+  --skyscraper-display: block;
 }
 
 :root {
@@ -86,6 +87,7 @@
   --accent-hover-color: var(--aqua-90);
   --date-color: var(--grey-mid);
   --inline-code-color: var(--blush);
+  --skyscraper-display: none;
   // --header-gradient: linear-gradient(
   //   var(--purple-90),
   //   var(--aqua-84) 75%,

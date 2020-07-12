@@ -34,6 +34,7 @@
     padding-right: 1rem;
   }
   .skyscraper {
+    display: var(--skyscraper-display);
     line-height: 0;
     align-self: end;
     justify-self: center;
@@ -78,7 +79,8 @@
     justify-self: center;
     margin-bottom: -1.5rem;
     @include mq($from: desktop) {
-      grid-column: 5 / span 1;
+      grid-column: 5 / span 2;
+      justify-self: center;
     }
   }
   #skyscraper-2,
