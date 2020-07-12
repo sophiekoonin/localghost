@@ -2,6 +2,7 @@
   display: grid;
   width: 100%;
   height: 50vh;
+  overflow: hidden;
   background: var(--footer-background);
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -51,10 +52,10 @@
       color: hsl(249, 43%, 60%);
     }
     .sky1-front {
-      color: hsl(249, 100%, 74%);
+      color: hsl(249, 100%, 78%);
     }
     .sky1-side {
-      color: hsl(249, 47%, 54%);
+      color: hsl(249, 50%, 45%);
     }
     .sky1-frontstripe {
       color: hsl(249, 43%, 60%);
@@ -70,35 +71,51 @@
       grid-column: 5 / span 1;
       justify-self: center;
     }
+  }
+
+  #skyscraper-4 {
+    grid-column: 3 / span 2;
+    justify-self: center;
+    margin-bottom: -1.5rem;
+    @include mq($from: desktop) {
+      grid-column: 5 / span 1;
+    }
+  }
+  #skyscraper-2,
+  #skyscraper-4 {
     .sky2-front {
-      color: hsl(221, 18%, 45%);
+      color: hsl(190, 43%, 40%);
     }
     .sky2-side {
-      color: hsl(222, 72%, 26%);
+      color: hsl(256, 55%, 22%);
     }
     .sky2-frontshadow {
       color: hsl(222, 60%, 36%);
     }
     .sky2-frontstripe {
-      color: hsl(222, 72%, 63%);
+      color: hsl(190, 73%, 52%);
+      // color: hsl(222, 72%, 63%);
     }
     .sky2-sidestripe {
-      color: hsl(222, 72%, 45%);
+      // color: hsl(222, 72%, 45%);
+      color: hsl(256, 65%, 45%);
     }
     .sky2-top-side {
-      color: hsl(222, 72%, 50%);
+      color: hsl(256, 55%, 52%);
     }
     .sky2-top-front {
       color: hsl(222, 72%, 77%);
     }
   }
   #skyscraper-3 {
-    grid-column: 3 / span 2;
+    margin-bottom: -2rem;
+    grid-column: 1 / span 1;
+    justify-self: end;
     @include mq($from: desktop) {
       grid-column: 6 / span 2;
     }
     .sky2-side {
-      color: hsl(298, 95%, 25%) !important;
+      color: hsl(298, 95%, 15%);
     }
     .sky2-front {
       color: hsl(298, 64%, 42%);
@@ -107,7 +124,7 @@
       color: hsl(298, 73%, 30%);
     }
     .sky2-sidestripe {
-      color: hsl(298, 72%, 35%);
+      color: hsl(298, 72%, 25%);
     }
     .sky2-top-side {
       color: hsl(298, 44%, 26%);
