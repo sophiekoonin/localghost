@@ -1,19 +1,25 @@
 .footer {
-  display: inline-flex;
-  flex-direction: column;
-  font-size: 0.9rem;
-  align-items: center;
+  display: grid;
   width: 100%;
-  padding-bottom: 2rem;
   height: 50vh;
   background: var(--footer-background);
-  @media screen and (min-width: $tablet) {
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  align-content: center;
+  justify-content: center;
+
+  @include mq($from: desktop) {
+    grid-template-columns: repeat(8, 1fr);
   }
   .social-icons {
     margin: 0;
+  }
+
+  .footer-text {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 8;
+    justify-self: center;
   }
 
   li {
@@ -22,5 +28,80 @@
     }
     font-size: 1rem;
     padding-right: 1rem;
+  }
+  .skyscraper {
+    line-height: 0;
+    align-self: end;
+    justify-self: center;
+  }
+  #skyscraper-1 {
+    grid-area: 2/4/4/5;
+    .sky1-topfront {
+      color: hsl(249, 100%, 81%);
+    }
+    .sky1-topside {
+      color: hsl(249, 43%, 60%);
+    }
+    .sky1-front {
+      color: hsl(249, 100%, 74%);
+    }
+    .sky1-side {
+      color: hsl(249, 47%, 54%);
+    }
+    .sky1-frontstripe {
+      color: hsl(249, 43%, 60%);
+    }
+    .sky1-sidestripe {
+      color: hsl(248, 17%, 42%);
+    }
+  }
+  #skyscraper-2 {
+    grid-area: 2/5/4/6;
+    .sky2-front {
+      color: hsl(221, 18%, 45%);
+    }
+    .sky2-side {
+      color: hsl(222, 28%, 26%);
+    }
+    .sky2-frontshadow {
+      color: hsl(222, 25%, 36%);
+    }
+    .sky2-frontstripe {
+      color: hsl(222, 45%, 60%);
+    }
+    .sky2-sidestripe {
+      color: hsl(222, 34%, 45%);
+    }
+    .sky2-top-side {
+      color: hsl(222, 18%, 50%);
+    }
+    .sky2-top-front {
+      color: hsl(222, 47%, 77%);
+    }
+  }
+  #skyscraper-3 {
+    grid-area: 2/6/4/8;
+    .sky2-side {
+      color: hsl(298, 95%, 25%) !important;
+    }
+    .sky2-front {
+      color: hsl(298, 64%, 42%);
+    }
+    .sky2-frontshadow {
+      color: hsl(298, 73%, 30%);
+    }
+    .sky2-sidestripe {
+      color: hsl(298, 72%, 35%);
+    }
+    .sky2-top-side {
+      color: hsl(298, 44%, 26%);
+    }
+    .sky2-top-front {
+      color: hsl(298, 62%, 56%);
+    }
+
+    .sky2-frontstripe {
+      color: hsl(298, 60%, 53%);
+    }
   }
 }
