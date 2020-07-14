@@ -30,7 +30,10 @@
 
 .paint-wrapper {
   line-height: 0;
+  border-radius: 6px;
   margin: 0.5rem;
+  padding: 1rem;
+  padding-top: 0.5rem;
   font-size: 1rem;
   position: relative;
   background: var(--content-box-color);
@@ -40,6 +43,9 @@
     @include mq($until: tablet) {
       display: none;
     }
+  }
+  @include mq($from: tablet) {
+    padding: 0;
   }
   @include mq($from: desktop) {
     width: 45vw;
@@ -51,12 +57,14 @@
 
   &-inner {
     margin-top: 0.5rem;
-    position: absolute;
-    left: 12%;
-    top: 12%;
+    @include mq($from: tablet) {
+      position: absolute;
+      left: 12%;
+      top: 12%;
+      width: 85%;
+      height: 60%;
+    }
     padding: 0.5rem;
-    width: 85%;
-    height: 60%;
     overflow: none;
     line-height: 1.5rem;
     p,
