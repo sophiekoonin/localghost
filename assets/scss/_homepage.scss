@@ -1,6 +1,6 @@
 .first-section {
   @include mq($from: tablet) {
-    margin-top: 2.5rem;
+    margin-top: 3rem;
     padding: 0 2rem;
   }
 }
@@ -25,5 +25,43 @@
     }
     padding: 1rem;
     width: 40vw;
+  }
+}
+
+.paint-wrapper {
+  line-height: 0;
+  margin: 0.5rem;
+  font-size: 1rem;
+  position: relative;
+  background: var(--content-box-color);
+
+  img {
+    width: 100%;
+    @include mq($until: tablet) {
+      display: none;
+    }
+  }
+  @include mq($from: desktop) {
+    width: 45vw;
+    margin-left: 2rem;
+  }
+  @include mq($from: extrawide) {
+    width: 30vw;
+  }
+
+  &-inner {
+    margin-top: 0.5rem;
+    position: absolute;
+    left: 12%;
+    top: 12%;
+    padding: 0.5rem;
+    width: 85%;
+    height: 60%;
+    overflow: none;
+    line-height: 1.5rem;
+    p,
+    h2 {
+      margin: 0;
+    }
   }
 }
