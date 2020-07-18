@@ -6,6 +6,7 @@
   --magenta-90: hsla(303, 88%, 90%, 1);
   --magenta-80: hsla(303, 88%, 80%, 1);
   --magenta-70: hsla(303, 88%, 70%, 1);
+  --magenta-60: hsla(303, 88%, 60%, 1);
   --magenta-50: hsla(303, 88%, 50%, 1);
   --lime-90: hsla(125, 88%, 90%, 1);
   --lime-70: hsla(125, 88%, 70%, 1);
@@ -16,10 +17,10 @@
   --purple-90: hsla(251, 78%, 90%, 1);
   --purple-80: hsla(251, 78%, 80%, 1);
   --purple-67: hsla(251, 78%, 67%, 1);
+  --purple-50: hsla(251, 54%, 50%, 1);
   --blue: hsla(245, 78%, 50%, 1);
   --midnight-20: hsla(239, 50%, 20%, 1);
   --midnight-10: hsla(239, 50%, 10%, 1);
-  --midnight-desat-12: hsla(239, 15%, 12%, 0.75);
   --gunmetal-20: hsla(212, 14%, 20%, 1);
   --gunmetal: hsla(212, 14%, 12%, 1);
   --gunmetal-translucent: hsla(212, 14%, 12%, 0.75);
@@ -28,41 +29,49 @@
   --gunmetal-75: hsla(212, 14%, 75%, 1);
   --sky-blue-75: hsla(201, 80%, 75%, 1);
   --sky-blue-60: hsla(201, 80%, 60%, 1);
+  --family-monospace: 'Diary of an 8-bit Mage', monospace;
+  --family-serif: 'DM Serif Display', serif;
+  --family-sans-serif: 'Muli', sans-serif;
 }
 
 @mixin dark-colors {
   --background-color: linear-gradient(
     var(--midnight-10),
-    var(--blue),
-    var(--magenta-70)
+    var(--blue) 80%,
+    hsla(303, 99%, 40%, 1)
   );
-  --link-color: var(--purple-80);
+  --link-color: var(--magenta-70);
   --body-color: white;
   --header-color: var(--magenta-90);
   --h1-color: var(--cherry-blossom-86);
   --h2-color: var(--aqua-84);
-  --h3-color: var(--blush);
-  --h4-color: var(--blush);
+  --h3-color: var(--magenta-80);
+  --h4-color: var(--magenta-90);
   --nav-link-color: var(--aqua-84);
   --link-hover-color: var(--cherry-blossom-86);
-  --post-subtitle-color: var(--blush);
+  --post-subtitle-color: var(--aqua-84);
   --accent-color: var(--aqua-84);
   --accent-hover-color: var(--aqua-90);
   --date-color: var(--grey-mid);
   --inline-code-color: var(--lime-70);
-  --code-block-background-color: var(--purple-67);
   --blockquote-background-color: rgba(245, 245, 245, 0.5);
-  --content-box-color: var(--midnight-desat-12);
-  // --header-gradient: linear-gradient(var(--gunmetal-5), var(--midnight-20));
-  // --footer-background: linear-gradient(var(--midnight-20), var(--purple-67));
+  --content-box-color: hsla(239, 15%, 12%, 0.95);
   --header-glow-color-1: var(--magenta-70);
   --header-glow-color-2: var(--magenta-50);
   --header-hover-color: var(--lime-90);
   --header-glow-hover-color-1: var(--lime-70);
   --header-glow-hover-color-2: var(--lime-50);
-  --header-stars-display: inline;
+  --header-stars-display: inline-block;
   --separator: url('/squiggle-blue.svg');
   --skyscraper-display: block;
+  --paint-frame-filter: none;
+  --chroma-keyword: hsl(326, 100%, 74%);
+  --chroma-background: hsl(231, 15%, 18%);
+  --chroma-string: hsl(65, 92%, 76%);
+  --chroma-literal: var(--purple-80);
+  --chroma-code: hsl(60, 30%, 96%);
+  --chroma-comment: hsl(225, 27%, 80%);
+  --chroma-name: hsl(135, 94%, 65%);
 }
 
 :root {
@@ -73,37 +82,38 @@
     var(--aqua-90),
     var(--cherry-blossom-96)
   );
-  --link-color: var(--blush);
+  --link-color: var(--purple-50);
   --body-color: var(--gunmetal);
-  --header-color: var(--magenta-90);
-  --h1-color: var(--purple-67);
+  --h1-color: var(--purple-50);
   --h2-color: var(--purple-67);
-  --h3-color: var(--blush);
-  --h4-color: var(--blush);
-  --nav-link-color: var(--purple-67);
-  --link-hover-color: var(--blush);
+  --h3-color: var(--purple-67);
+  --h4-color: var(--purple-67);
+  --nav-link-color: var(--purple-50);
+  --link-hover-color: var(--purple-67);
   --post-subtitle-color: var(--blush);
   --accent-color: var(--magenta-70);
   --accent-hover-color: var(--aqua-90);
   --date-color: var(--grey-mid);
-  --inline-code-color: var(--blush);
+  --inline-code-color: var(--purple-50);
   --skyscraper-display: none;
-  // --header-gradient: linear-gradient(
-  //   var(--purple-90),
-  //   var(--aqua-84) 75%,
-  //   var(--aqua-90)
-  // );
-  --code-block-background-color: var(--purple-67);
   --blockquote-background-color: rgba(153, 119, 119, 0.5);
-  // --footer-background: linear-gradient(var(--aqua-90), var(--lime-90));
-  --content-box-color: rgba(255, 255, 255, 0.75);
-  --header-glow-color-1: var(--magenta-80);
-  --header-glow-color-2: var(--magenta-70);
-  --header-hover-color: var(--cherry-blossom-96);
-  --header-glow-hover-color-1: var(--cherry-blossom-86);
-  --header-glow-hover-color-2: var(--cherry-blossom-70);
+  --content-box-color: rgba(255, 255, 255, 0.8);
+  --header-hover-color: var(--magenta-90);
+  --header-glow-hover-color-1: var(--magenta-80);
+  --header-glow-hover-color-2: var(--magenta-70);
+  --header-color: var(--cherry-blossom-96);
+  --header-glow-color-1: var(--cherry-blossom-86);
+  --header-glow-color-2: var(--cherry-blossom-70);
   --header-stars-display: none;
   --separator: url('/squiggle-blue.svg');
+  --paint-frame-filter: hue-rotate(-30deg);
+  --chroma-background: hsl(251, 16%, 39%);
+  --chroma-string: hsl(55, 100%, 84%);
+  --chroma-literal: hsl(262, 100%, 82%);
+  --chroma-code: hsl(60, 30%, 96%);
+  --chroma-comment: hsl(50, 100%, 88%);
+  --chroma-name: hsl(339, 100%, 86%);
+  --chroma-keyword: var(--aqua-84);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -119,8 +129,6 @@
   @include dark-colors;
 }
 
-$family-sans-serif: 'Muli', sans-serif;
-$family-serif: 'DM Serif Display', sans-serif;
 $title-weight: 300;
 $weight-bold: 600;
 

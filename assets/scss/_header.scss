@@ -42,11 +42,12 @@
   height: 30vh;
   align-items: center;
   justify-items: center;
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(20, 1fr);
   @include mq($from: desktop) {
     height: 50vh;
-    display: grid;
     grid-template-columns: repeat(40, 1fr);
-    grid-template-rows: repeat(10, 1fr);
   }
 
   @include mq($from: extrawide) {
@@ -54,6 +55,7 @@
   }
 
   .header-text {
+    grid-area: 2 / 1/ 9 / 21;
     @include mq($from: desktop) {
       grid-area: 2 / 11 / 10 / 31;
     }
@@ -78,7 +80,7 @@
     right: 0.5rem;
     @include mq($from: desktop) {
       position: unset;
-      grid-area: 1/39/2/40;
+      grid-area: 2/39/3/40;
       margin: 0;
     }
     &:focus-within {
@@ -131,6 +133,29 @@
       }
     }
   }
+
+  .font-toggle {
+    grid-area: 2/37/3/38;
+    height: 2rem;
+    cursor: pointer;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+
+    input {
+      opacity: 0;
+      position: absolute;
+    }
+    input:checked + .font-toggle-a {
+      font-family: var(--family-serif);
+      line-height: 1.8rem;
+    }
+    &-a {
+      font-size: 2rem;
+      font-family: var(--family-monospace);
+      color: var(--h1-color);
+    }
+  }
 }
 .star {
   display: var(--header-stars-display);
@@ -170,38 +195,72 @@
   grid-area: 4/8/5/9;
 }
 #star-4 {
-  grid-area: 5/34/6/35;
+  grid-row: 5 / span 1;
+  grid-column: 19 / span 1;
+  @include mq($from: desktop) {
+    grid-column: 34 / span 1;
+  }
 }
 #star-5 {
-  grid-area: 8/36/9/37;
+  grid-row: 8 / span 1;
+  grid-column: 15 / span 1;
+  @include mq($from: desktop) {
+    grid-column: 36 / span 1;
+  }
 }
 #star-6 {
   align-self: start;
   grid-area: 2/19/3/20;
 }
 #star-7 {
-  grid-area: 7/29/8/30;
+  grid-row: 7 / span 1;
+  grid-column: 11 / span 1;
+  @include mq($from: desktop) {
+    grid-column: 29 / span 1;
+  }
 }
 #star-8 {
-  grid-area: 9/25/10/26;
+  grid-area: 6 / 2 / 7 / 3;
+  @include mq($from: desktop) {
+    grid-area: 9 / 25 / 10 / 26;
+  }
 }
 #star-9 {
-  grid-area: 8/10/9/11;
+  grid-area: 3/19/4/20;
+  @include mq($from: desktop) {
+    grid-area: 8/10/9/11;
+  }
 }
 #star-10 {
-  grid-area: 10/16/11/17;
+  grid-area: 7/20/8/21;
+
+  @include mq($from: desktop) {
+    grid-area: 10/16/11/17;
+  }
 }
+
 #star-11 {
-  grid-area: 2/32/3/33;
+  grid-row: 2 / span 1;
+  grid-column: 4 / span 1;
+  @include mq($from: desktop) {
+    grid-column: 32 / span 1;
+  }
 }
 #star-12 {
   grid-area: 1/5/2/6;
 }
 #star-13 {
-  grid-area: 1/38/2/39;
+  grid-row: 1 / span 1;
+  grid-column: 9 / span 1;
+  @include mq($from: desktop) {
+    grid-column: 38 / span 1;
+  }
 }
 #star-14 {
-  grid-area: 8/20/9/21;
+  grid-area: 2 / 15 / 3 / 16;
+  @include mq($from: desktop) {
+    grid-area: 8/ 20 / 9 / 21;
+  }
 }
 
 .neon {

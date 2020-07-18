@@ -10,7 +10,7 @@ svg.defs {
   display: none;
 }
 body {
-  font-family: $family-sans-serif;
+  font-family: var(--family-sans-serif);
   font-size: 1rem;
   font-size: unquote('min(max(1rem, 4vw), 18px)');
   font-display: swap;
@@ -33,7 +33,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: $family-serif;
+  font-family: var(--family-monospace);
 }
 
 h1 {
@@ -123,4 +123,11 @@ img {
     padding: 0.5rem;
     color: #000000;
   }
+}
+
+@mixin content-box {
+  background: var(--content-box-color);
+
+  padding: 1rem;
+  border-radius: 15px;
 }

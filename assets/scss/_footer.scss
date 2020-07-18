@@ -1,15 +1,19 @@
 .footer {
   display: grid;
   width: 100%;
-  height: 50vh;
   overflow: hidden;
+  margin-top: 2rem;
   background: var(--footer-background);
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
 
   align-content: center;
   justify-content: center;
+  height: 50vh;
 
+  @include mq($from: tablet, $until: desktop) {
+    height: 30vh;
+  }
   @include mq($from: desktop) {
     grid-template-columns: repeat(8, 1fr);
   }

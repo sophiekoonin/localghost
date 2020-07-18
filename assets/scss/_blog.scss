@@ -3,9 +3,9 @@
   margin: 0 auto;
   padding: 0;
   .summary {
+    @include content-box;
     margin-bottom: 2.5rem;
 
-    padding-top: 1rem;
     .post-date {
       font-size: 1rem;
     }
@@ -17,10 +17,12 @@
   list-style-type: none;
 }
 
+h1.post-title {
+  margin-top: 0;
+}
 .post {
   &-body {
-    background: var(--content-box-color);
-    border-radius: 15px;
+    @include content-box;
     padding: 1.5rem;
   }
   &-item {
