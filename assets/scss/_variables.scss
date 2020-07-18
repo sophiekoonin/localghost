@@ -32,6 +32,7 @@
   --family-monospace: 'Diary of an 8-bit Mage', monospace;
   --family-serif: 'DM Serif Display', serif;
   --family-sans-serif: 'Muli', sans-serif;
+  --heading-font-family: var(--family-monospace);
 }
 
 @mixin dark-colors {
@@ -125,8 +126,13 @@
     @include dark-colors;
   }
 }
+
 [data-user-color-scheme='dark'] {
   @include dark-colors;
+}
+
+[data-user-8bit-fonts='off'] {
+  --heading-font-family: var(--family-serif);
 }
 
 $title-weight: 300;

@@ -136,7 +136,7 @@
 
   .font-toggle {
     grid-area: 2/37/3/38;
-    height: 2rem;
+    line-height: 2rem;
     cursor: pointer;
     align-self: center;
     justify-self: center;
@@ -146,14 +146,22 @@
       opacity: 0;
       position: absolute;
     }
-    input:checked + .font-toggle-a {
-      font-family: var(--family-serif);
-      line-height: 1.8rem;
-    }
     &-a {
       font-size: 2rem;
       font-family: var(--family-monospace);
       color: var(--h1-color);
+      position: relative;
+    }
+    input:checked + .font-toggle-a {
+      &:after {
+        content: '/';
+        font-family: var(--family-sans-serif);
+        color: var(--h1-color);
+        font-weight: 800;
+        position: absolute;
+        top: 0;
+        left: 5px;
+      }
     }
   }
 }
