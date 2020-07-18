@@ -1,6 +1,6 @@
 .navbar {
   padding: 0;
-  grid-area: 7 / 1 / 11 / 21;
+  grid-area: 8 / 1 / 11 / 21;
   @include mq($from: desktop) {
     grid-area: 2 / 36/ 10 / 40;
     justify-self: end;
@@ -14,9 +14,12 @@
     padding-top: 1rem;
     font-family: var(--family-monospace);
     text-transform: lowercase;
-    font-size: 2rem;
-    font-size: unquote('min(max(1.5rem, 4vw), 35px)');
+    font-size: 1.2rem;
+    @include mq($from: tablet) {
+      font-size: 1.5rem;
+    }
     @include mq($from: desktop) {
+      font-size: 2rem;
       display: block;
       text-align: right;
       width: auto;
@@ -24,7 +27,7 @@
 
     li.navbar-item {
       @include mq($until: desktop) {
-        padding-right: 1.5rem;
+        padding-right: 0.8rem;
 
         &:last-of-type {
           padding-right: 0;
@@ -33,16 +36,18 @@
           @include heart-bullet;
         }
       }
-
+      @include mq($from: desktop) {
+        margin-bottom: 0.5rem;
+      }
       a {
-        font-weight: 800;
         color: var(--nav-link-color);
         text-decoration: none;
-        &:hover {
+        &:hover,
+        &:focus,
+        &:active {
           color: var(--link-hover-color);
-        }
-        &:focus {
           text-decoration: underline;
+          text-decoration-style: wavy;
         }
       }
     }
@@ -63,16 +68,6 @@ li.social-icon {
 
   a {
     line-height: 0;
-    &:hover {
-      color: var(--aqua-84);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      color: var(--aqua-84);
-      &:hover {
-        color: var(--blush);
-      }
-    }
   }
   svg {
     width: 20px;
@@ -87,11 +82,6 @@ li.social-icon {
     list-style-type: none;
     display: inline-flex;
     li {
-      a {
-        &:hover {
-          color: var(--aqua-84);
-        }
-      }
       &:not(:last-of-type):first-of-type {
         padding-right: 0.6rem;
       }

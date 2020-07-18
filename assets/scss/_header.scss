@@ -75,11 +75,9 @@
   .darkmode-toggle {
     display: block;
     margin-top: 0.5rem;
-    position: absolute;
-    top: 0;
-    right: 0.5rem;
+    margin-right: 0.5rem;
+    grid-area: 1/18/2/21;
     @include mq($from: desktop) {
-      position: unset;
       grid-area: 2/39/3/40;
       margin: 0;
     }
@@ -135,12 +133,18 @@
   }
 
   .font-toggle {
-    grid-area: 2/37/3/38;
+    grid-area: 1/16/2/18;
     line-height: 2rem;
+    margin-top: 0.5rem;
     cursor: pointer;
     align-self: center;
     justify-self: center;
     display: flex;
+
+    @include mq($from: desktop) {
+      grid-area: 2/37/3/38;
+      margin-top: 0;
+    }
 
     input {
       opacity: 0;
@@ -149,14 +153,14 @@
     &-a {
       font-size: 2rem;
       font-family: var(--family-monospace);
-      color: var(--h1-color);
+      color: var(--nav-link-color);
       position: relative;
     }
     input:checked + .font-toggle-a {
       &:after {
         content: '/';
         font-family: var(--family-sans-serif);
-        color: var(--h1-color);
+        color: var(--nav-link-color);
         font-weight: 800;
         position: absolute;
         top: 0;
@@ -217,6 +221,9 @@
   }
 }
 #star-6 {
+  @include mq($until: tablet) {
+    display: none;
+  }
   align-self: start;
   grid-area: 2/19/3/20;
 }
