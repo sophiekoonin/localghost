@@ -1,11 +1,12 @@
 .full-width {
   max-width: 900px;
-  padding-top: 1rem;
   margin: 1rem;
+
   @media screen and (min-width: $desktop) {
     margin: 0 auto;
     width: 80vw;
     padding: 2rem;
+    padding-top: 0;
   }
 }
 

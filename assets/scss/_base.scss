@@ -130,6 +130,7 @@ img {
 @mixin content-box {
   background: var(--content-box-color);
 
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 15px;
+  box-shadow: 2px 2px 4px 3px rgba(0, 0, 0, 0.2);
 }

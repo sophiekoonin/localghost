@@ -156,7 +156,8 @@
       color: var(--nav-link-color);
       position: relative;
     }
-    input:checked + .font-toggle-a {
+    &:not(:hover) input:not(:checked) + .font-toggle-a,
+    &:hover input:checked + .font-toggle-a {
       &:after {
         content: '/';
         font-family: var(--family-sans-serif);

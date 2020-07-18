@@ -21,7 +21,8 @@
     margin: 0;
   }
 
-  .footer-text {
+  .footer-text,
+  .rss-link {
     grid-row: 1 / span 1;
     justify-self: center;
     grid-column: 1 / span 4;
@@ -30,6 +31,9 @@
     }
   }
 
+  .rss-link {
+    align-self: center;
+  }
   li {
     &:last-of-type {
       padding-right: 0;
