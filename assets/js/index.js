@@ -2,10 +2,7 @@ document.documentElement.classList.remove('no-js');
 gsap.registerPlugin(MotionPathPlugin);
 // thx Andy Bell: https://hankchizljaw.com/wrote/create-a-user-controlled-dark-or-light-mode/
 const COLOR_STORAGE_KEY = 'user-color-scheme';
-const FONT_KEY = 'use-8bit-font';
-const FONT_VAR = '--font-mode';
 const COLOR_VAR = '--color-mode';
-const fontToggle = document.querySelector('#font-toggle-checkbox');
 const moonOrSun = document.querySelector('#moon-or-sun');
 const darkModeCheckbox = document.querySelector('#toggle-checkbox');
 const toggleSlider = document.querySelector('.toggle-slider');
@@ -68,48 +65,12 @@ const toggleColorSetting = () => {
   return currentSetting;
 };
 
-const applyFontSetting = (passedSetting) => {
-  const currentSetting = getCurrentSetting(
-    passedSetting,
-    'data-user-8bit-fonts',
-    FONT_KEY,
-    FONT_VAR
-  );
-  fontToggle.checked = currentSetting === 'on';
-};
-
-const toggleFontSetting = () => {
-  let currentSetting = localStorage.getItem(FONT_KEY);
-  switch (currentSetting) {
-    case null:
-      currentSetting = 'on';
-      break;
-    case 'on':
-      currentSetting = 'off';
-      break;
-    case 'off':
-      currentSetting = 'on';
-      break;
-  }
-
-  localStorage.setItem(FONT_KEY, currentSetting);
-
-  return currentSetting;
-};
-
 darkModeCheckbox.addEventListener('click', (evt) => {
   animateSunOut();
   applyColorSetting(toggleColorSetting());
 });
 
-fontToggle.addEventListener('click', (evt) => {
-  applyFontSetting(toggleFontSetting());
-});
-
-(function applySettings() {
-  applyColorSetting();
-  applyFontSetting();
-})();
+applyColorSetting();
 
 function animateSunIn() {
   gsap.to('#moon-or-sun', {

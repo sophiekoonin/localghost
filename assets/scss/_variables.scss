@@ -37,8 +37,8 @@
 
 @mixin dark-colors {
   --background-color: linear-gradient(
-    var(--midnight-10),
-    var(--blue) 80%,
+    var(--midnight-20),
+    var(--purple-50) 80%,
     hsla(303, 99%, 40%, 1)
   );
   --link-color: var(--magenta-70);
@@ -74,16 +74,17 @@
   --chroma-code: hsl(60, 30%, 96%);
   --chroma-comment: hsl(225, 27%, 80%);
   --chroma-name: hsl(135, 94%, 65%);
+  --body-font-weight: 'wght' 350;
 }
 
 :root {
-  --background-color: linear-gradient(
-    var(--purple-80),
-    var(--purple-90),
-    var(--aqua-84),
-    var(--aqua-90),
-    var(--cherry-blossom-96)
-  );
+  --background-color: fixed
+    linear-gradient(
+      var(--sky-blue-75),
+      var(--aqua-90),
+      var(--cherry-blossom-96)
+    );
+  --body-font-weight: 'wght' 400;
   --link-color: var(--purple-50);
   --body-color: var(--gunmetal);
   --h1-color: var(--purple-50);
@@ -130,10 +131,6 @@
 
 [data-user-color-scheme='dark'] {
   @include dark-colors;
-}
-
-[data-user-8bit-fonts='off'] {
-  --heading-font-family: var(--family-sans-serif);
 }
 
 $title-weight: 300;

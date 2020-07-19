@@ -2,8 +2,7 @@
   padding: 0;
   grid-area: 8 / 1 / 11 / 21;
   @include mq($from: desktop) {
-    grid-area: 2 / 36/ 10 / 40;
-    justify-self: end;
+    grid-area: 9/1/10/41;
   }
   .navbar-menu {
     margin: 0;
@@ -13,6 +12,7 @@
     justify-content: center;
     padding-top: 1rem;
     font-family: var(--family-monospace);
+    font-variation-settings: 'wght' 600;
     text-transform: lowercase;
     font-size: 1.2rem;
     @include mq($from: tablet) {
@@ -20,34 +20,28 @@
     }
     @include mq($from: desktop) {
       font-size: 2rem;
-      display: block;
-      text-align: right;
-      width: auto;
     }
 
     li.navbar-item {
-      @include mq($until: desktop) {
-        padding-right: 0.8rem;
+      padding-right: 0.8rem;
 
-        &:last-of-type {
-          padding-right: 0;
-        }
-        &:not(:first-of-type):before {
-          @include heart-bullet;
-        }
+      &:last-of-type {
+        padding-right: 0;
       }
-      @include mq($from: desktop) {
-        margin-bottom: 0.5rem;
-      }
+      // &:not(:first-of-type):before {
+      //   @include heart-bullet;
+      // }
       a {
         color: var(--nav-link-color);
         text-decoration: none;
         &:hover,
         &:focus,
         &:active {
-          color: var(--link-hover-color);
-          text-decoration: underline;
-          text-decoration-style: wavy;
+          @include neon-glow(
+            var(--header-glow-hover-color-1),
+            var(--header-glow-hover-color-2)
+          );
+          color: var(--header-hover-color);
         }
       }
     }
