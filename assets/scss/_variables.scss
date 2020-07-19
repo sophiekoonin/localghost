@@ -65,6 +65,7 @@
   --header-stars-display: inline-block;
   --separator: url('/squiggle-blue.svg');
   --skyscraper-display: block;
+  --palmtree-display: none;
   --paint-frame-filter: none;
   --chroma-keyword: hsl(326, 100%, 74%);
   --chroma-background: hsl(231, 15%, 18%);
@@ -97,6 +98,7 @@
   --date-color: var(--grey-mid);
   --inline-code-color: var(--purple-50);
   --skyscraper-display: none;
+  --palmtree-display: block;
   --blockquote-background-color: rgba(153, 119, 119, 0.5);
   --content-box-color: rgba(255, 255, 255, 0.8);
   --header-hover-color: var(--magenta-90);
@@ -107,7 +109,6 @@
   --header-glow-color-2: var(--cherry-blossom-70);
   --header-stars-display: none;
   --separator: url('/squiggle-blue.svg');
-  --paint-frame-filter: hue-rotate(-30deg);
   --chroma-background: hsl(251, 16%, 39%);
   --chroma-string: hsl(55, 100%, 84%);
   --chroma-literal: hsl(262, 100%, 82%);
@@ -132,7 +133,7 @@
 }
 
 [data-user-8bit-fonts='off'] {
-  --heading-font-family: var(--family-serif);
+  --heading-font-family: var(--family-sans-serif);
 }
 
 $title-weight: 300;

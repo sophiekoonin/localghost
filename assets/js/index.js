@@ -69,14 +69,12 @@ const toggleColorSetting = () => {
 };
 
 const applyFontSetting = (passedSetting) => {
-  console.log(passedSetting);
   const currentSetting = getCurrentSetting(
     passedSetting,
     'data-user-8bit-fonts',
     FONT_KEY,
     FONT_VAR
   );
-  console.log({ currentSetting });
   fontToggle.checked = currentSetting === 'on';
 };
 
