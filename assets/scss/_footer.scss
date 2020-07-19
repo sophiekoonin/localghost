@@ -9,13 +9,14 @@
 
   align-content: center;
   justify-content: center;
-  height: 50vh;
+  height: 40vh;
 
-  @include mq($from: tablet, $until: desktop) {
+  @include mq($from: tablet) {
     height: 30vh;
+    grid-template-columns: repeat(8, 1fr);
   }
   @include mq($from: desktop) {
-    grid-template-columns: repeat(8, 1fr);
+    height: 50vh;
   }
   .social-icons {
     margin: 0;
@@ -26,7 +27,7 @@
     grid-row: 1 / span 1;
     justify-self: center;
     grid-column: 1 / span 4;
-    @include mq($from: desktop) {
+    @include mq($from: tablet) {
       grid-column: 1 / span 8;
     }
   }
@@ -59,8 +60,9 @@
 
   #palmtree-1 {
     grid-column: 2 / span 2;
+    justify-self: end;
     transform: scaleX(-1);
-    @include mq($from: desktop) {
+    @include mq($from: tablet) {
       grid-column: 4 / span 1;
     }
   }
@@ -68,26 +70,29 @@
   #palmtree-2 {
     grid-column: 3 / span 1;
     justify-self: start;
-    margin-bottom: -2rem;
-    @include mq($from: desktop) {
+    display: none;
+    svg {
+      width: 90%;
+    }
+    @include mq($from: tablet) {
+      display: var(--palmtree-display);
       grid-column: 2 / span 1;
       justify-self: center;
     }
   }
 
   #palmtree-3 {
-    margin-bottom: -2rem;
-    grid-column: 1 / span 1;
-    justify-self: end;
-    @include mq($from: desktop) {
+    grid-column: 1 / span 2;
+    justify-self: center;
+    @include mq($from: tablet) {
       grid-column: 6 / span 2;
     }
   }
   #palmtree-4 {
     grid-column: 3 / span 2;
-    justify-self: center;
+    justify-self: end;
     margin-bottom: -1.5rem;
-    @include mq($from: desktop) {
+    @include mq($from: tablet) {
       grid-column: 5 / span 2;
       justify-self: center;
     }
@@ -95,7 +100,7 @@
 
   #skyscraper-1 {
     grid-column: 2 / span 1;
-    @include mq($from: desktop) {
+    @include mq($from: tablet) {
       grid-column: 4 / span 1;
     }
     .sky1-topfront {
@@ -120,7 +125,7 @@
   #skyscraper-2 {
     grid-column: 3 / span 1;
     justify-self: start;
-    @include mq($from: desktop) {
+    @include mq($from: tablet) {
       grid-column: 5 / span 1;
       justify-self: center;
     }
@@ -130,7 +135,7 @@
     grid-column: 3 / span 2;
     justify-self: center;
     margin-bottom: -1.5rem;
-    @include mq($from: desktop) {
+    @include mq($from: tablet) {
       grid-column: 5 / span 2;
       justify-self: center;
     }
@@ -165,7 +170,7 @@
     margin-bottom: -2rem;
     grid-column: 1 / span 1;
     justify-self: end;
-    @include mq($from: desktop) {
+    @include mq($from: tablet) {
       grid-column: 6 / span 2;
     }
     .sky2-side {
