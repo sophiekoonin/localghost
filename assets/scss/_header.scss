@@ -67,7 +67,7 @@
     text-transform: lowercase;
     margin: 0;
     margin-bottom: 0.5rem;
-    @include mq($from: tablet) {
+    @include mq($from: desktop) {
       font-size: 5rem;
     }
   }
@@ -128,44 +128,6 @@
             transition: all 300ms ease-in;
           }
         }
-      }
-    }
-  }
-
-  .font-toggle {
-    grid-area: 1/16/2/18;
-    line-height: 2rem;
-    margin-top: 0.5rem;
-    cursor: pointer;
-    align-self: center;
-    justify-self: center;
-    display: flex;
-
-    @include mq($from: desktop) {
-      grid-area: 2/37/3/38;
-      margin-top: 0;
-    }
-
-    input {
-      opacity: 0;
-      position: absolute;
-    }
-    &-a {
-      font-size: 2rem;
-      font-family: var(--family-monospace);
-      color: var(--nav-link-color);
-      position: relative;
-    }
-    &:not(:hover) input:not(:checked) + .font-toggle-a,
-    &:hover input:checked + .font-toggle-a {
-      &:after {
-        content: '/';
-        font-family: var(--family-sans-serif);
-        color: var(--nav-link-color);
-        font-weight: 800;
-        position: absolute;
-        top: 0;
-        left: 5px;
       }
     }
   }
