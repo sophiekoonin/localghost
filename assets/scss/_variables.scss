@@ -12,12 +12,14 @@
   --lime-70: hsla(125, 88%, 70%, 1);
   --lime-50: hsla(125, 88%, 50%, 1);
   --cherry-blossom-70: hsla(350, 100%, 70%, 1);
+  --cherry-blossom-78: hsla(350, 100%, 78%, 1);
   --cherry-blossom-86: hsla(350, 100%, 86%, 1);
   --cherry-blossom-96: hsla(350, 100%, 96%, 1);
   --purple-90: hsla(251, 78%, 90%, 1);
   --purple-80: hsla(251, 78%, 80%, 1);
   --purple-67: hsla(251, 78%, 67%, 1);
   --purple-50: hsla(251, 54%, 50%, 1);
+  --lilac-67: hsla(233, 78%, 67%, 1);
   --blue: hsla(245, 78%, 50%, 1);
   --midnight-20: hsla(239, 50%, 20%, 1);
   --midnight-10: hsla(239, 50%, 10%, 1);
@@ -41,11 +43,11 @@
     var(--purple-50) 80%,
     hsla(303, 99%, 40%, 1)
   );
-  --link-color: var(--magenta-70);
+  --link-color: var(--aqua-84);
   --body-color: white;
   --header-color: var(--magenta-90);
   --h1-color: var(--cherry-blossom-86);
-  --h2-color: var(--aqua-84);
+  --h2-color: var(--purple-80);
   --h3-color: var(--magenta-80);
   --h4-color: var(--magenta-90);
   --nav-link-color: var(--aqua-84);
@@ -87,11 +89,11 @@
   --body-font-weight: 'wght' 400;
   --link-color: var(--purple-50);
   --body-color: var(--gunmetal);
-  --h1-color: var(--purple-50);
+  --h1-color: var(--lilac-67);
   --h2-color: var(--purple-67);
   --h3-color: var(--purple-67);
   --h4-color: var(--purple-67);
-  --nav-link-color: var(--purple-50);
+  --nav-link-color: var(--purple-67);
   --link-hover-color: var(--purple-67);
   --post-subtitle-color: var(--blush);
   --accent-color: var(--magenta-70);

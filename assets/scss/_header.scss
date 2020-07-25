@@ -19,11 +19,11 @@
     width: 15vw;
   }
   #moon-or-sun {
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
+    display: none;
     @include mq($from: tablet) {
+      background-repeat: no-repeat;
+      background-position: center center;
+      display: block;
       width: 75px;
       height: 75px;
     }
@@ -60,13 +60,17 @@
       grid-area: 2 / 11 / 10 / 31;
     }
     color: var(--header-color);
-    font-size: 4rem;
+
     font-family: 'Neon Tubes 2', cursive;
     font-display: swap;
     text-align: center;
     text-transform: lowercase;
     margin: 0;
     margin-bottom: 0.5rem;
+    font-size: 2.75rem;
+    @include mq($from: tablet) {
+      font-size: 4rem;
+    }
     @include mq($from: desktop) {
       font-size: 5rem;
     }
@@ -132,6 +136,7 @@
     }
   }
 }
+
 .star {
   display: var(--header-stars-display);
   color: #ffffff;

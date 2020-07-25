@@ -11,7 +11,7 @@
     padding: 0;
   }
   @include mq($from: desktop) {
-    max-width: 20%;
+    max-width: 21%;
   }
 
   @include mq($from: extrawide) {
@@ -22,6 +22,7 @@
     color: var(--h3-color);
     font-size: 1.5rem;
     margin: 0;
+    font-family: var(--family-monospace);
   }
   .separator {
     margin: 1rem auto;
@@ -66,9 +67,10 @@
   }
 }
 .photo {
+  flex-shrink: 0;
   border-radius: 50%;
-  max-width: 75px;
-  max-height: 75px;
+  max-width: 50px;
+  max-height: 50px;
   margin-right: 1rem;
   border: 2px solid var(--purple-80);
   @media screen and (min-width: $tablet) {

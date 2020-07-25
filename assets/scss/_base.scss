@@ -39,14 +39,14 @@ h4 {
 
 h1 {
   color: var(--h1-color);
-  font-size: 2.5rem;
-  font-size: unquote('min(max(2.5rem, 4vw), 40px)');
+  font-size: 2rem;
+  font-size: unquote('min(max(1.5rem, 4vw), 30px)');
 }
 
 h2 {
   margin: 0;
   font-size: 2rem;
-  font-size: unquote('min(max(2rem, 4vw), 30px)');
+  font-size: unquote('min(max(1.25rem, 4vw), 25px)');
 
   color: var(--h2-color);
   font-weight: 800;
@@ -60,7 +60,7 @@ h2 {
 h3 {
   color: var(--h3-color);
   font-size: 1.5rem;
-  font-size: unquote('min(max(1.5rem, 4vw), 25px)');
+  font-size: unquote('min(max(1.1rem, 4vw), 20px)');
   font-weight: 800;
   margin-top: 1.5rem;
 }

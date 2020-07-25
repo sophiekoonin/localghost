@@ -129,8 +129,8 @@
 
   code {
     color: var(--inline-code-color);
-
-    font-family: 'Roboto Mono', monospace;
+    word-break: break-word;
+    font-family: monospace;
   }
 
   img {

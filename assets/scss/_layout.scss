@@ -2,7 +2,7 @@
   max-width: 900px;
   margin: 1rem;
 
-  @media screen and (min-width: $desktop) {
+  @include mq($from: desktop) {
     margin: 0 auto;
     width: 80vw;
     padding: 2rem;
