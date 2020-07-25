@@ -12,12 +12,12 @@ svg.defs {
 body {
   font-family: var(--family-sans-serif);
   font-size: 1rem;
-  font-size: unquote('min(max(1rem, 4vw), 18px)');
   font-display: swap;
   margin: 0;
   min-height: 100vh;
   background: var(--background-color);
   color: var(--body-color);
+  font-variation-settings: var(--body-font-weight);
 }
 
 a {
@@ -49,10 +49,11 @@ h2 {
   font-size: unquote('min(max(1.25rem, 4vw), 25px)');
 
   color: var(--h2-color);
-  font-weight: 800;
+  font-variation-settings: 'wght' 650;
+
   line-height: 1.2em;
   a {
-    font-weight: 800;
+    font-variation-settings: 'wght' 650;
     text-decoration: none;
   }
 }
@@ -61,7 +62,7 @@ h3 {
   color: var(--h3-color);
   font-size: 1.5rem;
   font-size: unquote('min(max(1.1rem, 4vw), 20px)');
-  font-weight: 800;
+  font-variation-settings: 'wght' 650;
   margin-top: 1.5rem;
 }
 
@@ -130,7 +131,7 @@ img {
 @mixin content-box {
   background: var(--content-box-color);
 
-  padding: 2rem;
+  padding: 2.5rem 2rem 3rem 2rem;
   border-radius: 15px;
   box-shadow: 2px 2px 4px 3px rgba(0, 0, 0, 0.2);
 }

@@ -1,9 +1,8 @@
 .navbar {
   padding: 0;
-  grid-area: 8 / 1 / 11 / 21;
-  @include mq($from: desktop) {
-    grid-area: 9/1/10/41;
-  }
+  padding-top: auto;
+
+  grid-area: 3 / 1 / 4/ 1;
   .navbar-menu {
     margin: 0;
     list-style-type: none;
@@ -12,7 +11,6 @@
     justify-content: center;
     padding-top: 1rem;
     font-family: var(--family-monospace);
-    font-variation-settings: 'wght' 600;
     text-transform: lowercase;
     font-size: 1.2rem;
     @include mq($from: tablet) {
@@ -28,9 +26,11 @@
       &:last-of-type {
         padding-right: 0;
       }
-      // &:not(:first-of-type):before {
-      //   @include heart-bullet;
-      // }
+      &:not(:first-of-type):before {
+        font-size: 1.2rem;
+        @include heart-bullet;
+        margin-right: 0.8rem;
+      }
       a {
         color: var(--nav-link-color);
         text-decoration: none;

@@ -1,11 +1,12 @@
-<div class="sun-anim"><svg class="motion-path" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg"
-        fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5">
-        <path id="sun-motion-path" d="M250,0C246.203,162.87 154.074,237.407 0,250" fill="none" stroke="none"
-            stroke-width="2" />
-    </svg>
-    <div id="moon-or-sun"></div>
-</div>
-<header class="header">
+<div class="header-grid" aria-hidden="true">
+    <div class="sun-anim"><svg class="motion-path" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg"
+            fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"
+            stroke-miterlimit="1.5">
+            <path id="sun-motion-path" d="M250,0C246.203,162.87 154.074,237.407 0,250" fill="none" stroke="none"
+                stroke-width="2" />
+        </svg>
+        <div id="moon-or-sun"></div>
+    </div>
     <div id="star-1" class="star star-1"></div>
     <div id="star-2" class="star star-2"></div>
     <div id="star-3" class="star star-3"></div>
@@ -21,6 +22,10 @@
     <div id="star-13" class="star star-1"></div>
     <div id="star-14" class="star star-2"></div>
 
+
+
+</div>
+<header class="header">
     <!-- Title -->
     {{ if .IsHome}}
     <h1 class="header-text">
@@ -35,12 +40,11 @@
         </a>
     </span>
     {{ end}}
+
     <label for="toggle-checkbox" title="Toggle dark mode" class="darkmode-toggle">
         <span class="visually-hidden">Toggle dark mode</span>
         <input type="checkbox" id="toggle-checkbox" />
         <span class="toggle-slider" aria-hidden="true"></span>
     </label>
-
     {{ partial "nav.html" $ }}
-
 </header>
