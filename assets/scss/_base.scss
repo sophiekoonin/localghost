@@ -99,11 +99,12 @@ img {
 }
 
 .separator {
-  background-image: var(--separator);
-  background-repeat: repeat-x;
-  width: 33%;
+  background-image: url('/icons/heart-bullet.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 3rem;
   margin: 0 auto;
-  height: 8px;
+  height: 0.7rem;
   margin-bottom: 2.5rem;
 }
 
