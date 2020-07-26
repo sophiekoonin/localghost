@@ -50,7 +50,7 @@ const toggleColorSetting = () => {
   switch (currentSetting) {
     case null:
       currentSetting =
-        getCSSCustomProp(COLOR_MODE_KEY) === 'dark' ? 'light' : 'dark';
+        getCSSCustomProp(COLOR_VAR) === 'dark' ? 'light' : 'dark';
       break;
     case 'light':
       currentSetting = 'dark';
