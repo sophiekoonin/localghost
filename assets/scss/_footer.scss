@@ -34,6 +34,10 @@
 
   .rss-link {
     align-self: center;
+    &:not(:focus) {
+      border-bottom: 4px solid transparent;
+    }
+    color: var(--accent-color);
     svg {
       width: 1rem;
     }

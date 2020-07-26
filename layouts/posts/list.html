@@ -1,17 +1,17 @@
 {{ define "main" }}
 <section class="full-width">
-    <h1 class="page-title">All posts</h1>
+    <h1 class="visually-hidden">{{ .Title }}</h1>
     {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 6 }}
     <ol class="posts-list">
         {{ range $paginator.Pages }}
         <li>
             {{ partial "blog/summary.html" . }}
+            {{ partial "separator.html" .}}
         </li>
-        {{ partial "separator.html" .}}
         {{ end }}
     </ol>
     <nav class="pagination-nav" aria-label="Page navigation">
-        <ul>
+        <ul class="{{ if $paginator.HasPrev }}with-prev{{end}} {{if $paginator.HasNext}}with-next{{end}}">
             {{ if $paginator.HasPrev }}
             <li class="pagination__item pagination__item--previous">
                 <a href="{{ $paginator.Prev.URL }}" class="pagination__link pagination__link--previous">
@@ -25,6 +25,8 @@
                     Next page <span aria-hidden="true">→</span>
                 </a>
             </li>
+            {{else}}
+            <span>Test</span>
             {{ end }}
         </ul>
     </nav>

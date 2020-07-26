@@ -2,6 +2,17 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+  border-bottom: 4px solid var(--accent-color);
+}
+/* suppress focus ring on focusable things for mouse users */
+[data-whatinput='mouse'] *:focus,
+[data-whatinput='touch'] *:focus {
+  border-bottom: 0;
+  outline: none;
+}
+
 .no-js .darkmode-toggle {
   display: none !important;
 }
@@ -103,11 +114,11 @@ img {
 
 .separator {
   background-image: url('/icons/heart-bullet.svg');
-  background-repeat: no-repeat;
+  background-repeat: space;
   background-position: center;
-  width: 3rem;
+  width: 4rem;
   margin: 0 auto;
-  height: 0.7rem;
+  height: 0.9rem;
   margin-bottom: 2.5rem;
 }
 

@@ -99,17 +99,26 @@
     &:focus-within {
       .toggle-slider {
         box-shadow: 0 0 2px 4px var(--sky-blue-60);
+        [data-whatinput='mouse'] &,
+        [data-whatinput='touch'] & {
+          box-shadow: none;
+        }
       }
       input:checked + .toggle-slider {
         box-shadow: 0 0 2px 4px var(--gunmetal-85);
+        [data-whatinput='mouse'] &,
+        [data-whatinput='touch'] & {
+          box-shadow: none;
+        }
       }
     }
+
     input {
       opacity: 0;
       position: absolute;
       &:checked + .toggle-slider {
         border: 2px solid var(--gunmetal-20);
-        background: var(--gunmetal);
+        background: var(--gunmetal-12);
         &:after {
           left: calc(1.5rem - 1px);
           background-image: url("data:image/svg+xml,%3Csvg clip-rule='evenodd' fill-rule='evenodd' stroke-miterlimit='1.5' viewBox='0 0 15 15' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Cpath id='a' d='m10 1.5h2'/%3E%3Cpath id='b' d='m10 14.5h-5'/%3E%3Cpath id='c' d='m2.5 13v-1'/%3E%3C/defs%3E%3Cpath d='m3 1h2v-1h5v1h2v1h1v1h1v2h1v5h-1v2h-1.002l.002 1h-1v1h-2v1h-5v-1h-2v-1h-1v-1h-1v-2h-1v-5h1v-2h1.012l-.012-1h1z' fill='%238deeff'/%3E%3Cg fill='none'%3E%3Cuse stroke='%232bc2d9' xlink:href='%23a'/%3E%3Cuse stroke='%232bc2d9' transform='translate(-7)' xlink:href='%23a'/%3E%3Cuse stroke='%232bc2d9' transform='translate(10 -10)' xlink:href='%23c'/%3E%3Cuse stroke='%232bc2d9' transform='translate(10)' xlink:href='%23c'/%3E%3Cuse stroke='%232bc2d9' transform='translate(0 12)' xlink:href='%23a'/%3E%3Cuse stroke='%232bc2d9' xlink:href='%23b'/%3E%3Cuse stroke='%232bc2d9' transform='translate(0 -14)' xlink:href='%23b'/%3E%3Cuse stroke='%232bc2d9' transform='matrix(0 1 -1 0 29 0)' xlink:href='%23b'/%3E%3Cuse stroke='%232bc2d9' transform='matrix(0 1 -1 0 15 0)' xlink:href='%23b'/%3E%3Cuse stroke='%232bc2d9' transform='translate(0 -14)' xlink:href='%23b'/%3E%3Cuse stroke='%232bc2d9' transform='translate(0 -14)' xlink:href='%23b'/%3E%3Cuse stroke='%232bc2d9' transform='translate(-7 12)' xlink:href='%23a'/%3E%3Cuse stroke='%232bc2d9' transform='matrix(0 1 -1 0 15 0)' xlink:href='%23a'/%3E%3Cuse stroke='%232bc2d9' transform='matrix(0 1 -1 0 3 0)' xlink:href='%23a'/%3E%3Cuse stroke='%232bc2d9' transform='matrix(0 1 -1 0 3 -7)' xlink:href='%23a'/%3E%3Cuse stroke='%232bc2d9' transform='matrix(0 1 -1 0 15 -7)' xlink:href='%23a'/%3E%3Cuse stroke='%232bc2d9' xlink:href='%23c'/%3E%3Cuse stroke='%232bc2d9' transform='translate(0 -10)' xlink:href='%23c'/%3E%3Cuse stroke='%23a8eef7' transform='translate(0 -13)' xlink:href='%23b'/%3E%3Cuse stroke='%23a8eef7' transform='translate(0 1)' xlink:href='%23a'/%3E%3Cuse stroke='%23a8eef7' transform='translate(-7 1)' xlink:href='%23a'/%3E%3Cuse stroke='%2360e7fc' transform='translate(-1 -3)' xlink:href='%23c'/%3E%3Cuse stroke='%2360e7fc' transform='translate(11 -3)' xlink:href='%23c'/%3E%3Cuse stroke='%2360e7fc' transform='translate(9)' xlink:href='%23c'/%3E%3Cuse stroke='%2360e7fc' transform='translate(10 -1)' xlink:href='%23c'/%3E%3Cuse stroke='%2360e7fc' transform='translate(-7 11)' xlink:href='%23a'/%3E%3Cuse stroke='%2360e7fc' transform='translate(-5 12)' xlink:href='%23a'/%3E%3Cuse stroke='%2360e7fc' transform='translate(-2 12)' xlink:href='%23a'/%3E%3Cuse stroke='%2360e7fc' transform='matrix(0 1 -1 0 4 0)' xlink:href='%23a'/%3E%3Cpath d='m7 12.5h3' stroke='%2378edff'/%3E%3Cuse stroke='%2378edff' transform='matrix(0 1 -1 0 5 0)' xlink:href='%23a'/%3E%3Cuse stroke='%2378edff' transform='translate(9 -1)' xlink:href='%23c'/%3E%3Cuse stroke='%2378edff' transform='translate(0 -3)' xlink:href='%23c'/%3E%3Cuse stroke='%2378edff' transform='translate(2 -1)' xlink:href='%23c'/%3E%3Cuse stroke='%2337e2fc' transform='translate(-5 11)' xlink:href='%23a'/%3E%3Cuse stroke='%2337e2fc' transform='translate(-5 6)' xlink:href='%23a'/%3E%3Cuse stroke='%2337e2fc' transform='translate(-5 3)' xlink:href='%23a'/%3E%3Cuse stroke='%2337e2fc' transform='translate(1 9)' xlink:href='%23a'/%3E%3Cuse stroke='%2337e2fc' transform='matrix(0 1 -1 0 12 1)' xlink:href='%23a'/%3E%3Cuse stroke='%2337e2fc' transform='matrix(0 1 -1 0 9 -5)' xlink:href='%23a'/%3E%3Cuse stroke='%2337e2fc' transform='matrix(0 1 -1 0 6 -5)' xlink:href='%23a'/%3E%3Cuse stroke='%2337e2fc' transform='translate(-1 -6)' xlink:href='%23c'/%3E%3Cuse stroke='%2337e2fc' transform='translate(4 -10)' xlink:href='%23c'/%3E%3Cuse stroke='%2337e2fc' transform='translate(10 -5)' xlink:href='%23c'/%3E%3Cuse stroke='%2337e2fc' transform='translate(7 -3)' xlink:href='%23c'/%3E%3Cuse stroke='%2337e2fc' transform='translate(5 1)' xlink:href='%23c'/%3E%3C/g%3E%3C/svg%3E");
@@ -257,6 +266,7 @@
 }
 
 .neon {
+  font-weight: 400;
   color: var(--header-color);
   text-decoration: none;
   &:hover,
@@ -266,7 +276,8 @@
   }
 
   @include neon-glow(var(--header-glow-color-1), var(--header-glow-color-2));
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--header-hover-color);
     @include neon-glow(
       var(--header-glow-hover-color-1),

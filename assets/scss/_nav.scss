@@ -45,6 +45,7 @@
             var(--header-glow-hover-color-2)
           );
           color: var(--header-hover-color);
+          border-bottom: 0;
         }
       }
     }
@@ -72,12 +73,19 @@ li.social-icon {
 }
 
 .pagination-nav {
-  justify-content: center;
-  display: flex;
   width: 100%;
   ul {
+    margin: 0;
     list-style-type: none;
     display: inline-flex;
+    width: 100%;
+
+    &.with-prev {
+      justify-content: space-between;
+    }
+    &.with-next:not(.with-prev) {
+      justify-content: flex-end;
+    }
     li {
       &:not(:last-of-type):first-of-type {
         padding-right: 0.6rem;
@@ -85,7 +93,7 @@ li.social-icon {
       &:not(:first-of-type):before {
         @include heart-bullet();
       }
-      &:focus {
+      a:focus {
         text-decoration: underline;
       }
     }

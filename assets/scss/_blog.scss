@@ -2,12 +2,20 @@
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
+
   .summary {
     @include content-box;
     margin-bottom: 2.5rem;
-
     .post-date {
       font-size: 1rem;
+    }
+  }
+  li:last-of-type {
+    .summary {
+      margin-bottom: 1.5rem;
+    }
+    .separator {
+      display: none;
     }
   }
 }

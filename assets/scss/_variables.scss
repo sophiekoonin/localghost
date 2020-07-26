@@ -1,5 +1,4 @@
 :root {
-  --champagne-pink: hsla(22, 17%, 93%, 1);
   --aqua-84: hsla(164, 97%, 84%, 1);
   --aqua-90: hsla(164, 97%, 90%, 1);
   --blush: hsla(342, 76%, 65%, 1);
@@ -12,24 +11,16 @@
   --lime-70: hsla(125, 88%, 70%, 1);
   --lime-50: hsla(125, 88%, 50%, 1);
   --cherry-blossom-70: hsla(350, 100%, 70%, 1);
-  --cherry-blossom-78: hsla(350, 100%, 78%, 1);
   --cherry-blossom-86: hsla(350, 100%, 86%, 1);
   --cherry-blossom-96: hsla(350, 100%, 96%, 1);
   --purple-90: hsla(251, 78%, 90%, 1);
   --purple-80: hsla(251, 78%, 80%, 1);
-  --purple-67: hsla(251, 78%, 67%, 1);
+  --purple-68: hsla(251, 78%, 68%, 1);
   --purple-50: hsla(251, 54%, 50%, 1);
   --lilac-67: hsla(233, 78%, 67%, 1);
-  --blue: hsla(245, 78%, 50%, 1);
-  --midnight-20: hsla(239, 50%, 20%, 1);
-  --midnight-10: hsla(239, 50%, 10%, 1);
   --gunmetal-20: hsla(212, 14%, 20%, 1);
-  --gunmetal: hsla(212, 14%, 12%, 1);
-  --gunmetal-translucent: hsla(212, 14%, 12%, 0.75);
-  --gunmetal-5: hsla(212, 14%, 5%, 1);
+  --gunmetal-12: hsla(212, 14%, 12%, 1);
   --gunmetal-85: hsla(212, 14%, 85%, 1);
-  --gunmetal-75: hsla(212, 14%, 75%, 1);
-  --sky-blue-75: hsla(201, 80%, 75%, 1);
   --sky-blue-60: hsla(201, 80%, 60%, 1);
   --family-monospace: 'Diary of an 8-bit Mage', monospace;
   --family-sans-serif: 'Mulish', sans-serif;
@@ -38,22 +29,22 @@
 
 @mixin dark-colors {
   --background-color: linear-gradient(
-    var(--midnight-20),
+    hsla(239, 50%, 20%, 1),
     var(--purple-50) 80%,
     hsla(303, 99%, 40%, 1)
   );
   --link-color: var(--aqua-84);
   --body-color: white;
   --header-color: var(--magenta-90);
-  --h1-color: var(--purple-90);
-  --h2-color: var(--purple-80);
-  --h3-color: var(--magenta-80);
+  --h1-color: var(--purple-68);
+  --h2-color: var(--magenta-60);
+  --h3-color: var(--lime-70);
   --h4-color: var(--magenta-90);
   --nav-link-color: var(--aqua-84);
   --link-hover-color: var(--magenta-90);
   --post-subtitle-color: var(--aqua-84);
   --accent-color: var(--aqua-84);
-  --accent-hover-color: var(--aqua-90);
+  --accent-hover-color: var(--lime-70);
   --date-color: var(--grey-mid);
   --inline-code-color: var(--lime-70);
   --blockquote-background-color: rgba(245, 245, 245, 0.5);
@@ -80,19 +71,19 @@
 :root {
   --background-color: fixed
     linear-gradient(
-      var(--sky-blue-75),
+      hsla(201, 80%, 75%, 1),
       var(--aqua-90),
       var(--cherry-blossom-96)
     );
   --body-font-weight: 'wght' 400;
   --link-color: var(--purple-50);
-  --body-color: var(--gunmetal);
+  --body-color: var(--gunmetal-12);
   --h1-color: var(--lilac-67);
-  --h2-color: var(--purple-67);
-  --h3-color: var(--purple-67);
-  --h4-color: var(--purple-67);
-  --nav-link-color: var(--purple-67);
-  --link-hover-color: var(--purple-67);
+  --h2-color: var(--purple-68);
+  --h3-color: var(--purple-68);
+  --h4-color: var(--purple-68);
+  --nav-link-color: var(--purple-68);
+  --link-hover-color: var(--purple-68);
   --post-subtitle-color: var(--blush);
   --accent-color: var(--magenta-70);
   --accent-hover-color: var(--lilac-67);

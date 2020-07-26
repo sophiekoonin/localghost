@@ -2,7 +2,7 @@
 title: "Sophie Koonin"
 ---
 
-I’m a senior web engineer at [Monzo](https://www.monzo.com).
+I’m a web engineer at [Monzo](https://www.monzo.com).
 
 I care about web accessibility, keeping the web fun, and lowering the barrier to entry for people learning web development.
 
