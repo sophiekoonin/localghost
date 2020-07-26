@@ -4,6 +4,7 @@
 
   @include mq($from: desktop) {
     margin: 0 auto;
+    margin-top: 2rem;
     width: 80vw;
     padding: 2rem;
     padding-top: 0;
