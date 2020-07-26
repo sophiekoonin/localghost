@@ -5,54 +5,27 @@
   }
 }
 .content-box {
+  h2 {
+    margin-bottom: 1rem;
+  }
   @include content-box;
+  margin-bottom: 2.5rem;
 }
 
-.paint-wrapper {
-  line-height: 0;
-  border-radius: 6px;
-  margin: 0.5rem;
-  padding: 1rem;
-  padding-top: 0.5rem;
-  font-size: 1rem;
-  position: relative;
-  background: var(--content-box-color);
+.big-text {
+  font-weight: 700;
+  color: var(--h1-color);
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 1rem;
+  font-family: var(--family-monospace);
+}
 
-  img {
-    width: 100%;
-
-    filter: var(--paint-frame-filter);
-
-    @include mq($until: tablet) {
-      display: none;
-    }
-  }
-  @include mq($from: tablet) {
-    padding: 0;
-  }
-  @include mq($from: desktop) {
-    width: 45vw;
-    margin-left: 2rem;
-  }
-  @include mq($from: extrawide) {
-    width: 30vw;
-  }
-
-  &-inner {
-    margin-top: 0.5rem;
-    @include mq($from: tablet) {
-      position: absolute;
-      left: 12%;
-      top: 12%;
-      width: 85%;
-      height: 60%;
-    }
-    padding: 0.5rem;
-    overflow: none;
-    line-height: 1.5rem;
-    p,
-    h2 {
-      margin: 0;
-    }
-  }
+.intro-photo {
+  max-width: 30% !important;
+  margin: 0 !important;
+  float: right;
+  shape-outside: circle(50%);
+  box-shadow: none;
+  border-radius: 50%;
 }

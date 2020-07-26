@@ -1,15 +1,15 @@
 <!-- Begin Nav bar -->
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <ul class="navbar-menu" id="navMenu">
-        <li class="navbar-item">
-            <a href="/posts">
-                Writing
-            </a></li>
-        <li class="navbar-item">
-            <a href="/talks">
-                Speaking
-            </a></li>
-        <li class="navbar-item"><a href="/about">About</a></li>
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        <li class="navbar-item {{ if $currentPage.IsMenuCurrent "main" . }}current{{ end }}">
+            <a href="{{ .URL }}">
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+            </a>
+        </li>
+        {{ end }}
     </ul>
 </nav>
 <!-- End Nav bar -->

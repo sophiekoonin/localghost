@@ -23,6 +23,9 @@
     li.navbar-item {
       padding-right: 0.8rem;
 
+      &.current a {
+        text-decoration: underline;
+      }
       &:last-of-type {
         padding-right: 0;
       }

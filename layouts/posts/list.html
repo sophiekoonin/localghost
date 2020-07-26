@@ -1,5 +1,5 @@
 {{ define "main" }}
-<article class="full-width">
+<section class="full-width">
     <h1 class="page-title">All posts</h1>
     {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 6 }}
     <ol class="posts-list">
@@ -28,5 +28,5 @@
             {{ end }}
         </ul>
     </nav>
-</article>
+</section>
 {{end}}

@@ -37,6 +37,9 @@
     svg {
       width: 1rem;
     }
+    &:hover {
+      color: var(--accent-hover-color);
+    }
   }
   li {
     &:last-of-type {

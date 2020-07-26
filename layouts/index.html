@@ -1,5 +1,14 @@
 {{ define "main" }}
-<section class="first-section">
-  things to go here
+<section class="markdown full-width">
+    <div class="content-box">
+        <h2>Hi, I'm Sophie.</h2>
+        <img class="intro-photo" src="/img/photo.jpg" alt="" />
+        {{ .Content }}
+    </div>
+    {{ with .Site.GetPage "/about "}}
+    <div class="content-box">
+        {{ .Content }}
+    </div>
+    {{ end }}
 </section>
-{{end}}
+{{ end }}
