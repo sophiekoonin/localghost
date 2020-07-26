@@ -39,7 +39,7 @@ const applyColorSetting = (passedSetting) => {
 
   if (!toggleSlider.classList.contains('with-transition')) {
     moonOrSun.className = currentSetting === 'dark' ? 'moon' : 'sun';
-    animateSunIn();
+    animateSunIn(0);
     toggleSlider.classList.add('with-transition');
   }
 };
@@ -72,7 +72,7 @@ darkModeCheckbox.addEventListener('click', (evt) => {
 
 applyColorSetting();
 
-function animateSunIn() {
+function animateSunIn(duration) {
   gsap.to('#moon-or-sun', {
     motionPath: {
       path: '#sun-motion-path',
@@ -82,7 +82,7 @@ function animateSunIn() {
       end: 0.5,
     },
     transformOrigin: '50% 50%',
-    duration: 2,
+    duration,
     immediateRender: true,
   });
 }
@@ -103,7 +103,7 @@ function animateSunOut() {
     onComplete: () => {
       const currentClassName = moonOrSun.className;
       moonOrSun.className = currentClassName === 'sun' ? 'moon' : 'sun';
-      animateSunIn();
+      animateSunIn(2);
     },
   });
 }
