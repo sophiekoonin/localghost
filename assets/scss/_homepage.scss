@@ -4,12 +4,17 @@
     padding: 0 2rem;
   }
 }
-.content-box {
+
+.intro {
   h2 {
     margin-bottom: 1rem;
+    font-family: var(--family-monospace);
+    font-size: 2.5rem;
   }
-  @include content-box;
   margin-bottom: 2.5rem;
+}
+.content-box {
+  @include content-box;
 }
 
 .big-text {
@@ -18,7 +23,6 @@
   font-size: 1.5rem;
   display: block;
   margin-bottom: 1rem;
-  font-family: var(--family-monospace);
 }
 
 .intro-photo {

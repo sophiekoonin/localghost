@@ -1,6 +1,9 @@
 .full-width {
   max-width: 900px;
-  margin: 1rem;
+  margin: 0.5rem;
+  @include mq($from: tablet) {
+    margin: 1rem;
+  }
 
   @include mq($from: desktop) {
     margin: 0 auto;

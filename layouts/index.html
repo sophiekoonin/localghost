@@ -1,12 +1,12 @@
 {{ define "main" }}
 <section class="markdown full-width">
-    <div class="content-box">
+    <div class="content-box intro">
         <h2>Hi, I'm Sophie.</h2>
         <img class="intro-photo" src="/img/photo.jpg" alt="" />
         {{ .Content }}
     </div>
     {{ with .Site.GetPage "/about "}}
-    <div class="content-box">
+    <div class="content-box intro">
         {{ .Content }}
     </div>
     {{ end }}

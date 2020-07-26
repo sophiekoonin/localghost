@@ -135,6 +135,9 @@ img {
 @mixin content-box {
   background: var(--content-box-color);
 
-  padding: 2.5rem 2rem 3rem 2rem;
-  box-shadow: 10px 10px 0 3px rgba(0, 0, 0, 0.2);
+  padding: 2rem 1rem 2.5rem 1rem;
+  @include mq($from: tablet) {
+    padding: 2.5rem 2rem 3rem 2rem;
+    box-shadow: 10px 10px 0 3px rgba(0, 0, 0, 0.2);
+  }
 }
