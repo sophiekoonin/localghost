@@ -80,7 +80,6 @@ Don't assume the organisers will provide the adaptor you need to connect your la
 
 This was a bit of a divisive one — should you have a live demo in your talk?
 
-{{<tweet 955555727095074816 >}}
 
 {{<tweet 955595332993216512 >}}
 
