@@ -6,7 +6,11 @@
     {{ partial "head/metadata.html" . }}
     {{ partial "head/openGraph.html" . }}
     {{ partial "head/favicons.html" . }}
+    {{ block "js-include" . }}
+    {{ partial "head/scripts.html" . }}
+    {{ end }}
     {{ partial "head/css.html" . }}
+
     {{ end }}
     <!-- Include page specific css -->
     {{ block "customCSS" . }}
@@ -39,9 +43,7 @@
     {{ partial "footer/footer.html" . }}
     {{ end }}
 
-    {{ block "js-include" . }}
-    {{ partial "footer/scripts.html" . }}
-    {{ end }}
+
 
     <!-- Include page specific scripts -->
     {{ block "customScripts" . }}
