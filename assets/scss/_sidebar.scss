@@ -18,7 +18,7 @@
     max-width: 30%;
     padding: 0;
   }
-  h3 {
+  h2 {
     color: var(--h3-color);
     font-size: 1.5rem;
     margin: 0;
@@ -31,6 +31,13 @@
   p {
     font-size: 1rem;
     margin: 0;
+    &.email-address {
+      padding-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+  }
+  .social-icon svg {
+    width: 1.2rem;
   }
 }
 
@@ -66,6 +73,7 @@
     float: left;
   }
 }
+
 .photo {
   flex-shrink: 0;
   border-radius: 50%;

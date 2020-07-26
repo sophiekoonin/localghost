@@ -34,6 +34,9 @@
 
   .rss-link {
     align-self: center;
+    svg {
+      width: 1rem;
+    }
   }
   li {
     &:last-of-type {

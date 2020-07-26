@@ -20,7 +20,13 @@
 }
 
 .page-title {
-  font-family: var(--family-monospace);
+  // font-family: var(--family-monospace);
   margin-bottom: 2rem;
-  margin-left: 1rem;
+  margin-top: 0;
+  // margin-left: 1rem;
+}
+
+.social-icon {
+  width: 1.25rem;
+  height: 1.25rem;
 }

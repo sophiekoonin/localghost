@@ -36,12 +36,15 @@
                         href="https://twitter.com/intent/tweet?text={{ .Title }}%20by%20{{.Site.Params.twitterUsername}}%20{{ .Permalink }}"
                         onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"
                         title="Share on Twitter">
+                        <span class="visually-hidden">Share on Twitter</span>
+
                         {{ partial "social/twitter.html" . }}
                     </a></li>
                 <li>
                     <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"
                         onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"
                         title="Share on Facebook">
+                        <span class="visually-hidden">Share on Facebook</span>
                         {{ partial "social/facebook.html" . }}
                     </a>
                 </li>
@@ -50,6 +53,8 @@
                         href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}&summary={{ .Summary }}&source=localghost.dev"
                         onclick="window.open(this.href, 'linkedin-share','width=580,height=296');return false;"
                         title="Share on LinkedIn">
+                        <span class="visually-hidden">Share on LinkedIn</span>
+
                         {{ partial "social/linkedin.html" . }}
                     </a>
                 </li>

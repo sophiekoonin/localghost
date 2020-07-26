@@ -10,7 +10,7 @@ svg.defs {
   display: none;
 }
 body {
-  font-family: var(--family-sans-serif);
+  font-family: 'Inter var', sans-serif;
   font-size: 1rem;
   font-display: swap;
   margin: 0;
@@ -22,9 +22,12 @@ body {
 
 a {
   color: var(--link-color);
+  text-decoration: none;
+  font-variation-settings: 'wght' 600;
   &:active,
   &:hover,
   &:focus {
+    text-decoration: underline;
     color: var(--link-hover-color);
   }
 }
@@ -33,7 +36,10 @@ h1,
 h2,
 h3,
 h4 {
-  font-weight: 700;
+  &,
+  & a {
+    font-variation-settings: 'wght' 800;
+  }
   line-height: 1.2;
 }
 
@@ -49,11 +55,9 @@ h2 {
   font-size: unquote('min(max(1.25rem, 4vw), 25px)');
 
   color: var(--h2-color);
-  font-variation-settings: 'wght' 650;
 
   line-height: 1.2em;
   a {
-    font-variation-settings: 'wght' 650;
     text-decoration: none;
   }
 }
@@ -62,7 +66,6 @@ h3 {
   color: var(--h3-color);
   font-size: 1.5rem;
   font-size: unquote('min(max(1.1rem, 4vw), 20px)');
-  font-variation-settings: 'wght' 650;
   margin-top: 1.5rem;
 }
 

@@ -4,17 +4,23 @@
 }
 
 @font-face {
-  font-family: 'Mulish';
-  src: url('/fonts/Mulish.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Mulish';
-  src: url('/fonts/Mulish-Italic.woff2') format('woff2');
-  font-style: italic;
-}
-
-@font-face {
   font-family: 'Diary of an 8-bit Mage';
   src: url('/fonts/8-bit-mage.woff') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/Inter-roman.var.woff2?v=3.13') format('woff2');
+}
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url('/fonts/Inter-italic.var.woff2?v=3.13') format('woff2');
 }
