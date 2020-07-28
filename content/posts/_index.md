@@ -1,4 +1,4 @@
 ---
-title: "Writing"
+title: "Blog"
 menu: "main"
 ---
