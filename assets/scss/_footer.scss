@@ -81,9 +81,6 @@
     grid-column: 3 / span 1;
     justify-self: start;
     display: none;
-    svg {
-      width: 90%;
-    }
     @include mq($from: tablet) {
       display: var(--palmtree-display);
       grid-column: 2 / span 1;
