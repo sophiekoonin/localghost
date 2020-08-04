@@ -1,7 +1,11 @@
 {{ define "main" }}
-    <article class="markdown full-width" id="{{ lower .Params.Slug }}">
-        <h2 class="page-title">{{ .Title }}</h2>
-        <span class="date">{{ if .Params.date }}{{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }}{{ end }}</span>    
+
+<article class="markdown full-width" id="{{ lower .Params.Slug }}">
+    <div class="content-box">
+        <h1 class="page-title">{{ .Title }}</h1>
+        <span
+            class="date">{{ if .Params.date }}{{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }}{{ end }}</span>
         {{ .Content }}
-    </article>
+    </div>
+</article>
 {{ end }}

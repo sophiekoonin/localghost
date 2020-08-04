@@ -1,5 +1,0 @@
-{{ $index := resources.Get "/js/index.js" | minify }}
-{{ $scripts := slice $index | resources.Concat "/js/bundle.js" | fingerprint }}
-<script src="{{ $scripts.Permalink }}" integrity="{{ $scripts.Data.Integrity }}"></script>
-
-{{ template "_internal/google_analytics_async.html" . }}

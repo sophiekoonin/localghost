@@ -1,88 +1,109 @@
-// https://codepen.io/DirkWeber/pen/eyxbmq
+document.documentElement.classList.remove('no-js');
+gsap.registerPlugin(MotionPathPlugin);
+// thx Andy Bell: https://hankchizljaw.com/wrote/create-a-user-controlled-dark-or-light-mode/
+const COLOR_STORAGE_KEY = 'user-color-scheme';
+const COLOR_VAR = '--color-mode';
+const moonOrSun = document.querySelector('#moon-or-sun');
+const darkModeCheckbox = document.querySelector('#toggle-checkbox');
+const toggleSlider = document.querySelector('.toggle-slider');
+const getCSSCustomProp = (propKey) => {
+  let response = getComputedStyle(document.documentElement).getPropertyValue(
+    propKey
+  );
 
-(function() {
-  var ua = navigator.userAgent;
-
-  if (!/firefox/gi.test(ua)) {
-    return;
-  }
-  // Browsersniffing. Yes, I'm lazy.
-
-  var fragmentID;
-  var feImgs = document.querySelectorAll('feImage');
-  var cssList = document.styleSheets;
-  var cssAnimations = {};
-
-  for (var i = 0; i < cssList.length; i++) {
-    var css = cssList[i];
-
-    for (var j = 0; j < css.cssRules.length; j++) {
-      var rule = css.cssRules[j];
-
-      //is rule a keyframe animation?
-      if (rule.type === 7) {
-        cssAnimations[rule.name] = rule.cssText;
-      }
-    }
+  if (response.length) {
+    response = response.replace(/\"/g, '').trim();
   }
 
-  for (var i = 0, j = feImgs.length; i < j; i++) {
-    fragmentID =
-      feImgs[i].getAttribute('xlink:href') || feImgs[i].getAttribute('xlink');
+  return response;
+};
 
-    if (/#/.test(fragmentID) && !/data\:image\/svg\+xml/.test(fragmentID)) {
-      fragmentAsURIintoFilter(fragmentID, feImgs[i]);
-    }
+const getCurrentSetting = (passedSetting, dataName, storageKey, cssVar) => {
+  let currentSetting = passedSetting || localStorage.getItem(storageKey);
+
+  if (currentSetting) {
+    document.documentElement.setAttribute(dataName, currentSetting);
+  } else {
+    currentSetting = getCSSCustomProp(cssVar);
+  }
+  return currentSetting;
+};
+const applyColorSetting = (passedSetting) => {
+  const currentSetting = getCurrentSetting(
+    passedSetting,
+    'data-user-color-scheme',
+    COLOR_STORAGE_KEY,
+    COLOR_VAR
+  );
+  darkModeCheckbox.checked = currentSetting === 'dark';
+
+  if (!toggleSlider.classList.contains('with-transition')) {
+    moonOrSun.className = currentSetting === 'dark' ? 'moon' : 'sun';
+    animateSunIn(0);
+    toggleSlider.classList.add('with-transition');
+  }
+};
+
+const toggleColorSetting = () => {
+  let currentSetting = localStorage.getItem(COLOR_STORAGE_KEY);
+
+  switch (currentSetting) {
+    case null:
+      currentSetting =
+        getCSSCustomProp(COLOR_VAR) === 'dark' ? 'light' : 'dark';
+      break;
+    case 'light':
+      currentSetting = 'dark';
+      break;
+    case 'dark':
+      currentSetting = 'light';
+      break;
   }
 
-  function fragmentAsURIintoFilter(identifier, fePrimitive) {
-    var el = document.querySelector(identifier);
-    var styledEl = inlineStyles(el);
-    var nsAttr = 'http://www.w3.org/2000/svg';
-    if (!styledEl.getAttribute('xmlns')) {
-      styledEl.setAttribute('xmlns', nsAttr);
-    }
-    var text = encodeURIComponent(
-      styledEl.outerHTML.replace(/100%/g, '256')
-    ).replace('"', "'");
-    var target = fePrimitive;
+  localStorage.setItem(COLOR_STORAGE_KEY, currentSetting);
 
-    target.setAttribute(
-      'xlink:href',
-      'data:image/svg+xml;charset=utf-8,' + text
-    );
-  }
+  return currentSetting;
+};
 
-  // When URLencoded, global styles will no longer apply to the SVG Fragment. So we must inline every rule before:
-  function inlineStyles(element) {
-    var children = element.querySelectorAll('*');
-    var animations = [];
+darkModeCheckbox.addEventListener('click', (evt) => {
+  animateSunOut();
+  applyColorSetting(toggleColorSetting());
+});
 
-    [].forEach.call(children, function(child) {
-      var style = getComputedStyle(child);
-      child.cssText = style;
+applyColorSetting();
 
-      // Look for animations:
-      for (var i = 0; i < style.length; i++) {
-        var prop = style.item(i);
-        var rule = style.getPropertyValue(prop);
+function animateSunIn(duration) {
+  gsap.to('#moon-or-sun', {
+    motionPath: {
+      path: '#sun-motion-path',
+      align: '#sun-motion-path',
+      alignOrigin: [0.5, 0.5],
+      autoRotate: false,
+      end: 0.5,
+    },
+    transformOrigin: '50% 50%',
+    duration,
+    immediateRender: true,
+  });
+}
 
-        // is there a CSS keyframe animation applied to this element?
-        // Copy it to an inlined style.
-        if (/animation\-name/.test(prop) && rule !== 'none') {
-          if (animations.toString().indexOf(rule) < 0) {
-            var svgStyle = document.createElement('style');
-
-            svgStyle.innerHTML = cssAnimations[rule];
-            element.appendChild(svgStyle);
-            animations.push(rule);
-          }
-        }
-
-        child.style[prop] = rule;
-      }
-    });
-
-    return element;
-  }
-})();
+function animateSunOut() {
+  gsap.to('#moon-or-sun', {
+    motionPath: {
+      path: '#sun-motion-path',
+      align: '#sun-motion-path',
+      alignOrigin: [0.5, 0.5],
+      autoRotate: false,
+      start: 0.5,
+      end: 1,
+    },
+    transformOrigin: '50% 50%',
+    duration: 1,
+    immediateRender: true,
+    onComplete: () => {
+      const currentClassName = moonOrSun.className;
+      moonOrSun.className = currentClassName === 'sun' ? 'moon' : 'sun';
+      animateSunIn(2);
+    },
+  });
+}

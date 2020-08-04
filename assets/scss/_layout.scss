@@ -1,38 +1,17 @@
-.main-container {
-  margin: 0 auto;
-  max-width: 100vw;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  @media screen and (min-width: $tablet) {
-    max-width: 80%;
-  }
-}
-
-@mixin full-width {
-
-  @media screen and (min-width: $desktop) {
-    max-width: 80%;
-    margin: 0 auto;
-  }
-  @media screen and (min-width: $desktop-lg) {
-    max-width: 70%;
-    margin: 0 auto;
-  }
-}
-
 .full-width {
-  padding-top: 1rem;
-  @media screen and (min-width: $tablet) {
-    padding: 2rem;
-    padding-bottom: 0;
-
-    .page-title {
-      font-size: 1.8rem;
-    }
+  max-width: 900px;
+  margin: 0.5rem;
+  @include mq($from: tablet) {
+    margin: 1rem;
   }
-@include full-width;
 
+  @include mq($from: desktop) {
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: 80vw;
+    padding: 2rem;
+    padding-top: 0;
+  }
 }
 
 .top-pad {
@@ -41,4 +20,16 @@
 
 .bottom-pad {
   padding-bottom: 1rem;
+}
+
+.page-title {
+  // font-family: var(--family-monospace);
+  margin-bottom: 2rem;
+  margin-top: 0;
+  // margin-left: 1rem;
+}
+
+.social-icon {
+  width: 1.25rem;
+  height: 1.25rem;
 }

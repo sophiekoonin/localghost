@@ -1,89 +1,130 @@
-$grey-darkest: #292929;
-$grey-dark: #565656;
-$grey-mid: #757575;
-$grey-light: #dbdbdb;
-$white: #ffffff;
+:root {
+  --aqua-84: hsla(164, 97%, 84%, 1);
+  --aqua-90: hsla(164, 97%, 90%, 1);
+  --blush: hsla(342, 76%, 65%, 1);
+  --magenta-90: hsla(303, 88%, 90%, 1);
+  --magenta-80: hsla(303, 88%, 80%, 1);
+  --magenta-70: hsla(303, 88%, 70%, 1);
+  --magenta-60: hsla(303, 88%, 60%, 1);
+  --magenta-50: hsla(303, 88%, 50%, 1);
+  --lime-90: hsla(125, 88%, 90%, 1);
+  --lime-70: hsla(125, 88%, 70%, 1);
+  --lime-50: hsla(125, 88%, 50%, 1);
+  --cherry-blossom-70: hsla(350, 100%, 70%, 1);
+  --cherry-blossom-86: hsla(350, 100%, 86%, 1);
+  --cherry-blossom-96: hsla(350, 100%, 96%, 1);
+  --purple-90: hsla(251, 78%, 90%, 1);
+  --purple-80: hsla(251, 78%, 80%, 1);
+  --purple-68: hsla(251, 78%, 68%, 1);
+  --purple-50: hsla(251, 54%, 50%, 1);
+  --lilac-67: hsla(233, 78%, 67%, 1);
+  --gunmetal-20: hsla(212, 14%, 20%, 1);
+  --gunmetal-12: hsla(212, 14%, 12%, 1);
+  --gunmetal-85: hsla(212, 14%, 85%, 1);
+  --sky-blue-60: hsla(201, 80%, 60%, 1);
+  --family-monospace: 'Diary of an 8-bit Mage', monospace;
+  --family-sans-serif: 'Mulish', sans-serif;
+  --heading-font-family: var(--family-monospace);
+}
 
-$purple-dark: #484066;
-$purple-grey: #696286;
-$purple-mid: #694e97;
-$purple-bright: #6a35c5;
-$purple-light-bright: #b48cff;
-$purple-light: #ccb1ff;
-$secondary: #dbdbdb;
-$h-color: #222222;
+@mixin dark-colors {
+  --background-color: fixed
+    linear-gradient(hsla(239, 50%, 20%, 1), var(--purple-50) 80%);
+  --link-color: var(--aqua-84);
+  --body-color: white;
+  --header-color: var(--magenta-90);
+  --h1-color: var(--purple-68);
+  --h2-color: var(--magenta-60);
+  --h3-color: var(--lime-70);
+  --h4-color: var(--magenta-90);
+  --nav-link-color: var(--aqua-84);
+  --link-hover-color: var(--magenta-90);
+  --post-subtitle-color: var(--aqua-84);
+  --accent-color: var(--aqua-84);
+  --accent-hover-color: var(--lime-70);
+  --date-color: var(--grey-mid);
+  --inline-code-color: var(--lime-70);
+  --blockquote-background-color: rgba(245, 245, 245, 0.5);
+  --content-box-color: hsla(239, 15%, 12%, 0.95);
+  --header-glow-color-1: var(--magenta-70);
+  --header-glow-color-2: var(--magenta-50);
+  --header-hover-color: var(--lime-90);
+  --header-glow-hover-color-1: var(--lime-70);
+  --header-glow-hover-color-2: var(--lime-50);
+  --header-stars-display: inline-block;
+  --skyscraper-display: block;
+  --palmtree-display: none;
+  --paint-frame-filter: none;
+  --chroma-keyword: hsl(326, 100%, 74%);
+  --chroma-background: hsl(231, 15%, 18%);
+  --chroma-string: hsl(65, 92%, 76%);
+  --chroma-literal: var(--purple-80);
+  --chroma-code: hsl(60, 30%, 96%);
+  --chroma-comment: hsl(225, 27%, 80%);
+  --chroma-name: hsl(135, 94%, 65%);
+  --body-font-weight: 'wght' 375;
+  --footer-background: linear-gradient(
+    hsla(0, 0%, 100%, 0) 40%,
+    hsla(303, 99%, 40%, 1)
+  );
+}
 
-$pink-dark: #bc38a6;
-$pink-bright: #ff3ab3;
-$pink-mid: #fa72d1;
-$pink-light: #ffade6;
+:root {
+  --background-color: fixed
+    linear-gradient(
+      hsla(201, 80%, 75%, 1),
+      var(--aqua-90),
+      var(--cherry-blossom-96)
+    );
+  --body-font-weight: 'wght' 400;
+  --link-color: var(--purple-50);
+  --body-color: var(--gunmetal-12);
+  --h1-color: var(--lilac-67);
+  --h2-color: var(--purple-68);
+  --h3-color: var(--purple-68);
+  --h4-color: var(--purple-68);
+  --nav-link-color: var(--purple-68);
+  --link-hover-color: var(--purple-68);
+  --post-subtitle-color: var(--blush);
+  --accent-color: var(--magenta-70);
+  --accent-hover-color: var(--lilac-67);
+  --date-color: var(--grey-mid);
+  --inline-code-color: var(--purple-50);
+  --skyscraper-display: none;
+  --palmtree-display: block;
+  --blockquote-background-color: rgba(153, 119, 119, 0.5);
+  --content-box-color: rgba(255, 255, 255, 0.8);
+  --header-hover-color: var(--magenta-90);
+  --header-glow-hover-color-1: var(--magenta-80);
+  --header-glow-hover-color-2: var(--magenta-70);
+  --header-color: var(--cherry-blossom-96);
+  --header-glow-color-1: var(--cherry-blossom-86);
+  --header-glow-color-2: var(--cherry-blossom-70);
+  --header-stars-display: none;
+  --separator: url('/icons/heart-bullet.svg');
+  --chroma-background: hsl(251, 16%, 39%);
+  --chroma-string: hsl(55, 100%, 84%);
+  --chroma-literal: hsl(262, 100%, 82%);
+  --chroma-code: hsl(60, 30%, 96%);
+  --chroma-comment: hsl(50, 100%, 88%);
+  --chroma-name: hsl(339, 100%, 86%);
+  --chroma-keyword: var(--aqua-84);
+}
 
-$blue-light: #4accff;
-$turquoise: #46f0e2;
-$turquoise-light: #46f0e2;
-$turquoise-dark: #01a59f;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: 'dark';
+  }
 
-$chartreuse: #bafd9b;
+  :root:not([data-user-color-scheme]) {
+    @include dark-colors;
+  }
+}
 
-$background-color: 'background-color';
-$link-color: 'link-color';
-$body-color: 'body-color';
-$header-color: 'header-color';
-$h1-color: 'h1-color';
-$h2-color: 'h2-color';
-$h3-color: 'h3-color';
-$h4-color: 'h4-color';
-$link-hover-color: 'link-hover-color';
-$post-subtitle-color: 'post-subtitle-color';
-$accent-color: 'accent-color';
-$accent-hover-color: 'accent-hover-color';
-$date-color: 'date-color';
-$light-theme: 'light-theme';
-$dark-theme: 'dark-theme';
-$inline-code-color: 'inline-code-color';
-$code-block-background-color: 'code-block-background-color';
-$blockquote-background-color: 'blockquote-background-color';
+[data-user-color-scheme='dark'] {
+  @include dark-colors;
+}
 
-$themes: (
-  $light-theme: (
-    $background-color: $white,
-    $link-color: $pink-dark,
-    $body-color: $grey-dark,
-    $header-color: $purple-mid,
-    $h1-color: $pink-dark,
-    $h2-color: $pink-dark,
-    $h3-color: $purple-mid,
-    $h4-color: $purple-mid,
-    $link-hover-color: $pink-mid,
-    $post-subtitle-color: $purple-mid,
-    $accent-color: $turquoise-dark,
-    $accent-hover-color: $turquoise,
-    $date-color: $grey-mid,
-    $inline-code-color: $purple-mid,
-    $code-block-background-color: $purple-grey,
-    $blockquote-background-color: rgba(245, 245, 245, 0.5),
-  ),
-  $dark-theme: (
-    $background-color: $grey-darkest,
-    $link-color: $turquoise-light,
-    $body-color: $white,
-    $header-color: $turquoise,
-    $h1-color: $pink-bright,
-    $h2-color: $pink-bright,
-    $h3-color: $purple-light-bright,
-    $h4-color: $blue-light,
-    $link-hover-color: $chartreuse,
-    $post-subtitle-color: $turquoise,
-    $accent-color: $chartreuse,
-    $accent-hover-color: $pink-bright,
-    $date-color: $grey-light,
-    $inline-code-color: $purple-light-bright,
-    $code-block-background-color: $purple-dark,
-    $blockquote-background-color: lighten($grey-darkest, 10),
-  ),
-);
-
-$family-sans-serif: Nunito Sans, sans-serif;
 $title-weight: 300;
 $weight-bold: 600;
 
@@ -91,49 +132,14 @@ $tablet: 768px;
 $desktop: 960px;
 $desktop-lg: 1025px;
 
-/* https://dev.to/chicio/add-dark-mode-support-on-your-website-with-sass-and-prefers-color-scheme-media-query-2p1 */
-@mixin themeProperty(
-  $theme,
-  $property,
-  $color,
-  $additionalPropertiesPositionIsFront,
-  $additionalProperties
-) {
-  @if $additionalPropertiesPositionIsFront {
-    #{$property}: unquote(
-      $additionalProperties + ' ' + map-get($theme, $color)
-    );
-  } @else {
-    #{$property}: unquote(
-      map-get($theme, $color) + ' ' + $additionalProperties
-    );
-  }
-}
-
-@mixin theme(
-  $property,
-  $color,
-  $additionalPropertiesPositionIsFront: false,
-  $additionalProperties: ''
-) {
-  $light: map-get($themes, $light-theme);
-  $dark: map-get($themes, $dark-theme);
-
-  @include themeProperty(
-    $light,
-    $property,
-    $color,
-    $additionalPropertiesPositionIsFront,
-    $additionalProperties
-  );
-
-  @media (prefers-color-scheme: dark) {
-    @include themeProperty(
-      $dark,
-      $property,
-      $color,
-      $additionalPropertiesPositionIsFront,
-      $additionalProperties
-    );
-  }
+.visually-hidden {
+  display: block;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(1px);
+  white-space: nowrap;
+  position: absolute;
 }

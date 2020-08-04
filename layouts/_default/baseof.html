@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
     {{ block "head" . }}
     {{ partial "head/metadata.html" . }}
     {{ partial "head/openGraph.html" . }}
     {{ partial "head/favicons.html" . }}
+    {{ block "js-include" . }}
+    {{ partial "head/scripts.html" . }}
+    {{ end }}
     {{ partial "head/css.html" . }}
+
     {{ end }}
     <!-- Include page specific css -->
     {{ block "customCSS" . }}
@@ -14,13 +18,15 @@
 </head>
 
 <body id="top">
+    {{ partial "svg/defs.html" . }}
+
     <a href="#content" class="skip-link">Skip to main content</a>
     {{ partial "header/header.html" . }}
 
-    {{ if .IsHome}}
+    <!-- {{ if .IsHome}}
     {{ partial "intro.html" . }}
-    {{ end }}
-    
+    {{ end }} -->
+
     <main class="main-container" id="content">
         {{ block "main" . }}
         {{ end }}
@@ -30,16 +36,13 @@
     {{ partial "sidebar.html" . }}
     {{ end }}
     {{end}}
-    {{ partial "top-icon.html" . }}
 
 
     {{ block "footer" . }}
-    {{ partial "footer/text.html" . }}
+    {{ partial "footer/footer.html" . }}
     {{ end }}
 
-    {{ block "js-include" . }}
-    {{ partial "footer/scripts.html" . }}
-    {{ end }}
+
 
     <!-- Include page specific scripts -->
     {{ block "customScripts" . }}
