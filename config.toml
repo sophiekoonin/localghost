@@ -19,7 +19,7 @@ pluralizeListTitles = false
     email                        = "sophie@localghost.dev"   # E-mail address for contact section
     customCSS                    = ["syntax.css"]             # Include custom css files placed under assets/
     twitterUsername = "@type__error"
-    description = "One engineer's thoughts on tech, coding and the community"
+    description = "The tech-related writings of Sophie Koonin, a tiny but opinionated web developer in London, UK"
 
     # Configure the home page
     [params.home]

@@ -10,7 +10,7 @@
 <meta name="twitter:title" content="{{ .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end }}">
 <meta name="twitter:site" content="@type__error">
 <meta name="twitter:description"
-  content="{{ if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
 
 {{ with .Resources.ByType "image" }}
 {{ range first 1 (sort . "Params.weight") }}
@@ -18,6 +18,6 @@
 <meta property="twitter:image" content="{{ .Permalink }}" />
 {{ end }}
 {{ else }}
-<meta property="og:image" content="{{ .Site.BaseURL }}img/og-ghost.png" />
-<meta property="twitter:image" content="{{ .Site.BaseURL }}img/og-ghost.png" />
+<meta property="og:image" content="{{ .Site.BaseURL }}img/twitter-og.png" />
+<meta property="twitter:image" content="{{ .Site.BaseURL }}img/twitter-og.png" />
 {{ end }}
