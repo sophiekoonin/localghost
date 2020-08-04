@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+:root {
+  @include mq($from: desktop) {
+    font-size: 17px;
+  }
+}
+
 *:focus {
   outline: none;
   border-bottom: 4px solid var(--accent-color);

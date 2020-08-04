@@ -12,6 +12,8 @@ You're welcome to steal any code from this site, just promise me you'll have a g
 
 Like many other people in the early 00s, I learnt to build websites by clicking `View Source`, copying bits I liked, then changing them slightly. It's a bit more complicated than it used to be, but I still strongly believe in learning from others and passing it on.
 
+If you encounter any accessibility/usability issues while on the site, please do let me know and I'll fix them ASAP.
+
 ### Credits
 
 - Heart icon by [randomhero @ Noun Project](https://thenounproject.com/rahedesigns/collection/heart-pixel-rating/)

@@ -143,6 +143,9 @@
     margin-bottom: -1.5rem;
     @include mq($from: tablet) {
       grid-column: 5 / span 2;
+      justify-self: end;
+    }
+    @include mq($from: desktop) {
       justify-self: center;
     }
   }
