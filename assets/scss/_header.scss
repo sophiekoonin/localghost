@@ -5,7 +5,7 @@
     1px 0 50px $color2, 1px 0 50px $color2;
 }
 .sun-anim {
-  position: absolute;
+  position: fixed;
   width: 15vw;
   top: -15px;
   left: -15px;
@@ -20,6 +20,13 @@
   }
   #moon-or-sun {
     display: none;
+    appearance: none;
+    cursor: pointer;
+    --webkit-appearance: none;
+    border: 0;
+    background: none;
+    padding: 0;
+    margin: 0;
     @include mq($from: tablet) {
       background-repeat: no-repeat;
       background-position: center center;

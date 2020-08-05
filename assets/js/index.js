@@ -69,6 +69,10 @@ darkModeCheckbox.addEventListener('click', (evt) => {
   animateSunOut();
   applyColorSetting(toggleColorSetting());
 });
+moonOrSun.addEventListener('click', (evt) => {
+  animateSunOut();
+  applyColorSetting(toggleColorSetting());
+});
 
 applyColorSetting();
 
