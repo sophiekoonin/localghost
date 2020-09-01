@@ -13,11 +13,8 @@ This was an error caused by our `Content-Security-Policy` (CSP) header, telling 
 
 The error messages I was getting were protecting me against a common web security vulnerability - **cross-site scripting attacks** (XSS). As a web developer, it's really important to be aware of what XSS is and how to prevent it.
 
-<!-- omit in toc -->
+## Contents <!-- omit in toc -->
 
-## Contents
-
-- [Contents](#contents)
 - [Cross-site scripting (XSS)](#cross-site-scripting-xss)
   - [Stored XSS](#stored-xss)
   - [Reflected XSS](#reflected-xss)

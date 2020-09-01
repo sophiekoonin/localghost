@@ -2,6 +2,10 @@
   margin-bottom: 1em;
   line-height: 1.75em;
 
+  .preamble {
+    font-style: italic;
+  }
+
   .chroma {
     background-color: var(--chroma-background);
   }
@@ -54,7 +58,7 @@
   }
 
   strong {
-    font-weight: 600;
+    font-variation-settings: 'wght' 650;
   }
 
   hr {

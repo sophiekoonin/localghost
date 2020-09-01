@@ -30,6 +30,11 @@ h1.post-title {
   &-body {
     @include content-box;
     padding: 1.5rem;
+
+    h2 {
+      margin: inherit;
+      margin-top: 2rem;
+    }
   }
   &-item {
     display: block;
