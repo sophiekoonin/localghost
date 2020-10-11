@@ -5,7 +5,7 @@ draft: true
 tags: ['design', 'accessibility']
 ---
 
-In an ideal world, being "good at accessibility" wouldn't make you stand out from the crowd. Companies wouldn't be hiring acessibility experts to help them unpick and untangle the inaccessible products they've been building for years. Speaking about web accessibility at a conference would be as unnecessary as getting up on stage and giving a talk on how to write HTML.
+In an ideal world, being "good at accessibility" wouldn't make you stand out from the crowd. Companies wouldn't be hiring accessibility experts to help them unpick and untangle the inaccessible products they've been building for years. Speaking about web accessibility at a conference would be as unnecessary as getting up on stage and giving a talk on how to write HTML.
 
 But we don't live in that world, and the web is full of inaccessible websites. Try navigating the [Liberty London](https://libertylondon.com) website with just your keyboard - can you add something to your basket?
 
@@ -81,7 +81,7 @@ So much of the world around us can influence whether or not we have, or consider
 
 I've heard this one a lot. And as a web developer I feel like I’m often turning around to designers and saying “Sorry, I can’t do that, because it’s not accessible”. (The best designers will then turn around and say, "okay, let's find something that works better.")
 
-It’s easy to imagine that in order for design to be truly accessible you have to build sites that look like the [first-ever web page](http://info.cern.ch/hypertext/WWW/TheProject.html). That’s not the case.
+It’s easy to imagine that in order for design to be truly accessible you have to build sites that look like the [first-ever web page](http://info.cern.ch/hypertext/WWW/TheProject.html), but that’s not the case.
 
 The reality is that accessible design _is_ good design - and vice versa.
 
@@ -91,7 +91,7 @@ As Jessie Hausler, the Director of Product Accessibility at Salesforce, wrote in
 
 > “Accessibility will not force you to make a product that is ugly, boring, or cluttered. It will introduce a set of constraints to incorporate as you consider your design.”
 
-If we can work within the constraints of the technology we're building for, we can also work within the constraints of accessible design as well.
+If we can work within the constraints of the technology we're building for, or the constraints of what's in style, we can also work within the constraints of accessible design as well.
 
 ## Myth 5: Accessibility is hard to implement
 
@@ -101,7 +101,8 @@ But if you consider accessibility from the _start_, factoring it into your desig
 
 As web developers, by sticking to some best practices in HTML we're already halfway there:
 
-- using semantic HTML elements such as `<button>` and `<nav>` to mark up the different parts of the document
+- using semantic HTML elements such as `<article>` and `<nav>` to mark up the different parts of the document
+- using `<button>` for buttons with `onclick` attributes, and `<a>` for links to different pages (and not adding `onclick` attributes to anything except buttons!)
 - nesting headings correctly, from `h1` through to `h6` , with only one `h1` on the page
 - keeping HTML tags for markup, and using CSS for style (rather than, say, using a `<h1>` tag because you want big text)
 
@@ -125,9 +126,9 @@ Ideally, your SPA should also work with JavaScript turned off - with React we ha
 
 ## Myth 7: Automated testing will catch all accessibility problems
 
-People loooove to show off their Lighthouse scores, don't they?
+People love to show off their Lighthouse scores, don't they?
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) is an open-source automated testing tool that you can run as a Node module, from the CLI, from Chrome or as part of your CI checks. It checks for performance, accessibility, progressive web app performance, best practices and SEO. Don't get me wrong, it's a great tool, but unfortunately it's often treated as a silver bullet. A high Lighthouse score is a good thing, but it doesn't mean that you've ticked off accessibility - there are always things that Lighthouse won't be able to detect.
+[Lighthouse](https://developers.google.com/web/tools/lighthouse/) is an open-source automated testing tool that you can run as a Node module, from the CLI, from Chrome or as part of your CI checks. It checks for performance, accessibility, progressive web app performance, best practices and SEO. Don't get me wrong, it's a great tool, but unfortunately it's often treated as a silver bullet. A high Lighthouse score is a good thing, but it doesn't mean that you've "done" saccessibility - there are always things that Lighthouse won't be able to detect.
 
 The best way to test accessibility is to build up a toolkit of methods. Lighthouse (or similar tools, such as [axe](https://www.deque.com/axe/)) can and should be part of your toolkit, as it'll provide a quick feedback loop for common accessibility problems in your markup and CSS.
 

@@ -1,23 +1,21 @@
-<meta property="og:title" content="{{ .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end }}" />
-<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end }}"/>
+<meta property="og:type" content="website"/>
 <meta property="og:description"
-  content="{{ if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
-<meta property="og:url" content="{{ .Permalink }}" />
-<meta property="og:site_name" content="{{ .Site.Title }}" />
-<meta property="og:locale" content="en_GB" />
+  content="{{ if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}"/>
+<meta property="og:url" content="{{ .Permalink }}"/>
+<meta property="og:site_name" content="{{ .Site.Title }}"/>
+<meta property="og:locale" content="en_GB"/>
 
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end }}">
 <meta name="twitter:site" content="@type__error">
 <meta name="twitter:description"
   content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
 
-{{ with .Resources.ByType "image" }}
-{{ range first 1 (sort . "Params.weight") }}
-<meta property="og:image" content="{{ .Permalink }}" />
-<meta property="twitter:image" content="{{ .Permalink }}" />
-{{ end }}
+{{ with .Resources.GetMatch "images/og-image.png" }}
+  <meta property="og:image" content="{{ .RelPermalink }}"/>
+  <meta property="twitter:image" content="{{ .RelPermalink }}"/>
 {{ else }}
-<meta property="og:image" content="{{ .Site.BaseURL }}img/twitter-og.png" />
-<meta property="twitter:image" content="{{ .Site.BaseURL }}img/twitter-og.png" />
+  <meta property="og:image" content="{{ .Site.BaseURL }}img/base-og-image.png"/>
+  <meta property="twitter:image" content="{{ .Site.BaseURL }}img/base-og-image.png"/>
 {{ end }}
