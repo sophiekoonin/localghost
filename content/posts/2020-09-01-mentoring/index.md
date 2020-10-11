@@ -1,5 +1,5 @@
 ---
-title: 'Teaching Code as a Foreign Language - Part 1: How to be a great mentor'
+title: 'Mentoring like a teacher: '
 date: '2020-09-01'
 draft: true
 tags: ['mentoring', 'core skills']
@@ -10,8 +10,8 @@ summary: "Learn the teaching skills that taught me how to be a great mentor, whe
 
 - [What constitutes mentoring?](#what-constitutes-mentoring)
 - [Knowing your mentee](#knowing-your-mentee)
-  - [What are their goals?](#what-are-their-goals)
-  - [How do they learn best?](#how-do-they-learn-best)
+  - [Understand their goals](#understand-their-goals)
+  - [Learn how they learn best](#learn-how-they-learn-best)
   - [Making the most of learning resources](#making-the-most-of-learning-resources)
 - [Building skills](#building-skills)
 - [Mentoring through pair programming](#mentoring-through-pair-programming)
@@ -28,14 +28,13 @@ Mentoring can take many forms: it can be a formal arrangement between you and a 
 
 {{< img src="*/nodegirls-redbadger.png" caption="Node Girls workshop at Red Badger, 2018" alt="" >}}
 
-
 Regardless of how much knowledge and experience you have, mentoring can be very challenging. It's a big task to get information out of your brain into someone else's, and it's not necessarily as simple as "you talk, they listen". Think about everything that we do as developers - everything that's involved with building websites and apps. It's easy to imagine that it's pretty overwhelming for mentors to even know where to start, let alone the people they're mentoring.
 
 Leaving the onus on yourself as the mentor to come up with everything can be pretty exhausting, and make you enjoy the mentoring experience much less. It's important to let your mentee guide you - after all, it's a two-way relationship, and you need to know why your mentee is there in the first place.
 
 ## Knowing your mentee
 
-### What are their goals?
+### Understand their goals
 
 For my English students, there were a few reasons they would be having lessons. Some of them wanted to become fluent, and some needed to take IELTS, an English language qualification in order to get into a university or for work. Some were just looking to improve their conversational English so they could get by on holiday. These goals influence the kind of thing they needed to learn, as well as their approach to learning, and even their enthusiasm for the course.
 
@@ -43,7 +42,7 @@ It's the same for your mentee. Why are they learning to code? Why have you been 
 
 Just as I wouldn’t teach someone learning conversational English how to write an academic essay, you don’t want to confuse someone who wants to build a simple static webpage by teaching them bubble sort or how to use service workers. Knowing what their goals are will help you narrow down those topics. You don’t need to write an entire lesson plan or structure some kind of curriculum, but it helps to make a list of the kind of things you think you should cover.
 
-### How do they learn best?
+### Learn how they learn best
 
 As well as knowing what the end goal of the learner is, it also helps to know how they learn best - that is, what techniques are most effective when they’re learning something new.
 
@@ -58,7 +57,6 @@ Ask your learner what their preferred methods are, and maybe you can point them 
 And if you’re leading a workshop or teaching a group, you’ll want to **mix and match** some of these formats. A lot of your sessions are likely to be very hands-on coding time, but you might punctuate this with mentors pairing with students, or getting students to demonstrate what they’ve done and explaining how they’ve done it. Many students will benefit from teaching things themselves, as it can be a great way to consolidate learning.
 
 {{< img src="*/learning-resources.png" caption="What's your preferred way of learning?" alt="Various different learning resources, such as videos, books, articles and pairing" >}}
-
 
 Provide some **resources for further reading** on the topics you’re teaching for students to read in their own time - granted many of them probably won’t, but some will. Make sure you include videos as well as reading material.
 
@@ -132,21 +130,24 @@ It’s also important to **choose your questions wisely**, and be careful how yo
 
 And if they do get the answer wrong, rather than saying “no, that’s not right”, say something like “not quite” or “close” - be encouraging. And if necessary, give a refresher if people really don’t know the answer.
 
-Ultimately, your mileage may vary on this one: it's not a subtle technique, the person you're eliciting from will know exactly what you're doing! 
+Ultimately, your mileage may vary on this one: it's not a subtle technique, the person you're eliciting from will know exactly what you're doing!
 
 ## How to get started with mentoring
-I've given you a few things to think about here, and I hope you find them useful. Getting to know your mentee and understanding their motivations will help you teach them what they need to know, and techniques like pairing are great for the more immersive side of learning. 
 
-If you'd like to become a mentor, there are plenty of opportunities out there - though most of them are online at the moment. 
+I've given you a few things to think about here, and I hope you find them useful. Getting to know your mentee and understanding their motivations will help you teach them what they need to know, and techniques like pairing are great for the more immersive side of learning.
+
+If you'd like to become a mentor, there are plenty of opportunities out there - though most of them are online at the moment.
 
 ### Coding workshops
-* Become a coach at [Codebar](https://codebar.io)
-* Teach a [Code First Girls](https://codefirstgirls.org.uk/) course 
-* Teach kids at a [Coder Dojo](https://zen.coderdojo.com/find)
+
+- Become a coach at [Codebar](https://codebar.io) - virtual workshops going on in 2020!
+- Teach a [Code First Girls](https://codefirstgirls.org.uk/) course
+- Teach kids at a [Coder Dojo](https://zen.coderdojo.com/find)
 
 ### In your organisation
-* Offer to onboard a new hire
-* Help a more junior developer get the skills they need to level up
-* Mentor a non-techie who wants to get into development
 
-If you know of a mentoring opportunity I haven't listed here, please tweet at me and I'll add it in! 
+- Offer to onboard a new hire
+- Help a more junior developer get the skills they need to level up
+- Mentor a non-techie who wants to get into development
+
+If you know of a mentoring opportunity I haven't listed here, please tweet at me and I'll add it in!

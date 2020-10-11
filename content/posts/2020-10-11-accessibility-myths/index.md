@@ -45,7 +45,7 @@ In the US, there's the Americans with Disabilities Act (ADA). Famously, [Domino'
 
 ## Myth 3: Access needs come from permanent disabilities
 
-The truth is, anyone at any time can have access needs, and they can be permanent, temporary or situational. Temporary impairments might be due to a temporary medical condition, and situational impairments may result from the environment around us - a situation we're in.
+The truth is, anyone at any time can have access needs, and they can be permanent, temporary or situational. Temporary impairments might be due to a medical condition, and situational impairments may result from the environment around us - a situation we're in.
 
 Some examples of permanent conditions:
 
@@ -91,17 +91,17 @@ As Jessie Hausler, the Director of Product Accessibility at Salesforce, wrote in
 
 > “Accessibility will not force you to make a product that is ugly, boring, or cluttered. It will introduce a set of constraints to incorporate as you consider your design.”
 
-If we can work within the constraints of the technology we're building for, or the constraints of what's in style, we can also work within the constraints of accessible design as well.
+If we can work within the constraints of the technology we're building for, or the constraints of what's in style, we can work within the constraints of accessible design.
 
 ## Myth 5: Accessibility is hard to implement
 
-This one has a grain of truth in: accessibility can be difficult to _retro-fit_. If you've built an entire web app without considering accessibility, it can take a lot of time (and cost money) to go back and fix it up so that it's accessible.
+This one has a grain of truth in: accessibility can be difficult to implement _retrospectively_. If you've built an entire web app without considering accessibility, it can take a lot of time (and cost money) to go back and fix it up so that it's accessible.
 
 But if you consider accessibility from the _start_, factoring it into your designs and the way you write your code, it doesn't have to be difficult. Accessibility by default is a lot easier than accessibility after the fact.
 
 As web developers, by sticking to some best practices in HTML we're already halfway there:
 
-- using semantic HTML elements such as `<article>` and `<nav>` to mark up the different parts of the document
+- using semantic HTML elements such as `<article>` and `<nav>` to mark up the different parts of the document (I'll write more about this soon!)
 - using `<button>` for buttons with `onclick` attributes, and `<a>` for links to different pages (and not adding `onclick` attributes to anything except buttons!)
 - nesting headings correctly, from `h1` through to `h6` , with only one `h1` on the page
 - keeping HTML tags for markup, and using CSS for style (rather than, say, using a `<h1>` tag because you want big text)
@@ -118,7 +118,7 @@ One of the arguments against React that I hear most frequently is that React pro
 
 Ultimately, screen readers tend to ignore `<div>` components, as they're generic containers. If we use semantic HTML elements for the actual content of the page, there shouldn't be a problem at all from a markup perspective.
 
-React components can't return more than one element, so with older versions of React you had to wrap multiple elements in a container `<div>`. This would have added a few extra containers to the page. But the introduction of [React Fragments](https://reactjs.org/docs/fragments.html) solved that (and often doesn't result in any additional elements being added to the DOM).
+React components can't return more than one element, so with older versions of React you had to wrap multiple elements in a container `<div>`. This would have added a few extra containers to the page. But the introduction of [React Fragments](https://reactjs.org/docs/fragments.html) solved that, and usually doesn't result in any additional elements being added to the DOM.
 
 Another thing to watch out for is screen readers not alerting users when content on the page changes. This isn't a React problem specifically but a [single-page application (SPA) problem](https://codeburst.io/building-accessible-single-page-apps-2ea3e4fbbc01), and it can be solved with ARIA live regions. You'd still have this problem if you built your app in vanilla JavaScript.
 
@@ -128,11 +128,9 @@ Ideally, your SPA should also work with JavaScript turned off - with React we ha
 
 People love to show off their Lighthouse scores, don't they?
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) is an open-source automated testing tool that you can run as a Node module, from the CLI, from Chrome or as part of your CI checks. It checks for performance, accessibility, progressive web app performance, best practices and SEO. Don't get me wrong, it's a great tool, but unfortunately it's often treated as a silver bullet. A high Lighthouse score is a good thing, but it doesn't mean that you've "done" saccessibility - there are always things that Lighthouse won't be able to detect.
+[Lighthouse](https://developers.google.com/web/tools/lighthouse/) is an open-source automated testing tool that you can run as a Node module, from the CLI, from Chrome or as part of your CI checks. It checks for performance, accessibility, progressive web app performance, best practices and SEO. It's a great tool, but unfortunately it's often treated as a silver bullet. A high Lighthouse score is a good thing, but it doesn't mean that you've "done" accessibility - there are always things that Lighthouse won't be able to detect.
 
-The best way to test accessibility is to build up a toolkit of methods. Lighthouse (or similar tools, such as [axe](https://www.deque.com/axe/)) can and should be part of your toolkit, as it'll provide a quick feedback loop for common accessibility problems in your markup and CSS.
-
-What these tools don't account for are things like the quirks of different screenreader software (and boy, do they have quirks), or the other kinds of assistive technology people will use to access your website. Lighthouse can't tell you whether your site is still legible when it's zoomed in 600%, or whether you can interact with the various parts of the app with a keyboard as you would with a mouse.
+The best way to test accessibility is to approach it from all sides. Automated tooling such as Lighthouse or [axe](https://www.deque.com/axe/)) can and should be part of your development process, as it'll provide a quick feedback loop for common accessibility problems in your markup and CSS. But what these tools don't account for are things like the quirks of different screenreader software (and boy, do they have quirks), or the other kinds of assistive technology people will use to access your website. Lighthouse can't tell you whether your site is still legible when it's zoomed in 600%, or whether you can interact with the various parts of the app with a keyboard as you would with a mouse.
 
 Before you merge your PR, check how your new feature behaves with screenreaders: Macs and iPhones come with [VoiceOver](https://www.apple.com/uk/accessibility/iphone/vision/), Android has [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en), Linux has [Orca](https://help.gnome.org/users/orca/stable/introduction.html.en), and you can download the open-source [NVDA](https://www.nvaccess.org/download/) screenreader for Windows. Does it read out everything it's supposed to? Is it reading out anything it's _not_ supposed to? Are the headings in the right order?
 
