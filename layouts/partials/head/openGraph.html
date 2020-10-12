@@ -13,8 +13,8 @@
   content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
 
 {{ with .Resources.GetMatch "images/og-image.png" }}
-  <meta property="og:image" content="{{ .RelPermalink }}"/>
-  <meta property="twitter:image" content="{{ .RelPermalink }}"/>
+  <meta property="og:image" content="{{ .Permalink }}"/>
+  <meta property="twitter:image" content="{{ .Permalink }}"/>
 {{ else }}
   <meta property="og:image" content="{{ .Site.BaseURL }}img/base-og-image.png"/>
   <meta property="twitter:image" content="{{ .Site.BaseURL }}img/base-og-image.png"/>
