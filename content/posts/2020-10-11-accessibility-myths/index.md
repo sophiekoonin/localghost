@@ -1,7 +1,6 @@
 ---
 title: '7 myths designers and developers believe about web accessibility'
 date: '2020-10-11'
-draft: true
 tags: ['design', 'accessibility']
 ---
 
@@ -130,7 +129,7 @@ People love to show off their Lighthouse scores, don't they?
 
 [Lighthouse](https://developers.google.com/web/tools/lighthouse/) is an open-source automated testing tool that you can run as a Node module, from the CLI, from Chrome or as part of your CI checks. It checks for performance, accessibility, progressive web app performance, best practices and SEO. It's a great tool, but unfortunately it's often treated as a silver bullet. A high Lighthouse score is a good thing, but it doesn't mean that you've "done" accessibility - there are always things that Lighthouse won't be able to detect.
 
-The best way to test accessibility is to approach it from all sides. Automated tooling such as Lighthouse or [axe](https://www.deque.com/axe/)) can and should be part of your development process, as it'll provide a quick feedback loop for common accessibility problems in your markup and CSS. But what these tools don't account for are things like the quirks of different screenreader software (and boy, do they have quirks), or the other kinds of assistive technology people will use to access your website. Lighthouse can't tell you whether your site is still legible when it's zoomed in 600%, or whether you can interact with the various parts of the app with a keyboard as you would with a mouse.
+The best way to test accessibility is to approach it from all sides. Automated tooling such as Lighthouse or [axe](https://www.deque.com/axe/)) can and should be part of your development process, as it'll provide a quick feedback loop for common accessibility problems in your markup and CSS. But what these tools don't account for are things like the quirks of different screenreader software (and boy, do they have quirks), or the other kinds of assistive technology people will use to access your website. Lighthouse can't tell you whether your site is still legible when it's zoomed in 600%, or whether you can interact with the various parts of the app with a keyboard as you would with a mouse. The Accessibility in Government blog has a great article about [what they found when they tested automated tooling on the world's least accessible webpage](https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/).
 
 Before you merge your PR, check how your new feature behaves with screenreaders: Macs and iPhones come with [VoiceOver](https://www.apple.com/uk/accessibility/iphone/vision/), Android has [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en), Linux has [Orca](https://help.gnome.org/users/orca/stable/introduction.html.en), and you can download the open-source [NVDA](https://www.nvaccess.org/download/) screenreader for Windows. Does it read out everything it's supposed to? Is it reading out anything it's _not_ supposed to? Are the headings in the right order?
 
@@ -147,3 +146,4 @@ If you encounter any of these myths, **you can (and should) challenge them**. A 
 - [Deque - Accessible Design](https://www.deque.com/accessible-design/)
 - [Deque - Accessible Development](https://www.deque.com/accessible-development/)
 - [Marcy Sutton](https://marcysutton.com/) - blog posts and talks from an accessibility expert
+- [What we found when we tested tools on the world's least accessible webpage](https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/) - Accessibility in Government Blog
