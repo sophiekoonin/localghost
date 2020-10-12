@@ -16,6 +16,9 @@ Repeat after me: there's no such thing as a "typical" or "normal" user.
 
 When we're designing and building websites or apps, it's all too easy to forget that we are coming from a narrow perspective. My own abilities, experiences and knowledge shape how I interact with a website, and my experience may be totally different from yours. So even if you know instinctively that a particular icon means "download", others might not make that connection.
 
+{{< img src="*/spiderman-point.jpg"  alt="Spiderman pointing at himself" caption="Is this how you see your users?" >}}
+
+
 Microsoft's brilliant [Inclusive Design Toolkit](https://www.microsoft.com/design/inclusive/) warns of the consequences of this selective thinking:
 
 > “If we use our own abilities and biases as a starting point, we end up with products designed for people of a specific gender, age, language ability, tech literacy, and physical ability. Those with specific access to money, time, and a social network.”
@@ -82,6 +85,8 @@ I've heard this one a lot. And as a web developer I feel like I’m often turnin
 
 It’s easy to imagine that in order for design to be truly accessible you have to build sites that look like the [first-ever web page](http://info.cern.ch/hypertext/WWW/TheProject.html), but that’s not the case.
 
+{{< img src="*/accessible-web-page.png"  alt="A screenshot of the first ever web page on cern.ch: white background, black text, blue hyperlinks, no styling whatsoever." caption="Is this... accessible design?" >}}
+
 The reality is that accessible design _is_ good design - and vice versa.
 
 When it comes down to it, can we really call a design good if it doesn’t work for everyone? You can build the sleekest, prettiest user interface, but if someone who uses the keyboard to get around the internet can’t see what they’re doing, are we really going to call that good design?
@@ -126,6 +131,8 @@ Ideally, your SPA should also work with JavaScript turned off - with React we ha
 ## Myth 7: Automated testing will catch all accessibility problems
 
 People love to show off their Lighthouse scores, don't they?
+
+{{< img src="*/lighthouse-badges.png"  alt="A screenshot of a github repo that offers Lighthouse badges for your repository or website so you can brag about your site's awesome Lighthouse performance" caption="Is it though?" >}}
 
 [Lighthouse](https://developers.google.com/web/tools/lighthouse/) is an open-source automated testing tool that you can run as a Node module, from the CLI, from Chrome or as part of your CI checks. It checks for performance, accessibility, progressive web app performance, best practices and SEO. It's a great tool, but unfortunately it's often treated as a silver bullet. A high Lighthouse score is a good thing, but it doesn't mean that you've "done" accessibility - there are always things that Lighthouse won't be able to detect.
 
