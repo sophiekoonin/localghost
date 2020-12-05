@@ -5,13 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy"
-    content="default-src 'none'; manifest-src 'self'; worker-src 'none'; object-src 'self'; font-src 'self'; connect-src 'self'; img-src 'self' https://flickr.com data:; script-src 'self' {{ if eq .Site.IsServer true }}'unsafe-inline'{{ end }} {{ .Site.BaseURL }}; style-src 'self'">
+    content="default-src 'none'; manifest-src 'self'; worker-src 'self'; object-src 'self'; font-src 'self'; connect-src 'self'; img-src 'self' blob: https://flickr.com data:; script-src 'self' {{ if eq .Site.IsServer true }}'unsafe-inline'{{ end }} {{ .Site.BaseURL }}; style-src 'self'">
 {{ if .Site.Params.description }}
-<meta name="description" content="{{ .Site.Params.description }}">{{ end }}
+    <meta name="description" content="{{ .Site.Params.description }}">{{ end }}
 <title>
-    {{ .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end }}
+    {{ .Title }}
+    {{ if ne .Title .Site.Title }} - {{ .Site.Title }}
+    {{ end }}
 </title>
 <!-- RSS -->
 {{ with .OutputFormats.Get "rss" -}}
-{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ printf `<link rel="%s" type="%s" href="%s" ti
+    tle="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
