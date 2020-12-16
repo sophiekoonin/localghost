@@ -2,7 +2,6 @@
 title: 'Give yourself a break: lessons from burnout'
 date: '2020-12-16'
 tags: ['2020', 'burnout']
-draft: true
 summary: "I started writing this post a few days ago, and was so exhausted I couldn't actually be bothered to finish it, which tells you a lot really. Here are some lessons from the trash fire of 2020 that we can take over into the slightly-smaller-but-still-burning trash fire of 2021. "
 ---
 
