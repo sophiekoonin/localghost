@@ -7,7 +7,9 @@ summary: 'A guide to cross-site scripting (XSS) attacks and the HTTP Content-Sec
 
 I spent an entire day last week wrestling with a PDF-rendering library in React which was refusing to work in production. Locally it ran just fine, but as soon as we built our app in production mode, it wasn't doing anything. Looking at the console, the errors it was spitting out made my heart sink. I'd seen these before.
 
-{{< img src="*/eval-error.png" caption="The dreaded console error" alt="Console error: Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: script-src 'self'." >}}
+{{< figure caption="The dreaded console error" >}}
+{{< img src="*/eval-error.png" alt="Console error: Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: script-src 'self'." >}}
+{{</ figure >}}
 
 This was an error caused by our `Content-Security-Policy` (CSP) header, telling our browser that something in the library should be blocked - specifically, an `eval()` function within one of the dependencies of our PDF-rendering library. I did what any self-respecting developer would do and complained at anyone who would listen - okay, I posted on Twitter - and then discovered that a lot of other developers weren't aware of what CSP was or what it was for. So I thought I'd write a post about it.
 
@@ -111,7 +113,9 @@ Some of the methods we can use to prevent XSS attacks on our websites include:
 
 `Content-Security-Policy` is an additional layer of security on a site, preventing things like malicious scripts from being run by defining strict rules about what content you can and can't have on a website. It can be one of the HTTP headers that we can send from the web server to the client (browser), or a meta tag in the `<head>` of an HTML page. A browser will read the CSP and check whether the scripts, stylesheets and various other resources it's executing or displaying conform to the rules in the policy. If not, it won't load them.
 
-{{< img src="*/gandalf.png" caption="CSP is basically Browser Gandalf." alt="" >}}
+{{< figure caption="CSP is basically Browser Gandalf." >}}
+{{< img src="*/gandalf.png"  alt="Gandalf from Lord of the Rings saying 'you shall not pass'" >}}
+{{</ figure >}}
 
 A CSP meta tag may look a bit like this, for a site with Google Analytics and some Twitter/Facebook embeds, and images from a CDN:
 
@@ -120,7 +124,9 @@ A CSP meta tag may look a bit like this, for a site with Google Analytics and so
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; manifest-src 'none'; prefetch-src 'none'; worker-src 'none'; object-src 'self'; font-src *; connect-src 'self' https://www.google-analytics.com; img-src 'self' https://some-cdn.com; script-src 'self' https://platform.twitter.com https://www.google-analytics.com https://connect.facebook.net https://staticxx.facebook.com; style-src 'self' https://platform.twitter.com">
 {{< /highlight >}}
 
-{{< img src="*/csp-error.png" caption="An example Content-Security-Policy error from Google" alt="Console error: Refused to load the script 'http://evil.example.com/evil.js' because it violates the following Content Security Policy directive: script-src 'self' https://apis.google.com" >}}
+{{< figure caption="An example Content-Security-Policy error from Google" >}}
+{{< img src="*/csp-error.png" alt="Console error: Refused to load the script 'http://evil.example.com/evil.js' because it violates the following Content Security Policy directive: script-src 'self' https://apis.google.com" >}}
+{{</ figure >}}
 
 The CSP header or meta tag content is always a string containing a semicolon-separated list of rules.
 

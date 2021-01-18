@@ -110,7 +110,9 @@ Here, Alice took us through a brief history of git (including a very entertainin
 
 > "Why are we so bad at git?"
 
-{{< img src="*/alicebartlett-git.jpg" alt="Picture of LEGO heads that says 'you are in a detached HEAD state'" caption="Everything is confusing" >}}
+{{< figure caption="Everything is confusing" >}}
+{{< img src="*/alicebartlett-git.jpg" alt="Picture of LEGO heads that says 'you are in a detached HEAD state'" >}}
+{{</ figure >}}
 
 A lot of the problem is the jargon and the impenetrable docs, Alice argued - and I agree with her there, having never read a man page that I understood.
 

@@ -16,7 +16,9 @@ That's me right now. I'm currently preparing my first ever conference talk for [
 
 Just a few.
 
-{{< img src="*/240108-01.jpeg" alt="347 new interactions on Twitter" caption="What a thing to wake up to." class="big" >}}
+{{< figure caption="What a thing to wake up to." class="big" >}}
+{{< img src="*/240108-01.jpeg" alt="347 new interactions on Twitter" >}}
+{{</ figure >}}
 
 I got so many fantastic tips and suggestions—including some from experienced speakers like [Sarah Drasner](https://www.twitter.com/sarah_edo), [Dan Abramov](https://www.twitter.com/dan_abramov) and [Anjuan Simmons](https://www.twitter.com/anjuan) — that one user suggested I turn it into a blog post. So here it is. (Thanks to [@sayzlim](https://www.twitter.com/sayzlim) for the suggestion!)
 
@@ -44,7 +46,6 @@ Keep your slide theme nice and simple, and consider whether the theme you have c
 
 If you're putting code in your slides, **don't go overboard.** Sometimes it's inevitable — for example if you're talking about how a particular tool or library works —but as [@alexmcpherson](https://www.twitter.com/alexmcpherson) suggests, it's best to keep them short, 8–10 lines of code maximum. You can always share a repo or a CodePen link with your audience afterwards.
 
-{{<tweet 955600922440282112 >}}
 
 ## Practice makes perfect
 

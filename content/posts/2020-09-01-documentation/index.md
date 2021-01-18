@@ -68,8 +68,9 @@ Similarly, in a section on the basics of GraphQL, we have a link to skip to the 
 
 *Register* is a linguistic concept which means a variety of language used for a particular purpose or situation. For example, I would use a more simplified version of English when talking to my class, whereas when I’m writing a blog post I might use words like “whereas”. Often it’s less conscious, for example you might use more slang with your friends or peers than with your manager without even thinking about it. 
 
-
-{{< img src="*/toneofvoice.png" alt="" caption="Monzo's tone of voice" >}}
+{{< figure caption="Monzo's tone of voice" >}}
+{{< img src="*/toneofvoice.png" alt="" >}}
+{{</ figure >}}
 
 When it comes to written language, especially in a business context, we tend to talk about tone of voice. This is almost like the register of your writing - how you say what you’re saying. At Monzo we have a very distinctive [friendly tone of voice](https://monzo.com/blog/2018/03/27/tone-of-voice) which is aimed at making sure all our customers can understand things like terms and conditions and weird banking jargon, which there is loads of. Our tone of voice was drafted by our amazing head of writing, Harry Ashbridge, and the article has some great tips for keeping your writing simple and clear. It's worth a read! 
 
@@ -116,7 +117,9 @@ A great way to explain technical concepts simply is to use real-world analogies.
 
 A few years back I worked on a team where I was implementing an OAuth-style authentication flow with refresh tokens, and our product manager wanted to know what it involved - she had no background in tech. So I ended up illustrating it using a ridiculous analogy involving a secret clubhouse.
 
-{{< img src="*/stonecutters.png" caption="Who keeps refresh tokens up to date? We do." alt="The Stonecutters secret society from the Simpsons." >}}
+{{< figure caption="Who keeps refresh tokens up to date? We do." >}}
+{{< img src="*/stonecutters.png" alt="The Stonecutters secret society from the Simpsons." >}}
+{{</ figure >}}
 
 You say a password to get in, but then there’s a secret handshake (the access token) you need to speak to anyone. The handshake changes every 5 minutes, and you are given a special badge (the refresh token) that you need to show when you want to learn the new handshake. And when you leave the clubhouse, they take the badge off you, and you get a new one next time you come in. It was silly, but it got the message across.
 

@@ -142,6 +142,9 @@
     margin: 2rem auto;
     max-width: 100%;
   }
+  a img:hover {
+    opacity: 75%;
+  }
 
   .caption {
     font-size: 0.9rem;

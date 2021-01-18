@@ -16,8 +16,9 @@ Repeat after me: there's no such thing as a "typical" or "normal" user.
 
 When we're designing and building websites or apps, it's all too easy to forget that we are coming from a narrow perspective. My own abilities, experiences and knowledge shape how I interact with a website, and my experience may be totally different from yours. So even if you know instinctively that a particular icon means "download", others might not make that connection.
 
-{{< img src="*/spiderman-point.jpg"  alt="Spiderman pointing at himself" caption="Is this how you see your users?" >}}
-
+{{< figure caption="Is this how you see your users?" >}}
+{{< img src="*/spiderman-point.jpg"  alt="Spiderman pointing at himself" >}}
+{{</ figure >}}
 
 Microsoft's brilliant [Inclusive Design Toolkit](https://www.microsoft.com/design/inclusive/) warns of the consequences of this selective thinking:
 
@@ -132,7 +133,9 @@ Ideally, your SPA should also work with JavaScript turned off - with React we ha
 
 People love to show off their Lighthouse scores, don't they?
 
-{{< img src="*/lighthouse-badges.png"  alt="A screenshot of a github repo that offers Lighthouse badges for your repository or website so you can brag about your site's awesome Lighthouse performance" caption="Is it though?" >}}
+{{< figure caption="Is it though?" >}}
+{{< img src="*/lighthouse-badges.png"  alt="A screenshot of a github repo that offers Lighthouse badges for your repository or website so you can brag about your site's awesome Lighthouse performance" >}}
+{{</ figure >}}
 
 [Lighthouse](https://developers.google.com/web/tools/lighthouse/) is an open-source automated testing tool that you can run as a Node module, from the CLI, from Chrome or as part of your CI checks. It checks for performance, accessibility, progressive web app performance, best practices and SEO. It's a great tool, but unfortunately it's often treated as a silver bullet. A high Lighthouse score is a good thing, but it doesn't mean that you've "done" accessibility - there are always things that Lighthouse won't be able to detect.
 

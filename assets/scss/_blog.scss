@@ -190,3 +190,11 @@ h1.post-title {
     width: 16px;
   }
 }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
