@@ -48,8 +48,8 @@ I've been thinking a lot about [spoon theory](https://butyoudontlooksick.com/art
 Generally after dinner we'll watch TV, or continue playing video games next to each other because we're adults and make sensible choices. Sometimes I'll pick up whatever embroidery I have in progress and do it while we watch TV - I'm currently embroidering my wedding flowers. 
 
 {{< gallery >}}
-{{< img src="*/embroidery.jpg"  alt="An embroidery in progress featuring statice, a peony, roses and a gerbera " >}}
-{{< img src="*/wedding-flowers.jpg"  alt="">}}
+{{< img class="inset-image" src="*/embroidery.jpg"  alt="An embroidery in progress featuring statice, a peony, roses and a gerbera " >}}
+{{< img class="inset-image" src="*/wedding-flowers.jpg"  alt="">}}
 {{</ gallery >}}
 
 I've started keeping a little journal of good things that happen every day. They can be as minor as "made a [really nice pie](https://www.bbcgoodfood.com/recipes/aubergine-tomato-halloumi-pie)" or something like "got really positive feedback on the proposal I wrote". I tend to fixate on negative things, so having written evidence that good stuff is still happening should hopefully anchor me a bit and remind me of the positive side. I recommend it! Plus it's an excuse to buy a notebook and some nice pens.

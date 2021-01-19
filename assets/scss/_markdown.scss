@@ -184,7 +184,8 @@
     border: 0;
   }
 
-  figure {
+  figure,
+  .inset-image {
     &.big {
       img {
         max-width: 100%;

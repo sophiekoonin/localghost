@@ -17,7 +17,7 @@ Repeat after me: there's no such thing as a "typical" or "normal" user.
 When we're designing and building websites or apps, it's all too easy to forget that we are coming from a narrow perspective. My own abilities, experiences and knowledge shape how I interact with a website, and my experience may be totally different from yours. So even if you know instinctively that a particular icon means "download", others might not make that connection.
 
 {{< figure caption="Is this how you see your users?" >}}
-{{< img src="*/spiderman-point.jpg"  alt="Spiderman pointing at himself" >}}
+{{< img class="inset-image" src="*/spiderman-point.jpg"  alt="Spiderman pointing at himself" >}}
 {{</ figure >}}
 
 Microsoft's brilliant [Inclusive Design Toolkit](https://www.microsoft.com/design/inclusive/) warns of the consequences of this selective thinking:
@@ -86,7 +86,7 @@ I've heard this one a lot. And as a web developer I feel like I’m often turnin
 
 It’s easy to imagine that in order for design to be truly accessible you have to build sites that look like the [first-ever web page](http://info.cern.ch/hypertext/WWW/TheProject.html), but that’s not the case.
 
-{{< img src="*/accessible-web-page.png"  alt="A screenshot of the first ever web page on cern.ch: white background, black text, blue hyperlinks, no styling whatsoever." caption="Is this... accessible design?" >}}
+{{< img class="inset-image" src="*/accessible-web-page.png"  alt="A screenshot of the first ever web page on cern.ch: white background, black text, blue hyperlinks, no styling whatsoever." caption="Is this... accessible design?" >}}
 
 The reality is that accessible design _is_ good design - and vice versa.
 
@@ -134,7 +134,7 @@ Ideally, your SPA should also work with JavaScript turned off - with React we ha
 People love to show off their Lighthouse scores, don't they?
 
 {{< figure caption="Is it though?" >}}
-{{< img src="*/lighthouse-badges.png"  alt="A screenshot of a github repo that offers Lighthouse badges for your repository or website so you can brag about your site's awesome Lighthouse performance" >}}
+{{< img class="inset-image" src="*/lighthouse-badges.png"  alt="A screenshot of a github repo that offers Lighthouse badges for your repository or website so you can brag about your site's awesome Lighthouse performance" >}}
 {{</ figure >}}
 
 [Lighthouse](https://developers.google.com/web/tools/lighthouse/) is an open-source automated testing tool that you can run as a Node module, from the CLI, from Chrome or as part of your CI checks. It checks for performance, accessibility, progressive web app performance, best practices and SEO. It's a great tool, but unfortunately it's often treated as a silver bullet. A high Lighthouse score is a good thing, but it doesn't mean that you've "done" accessibility - there are always things that Lighthouse won't be able to detect.

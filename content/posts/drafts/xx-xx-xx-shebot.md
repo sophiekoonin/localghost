@@ -17,15 +17,15 @@ So when I found myself printing off attendance sheets and then manually typing i
 
 SHEBot posts in Slack every week on rehearsal day, inviting all our members to emoji react with whether they are coming or not. It also gives people an opportunity to volunteer to run a warmup or facilitate the rehearsal, and shows information about what songs we'll be doing.
 
-{{< img src="*/post-1.png" alt="A Slack post with a message inviting people to RSVP to rehearsal."  >}}
+{{< img class="inset-image" src="*/post-1.png" alt="A Slack post with a message inviting people to RSVP to rehearsal."  >}}
 
 As well as posting on the day, the bot posts reminders four days before rehearsal, with info about what's coming up and a reminder to listen to recordings of the songs to get them fresh in your mind.
 
-{{< img src="*/rehearsal-msg.png" alt="A message reminding people about what's coming up next week"  >}}
+{{< img class="inset-image" src="*/rehearsal-msg.png" alt="A message reminding people about what's coming up next week"  >}}
 
 The reactions from each attendance post are collected and displayed in a report alongside some stats about attendance in the last four weeks. This tells me who I need to get in touch with!
 
-{{< img src="*/attendance-report.png" alt="A report showing who hasn't been responding to the attendance posts"  >}}
+{{< img class="inset-image" src="*/attendance-report.png" alt="A report showing who hasn't been responding to the attendance posts"  >}}
 
 ## How it works
 
@@ -62,7 +62,7 @@ Since we don't rehearse on public holidays, I needed to find a way to prevent th
 
 Earlier versions of the app had the configuration hardcoded, but the Slack [App Home beta](https://api.slack.com/surfaces/tabs) enabled me to build an actual UI for configuration. This allows me to distribute the app to other SHE Choirs (and we have quite a few now!) and make the setup less complex than slash commands would've been.
 
-{{< img src="*/app-home.png" alt="A configuration dashboard built on Slack's App Home beta"  >}}
+{{< img class="inset-image" src="*/app-home.png" alt="A configuration dashboard built on Slack's App Home beta"  >}}
 
 When a user opens the App Home for an application, Slack sends a payload to the app's Event Subscriptions request URL. 
 
@@ -114,8 +114,8 @@ The App Home is also built using the Block Kit UI - this time, using section blo
 
 The attendance posts are customisable - you can choose which blocks you want, and in which order. The Block Kit provides a multi-select input which was perfect for this. 
 
-{{< img src="*/att-blocks-1.png" alt="Preview of attendance messages"  >}}
-{{< img src="*/att-blocks-2.png" alt="Multi-select list to choose blocks for attendance messages"  >}}
+{{< img class="inset-image" src="*/att-blocks-1.png" alt="Preview of attendance messages"  >}}
+{{< img class="inset-image" src="*/att-blocks-2.png" alt="Multi-select list to choose blocks for attendance messages"  >}}
 
 The block IDs are stored in an array in the database, and then when it's time to post a message, the app checks the team's config and only posts the blocks in that array. 
 

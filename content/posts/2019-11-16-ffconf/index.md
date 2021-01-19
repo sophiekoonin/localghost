@@ -50,7 +50,7 @@ Opening the conference was author and communications consultant Sharon Steed. Sh
 
 She compared empathy to love; "the thing everyone understands, but nobody can explain". It's intangible, but it's also a choice: we can _choose_ to have empathy for others (and we should). (Her tales of new love were accompanied by _that_ picture of Britney and Justin in denim, which was an all around win for me.)
 
-{{< img src="*/sharonsteed-1.jpg" alt="" >}}
+{{< img class="inset-image" src="*/sharonsteed-1.jpg" alt="" >}}
 
 So, what to take away from Sharon's talk? We should **foster environments of collaboration and inclusion**. People need to feel safe in order to speak honestly - having open lines of communication and being transparent from the start will help this. She also pointed out that teams don't always need to work in the same way: people should be able to do things on their own terms.
 
@@ -75,7 +75,7 @@ Her words were powerful, and the measured way she spoke really conveyed the grav
 
 She spoke of the generosity of strangers: the bootcamp alumni who all answered her questions when she contacted them out of the blue, happy to give advice. And while bootcamps are a great way to fast-track your career into tech, they're also very exclusionary for anyone with caring responsibilities, and they can be very expensive. She spoke of her experiences raising a baby while also learning to code, which frankly blew my mind - learning to code is really hard (don't let anyone tell you otherwise!) so to do that while also looking after a very young child is just phenomenal.
 
-{{< img src="*/aminaadewusi-1.jpg" alt="" >}}
+{{< img class="inset-image" src="*/aminaadewusi-1.jpg" alt="" >}}
 
 For those who self-teach, it's hard to get a job once you've learned the skills. More often than not, recruitment is unforgiving, with high expectations, long interview processes and unreasonable deadlines (Amina recalled being sent a tech test on a Friday, with the expectation she'd send it back on the Monday!). It's not just the time it takes, either - the interview process can be very intimidating and sometimes discriminatory.
 
@@ -111,7 +111,7 @@ Here, Alice took us through a brief history of git (including a very entertainin
 > "Why are we so bad at git?"
 
 {{< figure caption="Everything is confusing" >}}
-{{< img src="*/alicebartlett-git.jpg" alt="Picture of LEGO heads that says 'you are in a detached HEAD state'" >}}
+{{< img class="inset-image" src="*/alicebartlett-git.jpg" alt="Picture of LEGO heads that says 'you are in a detached HEAD state'" >}}
 {{</ figure >}}
 
 A lot of the problem is the jargon and the impenetrable docs, Alice argued - and I agree with her there, having never read a man page that I understood.
@@ -141,7 +141,7 @@ Laura highlighted the ridiculous amount of information that various sites have a
 
 She touched on the Cambridge Analytica scandal - "tracking affects democracy" - and how companies can manipulate people through precise targeting based on their interests, knowing exactly what will make them tick. Facebook's latest ad campaign got a shout out for being totally hypocritical - when you choose to share something with "Only Me" or "Friends" you're also sharing it with Facebook!
 
-{{< img src="*/laurakalbag-1.jpg" alt="">}}
+{{< img class="inset-image" src="*/laurakalbag-1.jpg" alt="">}}
 
 Companies make it worse by having incomprehensible terms and conditions, filled with legal jargon. When you consider that 1 in 6 people in England have very poor literacy skills (source: [National Literacy Trust](https://literacytrust.org.uk/parents-and-families/adult-literacy/)) it's especially problematic. Sites like Facebook are a lifeline for many people, but if they can't understand what they're signing up for is it really consent?
 
@@ -198,7 +198,7 @@ In the spirit of the Live Demo, Anna was going to show us how the Lighthouse int
 - Using an image's intrinsic ratio to show placeholders and prevent text from jumping around as images load
 - Splitting CSS into a critical path stylesheet and others that can be loaded separately
 
-{{< img src="*/annamigas-1.jpg" alt="" >}}
+{{< img class="inset-image" src="*/annamigas-1.jpg" alt="" >}}
 
 ffconf talk page: [Effortless Performance Debugging](https://ffconf.org/talks/effortless-performance-debugging/)
 
@@ -219,7 +219,7 @@ In Charlotte's case, she bridges the gap between digital and physical art, using
 
 Using `nth-child` pseudoselectors, she showed us how you can create an abstract pattern from a series of squares and circles. She's done a few of these, and used them as wall art for her studio!
 
-{{< img src="*/charlottedann-1.jpg" alt="" >}}
+{{< img class="inset-image" src="*/charlottedann-1.jpg" alt="" >}}
 
 She's also the founder of [Hexatope](https://hexatope.io/), a web app that lets you draw beautiful patterns on a hexagonal grid and get them cast into silver and gold jewellery. The designs are incredible, and it's really fun to play with.
 
@@ -242,7 +242,7 @@ I was super excited for Suz's talk, as I've followed her online for some time an
 
 Using a thermal receipt printer, the Web Media API and the Web USB API, Suz recreated her very own Gameboy Printer! She also showed off her web app that lets you upload Arduino programs directly to the Arduino via the browser, which made me think I should dig out the Arduino I've had in a drawer for several years and never used. (We've all got a drawer like that.)
 
-{{< img src="*/suzhinton-1.jpg" alt="" >}}
+{{< img class="inset-image" src="*/suzhinton-1.jpg" alt="" >}}
 
 The tone of the talk shifted considerably when Suz started talking about ownership over computers and data. She cited a 1985 ruling by the Federal Communications Commission which allocated the 900MHz frequency band to industrial, scientific and medical uses. Amateur radio users were allowed to use the band if they liked, as long as it didn't interfere with the protected uses.
 

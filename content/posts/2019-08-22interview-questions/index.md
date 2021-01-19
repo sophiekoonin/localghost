@@ -5,7 +5,7 @@ tags: ['interviews', 'advice', 'work']
 summary: "Tech job interviews are often different flavours of the same thing, regardless of where you apply. Interviewers are likely to ask you questions about your experiences, perhaps a hypothetical question about what you might do in a certain situation, or delve into some of the how-it-works stuff under the hood of whatever programming language you'll be using. However, there's one question that you can *guarantee* will come up: 'Do you have any questions for us?'"
 ---
 
-{{< img src="*/silicon-valley-crushed-it.png" alt="A still from the HBO series Silicon Valley in which two interviewers are asking a candidate 'it says here on your resume that from 2010 to 2011, you crushed it?'"  >}}
+{{< img class="inset-image" src="*/silicon-valley-crushed-it.png" alt="A still from the HBO series Silicon Valley in which two interviewers are asking a candidate 'it says here on your resume that from 2010 to 2011, you crushed it?'"  >}}
 
 Tech job interviews are often different flavours of the same thing, regardless of where you apply. Interviewers are likely to ask you questions about your experiences, perhaps a hypothetical question about what you might do in a certain situation, or delve into some of the how-it-works stuff under the hood of whatever programming language you'll be using. However, there's one question that you can _guarantee_ will come up:
 

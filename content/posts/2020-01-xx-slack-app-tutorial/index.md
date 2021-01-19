@@ -19,7 +19,7 @@ You'll also need [`ngrok`](https://ngrok.io/download) to test the app locally wi
 
 You'll then need to register a new app with Slack by going to [Your Apps](https://api.slack.com/apps) and clicking "Create new app". Give it a name, and select your test workspace from the dropdown.
 
-{{< img src="*/slack-create.png" alt="The Slack create app dialog" >}}
+{{< img class="inset-image" src="*/slack-create.png" alt="The Slack create app dialog" >}}
 
 Once you've done this, you'll be taken to the configuration for your app - leave this open, we'll come back to it shortly.
 

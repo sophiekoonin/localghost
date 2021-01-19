@@ -27,7 +27,7 @@ summary: "Learn the teaching skills that taught me how to be a great mentor, whe
 Mentoring can take many forms: it can be a formal arrangement between you and a mentee, or it can be something a bit more transient such as onboarding someone new into the team. Perhaps you're pairing up with a more junior developer to help them learn the skills they need to progress, or maybe you're attending [Codebar](https://codebar.io) sessions to help someone out now and then.
 
 {{< figure caption="Node Girls workshop at Red Badger, 2018" >}}
-{{< img src="*/nodegirls-redbadger.png" alt="" >}}
+{{< img class="inset-image" src="*/nodegirls-redbadger.png" alt="" >}}
 {{</ figure >}}
 
 Regardless of how much knowledge and experience you have, mentoring can be very challenging. It's a big task to get information out of your brain into someone else's, and it's not necessarily as simple as "you talk, they listen". Think about everything that we do as developers - everything that's involved with building websites and apps. It's easy to imagine that it's pretty overwhelming for mentors to even know where to start, let alone the people they're mentoring.
@@ -59,7 +59,7 @@ Ask your learner what their preferred methods are, and maybe you can point them 
 And if you’re leading a workshop or teaching a group, you’ll want to **mix and match** some of these formats. A lot of your sessions are likely to be very hands-on coding time, but you might punctuate this with mentors pairing with students, or getting students to demonstrate what they’ve done and explaining how they’ve done it. Many students will benefit from teaching things themselves, as it can be a great way to consolidate learning.
 
 {{< figure caption="What's your preferred way of learning?" >}}
-{{< img src="*/learning-resources.png" alt="Various different learning resources, such as videos, books, articles and pairing" >}}
+{{< img class="inset-image" src="*/learning-resources.png" alt="Various different learning resources, such as videos, books, articles and pairing" >}}
 {{</ figure >}}
 
 Provide some **resources for further reading** on the topics you’re teaching for students to read in their own time - granted many of them probably won’t, but some will. Make sure you include videos as well as reading material.
@@ -73,7 +73,7 @@ If you’re teaching someone to speak English, you’re not going to sit them do
 With a programmer who’s looking to build up their skills and take on more advanced work, it’s the same. As a senior developer and a now a tech lead I need to make sure more junior developers have the opportunities they need to build on the skills they want to improve. So the first thing I do is find out what those skills are - by asking them! - and then having a look through the tickets we’ve got prioritised to see what would give them the **right amount of stretch** without completely overwhelming them. Make sure they know you are on hand to unblock them if they get stuck, and if they are taking a really long time, it may be time to intervene and help out if it’s affecting the team’s progress. **Don’t let them struggle on their own**.
 
 {{< figure caption="CodeWars has some great kata" >}}
-{{< img src="*/codewars-screenshot.png" alt="" >}}
+{{< img class="inset-image" src="*/codewars-screenshot.png" alt="" >}}
 {{</ figure >}}
 
 For newcomers to programming, short coding exercises (often called **kata**) are really helpful. They introduce you to basic concepts one at a time, allowing you to put them into practice before moving on. Think about it: English students can learn a list of vocab, but it’s pretty meaningless until you know how to use them in a sentence and you’ve actually produced the sentence yourself. The same goes for learning to code: an `if` statement is meaningless until you’ve actually used one and seen the outcome.

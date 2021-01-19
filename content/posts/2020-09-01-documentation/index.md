@@ -29,7 +29,7 @@ This is Part 2 of a two-part series on the skills I learned as an English teache
 Ahh, documentation. A developer's best friend. It's often seen as a chore, and may even be skipped entirely, but the power of good documentation shouldn’t be underestimated. Good documentation can be the difference between someone getting their work done efficiently, and having to stop all the time to find someone to answer questions. (Or alternatively, being interrupted constantly throughout the day because there's no documentation for something you're the expert in.)
 
 
-{{< img src="*/giphy-api.png" alt="" >}}
+{{< img class="inset-image" src="*/giphy-api.png" alt="" >}}
 
 
 I'm not just talking about formal documentation here, either: this includes everything from the humble README through to code comments and even Slack posts. Documentation might be kept in the repo alongside our code, or it might be hosted elsewhere. Maybe you write tutorials and blog posts to share with others. Conference talks and video tutorials count, too - they may not be written media, but they are still used as technical instructions, so the rules definitely apply. 
@@ -40,7 +40,7 @@ And just like with [mentoring](/2020/09/teaching-code-as-a-foreign-language-part
 
 A while back I put together a self-guided tutorial as an introduction to web at Monzo, with   contributions from the wider web team. It's basically teaching!
 
-{{< img src="*/web101-contents.png" alt="The contents of Web 101, split into sections, from development environment setup through to functionality, accessibility, analytics and testing" >}}
+{{< img class="inset-image" src="*/web101-contents.png" alt="The contents of Web 101, split into sections, from development environment setup through to functionality, accessibility, analytics and testing" >}}
 
 As we’re only a small team of web engineers, much of the web work for our internal tooling is done by backend engineers in sponsoring teams. Not all of them are super familiar with how we do web at Monzo, so we needed something to teach them best practices and the basics of things like accessibility and testing. I also wanted to create an onboarding document for new starters in web. So Web 101 was born, to cover both of those bases. It’s been really well received, and a lot of that is down to the way it was written.
 
@@ -58,7 +58,7 @@ In the world of teaching, teachers will assign work for the level of the majorit
 
 With Web 101, we broke everything up into sections so that a developer starting from the beginning could work all the way through, but someone with a bit more context could pick and choose the section that was most applicable to them. The advantage of this was that it’s also easy to link to particular sections from other documentation, so for example we have the section on developer environment setup linked from various READMEs. 
 
-{{< img src="*/graphql-web101.png" alt="A section from Web 101 explaining what GraphQL is, with a link that says 'I'm familiar GraphQL, take me to the bit where I can write stuff'" >}}
+{{< img class="inset-image" src="*/graphql-web101.png" alt="A section from Web 101 explaining what GraphQL is, with a link that says 'I'm familiar GraphQL, take me to the bit where I can write stuff'" >}}
 
 Similarly, in a section on the basics of GraphQL, we have a link to skip to the actual tutorial work if the reader doesn’t need the primer on what GraphQL actually is. 
 
@@ -69,7 +69,7 @@ Similarly, in a section on the basics of GraphQL, we have a link to skip to the 
 *Register* is a linguistic concept which means a variety of language used for a particular purpose or situation. For example, I would use a more simplified version of English when talking to my class, whereas when I’m writing a blog post I might use words like “whereas”. Often it’s less conscious, for example you might use more slang with your friends or peers than with your manager without even thinking about it. 
 
 {{< figure caption="Monzo's tone of voice" >}}
-{{< img src="*/toneofvoice.png" alt="" >}}
+{{< img class="inset-image" src="*/toneofvoice.png" alt="" >}}
 {{</ figure >}}
 
 When it comes to written language, especially in a business context, we tend to talk about tone of voice. This is almost like the register of your writing - how you say what you’re saying. At Monzo we have a very distinctive [friendly tone of voice](https://monzo.com/blog/2018/03/27/tone-of-voice) which is aimed at making sure all our customers can understand things like terms and conditions and weird banking jargon, which there is loads of. Our tone of voice was drafted by our amazing head of writing, Harry Ashbridge, and the article has some great tips for keeping your writing simple and clear. It's worth a read! 
@@ -83,7 +83,7 @@ When teaching English students, we had to be careful not to assume they already 
 With documentation, assuming too much prior knowledge can have the same effect. You need to make sure your reader has sufficient context and understanding for your documentation to be useful. If you don’t want to spend the time explaining the background knowledge required, put in a section at the beginning outlining what the required background is and add some links to find out more. That way, the reader can prepare themselves for your article. 
 
 
-{{< img src="*/usequery-web101.png" alt="" >}}
+{{< img class="inset-image" src="*/usequery-web101.png" alt="" >}}
 
 
 In Web 101 we take engineers through creating a new view on our internal customer service system, BizOps. We made sure to add a background on what BizOps actually is and how it’s used before getting into the code. We’ve also added explanations for various concepts for whoever needs them, but as **callouts** rather than in the body text of the tutorial so that it’s easy to skip over them if you don’t need it. For example, when we’re guiding the reader through adding a GraphQL query, we explain what React hooks are in a callout before going into the detail of Apollo’s `useQuery` hook. 
@@ -96,7 +96,7 @@ I’d recommend getting a less experienced developer than you to read through yo
 A great game we used to play with our English students was [Articulate](https://www.drumondpark.com/articulate_cards) - where you are given a word, and you have to explain what it means to your team without using the actual word (and they have to guess). It was a fantastic way for students to practise both their vocabulary, and explaining things - description skills are useful in foreign languages when you can’t remember the word you want to say! I once bought tissues in a pharmacy in Spain by asking for something like “small paper for my nose". 
 
 
-{{< img src="*/articulate.png" alt="" >}}
+{{< img class="inset-image" src="*/articulate.png" alt="" >}}
 
 
 It’s something we had to do as teachers too, because if a student asks what a word means, we can’t use that word to explain it! And we have to explain its meaning in words that the student can understand. 
@@ -107,7 +107,7 @@ Being able to describe technical concepts in simple terms is such a useful skill
 
 If you want to practise your skills explaining technical concepts, why not put together a list of words and have a game of Programming Articulate with your colleagues? It may sound a bit silly, but it’s actually really good practice for being better communicators. The non-technical folk in your team will be glad for it when you can explain exactly what you’re working on in non-technical terms. 
 
-{{< img src="*/schema-web101.png" alt="">}}
+{{< img class="inset-image" src="*/schema-web101.png" alt="">}}
 
 In Web 101 we could assume a base level of programming knowledge, but things like GraphQL wouldn’t be familiar to everyone so we had to explain them. The tutorial centres around doughnuts and writing a frontend view to manage doughnut purchases, so using this to illustrate what a schema looks like, we explain exactly what queries and mutations are, and what the various constructs in the schema do. Significant words are bolded, and explanations are simple, not too wordy.  
 
@@ -118,7 +118,7 @@ A great way to explain technical concepts simply is to use real-world analogies.
 A few years back I worked on a team where I was implementing an OAuth-style authentication flow with refresh tokens, and our product manager wanted to know what it involved - she had no background in tech. So I ended up illustrating it using a ridiculous analogy involving a secret clubhouse.
 
 {{< figure caption="Who keeps refresh tokens up to date? We do." >}}
-{{< img src="*/stonecutters.png" alt="The Stonecutters secret society from the Simpsons." >}}
+{{< img class="inset-image" src="*/stonecutters.png" alt="The Stonecutters secret society from the Simpsons." >}}
 {{</ figure >}}
 
 You say a password to get in, but then there’s a secret handshake (the access token) you need to speak to anyone. The handshake changes every 5 minutes, and you are given a special badge (the refresh token) that you need to show when you want to learn the new handshake. And when you leave the clubhouse, they take the badge off you, and you get a new one next time you come in. It was silly, but it got the message across.
@@ -137,8 +137,8 @@ With documentation, explaining *why* will help the reader to understand what the
 
 Giving the additional context will make things seem clearer to the reader, and make it seem less like magic. 
 
-{{< img src="*/why-transpile.png" alt="A section of Web 101, which says 'The build script checks for Flow type errors, transpiles our nice fancy syntatic-sugared JavaScript and React code into browser-readable JavaScript using Babel, and bundles it using Webpack.' Followed by a callout that says 'Wondering why we need to transpile JavaScript? Check out this article while you're waiting for the build: JavaScript Transpilers - What they are and why we need them.'" >}}
-{{< img src="*/why-semantic.png" alt="A section of Web 101. A list of semantic HTML tags, followed by the explanation: using these semantic elements builds a map of landmarks on the page, allowing it to understand what each part of the page does and where the important elements are. This means assitive technology like screen readers can jump to the relevant sections and help the user navigate the page." >}}
+{{< img class="inset-image" src="*/why-transpile.png" alt="A section of Web 101, which says 'The build script checks for Flow type errors, transpiles our nice fancy syntatic-sugared JavaScript and React code into browser-readable JavaScript using Babel, and bundles it using Webpack.' Followed by a callout that says 'Wondering why we need to transpile JavaScript? Check out this article while you're waiting for the build: JavaScript Transpilers - What they are and why we need them.'" >}}
+{{< img class="inset-image" src="*/why-semantic.png" alt="A section of Web 101. A list of semantic HTML tags, followed by the explanation: using these semantic elements builds a map of landmarks on the page, allowing it to understand what each part of the page does and where the important elements are. This means assitive technology like screen readers can jump to the relevant sections and help the user navigate the page." >}}
 
 
 In Web 101 we made sure to explain things like *why* we have to run a build script when browsers already understand JavaScript (to transpile the React code), or *why* we should be using semantic HTML (accessibility and clarity). It gives that extra bit of background, and especially with the semantic HTML it makes the reader more likely to actually use it in the future.

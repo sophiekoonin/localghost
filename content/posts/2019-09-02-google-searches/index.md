@@ -7,7 +7,7 @@ summary: "In an attempt to dispel the idea that if you have to google stuff you'
 
 In an attempt to dispel the idea that if you have to google stuff you're not a proper engineer, this is a list of nearly everything I googled in a week at work, where I'm a software engineer with several years' experience.
 
-{{< img src="*/ground.png" alt="Threw it on the ground." >}}
+{{< img class="inset-image" src="*/ground.png" alt="Threw it on the ground." >}}
 
 Obviously these weren't all googled in a row (although you can probably spot that a few were), but throughout the day. I can't remember the context of everything I was googling, but hopefully it'll make you feel a little better next time you have to google something.
 
@@ -95,10 +95,10 @@ Obviously these weren't all googled in a row (although you can probably spot tha
 
 `the corrs` - once I hit some CORS errors I decided I needed to make a meme, and I needed to find the perfect image. It took a surprisingly long time.
 
-{{< img src="*/thecorrs-search.png" alt="Image of many many Google search results for The Corrs">}}
+{{< img class="inset-image" src="*/thecorrs-search.png" alt="Image of many many Google search results for The Corrs">}}
 
 {{< figure caption="Worth it" >}}
-{{< img src="*/thecors.jpg" alt="The CORS." >}}
+{{< img class="inset-image" src="*/thecors.jpg" alt="The CORS." >}}
 {{</ figure >}}
 
 `git patch trailing whitespace` - I was sent a git patch with some whitespace that prevented it from actually patching

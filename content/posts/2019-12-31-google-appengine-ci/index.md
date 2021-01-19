@@ -21,7 +21,7 @@ In this article I'm going to take you through:
 ## Getting started with CircleCI 
 If you're new to CircleCI, you can [sign in with GitHub](https://circleci.com/signup/). By giving it access to GitHub, it'll automatically look for your repositories and let you choose which ones to set up. Click the "Add projects" button, choose the repository for your AppEngine app, and click "Set Up Project".
 
-{{< img src="*/ci-setup.png" class="big" alt="The CircleCI project setup page showing setup options" >}}
+{{< img class="inset-image big" src="*/ci-setup.png"  alt="The CircleCI project setup page showing setup options" >}}
 
 Select the language you've used - in my case, it was Node - and it'll generate a sample CircleCI config file for you. This `config.yml` file will live in the root of your project, in a folder called `.circleci` (make sure you get the dot at the beginning). This is what CircleCI will look for in your repo to know what to do with your app. Create the folder, and follow the instructions that CircleCI gives you below the setup options to get started.
 
@@ -37,9 +37,9 @@ Now we'll set the Google credentials as an environment variable, alongside the o
 
 From your project dashboard, click the cog to bring up the project settings, and then click "Environment Variables". 
 
-{{< img src="*/ci-settings.png" alt="The gear icon that opens up CircleCI project settings" >}}
+{{< img class="inset-image" src="*/ci-settings.png" alt="The gear icon that opens up CircleCI project settings" >}}
 
-{{< img src="*/ci-env-var.png" class="big" alt="The environment variables panel in CircleCI" >}}
+{{< img class="inset-image big" src="*/ci-env-var.png" alt="The environment variables panel in CircleCI" >}}
 
 Here, you can add in the name-value pairs you need. For my Slack app, that included a Slack Client ID, Client Secret, App ID and Signing Secret. Traditionally, env var names are written in `SCREAMING_SNAKE_CASE` (e.g. `SLACK_APP_ID`).
 
@@ -218,7 +218,7 @@ If you want to have multiple deployed versions of your app - for example, a stag
 
 Contexts are defined at the organisation level, so head to your Organisation Settings page and open the "Contexts" panel.
 
-{{< img src="*/ci-context.png" alt="The CircleCI Contexts panel" >}}
+{{< img class="inset-image" src="*/ci-context.png" alt="The CircleCI Contexts panel" >}}
 
 Click the "Create Context" button, and give it a name (I've used 'Example App Production' for this tutorial). On the page for the context itself, you can add any environment variables your app needs. Any environment variables you defined earlier in the tutorial, you'll need here - including Google Cloud credentials. I created a separate Google Cloud project for my staging application, so I had a different set of Google Cloud credentials for staging and production. 
 
@@ -262,7 +262,7 @@ workflows:
 
 This workflow looks something like this:
 
-{{< img src="*/ci-workflow.png" alt="CircleCI workflow with manual approval" class="big" >}}
+{{< img class="inset-image big" src="*/ci-workflow.png" alt="CircleCI workflow with manual approval" >}}
 
 Once you approve the manual step, the next step will kick off automatically.
 
