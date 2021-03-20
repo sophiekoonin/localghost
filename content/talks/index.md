@@ -17,15 +17,15 @@ Some of the things I like to talk about include:
 
 - ReactJS Girls/Frontend NE - _Talking the Talk: how to give great conference talks_ [(video)](https://www.youtube.com/watch?v=wqrqDfZt8WE)
 - React BYOP London - _GraphQL at Monzo_
-- London Notioners - _How SHE Choir London uses Notion_
 - You Equal Tech - _The Power of the Community_
 - AsyncJS - _Teaching Code as a Foreign Language: The teaching skills that made me a better engineer_
+- ReactJS Girls - _Web Accessibility: Fact or Fiction_
+- BrumJS - _Building a piano in JavaScript_
 
 ### Conferences
 
 - ReactFest 2018 - _redux-saga: an introduction_ (video no longer available)
 - JSConf EU 2019 - _Why Communities Matter_ (Community Stage) [(video)](https://www.youtube.com/watch?v=0AmVHTTcdjs)
-- Upfront Conf 2020 - _Little JavaScript bundles of joy: splitting up a React monolith at Monzo_ (cancelled due to COVID-19)
 - CityJS 2020 - _Little JavaScript bundles of joy: splitting up a React monolith at Monzo_
 - GDG Devfest Hellas & GDG Devfest Lahore 2020 - _Teaching Code as a Foreign Language: The teaching skills that made me a better engineer_
 - Next.js Conf 2020 - _Next.JS at Monzo_
