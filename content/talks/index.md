@@ -30,6 +30,6 @@ Some of the things I like to talk about include:
 - GDG Devfest Hellas & GDG Devfest Lahore 2020 - _Teaching Code as a Foreign Language: The teaching skills that made me a better engineer_
 - Next.js Conf 2020 - _Next.JS at Monzo_
 
-### Podcasts
+### Podcasts
 
 - Texthelp Talks, March 2021 - [_6 myths designers and marketers believe about web accessibility_](https://www.texthelp.com/resources/podcasts/6-myths-designers-and-marketers-believe-about-web-accessibility/)
