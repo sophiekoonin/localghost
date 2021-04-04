@@ -40,7 +40,7 @@ Have a play: *‌*[Virtual Piano](https://virtualpiano.vercel.app/)
 
 {{< img class="inset-image" src="*/virtualpiano-screenshot.png"  alt="">}}
 
-The app itself is a [Next.js](https://nextjs.org) Typescript React app hosted on [Vercel](https://vercel.com). I figured React would make the interactivity part a bit easier, managing things like showing which keys are playing and reducing repetition when rendering the keyboard, but you could equally do it in vanilla JS. 
+The app itself is a [Next.js](https://nextjs.org) Typescript React app hosted on [Vercel](https://vercel.com). I figured React would make the interactivity part a bit easier, handling the UI updates and reducing repetition when rendering the keyboard, but you could equally do it in vanilla JS. 
 
 ### How sound works: relevant science bit
 Sound is made up of vibrations that travel as waves: the shape of the wave is known as the **waveform**. The number of vibrations in a time period gives us the **frequency** of the sound: frequency is measured in Hertz (Hz). 1 Hz is one cycle (complete wave) per second, so a frequency of 3 Hz will be 3 cycles per second. 
@@ -99,9 +99,9 @@ const audioContextRef = useRef<AudioContext>()
 {{</ highlight >}}
 
 ### The waveform
-The shape of the waveform determines the sound that’s produced. In an ideal world I'd make my virtual piano sound like an actual piano, but the virtual pianos you get in software and audio programs are using recorded samples of real piano sounds rather than algorithmically generated sounds. I wanted to generate a sound because I could do it on the client, rather than having to make the client fetch a load of massive audio files of piano sounds. Better still, I wanted *someone else* to generate the sound.
+The shape of the waveform determines the sound that’s produced. In an ideal world I'd make my virtual piano sound like an actual piano, but the virtual pianos you get in software and audio programs use recorded samples of real piano sounds rather than algorithmically generated sounds. I wanted to generate a sound because I could do it on the client, rather than having to make the client fetch a load of massive audio files. I also wanted *someone else* to generate the sound, because it's complicated.
 
-I found the [Google Chrome Labs web audio samples](https://github.com/GoogleChromeLabs/web-audio-samples/tree/gh-pages) repository, which helpfully had some waveform files including a "piano" one which I [copied into my project](https://github.com/sophiekoonin/musicaltheory/blob/master/lib/wavetable.ts). 
+I found the [Google Chrome Labs web audio samples](https://github.com/GoogleChromeLabs/web-audio-samples/tree/gh-pages) repository, which helpfully had some waveform files including a "piano" one which I [copied into my project](https://github.com/sophiekoonin/musicaltheory/blob/master/lib/wavetable.ts). It doesn't sound that much like a piano, but the important thing is that I did not have to work out how to do it myself.
 
 The function `audioCtx.createPeriodicWave` takes two arguments, `real` and `imag` - both of which are arrays of floats that define the various values of the wave. They are cosine terms and sine terms respectively, for anyone interested. 
 
