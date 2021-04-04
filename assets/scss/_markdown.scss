@@ -2,6 +2,20 @@
   margin-bottom: 1em;
   line-height: 1.75em;
 
+  .terminology {
+    dt {
+      font-variation-settings: 'wght' 600;
+      width: 25%;
+    }
+    dd {
+      flex: 1;
+    }
+    .definition {
+      margin-bottom: 0.5rem;
+      display: flex;
+    }
+  }
+
   .preamble {
     font-style: italic;
   }
