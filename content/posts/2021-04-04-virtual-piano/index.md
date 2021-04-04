@@ -9,8 +9,8 @@ tags: ['music', 'web audio api', 'react']
 
 - [Background](#background)
 - [The Virtual Piano](#the-virtual-piano)
-  - [How sound works](#how-sound-works)
-  - [Useful musical terms](#useful-musical-terms)
+  - [How sound works: relevant science bit](#how-sound-works-relevant-science-bit)
+  - [Useful musical terms: relevant words bit](#useful-musical-terms-relevant-words-bit)
 - [Building the piano](#building-the-piano)
   - [Getting started: the `AudioContext`](#getting-started-the-audiocontext)
   - [The waveform](#the-waveform)
@@ -21,9 +21,10 @@ tags: ['music', 'web audio api', 'react']
   - [Building the piano UI](#building-the-piano-ui)
   - [Playing the notes](#playing-the-notes)
   - [Playing a scale](#playing-a-scale)
-- [Inevitable problems](#inevitable-problems)
+- [Inevitable problems (and solutions)](#inevitable-problems-and-solutions)
   - [Broken oscillators](#broken-oscillators)
   - [Accessibility](#accessibility)
+- [Explore the Web Audio API](#explore-the-web-audio-api)
 
 
 ## Background
@@ -39,15 +40,14 @@ Have a play: *‌*[Virtual Piano](https://virtualpiano.vercel.app/)
 
 {{< img class="inset-image" src="*/virtualpiano-screenshot.png"  alt="">}}
 
-NB. I'm not going to go much into the background of the musical theory behind this project. I'll be covering more of that stuff in a talk with [BrumJS](https://www.meetup.com/brum_js/) on April 29th!
+The app itself is a [Next.js](https://nextjs.org) Typescript React app hosted on [Vercel](https://vercel.com). I figured React would make the interactivity part a bit easier, managing things like showing which keys are playing and reducing repetition when rendering the keyboard, but you could equally do it in vanilla JS. 
 
-The app itself is a [Next.js](https://nextjs.org) Typescript React app hosted on [Vercel](https://vercel.org). I figured React would make the interactivity part a bit easier, managing things like showing which keys are playing and reducing repetition when rendering the keyboard, but you could equally do it in vanilla JS. 
-
-### How sound works
+### How sound works: relevant science bit
 Sound is made up of vibrations that travel as waves: the shape of the wave is known as the **waveform**. The number of vibrations in a time period gives us the **frequency** of the sound: frequency is measured in Hertz (Hz). 1 Hz is one cycle (complete wave) per second, so a frequency of 3 Hz will be 3 cycles per second. 
+
 Synthesizers generate these waves programmatically using **oscillators** to make sound, and that’s what we need to do in order to be able to make sounds with Javascript. 
 
-### Useful musical terms 
+### Useful musical terms: relevant words bit 
 <dl class="terminology">
 <div class="definition"><dt>Note</dt>
 <dd>A simple musical sound. There are 12 notes in Western music, and they repeat in groups on a piano. We give each note a letter from A-G.</dd></div>
@@ -77,10 +77,13 @@ For my piano I needed
 * to generate **scales** to play
 * something for the user to interact with - a **keyboard interface**
 
+ 
 ### Getting started: the `AudioContext`
-To begin, we need to initialise an [`AudioContext`](https://developer.mozilla.org/en-US/docs/Web/API/AudioContext): the overall audio processor. We only need one for the app. 
+To use the Web Audio API we need to initialise an [`AudioContext`](https://developer.mozilla.org/en-US/docs/Web/API/AudioContext), the overall audio processor. We only need one for the whole app. The constructor lives on the global `window` object in browsers that support it (all except IE).
 
-The constructor lives on the global `window` object - we'll use that to create a `new AudioContext`.
+{{< highlight typescript >}}
+const audioContext = new window.AudioContext()
+{{</ highlight >}}
 
 In vanilla JS this would be a global variable. In my React app, I used the `useRef` hook to attach a ref to the AudioContext and keep track of it. Then, when I instantiated my AudioContext I could check to see if we already had one.
 
@@ -96,11 +99,11 @@ const audioContextRef = useRef<AudioContext>()
 {{</ highlight >}}
 
 ### The waveform
-The shape of the waveform determines the sound that’s produced. In an ideal world I'd make my virtual piano sound like an actual piano. But generally the virtual pianos you get in software and audio programs are using recorded samples of real piano sounds, rather than algorithmically generated sounds. I wanted to generate a sound because I could do it on the client, rather than having to make the client fetch a load of massive audio files of piano sounds. Better still, I wanted *someone else* to generate the sound.
+The shape of the waveform determines the sound that’s produced. In an ideal world I'd make my virtual piano sound like an actual piano, but the virtual pianos you get in software and audio programs are using recorded samples of real piano sounds rather than algorithmically generated sounds. I wanted to generate a sound because I could do it on the client, rather than having to make the client fetch a load of massive audio files of piano sounds. Better still, I wanted *someone else* to generate the sound.
 
-I found the [Google Chrome Labs web audio samples](https://github.com/GoogleChromeLabs/web-audio-samples/tree/gh-pages) repository, which helpfully had some waveform files including a "piano" one which I [copied into my project](https://github.com/sophiekoonin/musicaltheory/blob/master/utils/wavetable.ts). 
+I found the [Google Chrome Labs web audio samples](https://github.com/GoogleChromeLabs/web-audio-samples/tree/gh-pages) repository, which helpfully had some waveform files including a "piano" one which I [copied into my project](https://github.com/sophiekoonin/musicaltheory/blob/master/lib/wavetable.ts). 
 
-The `audioCtx` object gives us a function `createPeriodicWave”` which takes two arguments, `real` and `imag` - both of which are arrays of floats that define the various values of the wave. They are cosine terms and sine terms respectively, if you’re interested. 
+The function `audioCtx.createPeriodicWave` takes two arguments, `real` and `imag` - both of which are arrays of floats that define the various values of the wave. They are cosine terms and sine terms respectively, for anyone interested. 
 
 I’m not going to go into the details of the maths behind it, mainly because I kind of understand it but also don’t really, and I... don’t really care that much. I know enough to be able to twiddle knobs on a synth and change the sound, but for the purposes of this project, I just wanted something that vaguely resembled a piano.
 
@@ -113,7 +116,7 @@ I’m not going to go into the details of the maths behind it, mainly because I 
 
 
 ### The oscillator
-Now we have our waveform, we need an oscillator to turn that waveform into sound. An oscillator generates a constant tone. 
+Now I had my waveform, I needed an oscillator to turn that waveform into sound. An oscillator generates a constant tone. I created one using the `audioCtx` object. 
 
 {{< highlight typescript >}}
  const osc = audioCtx.createOscillator()
@@ -122,24 +125,24 @@ Now we have our waveform, we need an oscillator to turn that waveform into sound
       osc.start()
 {{</ highlight >}}
 
-We set the wave we just created on the oscillator using the `setPeriodicWave` function, then connect it to the audio context. Here, the `audioCtx.destination` refers to the computer's sound output. Finally, we can start the oscillator. 
+I set the wave I just created on the oscillator using the `setPeriodicWave` function, then connected it to the audio context. Here, `audioCtx.destination` refers to the computer's sound output. `osc.start()` starts the oscillator tone. 
 
-If you want a simple [sine or square wave(https://www.perfectcircuit.com/signal/difference-between-waveforms), for example, you don’t need to bother creating a separate waveform - you can actually set the “type” property of the oscillator to the wave type you want. 
+If you want a simple waveform like a [sine or square wave](https://www.perfectcircuit.com/signal/difference-between-waveforms) you don’t need to bother creating a separate waveform - you can just set the `type` property of the oscillator to the wave type you want. 
 
-At this point, our app will be playing a fixed tone. It defaults to a frequency of 440Hz, which is an A. 
+At this point, the app will be playing a fixed tone. It defaults to a frequency of 440Hz, which is an A. 
 
 ### Calculating different frequencies
 The A that the oscillator defaults to is A4. The number refers to the octave the note is in, so the 4th octave on the piano.
 
-This A is particularly relevant, as it's standardised as [ISO 16](https://www.iso.org/standard/3601.html) - a fixed tuning frequency. We can use it as a constant to work out the frequency of other notes based on their position relative to A4. 
+This A is particularly significant, as it's standardised as [ISO 16](https://www.iso.org/standard/3601.html) - a fixed tuning frequency. We use it as a constant to work out the frequency of other notes based on their position relative to A4 on the piano. 
 
-There is a function which calculates the frequency of a note:
+This function calculates the frequency of a note:
 
 > 𝑓 = 440Hz × 2<sup>𝑛/12</sup>
 
 Where *n* is the number of semitones between our note and A4.
 
-So the note C5, which is the next C above A4, is 3 semitones from A4. 𝑛 in this case is 3. 
+For example, the note C5 - the next C above A4 - is 3 semitones from A4. 𝑛 in this case is 3. 
 
 I hardcoded the semitone distances in a single octave from A:
 
@@ -165,7 +168,7 @@ I then used this as the basis for a function that takes a note and its octave, e
 {{< highlight typescript >}}
 export function calcFrequency(note: NoteLetter, octave: number): number {
   const distanceFromA = SemitoneDistances[note]
-  const steps = (4 - octave) * -12 + distanceFromA
+  const steps = (octave - 4) * 12 + distanceFromA
 
   // f = 440Hz * 2^n/12
   const freq = A4 * Math.pow(2, steps / 12)
@@ -175,18 +178,20 @@ export function calcFrequency(note: NoteLetter, octave: number): number {
 
 Let's break it down:
 
-First, we find the interval corresponding to that note within the octave from the hardcoded list. 
+First, we find the number of semitones between our note and A4, if our note was in octave 4 as well. We use the hardcoded values for this.  
 {{< highlight typescript >}}
   const distanceFromA = SemitoneDistances[note]
 {{</ highlight >}}
  
- Then, we calculate the number of steps from A4 to our note by first working out the difference in octaves between the 4th octave where A4 lives and A in the octave we're looking for. Then we multiply it by the number of semitones to get the total number of semitones between A4 and A in our chosen octave, and add the original interval to find our particular note.
+ Then, we calculate the difference between our chosen octave and octave 4, and multiply it by the number of semitones in an octave (12), to get the number of semitones between A4 and A in our chosen octave. 
+
+We can then add this value to the `distanceFromA` to get the number of semitones between our note and A4.
 
 {{< highlight typescript >}}
-  const steps = (4 - octave) * -12 + distanceFromA
+  const steps = (octave - 4) * 12 + distanceFromA
 {{</ highlight >}}
 
-Finally, we can calculate the frequency by running that equation we saw before - the value of A4 multiplied by 2 to the power of the number of steps over 12. For convenience we round it to 1 decimal place. 
+Finally, we can calculate the frequency by running that equation we saw before - the frequency of A4 multiplied by 2 to the power of the number of steps over 12. For convenience we round it to 1 decimal place. 
 
 {{< highlight typescript >}}
 // f = 440Hz * 2^n/12
@@ -198,7 +203,9 @@ Finally, we can calculate the frequency by running that equation we saw before -
 If you'd like to play with this function, I've created an interactive [Codepen](https://codepen.io/sophiekoonin/pen/JjEJowB) that shows the working.
 
 ### Generating octaves
-Now that we've got the frequencies, we can generate octaves of notes in the form of arrays. We'll use this to supply notes to our virtual piano, and we'll also use it to generate things like chords and scales.
+With these frequencies I could generate octaves of notes in the form of arrays. I used these this to supply notes to the virtual piano, and generate things like chords and scales.
+
+I iterated over the notes in order and calculated the frequency of each one, and appended them to an array. 
 
 {{< highlight typescript >}}
 const notes = [
@@ -251,12 +258,16 @@ I wanted the piano to play sequences of notes in scales. We can change the frequ
 All scales follow patterns, depending on the kind of scale they are. For example, the major scale has the pattern
 > tone, tone, semitone, tone, tone, tone, semitone
 
-Apply this pattern from any note, and you'll get that note's major scale.
+Apply this pattern from any note, and you'll get that note's major scale. From a starting (root) note of A:
+
+> A, B, C#, D, E, F#, G# 
 
 We can translate this pattern into numbers, and move numerically up the scale in semitones to find the next note of the scale. One tone = two semitones. So this becomes
 > 2, 2, 1, 2, 2, 2, 1
 
-We'll need two octaves to get notes from, starting from our chosen root note. We'll keep a cursor that points to the position in the scale we're on and iterate through the pattern, adding the number at each step of the pattern. This cursor will allow us to grab the right notes in the right positions.
+I use two octaves to get scale notes from, starting from the chosen root note, as if I tried to calculate A major from one octave I would hit the end of the array pretty quickly. 
+
+I keep a cursor that points to the current position in the scale and iterate through the pattern, adding the number at each step of the pattern. This cursor points to the right notes in the right positions.
 
 {{< highlight typescript >}}
 export const ScalePatterns = {
@@ -278,6 +289,7 @@ function calculateNotePattern(octave: Note[], pattern: number[]) {
   // iterate through the pattern incrementing the position accordingly
   // and get the note at that position.
   for (let pos of pattern) {
+    // move the cursor by the number of semitones
     currentPosition += pos
     notes.push(octave[currentPosition])
   }
@@ -288,11 +300,11 @@ function calculateNotePattern(octave: Note[], pattern: number[]) {
 
 
 ### Building the piano UI
-Now that we have the frequencies, the scales and the octaves, we need something to interact with and actually play the notes.
+Now that I had the frequencies, the scales and the octaves, I needed something to interact with and actually play the notes.
 
-I didn't really want to build a complete piano UI from scratch, so I ended up porting [`pianosvg`](https://github.com/spacejack/pianosvg) into React. Each key is an SVG path, but also a separate React component with its own props. This way, we can pass in whether or not it's currently being played, and what happens when we click it.
+I didn't really want to build a complete piano UI from scratch, so I ended up porting [`pianosvg`](https://github.com/spacejack/pianosvg) into React. Each key is an SVG path rendered by a separate React component with its own props. This way, I can pass in whether or not it's currently being played, and what happens when you click it.
 
-The `pianosvg` code takes care of calculating the positions of the keys. We render two rows of keys, one white, one black.
+The `pianosvg` code takes care of calculating the positions of the keys, and my `Piano` component renders two rows of keys - one white, one black.
 
 I won't go into the details of rendering the piano itself, but you can see the code on [GitHub](https://github.com/sophiekoonin/musicaltheory/blob/master/components/Player/Piano/index.tsx).
 
@@ -301,7 +313,7 @@ With the piano rendered, I could now pass in functions to trigger on piano key c
 
 The `Piano` itself sits inside a parent `Player` component, which controls all the audio operations and manages what's currently playing.
 
-I wanted to be able to press a note and have it sound once, but also be able to activate a "sustain pedal" to make the notes continue sounding after I released the mouse button. I also wanted the computer keyboard to trigger it too. The parent `Player` component stores whether or not the pedal is active in state, and each `Key` has an absurd number of event listeners.
+I wanted to be able to press a note and have it sound once, but also be able to activate a "sustain pedal" to make the notes continue sounding after I released the mouse button. I also wanted it to be keyboard-accessible. The parent `Player` component stores whether or not the pedal is active in state, and each `Key` has an absurd number of event listeners.
 
 {{< highlight typescript >}}
 function Key({
@@ -338,10 +350,10 @@ function Key({
   }
   {{</ highlight >}}
 
-What do these `play` and `stop` functions do? They are defined in the parent `Player` component. 
+The `play` and `stop` functions are defined in the parent `Player` component, and passed in as props to `Piano`. 
 
-{{< highlight typescript >}}
- function playNote(id: number) {
+{{< highlight typescript >}} 
+function playNote(id: number) {
     const osc = initOscillator() // this runs the code we saw before to set up the `AudioContext`
     setOscillators({ ...oscillators, [id]: osc })
     setCurrentNotes(pedalOn ? [...currentNotes, id] : [id])
@@ -367,14 +379,14 @@ What do these `play` and `stop` functions do? They are defined in the parent `Pl
 
 {{</ highlight >}}
 
-We create a new oscillator for each note that we play. An oscillator can only play one note at a time, so to play multiple notes at once we need multiple oscillators. We keep track of the oscillators in the `Player` state, and stop and disconnect them when we're done with them.
+I create a new oscillator for each note that plays. An oscillator can only play one note at a time, so to play multiple notes at once we need multiple oscillators. I keep track of the oscillators in the `Player` state, and stop and disconnect them when I'm done with them.
 
 ### Playing a scale
 As well as being able to interact with the piano directly, I wanted the piano to automatically play a user-selected scale.
 
-We can iterate over the notes of the scale, and set a timeout for each note - when the timeout elapses the frequency of the oscillator is set to the frequency of that note. I chose an interval of half a second for each timeout. The last timeout clears the `currentNotes` array in state, and stops play. 
+I iterate over the notes of the scale, and set a timeout for each note - when the timeout elapses the frequency of the oscillator is set to the frequency of that note. I chose an interval of half a second for each timeout. The last timeout clears the `currentNotes` array in state, and stops play. 
 
-The `Player` keeps track of the timeouts in state, so that if the user hits the "stop" button we can cancel all the timeouts and stop the scale. 
+The `Player` keeps track of the timeouts in state, so that if the user hits the "stop" button I can cancel all the timeouts and stop the scale. 
 
 {{< highlight typescript >}}
 function playScale() {
@@ -406,11 +418,20 @@ function playScale() {
   }
   {{</ highlight >}}
 
-## Inevitable problems
+And there we have it, a tiny interactive piano that plays scales! 
+## Inevitable problems (and solutions)
 ### Broken oscillators
-I got it all working, but I had a bit of a nightmare with it. For one thing, sometimes the notes just... don't stop. It seems to lose track of the oscillators sometimes and be unable to disconnect them. Also, initialising oscillators sometimes doesn't work fast enough, so I had to wrap the function in a promise to force the app to wait until the oscillator had actually been initialised. But I decided people can just refresh the page and live with it.
+I got it all working, but I had a bit of a nightmare with it. For one thing, sometimes the notes just... don't stop. Despite the array of oscillators in `Player` state, it seems to lose track of the oscillators sometimes and be unable to disconnect them. Also, initialising oscillators sometimes doesn't work fast enough and I'd get errors from trying to set the frequency of undefined oscillators. I had to wrap the function in a promise to force the app to wait until the oscillator had actually been initialised. But I decided people can just refresh the page and live with it.
 
 ### Accessibility 
-I never thought I'd be building an app with `onclick` attributes added to SVG elements. It feels wrong. But `<button>` is not a valid child of `<svg>`, so I ran with it and added `aria-role="button"`. However, the display order of keys didn't match the tabbing order: the white and black keys are rendered separately, so you'd have to tab through the white keys and then the black keys.
+I never thought I'd be building an app with `onclick` attributes added to SVG elements. It feels wrong. But `<button>` is not a valid child of `<svg>`, so I ran with it and added the ARIA attribute `role="button"` to each key. However, the display order of keys didn't match the tabbing order: the white and black keys are rendered separately, so you'd have to tab through the white keys and then the black keys.
 
 I fixed this by manually overriding the `tabindex` attribute for each piano key. Each key has an `id` from 0 to the number of notes on the piano, so I could use this easily. To make sure the remaining elements on the page were still tabbable as usual, I added an offset of 10. 
+
+## Explore the Web Audio API
+If you'd like to find out more about the Web Audio API, there are some fantastic resources around, and some even more amazing demos of what's possible.
+
+* [MDN - The Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+* [CSS Tricks: Introduction to the Web Audio API](https://css-tricks.com/introduction-web-audio-api/)
+* [Audio Visualization Demo by soulwire](https://codepen.io/soulwire/pen/Dscga)
+* [Boombox demo by Ruth John](https://codepen.io/Rumyra/pen/qyMzqN)
