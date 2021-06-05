@@ -20,4 +20,4 @@ Assistive technology such as screenreaders will take the HTML markup of the page
 
 ## The problem with `div`s
 
-Take this mocked-up news site (as you can see, graphic design is my passion). 
+Take this mocked-up news site (as you can see, graphic design is my passion).
