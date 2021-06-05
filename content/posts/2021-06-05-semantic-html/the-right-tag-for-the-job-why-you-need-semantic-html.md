@@ -13,3 +13,7 @@ The key is to start out with the right tools for the job - or rather, the right 
 ## Introducing semantic HTML
 
 Semantics is the study of meaning, and semantic HTML is exactly that - HTML tags that convey meaning. They tell the browser - and assistive technology such as screenreaders - about the structure of the page, and how it should behave when you interact with those elements. A button should let you click on it. An ordered list should have numbers. 
+
+Sighted people rely on visual information to tell them about the structure of a page. Based on our prior knowledge of UI conventions, we can identify where a header is, which parts of the page are buttons or form elements, and what the title of the page is, for example. But if you don't get that visual information, how can you tell what's on the page?
+
+Assistive technology such as screenreaders will take the HTML markup of the page and present it to the user either by reading it out audibly, or sending the output to something like a braille display. 
