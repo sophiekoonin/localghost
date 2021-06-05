@@ -14,5 +14,3 @@ fields:
 - type: textarea
   name: summary
   label: summary
-pages:
-- content/posts/2020-09-01-teaching/x-things-developers-can-learn-from-teaching.md
