@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy"
-    content="default-src 'none'; manifest-src 'self'; worker-src 'self'; object-src 'self'; font-src 'self'; connect-src 'self'; img-src 'self' blob: https://flickr.com data:; script-src 'self' {{ if eq .Site.IsServer true }}'unsafe-inline'{{ end }} {{ .Site.BaseURL }}; style-src 'self'">
+    content="default-src 'none'; manifest-src 'self'; frame-src 'self' https://codepen.io https://*.codepen.io; worker-src 'self'; object-src 'self'; font-src 'self'; connect-src 'self'; img-src 'self' blob: https://flickr.com data:; script-src 'self' https://*.codepen.io {{ if eq .Site.IsServer true }}'unsafe-inline'{{ end }} {{ .Site.BaseURL }}; style-src 'self'">
 {{ if .Site.Params.description }}
     <meta name="description" content="{{ .Site.Params.description }}">{{ end }}
 <title>
