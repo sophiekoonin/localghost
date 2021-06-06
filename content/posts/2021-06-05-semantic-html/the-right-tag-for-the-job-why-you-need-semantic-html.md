@@ -1,7 +1,6 @@
 +++
-date = 2021-06-04T23:00:00Z
-draft = true
-summary = "A guide to semantic HTML: what it is, why it's so important, and how to use it"
+date = 2021-06-06
+summary = "Are you using the right HTML tags? A guide to semantic HTML: what it is, why it's so important, and how to use it"
 tags = ["html", "accessibility"]
 title = "The right tag for the job: why you should use semantic HTML"
 
@@ -205,7 +204,7 @@ I won't tell you again, <strong>do not disconnect the fire alarm</strong>.
 This is known as <b>semantic HTML</b>.
 {{</highlight>}}
 
-NB. Frustratingly, Markdown doesn't seem to distinguish between these elements, so everything is `<strong>` or `<em>`. 
+NB. Frustratingly, Markdown doesn't seem to distinguish between these elements, so everything is `<strong>` or `<em>`.  If you want to use `<b>` or `<i>` you'll have to add them in as HTML within your Markdown.
 
 ### Image caption
 It's clear to sighted users that the text under the image is a caption, but not to screen readers - there's nothing associating the two at all.
