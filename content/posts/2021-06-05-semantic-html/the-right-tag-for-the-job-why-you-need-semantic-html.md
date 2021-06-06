@@ -1,7 +1,7 @@
 +++
 date = 2021-06-04T23:00:00Z
 draft = true
-summary = ""
+summary = "A guide to semantic HTML: what it is, why it's so important, and how to use it"
 tags = ["html", "accessibility"]
 title = "The right tag for the job: why you should use semantic HTML"
 
@@ -247,6 +247,9 @@ Here are the main differences:
 * the subheadings in the article are now `<h2>` (the first level of nesting under the main heading)
 * the byline and caption are styled italic through CSS, rather than `<em>` tags
 * I've used a `<figure>` for the image, with a `<figcaption>` for the caption to indicate it's a caption for that image
+
+## Semantics from the start = accessibility from the start
+Using semantic HTML as building blocks for a website will give you a lovely accessible foundation upon which to add your fancy CSS and whizzy JavaScript. You can use semantic elements in JS frameworks, too - I write React every day at work, and always use semantic elements. Your users (and/or your customers) will thank you for it. 
 
 ## Find out more about semantic HTML
 * [MDN: HTML Elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) - with explanations of each element's purpose
