@@ -2,7 +2,9 @@
 title: localghost
 ---
 
-I’m a senior web engineer and Web Discipline lead at [Monzo](https://www.monzo.com).
+I'm a web-focussed product engineer at [incident.io](https://incident.io), building software to help companies manage, resolve and learn from incidents. 
+
+Prior to this I was a senior web engineer and Web Discipline lead at [Monzo](https://www.monzo.com).
 
 I care about web accessibility, keeping the web fun, and lowering the barrier to entry for people learning web development.
 

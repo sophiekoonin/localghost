@@ -57,10 +57,11 @@
     margin-bottom: 1rem;
     padding-left: 0;
     vertical-align: middle;
-  }
-
-  li:before {
-    @include heart-bullet();
+    &:not(.recent-post) {
+      &:before {
+        @include heart-bullet();
+      }
+    }
   }
 
   li > ul > li:before {

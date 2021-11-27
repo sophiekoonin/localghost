@@ -8,7 +8,7 @@ I love speaking (both generally and publicly), so if you'd like me to speak at y
 Some of the things I like to talk about include:
 
 - Building accessible and inclusive web applications
-- Content-Segit statuscurity-Policy and web security
+- Content-Security-Policy and web security
 - How to write great documentation and teach technical concepts
 
 ## Talk history
@@ -29,7 +29,8 @@ Some of the things I like to talk about include:
 - CityJS 2020 - _Little JavaScript bundles of joy: splitting up a React monolith at Monzo_ [(video)](https://www.youtube.com/watch?v=WMCvyjehH_g)
 - GDG Devfest Hellas & GDG Devfest Lahore 2020 - _Teaching Code as a Foreign Language: The teaching skills that made me a better engineer_
 - Next.js Conf 2020 - _Next.JS at Monzo_ [(video)](https://youtu.be/UXpY3-DlZ9c)
-- JSCamp 2021 - _Play Them Off, Keyboard App: Building a piano in JavaScript_ 
+- JSCamp 2021 - _Play Them Off, Keyboard App: Building a piano in JavaScript_  [(video)](https://www.youtube.com/watch?v=Ghrl5whfpso)
+- JSConf IN 2021 - _Play Them Off, Keyboard App: Building a piano in JavaScript_ 
 
 ### Podcasts & Panels
 - [Monzo x Ada's List webinar for International Women's Day 2021](https://www.youtube.com/watch?v=MGAi5CyPczo)
