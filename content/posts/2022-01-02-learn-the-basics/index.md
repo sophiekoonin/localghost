@@ -7,9 +7,9 @@ tags: ['advice', 'learning']
 
 If you're an early-career developer, Twitter is overflowing with people tweeting great tips -- and some absolute rubbish -- about how to improve your skills and become better at your job. I've spoken to more than a few people who've asked me, "how should I start?". And I tell everyone the same thing: **learn the basics.**
 
-However you learn best -- book, video, interactive tutorial -- **you need to learn HTML and CSS  before you can call yourself a web developer**. I don't think that's a particularly controversial statement in 2022.
+However you learn best -- book, video, interactive tutorial -- **you need to learn HTML and CSS  before you can call yourself a web developer**. I don't think that's a particularly controversial statement.
 
-Once you start getting into interactive website territory, with API calls and fancy stuff, that's where you need JavaScript (JS) knowledge. More specifically, **vanilla JS**: plain JS with no additional frameworks or plugins. The JS that your browser understands without having to do any pre-processing. It makes working with frameworks a whole lot easier, and it'll help you to know when *not* to use a framework (and avoid making users download massive JS bundles when all you need is a tiny bit of code). Browsers have come a *long* way, and a lot of what we might have needed to use [Babel](https://babeljs.io/) to do even just a couple of years ago are now natively supported in the big 4 browsers (Chrome, Firefox, Edge and Safari).
+Once you start getting into interactive website territory, with API calls and fancy stuff, that's where you need JavaScript (JS) knowledge. More specifically, **vanilla JS**: plain JS with no additional frameworks or plugins. The JS that your browser understands without having to do any pre-processing. It makes working with frameworks a whole lot easier, and it'll help you to know when *not* to use a framework (and avoid making users download massive JS bundles when all you need is a tiny bit of code). Browsers have come a *long* way, and a lot of what we might have needed to use [Babel](https://babeljs.io/) to do even just a couple of years ago is now natively supported in the big 4 browsers (Chrome, Firefox, Edge and Safari).
 
 ## Where I started
 
@@ -39,12 +39,13 @@ I'd recommend going in the order HTML, CSS, JS. That way, you can build somethin
 If you're a backend engineer who only touches the frontend occasionally, you don't need to go too deep -- but you need a decent grasp of which element does what ([semantic HTML](/0221/06/the-right-tag-for-the-job-why-you-should-use-semantic-html/)) so you can make sure you're using the right elements and not creating any accessibiliy problems. 
 
 ### Learning HTML
-I usually recommend the [MDN "Getting started with HTML" tutorial](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) which provides a really nice overview of different types of elements. Try using some of the tags in [Codepen](https://codepen.io/pen/), and watch things render before your eyes. 
+I usually recommend these tutorials which provide a really nice overview of different types of elements. Try using some of the tags in [Codepen](https://codepen.io/pen/), and watch things render before your eyes. 
+* [Getting started with HTML - MDN](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
+* [FreeCodeCamp's Responsive Web Design course - Basic HTML and HTML5](https://.freecodecamp.org/learn/responsive-web-design/#basic-html-and-html5)
 
 Learn from how other people do it. Web pages are so bloated with scripts and analytics these days that it's hard to just right-click and "View Source" in the same way that I did back in the early 00s -- I learnt a lot of HTML by nicking other people's code! But you can use browser dev tools to look at the structure of the page (the Document Object Model or DOM, as it's known):
 * [Chrome dev tools](https://developer.chrome.com/docs/devtools/open/#elements)
 * [Firefox inspector](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector)
-
 ### Learning CSS
 [Codepen](https://codepen.io/pen/) comes in useful again here to easily write and apply CSS styles to HTML, and have it update instantly.
 
