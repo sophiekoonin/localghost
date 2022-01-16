@@ -1,7 +1,10 @@
 ---
 title: 'Questions to ask at an engineering interview'
 date: 2019-08-22T17:55:34+01:00
-tags: ['interviews', 'advice', 'work']
+tags:
+- 'interviews'
+- 'advice'
+- 'work'
 summary: "Tech job interviews are often different flavours of the same thing, regardless of where you apply. Interviewers are likely to ask you questions about your experiences, perhaps a hypothetical question about what you might do in a certain situation, or delve into some of the how-it-works stuff under the hood of whatever programming language you'll be using. However, there's one question that you can *guarantee* will come up: 'Do you have any questions for us?'"
 ---
 

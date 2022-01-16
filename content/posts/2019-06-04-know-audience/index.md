@@ -1,7 +1,11 @@
 ---
 title: Why software engineers should know their audience
 date: 2019-04-06
-tags: ['engineering', 'work', 'communication']
+tags: 
+- 'engineering'
+- 'work'
+- 'communication'
+- 'teams'
 summary: "When you're talking about what you're working on, do you ever stop to think about what you're saying and whether the person you're talking to can actually understand it?"
 ---
 

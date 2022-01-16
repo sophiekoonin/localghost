@@ -4,7 +4,10 @@ subtitle: "Making music with the Web Audio API"
 summary: "How I built a tiny virtual synthesiser using the JS Web Audio API, and some bonus musical theory to boot."
 date: "2021-04-04"
 draft: true
-tags: ['music', 'web audio api', 'react']
+tags: 
+- 'music'
+- 'web audio api'
+- 'react'
 ---
 
 - [Background](#background)

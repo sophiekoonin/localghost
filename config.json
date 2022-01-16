@@ -1,0 +1,29 @@
+{
+  "title": "localghost",
+  "pygmentsUseClasses": true,
+  "linenos": true,
+  "pluralizeListTitles": false,
+  "params": {
+    "description": "Sophie Koonin is a London-based software developer who writes on work, programming and mental health.",
+    "twitterUsername": "@type__error",
+    "dateFormat": "2 Jan 2006"
+  },
+  "permalinks": {
+    "posts": "/:title"
+  },
+  "privacy": {
+    "twitter": {
+      "enableDNT": true,
+      "simple": true,
+      "disable": false
+    },
+    "youtube": {
+      "disable": false,
+      "privacyEnhanced": true
+    },
+    "instagram": {
+      "disable": false,
+      "simple": true
+    }
+  }
+}

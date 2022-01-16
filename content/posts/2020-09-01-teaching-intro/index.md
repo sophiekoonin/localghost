@@ -2,7 +2,10 @@
 title: 'How can you become a better developer? Think like a teacher.'
 date: '2020-09-01'
 draft: true
-tags: ['mentoring', 'documentation', 'core skills']
+tags: 
+  - 'mentoring'
+  - 'documentation' 
+  - 'core skills'
 summary: "Drawing on my own experience teaching English as a foreign language, I’ll take you through some of the most useful teaching skills and how you can use them in a technical context - whether you're coaching a new developer on your team, or writing documentation for a bank employing hundreds of developers."
 ---
 

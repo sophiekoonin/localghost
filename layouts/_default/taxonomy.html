@@ -1,7 +1,8 @@
 {{ define "main" }}
 <section class="full-width">
     <h1>{{ .Data.Singular | humanize }}: {{ lower .Title }}</h1>
-    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 6 }}
+    {{ $taggedPosts := (index .Site.Taxonomies.tags (lower .Title )) }}
+    {{ $paginator := (.Paginate $taggedPosts) }}
     <ol class="posts-list">
         {{ range $paginator.Pages }}
         <li>

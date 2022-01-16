@@ -1,7 +1,9 @@
 ---
 title: '7 myths designers and developers believe about web accessibility'
 date: '2020-10-11'
-tags: ['design', 'accessibility']
+tags: 
+  - 'design'
+  - 'accessibility'
 ---
 
 In an ideal world, being "good at accessibility" wouldn't make you stand out from the crowd. Companies wouldn't be hiring accessibility experts to help them unpick and untangle the inaccessible products they've been building for years. Speaking about web accessibility at a conference would be as unnecessary as getting up on stage and giving a talk on how to write HTML.
@@ -78,7 +80,7 @@ According to the World Health Organisation:
 
 So much of the world around us can influence whether or not we have, or consider ourselves to have, a disability. Summed up perfectly in this Tweet by [Amanda Leduc](https://twitter.com/amandaleduc/status/1300083052710899712):
 
-{{<tweet 1300083052710899712 >}}
+{{<tweet user="amandaleduc" id="1300083052710899712" >}}
 
 ## Myth 4: Accessibility is a barrier to good design
 

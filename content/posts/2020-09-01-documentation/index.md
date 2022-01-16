@@ -2,7 +2,9 @@
 title: 'Teaching Code as a Foreign Language - Part 2: Writing good documentation'
 date: '2020-09-01'
 draft: true
-tags: ['documentation', 'core skills']
+tags: 
+- 'documentation'
+- 'core skills'
 summary: "Good documentation makes all the difference! Learn the teaching skills that helped me level up my documentation and write like a pro."
 ---
 {{<preamble>}}

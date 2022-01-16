@@ -1,7 +1,8 @@
 ---
 title: 'Defending yourself against cross-site scripting attacks with Content-Security-Policy'
 date: '2020-05-03'
-tags: ['security']
+tags: 
+- 'security'
 summary: 'A guide to cross-site scripting (XSS) attacks and the HTTP Content-Security-Policy header, what it does, how to use it, and how it protects us.'
 ---
 

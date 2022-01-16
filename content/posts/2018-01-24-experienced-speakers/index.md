@@ -12,7 +12,7 @@ But once the initial euphoria wears off, you might find the impostor syndrome st
 
 That's me right now. I'm currently preparing my first ever conference talk for [ReactFest 2018](https://www.reactfest.uk), which I was encouraged to apply to by the excellent folk at [ReactJS Girls London](https://www.meetup.com/en-AU/ReactJS-Girls-London/). Having gained quite a few new followers on Twitter after my talk was announced, I thought I'd canvas a bit for helpful hints for a first time speaker. I figured a few people might respond.
 
-{{<tweet 955554649666355200 >}}
+{{<tweet user="type__error" id="955554649666355200" >}}
 
 Just a few.
 
@@ -32,15 +32,15 @@ You've got the outline of your talk that you submitted to the Call for Papers, b
 
 One thing that came up repeatedly on Twitter was the concept of storytelling. Rather than just listing ideas or treating the talk like a tutorial, you want to **tell a story**. This makes the talk so much more engaging, and more likely to be remembered.
 
-{{<tweet 955688673911103493 >}}
+{{<tweet user="markdalgleish" id="955688673911103493" >}}
 
-{{<tweet 955591200769232896 >}}
+{{<tweet user="dan_abramov" id="955591200769232896" >}}
 
 When it comes to putting a deck together, most people tend to use Google Slides, Keynote or PowerPoint, but tech folks might also like to try out [Reveal.JS](https://revealjs.com/#/), which lets you write fully responsive slides in HTML or Markdown (perfect for code snippets!). I used it for a talk I gave at a meetup, and had the entire talk hosted on GitHub Pages just in case I had to use someone else's computer (which, in the end, I did!).
 
 Once you've got the content nailed, you can focus on the design. Don't worry about being too fancy — you want your audience to focus on what you are saying rather than what's on the slides. **Too many words on the slides will distract the audience, as will too many animated gifs!** You can always create another version of your deck with more details on for sharing afterwards, as suggested by [@henrihelvetica](https://www.twitter.com/henrihelvetica).
 
-{{<tweet 955786243605843970 >}}
+{{<tweet user="johnwards" id="955786243605843970" >}}
 
 Keep your slide theme nice and simple, and consider whether the theme you have chosen will be easily readable from the back of the room with a crappy projector. Put your name and Twitter handle (if you have one) at the bottom of every slide because people will forget it if you only put it at the beginning (thanks [@claireinez](https://www.twitter.com/claireinez)).
 
@@ -53,11 +53,11 @@ Something that came up over and over again: **rehearse your talk!** Do it on you
 
 Local developer meetups can be a fantastic place to **try out your talk** before the conference and gather some feedback/see how it lands — a bit like how comedians try out new material in smaller venues before festivals and tours.
 
-{{<tweet 955557640821706752 >}}
+{{<tweet user="jevakallio" id="955557640821706752" >}}
 
 Rehearsing your talk will also help you to get a feel for **how long it takes to run**. Your talk will be strictly timeboxed, so make sure you get your key points across in the time that you have.
 
-{{<tweet 955589928011927553 >}}
+{{<tweet user="dan_abramov" id="955589928011927553" >}}
 
 Don't be tempted to script out your entire talk, as it'll come across as a bit robotic (plus put a whole lot more pressure on you to learn it). Instead, become familiar with the key points of your talk and **deliver those in a more improvised, natural way**.
 
@@ -65,15 +65,15 @@ Don't be tempted to script out your entire talk, as it'll come across as a bit r
 
 Make sure your talk works offline — you never know what's going to happen. I've been to a tech conference before with no wifi or sockets for power. As [@naomi_freeman](https://twitter.com/Naomi_Freeman/status/955565518488031234) suggests: "Don't trust the wifi. Download any online content BEFORE travelling."
 
-{{<tweet 955967486846951424 >}}
+{{<tweet user="shanselman"  id="955967486846951424" >}}
 
 Dan Abramov suggests having a **backup of the slides online** that will run on someone else's laptop. Google Slides can be run from anywhere if you share the link, or you can host your Reveal.JS talk somewhere like GitHub Pages. Make sure you are comfortable giving your talk **without prompts**, as you might not be able to access your speaker notes.
 
 If you can, find out beforehand what the setup will be like at the conference. The projector they are using, the size of the room and the equipment available will all affect things like font size, colour scheme and audio.
 
-{{<tweet 955662979504029696 >}}
+{{<tweet user="Paul_Bone" id="955662979504029696" >}}
 
-{{<tweet 955895439232028673 >}}
+{{<tweet user="CynthiaSavard"  id="955895439232028673" >}}
 
 Don't assume the organisers will provide the adaptor you need to connect your laptop! **Bring it yourself just to be safe** (and label it with your name so nobody steals it).
 
@@ -81,19 +81,19 @@ Don't assume the organisers will provide the adaptor you need to connect your la
 
 This was a bit of a divisive one — should you have a live demo in your talk?
 
-{{<tweet 955595332993216512 >}}
+{{<tweet user="khanght" id="955595332993216512" >}}
 
-{{<tweet 955596853457969152 >}}
+{{<tweet user="dan_abramov"  id="955596853457969152" >}}
 
 A demo can be a fantastic way of, well, demonstrating a technical concept. But there's always a risk that something will go wrong on the night — whether it's down to nerves, technical issues or just plain bad luck. You can avoid this by **making a recording of it beforehand** that you can play to the audience and narrate what you're doing. Or have a **working copy** that you can check out from Git in case of emergency (thanks to [Laura Wilson](https://twitter.com/wilslau) for that tip).
 
-{{<tweet 955561991329923072 >}}
+{{<tweet user="sarah_edo" id="955561991329923072" >}}
 
 Mac users can use [Kap](https://getkap.co/) to record screen captures in video or GIF format. There's also [Kazam](https://launchpad.net/kazam) for Linux and [CamStudio](https://camstudio.org/) for Windows.
 
 In some cases screen captures might even be better than live demos:
 
-{{<tweet 955562633989562368 >}}
+{{<tweet user="kyleshevlin"  id="955562633989562368" >}}
 
 And as [@fforres](https://twitter.com/fforres/status/955624874298494976) points out, don't rely on your audience to be sensible — if your demo involves live input from the audience, be warned, people might send in something rude!
 
@@ -107,45 +107,45 @@ The dress code at tech conferences can be pretty casual, but if you're wearing a
 
 Make sure your laptop is ready for the talk: close all other programs, have the slides up and ready, and turn all notifications off. Put your laptop on airplane mode if you can. If you have a smart watch or phone on you, don't forget to silence that as well.
 
-{{<tweet 955733006349512704 >}}
+{{<tweet user="HenriHelvetica" id="955733006349512704" >}}
 
-{{<tweet 955595076092260352 >}}
+{{<tweet user="dan_abramov"  id="955595076092260352" >}}
 
 As you're about to go on, you might feel the nerves. The audience is waiting! Take a deep breath and **try to radiate confidence**, even if it doesn't come naturally to you. The audience won't know you're faking confidence (and soon you won't be). You know your stuff, you love your topic, you've rehearsed it time and time again — **you are ready**. Enjoy it.
 
-{{<tweet 955590579148279809 >}}
+{{<tweet user="dan_abramov" id="955590579148279809" >}}
 
-{{<tweet 955555697223196672 >}}
+{{<tweet user="jevakallio" id="955555697223196672" >}}
 
 Be aware you might not be able to see anyone in the audience…
 
-{{<tweet 955704311312519168 >}}
+{{<tweet user="NikkitaFTW" id="955704311312519168" >}}
 
 **Move around a bit**, rather than standing still behind the podium. It can be tempting to just keep talking — don't forget to pause now and again.
 
-{{<tweet 955562218615025664 >}}
+{{<tweet user="sarah_edo"  id="955562218615025664" >}}
 
-{{<tweet 955597614560378880 >}}
+{{<tweet user="_davideast" id="955597614560378880" >}}
 
-{{<tweet 955593635390808064 >}}
+{{<tweet user="dan_abramov" id="955593635390808064" >}}
 
 Be mindful how you address the audience — don't just fall back on "guys" considering your audience is likely to be a mix of genders (thanks [@fforres](https://twitter.com/fforres/status/955624874298494976)). Jokes are a fantastic way of lightening the mood and keeping the audience engaged, but avoid any risqué/potentially inappropriate jokes.
 
-{{<tweet 955660680765427712 >}}
+{{<tweet user="fuzzychef" id="955660680765427712" >}}
 
 Don't be put off if you make a mistake! If you leave something out or stumble over something, nobody will know. Keep going!
 
-{{<tweet 955606916163604480 >}}
+{{<tweet user="MandaLaceyS"  id="955606916163604480" >}}
 
-{{<tweet 955760274623131649 >}}
+{{<tweet user="_s_hari" id="955760274623131649" >}}
 
 And don't forget the most important thing:
 
-{{<tweet 955556013943373824 >}}
+{{<tweet user="justinfagnani" id="955556013943373824" >}}
 
-{{<tweet 955721090147303424 >}}
+{{<tweet user="damovisa" id="955721090147303424" >}}
 
-{{<tweet 955574730421088257 >}}
+{{<tweet user="jonskeet" id="955574730421088257" >}}
 
 You're at the conference because you love your topic, and so does everyone else there. You're all on the same team. As [@tlakomy](https://twitter.com/tlakomy/status/955557815292227585) assures me: "It's going to be okay".
 
@@ -153,14 +153,13 @@ You're at the conference because you love your topic, and so does everyone else 
 
 Sarah Drasner recommends not taking questions during your first talk:
 
-{{<tweet 955779489140703232 >}}
+{{<tweet user="sarah_edo"  id="955564180970528768" >}}
 
 That said, it's a personal choice — if you feel comfortable (and time allows it) you can take as many questions as you want. An excellent tip from [@bradwaynemartin](https://www.twitter.com/bradwaynemartin): **always repeat the questions back to the audience**, as the microphone won't pick them up.
 
 But if anyone does challenge any decisions you made, you can fire this straight back:
 
-{{<tweet 955564180970528768 >}}
-
+{{<tweet user="hpcprogrammer"  id="955779489140703232" >}}
 ## Good luck!
 
 To all first-time or aspiring speakers: you've got this!.

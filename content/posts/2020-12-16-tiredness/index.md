@@ -1,7 +1,10 @@
 ---
 title: 'Give yourself a break: lessons from burnout'
 date: '2020-12-16'
-tags: ['2020', 'burnout']
+tags: 
+  - '2020'
+  - 'burnout'
+  - 'mental health'
 summary: "I started writing this post a few days ago, and was so exhausted I couldn't actually be bothered to finish it, which tells you a lot really. Here are some lessons from the trash fire of 2020 that we can take over into the slightly-smaller-but-still-burning trash fire of 2021. "
 ---
 
@@ -9,7 +12,7 @@ I started writing this post a few days ago, and was so exhausted I couldn't actu
 
 A couple of weeks ago (possibly - I have no concept of time any more) I tweeted this, which seemed to resonate with folks:
 
-{{<tweet 1335329159200055303 >}}
+{{<tweet user="type__error"  id="1335329159200055303" >}}
 
 (A plug for [emojinator](https://emojinator.fun), the site in question where you can add hats to emoji) 
 
@@ -58,4 +61,4 @@ Ultimately, the productivity and success of the company will suffer more if your
 
 Sorry folks, I wrote a long article when I promised you you didn't have to read articles. Go and have a cup of tea and look out of the window for a bit. 
 
-{{<tweet 1335331963243257857 >}}
+{{<tweet user="type__error" id="1335331963243257857" >}}

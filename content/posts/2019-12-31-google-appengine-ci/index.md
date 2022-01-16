@@ -3,7 +3,10 @@ title: "Deploying your Google AppEngine app with CircleCI"
 subtitle: "Managing environment variables with CircleCI Contexts and a bit of bash magic"
 summary: "How to set up CircleCI to inject environment variables and deploy your Google AppEngine app, as well as managing different deployment environments."
 date: "2019-12-31"
-tags: ['google cloud', 'circleci', 'tutorial']
+tags: 
+  - 'google cloud'
+  - 'circleci'
+  - 'tutorial'
 ---
 
 The Google Cloud CLI makes it simple to deploy a Google AppEngine app with one command (`gcloud app deploy`), but there may come a time when you want to set up continuous integration with your app to take advantage of things like automatically running your tests or auto-deploying on merge. 
