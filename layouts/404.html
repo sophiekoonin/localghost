@@ -1,10 +1,11 @@
-{{ define "title" }}
-<h2 class="bold-title is-1">{{ i18n "404_title" . }}</h2>
-{{ end }}
-
 {{ define "main" }}
-<div class="markdown top-pad">
-    {{ i18n "404_description" . | markdownify }}
+<div class="markdown full-width">
+    <div class="content-box">
+        <h1 class="page-title">Page not found</h1>
+        <p>There must be a ghost in the machine (or you made a typo).</p>
+        <p>Either way, that page doesn't exist. 👻</p>
+        <p><a href="/">Go back home</a></p>
+    </div>
 </div>
 {{ end }}
 
