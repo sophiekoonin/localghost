@@ -21,6 +21,7 @@
   "homepage": "https://github.com/sophiekoonin/localghost#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.2",
+    "canvas": "2.8.0",
     "postcss": "^8.4.5",
     "postcss-cli": "^9.1.0"
   }
