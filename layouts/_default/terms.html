@@ -4,9 +4,7 @@
         <h1>All tags</h1>
         <ul class="section tags-list">
             {{- range $key, $value:= .Data.Terms -}}
-            <li><a class="tag-cloud" href="{{ " /" | relLangURL }}{{ $.Data.Plural | urlize }}/{{ $key | urlize }}">{{
-                    $key
-                    }}&nbsp;({{ $value.Count }})</a></li>
+            <li><a class="tag-cloud" href="{{ " /" | relLangURL }}{{ $.Data.Plural | urlize }}/{{ $key | urlize }}">{{$key}}&nbsp;({{ $value.Count }})</a></li>
             {{- end -}}
         </ul>
     </div>

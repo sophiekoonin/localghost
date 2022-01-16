@@ -15,8 +15,10 @@
                 <span class="text">Tag{{ if gt $len 1 }}s{{ end }}:</span>
                 <ul class="tags">
                     {{ range $index, $tag := .Params.tags }}
-                    <li class="star-bullet"><a href="{{ " /tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>{{ if ne
-                        (add $index 1) $len }}{{ end }}
+                    <li class="star-bullet">
+                        <a href="{{ " /tags/" | relLangURL }}{{ . | urlize }}">
+                            {{ . }}
+                        </a>
                     </li>
                     {{ end }}
                 </ul>
