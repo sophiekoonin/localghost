@@ -2,7 +2,7 @@
 
 <article class="markdown full-width" id="{{ lower .Params.Slug }}">
     <div class="content-box">
-        <h1 class="page-title">{{ .Title }}</h1>
+        <h1 class="page-title">SECTION {{ .Title }}</h1>
         <span class="date">{{ if .Params.date }}{{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }}{{
             end
             }}</span>

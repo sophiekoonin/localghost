@@ -1,5 +1,6 @@
 ---
 title: 'About'
+headless: true
 ---
 
 ## About this site

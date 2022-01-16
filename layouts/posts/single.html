@@ -1,6 +1,5 @@
 {{ define "main" }}
 <article class="full-width">
-
     <div class="post-body">
         <h1 class="post-title {{if .Params.Subtitle}}small-bottom-margin{{end}}">
             {{ .Title }}
@@ -16,8 +15,8 @@
                 <span class="text">Tag{{ if gt $len 1 }}s{{ end }}:</span>
                 <ul class="tags">
                     {{ range $index, $tag := .Params.tags }}
-                    <li class="star-bullet"><a
-                            href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>{{ if ne (add $index 1) $len }}{{ end }}
+                    <li class="star-bullet"><a href="{{ " /tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>{{ if ne
+                        (add $index 1) $len }}{{ end }}
                     </li>
                     {{ end }}
                 </ul>
