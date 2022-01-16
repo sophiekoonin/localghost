@@ -5,6 +5,8 @@ tags:
 - 'engineering'
 - 'work'
 summary: "In an attempt to dispel the idea that if you have to google stuff you're not a proper engineer, this is a list of nearly everything I googled in a week at work, where I'm a software engineer with several years' experience."
+aliases:
+- '/2019/09/everything-i-googled-in-a-week-as-a-professional-software-engineer/'
 ---
 
 In an attempt to dispel the idea that if you have to google stuff you're not a proper engineer, this is a list of nearly everything I googled in a week at work, where I'm a software engineer with several years' experience.

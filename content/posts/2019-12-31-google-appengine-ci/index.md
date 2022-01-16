@@ -7,6 +7,8 @@ tags:
   - 'google cloud'
   - 'circleci'
   - 'tutorial'
+aliases:
+- '/2019/12/deploying-your-google-appengine-app-with-circleci/'
 ---
 
 The Google Cloud CLI makes it simple to deploy a Google AppEngine app with one command (`gcloud app deploy`), but there may come a time when you want to set up continuous integration with your app to take advantage of things like automatically running your tests or auto-deploying on merge. 

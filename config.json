@@ -9,7 +9,7 @@
     "dateFormat": "2 Jan 2006"
   },
   "permalinks": {
-    "posts": "/:title"
+    "posts": "/blog/:title"
   },
   "privacy": {
     "twitter": {

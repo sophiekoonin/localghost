@@ -4,8 +4,10 @@ subtitle: 'Tips For First-Time Conference Speakers'
 date: 2018-01-24T15:00:00Z
 tags: ['conferences', 'talks', 'advice', 'twitter']
 summary: "Preparing for my first ever conference talk in 2018, I compiled a list of helpful tips from experienced speakers, and thought I'd share them with the world."
+aliases:
+- '/2018/01/things-experienced-speakers-wish-theyd-known/'
 ---
-
+  
 Congratulations, you've been accepted to speak at a conference!
 
 But once the initial euphoria wears off, you might find the impostor syndrome starting to set in. What if I'm not good enough? Do I know enough about this topic? What if the audience hates me?

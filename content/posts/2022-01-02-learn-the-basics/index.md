@@ -4,6 +4,8 @@ date: '2022-01-02'
 tags: 
 - 'advice' 
 - 'learning'
+aliases:
+- '/2022/01/start-at-the-beginning-the-importance-of-learning-the-basics/'
 ---
 
 If you're an early-career developer, Twitter is overflowing with people tweeting great tips -- and some absolute rubbish -- about how to improve your skills and become better at your job. I've spoken to more than a few people who've asked me, "how should I start?". And I tell everyone the same thing: **learn the basics.**

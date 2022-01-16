@@ -4,6 +4,8 @@ date: 2019-11-16
 tags: 
 - 'conferences'
 summary: 'Now in its 11th year, ffconf is one of the biggest events in the conference calendar for web developers across the UK. Yet somehow I’ve managed to miss every one since I got into tech, because of some reason or another - last year I was at the week-long blockchain sales pitch that is Web Summit - so I was understandably very excited to finally be going.'
+aliases:
+- '/2019/11/ffconf-2019-future-friends-beside-the-seaside/'
 ---
 
 Now in its 11th year, [ffconf](https://ffconf.org) is one of the biggest events in the conference calendar for web developers across the UK (and further afield). Yet somehow I've managed to miss every one since I got into tech, because of some reason or another - last year I was at the week-long blockchain sales pitch that is Web Summit - so I was understandably very excited to finally be going. It takes place at the lovely [Duke of York's Picturehouse](https://www.picturehouses.com/cinema/duke-of-york-s-picturehouse) in Brighton - the first conference I've attended that had cupholders in the seats! (Fun fact, I applied for a job there once.)
