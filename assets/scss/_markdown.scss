@@ -20,10 +20,6 @@
     font-style: italic;
   }
 
-  .chroma {
-    background-color: var(--chroma-background);
-  }
-
   p {
     &:first-of-type {
       margin-top: 0;
@@ -115,41 +111,22 @@
     }
   }
 
-  table {
-    margin: 2em 0 2em 0;
-    width: 100%;
-    border: 1px solid #e5e5e5;
-    border-collapse: collapse;
-  }
-
-  td,
-  th {
-    padding: 0.25rem 0.5rem;
-    border: 1px solid #e5e5e5;
-    text-align: center;
-  }
-
-  tbody tr:nth-child(odd) td,
-  tbody tr:nth-child(odd) th {
-    background-color: #f7f7f7;
-  }
-
-  pre {
+  pre:not(.chroma) {
     border-radius: 3px;
     margin-bottom: 1.5rem;
     white-space: pre-wrap !important;
     overflow: scroll;
     padding: 1rem;
-
-    &.chroma code {
-      color: inherit;
-    }
   }
 
   code {
     color: var(--inline-code-color);
     word-break: break-word;
     font-family: monospace;
+  }
+
+  pre.chroma code {
+    color: inherit;
   }
 
   img {

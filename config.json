@@ -1,7 +1,11 @@
 {
   "title": "localghost",
-  "pygmentsUseClasses": true,
-  "linenos": true,
+  "markup": {
+    "highlight": {
+      "linenos": true,
+      "noClasses": false
+    }
+  },
   "pluralizeListTitles": false,
   "params": {
     "description": "Sophie Koonin is a London-based software developer who writes on work, programming and mental health.",
