@@ -2,6 +2,7 @@ const { createCanvas, Image } = require('canvas');
 const fs = require('fs');
 const path = require('path');
 
+const quotationRegex = /^\'|^\"|\"$|\'$/g;
 function getLines(ctx, text, maxWidth) {
   var words = text.split(' ');
   var lines = [];
@@ -21,13 +22,7 @@ function getLines(ctx, text, maxWidth) {
   return lines;
 }
 
-const title = process.argv[2];
-const subtitle = process.argv[3];
-if (title == null || title === '') {
-  console.log('need title!');
-  process.exit(1);
-}
-function generate() {
+function generate(title, subtitle, filename) {
   const canvas = createCanvas(1200, 630);
   const ctx = canvas.getContext('2d');
   const image = new Image();
@@ -43,21 +38,23 @@ function generate() {
     ctx.strokeStyle = 'black';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'bottom';
-    ctx.font = `bold 60px 'Inter'`;
+    ctx.font = `bold 48px 'Krungthep'`;
     const titleLines = getLines(ctx, title, canvas.width * 0.8);
     const subtitleLines =
       subtitle != null ? getLines(ctx, subtitle, canvas.width * 0.8) : [];
 
+    const offset = subtitleLines.length > 0 ? 70 : 25;
+
     [...titleLines, ...subtitleLines].forEach((line, i) => {
-      ctx.fillText(line, canvas.width / 2, canvas.height / 2 - 25 + i * 90);
+      ctx.fillText(line, canvas.width / 2, canvas.height / 2 - offset + i * 70);
     });
 
     ctx.textBaseline = 'bottom';
-    ctx.font = "bold 32px 'Inter'";
+    ctx.font = "bold 32px 'Krungthep'";
     ctx.textAlign = 'left';
     ctx.fillText('localghost.dev', 10, canvas.height - 10);
-
-    const out = fs.createWriteStream(process.cwd() + '/og-image.png');
+    console.log(filename);
+    const out = fs.createWriteStream(filename);
     const stream = canvas.createPNGStream();
     stream.pipe(out);
     out.on('finish', () => console.log('The PNG file was created.'));
@@ -65,4 +62,65 @@ function generate() {
   image.src = imgSrc;
 }
 
-generate();
+function lookForPosts(overwrite) {
+  const postFolder = path.join(process.cwd(), './content/posts');
+  const dirs = fs.readdirSync(postFolder);
+  const posts = dirs
+    .map((dir) => {
+      const file = path.join(postFolder, dir, 'index.md');
+      try {
+        const content = fs.readFileSync(file, 'utf8');
+        const splitContent = content.split('\n');
+
+        const title = splitContent.find((line) => line.startsWith('title:'));
+        if (title == null) {
+          return null;
+        }
+        if (!overwrite) {
+          const existingImage = fs.existsSync(
+            path.join(
+              process.cwd(),
+              './content/posts',
+              dir,
+              'images',
+              'og-image.png'
+            )
+          );
+          if (existingImage) {
+            return null;
+          }
+        }
+        const subtitle = splitContent.find((line) =>
+          line.startsWith('subtitle:')
+        );
+        const titleContent = title
+          .split('title:')[1]
+          .trim()
+          .replace(quotationRegex, '');
+        const subtitleContent =
+          subtitle != null
+            ? subtitle.split('subtitle:')[1].trim().replace(quotationRegex, '')
+            : null;
+        return {
+          title: titleContent,
+          subtitle: subtitleContent,
+          filename: path.join(postFolder, dir, 'images/og-image.png'),
+        };
+      } catch (err) {
+        console.error(err);
+        return null;
+      }
+    })
+    .filter(Boolean);
+  return posts;
+}
+
+function run() {
+  const posts = lookForPosts(false);
+  posts.forEach((post) => {
+    console.log(post);
+    generate(post.title, post.subtitle, post.filename);
+  });
+}
+
+run();
