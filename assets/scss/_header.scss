@@ -84,7 +84,6 @@
   .header-text {
     grid-area: 2 / 1 / 3 / 1;
     color: var(--header-color);
-    font-family: 'Neon Tubes 2', cursive;
     font-display: swap;
     text-align: center;
     text-transform: lowercase;
@@ -95,6 +94,10 @@
     }
     @include mq($from: desktop) {
       font-size: 5rem;
+    }
+
+    a {
+    font-family: 'Neon Tubes 2', cursive;
     }
   }
 
