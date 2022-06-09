@@ -1,0 +1,18 @@
+<meta property="og:title" content="{{ title }}{{ ' - localghost' if not isHome }}"/>
+<meta property="og:type" content="website"/>
+<meta property="og:description" content="{% if isBlog %}{{ excerpt }}{% else %}{{ global.description }}{% endif %}"/>
+<meta property="og:url" content="{{ global.baseUrl }}{{ page.url }}"/>
+<meta property="og:site_name" content="localghost"/>
+<meta property="og:locale" content="en_GB"/>
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'none'; manifest-src 'self'; frame-src 'self' https://codepen.io https://*.codepen.io; worker-src
+    'self'; object-src 'self'; font-src 'self'; connect-src 'self'; img-src 'self' blob: https://flickr.com data:; script-src
+    'self' https://*.codepen.io https://plausible.io {{ global.baseUrl }} {% if global.isDev %}'unsafe-inline'{% endif %};
+    style-src 'self'"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="{{ title }}{{ ' - localghost' if not isHome }}"/>
+<meta name="twitter:site" content="@type__error"/>
+<meta name="twitter:description" content="{% if postExcerpt %}{{ postExcerpt }}{% else %}{{ description }}{% endif %}"/>
+<meta property="og:image" content="{{ global.baseUrl }}/og-images/{{ title | slugify }}.png"/>
+<meta property="twitter:image" content="{{ global.baseUrl }}/og-images/{{ title | slugify }}.png"/>

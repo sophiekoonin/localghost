@@ -1,0 +1,47 @@
+{% extends "base.njk" %}
+{% block content %}
+  {% set postListItems = pagination.items %}
+  {% if tag %}
+    {% set postListItems = collections[tag] %}
+    {% set title = 'Posts tagged "' + tag + '"' %}
+  {% endif %}
+  <div class="list-heading">
+    <h1>{{ title }}</h1>
+  </div>
+  <div
+    class="content-inner flow" {% if subtitle %} data-with-subtitle {% endif %}>
+    {# If this is a tag, grab those items instead as one large collection #}
+    <ol role="list" class="posts-list flow">
+      {% for item in postListItems %}
+        {% set postExcerpt %}
+        {% excerpt item.data %}
+        {% endset %}
+        <li>
+          <article class="content summary">
+            <h2 class="page-heading">
+              <a href="{{ item.url }}">{{ item.data.title }}</a>
+              {% if item.data.subtitle %}
+                <span class="post-subtitle">{{ item.data.subtitle }}</span>
+              {% endif %}
+            </h2>
+            <div class="content-inner flow">
+              <p>
+                {{ postExcerpt | safe }}
+              </p>
+              <p>
+                <time class="post-date" datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
+                &ndash;
+                <a class="read-more-link" href="{{ item.url }}">Continue reading
+                  <span aria-hidden="true">→</span>
+                </a>
+              </p>
+            </div>
+          </article>
+        </li>
+      {% endfor %}
+    </ol>
+    {% if not tag %}
+      {% include "partials/blog/pagination.njk" %}
+    {% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.njk" %}
+{% block content %}
+  <div id="homepage-content" class="content">
+    <h1 id="homepage-heading" class="page-heading">Hi, I'm Sophie.</h1>
+    <div id="content-start"></div>
+    <div class="content-inner flow">
+      {{ content | safe }}
+      <p id="theme-switcher-blurb">
+        Use the theme switcher in the corner to explore the different personalities of this website!
+      </p>
+      <h2>
+        Recent posts
+      </h2>
+      <ol role="list" class="recent-posts">
+        {% set postListItems = pagination.items %}
+        {% for item in postListItems %}
+          <li>
+            <article class="summary">
+              <a href="{{ item.url }}">{{ item.data.title }}</a>
+            </article>
+          </li>
+        {% endfor %}
+      </ol>
+    </div>
+    <div id="content-end"></div>
+  </div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "base.njk" %}
+{% block content %}
+  <article class="content">
+    <h1 class="page-heading">{{ title }}</h1>
+    <div class="content-inner flow">
+      {{ content | safe }}
+    </div>
+  </article>
+{% endblock %}

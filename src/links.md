@@ -1,0 +1,24 @@
+---
+title: "Links"
+layout: 'page.njk'
+---
+
+## Projects
+I like to build weird things for fun - and I do non-tech things too! Here are some of my recent projects:
+* [Emojinator](https://emojinator.fun) - a drag-and-drop emoji creator with special effects
+* [Virtual Piano](https://virtualpiano.vercel.app) - an interactive virtual piano using the Web Audio API that will also play you scales and chords in a given key
+* [Tasting Menu Generator](https://tasting-menu.neocities.org) - generate a 5-course tasting menu
+* [Anything Ipsum](https://sophiekoonin.github.io/anything-ipsum/) - the lorem ipsum text generator
+* I make music and share it on [Soundcloud](https://soundcloud.com/kid-gloves) 🎶
+
+## Lovely things
+
+* [The Yesterweb](https://yesterweb.org) - A monument to everything I love(d) about the internet, and a movement to reclaim that lost creativity and independence. I've tried to encompass some of that spirit in this website. They publish a zine which is a delight to read.
+* [The Useless Web](https://theuselessweb.com) - remember when the internet was pointless?
+
+## Useful resources
+* [Neocities](https://neocities.org/) - a free web host supporting creative personal websites
+* [CSS Utopia](https://utopia.fyi/) - generate type and spacing scales without breakpoints
+* [Modern CSS](https://moderncss.dev/) - modern CSS solutions for old problems
+* [Every Layout](https://everylayout.dev) - loads of excellent layout primitives, and not a breakpoint in sight.
+* [Tiny Helpers](https://tiny-helpers.dev/) - little tools for web developers

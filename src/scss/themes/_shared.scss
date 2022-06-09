@@ -1,0 +1,52 @@
+@use '../utils';
+
+@mixin grid-footer {
+  display: grid;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  margin-top: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  align-content: center;
+  justify-content: center;
+  height: min(50vh, 20rem);
+
+  @media screen and (min-width: utils.$tablet) {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .footer-text {
+    grid-row: 1 / span 1;
+    justify-self: center;
+    align-self: start;
+    grid-column: 1 / span 4;
+    @media screen and (min-width: utils.$tablet) {
+      grid-column: 1 / span 8;
+    }
+  }
+
+  .footer-links {
+    grid-column: 1 / span 8;
+    grid-row: 1 / span 1;
+    align-self: center;
+  }
+}
+
+@mixin neon-glow($color1, $color2) {
+  text-shadow: 0 0 0 $color1, 0 0 0 $color1, 0 0 0 $color1, 0 0 1px $color1,
+    0 0 1px $color1, 0 0 1px $color1, 1px 0 20px $color1, 1px 0 20px $color1,
+    1px 0 20px $color1, 1px 0 10px $color2, 1px 0 10px $color2,
+    1px 0 50px $color2, 1px 0 50px $color2;
+}
+
+@mixin fancy-link-backgrounds($gradientFrom, $gradientTo) {
+  background: linear-gradient(90deg, $gradientFrom, $gradientTo) no-repeat right
+    bottom / 0 var(--bg-h);
+  transition: background-size 350ms;
+
+  &:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+  }
+}

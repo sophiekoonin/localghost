@@ -1,0 +1,150 @@
+@use './shared';
+@use '../utils';
+
+[data-theme='sunset'] {
+  --header-font-family: 'Bayshore', cursive;
+  --heading-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --background: fixed
+    linear-gradient(
+      hsla(330, 88%, 70%, 1),
+      hsla(370, 100%, 76%, 1) 40%,
+      hsla(370, 100%, 86%, 1),
+      hsla(380, 100%, 96%, 1)
+    );
+  --content-bg: rgba(255, 255, 255, 0.8);
+  --accent-color: hsla(303, 88%, 90%, 1);
+  --bullet: url('/icons/triangle-bullet.svg');
+  --link-color: hsla(329, 96%, 43%, 1);
+  --link-hover-color: hsla(370, 100%, 66%, 1);
+  --tweet-bg: hsl(14, 94%, 93%);
+  --tweet-border: hsl(14, 94%, 75%);
+  --inline-code-color: hsl(329, 96%, 31%);
+  --inline-code-bg: hsl(14, 94%, 93%);
+  --list-heading-color: hsl(329, 96%, 31%);
+
+  .skyscraper {
+    display: none;
+  }
+
+  .palmtree {
+    display: initial;
+  }
+
+  .header {
+    text-transform: none;
+    transform: rotate(-5deg);
+    margin-block: var(--space-m);
+    font-size: var(--step-8);
+    a {
+      font-weight: 400;
+      color: hsl(190, 100%, 90%);
+      text-decoration: none;
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration: none;
+      }
+
+      @include shared.neon-glow(
+        hsla(190, 100%, 75%, 1),
+        hsla(190, 100%, 50%, 1)
+      );
+      &:hover,
+      &:focus {
+        color: hsla(303, 88%, 90%, 1);
+        @include shared.neon-glow(
+          hsla(303, 88%, 80%, 1),
+          hsla(303, 88%, 50%, 1)
+        );
+      }
+    }
+  }
+
+  footer {
+    @include shared.grid-footer;
+    text-transform: uppercase;
+    font-style: italic;
+  }
+
+  .pagination {
+    text-transform: uppercase;
+    font-style: italic;
+    a {
+      color: hsl(329, 96%, 31%);
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-style: italic;
+    text-transform: uppercase;
+  }
+
+  .content {
+    @include utils.fluid-padding;
+
+    h1 {
+      color: hsl(329, 96%, 41%);
+    }
+
+    h2 {
+      color: hsl(20, 82%, 50%);
+    }
+
+    h3 {
+      color: hsl(340, 100%, 50%);
+    }
+
+    a:not(.tweet-card a) {
+      text-decoration: none;
+      @include shared.fancy-link-backgrounds(
+        hsla(370, 100%, 76%, 1),
+        hsla(330, 88%, 60%, 1)
+      );
+      --bg-h: 3px;
+    }
+  }
+
+  .page-wrapper {
+    background: url('/img/sunset.png') no-repeat;
+    background-position: bottom center;
+  }
+
+  .footer-links {
+    a:not(.tweet-card a) {
+      text-decoration: none;
+      color: hsl(329, 96%, 31%);
+      @include shared.fancy-link-backgrounds(
+        hsla(370, 100%, 76%, 1),
+        hsla(330, 88%, 60%, 1)
+      );
+      --bg-h: 3px;
+    }
+  }
+  .main-nav a {
+    font-style: italic;
+    text-transform: uppercase;
+    color: #fff;
+
+    text-decoration: none;
+    font-size: var(--step-1);
+
+    text-align: right;
+    &[data-state='active'],
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .tweet-card {
+    .tweet-header {
+      .tweet-author-name {
+        text-transform: uppercase;
+        font-style: italic;
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+@use 'utils';
+
+html,
+body {
+  min-height: 100vh;
+}
+body {
+  background: var(--background);
+  color: var(--body-color);
+  font-family: var(--body-font-family);
+}
+
+select {
+  padding: 2px;
+  font-family: var(--body-font-family);
+}
+
+main {
+  flex: 1;
+  margin-inline: auto;
+}
+
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include utils.fluid-padding;
+}
+
+footer {
+  @include utils.fluid-padding;
+  text-align: center;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1 {
+  font-size: var(--step-3);
+}
+h2 {
+  font-size: var(--step-2);
+}
+h3 {
+  font-size: var(--step-1);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+pre {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  font-family: var(--heading-font-family);
+}
+
+code:not(pre > code) {
+  word-break: break-word;
+  background: var(--inline-code-bg);
+  color: var(--inline-code-color);
+}
+
+p {
+  line-height: 1.5;
+  max-inline-size: var(--max-inline-size);
+  overflow-wrap: break-word;
+}
+
+ul > * + *,
+ol > * + * {
+  margin-block-start: var(--space-xs-s);
+}
+
+ul,
+ol {
+  margin-inline-start: var(--space-s);
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a {
+  font-weight: 600;
+  color: var(--link-color);
+  &:hover {
+    color: var(--link-hover-color);
+  }
+}
+
+pre code {
+  max-width: 100%;
+  overflow: scroll;
+  white-space: pre-wrap;
+}

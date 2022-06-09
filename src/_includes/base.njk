@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      {% include "partials/meta.njk" %}
+    <title>
+      {% if not isHome %}
+        {{ title }} -
+      {% endif %}
+      localghost</title>
+    <script src="/js/main.js" type="module"></script>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    {% include "partials/svg/defs.html" %}
+    <div class="page-wrapper">
+      {% include "partials/header.njk" %}
+      <main class="wrapper">
+        {% include "partials/nav.njk" %}
+        {% block content %}
+          {{ content | safe }}
+        {% endblock %}
+      </main>
+      {% include "partials/footer.njk" %}
+    </div>
+  </body>
+</html></head></html>

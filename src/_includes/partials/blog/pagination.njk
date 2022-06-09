@@ -1,0 +1,16 @@
+{% if pagination.href.next or pagination.href.previous %}
+  <nav class="pagination {% if not pagination.href.previous %}next-only{% endif %}" aria-label="Page navigation">
+    {% if pagination.href.previous %}
+      <a href="{{ pagination.href.previous }}{{ paginationAnchor }}" data-direction="backwards">
+        <span class="pagination-arrow" aria-hidden="true">←</span>
+        <span>Previous page</span>
+      </a>
+    {% endif %}
+    {% if pagination.href.next %}
+      <a href="{{ pagination.href.next }}{{ paginationAnchor }}" data-direction="forwards">
+        <span>Next page</span>
+        <span class="pagination-arrow" aria-hidden="true">→</span>
+      </a>
+    {% endif %}
+  </nav>
+{% endif %}

@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'Fredoka';
+  font-weight: 400;
+  src: url('/fonts/Fredoka-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Fredoka';
+  font-weight: 500;
+  src: url('/fonts/Fredoka-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Bayshore';
+  src: url('/fonts/Bayshore.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Bleeding Cowboys';
+  src: url('/fonts/Bleeding_Cowboys.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  src: url('/fonts/Inter-roman.var.woff2?v=3.13') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  src: url('/fonts/Inter-italic.var.woff2?v=3.13') format('woff2');
+}
+
+@font-face {
+  font-family: 'VCR OSD Mono';
+  src: url('/fonts/VCROSDMono.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sen';
+  src: url('/fonts/Sen-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sen';
+  font-weight: bold;
+  src: url('/fonts/Sen-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Win95 sans';
+  font-display: swap;
+  font-style: normal;
+  src: url('/fonts/W95-sans.woff');
+}

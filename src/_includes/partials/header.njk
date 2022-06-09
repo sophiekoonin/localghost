@@ -1,0 +1,33 @@
+<div class="star-grid" aria-hidden="true">
+  <div id="star-1" class="star star-1"></div>
+  <div id="star-2" class="star star-2"></div>
+  <div id="star-3" class="star star-3"></div>
+  <div id="star-4" class="star star-4"></div>
+  <div id="star-5" class="star star-1"></div>
+  <div id="star-6" class="star star-2"></div>
+  <div id="star-7" class="star star-3"></div>
+  <div id="star-8" class="star star-4"></div>
+  <div id="star-9" class="star star-1"></div>
+  <div id="star-10" class="star star-2"></div>
+  <div id="star-11" class="star star-3"></div>
+  <div id="star-12" class="star star-4"></div>
+  <div id="star-13" class="star star-1"></div>
+  <div id="star-14" class="star star-2"></div>
+</div>
+<header>
+  <!-- Title -->
+  {% if isHome %}
+    <h1 class="header">
+      <a href="{{ global.baseUrl }}">
+        Localghost
+      </a>
+    </h1>
+  {% else %}
+    <span class="header">
+      <a href="{{ global.baseUrl }}">
+        Localghost
+      </a>
+    </span>
+  {% endif %}
+  {% include "partials/theme-switcher.njk" %}
+</header>

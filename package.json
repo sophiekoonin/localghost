@@ -1,28 +1,32 @@
 {
-  "name": "localghost",
+  "name": "sophie.pizza",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
-  "engines": {
-    "node": "14.x"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sophiekoonin/localghost.git"
-  },
-  "author": "",
-  "license": "CC-BY-NC-SA-4.0",
-  "bugs": {
-    "url": "https://github.com/sophiekoonin/localghost/issues"
-  },
-  "homepage": "https://github.com/sophiekoonin/localghost#readme",
+  "main": "index.js",
   "devDependencies": {
+    "@11ty/eleventy": "1.0.1",
+    "@sindresorhus/slugify": "2.1.0",
     "autoprefixer": "^10.4.2",
     "canvas": "2.8.0",
-    "postcss": "^8.4.5",
+    "concurrently": "7.0.0",
+    "markdown-it-anchor": "^8.6.4",
+    "markdown-it-attrs": "^4.1.4",
+    "postcss": "^8.4.8",
     "postcss-cli": "^9.1.0"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-rss": "1.1.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "4.0.0",
+    "eleventy-plugin-embed-tweet": "0.3.1",
+    "markdown-it-image-figures": "2.1.0",
+    "sass": "1.49.9"
+  },
+  "scripts": {
+    "sass": "npx sass src/scss/style.scss:_site/css/style.css",
+    "postcss": "npx postcss _site/css/*.css --use autoprefixer -d _site/css",
+    "prebuild": "npm run sass && npm run postcss",
+    "start": "NODE_ENV=development BASE_URL=http://localhost:8080 concurrently 'eleventy --serve --quiet' 'yarn run sass --watch'",
+    "build": "NODE_ENV=production eleventy",
+    "full-build": "set CACHE_BUST=true && yarn run build",
+    "clear-cache": "rm -rf tweets"
   }
 }

@@ -1,0 +1,59 @@
+@use '../utils';
+
+[data-theme='minimalist'] {
+  --background: #fafafa;
+  --content-bg: none;
+  --header-font-family: 'Krungthep', sans-serif;
+  --header-color: #333333;
+  --body-color: #333333;
+  --accent-color: #333333;
+  --bullet: disc;
+
+  .skyscraper,
+  .palmtree {
+    display: none;
+  }
+
+  a {
+    font-variation-settings: 'wght' 500;
+    &,
+    &:visited {
+      color: var(--body-color);
+    }
+    &:hover {
+      color: #9266d7;
+    }
+  }
+
+  .header {
+    margin-block-start: var(--space-l);
+    margin-block-end: var(--space-ms-);
+    font-size: var(--step-5);
+    a {
+      text-decoration: none;
+    }
+  }
+
+  main {
+    margin-block-start: var(--space-xs);
+
+    padding: 0;
+  }
+
+  .sidebar {
+    margin-block-end: var(--space-xs);
+    a {
+      span {
+        display: block;
+        margin-right: auto;
+      }
+    }
+  }
+  .content {
+    max-inline-size: var(--max-inline-size);
+  }
+
+  footer {
+    @extend .flow;
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "pages": [
+    {
+      "label": "About",
+      "url": "/about"
+    },
+    {
+      "label": "Blog",
+      "url": "/blog"
+    },
+    {
+      "label": "Speaking",
+      "url": "/talks"
+    },
+    {
+      "label": "Links",
+      "url": "/links"
+    }
+  ]
+}

@@ -1,3 +1,5 @@
-public/
-resources/_gen
-node_modules/
+_site/
+yarn-error.log
+.DS_Store
+node_modules/*
+.env

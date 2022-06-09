@@ -1,6 +1,0 @@
-<figure {{with .Get "hidden" }} aria-hidden="true" {{end}} {{with .Get "class" }} class="{{.}}" {{end}}>
-  {{ .Inner }}
-  {{with .Get "caption"}}
-    <figcaption class="caption">{{ . }}</figcaption>
-  {{end}}
-</figure>

@@ -1,0 +1,155 @@
+@use '../utils';
+
+[data-theme='twothousandandfour'] {
+  --header-font-family: 'Bleeding Cowboys', cursive;
+  --body-color: white;
+  --body-font-family: 'Arial Narrow';
+  --content-bg: hsl(271, 31%, 33%);
+  --max-inline-size: 100ch;
+  --bullet: url('/img/heart-bullet.svg');
+  --accent-color: white;
+
+  body {
+    background-color: hsl(271, 31%, 23%);
+    background-image: url('/img/grunge-header.png');
+    background-repeat: no-repeat;
+  }
+
+  header {
+    justify-content: flex-start;
+    padding-block: var(--space-2xl);
+    a {
+      font-size: var(--step-7);
+      color: white;
+      text-transform: lowercase;
+    }
+  }
+
+  main.wrapper,
+  .content {
+    margin-inline: 0;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: clamp(16rem, 100vw, 70rem);
+  }
+  main > .content {
+    border: 1px solid white;
+  }
+
+  main > .content,
+  main > .content-inner {
+    padding: var(--space-xs-s);
+    flex-basis: 0;
+    flex-grow: 999;
+    min-inline-size: 65%;
+    max-inline-size: initial;
+  }
+
+  .sidebar {
+    padding: var(--space-xs-s);
+    background: var(--content-bg);
+    flex-basis: 15rem;
+    flex-grow: 1;
+    border: 1px solid white;
+    a:hover {
+      text-transform: uppercase;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+    .italic {
+      font-style: italic;
+    }
+    .underline {
+      text-decoration: underline;
+    }
+    h2 {
+      text-transform: uppercase;
+      font-size: var(--step-0);
+    }
+
+    button {
+      border: 0;
+      cursor: pointer;
+      background: none;
+      font-family: var(--body-font-family);
+      font-size: var(--step--1);
+      color: white;
+      font-weight: bold;
+      text-decoration: underline;
+      &:hover {
+        text-transform: uppercase;
+      }
+    }
+    nav {
+      @media screen and (min-width: 450px) {
+        gap: 0;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    hr {
+      width: 60%;
+      color: white;
+      margin-inline: auto;
+    }
+    .php-currently {
+      margin-block: 0;
+      display: flex;
+      flex-direction: column;
+      div,
+      dt,
+      dd {
+        display: inline;
+      }
+      dt {
+        font-weight: bold;
+      }
+    }
+  }
+  .pagination {
+    font-size: var(--step--1);
+    margin-inline: 0;
+  }
+
+  .posts-list {
+    margin: 0;
+
+    .content {
+      border: 1px solid white;
+      padding: var(--space-xs-s);
+    }
+  }
+  main > .content-inner {
+    padding: 0;
+  }
+
+  .content {
+    font-size: var(--step--1);
+    a:not(h2 > a):hover {
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      text-transform: lowercase;
+    }
+    h1 {
+      font-size: var(--step-2);
+    }
+    h2,
+    .post-subtitle {
+      font-size: var(--step-1);
+    }
+    h3 {
+      font-size: var(--step-0);
+    }
+  }
+}

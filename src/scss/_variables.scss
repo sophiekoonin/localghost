@@ -1,0 +1,52 @@
+:root {
+  --background: #fafafa;
+  --body-font-family: 'Inter var', sans-serif;
+  --header-font-family: var(--body-font-family);
+  --heading-font-family: var(--body-font-family);
+  --body-font-size: var(--step--1);
+  --body-color: #333333;
+  --link-color: var(--body-color);
+  --link-hover-color: var(--body-color);
+  --bullet: initial;
+  --max-inline-size: 65ch;
+  --inline-code-color: #333333;
+  --inline-code-bg: #eaeaea;
+  --list-heading-color: #333333;
+
+  --tweet-bg: #fff;
+  --tweet-border: #e1e8ed;
+
+  --space-3xs: clamp(0.31rem, calc(0.29rem + 0.12vw), 0.38rem);
+  --space-2xs: clamp(0.69rem, calc(0.66rem + 0.12vw), 0.75rem);
+  --space-xs: clamp(1rem, calc(0.95rem + 0.24vw), 1.13rem);
+  --space-s: clamp(1.31rem, calc(1.24rem + 0.37vw), 1.5rem);
+  --space-m: clamp(2rem, calc(1.9rem + 0.49vw), 2.25rem);
+  --space-l: clamp(2.63rem, calc(2.48rem + 0.73vw), 3rem);
+  --space-xl: clamp(3.94rem, calc(3.72rem + 1.1vw), 4.5rem);
+  --space-2xl: clamp(5.25rem, calc(4.96rem + 1.46vw), 6rem);
+  --space-3xl: clamp(7.88rem, calc(7.44rem + 2.2vw), 9rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.31rem, calc(0.14rem + 0.85vw), 0.75rem);
+  --space-2xs-xs: clamp(0.69rem, calc(0.52rem + 0.85vw), 1.13rem);
+  --space-xs-s: clamp(1rem, calc(0.8rem + 0.98vw), 1.5rem);
+  --space-s-m: clamp(1.31rem, calc(0.95rem + 1.83vw), 2.25rem);
+  --space-m-l: clamp(2rem, calc(1.61rem + 1.95vw), 3rem);
+  --space-l-xl: clamp(2.63rem, calc(1.89rem + 3.66vw), 4.5rem);
+  --space-xl-2xl: clamp(3.94rem, calc(3.13rem + 4.02vw), 6rem);
+  --space-2xl-3xl: clamp(5.25rem, calc(3.79rem + 7.32vw), 9rem);
+
+  /* Font sizes */
+
+  --step--2: clamp(0.69rem, calc(0.68rem + 0.05vw), 0.72rem);
+  --step--1: clamp(0.83rem, calc(0.81rem + 0.13vw), 0.9rem);
+  --step-0: clamp(1rem, calc(0.95rem + 0.24vw), 1.13rem);
+  --step-1: clamp(1.2rem, calc(1.12rem + 0.4vw), 1.41rem);
+  --step-2: clamp(1.44rem, calc(1.32rem + 0.62vw), 1.76rem);
+  --step-3: clamp(1.73rem, calc(1.54rem + 0.92vw), 2.2rem);
+  --step-4: clamp(2.07rem, calc(1.81rem + 1.31vw), 2.75rem);
+  --step-5: clamp(2.49rem, calc(2.12rem + 1.84vw), 3.43rem);
+  --step-6: clamp(2.99rem, calc(2.48rem + 2.55vw), 4.29rem);
+  --step-7: clamp(3.58rem, calc(2.89rem + 3.48vw), 5.36rem);
+  --step-8: clamp(4.3rem, calc(3.36rem + 4.69vw), 6.71rem);
+}

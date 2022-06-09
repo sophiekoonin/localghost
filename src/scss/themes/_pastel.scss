@@ -1,0 +1,166 @@
+@use '../utils';
+
+[data-theme='pastel'] {
+  --background: hsl(273, 39%, 94%);
+  --header-font-family: 'Fredoka', sans-serif;
+  --body-font-family: 'Sen', sans-serif;
+  --content-bg: white;
+  --accent-color: rgb(249, 157, 244);
+  --tweet-bg: hsl(175, 80%, 98%);
+  --tweet-border: hsl(175, 80%, 80%);
+  --bullet: url('/icons/heart-purple-small.svg');
+  --max-inline-size: 75ch;
+  --link-color: hsl(244, 69%, 66%);
+  --link-hover-color: hsl(300, 69%, 72%);
+  --inline-code-color: hsl(244, 43%, 57%);
+  --inline-code-bg: hsl(300, 69%, 97%);
+  --list-heading-color: #ec41a9;
+
+  .header {
+    margin-block-start: var(--space-l);
+    margin-block-end: var(--space-m);
+    font-size: var(--step-5);
+    font-weight: 500;
+    a {
+      color: hsl(273, 39%, 60%);
+      &:hover {
+        color: hsl(189, 70%, 77%);
+      }
+    }
+  }
+  .content {
+    border-radius: 2rem;
+    padding: var(--space-s);
+    border: 2px solid hsl(300, 86%, 85%);
+    h1 {
+      color: #858bed;
+    }
+    h2 {
+      color: #e85dc5;
+    }
+    h3 {
+      color: #1eb9a3;
+    }
+
+    a {
+      background: linear-gradient(
+        to bottom,
+        var(--link-color) 0%,
+        var(--link-color) 100%
+      );
+      background-position: 0 100%;
+      background-repeat: repeat-x;
+      background-size: 3px 3px;
+      text-decoration: none;
+      &:hover {
+        color: var(--link-color);
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23746ce4' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+        background-position: 0 100%;
+        background-size: auto 6px;
+        border-bottom: 0;
+        background-repeat: repeat-x;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .pagination {
+    a {
+      text-decoration: none;
+      position: relative;
+      &[data-direction='backwards'] {
+        &:after {
+          content: url('/icons/heart-purple.svg');
+          width: var(--space-s);
+          height: var(--space-s);
+          right: -1.5rem;
+          top: 0;
+          position: absolute;
+        }
+        &:hover:after {
+          content: url('/icons/heart-galaxy.png');
+          width: var(--space-s);
+          height: var(--space-s);
+          right: -1.5rem;
+          top: 0;
+          position: absolute;
+        }
+      }
+      &[data-direction='forwards'] {
+        position: relative;
+        &:before {
+          content: url('/icons/heart-purple.svg');
+          width: var(--space-s);
+          height: var(--space-s);
+          left: -1.5rem;
+          top: 0;
+          position: absolute;
+        }
+        &:hover:before {
+          content: url('/icons/heart-galaxy.png');
+          width: var(--space-s);
+          height: var(--space-s);
+          left: -1.5rem;
+          top: 0;
+          position: absolute;
+        }
+      }
+    }
+  }
+  .main-nav {
+    margin-block-start: 1px;
+    text-align: center;
+    font-family: var(--header-font-family);
+    font-weight: 400;
+
+    .nav-link {
+      color: hsl(273, 36%, 54%);
+      line-height: 2rem;
+      font-size: var(--step--1);
+      width: 10ch;
+      text-decoration: none;
+      position: relative;
+      border-radius: 4rem;
+      background: hsl(300, 86%, 92%);
+      border: 2px solid hsl(300, 86%, 85%);
+      &:before {
+        width: var(--space-s);
+        height: var(--space-s);
+        left: -0.75rem;
+        top: 0.5rem;
+        position: absolute;
+      }
+      &:nth-of-type(4n):before {
+        content: url('/icons/heart-cyan.svg');
+      }
+      &:nth-of-type(4n + 1):before {
+        content: url('/icons/heart-purple.svg');
+      }
+      &:nth-of-type(4n + 2):before {
+        content: url('/icons/heart-pink.svg');
+      }
+      &:nth-of-type(4n + 3):before {
+        content: url('/icons/heart-green.svg');
+      }
+
+      &:hover {
+        background: hsl(147, 71%, 92%);
+        border-color: hsl(147, 70%, 85%);
+
+        &:before {
+          content: url('/icons/heart-galaxy.png');
+          width: var(--space-s);
+          height: var(--space-s);
+          left: -0.75rem;
+          top: 0.5rem;
+          position: absolute;
+        }
+      }
+
+      &[data-state='active'] {
+        background: hsl(189, 70%, 92%);
+        border-color: hsl(189, 70%, 85%);
+      }
+    }
+  }
+}

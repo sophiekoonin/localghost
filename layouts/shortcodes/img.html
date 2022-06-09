@@ -1,6 +1,0 @@
-{{ $image := .Page.Resources.GetMatch (.Get "src") }}
-<div {{ with .Get "class" }}class="{{.}}">
-  <a href="{{ if $image}}{{$image.RelPermalink }}{{end}}" class="plain" target="_blank" rel="noopener noreferrer"><img
-      src="{{ if $image}}{{$image.RelPermalink }}{{end}}" {{ end }} {{ with .Get "alt" }} alt="{{.}}" {{ end }}/>
-  </a>
-</div>
