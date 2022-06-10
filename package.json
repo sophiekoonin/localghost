@@ -1,5 +1,5 @@
 {
-  "name": "sophie.pizza",
+  "name": "localghost",
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
@@ -10,6 +10,7 @@
     "concurrently": "7.0.0",
     "markdown-it-anchor": "^8.6.4",
     "markdown-it-attrs": "^4.1.4",
+    "md5": "2.3.0",
     "postcss": "^8.4.8",
     "postcss-cli": "^9.1.0"
   },
@@ -21,10 +22,7 @@
     "sass": "1.49.9"
   },
   "scripts": {
-    "sass": "npx sass src/scss/style.scss:_site/css/style.css",
-    "postcss": "npx postcss _site/css/*.css --use autoprefixer -d _site/css",
-    "prebuild": "npm run sass && npm run postcss",
-    "start": "NODE_ENV=development BASE_URL=http://localhost:8080 concurrently 'eleventy --serve --quiet' 'yarn run sass --watch'",
+    "start": "NODE_ENV=development BASE_URL=http://localhost:8080 eleventy --serve --quiet",
     "build": "NODE_ENV=production eleventy",
     "full-build": "set CACHE_BUST=true && yarn run build",
     "clear-cache": "rm -rf tweets"

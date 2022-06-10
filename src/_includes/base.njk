@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js" theme="city">
+  {% set cssFilename = global.cssFile() %}
   <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex">
@@ -12,7 +13,8 @@
       {% endif %}
       localghost</title>
     <script src="/js/main.js"></script>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preload" as="style" href={{ cssFilename }}>
+    <link rel="stylesheet" type="text/css" href={{ cssFilename }}>
   </head>
   <body>
     {% include "partials/svg/defs.html" %}
