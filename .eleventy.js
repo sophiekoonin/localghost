@@ -22,7 +22,7 @@ const markdownItOptions = {
 const markdownLib = markdownIt(markdownItOptions)
   .use(markdownItAttrs)
   .use(markdownItAnchor)
-  .use(mdfigcaption, { figcaption: true });
+  .use(mdfigcaption, { figcaption: true, lazy: true });
 
 module.exports = (config) => {
   config.addWatchTarget('./src');
