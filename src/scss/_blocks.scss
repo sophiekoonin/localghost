@@ -145,9 +145,6 @@
       display: inline;
       border-radius: 50%;
     }
-    &:focus-within {
-      border: 2px solid var(--accent-color);
-    }
 
     input:checked + * {
       border: 2px dotted var(--accent-color);
