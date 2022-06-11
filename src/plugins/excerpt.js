@@ -6,6 +6,7 @@ module.exports = function create(options = {}) {
   }
 
   return function extractExcerpt(template) {
+    debugger;
     if (!template) {
       throw new Error('template is required');
     }

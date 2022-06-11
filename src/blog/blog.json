@@ -1,4 +1,5 @@
 {
   "layout": "single-post.njk",
+  "isBlog": true,
   "permalink": "/blog/{{ title | slugify }}/index.html"
 }

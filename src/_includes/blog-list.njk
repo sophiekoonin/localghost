@@ -13,8 +13,12 @@
     {# If this is a tag, grab those items instead as one large collection #}
     <ol role="list" class="posts-list flow">
       {% for item in postListItems %}
-        {% set postExcerpt %}
-        {% excerpt item.data %}
+        {% set excerpt %}
+        {% if item.data.excerptText %}
+          {{ item.data.excerptText | trim | safe }}
+        {% elseif item.data.page.excerpt %}
+          {{ item.data.page.excerpt | trim | safe }}
+        {% endif %}
         {% endset %}
         <li>
           <article class="content summary">
@@ -26,7 +30,7 @@
             </h2>
             <div class="content-inner flow">
               <p>
-                {{ postExcerpt | safe }}
+                {{ excerpt | safe }}
               </p>
               <p>
                 <time class="post-date" datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>

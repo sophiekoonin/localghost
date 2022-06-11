@@ -47,7 +47,7 @@
       color: #1eb9a3;
     }
 
-    a {
+    a:not(.tweet-card a) {
       background: linear-gradient(
         to bottom,
         var(--link-color) 0%,

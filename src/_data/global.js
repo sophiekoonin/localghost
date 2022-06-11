@@ -4,8 +4,7 @@ const fs = require('fs');
 
 module.exports = {
   baseUrl: process.env.BASE_URL || 'https://localghost.dev',
-  twitterUsername: '@type__error',
-  description: `Sophie's website`,
+  description: `I build fun things out of HTML, CSS and JavaScript, write blog posts about tech and mental health, and give conference talks on things I'm passionate about.`,
   currentYear() {
     return new Date().getFullYear();
   },

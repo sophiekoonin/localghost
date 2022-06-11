@@ -3,7 +3,7 @@
 [data-theme='minimalist'] {
   --background: #fafafa;
   --content-bg: none;
-  --header-font-family: 'Krungthep', sans-serif;
+  --header-font-family: 'Krungthep', var(--body-font-family);
   --header-color: #333333;
   --body-color: #333333;
   --accent-color: #333333;
