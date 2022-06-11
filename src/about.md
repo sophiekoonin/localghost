@@ -3,15 +3,14 @@ title: "About me"
 layout: 'page.njk'
 ---
 
-![](/img/sophie-transparent.png){.about-photo}
-I'm a web developer based in London. My passions are web accessibility, keeping the web fun, and lowering the barrier to entry for people learning web development.
 
 I started building websites on Geocities at the age of 10, graduating over the years to various questionable free hosting sites, `.tk` domains, [Greymatter](https://en.wikipedia.org/wiki/Greymatter_(software))-powered personal sites hosted on other people's pretentiously-named `.org` domains, and eventually over-engineered Wordpress blogs. It was inevitable that I'd end up doing it for a living.
 
+![](/img/sophie-transparent.png){.about-photo}
 
 I'm currently on a sabbatical, but until recently I was a product engineer at [incident.io](https://incident.io), building software to help companies manage, resolve and learn from incidents. Prior to this I was a senior web engineer and Web Discipline lead at [Monzo](https://www.monzo.com). 
   
-By day I build web things for fun and profit, but by night I make music with [SHE Choir London](https://shechoir.com/london). I also enjoy gardening, baking, crafting, mechanical keyboards, surreal memes and video games. 
+By day I build web things for fun and profit, but by night I make music with [SHE Choir London](https://shechoir.com/london). I also enjoy gardening, baking, dogs, crafting, mechanical keyboards, surreal memes and video games. 
 
 Find me on [Twitter](https://twitter.com/type__error) or send me an email: [sophie@localghost.dev](mailto:sophie@localghost.dev).
 

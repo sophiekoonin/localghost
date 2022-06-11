@@ -6,6 +6,6 @@ pagination:
   size: 3
 ---
 
+I [build fun things](/links#projects) out of HTML, CSS and JavaScript, write [blog posts](/blog) about tech and mental health, and [give conference talks](/talks) on things I'm passionate about.
 
-This is my space on the web where I build fun things out of HTML and CSS and write blog posts about tech and mental health. Consider it a love letter to Web 1.0.
-
+This website has many different personalities: use the theme switcher in the corner to explore them all!{"#theme-switcher-blurb"}
