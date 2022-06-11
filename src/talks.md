@@ -34,7 +34,7 @@ Some of the things I like to talk about include:
 - Next.js Conf 2020 - _Next.JS at Monzo_ [(video)](https://youtu.be/UXpY3-DlZ9c)
 - JSCamp 2021  [(video)](https://www.youtube.com/watch?v=Ghrl5whfpso), JSConf IN 2021, CityJS London March 2022, BeJS Conf May 2022 - _Play Them Off, Keyboard App: Building a piano in JavaScript_ 
 - UX London, June 2022 (upcoming) - *Use your words: clear writing at incident.io*
-
+- FullStack eXchange 2022 (upcoming) - _This talk is under construction: a love letter to the personal website_
 
 ### Podcasts & Panels
 - Monzo x Ada’s List webinar for International Women’s Day 2021

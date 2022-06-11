@@ -15,7 +15,7 @@
   --inline-code-color: hsl(244, 43%, 57%);
   --inline-code-bg: hsl(300, 69%, 97%);
   --list-heading-color: #ec41a9;
-
+  --photo-bg: linear-gradient(hsl(300, 86%, 85%), rgb(238, 217, 238));
   .header {
     margin-block-start: var(--space-l);
     margin-block-end: var(--space-m);
@@ -160,6 +160,7 @@
       &[data-state='active'] {
         background: hsl(189, 70%, 92%);
         border-color: hsl(189, 70%, 85%);
+        transform: rotate(13deg);
       }
     }
   }

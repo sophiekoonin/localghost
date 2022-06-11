@@ -44,6 +44,11 @@
   --tweet-bg: rgb(141, 251, 245);
   --inline-code-bg: rgb(84, 255, 232);
   --list-heading-color: white;
+  --photo-bg: linear-gradient(
+    -45deg,
+    hsl(172, 100%, 44.3%),
+    hsl(305.9, 100%, 50%)
+  );
 
   .skyscraper,
   .palmtree {
@@ -173,7 +178,11 @@
       @extend .link-button;
 
       &[data-state='active'] {
-        transform: rotate(13deg);
+        text-decoration: underline;
+        border-right: 2px solid white;
+        border-bottom: 2px solid white;
+        border-left: 2px solid hsl(250, 100%, 20%);
+        border-top: 2px solid hsl(250, 100%, 20%);
       }
     }
   }

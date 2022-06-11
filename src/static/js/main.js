@@ -309,9 +309,10 @@ function destroyCursor() {
 function injectGeocitiesGoodness() {
   const start = document.getElementById('content-start');
   const end = document.getElementById('content-end');
-
-  start.innerHTML = contentStart(prefersReducedMotion);
-  end.innerHTML = contentEnd(prefersReducedMotion);
+  if (start && end) {
+    start.innerHTML = contentStart(prefersReducedMotion);
+    end.innerHTML = contentEnd(prefersReducedMotion);
+  }
 }
 
 function clearGeocitiesRubbish() {

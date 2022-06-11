@@ -74,6 +74,12 @@
 
 .about-photo {
   float: right;
+  aspect-ratio: 1;
+  width: min(30%, 15rem);
+  height: auto;
+  shape-outside: circle(50%);
+  border-radius: 50%;
+  background: var(--photo-bg);
 }
 
 .skyscraper,

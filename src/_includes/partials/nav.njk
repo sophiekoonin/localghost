@@ -1,7 +1,7 @@
 <aside class="sidebar">
   <nav class="main-nav" aria-label="Main navigation">
     {% for item in nav.pages %}
-      <a class="nav-link" href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>
+      <a data-text="{{ item.label }}" class="nav-link" href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>
         <span>{{ item.label }}</span>
       </a>
     {% endfor %}

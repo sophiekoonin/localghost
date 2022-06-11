@@ -166,6 +166,17 @@
       }
     }
   }
+
+  .about-photo {
+    border-radius: 0;
+    shape-outside: none;
+    aspect-ratio: 1;
+    content: url('/img/sophie-badquality.png');
+    border-top: 9px solid hsl(0, 0%, 70%);
+    border-left: 9px solid hsl(0, 0%, 70%);
+    border-right: 9px solid hsl(0, 0%, 42%);
+    border-bottom: 9px solid hsl(0, 0%, 42%);
+  }
   .posts-list li:not(:last-of-type)::after {
     content: ' ';
     bottom: calc(var(--space-xs) * -1);
