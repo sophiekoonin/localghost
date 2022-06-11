@@ -25,6 +25,9 @@
     }
   }
 
+  header {
+    padding-block-end: 0;
+  }
   .header {
     margin-block-start: var(--space-l);
     margin-block-end: var(--space-ms-);

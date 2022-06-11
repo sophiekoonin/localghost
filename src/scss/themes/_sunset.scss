@@ -30,6 +30,10 @@
     display: initial;
   }
 
+  header {
+    padding-block-end: var(--space-2xs);
+  }
+
   .header {
     text-transform: none;
     transform: rotate(-5deg);
@@ -74,7 +78,7 @@
     }
   }
 
-  h1,
+  h1:not(.header),
   h2,
   h3,
   h4,

@@ -16,6 +16,11 @@
   --inline-code-bg: hsl(300, 69%, 97%);
   --list-heading-color: #ec41a9;
   --photo-bg: linear-gradient(hsl(300, 86%, 85%), rgb(238, 217, 238));
+
+  header {
+    padding-block-end: var(--space-2xs);
+  }
+
   .header {
     margin-block-start: var(--space-l);
     margin-block-end: var(--space-m);
