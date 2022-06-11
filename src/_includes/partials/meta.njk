@@ -9,8 +9,8 @@
 {% endset %}
 {% set ogImageName %}
 {% if isBlog %}
-  {{ title | slugify }}
-  {% else %}og-image{% endif %}
+  og-images/{{ title | slugify }}
+  {% else %}img/og-image{% endif %}
 {% endset %} <meta property="og:title" content="{{ title }}{{ ' - localghost' if not isHome }}"/>
 <meta property="og:type" content="website"/>
 <meta property="og:description" content="{{ excerpt | trim }}"/>
@@ -27,5 +27,5 @@
 <meta name="twitter:title" content="{{ title }}{{ ' - localghost' if not isHome }}"/>
 <meta name="twitter:site" content="@type__error"/>
 <meta name="twitter:description" content="{{ excerpt | trim }}"/>
-<meta property="og:image" content="{{ global.baseUrl }}/og-images/{{ ogImageName | trim }}.png"/>
-<meta property="twitter:image" content="{{ global.baseUrl }}/og-images/{{ ogImageName | trim }}.png"/>
+<meta property="og:image" content="{{ global.baseUrl }}/{{ ogImageName | trim }}.png"/>
+<meta property="twitter:image" content="{{ global.baseUrl }}/{{ ogImageName | trim }}.png"/>
