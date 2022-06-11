@@ -1,6 +1,5 @@
 // Plugins
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
-const excerptPlugin = require('./src/plugins/excerpt');
 const tweetPlugin = require('eleventy-plugin-embed-tweet');
 const syntaxPlugin = require('@11ty/eleventy-plugin-syntaxhighlight');
 // Filters
@@ -38,10 +37,12 @@ module.exports = (config) => {
   config.addFilter('w3DateFilter', w3DateFilter);
   config.addFilter('markdown', markdownFilter);
   config.addFilter('debug', debugFilter);
-  config.addShortcode(
-    'excerpt',
-    excerptPlugin({ excerptSeparator: '<!--more-->' })
-  );
+
+  config.setFrontMatterParsingOptions({
+    excerpt: true,
+    // Optional, default is "---"
+    excerpt_separator: '<!--more-->',
+  });
   config.addShortcode('codepen', codeSnippet);
   config.addCollection('blog', (collection) => {
     return [...collection.getFilteredByGlob('./src/blog/*.md')].reverse();
