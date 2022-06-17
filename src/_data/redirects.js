@@ -4,6 +4,10 @@ module.exports = [
     to: '/blog',
   },
   {
+    from: '/2022/01/start-at-the-beginning-the-importance-of-learning-the-basics',
+    to: '/blog/start-at-the-beginning-the-importance-of-learning-the-basics',
+  },
+  {
     from: '/2021/01/a-typical-day-pandemic-edition',
     to: '/blog/a-typical-day-pandemic-edition/',
   },
