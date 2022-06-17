@@ -47,7 +47,6 @@ module.exports = function (webmentions, url, aliases = []) {
       },
       { likes: [], retweets: [] }
     );
-  debugger;
   return {
     likes: grouped.likes.length,
     retweets: grouped.retweets.length,
