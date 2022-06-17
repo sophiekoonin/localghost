@@ -5,6 +5,8 @@ tags:
 - "html"
 - "accessibility"
 title: "The right tag for the job: why you should use semantic HTML"
+aliases: 
+- '/2021/06/the-right-tag-for-the-job-why-you-should-use-semantic-html/'
 ---
 
 I've come across a lot of websites in my career (and in daily browsing) that are straight-up inaccessible. If you've ever worked on a project that is riddled with accessibility issues, you'll know that fixing these problems is a mammoth task - it needs _time_, it needs _people_, it needs *prioritisation*... it costs money, basically. As I mentioned in my blog post [7 myths designers and developers believe about web accessibility](https://localghost.dev/2020/10/7-myths-designers-and-developers-believe-about-web-accessibility/), retrofitting accessibility is *hard*.

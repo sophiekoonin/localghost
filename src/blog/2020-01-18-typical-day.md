@@ -4,6 +4,8 @@ date: '2021-01-18'
 tags: 
 - 'lifestyle'
 excerptText: What does a typical day for me look like in 2021?
+aliases:
+- '/2021/01/a-typical-day-pandemic-edition'
 ---
 
 *This is a series started by [Colin Devroe](http://cdevroe.com/2021/01/07/my-typical-day/). Some other lovely folks have written their own, including [Sara Soueidan](https://www.sarasoueidan.com/desk/typical-day/) and [Cassie Evans](https://www.cassie.codes/posts/my-typical-day/).*

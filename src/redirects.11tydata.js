@@ -1,6 +1,6 @@
 module.exports = {
   pagination: {
-    data: 'redirects',
+    data: 'collections.redirects',
     size: 1,
     alias: 'redirect',
     addAllPagesToCollections: true,

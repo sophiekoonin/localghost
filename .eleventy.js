@@ -56,6 +56,20 @@ module.exports = (config) => {
     return [...collection.getFilteredByGlob('./src/blog/*.md')].reverse();
   });
 
+  config.addCollection('redirects', (collection) => {
+    const pages = collection.getFilteredByGlob('./src/**/*.md');
+    const aliases = pages.map((page) => {
+      debugger;
+      if (!page.data.aliases) return [];
+      return page.data.aliases.map((alias) => ({
+        from: alias,
+        to: page.url,
+      }));
+    });
+
+    return aliases.flat();
+  });
+
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   config.setUseGitIgnore(false);
   return {

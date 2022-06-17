@@ -5,6 +5,8 @@ tags:
   - 'burnout'
   - 'mental health'
 excerptText: "I started writing this post a few days ago, and was so exhausted I couldn't actually be bothered to finish it, which tells you a lot really. Here are some lessons from the trash fire of 2020 that we can take over into the slightly-smaller-but-still-burning trash fire of 2021. "
+aliases:
+- '/2020/12/give-yourself-a-break-lessons-from-burnout'
 ---
 
 I started writing this post a few days ago, and was so exhausted I couldn't actually be bothered to finish it, which tells you a lot really. And if you're too exhausted to read another blog post, here's a summary: have a rest. Go and do something nice. Tech can wait. 

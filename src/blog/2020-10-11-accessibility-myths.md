@@ -4,6 +4,8 @@ date: '2020-10-11'
 tags: 
   - 'design'
   - 'accessibility'
+aliases:
+- '/2020/10/7-myths-designers-and-developers-believe-about-web-accessibility/'
 ---
 
 In an ideal world, being "good at accessibility" wouldn't make you stand out from the crowd. Companies wouldn't be hiring accessibility experts to help them unpick and untangle the inaccessible products they've been building for years. Speaking about web accessibility at a conference would be as unnecessary as getting up on stage and giving a talk on how to write HTML.
