@@ -23,6 +23,7 @@
     "lodash": "^4.17.21",
     "markdown-it-image-figures": "2.1.0",
     "node-fetch": "^2.6.1 ",
+    "sanitize-html": "2.7.0",
     "sass": "1.49.9"
   },
   "scripts": {

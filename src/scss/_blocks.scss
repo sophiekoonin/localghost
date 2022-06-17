@@ -578,3 +578,45 @@ body::after {
   align-items: center;
   justify-content: center;
 }
+
+.webmentions {
+  &-counts {
+    gap: var(--space-3xs);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    img {
+      aspect-ratio: 1;
+      height: var(--space-xs);
+      width: var(--space-xs);
+      min-width: var(--space-xs);
+    }
+  }
+
+  &-list {
+    margin-inline: 0;
+  }
+
+  .webmention {
+    &-meta {
+      display: flex;
+      align-items: center;
+      * + * {
+        margin-inline-start: var(--space-xs);
+      }
+    }
+    &-author {
+      display: flex;
+      align-items: center;
+      img {
+        border-radius: 50%;
+        height: var(--space-m);
+        width: var(--space-m);
+        min-width: var(--space-m);
+      }
+    }
+    .p-name {
+      font-weight: bold;
+    }
+  }
+}

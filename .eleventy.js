@@ -13,6 +13,7 @@ const markdownItAnchor = require('markdown-it-anchor');
 const mdfigcaption = require('markdown-it-image-figures');
 const codeSnippet = require('./src/plugins/code-snippet');
 const webmentionsFilter = require('./src/filters/webmentions.js');
+const likesFilter = require('./src/filters/twitter-likes.js');
 
 const markdownItOptions = {
   html: true,
@@ -46,6 +47,7 @@ module.exports = (config) => {
     return array.slice(0, n);
   });
   config.addFilter('webmentionsForUrl', webmentionsFilter);
+  config.addFilter('likesForUrl', likesFilter);
   config.setFrontMatterParsingOptions({
     excerpt: true,
     // Optional, default is "---"
@@ -59,7 +61,6 @@ module.exports = (config) => {
   config.addCollection('redirects', (collection) => {
     const pages = collection.getFilteredByGlob('./src/**/*.md');
     const aliases = pages.map((page) => {
-      debugger;
       if (!page.data.aliases) return [];
       return page.data.aliases.map((alias) => ({
         from: alias,

@@ -1,34 +1,31 @@
 {%- set absoluteUrl -%}{{ page.url | url | absoluteUrl(metadata.url) }}{%- endset -%}
-{%- set mentions = webmentions.children | webmentionsForUrl(absoluteUrl) -%}
-<div class="webmentions" id="webmentions">
+{%- set mentions = webmentions.children | webmentionsForUrl(absoluteUrl, aliases) -%}
+{%- set likesAndRetweets = webmentions.children | likesForUrl(absoluteUrl, aliases) -%}
+<div class="webmentions flow" id="webmentions">
   <h2>Webmentions</h2>
-  {% if mentions | length %}
-    <div class="webmentions__facepile">
-      {% for webmention in mentions | reverse | head(5) %}
-        <img src="{% if webmention.author.photo %}{{ webmention.author.photo }}{% else %}{{ '/img/webmention-avatar-default.svg' | url }}{% endif %}" title="{{ webmention.author.name }}" alt="" class="webmentions__face"/>
-      {% endfor %}
-      {% if mentions.length > 5 %}
-        <span>+{{ mentions.length - 5 }}</span>
-      {% endif %}
-    </div>
-    <ol class="webmentions__list">
+  <div class="webmentions-counts">
+    <img src="/icons/heart-like.svg" alt="Likes"/> {{ likesAndRetweets.likes }} <img src="/icons/retweet.svg" alt="Retweets"/>
+    {{ likesAndRetweets.retweets }}
+  </div>
+  {%- if mentions.length > 0 -%}
+    <ol class="webmentions-list flow">
       {% for webmention in mentions | reverse %}
-        <li class="webmentions__item">
-          <article class="webmention h-cite" id="webmention-{{ webmention['wm-id'] }}">
-            <div class="webmention__meta">
+        <li>
+          <article class="webmention flow h-cite" id="webmention-{{ webmention['wm-id'] }}">
+            <div class="webmention-meta">
               {% if webmention.author %}
-                <a class="webmention__author p-author h-card u-url" href="{{ webmention.url }}" target="_blank" rel="noopener noreferrer">
+                <a class="webmention-author p-author h-card u-url" href="{{ webmention.url }}" target="_blank" rel="noopener noreferrer">
                   {% if webmention.author.photo %}
-                    <img class="webmention__author__photo u-photo" src="{{ webmention.author.photo }}" alt="{{ webmention.author.name }}">
+                    <img class="u-photo" src="{{ webmention.author.photo }}" alt="{{ webmention.author.name }}">
                     {% else %}
-                      <img class="webmention__author__photo" src="{{ '/img/webmention-avatar-default.svg' | url }}" alt="">
+                      <img src="{{ '/img/avatar-placeholder.png' | url }}" alt="">
                       {% endif %}
-                      <strong class="p-name">{{ webmention.author.name }}</strong>
+                      <span class="p-name">{{ webmention.author.name }}</span>
                     </a>
                   {% else %}
                     <span class="webmention__author">
                       <img class="webmention__author__photo" src="{{ '/img/webmention-avatar-default.svg' | url }}" alt="">
-                        <strong>Anonymous</strong>
+                        <span>Anonymous</span>
                       </span>
                     {% endif %}
                     {% if webmention.published %}

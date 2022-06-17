@@ -1,0 +1,17 @@
+{
+  "title": "localghost",
+  "url": "https://localghost.dev/",
+  "domain": "localghost.dev",
+  "description": "Sophie builds fun things out of HTML, CSS & JavaScript, and writes blog posts about tech and mental health.",
+  "feed": {
+    "subtitle": "Sophie builds fun things out of HTML, CSS & JavaScript, and writes blog posts about tech and mental health.",
+    "filename": "feed.xml",
+    "path": "/feed.xml",
+    "url": "https://localghost.dev/feed.xml",
+    "id": "https://localghost.dev/"
+  },
+  "author": {
+    "name": "Sophie Koonin",
+    "email": "sophie@localghost.dev"
+  }
+}

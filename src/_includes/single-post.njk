@@ -14,7 +14,7 @@
             <ul class="" aria-describedby="tags-desc">
               {% for tag in tags %}
                 <li>
-                  <a href="/tag/{{ tag | slug }}/">{{ tag }}</a>
+                  <a href="/tag/{{ tag | slugify }}/">{{ tag }}</a>
                 </li>
               {% endfor %}
             </ul>
@@ -23,5 +23,6 @@
       </div>
       {{ content | safe }}
     </div>
+    {% include 'partials/webmentions.njk' %}
   </article>
 {% endblock %}

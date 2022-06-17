@@ -1,6 +1,7 @@
 const fs = require('fs');
 const fetch = require('node-fetch');
 const unionBy = require('lodash/unionBy');
+const metadata = require('./metadata.json');
 
 // Configuration Parameters
 const CACHE_DIR = '_cache';
@@ -37,8 +38,11 @@ async function fetchWebmentions(since) {
 }
 
 // Merge fresh webmentions with cached entries, unique per id
+// Don't cache webmentions that are for homepage
 function mergeWebmentions(a, b) {
-  return unionBy(a.children, b.children, 'wm-id');
+  return unionBy(a.children, b.children, 'wm-id').filter(
+    (item) => item['wm-target'] !== metadata.url
+  );
 }
 
 // save combined webmentions in cache file
@@ -76,7 +80,11 @@ module.exports = async function () {
   const { lastFetched } = cache;
 
   // Only fetch new mentions in production
-  if (process.env.ELEVENTY_ENV === 'production' || !lastFetched) {
+  if (
+    process.env.NODE_ENV === 'production' ||
+    !lastFetched ||
+    process.env.FETCH_MENTIONS
+  ) {
     const feed = await fetchWebmentions(lastFetched);
 
     if (feed) {
