@@ -5,6 +5,7 @@ function normaliseTrailingSlash(url) {
   if (url.endsWith('/')) {
     return url.slice(0, -1);
   }
+  return url;
 }
 
 // https://github.com/maxboeck/eleventy-webmentions/
@@ -14,9 +15,9 @@ module.exports = function (webmentions, url, aliases = []) {
   // https://github.com/aaronpk/webmention.io#find-links-of-a-specific-type-to-a-specific-page
   const potentialUrls = [
     normaliseTrailingSlash(url),
-    ...aliases.map((a) =>
-      normaliseTrailingSlash(`https://${metadata.domain}${a}`)
-    ),
+    ...aliases
+      .filter(Boolean)
+      .map((a) => normaliseTrailingSlash(`https://${metadata.domain}${a}`)),
   ];
   // define which HTML tags you want to allow in the webmention body content
   // https://github.com/apostrophecms/sanitize-html#what-are-the-default-options
@@ -53,6 +54,8 @@ module.exports = function (webmentions, url, aliases = []) {
     const { author, published } = entry;
     return !!author && !!author.name && !!published;
   };
+
+  debugger;
 
   // run all of the above for each webmention that targets the current URL
   return webmentions
