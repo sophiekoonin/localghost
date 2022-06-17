@@ -22,7 +22,7 @@
         {% endif %}
       </div>
       {{ content | safe }}
+      {% include 'partials/webmentions.njk' %}
     </div>
-    {% include 'partials/webmentions.njk' %}
   </article>
 {% endblock %}
