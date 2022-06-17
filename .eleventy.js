@@ -12,6 +12,7 @@ const markdownItAttrs = require('markdown-it-attrs');
 const markdownItAnchor = require('markdown-it-anchor');
 const mdfigcaption = require('markdown-it-image-figures');
 const codeSnippet = require('./src/plugins/code-snippet');
+const webmentionsFilter = require('./src/filters/webmentions.js');
 
 const markdownItOptions = {
   html: true,
@@ -37,7 +38,14 @@ module.exports = (config) => {
   config.addFilter('w3DateFilter', w3DateFilter);
   config.addFilter('markdown', markdownFilter);
   config.addFilter('debug', debugFilter);
+  config.addFilter('head', (array, n) => {
+    if (n < 0) {
+      return array.slice(n);
+    }
 
+    return array.slice(0, n);
+  });
+  config.addFilter('webmentionsForUrl', webmentionsFilter);
   config.setFrontMatterParsingOptions({
     excerpt: true,
     // Optional, default is "---"
