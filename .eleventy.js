@@ -13,7 +13,6 @@ const markdownItAnchor = require('markdown-it-anchor');
 const mdfigcaption = require('markdown-it-image-figures');
 const codeSnippet = require('./src/plugins/code-snippet');
 const webmentionsFilter = require('./src/filters/webmentions.js');
-const likesFilter = require('./src/filters/twitter-likes.js');
 
 const markdownItOptions = {
   html: true,
@@ -47,7 +46,6 @@ module.exports = (config) => {
     return array.slice(0, n);
   });
   config.addFilter('webmentionsForUrl', webmentionsFilter);
-  config.addFilter('likesForUrl', likesFilter);
   config.setFrontMatterParsingOptions({
     excerpt: true,
     // Optional, default is "---"
@@ -61,14 +59,14 @@ module.exports = (config) => {
   config.addCollection('redirects', (collection) => {
     const pages = collection.getFilteredByGlob('./src/**/*.md');
     const aliases = pages.map((page) => {
-      if (!page.data.aliases) return [];
+      if (!page.data.aliases) return null;
       return page.data.aliases.map((alias) => ({
         from: alias,
         to: page.url,
       }));
     });
 
-    return aliases.flat();
+    return aliases.filter(Boolean).flat();
   });
 
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file

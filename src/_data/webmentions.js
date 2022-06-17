@@ -37,12 +37,15 @@ async function fetchWebmentions(since) {
   return null;
 }
 
+const allowedTypes = ['mention-of', 'in-reply-to'];
+
 // Merge fresh webmentions with cached entries, unique per id
 // Don't cache webmentions that are for homepage
+// Don't cache likes/RTs
 function mergeWebmentions(a, b) {
-  return unionBy(a.children, b.children, 'wm-id').filter(
-    (item) => item['wm-target'] !== metadata.url
-  );
+  return unionBy(a.children, b.children, 'wm-id')
+    .filter((item) => item['wm-target'] !== metadata.url)
+    .filter((item) => allowedTypes.includes(item['wm-property']));
 }
 
 // save combined webmentions in cache file

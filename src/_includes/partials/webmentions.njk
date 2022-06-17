@@ -1,15 +1,10 @@
 {%- set absoluteUrl -%}{{ page.url | url | absoluteUrl(metadata.url) }}{%- endset -%}
 {%- set mentions = webmentions.children | webmentionsForUrl(absoluteUrl, aliases) -%}
-{%- set likesAndRetweets = webmentions.children | likesForUrl(absoluteUrl, aliases) -%}
 <div class="webmentions flow" id="webmentions">
   <h2>Webmentions</h2>
-  <div class="webmentions-counts">
-    <img src="/icons/heart-like.svg" alt="Likes"/> {{ likesAndRetweets.likes }} <img src="/icons/retweet.svg" alt="Retweets"/>
-    {{ likesAndRetweets.retweets }}
-  </div>
   {%- if mentions.length > 0 -%}
     <ol class="webmentions-list flow">
-      {% for webmention in mentions | reverse %}
+      {% for webmention in mentions | head(10) | reverse %}
         <li>
           <article class="webmention flow h-cite" id="webmention-{{ webmention['wm-id'] }}">
             <div class="webmention-meta">
@@ -38,6 +33,11 @@
                 </article>
               </li>
             {% endfor %}
+            {%- if mentions.length > 10 -%}
+              <div class="webmentions-more">
+                <a href="{{ page.url | url | absoluteUrl(metadata.url) }}#webmentions">Show all {{ mentions.length }}</a>
+              </div>
+            {%- endif -%}
           </ol>
         {% else %}
           <p>No mentions yet.</p>
