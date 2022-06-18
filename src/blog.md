@@ -9,5 +9,5 @@ paginationPrevText: 'Newer posts'
 paginationNextText: 'Older posts'
 paginationAnchor: '#post-list'
 aliases:
-- '/posts'
+- '/posts/'
 ---
