@@ -20,7 +20,7 @@ Repeat after me: there's no such thing as a "typical" or "normal" user.
 
 When we're designing and building websites or apps, it's all too easy to forget that we are coming from a narrow perspective. My own abilities, experiences and knowledge shape how I interact with a website, and my experience may be totally different from yours. So even if you know instinctively that a particular icon means "download", others might not make that connection.
 
-![Spiderman pointing at himself](/img/blog/accessibility-myths/spiderman.point.jpg "Is this how you see your users?")
+![Spiderman pointing at himself](/img/blog/accessibility-myths/spiderman-point.jpg "Is this how you see your users?")
 
 Microsoft's brilliant [Inclusive Design Toolkit](https://www.microsoft.com/design/inclusive/) warns of the consequences of this selective thinking:
 

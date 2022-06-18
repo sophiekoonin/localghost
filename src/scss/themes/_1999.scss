@@ -112,6 +112,10 @@
       }
     }
 
+    .content-inner blockquote {
+      background: none;
+      border: none;
+    }
     .tweet-card {
       padding: var(--space-2xs);
       border-radius: 0;

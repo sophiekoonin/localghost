@@ -157,6 +157,10 @@
       padding: var(--space-s);
       margin-inline: auto;
       --heading-font-family: 'VCR OSD Mono', monospace;
+
+      blockquote:not(.tweet-card) {
+        border-inline-color: var(--accent-color);
+      }
     }
   }
 
