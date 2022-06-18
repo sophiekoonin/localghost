@@ -49,7 +49,7 @@
       "destination": "/blog/start-at-the-beginning-the-importance-of-learning-the-basics/"
     },
     {
-      "source": "/posts",
+      "source": "/posts/",
       "destination": "/blog/"
     }
   ],
