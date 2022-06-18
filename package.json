@@ -6,7 +6,6 @@
     "@11ty/eleventy": "1.0.1",
     "@sindresorhus/slugify": "2.1.0",
     "autoprefixer": "^10.4.2",
-    "canvas": "2.9.1",
     "concurrently": "7.0.0",
     "eslint": "8.17.0",
     "markdown-it-anchor": "^8.6.4",
