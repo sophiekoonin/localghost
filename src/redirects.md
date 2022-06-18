@@ -1,4 +1,0 @@
----
-eleventyExcludeFromCollections: true
----
-
