@@ -1,56 +1,18 @@
+
 {
   "redirects": [
-    {
-      "source": "/2018/01/things-experienced-speakers-wish-theyd-known",
-      "destination": "/blog/things-experienced-speakers-wish-they-d-known/"
-    },
-    {
-      "source": "/blog/things-experienced-speakers-wish-theyd-known",
-      "destination": "/blog/things-experienced-speakers-wish-they-d-known/"
-    },
-    {
-      "source": "/2019/04/why-software-engineers-should-know-their-audience",
-      "destination": "/blog/why-software-engineers-should-know-their-audience/"
-    },
-    {
-      "source": "/2019/08/questions-to-ask-at-an-engineering-interview/",
-      "destination": "/blog/questions-to-ask-at-an-engineering-interview/"
-    },
-    {
-      "source": "/2019/09/everything-i-googled-in-a-week-as-a-professional-software-engineer/",
-      "destination": "/blog/everything-i-googled-in-a-week-as-a-professional-software-engineer/"
-    },
-    {
-      "source": "/2019/11/ffconf-2019-future-friends-beside-the-seaside/",
-      "destination": "/blog/ffconf-2019-future-friends-beside-the-seaside/"
-    },
-    {
-      "source": "/2020/05/defending-yourself-against-cross-site-scripting-attacks-with-content-security-policy/",
-      "destination": "/blog/defending-yourself-against-cross-site-scripting-attacks-with-content-security-policy/"
-    },
-    {
-      "source": "/2020/10/7-myths-designers-and-developers-believe-about-web-accessibility/",
-      "destination": "/blog/7-myths-designers-and-developers-believe-about-web-accessibility/"
-    },
-    {
-      "source": "/2020/12/give-yourself-a-break-lessons-from-burnout",
-      "destination": "/blog/give-yourself-a-break-lessons-from-burnout/"
-    },
-    {
-      "source": "/2021/01/a-typical-day-pandemic-edition",
-      "destination": "/blog/a-typical-day-pandemic-edition/"
-    },
-    {
-      "source": "/2021/06/the-right-tag-for-the-job-why-you-should-use-semantic-html/",
-      "destination": "/blog/the-right-tag-for-the-job-why-you-should-use-semantic-html/"
-    },
-    {
-      "source": "/2022/01/start-at-the-beginning-the-importance-of-learning-the-basics",
-      "destination": "/blog/start-at-the-beginning-the-importance-of-learning-the-basics/"
-    },
-    {
-      "source": "/posts",
-      "destination": "/blog/"
-    }
+    { "source":  "/2018/01/things-experienced-speakers-wish-theyd-known", "destination":"/blog/things-experienced-speakers-wish-they-d-known/" },
+{ "source":  "/blog/things-experienced-speakers-wish-theyd-known", "destination":"/blog/things-experienced-speakers-wish-they-d-known/" },
+{ "source":  "/2019/04/why-software-engineers-should-know-their-audience", "destination":"/blog/why-software-engineers-should-know-their-audience/" },
+{ "source":  "/2019/08/questions-to-ask-at-an-engineering-interview/", "destination":"/blog/questions-to-ask-at-an-engineering-interview/" },
+{ "source":  "/2019/09/everything-i-googled-in-a-week-as-a-professional-software-engineer/", "destination":"/blog/everything-i-googled-in-a-week-as-a-professional-software-engineer/" },
+{ "source":  "/2019/11/ffconf-2019-future-friends-beside-the-seaside/", "destination":"/blog/ffconf-2019-future-friends-beside-the-seaside/" },
+{ "source":  "/2020/05/defending-yourself-against-cross-site-scripting-attacks-with-content-security-policy/", "destination":"/blog/defending-yourself-against-cross-site-scripting-attacks-with-content-security-policy/" },
+{ "source":  "/2020/10/7-myths-designers-and-developers-believe-about-web-accessibility/", "destination":"/blog/7-myths-designers-and-developers-believe-about-web-accessibility/" },
+{ "source":  "/2020/12/give-yourself-a-break-lessons-from-burnout", "destination":"/blog/give-yourself-a-break-lessons-from-burnout/" },
+{ "source":  "/2021/01/a-typical-day-pandemic-edition", "destination":"/blog/a-typical-day-pandemic-edition/" },
+{ "source":  "/2021/06/the-right-tag-for-the-job-why-you-should-use-semantic-html/", "destination":"/blog/the-right-tag-for-the-job-why-you-should-use-semantic-html/" },
+{ "source":  "/2022/01/start-at-the-beginning-the-importance-of-learning-the-basics", "destination":"/blog/start-at-the-beginning-the-importance-of-learning-the-basics/" },
+{ "source":  "/posts", "destination":"/blog/" }
   ]
 }

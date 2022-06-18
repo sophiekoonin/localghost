@@ -1217,6 +1217,11 @@ eleventy-plugin-redirects@1.0.0:
   resolved "https://registry.yarnpkg.com/eleventy-plugin-redirects/-/eleventy-plugin-redirects-1.0.0.tgz#ce0a24662f4fb51bb452d8dccf9cb809b6ac9fcd"
   integrity sha512-DqbDfmwhY6tTaSVds3MAhjSjggpE5JkzH5PqAbM5TSiCjTXjko/aD9ZpPkHbDregMoNQe2uhPlBx2wq+yVAtgw==
 
+eleventy@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/eleventy/-/eleventy-1.0.0.tgz#bd643d27f32808ba10182657d9db9e9a8f38e6a0"
+  integrity sha512-k8wBfYNBSU0z2qp6Tw2k02zDQWqBmaXa0TbBTeGbqpmX2f9XVx2oql7oy1I4/Fh9f4k+2OHpfoK3uoJITTGjEw==
+
 emoji-regex@^8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-8.0.0.tgz#e818fd69ce5ccfcb404594f842963bf53164cc37"
