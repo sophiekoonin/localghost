@@ -7,8 +7,7 @@ tags:
 - 'communication'
 - 'teams'
 aliases:
-- '/2019/04/why-software-engineers-should-know-their-audience/
-- '
+- '/2019/04/why-software-engineers-should-know-their-audience/'
 ---
 
 When you're talking about what you're working on, do you ever stop to think about what you're saying and whether the person you're talking to can actually understand it?
