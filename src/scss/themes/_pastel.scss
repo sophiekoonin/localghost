@@ -114,15 +114,15 @@
   }
   .main-nav {
     margin-block-start: 1px;
-    text-align: center;
-    font-family: var(--header-font-family);
-    font-weight: 400;
 
     .nav-link {
+      text-align: center;
+      font-family: var(--header-font-family);
       color: hsl(273, 36%, 54%);
       line-height: 2rem;
+      font-weight: 500;
       font-size: var(--step--1);
-      width: 10ch;
+      width: 12ch;
       text-decoration: none;
       position: relative;
       border-radius: 4rem;

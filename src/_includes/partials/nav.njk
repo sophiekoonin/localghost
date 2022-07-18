@@ -1,9 +1,27 @@
 <aside class="sidebar">
   <nav class="main-nav" aria-label="Main navigation">
-    {% for item in nav.pages %}
-      <a data-text="{{ item.label }}" class="nav-link" href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>
-        <span>{{ item.label }}</span>
-      </a>
-    {% endfor %}
+    <ul class="main-nav-list">
+      {% for item in nav.pages %}
+        <li class="main-nav-list-item">
+          <a data-text="{{ item.label }}" class="nav-link" href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>
+            <span>{{ item.label }}</span>
+          </a>
+        </li>
+      {% endfor %}
+      <li class="submenu" id="submenu-wrapper">
+        <button type="button" id="submenu-trigger" class="nav-link" aria-controls="submenu-dropdown" aria-expanded="false">
+          <span>More stuff</span>
+        </button>
+        <ul id="submenu-dropdown" class="submenu-list">
+          {% for submenuItem in nav.submenu_pages %}
+            <li>
+              <a data-text="{{ submenuItem.label }}" class="submenu-link" href="{{ submenuItem.url }}" {{ helpers.getLinkActiveState(submenuItem.url, page.url) | safe }}>
+                <span>{{ submenuItem.label }}</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </li>
+    </ul>
   </nav>
 </aside>

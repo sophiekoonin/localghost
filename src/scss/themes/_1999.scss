@@ -36,9 +36,10 @@
 
   .sidebar .main-nav {
     display: block;
-    font-size: var(--step-0);
 
-    a {
+    .nav-link {
+      font-size: var(--step-0);
+      text-decoration: underline;
       text-decoration-skip-ink: none;
       display: inline-flex;
       align-items: center;

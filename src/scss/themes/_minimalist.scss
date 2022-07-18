@@ -14,8 +14,11 @@
     display: none;
   }
 
-  a {
+  a,
+  button.nav-link {
     font-variation-settings: 'wght' 500;
+    text-decoration: underline;
+    font-size: inherit;
     &,
     &:visited {
       color: var(--body-color);
@@ -50,6 +53,11 @@
         display: block;
         margin-right: auto;
       }
+    }
+    .submenu-list {
+      border: 1px solid var(--body-color);
+      background: var(--background);
+      text-align: left;
     }
   }
   .content {

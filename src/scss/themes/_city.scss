@@ -195,14 +195,7 @@
     @include utils.fluid-padding;
 
     box-shadow: 10px 10px 0 3px rgba(0, 0, 0, 0.2);
-    a:not(.tweet-card a) {
-      text-decoration: none;
-      --bg-h: 3px;
-      @include shared.fancy-link-backgrounds(
-        hsla(251, 78%, 68%, 1),
-        hsla(303, 88%, 50%, 1)
-      );
-    }
+
     h1 {
       color: hsla(251, 78%, 68%, 1);
     }
@@ -221,11 +214,12 @@
     }
   }
 
-  .main-nav a {
+  .main-nav .nav-link {
+    color: var(--link-color);
     font-family: var(--heading-font-family);
     text-transform: lowercase;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: var(--step-0);
     &:hover {
       color: hsla(125, 88%, 90%, 1);
       @include shared.neon-glow(hsla(125, 88%, 70%, 1), hsla(125, 88%, 50%, 1));
@@ -241,16 +235,18 @@
       hsla(303, 99%, 40%, 1)
     );
 
-    .footer-links a {
-      text-decoration: none;
-      --bg-h: 3px;
-
-      @include shared.fancy-link-backgrounds(
-        hsla(251, 78%, 68%, 1),
-        hsla(303, 88%, 50%, 1)
-      );
-    }
-
     @include shared.grid-footer;
+  }
+
+  .footer-links a,
+  .content a:not(.tweet-card a),
+  .submenu a {
+    text-decoration: none;
+    --bg-h: 3px;
+
+    @include shared.fancy-link-backgrounds(
+      hsla(251, 78%, 68%, 1),
+      hsla(303, 88%, 50%, 1)
+    );
   }
 }

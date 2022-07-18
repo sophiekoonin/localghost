@@ -107,13 +107,6 @@
   .content {
     @extend .windows;
     font-family: 'Courier New', monospace;
-    a {
-      @include shared.fancy-link-backgrounds(
-        hsl(305.9, 100%, 50%),
-        hsl(172, 100%, 44.3%)
-      );
-      --bg-h: 100%;
-    }
 
     p > code {
       font-family: 'Courier New', monospace;
@@ -176,18 +169,23 @@
     text-transform: uppercase;
   }
 
-  .main-nav {
+  .sidebar .main-nav {
     margin-block-start: 1px;
     .nav-link {
       @extend .link-button;
 
-      &[data-state='active'] {
+      &[data-state='active'],
+      &[aria-expanded='true'] {
         text-decoration: underline;
         border-right: 2px solid white;
         border-bottom: 2px solid white;
         border-left: 2px solid hsl(250, 100%, 20%);
         border-top: 2px solid hsl(250, 100%, 20%);
       }
+    }
+    .submenu-list {
+      font-size: var(--step--2);
+      z-index: 2;
     }
   }
 
@@ -199,17 +197,17 @@
       }
     }
   }
-  footer {
+  footer,
+  footer a {
     color: #fff;
-    .footer-links {
-      a {
-        color: #fff;
-        @include shared.fancy-link-backgrounds(
-          hsl(305.9, 100%, 50%),
-          hsl(172, 100%, 44.3%)
-        );
-        --bg-h: 100%;
-      }
-    }
+  }
+  .footer-links a,
+  .content a,
+  .submenu a {
+    @include shared.fancy-link-backgrounds(
+      hsl(305.9, 100%, 50%),
+      hsl(172, 100%, 44.3%)
+    );
+    --bg-h: 100%;
   }
 }

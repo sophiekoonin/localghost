@@ -129,10 +129,13 @@
       --bg-h: 3px;
     }
   }
-  .main-nav a {
+  .main-nav .nav-link {
+    &:is(button) {
+      font-weight: 600;
+    }
     font-style: italic;
     text-transform: uppercase;
-    color: #fff;
+    color: #ffffff;
 
     text-decoration: none;
     font-size: var(--step-1);

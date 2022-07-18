@@ -94,7 +94,7 @@ p {
   overflow-wrap: break-word;
 }
 
-ul > * + *,
+ul:not(.main-nav-list) > * + *,
 ol > * + * {
   margin-block-start: var(--space-xs-s);
 }
