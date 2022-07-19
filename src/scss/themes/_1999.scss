@@ -17,6 +17,13 @@
     display: none;
   }
 
+  @mixin oldschool-border($width) {
+    border-top: $width solid hsl(0, 0%, 70%);
+    border-left: $width solid hsl(0, 0%, 70%);
+    border-right: $width solid hsl(0, 0%, 42%);
+    border-bottom: $width solid hsl(0, 0%, 42%);
+  }
+
   body {
     cursor: url('/img/geocities/1999-cursor.webp'), default;
   }
@@ -34,7 +41,7 @@
     display: block;
   }
 
-  .sidebar .main-nav {
+  .sidebar .main-nav-list {
     display: block;
 
     .nav-link {
@@ -89,6 +96,19 @@
     &:before {
       top: calc(var(--space-xs) * -1);
     }
+
+    .submenu-list {
+      background-color: var(--tweet-bg);
+      @include oldschool-border(9px);
+      z-index: 2;
+      padding: 0;
+      li {
+        margin-block-start: 0;
+        padding: 0.25rem;
+        display: block;
+        @include oldschool-border(2px);
+      }
+    }
   }
 
   .content {
@@ -120,19 +140,13 @@
     .tweet-card {
       padding: var(--space-2xs);
       border-radius: 0;
-      border-top: 9px solid hsl(0, 0%, 70%);
-      border-left: 9px solid hsl(0, 0%, 70%);
-      border-right: 9px solid hsl(0, 0%, 42%);
-      border-bottom: 9px solid hsl(0, 0%, 42%);
+      @include oldschool-border(9px);
 
       .tweet-header,
       .tweet-body,
       .tweet-footer {
         padding: var(--space-3xs);
-        border-bottom: 2px solid hsl(0, 0%, 70%);
-        border-right: 2px solid hsl(0, 0%, 70%);
-        border-left: 2px solid hsl(0, 0%, 42%);
-        border-top: 2px solid hsl(0, 0%, 42%);
+        @include oldschool-border(2px);
       }
       a {
         text-decoration: underline;
@@ -177,10 +191,7 @@
     shape-outside: none;
     aspect-ratio: 1;
     content: url('/img/sophie-badquality.png');
-    border-top: 9px solid hsl(0, 0%, 70%);
-    border-left: 9px solid hsl(0, 0%, 70%);
-    border-right: 9px solid hsl(0, 0%, 42%);
-    border-bottom: 9px solid hsl(0, 0%, 42%);
+    @include oldschool-border(9px);
   }
   .posts-list li:not(:last-of-type)::after {
     content: ' ';

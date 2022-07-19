@@ -168,5 +168,10 @@
         transform: rotate(13deg);
       }
     }
+
+    .submenu-list {
+      border-radius: 0.5rem;
+      background-color: hsl(300, 86%, 97%);
+    }
   }
 }

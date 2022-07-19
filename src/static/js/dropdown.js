@@ -2,7 +2,7 @@ let trigger;
 let menuLinks;
 let isOpen = false;
 
-window.onload = () => {
+window.addEventListener('load', () => {
   const triggerEl = document.getElementById('submenu-trigger');
   trigger = triggerEl;
   menuLinks = document.querySelectorAll('.submenu-link');
@@ -22,7 +22,7 @@ window.onload = () => {
     }
   };
   closeMenu();
-};
+});
 
 function toggleVisibility() {
   if (isOpen) {

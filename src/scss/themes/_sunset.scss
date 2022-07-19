@@ -129,21 +129,31 @@
       --bg-h: 3px;
     }
   }
-  .main-nav .nav-link {
-    &:is(button) {
-      font-weight: 600;
+  .sidebar .main-nav {
+    .submenu-list {
+      background-color: #ffece9;
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-style: italic;
+      }
     }
-    font-style: italic;
-    text-transform: uppercase;
-    color: #ffffff;
+    .nav-link {
+      &:is(button) {
+        font-weight: 600;
+      }
+      font-style: italic;
+      text-transform: uppercase;
+      color: #ffffff;
 
-    text-decoration: none;
-    font-size: var(--step-1);
+      text-decoration: none;
+      font-size: var(--step-1);
 
-    text-align: right;
-    &[data-state='active'],
-    &:hover {
-      text-decoration: underline;
+      text-align: right;
+      &[data-state='active'],
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 

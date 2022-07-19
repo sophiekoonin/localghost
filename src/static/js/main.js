@@ -75,7 +75,7 @@ function showElement(element) {
   element.classList.remove('hidden');
 }
 
-window.onload = () => {
+window.addEventListener('load', () => {
   skyscrapers = Array.from(document.getElementsByClassName('skyscraper'));
   palmtrees = Array.from(document.getElementsByClassName('palmtree'));
   themeOptions = Array.from(document.getElementsByClassName('theme-option'));
@@ -89,7 +89,7 @@ window.onload = () => {
     })
   );
   changeTheme(theme);
-};
+});
 
 function cleanupGeocities() {
   destroyCursor();
