@@ -10,7 +10,7 @@ I got bitten by the mechanical keyboard bug! Here's my collection...
 
 Absolutely obsessed with this keyboard. It's heavy, which means a lot of the sound is absorbed. Keyboards for me are about the look and feel, not the sound - so it's red switches all the way! I would be quite happy using this in an office.
 
-Right now it's wearing Mintlodica DSA Witch Girl keycaps, but I'm waiting for the [KAT Space Dust](https://prototypist.net/products/group-buy-kat-space-dust?variant=39351637508162) group buy to ship!
+Right now it's wearing [Mintlodica DSA Magic Girl](https://mintlodica.com/products/dsa-magic-girl-keycaps) keycaps, but I'm waiting for the [KAT Space Dust](https://prototypist.net/products/group-buy-kat-space-dust?variant=39351637508162) group buy to ship!
 
 ## ikki68 Aurora x Dreamscape 
 [![The ikki68 Aurora keyboard with white and pastel purple polycarbonate case. Most of the keys are off-white, the escape and pg up/pg down/home/end keys are pastel coloured with fruit legends. It is in Mac ISO layout with a split left shift.](/img/keyboards/ikki68-2.webp)](/img/keyboards/ikki68-2.webp)

@@ -23,3 +23,4 @@ layout: 'page.njk'
 * [Modern CSS](https://moderncss.dev/) - modern CSS solutions for old problems
 * [Every Layout](https://everylayout.dev) - loads of excellent layout primitives, and not a breakpoint in sight.
 * [Tiny Helpers](https://tiny-helpers.dev/) - little tools for web developers
+* [Compute Cuter](https://computecuter.com) - how to make your computer as cute as can be!

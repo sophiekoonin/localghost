@@ -8,7 +8,7 @@ layout: 'page.njk'
 ### IDE
 ![A VSCode window with the source code for this website. I have two embeded terminals open at the bottom; the left-hand one has the Eleventy compiler running, and the right-hand one is just a command prompt with "hello" written in cursive out of ASCII chars. The background colour is navy blue, with pastel-coloured variables and keywords.](/img/tech-setup/vscode.png)
 
-I use VSCode for all my frontend work, with the [Digi-Angler dark theme](https://marketplace.visualstudio.com/items?itemName=Digi-Angler.digi-angler-dark-theme). I used Copilot religiously for personal projects while it was in beta, but I'm not sure how I feel about paying a subscription for something that's trained off users' public repos. Still making my mind up on that one.
+I use VSCode for all my frontend work, with the [Digi-Angler dark theme](https://marketplace.visualstudio.com/items?itemName=Digi-Angler.digi-angler-dark-theme) and [Dank Mono](https://philpl.gumroad.com/l/dank-mono) for the font. I used Copilot religiously for personal projects while it was in beta, but I'm not sure how I feel about paying a subscription for something that's trained off users' public repos. Still making my mind up on that one.
 
 If I'm doing backend work, I love a good JetBrains IDE, but I'm leaning more towards web these days.
 
