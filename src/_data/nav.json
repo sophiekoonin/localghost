@@ -19,12 +19,12 @@
   ],
   "submenu_pages": [
     {
-      "label": "Keyboards",
-      "url": "/keyboards"
-    },
-    {
       "label": "Projects",
       "url": "/projects"
+    },
+    {
+      "label": "Keyboards",
+      "url": "/keyboards"
     },
     {
       "label": "Tech setup",
