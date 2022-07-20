@@ -18,5 +18,5 @@ I got this as part of the [Dreamscape](https://prototypist.net/collections/pre-o
 
 
 ## [keeb.io BDN9 rev. 2](https://keeb.io/collections/bdn9-collection/products/bdn9-rev-2-3x3-9-key-macropad-rotary-encoder-and-rgb)
-[![An angled view of the BDN9 macropad. It is a black square with two rotary knobs at the top, and 7 keys that are pastel coloured with fruit legends. There is a green cable plugged into it.](/img/keyboards/bdn9.jpg)](/img/keyboards/bdn9.jpg)
+[![An angled view of the BDN9 macropad. It is a black square with two rotary knobs at the top, and 7 keys that are pastel coloured with fruit legends. There is a green cable plugged into it.](/img/keyboards/bdn9.JPG)](/img/keyboards/bdn9.JPG)
 I use the rotary encoder as a volume control knob, but I haven't quite got round to finding a good use for the rest of the keys! I thought it would be useful for shortcuts in Logic, but old habits die hard and I still use the mouse a lot. It was a good starting project to get to grips with soldering, though. It's wearing some novelties from DSA Milkshake.
