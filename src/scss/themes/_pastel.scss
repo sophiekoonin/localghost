@@ -122,12 +122,22 @@
       line-height: 2rem;
       font-weight: 500;
       font-size: var(--step--1);
-      width: 12ch;
+      width: 12.5ch;
       text-decoration: none;
       position: relative;
       border-radius: 4rem;
       background: hsl(300, 86%, 92%);
       border: 2px solid hsl(300, 86%, 85%);
+
+      &:is(#submenu-trigger) {
+        justify-content: center;
+        &:after {
+          margin-inline-end: -0.2rem;
+          margin-inline-start: 0.2rem;
+          border-top-color: hsl(273, 36%, 54%);
+        }
+      }
+
       &:before {
         width: var(--space-s);
         height: var(--space-s);

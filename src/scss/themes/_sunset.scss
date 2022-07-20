@@ -139,8 +139,11 @@
       }
     }
     .nav-link {
-      &:is(button) {
+      &:is(#submenu-trigger) {
         font-weight: 600;
+        &:after {
+          border-top-color: white;
+        }
       }
       font-style: italic;
       text-transform: uppercase;
