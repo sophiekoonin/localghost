@@ -1,5 +1,5 @@
 ---
-title: 'Homepage'
+title: 'localghost'
 layout: 'index.njk'
 ---
 
