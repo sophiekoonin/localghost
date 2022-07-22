@@ -8,9 +8,9 @@ I started building websites on Geocities at the age of 10, graduating over the y
 
 ![](/img/sophie-transparent.png){.about-photo}
 
-I'm currently on a sabbatical, but until recently I was a product engineer at [incident.io](https://incident.io), building software to help companies manage, resolve and learn from incidents. Prior to this I was a senior web engineer and Web Discipline lead at [Monzo](https://www.monzo.com). 
+ I lead the Web Discipline at [Monzo](https://www.monzo.com), where I'm also a senior web engineer.
   
-By day I build web things for fun and profit, but by night I make music with [SHE Choir London](https://shechoir.com/london). I also enjoy gardening, baking, dogs, crafting, mechanical keyboards, surreal memes and video games. 
+By day I build web things for fun and profit, but by night I make music with [SHE Choir London](https://shechoir.com/london). I also enjoy gardening, baking, dogs, crafting, [mechanical keyboards](/keyboards), surreal memes and video games. 
 
 Find me on [Twitter](https://twitter.com/type__error) or send me an email: [sophie@localghost.dev](mailto:sophie@localghost.dev).
 
@@ -20,7 +20,7 @@ As well as being somewhere I occasionally write things, this site is a throwback
 
 It's built using the static site generator [Eleventy](https://11ty.dev).
 
-You're welcome to steal any code from this site, just promise me you'll have a go at making it your own and not just copy it straight up.
+You're welcome to steal any code from this site, just promise me you'll have a go at making it your own and **not just copy it straight up**. The source code is public on [Github](https://github.com/sophiekoonin/localghost).
 
 Like many other people in the early 00s, I learnt to build websites by clicking `View Source`, copying bits I liked, then changing them slightly (that, and absorbing the contents of [lissaexplains.com](https://lissaexplains.com)). It's a bit more complicated than it used to be, but I still strongly believe in learning from others and passing it on.
 
