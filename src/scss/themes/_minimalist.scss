@@ -1,12 +1,10 @@
 @use '../utils';
 
 [data-theme='minimalist'] {
-  --background: #fafafa;
   --content-bg: none;
   --header-font-family: 'Krungthep', var(--body-font-family);
-  --header-color: #333333;
-  --body-color: #333333;
-  --accent-color: #333333;
+  --header-color: hsl(0, 0%, 20%);
+  --accent-color: hsl(0, 0%, 20%);
   --bullet: disc;
 
   .skyscraper,
@@ -24,7 +22,7 @@
       color: var(--body-color);
     }
     &:hover {
-      color: #9266d7;
+      color: hsl(264, 59%, 62%);
     }
   }
 

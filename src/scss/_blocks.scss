@@ -6,6 +6,7 @@
   font-size: var(--step-4);
   font-display: optional;
   a {
+    color: inherit;
     text-decoration: none;
   }
 }
@@ -111,6 +112,16 @@
         padding: 0.25rem;
         display: inline-block;
       }
+    }
+
+    button.nav-link {
+      border: 0;
+      cursor: pointer;
+      background: none;
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      font-weight: 600;
     }
 
     .submenu {
@@ -246,7 +257,7 @@
       }
 
       #heart-fill {
-        fill: #99e0ed;
+        fill: hsl(189, 70%, 77%);
       }
     }
   }
@@ -264,7 +275,11 @@
   }
   label[for='vaporwave'] {
     &:hover img {
-      background: linear-gradient(90deg, rgb(255, 0, 230), rgb(0, 226, 196));
+      background: linear-gradient(
+        90deg,
+        hsl(306, 100%, 50%),
+        hsl(172, 100%, 44%)
+      );
       @media (prefers-reduced-motion: no-preference) {
         animation: rotate 1.5s linear infinite;
       }
@@ -590,7 +605,7 @@ body::after {
       align-items: center;
       margin-inline-end: var(--space-xs);
       &:hover {
-        color: #e0245e;
+        color: hsl(342, 75%, 51%);
       }
     }
     .tweet-like-icon {
@@ -671,14 +686,4 @@ body::after {
       font-weight: bold;
     }
   }
-}
-
-button.nav-link {
-  border: 0;
-  cursor: pointer;
-  background: none;
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  font-weight: 600;
 }

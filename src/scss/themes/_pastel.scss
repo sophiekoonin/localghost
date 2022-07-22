@@ -5,7 +5,7 @@
   --header-font-family: 'Fredoka', sans-serif;
   --body-font-family: 'Sen', sans-serif;
   --content-bg: white;
-  --accent-color: rgb(249, 157, 244);
+  --accent-color: hsl(303, 89%, 80%);
   --tweet-bg: hsl(175, 80%, 98%);
   --tweet-border: hsl(175, 80%, 80%);
   --bullet: url('/icons/heart-purple-small.svg');
@@ -14,9 +14,11 @@
   --link-hover-color: hsl(300, 69%, 72%);
   --inline-code-color: hsl(244, 43%, 57%);
   --inline-code-bg: hsl(300, 69%, 97%);
-  --list-heading-color: #ec41a9;
-  --photo-bg: linear-gradient(hsl(300, 86%, 85%), rgb(238, 217, 238));
+  --list-heading-color: hsl(324, 82%, 59%);
+  --photo-bg: linear-gradient(hsl(300, 86%, 85%), hsl(300, 38%, 89%));
   --blockquote-bg: hsl(300, 69%, 98%);
+  --header-color: hsl(273, 39%, 60%);
+
   header {
     padding-block-end: var(--space-2xs);
   }
@@ -26,11 +28,8 @@
     margin-block-end: var(--space-m);
     font-size: var(--step-5);
     font-weight: 500;
-    a {
-      color: hsl(273, 39%, 60%);
-      &:hover {
-        color: hsl(189, 70%, 77%);
-      }
+    a:hover {
+      color: hsl(189, 70%, 77%);
     }
   }
   .content {
@@ -38,13 +37,13 @@
     padding: var(--space-s);
     border: 2px solid hsl(300, 86%, 85%);
     h1 {
-      color: #858bed;
+      color: hsl(237, 74%, 73%);
     }
     h2 {
-      color: #e85dc5;
+      color: hsl(315, 75%, 64%);
     }
     h3 {
-      color: #1eb9a3;
+      color: hsl(172, 72%, 42%);
     }
 
     a:not(.tweet-card a) {

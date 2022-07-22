@@ -3,15 +3,17 @@
 [data-theme='geocities'] {
   --body-font-family: 'Times New Roman', serif;
   --header-font-family: 'Comic Sans MS', serif;
-  --accent-color: dodgerblue;
-  --link-color: #9900ff;
-  --link-hover-color: rgb(20, 135, 37);
+  --accent-color: hsl(210, 100%, 56%);
+  --link-color: hsl(276, 100%, 50%);
+  --link-hover-color: hsl(129, 74%, 30%);
   --background: url('/img/geocities/1999-bg.webp');
-  --tweet-bg: rgb(253, 250, 237);
+  --tweet-bg: hsl(49, 80%, 96%);
   --bullet: url('/img/geocities/redball.gif');
-  --inline-code-color: #00ff0d;
+  --inline-code-color: hsl(123, 100%, 50%);
   --inline-code-bg: #000;
-  --list-heading-color: rgb(40, 119, 55);
+  --list-heading-color: hsl(131, 50%, 31%);
+  --header-color: hsl(317, 99%, 43%);
+
   .skyscraper,
   .palmtree {
     display: none;
@@ -32,9 +34,6 @@
     margin-block-start: var(--space-l);
     margin-block-end: var(--space-m);
     font-size: var(--step-5);
-    a {
-      color: rgb(220, 1, 158);
-    }
   }
 
   main {
@@ -52,14 +51,14 @@
       align-items: center;
       margin-inline-end: 0;
       padding-inline-end: 0;
-      color: rgb(208, 5, 100);
+      color: hsl(332, 95%, 42%);
       font-weight: bold;
       &:visited {
-        color: rgb(107, 5, 208);
+        color: hsl(270, 95%, 42%);
       }
 
       &[data-state='active'] {
-        color: rgb(214, 14, 191);
+        color: hsl(307, 88%, 45%);
       }
 
       &:not(:first-of-type)::before {
@@ -112,9 +111,9 @@
   }
 
   .content {
-    margin-top: var(--space-m-l);
-
+    margin-block-start: var(--space-m-l);
     height: 100%;
+
     h1,
     h2,
     h3,
@@ -122,14 +121,14 @@
       color: navy;
     }
 
-    color: #5c1171;
+    color: hsl(287, 74%, 26%);
     font-weight: 500;
 
     a {
       text-decoration-skip-ink: none;
       font-weight: normal;
       &:visited {
-        color: rgb(214, 14, 191);
+        color: hsl(307, 88%, 45%);
       }
     }
 

@@ -1,21 +1,21 @@
 :root {
-  --background: #fafafa;
+  --background: hsl(0, 0%, 98%);
+  --body-color: hsl(0, 0%, 20%);
   --body-font-family: 'Inter var', sans-serif;
   --header-font-family: var(--body-font-family);
   --heading-font-family: var(--body-font-family);
   --body-font-size: var(--step--1);
-  --body-color: #333333;
   --link-color: var(--body-color);
   --link-hover-color: var(--body-color);
   --bullet: initial;
   --max-inline-size: 65ch;
-  --inline-code-color: #333333;
-  --inline-code-bg: #eaeaea;
-  --list-heading-color: #333333;
-  --blockquote-bg: rgba(255, 255, 255, 0.5);
+  --inline-code-color: hsl(0, 0%, 20%);
+  --inline-code-bg: hsl(0, 0%, 92%);
+  --list-heading-color: hsl(0, 0%, 20%);
+  --blockquote-bg: hsla(0, 100%, 100%, 0.5);
 
   --tweet-bg: #fff;
-  --tweet-border: #e1e8ed;
+  --tweet-border: hsl(205, 25%, 90%);
 
   --space-3xs: clamp(0.31rem, calc(0.29rem + 0.12vw), 0.38rem);
   --space-2xs: clamp(0.69rem, calc(0.66rem + 0.12vw), 0.75rem);

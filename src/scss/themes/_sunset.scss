@@ -21,7 +21,7 @@
   --inline-code-color: hsl(329, 96%, 31%);
   --inline-code-bg: hsl(14, 94%, 93%);
   --list-heading-color: hsl(329, 96%, 31%);
-  --photo-bg: linear-gradient(hsla(370, 100%, 66%, 1), rgb(255, 158, 218));
+  --photo-bg: linear-gradient(hsla(370, 100%, 66%, 1), hsl(323, 100%, 81%));
 
   .skyscraper {
     display: none;
@@ -102,15 +102,6 @@
     h3 {
       color: hsl(340, 100%, 50%);
     }
-
-    a:not(.tweet-card a) {
-      text-decoration: none;
-      @include shared.fancy-link-backgrounds(
-        hsla(370, 100%, 76%, 1),
-        hsla(330, 88%, 60%, 1)
-      );
-      --bg-h: 3px;
-    }
   }
 
   .page-wrapper {
@@ -118,20 +109,9 @@
     background-position: bottom center;
   }
 
-  .footer-links {
-    a:not(.tweet-card a) {
-      text-decoration: none;
-      color: hsl(329, 96%, 31%);
-      @include shared.fancy-link-backgrounds(
-        hsla(370, 100%, 76%, 1),
-        hsla(330, 88%, 60%, 1)
-      );
-      --bg-h: 3px;
-    }
-  }
   .sidebar .main-nav {
     .submenu-list {
-      background-color: #ffece9;
+      background-color: hsl(8, 100%, 96%);
       a {
         text-decoration: none;
         text-transform: uppercase;
@@ -142,7 +122,7 @@
       &:is(#submenu-trigger) {
         font-weight: 600;
         &:after {
-          border-top-color: white;
+          border-top-color: #fff;
         }
       }
       font-style: italic;
@@ -167,5 +147,17 @@
         font-style: italic;
       }
     }
+  }
+
+  .footer-links a,
+  .content a:not(.tweet-card a),
+  .submenu a {
+    text-decoration: none;
+    color: hsl(329, 96%, 31%);
+    @include shared.fancy-link-backgrounds(
+      hsla(370, 100%, 76%, 1),
+      hsla(330, 88%, 60%, 1)
+    );
+    --bg-h: 3px;
   }
 }
