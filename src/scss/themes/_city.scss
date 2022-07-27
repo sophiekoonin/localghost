@@ -214,18 +214,24 @@
     }
   }
 
-  .main-nav .nav-link {
-    color: var(--link-color);
-    font-family: var(--heading-font-family);
-    text-transform: lowercase;
-    text-decoration: none;
-    font-size: var(--step-0);
-    &:hover {
-      color: hsla(125, 88%, 90%, 1);
-      @include shared.neon-glow(hsla(125, 88%, 70%, 1), hsla(125, 88%, 50%, 1));
-    }
-    &[data-state='active'] {
-      text-decoration: underline;
+  .sidebar .main-nav {
+    .nav-link,
+    button.nav-link {
+      color: var(--link-color);
+      font-family: var(--heading-font-family);
+      text-transform: lowercase;
+      text-decoration: none;
+      font-size: var(--step-0);
+      &:hover {
+        color: hsla(125, 88%, 90%, 1);
+        @include shared.neon-glow(
+          hsla(125, 88%, 70%, 1),
+          hsla(125, 88%, 50%, 1)
+        );
+      }
+      &[data-state='active'] {
+        text-decoration: underline;
+      }
     }
   }
 
