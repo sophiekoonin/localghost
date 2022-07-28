@@ -21,8 +21,9 @@
 <meta
   http-equiv="Content-Security-Policy"
   content="default-src 'none'; manifest-src 'self'; frame-src 'self' https://codepen.io https://*.codepen.io; worker-src
-    'self'; object-src 'self'; font-src 'self'; connect-src 'self'; img-src * data:; style-src 'self' data:; script-src
-    'self' https://*.codepen.io https://plausible.io {{ global.baseUrl }} {% if global.isDev %}'unsafe-inline'{% endif %};"/>
+    'self'; object-src 'self'; font-src 'self'; connect-src 'self' https://plausible.io; img-src * data:; style-src 'self'
+    data:; script-src 'self' https://*.codepen.io https://plausible.io {{ global.baseUrl }} {% if global.isDev
+    %}'unsafe-inline'{% endif %};"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="{{ title }}{{ ' - ' + metadata.title if not isHome }}"/>
 <meta name="twitter:site" content="@type__error"/>
