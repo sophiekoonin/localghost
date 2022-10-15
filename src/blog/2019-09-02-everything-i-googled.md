@@ -6,10 +6,13 @@ tags:
 - 'work'
 aliases:
 - '/2019/09/everything-i-googled-in-a-week-as-a-professional-software-engineer/'
+excerptText: "In an attempt to dispel the idea that if you have to google stuff you're not a proper engineer, this is a list of nearly everything I googled in a week at work, where I'm a software engineer with several years' experience."
 ---
 
+**Update 15/10/2022:** I've written a new version of this! [Everything I googled in a week as a senior software engineer](/blog/everything-i-googled-in-a-week-as-a-senior-software-engineer/)
+
 In an attempt to dispel the idea that if you have to google stuff you're not a proper engineer, this is a list of nearly everything I googled in a week at work, where I'm a software engineer with several years' experience.
-<!--more-->
+
 
 ![A google search for "threw it on the ground"](/img/blog/ground.png "Happy birthday to the ground.")
 

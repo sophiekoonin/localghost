@@ -65,6 +65,7 @@
   ul:not([class]) li {
     list-style: var(--bullet);
     padding-inline-start: var(--space-2xs);
+    margin-inline-start: var(--space-xs);
   }
 
   .recent-posts li {
@@ -316,6 +317,10 @@
       margin-inline-start: var(--space-2xs);
       li {
         margin-block: 0;
+
+        &:first-of-type {
+          list-style: none;
+        }
 
         &:not(:first-of-type) {
           margin-inline-start: var(--space-s);
