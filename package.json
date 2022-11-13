@@ -13,9 +13,6 @@
     "postcss": "^8.4.8",
     "postcss-cli": "^9.1.0"
   },
-  "optionalDependencies": {
-    "canvas": "^2.10.2"
-  },
   "dependencies": {
     "@11ty/eleventy": "1.0.1",
     "@11ty/eleventy-plugin-rss": "1.1.2",
