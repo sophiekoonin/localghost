@@ -4,6 +4,7 @@
   font-size: var(--step-8);
   background: linear-gradient(183deg, #6000CA 10%, #CA00CD 70%);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   font-family: 'Impact';
 }
