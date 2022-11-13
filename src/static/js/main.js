@@ -1,23 +1,23 @@
 const prefersReducedMotion = window.matchMedia(
   '(prefers-reduced-motion: reduce)'
 ).matches;
+function pictureEl(name, alt) {
+return `
+<picture>
+    <source srcset="/img/geocities/${name}.gif" 
+    media="(prefers-reduced-motion: no-preference)">
+    <img src="/img/geocities/static/${name}.png" 
+    alt="${alt}" />
+  </picture>`
+}
 
 function contentStart(reducedMotion) {
-  return `<img src="/img/geocities/${
-    reducedMotion ? 'static/welcome.png' : 'welcome.gif'
-  }">
-<p>Thanks for visiting!</p>`;
+  return pictureEl('welcome', 'Welcome to my Homepage') + `<p>Thanks for visiting!</p>`;
 }
 
 function contentEnd(reducedMotion) {
-  return `<p>This site is</p>
-<img alt="Under Construction" src="/img/geocities/${
-    reducedMotion ? 'static/consbar.png' : 'consbar.gif'
-  }"/>
-<img src="/img/geocities/${
-    reducedMotion ? 'static/flames.png' : 'flames.gif'
-  }" alt=""/>
-<p>You are visitor number <img src="/img/geocities/static/counter.png" alt="hit counter showing 2147483648" /></p>`;
+  return `<p>This site is</p>` + pictureEl('consbar', "under construction") + pictureEl('flames', '')  +
+   '<p>You are visitor number <img src="/img/geocities/static/counter.png" alt="hit counter showing 2147483648" /></p>';
 }
 document.documentElement.classList.remove('no-js');
 const currentPage = window.location.pathname;

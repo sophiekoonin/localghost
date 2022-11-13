@@ -211,19 +211,10 @@
   footer {
     @media (prefers-reduced-motion: no-preference) {
       overflow: hidden;
-      .footer-text {
-        animation: marquee linear 18s infinite;
-        position: relative;
-      }
-      @keyframes marquee {
-        0% {
-          right: -100%;
-        }
-        100% {
-          right: 100%;
-        }
-      }
     }
+      .footer-text {
+        @extend .marquee;
+      }
 
     .footer-links {
       a span:first-of-type {
@@ -254,5 +245,43 @@
         }
       }
     }
+  }
+}
+
+.marquee {
+  &-wrapper {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+  animation: marquee linear 18s infinite;
+  position: relative;
+  @keyframes marquee {
+    0% {
+      right: -100%;
+    }
+    100% {
+      right: 100%;
+    }
+   }
+   }
+}
+
+  
+.blink {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: blink linear 1.5s infinite;
+  }
+}
+@keyframes blink {
+  0% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
   }
 }

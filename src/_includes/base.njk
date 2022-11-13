@@ -13,6 +13,11 @@
       localghost</title>
     <script src="/js/main.js"></script>
     <script src="/js/dropdown.js"></script>
+    {% if extraCSS %}
+      {% for file in extraCSS %}
+        <link rel="stylesheet" type="text/css" href="/css/{{ file }}">
+      {% endfor %}
+    {% endif %}
     <link rel="preload" as="style" href={{ cssFilename }}>
     <link rel="stylesheet" type="text/css" href={{ cssFilename }}>
     <script defer data-domain="localghost.dev" src="https://plausible.io/js/plausible.js"></script>
@@ -30,4 +35,4 @@
       {% include "partials/footer.njk" %}
     </div>
   </body>
-</html>
+</html></head></html>

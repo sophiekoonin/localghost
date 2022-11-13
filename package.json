@@ -6,6 +6,7 @@
     "@11ty/eleventy": "1.0.1",
     "@sindresorhus/slugify": "2.1.0",
     "autoprefixer": "^10.4.2",
+    "canvas": "^2.10.2",
     "eslint": "8.17.0",
     "markdown-it-anchor": "^8.6.4",
     "markdown-it-attrs": "^4.1.4",
@@ -13,17 +14,20 @@
     "postcss": "^8.4.8",
     "postcss-cli": "^9.1.0"
   },
+  "optionalDependencies": {
+    "canvas": "^2.10.2"
+  },
   "dependencies": {
+    "@11ty/eleventy": "1.0.1",
     "@11ty/eleventy-plugin-rss": "1.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "4.0.0",
-    "@11ty/eleventy": "1.0.1",
     "cssnano": "5.1.11",
     "date-fns": "^2.29.1",
     "eleventy-plugin-embed-tweet": "0.3.1",
     "eleventy-plugin-redirects": "1.0.0",
     "lodash": "^4.17.21",
     "markdown-it-image-figures": "2.1.0",
-    "node-fetch": "^2.6.1 ",
+    "node-fetch": "^2.6.1",
     "sanitize-html": "2.7.0",
     "sass": "1.49.9"
   },

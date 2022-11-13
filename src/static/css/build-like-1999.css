@@ -1,0 +1,68 @@
+.purple-wordart-base {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: var(--step-8);
+  background: linear-gradient(183deg, #6000CA 10%, #CA00CD 70%);
+  background-clip: text;
+  color: transparent;
+  font-family: 'Impact';
+}
+
+.purple-wordart-wrapper {
+  filter: drop-shadow(2px 2px 0px rgba(130, 140, 251, 0.8));
+}
+
+.purple-wordart-skewed {
+  transform: skewY(-8deg) scaleY(1.3) scaleX(0.8);
+}
+
+.purple-wordart-text-shadow {
+  text-shadow: 2px 2px 0px rgba(130, 140, 251, 0.8);
+}
+
+.purple-wordart-text-black {
+  color: var(--body-color);
+}
+
+.rainbow-wrapper {
+  font-family: 'Arial Black', sans-serif;
+  font-size: var(--step-7);
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  perspective: 150px;
+  perspective-origin: bottom center;
+}
+
+.rainbow-wrapper:before {
+    position: absolute;
+    content: attr(data-content);
+    transform: rotateX(60deg) skewX(65deg) scaleY(2.8) scaleX(0.9);
+    transform-origin: bottom right;
+    color: black;
+    opacity: 0.2;
+    bottom: -2rem;
+}
+
+.rainbow {
+    font-family: 'Arial Black', sans-serif;
+ font-weight: bold;
+ background: linear-gradient(
+   90deg,
+   #9c00ff,
+   #ff0000,
+   #ff8800,
+   #ffff00,
+   #02be02,
+   #0000ff,
+   #4f00ff,
+   #9c00ff
+ );
+ background-clip: text;
+ -webkit-background-clip: text;
+ color: transparent;
+ transform: scaleY(1.5) scaleX(0.6);
+ transform-origin: left;
+ display: inline-block;
+ font-size: var(--step-7);
+}
