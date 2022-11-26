@@ -203,10 +203,16 @@
   .footer-links a,
   .content a,
   .submenu a {
-    @include shared.fancy-link-backgrounds(
+    @include shared.fancy-link-underlines(
       hsl(305.9, 100%, 50%),
       hsl(172, 100%, 44.3%)
     );
     --bg-h: 100%;
+    background-size: 0% var(--bg-h);
+    &:hover {
+    background-size: 100% var(--bg-h);
+
+    }
+
   }
 }

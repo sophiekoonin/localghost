@@ -153,11 +153,12 @@
   .content a:not(.tweet-card a),
   .submenu a {
     text-decoration: none;
-    color: hsl(329, 96%, 31%);
-    @include shared.fancy-link-backgrounds(
+    --link-color: hsl(329, 96%, 31%);
+    @include shared.fancy-link-underlines(
       hsla(370, 100%, 76%, 1),
       hsla(330, 88%, 60%, 1)
     );
+
     --bg-h: 3px;
   }
 }

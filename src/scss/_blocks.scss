@@ -115,16 +115,6 @@
       }
     }
 
-    button.nav-link {
-      border: 0;
-      cursor: pointer;
-      background: none;
-      font-family: inherit;
-      font-size: inherit;
-      color: inherit;
-      font-weight: 600;
-    }
-
     .submenu {
       position: relative;
       &-list {
@@ -691,4 +681,14 @@ body::after {
       font-weight: bold;
     }
   }
+}
+
+button.nav-link {
+  border: 0;
+  cursor: pointer;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-weight: 600;
 }

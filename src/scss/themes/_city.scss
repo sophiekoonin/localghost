@@ -250,7 +250,7 @@
     text-decoration: none;
     --bg-h: 3px;
 
-    @include shared.fancy-link-backgrounds(
+    @include shared.fancy-link-underlines(
       hsla(251, 78%, 68%, 1),
       hsla(303, 88%, 50%, 1)
     );
