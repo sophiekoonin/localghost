@@ -29,6 +29,10 @@
     {
       "label": "Tech setup",
       "url": "/setup"
+    },
+    {
+      "label": "Twitter archive",
+      "url": "https://twitter.localghost.dev"
     }
   ]
 }
