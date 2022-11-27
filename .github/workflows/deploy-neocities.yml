@@ -12,7 +12,8 @@ jobs:
           cache: "yarn"
       - run: yarn install
       - run: yarn build
-      - uses: kognise/neocities-deploy-action@v1
+      - uses: bcomnes/deploy-to-neocities@v1.1.11
         with:
-          neocities_token: ${{ secrets.NEOCITIES_TOKEN }}
-          directory: "_site/"
+          api_token: ${{ secrets.NEOCITIES_TOKEN }}
+          dist_dir: "_site/"
+          cleanup: false
