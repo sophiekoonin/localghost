@@ -58,7 +58,7 @@ module.exports = (config) => {
   });
 
   config.addPlugin(redirectsPlugin, {
-    template: 'vercel',
+    template: 'clientSide',
   });
 
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
