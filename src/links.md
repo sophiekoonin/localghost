@@ -17,7 +17,8 @@ layout: 'page.njk'
 * [The Useless Web](https://theuselessweb.com) - remember when the internet was pointless?
 * [rupify.fun](https://www.rupify.fun/) - turn any text into a rupi kaur poem (by [eli](https://twitter.com/elibelly) & [wendy](https://twitter.com/wmginsberg))
 
-## Useful resources
+## Useful things
+* [omg.lol](https://omg.lol) - a cute set of tools including a homepage (yourname.omg.lol), email (yourname@omg.lol) forwarding, pastebin (paste.lol), url shortener (url.lol) and Mastodon instance (social.lol).
 * [Neocities](https://neocities.org/) - a free web host supporting creative personal websites
 * [CSS Utopia](https://utopia.fyi/) - generate type and spacing scales without breakpoints
 * [Modern CSS](https://moderncss.dev/) - modern CSS solutions for old problems
