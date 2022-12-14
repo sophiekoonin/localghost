@@ -2,7 +2,6 @@
 title: "Preparing for conferences"
 date: '2022-12-14'
 tags: ['conferences']
-# excerptText: ""
 ---
 
 I've been speaking at conferences and meetups on and off for nearly five years now, and a few people have asked me what the process is for preparing a talk. So I thought I'd share how I approach it.
@@ -10,6 +9,7 @@ I've been speaking at conferences and meetups on and off for nearly five years n
 <!--more-->
 
 For me, the talk process is a circle:
+
 ![A circular flow diagram. The top box says "YEAH LET'S DO A TALK!", which flows to a box that says "Oh no, I have to prepare the talk.". That box flows to one that says "This is the worst. I hate this. Why did I agree to this?". The one after that says "Okay! Ready! Let's do this!", and the box after that says "THAT WAS AMAZING! I want to do it again!". That box points back round to the first box, in a circle.](/img/blog/circle-of-talks.png "It's the circle of talks.")
 
 It repeats around and around forever. There is *always* a point at which I hate my talk and wish I'd never done it, but there is also always a point where I'm having the time of my life. Giving talks is great fun, but it's also hard work. 
@@ -29,13 +29,13 @@ Previously, I've used notecards blue-tacked to the wall with ideas on, so I can 
 
 At this point, I'll also do research. Depending on the topic, I might read blog posts, articles, I even read someone's PhD thesis once. I might pull out some good quotes, or just write down some general ideas from those.
 
-## Content: about 8 weeks before
+## Content: about 6-8 weeks before
 Taking my notes, and writing more detail for each point in a Notion doc. What do I have to say about each of these ideas? Sometimes I spot how they flow into each other, or I might find that one of them doesn't fit with the others any more after I've written some blurb. 
 
 I treat it a bit like a blog post at this point, writing as if I'm talking to someone. It helps me to solidify my ideas as a talk rather than just random sentences. 
 
 
-## Slides: about 6-8 weeks before
+## Slides: about 4-6 weeks before
 Depending on my needs, I'll either use Keynote or Google Slides. I prefer Keynote, but if I need to be able to switch to a browser quickly, Google Slides is better. I used Reveal once which was useful for code and embeds, but it took me ages to build the slides so I probably won't use it very often.
 
 The first version of the slides always has the notes containing the full sentences from the content planning stage, because I'll use these for the first few run-throughs.
