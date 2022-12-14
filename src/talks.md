@@ -31,7 +31,7 @@ Some of the things I like to talk about include:
 - UX London, June 2022 &ndash; [*Use your words: clear writing at incident.io*](https://2022.uxlondon.com/speakers/sophie-koonin/)
 - FullStack eXchange 2022 &ndash; [Keynote &ndash; _This talk is under construction: a love letter to the personal website_](https://skillsmatter.com/conferences/13770-fullstack-exchange-2022#program)
 - State of the Browser 2022 &ndash; [_Building a website like it's 1999_](https://2022.stateofthebrowser.com/speaker/sophie-koonin/)
-- ffconf 2022 &ndash; [_This talk is under construction: a love letter to the personal website_](https://2022.ffconf.org/#talk-4)
+- ffconf 2022 &ndash; [_This talk is under construction: a love letter to the personal website_](https://2022.ffconf.org/#talk-4) [(video)](https://www.youtube.com/watch?v=vGYm9VdfJ8s&list=PLZy5V2JKDfX9afwuEl1NolNpvd0yNWc8E&index=5)
 - WeyWeyWeb 2022 (upcoming) &ndash; [_Play them off, Keyboard App: Building a MIDI-enabled virtual piano in JavaScript_](https://www.weyweyweb.com/)
 
 ### Podcasts & Panels
