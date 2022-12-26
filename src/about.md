@@ -12,7 +12,7 @@ I lead the Web Discipline at [Monzo](https://www.monzo.com), where I'm also a se
   
 By day I build web things for fun and profit, but by night I make music with [SHE Choir London](https://shechoir.com/london). I also enjoy gardening, baking, dogs, crafting, [mechanical keyboards](/keyboards), surreal memes and video games. 
 
-Find me on [Mastodon](https://indieweb.social/@type_error), [Twitter](https://twitter.com/type__error), or send me an email: [sophie@localghost.dev](mailto:sophie@localghost.dev).
+Find me on [Mastodon](https://social.lol/@sophie), or send me an email: [sophie@localghost.dev](mailto:sophie@localghost.dev).
 
 ## About this site
 

@@ -221,6 +221,9 @@
         @extend .visually-hidden;
       }
       #twitter-link {
+        display: none;
+      }
+      #mastodon-link {
         & + span {
           content: url('/img/geocities/guestbook.gif');
           @media (prefers-reduced-motion: reduce) {
@@ -284,4 +287,8 @@
   100% {
     visibility: visible;
   }
+}
+
+.buttons {
+  margin-block-start: var(--space-s);
 }

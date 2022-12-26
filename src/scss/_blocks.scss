@@ -692,3 +692,15 @@ button.nav-link {
   color: inherit;
   font-weight: 600;
 }
+
+.buttons {
+  text-align: center;
+  
+  .neocities-badge {
+    display: inline-block;
+    margin-inline: auto;
+    path[fill='#AAA'] {
+      fill: var(--accent-color);
+    }
+  }
+}
