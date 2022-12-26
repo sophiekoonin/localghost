@@ -13,7 +13,7 @@ async function fetchWebmentions(since) {
   if (!TOKEN) {
     // If we dont have a domain access token, abort
     console.warn(
-      'unable to fetch webmentions: no access token specified in environment.'
+      'failed to fetch webmentions: no access token specified in environment.'
     );
     return false;
   }
