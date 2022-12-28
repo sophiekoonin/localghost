@@ -150,7 +150,7 @@
   }
 
   .footer-links a,
-  .content a:not(.tweet-card a),
+  .content a:not(.tweet-card a):not(.neocities-badge),
   .submenu a {
     text-decoration: none;
     --link-color: hsl(329, 96%, 31%);

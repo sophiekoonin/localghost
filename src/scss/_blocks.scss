@@ -698,6 +698,7 @@ button.nav-link {
   
   .neocities-badge {
     display: inline-block;
+    text-decoration: none;
     margin-inline: auto;
     path[fill='#AAA'] {
       fill: var(--accent-color);

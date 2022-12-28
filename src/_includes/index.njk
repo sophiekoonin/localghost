@@ -22,19 +22,35 @@
     <div id="content-end"></div>
     <div class="buttons flow">
       {% include "partials/neocities-badge.njk" %}
+      <p aria-label="Yesterweb Webring">
+        <a title="random" href="https://webring.yesterweb.org/noJS/index.php?d=rand&url=https://localghost.dev">
+          ???
+        </a>
+        &nbsp;
+        <span aria-hidden>//</a>
+        <a title="previous" href="https://webring.yesterweb.org/noJS/index.php?d=prev&url=https://localghost.dev">
+          &lt;&lt;
+        </a>
+        &nbsp;
+        <a href="https://yesterweb.org/webring">yesterweb</a>
+        <a title="next" href="https://webring.yesterweb.org/noJS/index.php?d=next&url=https://localghost.dev">
+          &gt;&gt;
+        </a>
+        &nbsp;
+        <span aria-hidden>//</a>
+        <a title="random" href="https://yesterweb.org/webring/members.html">
+          ..
+        </a>
+      </p>
       <p>
-        <a href="https://hotlinewebring.club/localghost/previous">
-          <span aria-hidden>
-            <--</span>
-              <span class="visually-hidden">previous</span>
-            </a>&nbsp;
-            <a href="https://hotlinewebring.club/">HOTLINE WEBRING</a>&nbsp;
-            <a href="https://hotlinewebring.club/localghost/next">
-              <span aria-hidden>
-                --></span>
-              <span class="visually-hidden">next</span>
-            </a>
-          </p>
-        </div>
-      </div>
-    {% endblock %}
+        <a title="previous" href="https://hotlinewebring.club/localghost/previous">
+          &lt;&lt;
+        </a>&nbsp;
+        <a href="https://hotlinewebring.club/">HOTLINE WEBRING</a>&nbsp;
+        <a href="https://hotlinewebring.club/localghost/next" title="next">
+          &gt;&gt;
+        </a>
+      </p>
+    </div>
+  </div>
+{% endblock %}
