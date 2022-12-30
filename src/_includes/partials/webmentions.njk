@@ -4,7 +4,7 @@
   <h2>Webmentions</h2>
   {%- if mentions.length > 0 -%}
     <ol class="webmentions-list flow">
-      {% for webmention in mentions | head(10) | reverse %}
+      {% for webmention in mentions | reverse %}
         <li>
           <article class="webmention flow h-cite" id="webmention-{{ webmention['wm-id'] }}">
             <div class="webmention-meta">
@@ -33,11 +33,6 @@
                 </article>
               </li>
             {% endfor %}
-            {%- if mentions.length > 10 -%}
-              <div class="webmentions-more">
-                <a href="{{ page.url | url | absoluteUrl(metadata.url) }}#webmentions">Show all {{ mentions.length }}</a>
-              </div>
-            {%- endif -%}
           </ol>
         {% else %}
           <p>No mentions yet.</p>
