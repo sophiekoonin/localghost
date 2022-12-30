@@ -15,9 +15,9 @@
       {% for item in postListItems %}
         {% set excerpt %}
         {% if item.data.excerptText %}
-          {{ item.data.excerptText | trim | safe }}
+          {{ item.data.excerptText | markdown | trim | safe }}
         {% elseif item.data.page.excerpt %}
-          {{ item.data.page.excerpt | trim | safe }}
+          {{ item.data.page.excerpt | markdown | trim | safe }}
         {% endif %}
         {% endset %}
         <li>
@@ -29,9 +29,7 @@
               {% endif %}
             </h2>
             <div class="content-inner flow">
-              <p>
-                {{ excerpt | safe }}
-              </p>
+              {{ excerpt | safe }}
               <p>
                 <time class="post-date" datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
                 &ndash;
