@@ -3,14 +3,20 @@ title: "Links"
 layout: 'page.njk'
 ---
 
-## Lovely personal sites 
+## Blogroll
 * [Carol Gilabert](https://carol.gg)
 * [Cassie Evans](https://cassie.codes)
-* [Andy Bell](https://piccalil.li/) 
+* [Andy Bell](https://andy-bell.co.uk/) 
 * [Kara Brightwell](https://ghost.computer)
-* [Lynn Fisher](https://lynnandtonic.com)
+* [Sally Lait](https://sallylait.com/)
 * [David Darnes](https://darn.es/)
-  
+* [Jami](https://jami.xyz)
+* [Laura Kalbag](https://laurakalbag.com/)
+* [Chris Coyier](https://chriscoyier.net/)
+* [Bruce Lawson](https://brucelawson.co.uk/)
+* [Rachel Andrew](https://rachelandrew.co.uk/)
+
+
 ## Lovely things
 
 * [The Yesterweb](https://yesterweb.org) - A monument to everything I love(d) about the internet, and a movement to reclaim that lost creativity and independence. I've tried to encompass some of that spirit in this website. They publish a zine which is a delight to read.
