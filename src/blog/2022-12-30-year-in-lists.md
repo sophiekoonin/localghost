@@ -7,6 +7,7 @@ tags:
 ---
 
 I don't usually do these end-of-year reflection posts, but at a time where I feel like I'm finally starting to hit flat land again after a year of climbing hills, it seems like a nice thing to do, and a way for me to reflect on my own achievements. 
+<!--more-->
 
 I've spent a *lot* of time mulling over the bad things that happened this year so I want to focus on the good stuff. 
 
