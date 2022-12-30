@@ -111,7 +111,7 @@ I can't listen to music with lyrics while I work, so it's lo-fi beats to relax a
 One thing that didn't change this year is that I played a shit-ton of video games. Here are some highlights.
 
 * [Horizon: Forbidden West](https://www.playstation.com/en-gb/games/horizon-forbidden-west/) &ndash; Horizon: Zero Dawn is one of my all-time favourites, and this didn't disappoint! The world-building is incredible, it's absolutely stunning, and I love hunting around for datapoints to discover even more lore. 
-* [Tunic] &ndash; lovely Zelda-esque game with some REALLY creative puzzles. Really loved this one.
+* [Tunic](https://tunicgame.com/) &ndash; lovely Zelda-esque game with some REALLY creative puzzles. Really loved this one.
 * [Tiny Tina's Wonderlands](https://playwonderlands.2k.com/) &ndash; based on my favourite Borderlands 2 DLC, Tiny Tina's Assault on Dragon Keep, this was a delightful (and hilarious) D&D-themed action game. Borderlands remains the only FPS-style game I've ever enjoyed. Disappointing DLC that I didn't even bother with, but I got a lot of hours out of this game!
 * [Cult of the Lamb](https://cult-of-the-lamb.com/) was great fun for a while, but also had some serious bugs that made the game really frustrating (these have been patched now). It also *finally* got me to like roguelikes, which resulted in me finally playing...
 * [Hades](https://www.supergiantgames.com/games/hades/). I'm pretty bad at it, but everything about this game rules. 
