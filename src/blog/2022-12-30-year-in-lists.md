@@ -15,15 +15,15 @@ For that reason, there won't be much mention of COVID. I want to make it perfect
 Skip to bits you care about:
 
 - [The year in...](#the-year-in)
-  &ndash; [...career decisions](#career-decisions)
-  &ndash; [...conferences](#conferences)
-  &ndash; [...travel](#travel)
-  &ndash; [...books](#books)
-  &ndash; [...music](#music)
-  &ndash; [...video games](#video-games)
-  &ndash; [...learning things](#learning-things)
-  &ndash; [...blog posts](#blog-posts)
-  &ndash; [...the web](#the-web)
+  - [...career decisions](#career-decisions)
+  - [...conferences](#conferences)
+  - [...travel](#travel)
+  - [...books](#books)
+  - [...music](#music)
+  - [...video games](#video-games)
+  - [...learning things](#learning-things)
+  - [...blog posts](#blog-posts)
+  - [...the web](#the-web)
 
 
 ## The year in...
@@ -150,6 +150,6 @@ I wrote a whopping SIX posts this year! It may not sound that much, but it's a r
 * I joined [omg.lol](https://omg.lol), and you should too. Until 1 Jan 2023, it's $5 a _year_ for a pastebin (paste.lol), URL shortener (url.lol), Mastodon instance (social.lol), email forwarder (@omg.lol) and soon a weblog (weblog.lol)! I now have a fancy ["web card"](https://sophie.omg.lol/) I can link people to if they want to get in touch. It's just lovely vibes all round.
 * It feels like there's been a bit of a personal website resurgence, which is lovely &ndash; especially considering the topics of the talks I've given this year! I gave this site a bit of a facelift, with five new themes including some very silly ones. I also moved it to [neocities](https://neocities.org) and joined some webrings because WHY NOT.
 
-## There you have it
+## There you have it <!-- omit in toc -->
 
 It's been nice to spend some time reflecting on the good things that happened this year despite all the bad. I'm hoping to keep the conference momentum going, so if you know any that are looking for speakers, let me know! Here's hoping 2023 brings new opportunities and more personal website joy.
