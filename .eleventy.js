@@ -1,3 +1,5 @@
+const slugify = require('@sindresorhus/slugify')
+
 // Plugins
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const tweetPlugin = require('eleventy-plugin-embed-tweet');
@@ -14,7 +16,6 @@ const markdownItAnchor = require('markdown-it-anchor');
 const mdfigcaption = require('markdown-it-image-figures');
 const codeSnippet = require('./src/plugins/code-snippet');
 const webmentionsFilter = require('./src/filters/webmentions.js');
-
 const markdownItOptions = {
   html: true,
   breaks: true,
@@ -22,7 +23,7 @@ const markdownItOptions = {
 };
 const markdownLib = markdownIt(markdownItOptions)
   .use(markdownItAttrs)
-  .use(markdownItAnchor)
+  .use(markdownItAnchor, { slugify: (s) => slugify(s)} )
   .use(mdfigcaption, { figcaption: true, lazy: true, async: true });
 
 module.exports = (config) => {

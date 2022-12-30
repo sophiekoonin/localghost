@@ -4,7 +4,7 @@
   "main": "index.js",
   "devDependencies": {
     "@11ty/eleventy": "1.0.1",
-    "@sindresorhus/slugify": "2.1.0",
+    "@sindresorhus/slugify": "1.1.0",
     "autoprefixer": "^10.4.2",
     "eslint": "8.17.0",
     "markdown-it-anchor": "^8.6.4",
