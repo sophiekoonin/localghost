@@ -1,5 +1,7 @@
 name: "Deploy to Neocities"
 on:
+  schedule:
+    - cron: 0 */12 * * *
   push:
     branches:
       - main
