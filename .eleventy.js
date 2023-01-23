@@ -1,5 +1,4 @@
 const slugify = require('@sindresorhus/slugify')
-
 // Plugins
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const tweetPlugin = require('eleventy-plugin-embed-tweet');
