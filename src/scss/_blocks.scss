@@ -45,6 +45,9 @@
         max-width: 80%;
         margin-inline: auto;
         margin-bottom: var(--space-2xs);
+        &.small {
+          width: min(20rem, 100%);
+        }
       }
       figcaption {
         font-style: italic;
