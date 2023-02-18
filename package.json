@@ -13,10 +13,9 @@
     "postcss-cli": "^9.1.0"
   },
   "dependencies": {
-    "@11ty/eleventy": "^2.0.0-beta",
-    "@11ty/eleventy-plugin-rss": "1.1.2",
-    "@11ty/eleventy-plugin-syntaxhighlight": "4.0.0",
-    "@11ty/eleventy-upgrade-help": "2.0.5",
+    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy-plugin-rss": "1.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "4.2.0",
     "cssnano": "5.1.11",
     "date-fns": "^2.29.1",
     "eleventy-plugin-embed-tweet": "0.3.1",
