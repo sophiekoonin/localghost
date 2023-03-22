@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main
+      - og-images
 jobs:
   deploy:
     name: "Deploy to Neocities"
