@@ -4,6 +4,7 @@ const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const tweetPlugin = require('eleventy-plugin-embed-tweet');
 const syntaxPlugin = require('@11ty/eleventy-plugin-syntaxhighlight');
 const redirectsPlugin = require('eleventy-plugin-redirects');
+const convertOGImage = require('./src/plugins/og-to-png')
 // Filters
 const dateFilter = require('./src/filters/date-filter');
 const w3DateFilter = require('./src/filters/w3-date-filter');
@@ -34,6 +35,7 @@ module.exports = (config) => {
     useInlineStyles: false,
     cacheDirectory: 'tweets',
   });
+  config.on('afterBuild', conv)
   config.addPassthroughCopy({ './src/static': '/' });
   config.setLibrary('md', markdownLib);
   config.addFilter('dateFilter', dateFilter);

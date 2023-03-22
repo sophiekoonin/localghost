@@ -4,7 +4,7 @@ const Image = require("@11ty/eleventy-img");
 
 // with thanks to
 // https://bnijenhuis.nl/notes/automatically-generate-open-graph-images-in-eleventy/
-function generate() {
+module.exports = function() {
   const socialPreviewImagesDir = "_site/og-images/";
   fs.readdir(socialPreviewImagesDir, function (err, files) {
       if (files.length > 0) {
@@ -14,8 +14,9 @@ function generate() {
                   let imageUrl = socialPreviewImagesDir + filename;
                   Image(imageUrl, {
                       formats: ["png"],
-                      outputDir: "./src/static/og-images",
+                      outputDir: "./" + socialPreviewImagesDir,
                       filenameFormat: function (id, src, width, format, options) {
+
                           let outputFilename = filename.substring(0, (filename.length-4));
                       
                           return `${outputFilename}.${format}`;
@@ -28,5 +29,3 @@ function generate() {
       }
   })
 }
-
-generate()
