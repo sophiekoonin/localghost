@@ -1,0 +1,2 @@
+node scripts/og-to-png.js
+echo "Generated OG images"

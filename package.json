@@ -12,12 +12,12 @@
     "markdown-it-anchor": "^8.6.4",
     "markdown-it-attrs": "^4.1.4",
     "md5": "2.3.0",
-    "node-canvas": "",
     "postcss": "^8.4.8",
     "postcss-cli": "^9.1.0"
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy-img": "^3.0.0",
     "@11ty/eleventy-plugin-rss": "1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "4.2.0",
     "cssnano": "5.1.11",
