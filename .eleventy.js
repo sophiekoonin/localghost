@@ -5,16 +5,17 @@ const tweetPlugin = require('eleventy-plugin-embed-tweet');
 const syntaxPlugin = require('@11ty/eleventy-plugin-syntaxhighlight');
 const redirectsPlugin = require('eleventy-plugin-redirects');
 // Filters
-const dateFilter = require('./src/filters/date-filter.js');
-const w3DateFilter = require('./src/filters/w3-date-filter.js');
-const markdownFilter = require('./src/filters/markdown-filter.js');
+const dateFilter = require('./src/filters/date-filter');
+const w3DateFilter = require('./src/filters/w3-date-filter');
+const splitLines = require('./src/filters/split-lines')
+const markdownFilter = require('./src/filters/markdown-filter');
 const debugFilter = require('./src/filters/debug');
 const markdownIt = require('markdown-it');
 const markdownItAttrs = require('markdown-it-attrs');
 const markdownItAnchor = require('markdown-it-anchor');
 const mdfigcaption = require('markdown-it-image-figures');
 const codeSnippet = require('./src/plugins/code-snippet');
-const webmentionsFilter = require('./src/filters/webmentions.js');
+const webmentionsFilter = require('./src/filters/webmentions');
 const markdownItOptions = {
   html: true,
   breaks: true,
@@ -36,6 +37,7 @@ module.exports = (config) => {
   config.addPassthroughCopy({ './src/static': '/' });
   config.setLibrary('md', markdownLib);
   config.addFilter('dateFilter', dateFilter);
+  config.addFilter('splitlines', splitLines);
   config.addFilter('w3DateFilter', w3DateFilter);
   config.addFilter('markdown', markdownFilter);
   config.addFilter('debug', debugFilter);

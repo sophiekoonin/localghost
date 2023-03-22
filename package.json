@@ -2,6 +2,9 @@
   "name": "localghost",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": "18"
+  },
   "devDependencies": {
     "@sindresorhus/slugify": "1.1.0",
     "autoprefixer": "^10.4.2",
@@ -9,6 +12,7 @@
     "markdown-it-anchor": "^8.6.4",
     "markdown-it-attrs": "^4.1.4",
     "md5": "2.3.0",
+    "node-canvas": "",
     "postcss": "^8.4.8",
     "postcss-cli": "^9.1.0"
   },
