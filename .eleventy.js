@@ -17,6 +17,7 @@ const markdownItAnchor = require('markdown-it-anchor');
 const mdfigcaption = require('markdown-it-image-figures');
 const codeSnippet = require('./src/plugins/code-snippet');
 const webmentionsFilter = require('./src/filters/webmentions');
+const ogToPng = require('./src/plugins/og-to-png')
 const markdownItOptions = {
   html: true,
   breaks: true,
@@ -35,7 +36,7 @@ module.exports = (config) => {
     useInlineStyles: false,
     cacheDirectory: 'tweets',
   });
-  config.on('afterBuild', conv)
+  config.on('afterBuild', ogToPng)
   config.addPassthroughCopy({ './src/static': '/' });
   config.setLibrary('md', markdownLib);
   config.addFilter('dateFilter', dateFilter);
