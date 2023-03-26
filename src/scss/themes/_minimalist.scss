@@ -1,8 +1,8 @@
-@use '../utils';
+@use "../utils";
 
-[data-theme='minimalist'] {
+[data-theme="minimalist"] {
   --content-bg: none;
-  --header-font-family: 'Krungthep', var(--body-font-family);
+  --header-font-family: "Krungthep", var(--body-font-family);
   --header-color: hsl(0, 0%, 20%);
   --accent-color: hsl(0, 0%, 20%);
   --bullet: disc;
@@ -14,7 +14,6 @@
 
   a,
   button.nav-link {
-    font-variation-settings: 'wght' 500;
     text-decoration: underline;
     font-size: inherit;
     &,

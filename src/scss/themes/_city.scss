@@ -1,15 +1,15 @@
-@use '../utils';
-@use './shared';
+@use "../utils";
+@use "./shared";
 
-[data-theme='city'] {
+[data-theme="city"] {
   --background: fixed
     linear-gradient(hsla(239, 50%, 20%, 1), hsla(251, 54%, 50%, 1) 80%);
   --body-color: white;
   --accent-color: hsla(303, 88%, 50%, 1);
   --content-bg: hsla(239, 15%, 12%, 0.95);
   --header-color: hsla(303, 88%, 90%, 1);
-  --header-font-family: 'Bayshore', cursive;
-  --heading-font-family: 'Krungthep', 'Inter var', sans-serif;
+  --header-font-family: "Bayshore", cursive;
+  --heading-font-family: "Krungthep", "Figtree", sans-serif;
   --bullet: url("data:image/svg+xml,%3Csvg viewBox='0 0 9 9' height='10' width='10' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='2'%3E%3Cpath fill='%23fff' d='M4 2h1v5H4z'/%3E%3Cpath fill='%23fff' d='M3 3h3.167v3H3z'/%3E%3Cpath fill='%23fff' d='M7 4v1H2V4z'/%3E%3Cpath fill='%23fff' d='M4 0h1v1H4z'/%3E%3Cpath fill='%23fff' d='M8 4h1v1H8z'/%3E%3Cpath fill='%23fff' d='M0 4h1v1H0z'/%3E%3Cpath fill='%23fff' d='M4 8h1v1H4z'/%3E%3C/svg%3E");
   --link-color: hsla(164, 97%, 84%, 1);
   --link-hover-color: hsla(164, 97%, 84%, 1);
@@ -229,7 +229,7 @@
           hsla(125, 88%, 50%, 1)
         );
       }
-      &[data-state='active'] {
+      &[data-state="active"] {
         text-decoration: underline;
       }
     }

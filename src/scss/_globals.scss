@@ -1,4 +1,4 @@
-@use 'utils';
+@use "utils";
 
 html,
 body {
@@ -8,6 +8,7 @@ body {
   background: var(--background);
   color: var(--body-color);
   font-family: var(--body-font-family);
+  font-weight: 400;
 }
 
 select {
@@ -111,6 +112,7 @@ ol[class] {
 
 a {
   font-weight: 600;
+
   color: var(--link-color);
   &:hover {
     color: var(--link-hover-color);
