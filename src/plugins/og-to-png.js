@@ -9,8 +9,8 @@ module.exports = async function () {
   const socialPreviewImagesDir = "_site/og-images/";
   const files = await fsPromises.readdir(socialPreviewImagesDir);
   if (files.length > 0) {
-    const outputFilename = filename.substring(0, filename.length - 4);
     files.forEach(function (filename) {
+      const outputFilename = filename.substring(0, filename.length - 4);
       if (
         filename.endsWith(".svg") &
         !fs.existsSync(path.join(ogImagesDir, outputFilename))
@@ -18,7 +18,7 @@ module.exports = async function () {
         const imageUrl = socialPreviewImagesDir + filename;
         Image(imageUrl, {
           formats: ["png"],
-          outputDir: ogImagesDir + socialPreviewImagesDir,
+          outputDir: ogImagesDir,
           filenameFormat: function (id, src, width, format, options) {
             return `${outputFilename}.${format}`;
           },
