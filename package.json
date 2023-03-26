@@ -30,6 +30,9 @@
     "sanitize-html": "2.7.0",
     "sass": "1.49.9"
   },
+  "prettier": {
+    "tabWidth": 2
+  },
   "scripts": {
     "start": "NODE_ENV=development BASE_URL=http://localhost:8080 eleventy --serve --quiet",
     "build": "NODE_ENV=production eleventy",
