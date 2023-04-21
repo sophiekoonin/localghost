@@ -17,22 +17,35 @@ Some of the things I like to talk about include:
 <figcaption>On stage at ffconf 2022. Photo: <a href="https://twitter.com/rem/status/1591044568249606144">Remy Sharp</a></figcaption>
 </figure>
 
-
+## Upcoming events
+- [CSS Day](https://cssday.nl/2023/speakers), Amsterdam, 8 - 9 June 2023
+- [Middlesbrough Frontend](https://www.middlesbroughfe.co.uk/), Middlesbrough, 19 July 2023
+- [Front Conference](https://frontconference.com/), Zurich, 31 Aug - 1 Sept 2023
 ## Talk history
 
 ### Conferences
+Some of the events I've spoken at in the past include:
+- Beyond Tellerand Düsseldorf 2023
+- ffconf 2022
+- State of the Browser 2022
+- FullStack eXchange 2022
+- UX London 2022
+- JSConf EU 2019 (Community Stage) 
+- GDG Devfest 2021  
+- Next.js Conf 2020
+- JSCamp 2021
+- JSConf IN 2021
+- CityJS London 2022
+- BeJS Conf 2022
+- WeyWeyWeb 2022
 
-- ReactFest 2018 &ndash; _redux-saga: an introduction_
-- JSConf EU 2019 &ndash; _Why Communities Matter_ (Community Stage) [(video)](https://www.youtube.com/watch?v=0AmVHTTcdjs)
-- CityJS 2020 &ndash; _Little JavaScript bundles of joy: splitting up a React monolith at Monzo_ [(video)](https://www.youtube.com/watch?v=WMCvyjehH_g)
-- GDG Devfest Hellas & GDG Devfest Lahore 2020 &ndash; _Teaching Code as a Foreign Language: The teaching skills that made me a better engineer_
-- Next.js Conf 2020 &ndash; _Next.JS at Monzo_ [(video)](https://youtu.be/UXpY3-DlZ9c)
-- JSCamp 2021 [(video)](https://www.youtube.com/watch?v=Ghrl5whfpso), JSConf IN 2021, CityJS London March 2022 [(video)](https://www.youtube.com/watch?v=DzmpT9456h0), BeJS Conf May 2022 [(video)](https://youtu.be/Jxmz5Dwadg0) &ndash; _Play Them Off, Keyboard App: Building a piano in JavaScript_ 
-- UX London, June 2022 &ndash; [*Use your words: clear writing at incident.io*](https://2022.uxlondon.com/speakers/sophie-koonin/)
-- FullStack eXchange 2022 &ndash; [Keynote &ndash; _This talk is under construction: a love letter to the personal website_](https://skillsmatter.com/conferences/13770-fullstack-exchange-2022#program)
-- State of the Browser 2022 &ndash; [_Building a website like it's 1999_](https://2022.stateofthebrowser.com/speaker/sophie-koonin/)
-- ffconf 2022 &ndash; [_This talk is under construction: a love letter to the personal website_](https://2022.ffconf.org/#talk-4) [(video)](https://www.youtube.com/watch?v=vGYm9VdfJ8s&list=PLZy5V2JKDfX9afwuEl1NolNpvd0yNWc8E&index=5)
-- WeyWeyWeb 2022 &ndash; [_Play them off, Keyboard App: Building a MIDI-enabled virtual piano in JavaScript_](https://www.weyweyweb.com/) [(video)](https://youtu.be/YkKYuQBjmtA)
+I've spoken about:
+- [The history of personal websites, and why we should be building them](https://www.youtube.com/watch?v=2ZUqa-lTbnU)
+- [Building a website like it's 1999, using modern CSS, HTML and JS](https://www.youtube.com/watch?v=0Ks1aIchFiI&list=PL_xTCNiMz8sDYuzlyYNYKyUH4YBmuAziN&index=6)
+- [How I built a MIDI-enabled synthesizer in JavaScript](https://www.youtube.com/watch?v=YkKYuQBjmtA)
+- [The importance of clear writing in product development](https://vimeo.com/730047345)
+
+I'm always happy to present one of these talks, or we can chat about themes you'd be interested in. Get in touch!
 
 ### Podcasts & Panels
 - Monzo x Ada’s List webinar for International Women’s Day 2021
