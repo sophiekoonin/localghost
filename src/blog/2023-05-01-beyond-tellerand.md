@@ -21,6 +21,7 @@ Speaking of the incredible production quality: Marc got dina Amin to do these [u
 
 <video controls>
 <source src="/img/blog/beyond-tellerand-2023/bt-poster.webm" type="video/webm">
+<source src="/img/blog/beyond-tellerand-2023/bt-poster.mp4" type="video/mp4">
 A video showing the stop motion animation of my name with household objects.
 </video>
 </div>
