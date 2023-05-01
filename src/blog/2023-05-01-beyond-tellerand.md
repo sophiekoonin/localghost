@@ -2,8 +2,8 @@
 title: "Beyond Tellerand: beyond amazing"
 date: '2023-05-01'
 tags: ['conferences']
+excerptText: "I had the absolute privilege of opening Beyond Tellerand Düsseldorf recently. I had no idea what to expect, but it was incredible!"
 ---
-
 
 I had the absolute privilege of opening Beyond Tellerand Düsseldorf recently. Truth be told, I had no idea what to expect, other than a great conference (from what everyone had told me), but it was incredible! (Apologies to anyone who tried to chat to me on the Monday after my talk &ndash; if I seemed a bit distant, it was because I was literally struggling to string words together because of adrenaline and tiredness.) It took me a week to recover from the travel, socialising and speaking, and I went straight back to work so I'm only getting around to writing this now!
 
