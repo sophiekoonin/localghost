@@ -1,4 +1,4 @@
-@use 'utils';
+@use "utils";
 
 .header {
   color: var(--header-color);
@@ -40,6 +40,7 @@
     &[data-with-subtitle] {
       padding-block-start: 0;
     }
+
     figure {
       img {
         max-width: 80%;
@@ -55,7 +56,20 @@
       }
     }
     max-inline-size: var(--max-inline-size);
+
+    .side-by-side {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+
+      gap: 1rem;
+      img,
+      video {
+        width: 100%;
+      }
+    }
   }
+
   &.summary .content-inner {
     padding-block-end: 0;
   }
@@ -145,7 +159,7 @@
         align-items: center;
 
         &:after {
-          content: '';
+          content: "";
           border: 0.35rem solid transparent;
           border-top-color: var(--link-color);
           margin-inline-start: var(--space-3xs);
@@ -153,7 +167,7 @@
         }
       }
       &:hover .submenu-list,
-      button#submenu-trigger[aria-expanded='true'] + .submenu-list {
+      button#submenu-trigger[aria-expanded="true"] + .submenu-list {
         opacity: 1;
         transform: rotateX(0) translateX(-50%);
         visibility: visible;
@@ -208,34 +222,34 @@
     }
   }
 
-  label[for='city'] {
+  label[for="city"] {
     &:hover img {
-      background: url('/img/city-icon-hover.png');
+      background: url("/img/city-icon-hover.png");
       background-size: contain;
       background-repeat: no-repeat;
     }
   }
 
-  label[for='sunset'] {
+  label[for="sunset"] {
     &:hover img {
-      background: url('/img/sunset-icon-hover.png');
+      background: url("/img/sunset-icon-hover.png");
       background-size: contain;
     }
   }
 
-  label[for='minimalist'] {
+  label[for="minimalist"] {
     &:hover img {
       background: #fafafa;
     }
   }
 
-  label[for='twothousandandfour'] {
+  label[for="twothousandandfour"] {
     &:hover img {
-      background: url('/img/2004-icon-hoverbg.png');
+      background: url("/img/2004-icon-hoverbg.png");
     }
   }
 
-  label[for='pastel'] {
+  label[for="pastel"] {
     .theme-option-icon-wrapper {
       padding: 0.2rem;
       border-radius: 50%;
@@ -267,7 +281,7 @@
       transform: scale(1);
     }
   }
-  label[for='vaporwave'] {
+  label[for="vaporwave"] {
     &:hover img {
       background: linear-gradient(
         90deg,
@@ -280,7 +294,7 @@
     }
   }
 
-  label[for='geocities'] {
+  label[for="geocities"] {
     &:hover {
       img {
         @media (prefers-reduced-motion: no-preference) {
@@ -463,7 +477,7 @@
   }
 }
 
-[data-theme='sunset'] {
+[data-theme="sunset"] {
   .palmtree {
     line-height: 0;
     align-self: end;
@@ -546,7 +560,7 @@ body::after {
   height: 0;
   overflow: hidden;
   z-index: -1; // hide images
-  content: url('/img/vaporwave-bg.webp') url('/img/geocities/1999-bg.webp'); // load images
+  content: url("/img/vaporwave-bg.webp") url("/img/geocities/1999-bg.webp"); // load images
 }
 
 .tweet-card {
@@ -698,12 +712,12 @@ button.nav-link {
 
 .buttons {
   text-align: center;
-  
+
   .neocities-badge {
     display: inline-block;
     text-decoration: none;
     margin-inline: auto;
-    path[fill='#AAA'] {
+    path[fill="#AAA"] {
       fill: var(--accent-color);
     }
   }
