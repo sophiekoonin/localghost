@@ -25,7 +25,7 @@ Some of the things I like to talk about include:
 
 ### Conferences
 Some of the events I've spoken at in the past include:
-- Beyond Tellerand Düsseldorf 2023
+- Beyond Tellerrand Düsseldorf 2023
 - ffconf 2022
 - State of the Browser 2022
 - FullStack eXchange 2022
