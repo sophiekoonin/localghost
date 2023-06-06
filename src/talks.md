@@ -5,6 +5,8 @@ layout: "page.njk"
 
 I love public speaking, so if you’d like me to speak at your meetup or conference please send me an email at [sophie@localghost.dev](mailto:sophie@localghost.dev)!
 
+I'm also available for MCing conferences <span aria-hidden="true">🎤</span>
+
 Some of the things I like to talk about include:
 
 * The independent web and creativity
@@ -47,6 +49,3 @@ I've spoken about:
 
 I'm always happy to present one of these talks, or we can chat about themes you'd be interested in. Get in touch!
 
-### Podcasts & Panels
-- Monzo x Ada’s List webinar for International Women’s Day 2021
-- Texthelp Talks, March 2021 &ndash; 6 myths designers and marketers believe about web accessibility [(recording)](https://www.texthelp.com/resources/podcasts/6-myths-designers-and-marketers-believe-about-web-accessibility/)
