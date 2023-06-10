@@ -18,13 +18,13 @@ Some of the things I like to talk about include:
 </figure>
 
 ## Upcoming events
-- [CSS Day](https://cssday.nl/2023/speakers), Amsterdam, 8 - 9 June 2023
 - [Middlesbrough Frontend](https://www.middlesbroughfe.co.uk/), Middlesbrough, 19 July 2023
 - [Front Conference](https://frontconference.com/), Zurich, 31 Aug - 1 Sept 2023
 ## Talk history
 
 ### Conferences
 Some of the events I've spoken at in the past include:
+- CSS Day Amsterdam 2023
 - Beyond Tellerrand Düsseldorf 2023
 - ffconf 2022
 - State of the Browser 2022
