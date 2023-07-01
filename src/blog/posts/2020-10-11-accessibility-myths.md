@@ -1,6 +1,7 @@
 ---
 title: '7 myths designers and developers believe about web accessibility'
-date: '2020-10-11'
+date: 2020-10-11
+type: post
 tags: 
   - 'design'
   - 'accessibility'

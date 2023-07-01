@@ -1,6 +1,7 @@
 ---
 title: "Start at the beginning: the importance of learning the basics"
-date: '2022-01-02'
+date: 2022-01-02
+type: post
 tags: ['advice', 'learning']
 aliases: 
 - "/2022/01/start-at-the-beginning-the-importance-of-learning-the-basics/"

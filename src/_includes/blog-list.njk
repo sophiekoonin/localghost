@@ -1,13 +1,29 @@
+---
+eleventyImport:
+  collections: ["blog"]
+---
+
 {% extends "base.njk" %}
 {% block content %}
   {% set postListItems = pagination.items %}
   {% if tag %}
-    {% set postListItems = collections[tag] %}
+    {% set postListItems = collections[tag] | reverse %}
     {% set title = 'Posts tagged "' + tag + '"' %}
   {% endif %}
   <div class="list-heading">
     <h1>{{ title }}</h1>
   </div>
+  {% if not tag %}
+  <div class="filters">
+  <span>Filter:</span>
+  <ul class="">
+    <li>blog posts</li>
+    <li><a href="/tag/good-book/">good books</a></li>
+    <li><a href="/tag/good-podcast/">good podcasts</a></li>
+    <li><a href="/tags">all tags</a></li>
+  </ul>
+  </div>
+  {% endif %}
   <div
     class="content-inner flow" {% if subtitle %} data-with-subtitle {% endif %}>
     {# If this is a tag, grab those items instead as one large collection #}
@@ -21,9 +37,9 @@
         {% endif %}
         {% endset %}
         <li>
-          <article class="content summary">
+          <article class="content summary" data-type="{{item.data.type}}">
             <h2 class="page-heading">
-              <a href="{{ item.url }}">{{ item.data.title }}</a>
+              <a href="{{ item.url }}">{{ item.data.pageTitle }}</a>
               {% if item.data.subtitle %}
                 <span class="post-subtitle">{{ item.data.subtitle }}</span>
               {% endif %}

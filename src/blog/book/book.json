@@ -1,0 +1,9 @@
+{
+  "layout": "good-book.njk",
+  "isBlog": true,
+  "pageTitle": "A good book: {{ title }}",
+  "tags": [
+    "good book"
+  ],
+  "permalink": "/blog/a-good-book-{{ title | slugify }}/index.html"
+}

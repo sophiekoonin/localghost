@@ -1,6 +1,7 @@
 ---
 title: "Beyond Tellerrand: beyond amazing"
-date: '2023-05-01'
+date: 2023-05-01
+type: post
 tags: ['conferences']
 excerptText: "I had the absolute privilege of opening Beyond Tellerrand Düsseldorf recently. I had no idea what to expect, but it was incredible!"
 ---

@@ -1,7 +1,8 @@
 ---
 title: "Things experienced speakers wish they'd known:"
 subtitle: 'Tips for first time conference speakers'
-date: 2018-01-24T15:00:00Z
+date: 2018-01-24
+type: post
 tags: ['conferences', 'talks', 'advice', 'twitter']
 excerptText: "Preparing for my first ever conference talk in 2018, I compiled a list of helpful tips from experienced speakers, and thought I'd share them with the world."
 aliases:

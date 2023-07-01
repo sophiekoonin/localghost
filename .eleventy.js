@@ -63,11 +63,26 @@ module.exports = (config) => {
   });
   config.addShortcode("codepen", codeSnippet);
   config.addCollection("blog", (collection) => {
-    return [...collection.getFilteredByGlob("./src/blog/*.md")].reverse();
+    return collection.getFilteredByGlob("./src/blog/**/*.md");
   });
 
   config.addPlugin(redirectsPlugin, {
     template: "clientSide",
+  });
+
+  // Return all the tags used in a collection
+  config.addFilter("getAllTags", (collection) => {
+    let tagSet = new Set();
+    for (let item of collection) {
+      (item.data.tags || []).forEach((tag) => tagSet.add(tag));
+    }
+    return Array.from(tagSet);
+  });
+
+  config.addFilter("filterTagList", function filterTagList(tags) {
+    return (tags || []).filter(
+      (tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1
+    );
   });
 
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file

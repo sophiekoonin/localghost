@@ -1,6 +1,7 @@
 ---
 title: I miss Twitter
 date: 2023-01-14
+type: post
 tags: 
 - 'twitter'
 - 'internet'

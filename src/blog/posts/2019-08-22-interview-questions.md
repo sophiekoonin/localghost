@@ -1,6 +1,7 @@
 ---
 title: 'Questions to ask at an engineering interview'
-date: 2019-08-22T17:55:34+01:00
+date: 2019-08-22
+type: post
 tags:
 - 'interviews'
 - 'advice'

@@ -1,6 +1,7 @@
 ---
-title: 'x'
 layout: 'blog-list.njk'
+eleventyComputed:
+  title: Posts tagged "{{ tag }}"
 pagination:
   data: collections
   size: 1

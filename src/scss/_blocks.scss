@@ -89,6 +89,34 @@
     list-style: var(--bullet);
     padding-inline-start: var(--space-2xs);
   }
+
+  &[data-type] {
+    position: relative;
+
+    .two-col {
+      align-items: start;
+    }
+  }
+
+  &.summary[data-type]::after {
+    font-size: var(--step-1);
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  &.summary[data-type="book"]::after {
+    content: "📚";
+  }
+  &.summary[data-type="podcast"]::after {
+    content: "🎙";
+  }
+  &.summary[data-type="music"]::after {
+    content: "🎧";
+  }
+  &.summary[data-type="video"]::after {
+    content: "🎥";
+  }
 }
 
 .about-photo {
@@ -320,6 +348,7 @@
     flex-wrap: wrap;
 
     ul {
+      flex-wrap: wrap;
       display: flex;
       margin-inline-start: var(--space-2xs);
       li {
@@ -719,6 +748,22 @@ button.nav-link {
     margin-inline: auto;
     path[fill="#AAA"] {
       fill: var(--accent-color);
+    }
+  }
+}
+
+.filters {
+  display: flex;
+
+  margin-inline: auto;
+  max-inline-size: var(--max-inline-size);
+  ul {
+    padding: 0;
+    display: flex;
+    gap: 0.75rem;
+
+    & > * + * {
+      margin: 0;
     }
   }
 }
