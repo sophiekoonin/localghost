@@ -7,5 +7,5 @@ pagination:
   size: 1
   alias: tag
   filter: ['all', 'rss', 'blog', 'redirects']
-permalink: '/tag/{{ tag | slugify }}/'
+permalink: '/tags/{{ tag | slugify }}/'
 ---

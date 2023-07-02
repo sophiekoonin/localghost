@@ -1,7 +1,7 @@
 {% extends "base.njk" %}
 {% block content %}
-  <article class="content" data-type="book">
-    <h1 class="page-heading">{{ pageTitle }}</h1>
+  <article class="content">
+    <h1 class="page-heading">{{ title }}</h1>
     <div class="content-inner flow">
       <div class="post-metadata">
         <time datetime="{{ date | w3DateFilter }}">{{ date | dateFilter }}</time>

@@ -8,25 +8,12 @@ eleventyImport:
   {% set postListItems = pagination.items %}
   {% if tag %}
     {% set postListItems = collections[tag] | reverse %}
-    {% set title = 'Posts tagged "' + tag + '"' %}
   {% endif %}
   <div class="list-heading">
     <h1>{{ title }}</h1>
   </div>
-  {% if not tag %}
-  <div class="filters">
-  <span>Filter:</span>
-  <ul class="">
-    <li>blog posts</li>
-    <li><a href="/tag/good-book/">good books</a></li>
-    <li><a href="/tag/good-podcast/">good podcasts</a></li>
-    <li><a href="/tags">all tags</a></li>
-  </ul>
-  </div>
-  {% endif %}
   <div
     class="content-inner flow" {% if subtitle %} data-with-subtitle {% endif %}>
-    {# If this is a tag, grab those items instead as one large collection #}
     <ol role="list" class="posts-list flow">
       {% for item in postListItems %}
         {% set excerpt %}
@@ -39,7 +26,7 @@ eleventyImport:
         <li>
           <article class="content summary" data-type="{{item.data.type}}">
             <h2 class="page-heading">
-              <a href="{{ item.url }}">{{ item.data.pageTitle }}</a>
+              <a href="{{ item.url }}">{{ item.data.title }}</a>
               {% if item.data.subtitle %}
                 <span class="post-subtitle">{{ item.data.subtitle }}</span>
               {% endif %}
@@ -58,6 +45,30 @@ eleventyImport:
         </li>
       {% endfor %}
     </ol>
+      <div class="filters">
+  <span>Quick filters:</span>
+  <ul class="">
+    {% if collections["good book"].length > 0 %}
+    <li><a href="/tag/good-book/">books</a></li>
+    {% endif %}
+    {% if collections["good podcast"].length > 0 %}
+    <li><a href="/tag/good-podcast/">podcasts</a></li>
+    {% endif %}
+    {% if collections["good music"].length > 0 %}
+    <li><a href="/tag/good-music/">music</a></li>
+    {% endif %}
+    {% if collections["good video"].length > 0 %}
+    <li><a href="/tag/good-video/">videos</a></li>
+    {% endif %}
+    {% if collections["good recipe"].length > 0 %}
+    <li><a href="/tag/good-recipe/">recipes</a></li>
+    {% endif %}
+    {% if tag %}
+    <li><a href="/blog">all posts</a></li>
+    {% endif %}
+    <li><a href="/tags">all tags</a></li>
+  </ul>
+  </div>
     {% if not tag %}
       {% include "partials/blog/pagination.njk" %}
     {% endif %}

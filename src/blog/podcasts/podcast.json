@@ -1,9 +1,0 @@
-{
-  "layout": "good-podcast.njk",
-  "isBlog": true,
-  "pageTitle": "A good podcast: {{ title }}",
-  "tags": [
-    "good podcast"
-  ],
-  "permalink": "/blog/a-good-podcast-{{ title | slugify }}/index.html"
-}

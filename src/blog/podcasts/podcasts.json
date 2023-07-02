@@ -1,0 +1,12 @@
+{
+  "layout": "good-podcast.njk",
+  "isBlog": true,
+  "eleventyComputed": {
+    "title": "A good podcast: {{ podcast }}"
+  },
+  "type": "podcast",
+  "tags": [
+    "good podcast"
+  ],
+  "permalink": "/blog/a-good-podcast-{{ podcast | slugify }}/index.html"
+}

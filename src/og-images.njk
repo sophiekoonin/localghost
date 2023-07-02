@@ -3,7 +3,7 @@ pagination:
   data: collections.blog
   size: 1
   alias: post
-permalink: "/og-images/{{ post.data.pageTitle | slugify }}.svg"
+permalink: "/og-images/{{ post.data.title | slugify }}.svg"
 eleventyExcludeFromCollections: true
 markdown: false
 ---
@@ -15,7 +15,7 @@ markdown: false
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink">
-    {% set titleInLines = post.data.pageTitle | splitlines %}
+    {% set titleInLines = post.data.title | splitlines %}
     {% set numberOfLines = titleInLines.length %}
     {% if post.data.subtitle %}
     {% set subtitleInLines = post.data.subtitle | splitlines %}

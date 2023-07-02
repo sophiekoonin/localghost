@@ -1,7 +1,7 @@
 {% extends "base.njk" %}
 {% block content %}
   <article class="content" data-type="book">
-    <h1 class="page-heading">{{ pageTitle }}</h1>
+    <h1 class="page-heading">{{ title }}</h1>
     <div class="content-inner flow">
       <div class="post-metadata">
         <time datetime="{{ date | w3DateFilter }}">{{ date | dateFilter }}</time>
@@ -21,7 +21,7 @@
       <div class="two-col">
         <div class="flow">
       {{ content | safe }}
-      <p>Buy it: <a href="{{ url }}" target="_blank" rel="noreferrer">{{title}}</a>
+      <p>Buy it: <a href="{{ url }}" target="_blank" rel="noreferrer">{{book}}</a>
       </div>
       <img src="/img/blog/{{ image}}" alt="{{alt}}"/>
       </div>

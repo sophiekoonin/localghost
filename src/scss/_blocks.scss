@@ -117,6 +117,12 @@
   &.summary[data-type="video"]::after {
     content: "🎥";
   }
+  &.summary[data-type="game"]::after {
+    content: "🎮";
+  }
+  &.summary[data-type="recipe"]::after {
+    content: "👩🏻‍🍳";
+  }
 }
 
 .about-photo {
@@ -754,11 +760,12 @@ button.nav-link {
 
 .filters {
   display: flex;
-
   margin-inline: auto;
+  justify-content: center;
   max-inline-size: var(--max-inline-size);
   ul {
     padding: 0;
+    margin-inline-start: 0.5rem;
     display: flex;
     gap: 0.75rem;
 
