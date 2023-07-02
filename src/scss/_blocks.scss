@@ -42,7 +42,7 @@
     }
 
     figure {
-      img {
+      img:not(.about-photo) {
         max-width: 80%;
         margin-inline: auto;
         margin-bottom: var(--space-2xs);
@@ -130,6 +130,7 @@
   aspect-ratio: 1;
   width: min(30%, 15rem);
   height: auto;
+  margin: var(--space-s);
   shape-outside: circle(50%);
   border-radius: 50%;
   background: var(--photo-bg);

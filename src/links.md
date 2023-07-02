@@ -6,22 +6,19 @@ layout: 'page.njk'
 ## Blogroll
 * [Carol Gilabert](https://carol.gg)
 * [Cassie Evans](https://cassie.codes)
-* [Andy Bell](https://andy-bell.co.uk/) 
+* [Andy Bell](https://andy-bell.co.uk/)
 * [Kara Brightwell](https://ghost.computer)
 * [Sally Lait](https://sallylait.com/)
 * [David Darnes](https://darn.es/)
-* [Jami](https://jami.xyz)
-* [Laura Kalbag](https://laurakalbag.com/)
-* [Chris Coyier](https://chriscoyier.net/)
 * [Bruce Lawson](https://brucelawson.co.uk/)
 * [Rachel Andrew](https://rachelandrew.co.uk/)
-
+* [Miriam Suzanne](https://www.miriamsuzanne.com/)
+* [CSS In Real Life](https://css-irl.info)
 
 ## Lovely things
 
 * [The Yesterweb](https://yesterweb.org) - A monument to everything I love(d) about the internet, and a movement to reclaim that lost creativity and independence. I've tried to encompass some of that spirit in this website. They publish a zine which is a delight to read.
 * [The Useless Web](https://theuselessweb.com) - remember when the internet was pointless?
-* [rupify.fun](https://www.rupify.fun/) - turn any text into a rupi kaur poem (by [eli](https://twitter.com/elibelly) & [wendy](https://twitter.com/wmginsberg))
 
 ## Useful things
 * [omg.lol](https://omg.lol) - a cute set of tools including a homepage (yourname.omg.lol), email (yourname@omg.lol) forwarding, pastebin (paste.lol), url shortener (url.lol) and Mastodon instance (social.lol).
