@@ -761,7 +761,7 @@ button.nav-link {
 .filters {
   display: flex;
   margin-inline: auto;
-  justify-content: baseline;
+  align-items: baseline;
   max-inline-size: var(--max-inline-size);
   h2 {
     font-size: var(--step--1);
