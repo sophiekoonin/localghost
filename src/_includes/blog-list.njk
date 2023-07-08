@@ -46,8 +46,8 @@ eleventyImport:
       {% endfor %}
     </ol>
       <div class="filters">
-  <span>Quick filters:</span>
-  <ul class="">
+  <h2 id='quick-filters'>Filters:</h2>
+  <ul class="" aria-labelledby="quick-filters">
     {% if collections["good book"].length > 0 %}
     <li><a href="/tag/good-book/">books</a></li>
     {% endif %}

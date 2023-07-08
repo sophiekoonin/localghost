@@ -130,7 +130,6 @@
   aspect-ratio: 1;
   width: min(30%, 15rem);
   height: auto;
-  margin: var(--space-s);
   shape-outside: circle(50%);
   border-radius: 50%;
   background: var(--photo-bg);
@@ -762,8 +761,11 @@ button.nav-link {
 .filters {
   display: flex;
   margin-inline: auto;
-  justify-content: center;
+  justify-content: baseline;
   max-inline-size: var(--max-inline-size);
+  h2 {
+    font-size: var(--step--1);
+  }
   ul {
     padding: 0;
     margin-inline-start: 0.5rem;
