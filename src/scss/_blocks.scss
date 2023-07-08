@@ -123,6 +123,9 @@
   &.summary[data-type="recipe"]::after {
     content: "👩🏻‍🍳";
   }
+  &.summary[data-type="website"]::after {
+    content: "💻";
+  }
 }
 
 .about-photo {
