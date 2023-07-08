@@ -1,7 +1,7 @@
 ---
 title: Everything I googled in a week as a senior software engineer
 date: 2022-10-15
-type: post
+
 tags: 
 - 'engineering'
 - 'work'

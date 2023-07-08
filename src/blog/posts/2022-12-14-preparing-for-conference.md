@@ -1,7 +1,7 @@
 ---
 title: "Preparing for conferences"
 date: 2022-12-14
-type: post
+
 tags: ['conferences']
 ---
 

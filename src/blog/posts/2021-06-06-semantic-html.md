@@ -1,6 +1,6 @@
 ---
 date: 2021-06-06
-type: post
+
 excerptText: "Whether you write plain old HTML, HTML templating or JSX, are you using the right HTML tags? A guide to semantic HTML: what it is, why it's so important, and how to use it"
 tags: 
 - "html"

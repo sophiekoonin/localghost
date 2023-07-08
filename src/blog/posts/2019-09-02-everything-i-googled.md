@@ -1,7 +1,7 @@
 ---
 title: Everything I googled in a week as a professional software engineer
 date: 2019-09-02
-type: post
+
 tags: 
 - 'engineering'
 - 'work'

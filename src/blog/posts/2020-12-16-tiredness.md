@@ -1,7 +1,7 @@
 ---
 title: 'Give yourself a break: lessons from burnout'
 date: 2020-12-16
-type: post
+
 tags: 
   - 'burnout'
   - 'mental health'

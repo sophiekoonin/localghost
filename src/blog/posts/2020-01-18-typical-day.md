@@ -1,7 +1,7 @@
 ---
 title: "A typical day: pandemic edition"
 date: 2021-01-18
-type: post
+
 tags: 
 - 'lifestyle'
 excerptText: What does a typical day for me look like in 2021?

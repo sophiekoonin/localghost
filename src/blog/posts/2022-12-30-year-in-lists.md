@@ -1,7 +1,7 @@
 ---
 title: '2022: The year in lists'
 date: 2022-12-30
-type: post
+
 tags: 
   - 'personal'
   - 'roundup'

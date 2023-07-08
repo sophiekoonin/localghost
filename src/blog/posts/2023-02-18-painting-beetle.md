@@ -2,7 +2,7 @@
 title: "Painting the whole beetle: an adventure in learning to learn"
 tags: ['personal', 'learning']
 date: 2023-02-18
-type: post
+
 excerptText: "I'm not very good at being bad at things. In fact, I have a track record of giving up on things if I'm not immediately good at it. (So I guess I'm good at giving up on things?) This is a tale of learning to persevere and accepting the effort that goes into learning new skills."
 ---
 
