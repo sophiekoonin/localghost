@@ -179,6 +179,7 @@
         background-color: var(--content-bg);
         min-width: 110%;
         padding-block: var(--space-2xs);
+        z-index: 2;
 
         // hide by default
         transform: rotateX(-90deg) translateX(-50%);
@@ -777,6 +778,22 @@ button.nav-link {
 
     & > * + * {
       margin: 0;
+    }
+  }
+}
+
+.inset-image {
+  container-type: inline-size;
+  img {
+    margin-inline: auto;
+    max-width: 75%;
+    margin-block-end: 1rem;
+  }
+  @container (min-width: 500px) {
+    img {
+      float: left;
+      max-width: 33%;
+      margin-inline-end: 1rem;
     }
   }
 }

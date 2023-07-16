@@ -45,30 +45,7 @@ eleventyImport:
         </li>
       {% endfor %}
     </ol>
-      <div class="filters">
-  <h2 id='quick-filters'>Filters:</h2>
-  <ul class="" aria-labelledby="quick-filters">
-    {% if collections["good book"].length > 0 %}
-    <li><a href="/tag/good-book/">books</a></li>
-    {% endif %}
-    {% if collections["good podcast"].length > 0 %}
-    <li><a href="/tag/good-podcast/">podcasts</a></li>
-    {% endif %}
-    {% if collections["good music"].length > 0 %}
-    <li><a href="/tag/good-music/">music</a></li>
-    {% endif %}
-    {% if collections["good video"].length > 0 %}
-    <li><a href="/tag/good-video/">videos</a></li>
-    {% endif %}
-    {% if collections["good recipe"].length > 0 %}
-    <li><a href="/tag/good-recipe/">recipes</a></li>
-    {% endif %}
-    {% if tag %}
-    <li><a href="/blog">all posts</a></li>
-    {% endif %}
-    <li><a href="/tags">all tags</a></li>
-  </ul>
-  </div>
+   
     {% if not tag %}
       {% include "partials/blog/pagination.njk" %}
     {% endif %}
