@@ -5,7 +5,7 @@ layout: "page.njk"
 
 This is a list of the best games I've played and why I love them. It's by no means exhaustive: I've left off the obvious ones (Zelda, Fallout, Cyberpunk, BioShock, Witcher etc), only including some big games if I wanted to say a little about them or they're particularly special.
 
-If you enjoy any of the games I recommend here, I'd love to [hear about it](https://sophie.social.lol). 
+If you enjoy any of the games I recommend here, I'd love to [hear about it](https://sophie.omg.lol). 
 
 ## The unforgettable stories
 * [Horizon: Zero Dawn](https://www.playstation.com/en-us/horizon/) (and its sequel, Forbidden West): this remains my favourite game story of all time. You play Aloy, an outcast in a post-apocalyptic world full of robotic dinosaurs, who learns what really wiped out the "Old Ones" and what she has to do to save the world as it is now. I'll never forget what it was like to experience that story for the first time. The worldbuilding and lore are absolutely incredible (plus the gameplay is really fun). Also, Lance Reddick is in it 💔
