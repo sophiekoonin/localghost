@@ -9,19 +9,14 @@ If you enjoy any of the games I recommend here, I'd love to [hear about it](http
 
 ## The unforgettable stories
 * [Horizon: Zero Dawn](https://www.playstation.com/en-us/horizon/) (and its sequel, Forbidden West): this remains my favourite game story of all time. You play Aloy, an outcast in a post-apocalyptic world full of robotic dinosaurs, who learns what really wiped out the "Old Ones" and what she has to do to save the world as it is now. I'll never forget what it was like to experience that story for the first time. The worldbuilding and lore are absolutely incredible (plus the gameplay is really fun). Also, Lance Reddick is in it 💔
-  
 * [Outer Wilds](https://www.mobiusdigitalgames.com/outer-wilds.html): completely unexpected, and utterly mesmerising. Another incredible storyline and lore that I kept reading about for days after I finished playing. You play a member of a space exploration team called Outer Wilds Ventures, exploring the galaxy and studying historical ruins to understand the mysteries of the past. I can't emphasise enough how amazing this game is. I played the DLC with my husband - him steering, me puzzle-solving - and it was such a great experience. I wish I could experience it for the first time all over again.
-
 * Any/all of the [Monkey Island](https://store.steampowered.com/franchise/monkeyisland/) games: one of my favourite series of all time, absolutely iconic, with incredible writing and brilliant jokes. It'll stay with you forever. In the same way that there are those lists of books that you're meant to read before you die, this is one of those games. Ron Gilbert is a genius.
-
 * [A Short Hike](https://ashorthike.com/): you play a cute little bird hiking up a mountain in a national park, collecting things and talking to people along the way (with some very witty dialogue). I absolutely loved this game, short as it is. 
-
 * [The Longest Journey](https://store.steampowered.com/app/6310/The_Longest_Journey/), [Dreamfall](https://store.steampowered.com/app/6300/Dreamfall_The_Longest_Journey/) and [Dreamfall Chapters](https://store.steampowered.com/app/237850/Dreamfall_Chapters/): I was so enthralled by the intertwined parallel universes of Arcadia and Stark when I first played TLJ in the mid 00s - several years after it had originally come out in 1999 - and I remember waiting years and years for a sequel, which finally landed in the form of Dreamfall in 2006 and later Dreamfall Chapters in 2014. In the first game, the protagonist April Ryan learns she can shift between the two parallel universes, and has to restore "the Balance" between them. A thoroughly engrossing story. You don't have to have played the first game to play Dreamfall, but I recommend it just because it's so good. 
  
 ## Strategy/Sim games
 * [Stardew Valley](https://www.stardewvalley.net/): I feel like everyone knows this game by now, but it's still one of my favourites. So comforting, like a favourite jumper. I've got a multiplayer farm with my oldest friends and every now and then we jump on and grow crops together, talking about life. It's also got a strong modding community, and I'd be nowhere without my 3x walk speed.
   
-
 ## Puzzles
 * [Chants of Sennaar](https://www.focus-entmt.com/en/games/chants-of-sennaar): this isn't even out yet (at the time of writing) and I'm OBSESSED. I played through the demo on PlayStation. It's a linguist's dream, a puzzle game where you have to decipher the language of the civilisation around you through context and environmental clues. It's also beautiful. I'm so excited for the full release - 5th Sept 2023. 
 * [Return of the Obra Dinn](https://obradinn.com/): a mystery solving game where you play as some kind of weird supernatural detective in the 1800s trying to identify the crew members on a ghost ship and correctly guess how they all died. The graphics are really unique, in an old 1-bit style. 
