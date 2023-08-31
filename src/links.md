@@ -26,7 +26,7 @@ layout: 'page.njk'
 * [Heydon Pickering](https://heydonworks.com/)
 * [Hidde de Vries](https://hidde.blog)
 * [Kara Brightwell](https://ghost.computer)
-* [Manuel Matuzo](https://www.matuzo.at/)
+* [Manuel Matuzovic](https://www.matuzo.at/)
 * [Michelle Barker](https://css-irl.info)
 * [Miriam Suzanne](https://www.miriamsuzanne.com/)
 * [Rachel Andrew](https://rachelandrew.co.uk/)
