@@ -1,19 +1,7 @@
 ---
-title: "Links"
+title: "Links & blogroll"
 layout: 'page.njk'
 ---
-
-## Blogroll
-* [Carol Gilabert](https://carol.gg)
-* [Cassie Evans](https://cassie.codes)
-* [Andy Bell](https://andy-bell.co.uk/)
-* [Kara Brightwell](https://ghost.computer)
-* [Sally Lait](https://sallylait.com/)
-* [David Darnes](https://darn.es/)
-* [Bruce Lawson](https://brucelawson.co.uk/)
-* [Rachel Andrew](https://rachelandrew.co.uk/)
-* [Miriam Suzanne](https://www.miriamsuzanne.com/)
-* [CSS In Real Life](https://css-irl.info)
 
 ## Lovely things
 
@@ -28,3 +16,20 @@ layout: 'page.njk'
 * [Every Layout](https://everylayout.dev) - loads of excellent layout primitives, and not a breakpoint in sight.
 * [Tiny Helpers](https://tiny-helpers.dev/) - little tools for web developers
 * [Compute Cuter](https://computecuter.com) - how to make your computer as cute as can be!
+
+## Blogroll
+* [Andy Bell](https://andy-bell.co.uk/)
+* [Bruce Lawson](https://brucelawson.co.uk/)
+* [Carol Gilabert](https://carol.gg)
+* [Cassie Evans](https://cassie.codes)
+* [David Darnes](https://darn.es/)
+* [Heydon Pickering](https://heydonworks.com/)
+* [Hidde de Vries](https://hidde.blog)
+* [Kara Brightwell](https://ghost.computer)
+* [Manuel Matuzo](https://www.matuzo.at/)
+* [Michelle Barker](https://css-irl.info)
+* [Miriam Suzanne](https://www.miriamsuzanne.com/)
+* [Rachel Andrew](https://rachelandrew.co.uk/)
+* [Sally Lait](https://sallylait.com/)
+* [Stephanie Eckles](https://thinkdobecreate.com/)
+* [Zach Leatherman](https://www.zachleat.com/)
