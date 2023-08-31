@@ -3,7 +3,7 @@ title: "Speaking"
 layout: "page.njk"
 ---
 
-I love public speaking, so if you’d like me to speak at your meetup or conference please send me an email at [sophie@localghost.dev](mailto:sophie@localghost.dev)!
+I love public speaking, so if you’d like me to speak at your meetup or conference please [send me an email](mailto:sophie@localghost.dev)!
 
 Some of the things I like to talk about include:
 
@@ -18,11 +18,13 @@ Some of the things I like to talk about include:
 </figure>
 
 ## Upcoming events
-- [Front Conference](https://frontconference.com/), Zurich, 31 Aug - 1 Sept 2023
+None at this time... [get in touch!](mailto:sophie@localghost.dev)
+
 ## Talk history
 
 ### Conferences
 Some of the events I've spoken at in the past include:
+- Front Conference Zurich 2023
 - CSS Day Amsterdam 2023
 - Beyond Tellerrand Düsseldorf 2023
 - Middlesbrough Frontend 2023
