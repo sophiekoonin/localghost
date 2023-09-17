@@ -245,7 +245,7 @@
   }
 
   .footer-links a,
-  .content a:not(.tweet-card a):not(.neocities-badge),
+  .content a:not(.tweet-card a):not(.neocities-badge):not(.webmention-author),
   .submenu a {
     text-decoration: none;
     --bg-h: 3px;
