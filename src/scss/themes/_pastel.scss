@@ -131,6 +131,8 @@
 
       &:is(#submenu-trigger) {
         justify-content: center;
+        line-height: 2rem;
+
         &:after {
           margin-inline-end: -0.2rem;
           margin-inline-start: 0.2rem;
