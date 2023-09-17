@@ -1,19 +1,19 @@
-const fs = require('fs');
-const fetch = require('node-fetch');
-const unionBy = require('lodash/unionBy');
-const metadata = require('./metadata.json');
+const fs = require("fs");
+const fetch = require("node-fetch");
+const unionBy = require("lodash/unionBy");
+const metadata = require("./metadata.json");
 
 // Configuration Parameters
-const CACHE_DIR = '_cache';
-const API_ORIGIN = 'https://webmention.io/api/mentions.jf2';
+const CACHE_DIR = "_cache";
+const API_ORIGIN = "https://webmention.io/api/mentions.jf2";
 const TOKEN = process.env.WEBMENTION_IO_TOKEN;
 
 async function fetchWebmentions(since) {
-  const domain = 'localghost.dev';
+  const domain = "localghost.dev";
   if (!TOKEN) {
     // If we dont have a domain access token, abort
     console.warn(
-      'failed to fetch webmentions: no access token specified in environment.'
+      "failed to fetch webmentions: no access token specified in environment."
     );
     return false;
   }
@@ -37,15 +37,12 @@ async function fetchWebmentions(since) {
   return null;
 }
 
-const allowedTypes = ['mention-of', 'in-reply-to'];
-
 // Merge fresh webmentions with cached entries, unique per id
 // Don't cache webmentions that are for homepage
-// Don't cache likes/RTs
-function mergeWebmentions(a, b) {
-  return unionBy(a.children, b.children, 'wm-id')
-    .filter((item) => item['wm-target'] !== metadata.url)
-    .filter((item) => allowedTypes.includes(item['wm-property']));
+function mergeWebmentions(a, b, types) {
+  return unionBy(a, b, "wm-id")
+    .filter((item) => item["wm-target"] !== metadata.url)
+    .filter((item) => types.includes(item["wm-property"]));
 }
 
 // save combined webmentions in cache file
@@ -75,6 +72,8 @@ function readFromCache() {
   return {
     lastFetched: null,
     children: [],
+    likes: [],
+    reposts: [],
   };
 }
 
@@ -84,7 +83,7 @@ module.exports = async function () {
 
   // Only fetch new mentions in production
   if (
-    process.env.NODE_ENV === 'production' ||
+    process.env.NODE_ENV === "production" ||
     !lastFetched ||
     process.env.FETCH_MENTIONS
   ) {
@@ -93,7 +92,14 @@ module.exports = async function () {
     if (feed) {
       const webmentions = {
         lastFetched: new Date().toISOString(),
-        children: mergeWebmentions(cache, feed),
+        children: mergeWebmentions(cache.children, feed.children, [
+          "mention-of",
+          "in-reply-to",
+        ]),
+        likes: mergeWebmentions(cache.likes || [], feed.children, ["like-of"]),
+        reposts: mergeWebmentions(cache.reposts || [], feed.children, [
+          "repost-of",
+        ]),
       };
 
       writeToCache(webmentions);

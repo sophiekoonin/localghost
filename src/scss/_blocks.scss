@@ -726,6 +726,9 @@ body::after {
     &-author {
       display: flex;
       align-items: center;
+      &:hover img {
+        box-shadow: 0 0 0 2px var(--link-color);
+      }
       img {
         border-radius: 50%;
         height: var(--space-m);
@@ -735,6 +738,17 @@ body::after {
     }
     .p-name {
       font-weight: bold;
+    }
+    &-avatars {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      & > a + a {
+        margin-inline-start: -0.75rem;
+      }
+      span {
+        margin-inline-start: 0.75rem;
+      }
     }
   }
 }

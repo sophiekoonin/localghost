@@ -1,9 +1,9 @@
-@use './shared';
-@use '../utils';
+@use "./shared";
+@use "../utils";
 
-[data-theme='sunset'] {
-  --header-font-family: 'Bayshore', cursive;
-  --heading-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+[data-theme="sunset"] {
+  --header-font-family: "Bayshore", cursive;
+  --heading-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --background: fixed
     linear-gradient(
       hsla(330, 88%, 70%, 1),
@@ -13,7 +13,7 @@
     );
   --content-bg: rgba(255, 255, 255, 0.8);
   --accent-color: rgb(239, 44, 44);
-  --bullet: url('/icons/triangle-bullet.svg');
+  --bullet: url("/icons/triangle-bullet.svg");
   --link-color: hsla(329, 96%, 43%, 1);
   --link-hover-color: hsla(370, 100%, 66%, 1);
   --tweet-bg: hsl(14, 94%, 93%);
@@ -105,7 +105,7 @@
   }
 
   .page-wrapper {
-    background: url('/img/sunset.png') no-repeat;
+    background: url("/img/sunset.png") no-repeat;
     background-position: bottom center;
   }
 
@@ -133,7 +133,7 @@
       font-size: var(--step-1);
 
       text-align: right;
-      &[data-state='active'],
+      &[data-state="active"],
       &:hover {
         text-decoration: underline;
       }
@@ -150,7 +150,7 @@
   }
 
   .footer-links a,
-  .content a:not(.tweet-card a):not(.neocities-badge),
+  .content a:not(.tweet-card a):not(.neocities-badge):not(.webmention-author),
   .submenu a {
     text-decoration: none;
     --link-color: hsl(329, 96%, 31%);
