@@ -34,7 +34,7 @@ module.exports = function (webmentions, url, aliases = []) {
     if (type === "like-of" || type === "repost-of") {
       return entry;
     }
-    const { html, text } = entry.content;
+    const { html, text } = entry.content || {};
 
     if (html) {
       // really long html mentions, usually newsletters or compilations
