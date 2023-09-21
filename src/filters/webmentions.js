@@ -31,10 +31,11 @@ module.exports = function (webmentions, url, aliases = []) {
   // clean webmention content for output
   const clean = (entry) => {
     const type = entry["wm-property"];
-    if (type === "like-of" || type === "repost-of") {
+    if (type === "like-of" || type === "repost-of" || entry.content == null) {
       return entry;
     }
-    const { html, text } = entry.content || {};
+
+    const { html, text } = entry.content;
 
     if (html) {
       // really long html mentions, usually newsletters or compilations
