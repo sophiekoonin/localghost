@@ -1,7 +1,7 @@
 {% set absoluteUrl %}{{ page.url | url | absoluteUrl(metadata.url) }}{% endset %}
 {% set mentions = webmentions.children | webmentionsForUrl(absoluteUrl, aliases) %}
-{% set totalNumMentions =  webmentions.children.length + webmentions.likes.length + webmentions.reposts.length %}
-{% set totalNumReactions =  webmentions.likes.length + webmentions.reposts.length %}
+{% set totalNumMentions = webmentions.children.length + webmentions.likes.length + webmentions.reposts.length %}
+{% set totalNumReactions = webmentions.likes.length + webmentions.reposts.length %}
 <div class="webmentions flow" id="webmentions">
   <h2>Webmentions</h2>
   {% if totalNumMentions > 0 %}
@@ -9,18 +9,18 @@
       No mentions yet.
     </p>
   {% endif %}
-{% if totalNumReactions > 0 %}
-  <div class="webmentions-likes-reposts">
-    {% set likes = webmentions.likes | webmentionsForUrl(absoluteUrl, aliases) %}
-    {% if likes.length > 0 %}
-      <h3>Likes</h3>
-      {% include "partials/webmention-avatars.njk" %}
-    {% endif %}
-    {% set likes = webmentions.reposts | webmentionsForUrl(absoluteUrl, aliases) %}
-    {% if likes.length > 0 %}
-      <h3>Reposts</h3>
-      {% include "partials/webmention-avatars.njk" %}
-    {% endif %}
+  {% if totalNumReactions > 0 %}
+    <div class="webmentions-likes-reposts">
+      {% set likes = webmentions.likes | webmentionsForUrl(absoluteUrl, aliases) %}
+      {% if likes.length > 0 %}
+        <h3>Likes</h3>
+        {% include "partials/webmention-avatars.njk" %}
+      {% endif %}
+      {% set likes = webmentions.reposts | webmentionsForUrl(absoluteUrl, aliases) %}
+      {% if likes.length > 0 %}
+        <h3>Reposts</h3>
+        {% include "partials/webmention-avatars.njk" %}
+      {% endif %}
     </div>
   {% endif %}
   {% if mentions.length > 0 %}
@@ -36,19 +36,18 @@
                 {% else %}
                   <img src="{{ '/img/avatar-placeholder.png' | url }}" alt="">
                 {% endif %}
-                  <span class="p-name">{{ webmention.author.name }}</span>
-                </a>
-                  {% if webmention.published %}
-                    <time class="webmention__pubdate dt-published" datetime="{{ webmention.published }}">{{ webmention.published | dateFilter }}</time>
-                  {% endif %}
-                </div>
-                <div class="webmention__content p-content">
-                  {{ webmention.content.value | safe }}
-                </div>
-              </div>
-            </article>
-          </li>
-        {% endfor %}
-      </ol>
-    {% endif %}
-  </div>
+                <span class="p-name">{{ webmention.author.name }}</span>
+              </a>
+              {% if webmention.published %}
+                <time class="webmention__pubdate dt-published" datetime="{{ webmention.published }}">{{ webmention.published | dateFilter }}</time>
+              {% endif %}
+            </div>
+            <div class="webmention__content p-content">
+              {{ webmention.content.value | safe }}
+            </div>
+          </article>
+        </li>
+      {% endfor %}
+    </ol>
+  {% endif %}
+</div>
