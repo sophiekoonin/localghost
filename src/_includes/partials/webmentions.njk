@@ -4,7 +4,7 @@
 {% set totalNumReactions = webmentions.likes.length + webmentions.reposts.length %}
 <div class="webmentions flow" id="webmentions">
   <h2>Webmentions</h2>
-  {% if totalNumMentions > 0 %}
+  {% if totalNumMentions === 0 %}
     <p class="webmentions-count">
       No mentions yet.
     </p>
