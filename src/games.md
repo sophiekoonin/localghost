@@ -18,7 +18,7 @@ If you enjoy any of the games I recommend here, I'd love to [hear about it](http
 * [Stardew Valley](https://www.stardewvalley.net/): I feel like everyone knows this game by now, but it's still one of my favourites. So comforting, like a favourite jumper. I've got a multiplayer farm with my oldest friends and every now and then we jump on and grow crops together, talking about life. It's also got a strong modding community, and I'd be nowhere without my 3x walk speed.
   
 ## Puzzles
-* [Chants of Sennaar](https://www.focus-entmt.com/en/games/chants-of-sennaar): this isn't even out yet (at the time of writing) and I'm OBSESSED. I played through the demo on PlayStation. It's a linguist's dream, a puzzle game where you have to decipher the language of the civilisation around you through context and environmental clues. It's also beautiful. I'm so excited for the full release - 5th Sept 2023. 
+* [Chants of Sennaar](https://www.focus-entmt.com/en/games/chants-of-sennaar): It's a linguist's dream, a puzzle game where you have to decipher the languages of the civilisations around you through context and environmental clues. It's also really beautiful. One of the most unique puzzle games I've played - I actually played this with my husband, solving puzzles together, and it was very wholesome. 
 * [Return of the Obra Dinn](https://obradinn.com/): a mystery solving game where you play as some kind of weird supernatural detective in the 1800s trying to identify the crew members on a ghost ship and correctly guess how they all died. The graphics are really unique, in an old 1-bit style. 
 * [Unpacking](https://www.unpackinggame.com/): a short but sweet indie game with a truly impressive amount of foley. The story of a girl moving house again and again, the belongings you unpack into the new homes and the stories that you unpack alongside them. 
 * [Hacknet](https://hacknet-os.com/): a terminal-based hacking game, where you work in a Unix-like environment to hack into networks and investigate the death of a hacker named Bit. The soundtrack is excellent for working to. 
@@ -46,9 +46,11 @@ If you enjoy any of the games I recommend here, I'd love to [hear about it](http
 * [Wytchwood](https://whitethorngames.com/wytchwood): a crafting adventure game where you play "the mysterious old witch of the woods" collecting ingredients and solving puzzles.
 * [Thimbleweed Park](https://thimbleweedpark.com/): a classic LucasArts-style point and click by our friend Ron Gilbert of Monkey Island fame. Great puzzles and very entertaining writing. 
 * [Untitled Goose Game](https://goose.game/): I spoke to someone recently who hadn't heard of this so apparently I do need to mention this. You play as a goose, causing havoc in a tiny English village. I cackled throughout. (The goose honk is now my computer alert sound.)
+* [Alba: A Wildlife Adventure](https://www.albawildlife.com/): you play a young girl visiting her grandparents on a Spanish island, who gets together with her friend to start a campaign to save the island's wildlife. It's so wholesome and the fauna is very accurate &mdash; I spent far too long running around the island looking for teals and kestrels. It's a great gateway to real life birdwatching!
   
 ## RPGs
 * [Divinity: Original Sin](http://www.divinityoriginalsin.com/) & [Divinity: Original Sin 2](https://divinity.game/) &mdash; by Larian (creators of Baldur's Gate 3), this is a turn-based RPG which is very D&D and great for loot goblins such as myself.
+* [Baldur's Gate 3](https://baldursgate3.game/): A natural follow-on from Divinity (it's by the same studio), this is an absolutely incredible game based on Dungeons and Dragons. Prepare to get unreasonably attached to your companions. It's very long, but also entirely engrossing. I'm a druid, how about you?
 * [Transistor](https://www.supergiantgames.com/games/transistor/): a cyberpunk turn-based role-playing game with a beautiful soundtrack by the same folks who made Hades. 
 
 ## Couch co-op
