@@ -1,0 +1,12 @@
+{
+  "layout": "single-post.njk",
+  "isBlog": true,
+  "eleventyComputed": {
+    "title": "A good recipe: {{ recipe | safe }} from {{ source | safe }}"
+  },
+  "type": "recipe",
+  "tags": [
+    "recipe"
+  ],
+  "permalink": "/blog/a-good-recipe-{{ recipe | slugify }}-from-{{ source | slugify }}/index.html"
+}

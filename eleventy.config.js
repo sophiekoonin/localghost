@@ -24,6 +24,7 @@ const markdownItOptions = {
   breaks: true,
   linkify: true,
 };
+const separateRssFeedTypes = ["recipe", "book", "game", "podcast"];
 const markdownLib = markdownIt(markdownItOptions)
   .use(markdownItAttrs)
   .use(markdownItAnchor, { slugify: (s) => slugify(s) })
@@ -67,7 +68,12 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addCollection("blog", (collection) => {
     return collection.getFilteredByGlob("./src/blog/**/*.md");
   });
-
+  eleventyConfig.addCollection("rss", () => separateRssFeedTypes);
+  eleventyConfig.addCollection("articles", (collection) => {
+    return collection.getAllSorted().filter((item) => {
+      return !separateRssFeedTypes.includes(item.data.type);
+    });
+  });
   eleventyConfig.addPlugin(redirectsPlugin, {
     template: "clientSide",
   });

@@ -6,7 +6,7 @@
   },
   "type": "podcast",
   "tags": [
-    "good podcast"
+    "podcast"
   ],
   "permalink": "/blog/a-good-podcast-{{ podcast | slugify }}/index.html"
 }

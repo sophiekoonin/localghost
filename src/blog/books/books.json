@@ -6,7 +6,7 @@
   },
   "type": "book",
   "tags": [
-    "good book"
+    "book"
   ],
   "permalink": "/blog/a-good-book-{{ book | slugify }}-by-{{ author | slugify }}/index.html"
 }

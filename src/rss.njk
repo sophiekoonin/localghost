@@ -2,38 +2,8 @@
 {
   "permalink" : "feed.xml",
   "eleventyExcludeFromCollections" : true,
-  "metadata" : {
-    "title": "localghost.dev",
-    "subtitle": "A feed of the latest posts from localghost.dev.",
-    "url": "https://localghost.dev/",
-    "feedUrl": "https://localghost.dev/feed.xml",
-    "author": {
-      "name": "Sophie Koonin",
-      "email": "sophie@localghost.dev"
-    }
-  }
+  "feed": "blog",
+  "layout": "rss.njk",
+  "feedUrl": "https://localghost.dev/feed.xml"
 }
 ---
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ metadata.title }}</title>
-  <subtitle>{{ metadata.subtitle }}</subtitle>
-  <link href="{{ metadata.feedUrl }}" rel="self"/>
-  <link href="{{ metadata.url }}"/>
-  <updated>{{ collections.blog | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-  <id>{{ metadata.url }}</id>
-  <author>
-    <name>{{ metadata.author.name }}</name>
-    <email>{{ metadata.author.email }}</email>
-  </author>
-  {%- for post in collections.blog %}
-  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
-  <entry>
-    <title>{{ post.data.title }}</title>
-    <link href="{{ absolutePostUrl }}"/>
-    <updated>{{ post.date | dateToRfc3339 }}</updated>
-    <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
-  </entry>
-  {%- endfor %}
-</feed>
