@@ -2,8 +2,7 @@
 @use "./shared";
 
 [data-theme="city"] {
-  --background: fixed
-    linear-gradient(hsla(239, 50%, 20%, 1), hsla(251, 54%, 50%, 1) 80%);
+  --background: fixed linear-gradient(hsla(239, 50%, 20%, 1), hsla(251, 54%, 50%, 1) 80%);
   --body-color: white;
   --accent-color: hsla(303, 88%, 50%, 1);
   --content-bg: hsla(239, 15%, 12%, 0.95);
@@ -21,6 +20,9 @@
   --photo-bg: linear-gradient(hsla(251, 78%, 68%, 1), hsla(303, 88%, 50%, 1));
   --blockquote-bg: rgba(255, 255, 255, 0.15);
 
+  body {
+    line-height: 1.6;
+  }
   .palmtree {
     display: none;
   }
@@ -63,17 +65,11 @@
           text-decoration: none;
         }
 
-        @include shared.neon-glow(
-          hsla(303, 88%, 70%, 1),
-          hsla(303, 88%, 50%, 1)
-        );
+        @include shared.neon-glow(hsla(303, 88%, 70%, 1), hsla(303, 88%, 50%, 1));
         &:hover,
         &:focus {
           color: hsla(125, 88%, 90%, 1);
-          @include shared.neon-glow(
-            hsla(125, 88%, 70%, 1),
-            hsla(125, 88%, 50%, 1)
-          );
+          @include shared.neon-glow(hsla(125, 88%, 70%, 1), hsla(125, 88%, 50%, 1));
         }
       }
     }
@@ -224,10 +220,7 @@
       font-size: var(--step-0);
       &:hover {
         color: hsla(125, 88%, 90%, 1);
-        @include shared.neon-glow(
-          hsla(125, 88%, 70%, 1),
-          hsla(125, 88%, 50%, 1)
-        );
+        @include shared.neon-glow(hsla(125, 88%, 70%, 1), hsla(125, 88%, 50%, 1));
       }
       &[data-state="active"] {
         text-decoration: underline;
@@ -236,10 +229,7 @@
   }
 
   footer {
-    background: linear-gradient(
-      hsla(0, 0%, 100%, 0) 40%,
-      hsla(303, 99%, 40%, 1)
-    );
+    background: linear-gradient(hsla(0, 0%, 100%, 0) 40%, hsla(303, 99%, 40%, 1));
 
     @include shared.grid-footer;
   }
@@ -248,11 +238,8 @@
   .content a:not(.tweet-card a):not(.neocities-badge):not(.webmention-author),
   .submenu a {
     text-decoration: none;
-    --bg-h: 3px;
+    --bg-h: 2px;
 
-    @include shared.fancy-link-underlines(
-      hsla(251, 78%, 68%, 1),
-      hsla(303, 88%, 50%, 1)
-    );
+    @include shared.fancy-link-underlines(hsla(251, 78%, 68%, 1), hsla(303, 88%, 50%, 1));
   }
 }
