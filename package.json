@@ -16,7 +16,7 @@
     "postcss-cli": "^9.1.0"
   },
   "dependencies": {
-    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-img": "^3.0.0",
     "@11ty/eleventy-plugin-rss": "1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "4.2.0",
@@ -31,7 +31,9 @@
     "sass": "1.49.9"
   },
   "prettier": {
-    "tabWidth": 2
+    "tabWidth": 2,
+    "printWidth": 140,
+    "proseWrap": "preserve"
   },
   "scripts": {
     "start": "NODE_ENV=development BASE_URL=http://localhost:8080 eleventy --serve --quiet",

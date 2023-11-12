@@ -8,7 +8,7 @@
 {% endif %}
 {% endset %}
 {% set ogImageName %}
-{% if isBlog %}
+{% if hasCustomOGImage %}
   og-images/{{ title | slugify }}
   {% else %}img/og-image{% endif %}
 {% endset %} <meta property="og:title" content="{{ title }}{{ ' - localghost' if not isHome }}"/>

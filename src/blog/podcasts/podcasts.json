@@ -1,6 +1,6 @@
 {
   "layout": "good-podcast.njk",
-  "isBlog": true,
+  "hasCustomOGImage": true,
   "eleventyComputed": {
     "title": "A good podcast: {{ podcast }}"
   },

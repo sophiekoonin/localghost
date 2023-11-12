@@ -1,6 +1,6 @@
 {
   "layout": "single-post.njk",
-  "isBlog": true,
+  "hasCustomOGImage": true,
   "eleventyComputed": {
     "title": "A good game: {{ game | safe }}"
   },

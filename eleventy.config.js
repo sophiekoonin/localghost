@@ -11,20 +11,20 @@ const w3DateFilter = require("./src/filters/w3-date-filter");
 const splitLines = require("./src/filters/split-lines");
 const markdownFilter = require("./src/filters/markdown-filter");
 const debugFilter = require("./src/filters/debug");
+const draftPlugin = require("./src/plugins/drafts");
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
 const markdownItAnchor = require("markdown-it-anchor");
 const mdfigcaption = require("markdown-it-image-figures");
 const codeSnippet = require("./src/plugins/code-snippet");
 const webmentionsFilter = require("./src/filters/webmentions");
-const draftPlugin = require("./src/plugins/drafts");
 const ogToPng = require("./src/plugins/og-to-png");
 const markdownItOptions = {
   html: true,
   breaks: true,
   linkify: true,
 };
-const separateRssFeedTypes = ["recipe", "book", "game", "podcast"];
+
 const markdownLib = markdownIt(markdownItOptions)
   .use(markdownItAttrs)
   .use(markdownItAnchor, { slugify: (s) => slugify(s) })
@@ -32,13 +32,13 @@ const markdownLib = markdownIt(markdownItOptions)
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addWatchTarget("./src");
+  eleventyConfig.addPlugin(draftPlugin);
   eleventyConfig.addPlugin(rssPlugin);
   eleventyConfig.addPlugin(syntaxPlugin);
   eleventyConfig.addPlugin(tweetPlugin, {
     useInlineStyles: false,
     cacheDirectory: "tweets",
   });
-  eleventyConfig.addPlugin(draftPlugin);
 
   // Don't run the OG image generator on CI cos it doesn't have the nice fonts
   if (!process.env.CI) {
@@ -68,12 +68,11 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addCollection("blog", (collection) => {
     return collection.getFilteredByGlob("./src/blog/**/*.md");
   });
-  eleventyConfig.addCollection("rss", () => separateRssFeedTypes);
+  eleventyConfig.addCollection("categoryFeeds", () => ["recipe", "book", "game", "podcast"]);
   eleventyConfig.addCollection("articles", (collection) => {
-    return collection.getAllSorted().filter((item) => {
-      return !separateRssFeedTypes.includes(item.data.type);
-    });
+    return collection.getFilteredByGlob("./src/blog/posts/*.md");
   });
+
   eleventyConfig.addPlugin(redirectsPlugin, {
     template: "clientSide",
   });
@@ -88,9 +87,7 @@ module.exports = (eleventyConfig) => {
   });
 
   eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
-    return (tags || []).filter(
-      (tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1
-    );
+    return (tags || []).filter((tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
   });
 
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file

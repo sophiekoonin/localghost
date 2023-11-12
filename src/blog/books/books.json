@@ -1,6 +1,6 @@
 {
   "layout": "good-book.njk",
-  "isBlog": true,
+  "hasCustomOGImage": true,
   "eleventyComputed": {
     "title": "A good book: {{ book | safe }} by {{ author | safe }}"
   },

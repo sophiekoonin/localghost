@@ -25,18 +25,11 @@ function eleventyComputedExcludeFromCollections() {
 }
 
 module.exports.eleventyComputedPermalink = eleventyComputedPermalink;
-module.exports.eleventyComputedExcludeFromCollections =
-  eleventyComputedExcludeFromCollections;
+module.exports.eleventyComputedExcludeFromCollections = eleventyComputedExcludeFromCollections;
 
 module.exports = (eleventyConfig) => {
-  eleventyConfig.addGlobalData(
-    "eleventyComputed.permalink",
-    eleventyComputedPermalink
-  );
-  eleventyConfig.addGlobalData(
-    "eleventyComputed.eleventyExcludeFromCollections",
-    eleventyComputedExcludeFromCollections
-  );
+  eleventyConfig.addGlobalData("eleventyComputed.permalink", eleventyComputedPermalink);
+  eleventyConfig.addGlobalData("eleventyComputed.eleventyExcludeFromCollections", eleventyComputedExcludeFromCollections);
 
   let logged = false;
   eleventyConfig.on("eleventy.before", ({ runMode }) => {
@@ -49,7 +42,7 @@ module.exports = (eleventyConfig) => {
 
     // Only log once.
     if (!logged) {
-      console.log(`[11ty/eleventy-base-blog] ${text} drafts.`);
+      console.log(`${text} drafts.`);
     }
 
     logged = true;

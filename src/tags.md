@@ -6,6 +6,6 @@ pagination:
   data: collections
   size: 1
   alias: tag
-  filter: ['all', 'rss', 'blog', 'redirects']
+  filter: ['all', 'categoryFeeds', 'blog', 'redirects']
 permalink: '/tags/{{ tag | slugify }}/'
 ---

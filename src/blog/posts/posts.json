@@ -1,6 +1,6 @@
 {
   "layout": "single-post.njk",
-  "isBlog": true,
+  "hasCustomOGImage": true,
   "type": "post",
   "permalink": "/blog/{{ title | slugify }}/index.html"
 }

@@ -14,7 +14,7 @@ module.exports = {
       response = ' aria-current="page"';
     }
 
-    if (itemUrl.length > 1 && pageUrl.indexOf(itemUrl) === 0) {
+    if (itemUrl.length > 1 && typeof pageUrl === "string" && pageUrl.indexOf(itemUrl) === 0) {
       response += ' data-state="active"';
     }
 
