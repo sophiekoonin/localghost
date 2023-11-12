@@ -1,0 +1,8 @@
+{% extends "partials/blog/with-inset.njk" %}
+{% block inner %}
+  {{ content | safe }}
+  {% if sourceUrl %}
+  <p>See the full recipe over at <a href="{{ sourceUrl }}" target="_blank" rel="noopener">{{ source }}</a>.</p>
+    {%endif%}
+  {% endblock %}
+</p>
