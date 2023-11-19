@@ -96,7 +96,7 @@ p {
   overflow-wrap: break-word;
 }
 
-ul:not(.main-nav-list) > * + *,
+ul:not(.main-nav-list):not(.tag-list) > * + *,
 ol > * + * {
   margin-block-start: var(--space-xs-s);
 }
