@@ -1,11 +1,11 @@
 ---
-title: Blue Peter's Bonfire Brownies 
+title: The best chocolate brownies
 date: 2023-11-23
 source: Blue Peter
 excerptText: "I've been making this recipe since it was aired on Blue Peter in the early 00s, and I maintain it's still the best brownie recipe."
 ---
 
-I've been making this recipe since it was aired on UK children's TV institution [Blue Peter](https://en.wikipedia.org/wiki/Blue_Peter) in the early 00s, and I maintain it's still the best brownie recipe. Chewy and delicious. I recommend freezing them and eating them straight out of the freezer (I discovered this when my mum used to put them in the freezer to keep them out of the way of temptation, and I'd nick them when she wasn't looking). There's nothing bonfire-specific about it, they're chocolate brownies and I suppose the episode aired around 5th November, but they're fucking great.
+I've been making this "Bonfire Brownies" recipe since it was aired on UK children's TV institution [Blue Peter](https://en.wikipedia.org/wiki/Blue_Peter) in the early 00s, and I maintain it's still the best brownie recipe. Chewy and delicious. I recommend freezing them and eating them straight out of the freezer (I discovered this when my mum used to put them in the freezer to keep them out of the way of temptation, and I'd nick them when she wasn't looking). There's nothing bonfire-specific about it, they're chocolate brownies and I suppose the episode aired around 5th November, but they're fucking great.
 
 Look, I don't have any photos of this, but you've just got to take my word for it.
 
