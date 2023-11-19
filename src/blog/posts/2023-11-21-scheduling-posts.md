@@ -4,11 +4,11 @@ date: 2023-11-22
 categories: ["eleventy", "how-to"]
 ---
 
-I scheduled this post, isn't that cute?
+I scheduled this post, isn't that cute?<!-- more -->
 
 Part two of my "how to do stuff in Eleventy" series, which wasn't going to be a series until I realised I had a few more things to share about my setup...!
 
-I find I have very little energy to write blog posts during the week, but occasionally I sit down on the weekend to write something and have a few ideas. I'd like to be able to publish posts more often, but realistically I won't be writing things more than once every few weeks (which is okay!). I decided I needed to be able to schedule posts so I don't just publish a load at once. 
+I find I have very little energy to write blog posts during the week, but occasionally I sit down on the weekend to write something and have a few ideas that turn into multiple posts. I'd like to be able to publish posts more often, but realistically I won't be writing things more than once every few weeks (which is okay!). I decided I needed to be able to schedule posts so I don't just publish a load at once. 
 
 Eleventy's suggested [draft post setup](https://www.11ty.dev/docs/quicktips/draft-posts/) has been working nicely for me, and posts with `draft: true` in the frontmatter don't appear in the production site. However, I miss Hugo's scheduled posts feature, where I'd be able to write a post with a date in the future and it'd only appear on the blog after that date. Thankfully it's pretty straightforward to set up in Eleventy, in a similar way to drafts. 
 
