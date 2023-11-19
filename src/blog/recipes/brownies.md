@@ -1,6 +1,6 @@
 ---
 title: Blue Peter Brownies 
-date: '2023-11-12'
+date: 2023-11-12
 source: Blue Peter
 draft: true
 ---
