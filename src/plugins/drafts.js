@@ -1,5 +1,7 @@
+const now = new Date();
+
 function isScheduledPost(data) {
-  return data.date != null && data.date.getTime() > Date.now();
+  return data.date != null && data.date > now;
 }
 
 function eleventyComputedPermalink() {

@@ -56,12 +56,12 @@ on:
 
 In my `drafts.js` plugin, I added a new function to check whether a post's timestamp is in the future:
 ```js
+const now = new Date();
+
 function isScheduledPost(data) {
-  return data.date != null && data.date.getTime() > Date.now();
+  return data.date != null && data.date > now;
 }
 ```
-
-This runs for each page and post, which means that `Date.now()` will be different by an order of nanoseconds on each iteration &ndash; but that's not a problem, as I generally specify the date on a post and not the time, so it defaults to 00:00. Since I changed the cron job to run first at 8am, that will always be late enough for `Date.now()` to be later than the post date when it's the day to publish a scheduled post. 
 
 Finally I added this function to the conditions in the `eleventyComputedPermalink` and `eleventyComputedExcludeFromCollections` functions which check for draft posts:
 
