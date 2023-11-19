@@ -21,6 +21,9 @@
   margin-block: var(--space-s);
   max-inline-size: var(--max-inline-size);
   margin-inline: auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
   h1 {
     display: inline-block;
     color: var(--list-heading-color);
@@ -321,11 +324,7 @@
   }
   label[for="vaporwave"] {
     &:hover img {
-      background: linear-gradient(
-        90deg,
-        hsl(306, 100%, 50%),
-        hsl(172, 100%, 44%)
-      );
+      background: linear-gradient(90deg, hsl(306, 100%, 50%), hsl(172, 100%, 44%));
       @media (prefers-reduced-motion: no-preference) {
         animation: rotate 1.5s linear infinite;
       }
@@ -772,26 +771,6 @@ button.nav-link {
     margin-inline: auto;
     path[fill="#AAA"] {
       fill: var(--accent-color);
-    }
-  }
-}
-
-.filters {
-  display: flex;
-  margin-inline: auto;
-  align-items: baseline;
-  max-inline-size: var(--max-inline-size);
-  h2 {
-    font-size: var(--step--1);
-  }
-  ul {
-    padding: 0;
-    margin-inline-start: 0.5rem;
-    display: flex;
-    gap: 0.75rem;
-
-    & > * + * {
-      margin: 0;
     }
   }
 }

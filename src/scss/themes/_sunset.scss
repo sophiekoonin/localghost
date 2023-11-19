@@ -4,13 +4,7 @@
 [data-theme="sunset"] {
   --header-font-family: "Bayshore", cursive;
   --heading-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --background: fixed
-    linear-gradient(
-      hsla(330, 88%, 70%, 1),
-      hsla(370, 100%, 76%, 1) 40%,
-      hsla(370, 100%, 86%, 1),
-      hsla(380, 100%, 96%, 1)
-    );
+  --background: fixed linear-gradient(hsla(330, 88%, 70%, 1), hsla(370, 100%, 76%, 1) 40%, hsla(370, 100%, 86%, 1), hsla(380, 100%, 96%, 1));
   --content-bg: rgba(255, 255, 255, 0.8);
   --accent-color: rgb(239, 44, 44);
   --bullet: url("/icons/triangle-bullet.svg");
@@ -50,17 +44,11 @@
         text-decoration: none;
       }
 
-      @include shared.neon-glow(
-        hsla(190, 100%, 75%, 1),
-        hsla(190, 100%, 50%, 1)
-      );
+      @include shared.neon-glow(hsla(190, 100%, 75%, 1), hsla(190, 100%, 50%, 1));
       &:hover,
       &:focus {
         color: hsla(303, 88%, 90%, 1);
-        @include shared.neon-glow(
-          hsla(303, 88%, 80%, 1),
-          hsla(303, 88%, 50%, 1)
-        );
+        @include shared.neon-glow(hsla(303, 88%, 80%, 1), hsla(303, 88%, 50%, 1));
       }
     }
   }
@@ -101,6 +89,13 @@
 
     h3 {
       color: hsl(340, 100%, 50%);
+    }
+  }
+
+  .list-heading a {
+    color: var(--list-heading-color);
+    &:hover {
+      color: var(--link-color);
     }
   }
 
@@ -154,10 +149,7 @@
   .submenu a {
     text-decoration: none;
     --link-color: hsl(329, 96%, 31%);
-    @include shared.fancy-link-underlines(
-      hsla(370, 100%, 76%, 1),
-      hsla(330, 88%, 60%, 1)
-    );
+    @include shared.fancy-link-underlines(hsla(370, 100%, 76%, 1), hsla(330, 88%, 60%, 1));
 
     --bg-h: 3px;
   }

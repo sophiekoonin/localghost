@@ -36,12 +36,7 @@
   --header-font-family: "VCR OSD Mono", monospace;
   --content-bg: hsl(250, 100%, 89%);
   --accent-color: hsl(306, 100%, 50%);
-  --background: fixed
-    linear-gradient(
-      hsl(171, 100%, 50%),
-      hsl(263, 81%, 77%),
-      hsl(306, 100%, 50%)
-    );
+  --background: fixed linear-gradient(hsl(171, 100%, 50%), hsl(263, 81%, 77%), hsl(306, 100%, 50%));
   --link-color: hsla(250, 100%, 20%, 1);
   --link-hover-color: white;
   --bullet: url("/icons/cd-bullet.png");
@@ -71,23 +66,20 @@
     font-size: var(--step--2);
   }
 
-  .list-heading,
-  .filters {
+  .list-heading {
     font-size: var(--step--1);
-    text-align: center;
     h1,
     h2 {
       padding: var(--space-2xs);
 
       font-size: var(--step-0);
-      background: linear-gradient(
-        45deg,
-        hsl(305.9, 100%, 50%),
-        hsl(172, 100%, 44.3%)
-      );
+      background: linear-gradient(45deg, hsl(305.9, 100%, 50%), hsl(172, 100%, 44.3%));
     }
     h2 {
       font-size: var(--step--1);
+    }
+    a {
+      @extend .link-button;
     }
   }
 
@@ -119,8 +111,7 @@
 
     .page-heading {
       text-transform: uppercase;
-      background: fixed
-        linear-gradient(90deg, hsl(172, 100%, 44.3%), hsl(259.1, 100%, 54.3%));
+      background: fixed linear-gradient(90deg, hsl(172, 100%, 44.3%), hsl(259.1, 100%, 54.3%));
       border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
       position: relative;
       color: #fff;
@@ -193,10 +184,7 @@
     }
   }
 
-  .filters h2 {
-  }
-  .pagination,
-  .filters {
+  .pagination {
     a {
       @extend .link-button;
       .pagination-arrow {
@@ -211,10 +199,7 @@
   .footer-links a,
   .content a,
   .submenu a {
-    @include shared.fancy-link-underlines(
-      hsl(305.9, 100%, 50%),
-      hsl(172, 100%, 44.3%)
-    );
+    @include shared.fancy-link-underlines(hsl(305.9, 100%, 50%), hsl(172, 100%, 44.3%));
     --bg-h: 100%;
     background-size: 0% var(--bg-h);
     &:hover {

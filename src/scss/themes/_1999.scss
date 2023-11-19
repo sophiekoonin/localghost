@@ -291,3 +291,8 @@
 .buttons {
   margin-block-start: var(--space-s);
 }
+
+.list-heading {
+  flex-direction: column;
+  gap: var(--space-xs);
+}
