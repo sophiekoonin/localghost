@@ -3,6 +3,7 @@ title: "Building post types and category RSS feeds in Eleventy"
 date: 2023-11-19
 tags: ['eleventy', 'how-to', 'rss']
 templateEngineOverride: md
+excerptText: "I mentioned recently that I'd built separate RSS feeds for different kinds of posts. Here's how I did it!"
 ---
 
 I [mentioned recently](/blog/introducing-separate-category-rss-feeds/) that I'd built separate RSS feeds for different kinds of posts. Here's how I did it!<!--more-->
