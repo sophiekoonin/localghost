@@ -6,6 +6,10 @@ function eleventyComputedPermalink() {
     if (data.draft && !process.env.BUILD_DRAFTS) {
       return false;
     }
+    // If the post date is in the future, don't include it.
+    if (data.date != null && !process.env.BUILD_DRAFTS && new Date(data.date).getTime() > new Date().getTime()) {
+      return false;
+    }
 
     return data.permalink;
   };
@@ -17,6 +21,11 @@ function eleventyComputedExcludeFromCollections() {
   return (data) => {
     // Always exclude from non-watch/serve builds
     if (data.draft && !process.env.BUILD_DRAFTS) {
+      return true;
+    }
+
+    // If the post date is in the future, don't include it.
+    if (data.date != null && !process.env.BUILD_DRAFTS && new Date(data.date).getTime() > new Date().getTime()) {
       return true;
     }
 
