@@ -19,7 +19,9 @@
         {% endif %}
       </div>
       <div class="inset-image">
+      {% if image %}
         <img src="/img/blog/{{ image }}" alt="{{ alt }}"/>
+        {%endif%}
         <div class="flow">
           {% block inner %}
             {{ content | safe }}

@@ -58,6 +58,9 @@ module.exports = (eleventyConfig) => {
 
     return array.slice(0, n);
   });
+  eleventyConfig.addFilter("isNan", (value) => {
+    return isNaN(value);
+  });
   eleventyConfig.addFilter("webmentionsForUrl", webmentionsFilter);
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: true,
