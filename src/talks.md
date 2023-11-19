@@ -18,7 +18,9 @@ Some of the things I like to talk about include:
 </figure>
 
 ## Upcoming events
-None at this time... [get in touch!](mailto:sophie@localghost.dev)
+* [Smashing Conf Freiburg](https://smashingconf.com/freiburg-2024/), September 2024
+* [Beyond Tellerand Berlin](https://beyondtellerrand.com/events/berlin-2024), November 2024
+* More to be announced soon...
 
 ## Talk history
 
