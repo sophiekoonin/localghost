@@ -1,6 +1,6 @@
 ---
 title: "How to schedule posts in Eleventy"
-date: 2023-11-22
+date: 2023-11-21
 categories: ["eleventy", "how-to"]
 ---
 
