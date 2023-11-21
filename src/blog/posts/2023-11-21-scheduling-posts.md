@@ -2,6 +2,7 @@
 title: "How to schedule posts in Eleventy"
 date: 2023-11-21
 categories: ["eleventy", "how-to"]
+templateEngineOverride: md
 ---
 
 I scheduled this post, isn't that cute? <!--more-->
@@ -70,7 +71,6 @@ function eleventyComputedPermalink() {
   return (data) => {
     // Always skip during non-watch/serve builds
     if (!process.env.BUILD_DRAFTS && (data.draft || isScheduledPost(data))) {
-      console.log(data.title);
       return false;
     }
 
