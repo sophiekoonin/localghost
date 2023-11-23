@@ -15,9 +15,10 @@ Look, I don't have any photos of this, but you've just got to take my word for i
 100g unsalted butter
 225g golden caster sugar (or regular caster sugar)
 40g cocoa powder
-1/2 tsp vanilla essence
+2 eggs
 50g self-raising flour
 50g chocolate chips
+1/2 tsp vanilla essence (optional)
 
 ### Method
 
@@ -25,7 +26,7 @@ Preheat the oven to 180°C/350°F. Grease and line a 20cm square brownie tin.
 
 In a large bowl beat the eggs, add the sugar and mix together until smooth. 
 
-Melt the butter in a small saucepan over a medium heat. Sift in the cocoa powder and mix. Add this mixture along with the vanilla essence to the egg and sugar mixture. 
+Melt the butter in a small saucepan over a medium heat. Sift in the cocoa powder and mix. Add this mixture along with the vanilla essence (if using) to the egg and sugar mixture. 
 
 Sift the flour into the wet ingredients and mix together until smooth. Fold in the chocolate chips. 
 
