@@ -44,6 +44,9 @@
       padding-block-start: 0;
     }
 
+    iframe {
+      margin-inline: auto;
+    }
     figure {
       img:not(.about-photo) {
         max-width: 80%;
