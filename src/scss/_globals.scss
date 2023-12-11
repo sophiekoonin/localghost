@@ -22,6 +22,7 @@ blockquote:not(.tweet-card) {
   margin-inline-start: var(--space-xs);
   background: var(--blockquote-bg);
   @include utils.fluid-padding;
+  @extend .flow;
 }
 
 main {
