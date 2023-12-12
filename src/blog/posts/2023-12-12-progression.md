@@ -35,8 +35,10 @@ You’ll probably fall into a few of these categories. I know I’m definitely m
 
 Your career decisions should reflect what’s best for you. Not your company. Not anyone else. We spend 40 hours a week in our jobs, so it needs to be worth it. 
 
+Speaking of which:
+
 ### Not everybody needs to (or wants to) progress
-I want to start by saying this because it's so easy to fall into the trap of thinking you have to follow the same path as everyone else. You could be forgiven for thinking careers are all about progression. But ultimately it's whatever you want it to be, and if you're happy where you are, that's the most important thing. Many folks out there will tell you that you don't have to have a Big Tech job to be a successful engineer, and you should listen to them. Engineering, software development, web design, whatever you want to call it: there are so many versions of this job and only you know which one suits you best.
+It's so easy to fall into the trap of thinking you have to follow the same path as everyone else. You could be forgiven for thinking careers are all about progression. But ultimately it's whatever you want it to be, and if you're happy where you are, that's the most important thing. Many folks out there will tell you that you don't have to have a Big Tech job to be a successful engineer, and you should listen to them. Engineering, software development, web design, whatever you want to call it: there are so many versions of this job and only you know which one suits you best.
 
 ### The way up (or sideways. Or backwards.)
 The first few stages of the engineering career path are relatively well-trodden. You come in at an entry-level or so-called “junior” position, you work your way up to a mid-level engineer &ndash; often just called “engineer” &ndash; and then you might go up to Senior. Here's one such example:
@@ -108,7 +110,7 @@ Notably, he came up with [Staff Engineer archetypes](https://staffeng.com/guides
 
 I’m working on this path myself, recognising the areas I need to develop. My engineering director framed it as having muscles I need to develop and train to get to staff; for example, I know I’m very technically competent and have formed good relationships across the company, but I need to get better at managing my time and focus, and I'm gaining experience of tackling highly ambiguous problems. 
 
-This year we also had the inaugural [StaffPlus](https://leaddev.com/staffplus-london) conference from the same folks that run Lead Dev. I found this a really great opportunity to absorb some really useful information for my own progression in a bigger organisation. (Shame about the eye-watering ticket price, though.)
+This year we also had the inaugural [StaffPlus](https://leaddev.com/staffplus-london) conference from the same folks that run LeadDev. I found this a really great opportunity to absorb some really useful information for my own progression in a bigger organisation. (Shame about the eye-watering ticket price, though.)
 
 #### Senior to engineering management
 In tech companies these days it’s very common to have dedicated engineering managers (EMs) who look after a group or team of engineers, along with some other responsibilities. At Monzo our EMs also function as delivery leads, making sure the teams are unblocked and productive, and acting as envoys between product teams and leadership. 
@@ -117,13 +119,23 @@ You might take a step sideways away from the hands-on engineering role, and beco
 
 The most well-known guide in this area is [The Manager’s Path](https://www.oreilly.com/library/view/the-managers-path/9781491973882/) by Camille Fournier. I read a good part of it myself some years ago when I was looking into becoming a tech lead, and it has some great advice on what makes an effective technical manager (and of course, how to get there).
 
+I know plenty of engineers who have gone into engineering management and loved it; I also know a handful who have done it for a while and realised it wasn't for them and gone back to being an IC. It doesn't have to be a permanent choice.
+
+#### Other potential sideways steps
+I've outlined some very common paths for engineers, but there are other roles you might choose to explore in the world of engineering that are more of a sideways step, such as:
+* [Developer relations](https://medium.com/@dev.n/understanding-devrel-a-beginners-guide-a71063e4249e) (devrel) &ndash; fostering relationships with the developers who use products, showing them the art of the possible, and building a community around that 
+* [Sales engineering](https://uk.indeed.com/career-advice/finding-a-job/what-does-sales-engineer-do) &ndash; combining technical expertise and people skills in a role that could see you travelling all over!
+* Specialist consultancy roles e.g. accessibility consultancy &ndash; laser-focussing your skills in a certain area and helping companies to improve, or even taking on a full-time leadership position as head of your specialism.
+
+(If you know of any others I've missed, do let me know, and I'll add them in.)
+
 So, that's the engineer's path. But it's rare that people spend their entire careers in one company these days. Where might your career take you?
 
 ### Cross-company career paths illustrated using tenuous playground metaphors
 
 You might recognise these paths from your own career or those of the people around you. They're somewhat simplified for brevity. 
 
-I want to start by saying there’s no “right” career path. Progression can mean so many different things. It can mean going forwards and backwards, moving around trying different things and coming back again, or staying in the same place having a great time. It really depends what suits you.
+Progression can mean so many different things. It can mean going forwards and backwards, moving around trying different things and coming back again, or staying in the same place having a great time. It really depends what suits you. There isn't one "right" path to follow! 
 
 #### The ladder
 <figure>
@@ -133,11 +145,11 @@ I want to start by saying there’s no “right” career path. Progression can 
 
 The “traditional” career ladder model tended to be applied to people within one organisation. At a company I used to work at, it looked a bit like this:
 
-![A diagram of several nodes, each pointing to the next from left to right. The first node is labelled Company 1 Engineer, which points to Company 1 Engineer again, then Company 1 Senior Engineer, then Company 1 Senior Engineer & Manager, then Company 1 Senior Manager.](/img/blog/eng-progression/ladder-2.png)
+[![A diagram of several nodes, each pointing to the next from left to right. The first node is labelled Company 1 Engineer, which points to Company 1 Engineer again, then Company 1 Senior Engineer, then Company 1 Senior Engineer & Manager, then Company 1 Senior Manager.](/img/blog/eng-progression/ladder-2.png)](/img/blog/eng-progression/ladder-2.png)
 
 It was a very old company, and people stayed for their whole careers. The more senior you got, the bigger the likelihood was you’d end up managing people. There wasn’t really an IC track in the way there is elsewhere. 
 
-![A diagram of several nodes, each pointing to the next from left to right. The first node is labelled Company 1 Engineer, which points to Company 1 Engineer again, then Company 1 Senior Engineer, then Company 1 Staff Engineer, then Company 1 Senior Staff Engineer.](/img/blog/eng-progression/ladder-2.png)
+[![A diagram of several nodes, each pointing to the next from left to right. The first node is labelled Company 1 Engineer, which points to Company 1 Engineer again, then Company 1 Senior Engineer, then Company 1 Staff Engineer, then Company 1 Senior Staff Engineer.](/img/blog/eng-progression/ladder-1.png)](/img/blog/eng-progression/ladder-1.png)
 
 With a long career in one place, you get great in-depth familiarity with systems and organisational patterns, and you become a trusted face in the company. Many companies offer bonuses and benefits for long service, like sabbaticals. And if you're happy there, that's great.
 
@@ -149,7 +161,7 @@ Do bear in mind that that tenure might come at a cost of not gaining experience 
 <figcaption>Photo by <a href="https://unsplash.com/@s_tsuchiya">S. Tsuchiya</a> on <a href="https://unsplash.com/photos/a-close-up-of-a-roller-coaster-tnI2qV2IF6I">Unsplash</a>
   </figcaption></figure>
 
-![A diagram of career moves. We begin with Company 1 Engineer, which has an arrow pointing to Company 2 Engineer; that points to Company 2 Senior Engineer, which in turn points to Company 3 Senior Engineer.](/img/blog/eng-progression/climbing-frame.png)
+[![A diagram of career moves. We begin with Company 1 Engineer, which has an arrow pointing to Company 2 Engineer; that points to Company 2 Senior Engineer, which in turn points to Company 3 Senior Engineer.](/img/blog/eng-progression/climbing-frame.png)](/img/blog/eng-progression/climbing-frame.png)
 
 A more common pattern these days is to move every few years. You might take a promotion for the new role, or do a sideways step into another company at the same level. You don’t always have to be getting a promotion when you move, though 9 times out of 10 you should be getting a pay rise with that move, unless it’s a conscious decision (e.g. moving to a nonprofit or smaller company). 
 
@@ -162,7 +174,7 @@ This might also involve a role change &ndash; I’ve known engineers who climbed
 <figcaption>Photo by <a href="https://unsplash.com/@anniespratt">Annie Spratt</a> on <a href="https://unsplash.com/photos/girl-playing-at-monkey-bar-during-daytime-1Jg-_nekJT0">Unsplash</a>
   </figcaption></figure>
 
-![A diagram of career moves. We begin with Company 1 Engineer, which has an arrow pointing to Company 2 Engineer; that points to Company 3 Engineer, which in turn points to Company 4 Engineer, which goes to Company 5 Engineer.](/img/blog/eng-progression/monkey-bars.png)
+[![A diagram of career moves. We begin with Company 1 Engineer, which has an arrow pointing to Company 2 Engineer; that points to Company 3 Engineer, which in turn points to Company 4 Engineer, which goes to Company 5 Engineer.](/img/blog/eng-progression/monkey-bars.png)](/img/blog/eng-progression/monkey-bars.png)
 
 Some folks hop from company to company every 1-2 years; there’s nothing inherently wrong with this approach. The old advice goes that lots of short stints at different places will look bad on your CV/résumé, but 1-2 years is a decent amount of time in the industry these days.
 
@@ -176,10 +188,9 @@ The downside is that if you’re more into the leadership side of things, you mi
 <figure>
 <img src="/img/blog/eng-progression/merry-go-round-photo.jpg" alt="A faded blue merry-go-round with red seats in the middle of that spongy playground flooring">
 <figcaption>Photo by <a href="https://unsplash.com/@loegunntunghok">Loegunn Lai</a> on <a href="https://unsplash.com/photos/2-black-metal-framed-red-padded-armchairs-on-brown-sand-near-body-of-water-during-daytime-SyZMtSYTPy0">Unsplash</a>
-  
   </figcaption></figure>
 
-![A diagram of career moves. We begin with Company 1 Graduate, which has an arrow pointing to Company 1 Engineer II; that points to Company 2 Engineer III, which in turn points to Company 2 Senior Engineer I. This node has two arrows coming out of it. The first points to Company 3 Senior Engineer, and then the arrow from that points back to Company 2 Senior Engineer I. The second arrow points to Company 2 Senior Engineer II.](/img/blog/eng-progression/merry-go-round.png)
+[![A diagram of career moves. We begin with Company 1 Graduate, which has an arrow pointing to Company 1 Engineer II; that points to Company 2 Engineer III, which in turn points to Company 2 Senior Engineer I. This node has two arrows coming out of it. The first points to Company 3 Senior Engineer, and then the arrow from that points back to Company 2 Senior Engineer I. The second arrow points to Company 2 Senior Engineer II.](/img/blog/eng-progression/merry-go-round.png)](/img/blog/eng-progression/merry-go-round.png)
 
 This is actually my career history. Also known as the ["Grampa Simpson"](https://giphy.com/gifs/fDO2Nk0ImzvvW).   
 
@@ -196,7 +207,7 @@ Like with any merry-go-round, you don’t want to spin too many times or you’l
   
   </figcaption></figure>
 
-![Three nodes, each with an arrow going into the next one. Company 1 Engineer points to Company 2 Engineer which points to Company 3 Engineer.](/img/blog/eng-progression/rocker.png)
+[![Three nodes, each with an arrow going into the next one. Company 1 Engineer points to Company 2 Engineer which points to Company 3 Engineer.](/img/blog/eng-progression/rocker.png)](/img/blog/eng-progression/rocker.png)
 
 Not everyone wants to climb to the top, and that’s okay. There are any number of reasons why someone might want to stay in the same role. 
 
