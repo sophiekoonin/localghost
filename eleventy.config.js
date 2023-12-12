@@ -44,6 +44,17 @@ module.exports = (eleventyConfig) => {
   if (!process.env.CI) {
     eleventyConfig.on("afterBuild", ogToPng);
   }
+  
+  if (process.env.IS_PREVIEW === "true") {
+    eleventyConfig.addPassthroughCopy({
+      "./src/robots.dev.txt": "/robots.txt",
+    });
+  } else {
+    eleventyConfig.addPassthroughCopy({
+      "./src/robots.prod.txt": "/robots.txt",
+    });
+  }
+  
   eleventyConfig.addPassthroughCopy({ "./src/static": "/" });
   eleventyConfig.setLibrary("md", markdownLib);
   eleventyConfig.addFilter("dateFilter", dateFilter);
