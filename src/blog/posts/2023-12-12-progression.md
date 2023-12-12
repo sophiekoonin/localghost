@@ -135,8 +135,6 @@ So, that's the engineer's path. But it's rare that people spend their entire car
 
 You might recognise these paths from your own career or those of the people around you. They're somewhat simplified for brevity. 
 
-Progression can mean so many different things. It can mean going forwards and backwards, moving around trying different things and coming back again, or staying in the same place having a great time. It really depends what suits you. There isn't one "right" path to follow! 
-
 #### The ladder
 <figure>
 <img src="/img/blog/eng-progression/ladder-photo.jpg" alt="A yellow-painted metal playground ladder, viewed from the top. The steps say 'MEXICO FORGE'.">
@@ -216,5 +214,7 @@ Maybe they like it. Maybe they’ve got other responsibilities outside of work t
 I’m definitely guilty of feeling like I always need to be moving up to the next level, as if by staying still I’m not good enough; but of course, that’s absolute rubbish. 
 
 ### There's no one right way
+
+Progression can mean so many different things. It can mean going forwards and backwards, moving around trying different things and coming back again, or staying in the same place having a great time. It really depends what suits you. There isn't one "right" path to follow! 
 
 I hope this has gone some way to demystify the path your career could take, both role-wise and company-wise. And remember, don't let anyone make you feel like you _must_ pursue one particular path or fit your career into a specific box. Only you can make that decision.
