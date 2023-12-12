@@ -14,7 +14,7 @@ Whether you're new to the industry or several years in, there's a good chance yo
 
 This is everything I've learned about progression in larger organisations, with some thoughts and opinions on the way. If you're not working in a capital-T capital-C Tech Company, this might not be so applicable to your situation, but never say never! 
 
-This _isn't_ going to be a step-by-step guide to how to reach each level of the engineering career path. For one thing, it varies wildly from company to company, so my advice might not be applicable where you work. Instead, by looking at what these levels involve, you might be able to identify where you need more experience or where you're already well on your way.
+This _isn't_ going to be a step-by-step guide to how to reach each level of the engineering career path. For one thing, it varies wildly from company to company, so my advice might not be applicable where you work. Instead, by looking at what these levels involve, you might be able to identify where you need more experience or where you're already well on your way. 
 
 ### Know what motivates you 
 
@@ -26,27 +26,28 @@ Or maybe you want to be in a position where you can influence teams at a higher 
 
 Perhaps you want a role that lets you help others, and grow people. Watching them develop in their own careers thanks to your support. Helping teams achieve their goals and be productive.
 
-You might need a change because your current role is negatively affecting your mental health. For me, mental health trumps everything, and there is no job that is worth doing at the expense of mental health. If it sucks, hit the bricks. 
+You might need a change because your current role is negatively affecting your mental health. For me, mental health trumps everything, and there is no job that is worth doing at the expense of mental health. [If it sucks, hit the bricks](https://x.com/dasharez0ne/status/1125839557352742913).
+
 
 Maybe you want to do work, clock out, and focus on the other things in life. Like extreme ironing, or beekeeping. 
 
-You’ll probably fall into a few of these categories. I know I’m definitely motivated by helping people but also taking a high-level view and influencing things. And I have to say, I also like having money. 
+You’ll probably fall into a few of these categories. I know I’m definitely motivated by helping people but also taking a high-level view and influencing things. And I have to say, I also like having money. But I've also been careful to choose jobs that allow me to protect my work-life balance.
 
 Your career decisions should reflect what’s best for you. Not your company. Not anyone else. We spend 40 hours a week in our jobs, so it needs to be worth it. 
 
 ### Not everybody needs to (or wants to) progress
-I want to start by saying this because it's so easy to fall into the trap of thinking you have to follow the same path as everyone else. You could be forgiven for thinking careers are all about progression. But ultimately it's whatever you want it to be, and if you're happy where you are, that's the most important thing. Many folks out there will tell you that you don't have to have a Big Tech job to be a successful engineer, and you should listen to them.
+I want to start by saying this because it's so easy to fall into the trap of thinking you have to follow the same path as everyone else. You could be forgiven for thinking careers are all about progression. But ultimately it's whatever you want it to be, and if you're happy where you are, that's the most important thing. Many folks out there will tell you that you don't have to have a Big Tech job to be a successful engineer, and you should listen to them. Engineering, software development, web design, whatever you want to call it: there are so many versions of this job and only you know which one suits you best.
 
 ### The way up (or sideways. Or backwards.)
 The first few stages of the engineering career path are relatively well-trodden. You come in at an entry-level or so-called “junior” position, you work your way up to a mid-level engineer &ndash; often just called “engineer” &ndash; and then you might go up to Senior. Here's one such example:
 
 [![A graph of nodes demonstrating the first few stages of engineering progression. The first node is Engineer I, which has an arrow to Engineer II, then Engineer III, then Senior Engineer I, then Senior Engineer II.](/img/blog/eng-progression/eng-path.png)](/img/blog/eng-progression/eng-path.png)
 
-What each of these steps looks like depends on your organisation, but commonly Engineer I is like an intern or apprentice (what you might expect for someone with little to no background in engineering at all), Engineer II is what is often called "junior" (entry-level for someone with training) and Engineer III is a mid-level position. Senior might just be one role, or split out into two levels. 
+What each of these steps looks like depends on your organisation, but commonly Engineer I is like an intern or apprentice (what you might expect for someone with little to no background in engineering at all), Engineer II is what is often called "junior" (entry-level for someone with a qualification or a bit of training) and Engineer III is a mid-level position. Senior might just be one role, or split out into two levels. 
 
-It depends on where you work, but generally speaking there are no set timelines for this progression. Some folks progress faster than others, or have their start at different times in their life: sometimes you’ll work with a 22-year-old senior engineer and feel like you are turning into dust, sometimes you’ll meet folks in their 40s who are starting out as developers. It’s all good. 
+It depends on where you work, but generally speaking there are no set timelines for this progression. Some folks progress faster than others, or have their start at different times in their life: sometimes you’ll work with a 22-year-old senior engineer and feel like you are turning into dust, sometimes you’ll meet folks in their 40s or 50s who are starting out as developers. It’s all good. 
 
-A note on promotions: many tech companies these days will only consider a promotion once you've shown that you're already working at the next level up. I don't especially like this, as I think it disadvantages people who aren't extroverted or highly visible in an organisation, and it kind of means you end up doing the job for a while before you get paid for it. 
+A note on promotions: many tech companies these days will only consider a promotion once you've shown that you're already working at the next level up. I don't especially like this, as I think it disadvantages people who aren't extroverted or highly visible in an organisation, and it kind of means you end up doing the job for a while before you get paid for it. In these kinds of organisations, progression is as much about playing the game as it is about doing a good job and being recognised for it. I'll write up another post about that soon.
 
 I also know some bigger orgs have a kind of rule that you have to be in a role for X number of years before you can get promoted, and I particularly don’t agree with that approach because your tenure has no bearing on your ability. I'd agree that it takes time to build up the required experience for higher levels of jobs, but that amount of time differs from person to person and each individual case should be considered.
 
@@ -57,17 +58,17 @@ As Engineer I, you're at the start of your career, learning and asking questions
 
 The kind of work you do at this stage should be very well-defined tasks that are curated for you by a more senior engineer as good things to get your teeth into and learn from. You might spend a lot of time pairing on tasks. 
 
-At level II, you've got the base knowledge down, you're a solid contributor to your team and beginning to design solutions on a smaller scale for problems your team is working on. You're more independent now, though you're probably still working with senior engineers to break down the problems and scope the work that you're doing.
+At level II, you've got the base knowledge down, you're a solid, trusted contributor to your team and beginning to design solutions on a smaller scale for problems your team is working on. You're more independent now, though you're probably still working with senior engineers to break down the problems and scope the work that you're doing.
 
 #### Mid-level engineer / Engineer III
-Now you're a lot more independent &ndash; a good individual contributor (IC). You're happy designing and implementing solutions, suggesting improvements to ways of working and engineering patterns, writing code with a good level of proficiency. You may also start to mentor less experienced engineers. 
+Now you're a lot more independent &ndash; a good individual contributor (IC). You're happy designing and implementing solutions, suggesting improvements to ways of working and engineering patterns, writing code with a good level of proficiency. You may also start to mentor less experienced engineers. You'll be leading mid-sized projects and are trusted to get the job done. Your PR reviews and pairing sessions help more junior engineers learn the ropes.
 
 It’s totally legit to just stay here and hang out for however long you want. You don’t need to go for senior. 
 
 ### Senior engineer
-Senior engineers are experienced ICs who can lead projects or features that have a higher level of technical complexity. You'll be mentoring less experienced engineers, leading by example through the code you ship and the feedback you leave on PRs. You'll get good at identifying opportunities for your team. 
+Senior engineers are experienced ICs who can lead projects or features that have a higher level of technical complexity. You'll be mentoring less experienced engineers, either through formal 1:1s or by leading by example through the code you ship and the feedback you leave on PRs. You'll get good at identifying opportunities for your team and how they relate to the wider goals of your organisation. 
 
-The more senior you get, the more ambiguity there is in what you’re working on, and the more high level you start to operate. My work often finds me looking across teams and even across the organisation. 
+The more senior you get, the more ambiguity there is in what you’re working on, and the more high-level you start to operate. My work often finds me looking across teams and even across the organisation. 
 
 #### Senior engineers come in all shapes and sizes!
 
@@ -77,7 +78,7 @@ You might be a galaxy-brained domain expert, who knows the ins and outs of a par
 
 Or you might be more of a "tech lead"-shaped senior engineer, focussing on enabling your team to build great quality software and fostering a great engineering culture. At Monzo this doesn’t translate to literally being tech lead of a team &ndash; it’s a hat you put on, and you might not be senior yet when you're tech-leading.
 
-You can also sit somewhere in the middle, being a great individual contributor and leading projects, helping your team to do great things.
+You can also sit somewhere in the middle, being a great individual contributor and leading projects, helping your team to do great things. 
 
 #### Senior to ???
 What comes next?
@@ -165,8 +166,6 @@ This might also involve a role change &ndash; I’ve known engineers who climbed
 
 Some folks hop from company to company every 1-2 years; there’s nothing inherently wrong with this approach. The old advice goes that lots of short stints at different places will look bad on your CV/résumé, but 1-2 years is a decent amount of time in the industry these days.
 
-And of course, [if it sucks, hit the bricks](https://x.com/dasharez0ne/status/1125839557352742913).
-
 One advantage is that you get insight into how different companies work and different tech stacks, and you should hopefully be negotiating pay rises with those moves, even if they’re lateral moves. Some of those roles might involve promotions, as well. 
 
 Of course, people working short-term contracts will have lots of different roles in their employment history and that’s to be expected.
@@ -205,3 +204,4 @@ Maybe they like it. Maybe they’ve got other responsibilities outside of work t
 
 I’m definitely guilty of feeling like I always need to be moving up to the next level, as if by staying still I’m not good enough; but of course, that’s absolute rubbish. 
 
+### Conclusion: 
