@@ -141,7 +141,7 @@ My RSS feed template lives in `_includes/rss.njk` alongside all my other layouts
     <email>{{metadata.author.email}}</email>
   </author>
   {%- for post in collections[feed] %}
-    {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(url) }}{% endset %}
+    {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
     <entry>
       <title>{{ post.data.title }}</title>
       <link href="{{ absolutePostUrl }}"/>
