@@ -1,6 +1,6 @@
 ---
 title: '2023: The year in lists'
-date: 2023-12-30
+date: 2023-12-21
 tags: 
   - 'personal'
   - 'roundup'
@@ -165,4 +165,4 @@ It's been a whirlwind year and I've ended it pretty shattered, but I'm pleased w
 
 I used a fair bit of my time off this year on conferences which, although fun, are not restful in the slightest. That on top of a stressful few months towards the end of the year mean I've ended it a bit burnt out again. Not as bad as last year, but still not great. The plus side: I get a 3-month paid sabbatical next year (!) so I'm going to make sure I get more of a rest. I'm thinking of doing some volunteering/conservation work with a wildlife trust or something similar, and we're hoping to finally go to Japan later in 2024. 
 
-Wishing you all a happy new year, and a 2024 that's exactly what you are hoping for!
+Wishing you all a lovely Christmas, a happy new year, and a 2024 that's exactly what you are hoping for!
