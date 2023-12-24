@@ -4,6 +4,7 @@ url: https://www.20k.org/
 date: 2023-12-24
 image: podcasts/twenty-thousand-hertz.jpeg
 alt: "The cover image for Twenty Thousand Hertz, a purple background with rings of pink and blue and the words Twenty Thousand Hertz in the middle" 
+excerptText: "Why do all film trailers sound the same? Who wrote the Windows startup sound? Where did Simlish come from? All answered in this excellent podcast." 
 ---
 
 Everything you've ever wanted to know about sound, and things you didn't know you wanted to know but are glad you learned, such as:
