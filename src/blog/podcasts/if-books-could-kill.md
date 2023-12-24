@@ -2,7 +2,7 @@
 podcast: If Books Could Kill
 url: https://pod.link/1651876897
 date: 2023-07-16
-image: if-books-could-kill.jpeg
+image: podcasts/if-books-could-kill.jpeg
 alt: "The cover image for If Books Could Kill, with an illustration of a bleeding book" 
 ---
 
