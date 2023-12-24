@@ -144,6 +144,7 @@
   height: auto;
   shape-outside: circle(50%);
   border-radius: 50%;
+  margin-inline-start: 1rem;
   background: var(--photo-bg);
 }
 
@@ -153,6 +154,8 @@
 }
 
 .sidebar {
+  container-type: inline-size;
+
   .main-nav {
     color: var(--link-color);
     max-inline-size: var(--max-inline-size);

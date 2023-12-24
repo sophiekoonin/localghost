@@ -1,31 +1,27 @@
-@use '../utils';
+@use "../utils";
 
-[data-theme='twothousandandfour'] {
-  --header-font-family: 'Bleeding Cowboys', cursive;
+[data-theme="twothousandandfour"] {
+  --header-font-family: "Bleeding Cowboys", cursive;
   --body-color: white;
-  --body-font-family: 'Arial Narrow';
+  --body-font-family: "Arial Narrow", "Verdana", sans-serif;
   --content-bg: hsl(271, 31%, 33%);
   --max-inline-size: 100ch;
-  --bullet: url('/img/heart-bullet.svg');
-  --accent-color: white;
-
+  --bullet: url("/img/heart-bullet.svg");
+  --accent-color: hsl(271, 50%, 23%);
+  --link-hover-color: hsl(273, 49%, 79%);
+  --photo-bg: hsl(271, 31%, 23%);
+  --list-heading-color: white;
   body {
     background-color: hsl(271, 31%, 23%);
-    background-image: url('/img/grunge-header.png');
+    background-image: url("/img/grunge-header.png");
     background-repeat: no-repeat;
   }
 
   header {
     justify-content: flex-start;
-    padding-block: var(--space-2xl);
-    a {
-      font-size: var(--step-7);
-      color: white;
-      text-transform: lowercase;
-    }
+    padding-block: var(--space-l);
   }
 
-  main.wrapper,
   .content {
     margin-inline: 0;
   }
@@ -34,19 +30,34 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    width: clamp(16rem, 100vw, 70rem);
-  }
-  main > .content {
-    border: 1px solid white;
-  }
+    width: min (100%, 50rem);
+    a:not(h2 > a):hover {
+      text-decoration: line-through;
+    }
+    @media screen and (min-width: 799px) {
+      margin-inline: auto;
+    }
 
-  main > .content,
-  main > .content-inner {
-    padding: var(--space-xs-s);
-    flex-basis: 0;
-    flex-grow: 999;
-    min-inline-size: 65%;
-    max-inline-size: initial;
+    & > .content {
+      border: 1px solid white;
+    }
+
+    & > .content,
+    & > .content-inner {
+      padding: var(--space-xs-s);
+      flex-basis: 0;
+      flex-grow: 999;
+      min-inline-size: 65%;
+      max-width: min(45rem, 100%);
+    }
+
+    .list-heading {
+      text-transform: lowercase;
+      flex-basis: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-block: 0;
+    }
   }
 
   .sidebar {
@@ -55,22 +66,26 @@
     flex-basis: 15rem;
     flex-grow: 1;
     border: 1px solid white;
-    a:hover {
-      text-transform: uppercase;
+
+    .main-nav-list {
+      margin: 0;
+    }
+    &-extras {
+      @media screen and (max-width: 799px) {
+        display: none;
+      }
+      section {
+        font-size: 0.9rem;
+      }
     }
 
-    .bold {
-      font-weight: bold;
-    }
-    .italic {
-      font-style: italic;
-    }
-    .underline {
-      text-decoration: underline;
-    }
     h2 {
+      @media screen and (max-width: 799px) {
+        display: none;
+      }
       text-transform: uppercase;
       font-size: var(--step-0);
+      margin-block-end: 0.5rem;
     }
 
     button {
@@ -78,19 +93,32 @@
       cursor: pointer;
       background: none;
       font-family: var(--body-font-family);
-      font-size: var(--step--1);
       color: white;
       font-weight: bold;
       text-decoration: underline;
       &:hover {
-        text-transform: uppercase;
+        transform: rotateY(180);
       }
     }
-    nav {
-      @media screen and (min-width: 450px) {
+    nav ul {
+      @media screen and (min-width: 799px) {
         gap: 0;
         display: flex;
         flex-direction: column;
+        text-align: left;
+        & > li + li {
+          margin-block-start: 0.5rem;
+        }
+      }
+      .nav-link,
+      .submenu #submenu-trigger {
+        padding: 0;
+        line-height: 1;
+      }
+
+      a,
+      button {
+        text-transform: uppercase;
       }
     }
 
@@ -98,18 +126,28 @@
       width: 60%;
       color: white;
       margin-inline: auto;
+      margin-block: 1rem;
     }
-    .php-currently {
-      margin-block: 0;
-      display: flex;
-      flex-direction: column;
-      div,
-      dt,
-      dd {
-        display: inline;
+
+    .sidebar-profile {
+      display: grid;
+      grid-template-columns: 5rem 1fr;
+      gap: 1rem;
+      img {
+        background-color: var(--link-hover-color);
       }
-      dt {
-        font-weight: bold;
+    }
+
+    .sidebar-stats,
+    .php-currently {
+      div {
+        dt {
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+        display: flex;
+        justify-content: flex-start;
+        gap: 0.5em;
       }
     }
   }
@@ -132,10 +170,6 @@
 
   .content {
     font-size: var(--step--1);
-    a:not(h2 > a):hover {
-      text-transform: uppercase;
-    }
-
     h1,
     h2,
     h3 {
