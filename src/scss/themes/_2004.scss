@@ -63,7 +63,7 @@
       border: 1px solid white;
       padding: var(--space-xs-s);
       margin-block-start: 0;
-      text-transform: lowercase;
+      text-transform: uppercase;
       flex-basis: 100%;
       flex-direction: row;
       justify-content: space-between;
@@ -204,7 +204,7 @@
     h1,
     h2,
     h3 {
-      text-transform: lowercase;
+      text-transform: uppercase;
     }
     h1 {
       font-size: var(--step-2);
