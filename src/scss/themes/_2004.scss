@@ -11,76 +11,94 @@
   --link-hover-color: hsl(273, 49%, 79%);
   --photo-bg: hsl(271, 31%, 23%);
   --list-heading-color: white;
+  --bullet: "x";
   body {
     background-color: hsl(271, 31%, 23%);
-    background-image: url("/img/grunge-header.png");
+    background-image: url("/img/grunge-header-2.png");
     background-repeat: no-repeat;
   }
 
   header {
     justify-content: flex-start;
-    padding-block: var(--space-l);
+    padding-block: var(--space-xl);
+    .header {
+      text-transform: lowercase;
+      font-size: var(--step-6);
+    }
   }
 
   .content {
     margin-inline: 0;
   }
 
+  h1:not(header h1),
+  h2,
+  h3,
+  h4 {
+    &:before {
+      content: "//";
+      display: inline-block;
+      margin-inline-end: 0.5rem;
+    }
+  }
   main {
-    display: flex;
-    flex-wrap: wrap;
+    container-type: inline-size;
+    container-name: main;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: max-content 1fr;
     gap: 1rem;
-    width: min (100%, 50rem);
+    width: min(100%, 60rem);
+    margin: 0;
+
     a:not(h2 > a):hover {
       text-decoration: line-through;
-    }
-    @media screen and (min-width: 799px) {
-      margin-inline: auto;
     }
 
     & > .content {
       border: 1px solid white;
     }
 
-    & > .content,
-    & > .content-inner {
-      padding: var(--space-xs-s);
-      flex-basis: 0;
-      flex-grow: 999;
-      min-inline-size: 65%;
-      max-width: min(45rem, 100%);
-    }
-
     .list-heading {
+      border: 1px solid white;
+      padding: var(--space-xs-s);
+      margin-block-start: 0;
       text-transform: lowercase;
       flex-basis: 100%;
       flex-direction: row;
       justify-content: space-between;
       padding-block: 0;
+      background-color: var(--content-bg);
     }
   }
 
   .sidebar {
     padding: var(--space-xs-s);
     background: var(--content-bg);
-    flex-basis: 15rem;
-    flex-grow: 1;
     border: 1px solid white;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+
+    @container main (min-width: 760px) {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 2;
+    }
 
     .main-nav-list {
       margin: 0;
     }
     &-extras {
-      @media screen and (max-width: 799px) {
+      @container main (max-width: 760px) {
         display: none;
+        height: 0;
       }
       section {
-        font-size: 0.9rem;
+        font-size: var(--step--2);
       }
     }
 
     h2 {
-      @media screen and (max-width: 799px) {
+      @container main (max-width: 760px) {
         display: none;
       }
       text-transform: uppercase;
@@ -101,7 +119,8 @@
       }
     }
     nav ul {
-      @media screen and (min-width: 799px) {
+      font-size: var(--step--1);
+      @container main (min-width: 760px) {
         gap: 0;
         display: flex;
         flex-direction: column;
@@ -131,24 +150,23 @@
 
     .sidebar-profile {
       display: grid;
-      grid-template-columns: 5rem 1fr;
+      grid-template-columns: 4rem 1fr;
       gap: 1rem;
       img {
         background-color: var(--link-hover-color);
       }
     }
 
-    .sidebar-stats,
-    .php-currently {
-      div {
-        dt {
-          font-weight: bold;
-          text-transform: uppercase;
-        }
-        display: flex;
-        justify-content: flex-start;
-        gap: 0.5em;
+    dl.sidebar-stats,
+    dl.php-currently {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      font-size: var(--step--2);
+      dt {
+        font-weight: bold;
+        text-transform: uppercase;
       }
+      gap: 0.5em;
     }
   }
   .pagination {
@@ -168,7 +186,20 @@
     padding: 0;
   }
 
+  .content,
+  .list-wrapper {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+
+    @container main (min-width: 760px) {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 2;
+    }
+  }
+
   .content {
+    padding: var(--space-xs-s);
+
     font-size: var(--step--1);
     h1,
     h2,
@@ -185,5 +216,10 @@
     h3 {
       font-size: var(--step-0);
     }
+  }
+
+  .content,
+  .content-inner {
+    max-inline-size: 100%;
   }
 }

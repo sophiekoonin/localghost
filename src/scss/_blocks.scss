@@ -295,7 +295,8 @@
 
   label[for="twothousandandfour"] {
     &:hover img {
-      background: url("/img/2004-icon-hoverbg.png");
+      background: url("/img/2004-icon-hover.png");
+      background-size: contain;
     }
   }
 

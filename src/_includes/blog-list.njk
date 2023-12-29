@@ -9,6 +9,7 @@ eleventyImport:
   {% if tag %}
     {% set postListItems = collections[tag] | reverse %}
   {% endif %}
+  <div class="list-wrapper">
   <div class="list-heading">
     <h1>{{ title }}</h1>
     {% if not tag %}
@@ -52,5 +53,6 @@ eleventyImport:
     {% if not tag %}
       {% include "partials/blog/pagination.njk" %}
     {% endif %}
+  </div>
   </div>
 {% endblock %}
