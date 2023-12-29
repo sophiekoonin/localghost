@@ -1,14 +1,14 @@
-@use '../utils';
+@use "../utils";
 
-[data-theme='geocities'] {
-  --body-font-family: 'Times New Roman', serif;
-  --header-font-family: 'Comic Sans MS', serif;
+[data-theme="geocities"] {
+  --body-font-family: "Times New Roman", serif;
+  --header-font-family: "Comic Sans MS", serif;
   --accent-color: hsl(210, 100%, 56%);
   --link-color: hsl(276, 100%, 50%);
   --link-hover-color: hsl(129, 74%, 30%);
-  --background: url('/img/geocities/1999-bg.webp');
+  --background: url("/img/geocities/1999-bg.webp");
   --tweet-bg: hsl(49, 80%, 96%);
-  --bullet: url('/img/geocities/redball.gif');
+  --bullet: url("/img/geocities/redball.gif");
   --inline-code-color: hsl(123, 100%, 50%);
   --inline-code-bg: #000;
   --list-heading-color: hsl(131, 50%, 31%);
@@ -27,7 +27,7 @@
   }
 
   body {
-    cursor: url('/img/geocities/1999-cursor.webp'), default;
+    cursor: url("/img/geocities/1999-cursor.webp"), default;
   }
 
   .header {
@@ -57,27 +57,27 @@
         color: hsl(270, 95%, 42%);
       }
 
-      &[data-state='active'] {
+      &[data-state="active"] {
         color: hsl(307, 88%, 45%);
       }
 
       &:not(:first-of-type)::before {
-        content: '';
+        content: "";
         position: relative;
-        background: url('/img/geocities/static/flashingballbullet.png');
+        background: url("/img/geocities/static/flashingballbullet.png");
         height: 1rem;
         width: 1rem;
         right: 0;
         margin-inline: var(--space-2xs);
         display: inline-block;
         @media (prefers-reduced-motion: no-preference) {
-          background: url('/img/geocities/flashingballbullet.gif');
+          background: url("/img/geocities/flashingballbullet.gif");
         }
       }
     }
     &:after,
     &:before {
-      content: ' ';
+      content: " ";
       bottom: calc(var(--space-xs) * -1);
       left: 0;
       width: 100%;
@@ -85,10 +85,10 @@
       position: relative;
       display: block;
       @media (prefers-reduced-motion: no-preference) {
-        background: url('/img/geocities/colorbar.gif');
+        background: url("/img/geocities/colorbar.gif");
       }
       @media (prefers-reduced-motion: reduce) {
-        background: url('/img/geocities/static/colorbar.png');
+        background: url("/img/geocities/static/colorbar.png");
       }
     }
 
@@ -169,18 +169,18 @@
     span:not(.pagination-arrow) {
       @extend .visually-hidden;
     }
-    a[data-direction='backwards'] .pagination-arrow {
-      content: url('/img/geocities/static/previous.png');
+    a[data-direction="backwards"] .pagination-arrow {
+      content: url("/img/geocities/static/previous.png");
     }
-    a[data-direction='forwards'] .pagination-arrow {
-      content: url('/img/geocities/static/next.png');
+    a[data-direction="forwards"] .pagination-arrow {
+      content: url("/img/geocities/static/next.png");
     }
     @media (prefers-reduced-motion: no-preference) {
-      a[data-direction='backwards'] .pagination-arrow {
-        content: url('/img/geocities/previous.gif');
+      a[data-direction="backwards"] .pagination-arrow {
+        content: url("/img/geocities/previous.gif");
       }
-      a[data-direction='forwards'] .pagination-arrow {
-        content: url('/img/geocities/next.gif');
+      a[data-direction="forwards"] .pagination-arrow {
+        content: url("/img/geocities/next.gif");
       }
     }
   }
@@ -189,11 +189,11 @@
     border-radius: 0;
     shape-outside: none;
     aspect-ratio: 1;
-    content: url('/img/sophie-badquality.png');
+    content: url("/img/sophie-badquality.png");
     @include oldschool-border(9px);
   }
-  .posts-list li:not(:last-of-type)::after {
-    content: ' ';
+  .posts-list > li + li::before {
+    content: " ";
     bottom: calc(var(--space-xs) * -1);
     width: min(100%, 36.75rem);
     height: 10px;
@@ -201,10 +201,10 @@
     margin-inline: auto;
     display: block;
     @media (prefers-reduced-motion: no-preference) {
-      background: url('/img/geocities/rainbow-divider-balls.gif');
+      background: url("/img/geocities/rainbow-divider-balls.gif");
     }
     @media (prefers-reduced-motion: reduce) {
-      background: url('/img/geocities/static/rainbow-divider-balls.png');
+      background: url("/img/geocities/static/rainbow-divider-balls.png");
     }
     background-repeat: no-repeat;
   }
@@ -212,9 +212,9 @@
     @media (prefers-reduced-motion: no-preference) {
       overflow: hidden;
     }
-      .footer-text {
-        @extend .marquee;
-      }
+    .footer-text {
+      @extend .marquee;
+    }
 
     .footer-links {
       a span:first-of-type {
@@ -225,25 +225,25 @@
       }
       #mastodon-link {
         & + span {
-          content: url('/img/geocities/guestbook.gif');
+          content: url("/img/geocities/guestbook.gif");
           @media (prefers-reduced-motion: reduce) {
-            content: url('/img/geocities/static/guestbook.png');
+            content: url("/img/geocities/static/guestbook.png");
           }
         }
       }
       #rss-link {
         & + span {
-          content: url('/img/geocities/subscribe.gif');
+          content: url("/img/geocities/subscribe.gif");
           @media (prefers-reduced-motion: reduce) {
-            content: url('/img/geocities/static/subscribe.png');
+            content: url("/img/geocities/static/subscribe.png");
           }
         }
       }
       #email-link {
         & + span {
-          content: url('/img/geocities/email.gif');
+          content: url("/img/geocities/email.gif");
           @media (prefers-reduced-motion: reduce) {
-            content: url('/img/geocities/static/email.png');
+            content: url("/img/geocities/static/email.png");
           }
         }
       }
@@ -258,20 +258,19 @@
     width: 100%;
   }
   @media (prefers-reduced-motion: no-preference) {
-  animation: marquee linear 18s infinite;
-  position: relative;
-  @keyframes marquee {
-    0% {
-      right: -100%;
+    animation: marquee linear 18s infinite;
+    position: relative;
+    @keyframes marquee {
+      0% {
+        right: -100%;
+      }
+      100% {
+        right: 100%;
+      }
     }
-    100% {
-      right: 100%;
-    }
-   }
-   }
+  }
 }
 
-  
 .blink {
   @media (prefers-reduced-motion: no-preference) {
     animation: blink linear 1.5s infinite;
@@ -291,4 +290,9 @@
 
 .buttons {
   margin-block-start: var(--space-s);
+}
+
+.list-heading {
+  flex-direction: column;
+  gap: var(--space-xs);
 }

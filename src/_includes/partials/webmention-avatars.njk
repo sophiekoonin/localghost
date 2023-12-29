@@ -1,0 +1,16 @@
+<div class="webmention-avatars">
+{% set length = likes.length if likes.length < 20 else 20 %} 
+{% for i in range(length)  %}
+{% set like = likes[i] %}
+  <a class="webmention-author p-author" href="{{ like.author.url }}" target="blank" rel="noopener" title="{{ like.author.name }}">
+    {% if like.author.photo %}
+      <img class="u-photo" src="{{ like.author.photo }}" alt="{{ like.author.name }}">
+      {% else %}
+        <img src="{{ '/img/avatar-placeholder.png' | url }}" alt="{{ like.author.name }}">
+        {% endif %}
+      </a>
+  {% endfor %}
+  {% if likes.length > 20 %}
+  <span> + {{ likes.length - 20 }}</span>
+  {% endif %}
+</div>

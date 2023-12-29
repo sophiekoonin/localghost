@@ -55,3 +55,14 @@
   font-style: normal;
   src: url("/fonts/W95-sans.woff");
 }
+
+@font-face {
+  font-family: "Bleeding Cowboys";
+  font-display: swap;
+  src: url("/fonts/Bleeding_Cowboys.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Impact Label";
+  src: url("/fonts/Impact_Label.woff2") format("woff2");
+}

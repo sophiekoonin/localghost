@@ -10,7 +10,7 @@ I started building websites on Geocities at the age of 10, graduating over the y
 
 I lead the Web Discipline at [Monzo](https://www.monzo.com), where I'm also a senior web engineer.
   
-By day I build web things for fun and profit, but by night I make music with [SHE Choir London](https://shechoir.com/london). I also enjoy gardening, baking, dogs, crafting, [mechanical keyboards](/keyboards), surreal memes and video games. 
+By day I build web things for fun and profit, but by night I make music with [SHE Choir London](https://shechoir.com/london). I also enjoy gardening, baking, dogs, crafting, [mechanical keyboards](/keyboards), surreal memes and [video games](/games). 
 
 Find me on [Mastodon](https://social.lol/@sophie), or send me an email: [sophie@localghost.dev](mailto:sophie@localghost.dev).
 

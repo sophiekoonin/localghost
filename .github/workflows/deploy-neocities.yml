@@ -1,7 +1,7 @@
 name: "Deploy to Neocities"
 on:
   schedule:
-    - cron: 0 */12 * * *
+    - cron: 0 9/9 * * *
   push:
     branches:
       - main
@@ -10,8 +10,8 @@ jobs:
     name: "Deploy to Neocities"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
         with:
           node-version: "18"
           cache: "yarn"
@@ -23,7 +23,7 @@ jobs:
           CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
           TOKEN: ${{ secrets.TOKEN }}
           TOKEN_SECRET: ${{ secrets.TOKEN_SECRET }}
-      - uses: bcomnes/deploy-to-neocities@v1.1.11
+      - uses: bcomnes/deploy-to-neocities@v1
         with:
           api_token: ${{ secrets.NEOCITIES_TOKEN }}
           dist_dir: "_site/"

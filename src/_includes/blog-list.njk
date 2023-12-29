@@ -1,16 +1,23 @@
+---
+eleventyImport:
+  collections: ["blog"]
+---
+
 {% extends "base.njk" %}
 {% block content %}
   {% set postListItems = pagination.items %}
   {% if tag %}
-    {% set postListItems = collections[tag] %}
-    {% set title = 'Posts tagged "' + tag + '"' %}
+    {% set postListItems = collections[tag] | reverse %}
   {% endif %}
+  <div class="list-wrapper">
   <div class="list-heading">
     <h1>{{ title }}</h1>
+    {% if not tag %}
+    <a href="/tags">Browse by tag</a>
+    {% endif %}
   </div>
   <div
     class="content-inner flow" {% if subtitle %} data-with-subtitle {% endif %}>
-    {# If this is a tag, grab those items instead as one large collection #}
     <ol role="list" class="posts-list flow">
       {% for item in postListItems %}
         {% set excerpt %}
@@ -21,7 +28,7 @@
         {% endif %}
         {% endset %}
         <li>
-          <article class="content summary">
+          <article class="content summary" data-type="{{item.data.type}}">
             <h2 class="page-heading">
               <a href="{{ item.url }}">{{ item.data.title }}</a>
               {% if item.data.subtitle %}
@@ -42,8 +49,10 @@
         </li>
       {% endfor %}
     </ol>
+   
     {% if not tag %}
       {% include "partials/blog/pagination.njk" %}
     {% endif %}
+  </div>
   </div>
 {% endblock %}

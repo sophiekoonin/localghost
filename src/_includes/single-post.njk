@@ -1,27 +1,29 @@
 {% extends "base.njk" %}
 {% block content %}
-  <article class="content">
-    <h1 class="page-heading">{{ title }}</h1>
+  <article class="content h-entry">
+    <h1 class="page-heading p-name">{{ title }}</h1>
     <div class="content-inner flow" {% if subtitle %} data-with-subtitle {% endif %}>
       {% if subtitle %}
         <span class="post-subtitle">{{ subtitle }}</span>
       {% endif %}
       <div class="post-metadata">
-        <time datetime="{{ date | w3DateFilter }}">{{ date | dateFilter }}</time>
+        <time class="dt-published" datetime="{{ date | w3DateFilter }}">{{ date | dateFilter }}</time>
         {% if tags %}
           <div class="tags">
             <span id="tags-desc">Tags:</span>
             <ul class="" aria-describedby="tags-desc">
               {% for tag in tags %}
-                <li>
-                  <a href="/tag/{{ tag | slugify }}/">{{ tag }}</a>
+                <li class="p-category">
+                  <a href="/tags/{{ tag | slugify }}/">{{ tag }}</a>
                 </li>
               {% endfor %}
             </ul>
           </div>
         {% endif %}
       </div>
+      <div class="e-content flow">
       {{ content | safe }}
+      </div>
       {% include 'partials/webmentions.njk' %}
     </div>
   </article>

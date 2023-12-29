@@ -1,0 +1,12 @@
+{
+  "layout": "good-book.njk",
+  "hasCustomOGImage": true,
+  "eleventyComputed": {
+    "title": "A good book: {{ book | safe }} by {{ author | safe }}"
+  },
+  "type": "book",
+  "tags": [
+    "book"
+  ],
+  "permalink": "/blog/a-good-book-{{ book | slugify }}-by-{{ author | slugify }}/index.html"
+}

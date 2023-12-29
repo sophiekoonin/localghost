@@ -21,6 +21,9 @@
   margin-block: var(--space-s);
   max-inline-size: var(--max-inline-size);
   margin-inline: auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
   h1 {
     display: inline-block;
     color: var(--list-heading-color);
@@ -41,8 +44,13 @@
       padding-block-start: 0;
     }
 
+    iframe {
+      display: block;
+      margin-inline: auto;
+      max-width: 100%;
+    }
     figure {
-      img {
+      img:not(.about-photo) {
         max-width: 80%;
         margin-inline: auto;
         margin-bottom: var(--space-2xs);
@@ -52,14 +60,15 @@
       }
       figcaption {
         font-style: italic;
+        font-size: var(--step--1);
         text-align: center;
       }
     }
     max-inline-size: var(--max-inline-size);
 
-    .side-by-side {
+    .two-col {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       align-items: center;
 
       gap: 1rem;
@@ -89,6 +98,43 @@
     list-style: var(--bullet);
     padding-inline-start: var(--space-2xs);
   }
+
+  &[data-type] {
+    position: relative;
+
+    .two-col {
+      align-items: start;
+    }
+  }
+
+  &.summary[data-type]::after {
+    font-size: var(--step-1);
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  &.summary[data-type="book"]::after {
+    content: "📚";
+  }
+  &.summary[data-type="podcast"]::after {
+    content: "🎙";
+  }
+  &.summary[data-type="music"]::after {
+    content: "🎧";
+  }
+  &.summary[data-type="video"]::after {
+    content: "🎥";
+  }
+  &.summary[data-type="game"]::after {
+    content: "🎮";
+  }
+  &.summary[data-type="recipe"]::after {
+    content: "👩🏻‍🍳";
+  }
+  &.summary[data-type="website"]::after {
+    content: "💻";
+  }
 }
 
 .about-photo {
@@ -98,6 +144,7 @@
   height: auto;
   shape-outside: circle(50%);
   border-radius: 50%;
+  margin-inline-start: 1rem;
   background: var(--photo-bg);
 }
 
@@ -107,6 +154,8 @@
 }
 
 .sidebar {
+  container-type: inline-size;
+
   .main-nav {
     color: var(--link-color);
     max-inline-size: var(--max-inline-size);
@@ -142,6 +191,7 @@
         background-color: var(--content-bg);
         min-width: 110%;
         padding-block: var(--space-2xs);
+        z-index: 2;
 
         // hide by default
         transform: rotateX(-90deg) translateX(-50%);
@@ -157,7 +207,7 @@
       #submenu-trigger {
         display: inline-flex;
         align-items: center;
-
+        line-height: 1.5;
         &:after {
           content: "";
           border: 0.35rem solid transparent;
@@ -245,7 +295,8 @@
 
   label[for="twothousandandfour"] {
     &:hover img {
-      background: url("/img/2004-icon-hoverbg.png");
+      background: url("/img/2004-icon-hover.png");
+      background-size: contain;
     }
   }
 
@@ -283,11 +334,7 @@
   }
   label[for="vaporwave"] {
     &:hover img {
-      background: linear-gradient(
-        90deg,
-        hsl(306, 100%, 50%),
-        hsl(172, 100%, 44%)
-      );
+      background: linear-gradient(90deg, hsl(306, 100%, 50%), hsl(172, 100%, 44%));
       @media (prefers-reduced-motion: no-preference) {
         animation: rotate 1.5s linear infinite;
       }
@@ -320,6 +367,7 @@
     flex-wrap: wrap;
 
     ul {
+      flex-wrap: wrap;
       display: flex;
       margin-inline-start: var(--space-2xs);
       li {
@@ -687,6 +735,9 @@ body::after {
     &-author {
       display: flex;
       align-items: center;
+      &:hover img {
+        box-shadow: 0 0 0 2px var(--link-color);
+      }
       img {
         border-radius: 50%;
         height: var(--space-m);
@@ -696,6 +747,17 @@ body::after {
     }
     .p-name {
       font-weight: bold;
+    }
+    &-avatars {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      & > a + a {
+        margin-inline-start: -0.75rem;
+      }
+      span {
+        margin-inline-start: 0.75rem;
+      }
     }
   }
 }
@@ -719,6 +781,25 @@ button.nav-link {
     margin-inline: auto;
     path[fill="#AAA"] {
       fill: var(--accent-color);
+    }
+  }
+}
+
+.inset-image {
+  container-type: inline-size;
+  img {
+    margin-inline: auto;
+    max-width: 75%;
+    margin-block-end: 1rem;
+  }
+  @container (min-width: 500px) {
+    img {
+      float: left;
+      max-width: 33%;
+      margin-inline-end: 1rem;
+    }
+    ul {
+      overflow: hidden;
     }
   }
 }

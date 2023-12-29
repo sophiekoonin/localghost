@@ -1,0 +1,12 @@
+{
+  "layout": "single-post.njk",
+  "hasCustomOGImage": true,
+  "eleventyComputed": {
+    "title": "A good game: {{ game | safe }}"
+  },
+  "type": "game",
+  "tags": [
+    "game"
+  ],
+  "permalink": "/blog/a-good-game-{{ game | slugify }}/index.html"
+}

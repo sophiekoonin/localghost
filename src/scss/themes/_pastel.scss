@@ -1,14 +1,14 @@
-@use '../utils';
+@use "../utils";
 
-[data-theme='pastel'] {
+[data-theme="pastel"] {
   --background: hsl(273, 39%, 94%);
-  --header-font-family: 'Fredoka', sans-serif;
-  --body-font-family: 'Sen', sans-serif;
+  --header-font-family: "Fredoka", sans-serif;
+  --body-font-family: "Sen", sans-serif;
   --content-bg: white;
   --accent-color: hsl(303, 89%, 80%);
   --tweet-bg: hsl(175, 80%, 98%);
   --tweet-border: hsl(175, 80%, 80%);
-  --bullet: url('/icons/heart-purple-small.svg');
+  --bullet: url("/icons/heart-purple-small.svg");
   --max-inline-size: 75ch;
   --link-color: hsl(244, 69%, 66%);
   --link-hover-color: hsl(300, 69%, 72%);
@@ -46,7 +46,7 @@
       color: hsl(172, 72%, 42%);
     }
 
-    a:not(.tweet-card a) {
+    a:not(.tweet-card a):not(.webmention-author):not(.neocities-badge) {
       background: linear-gradient(
         to bottom,
         var(--link-color) 0%,
@@ -73,9 +73,9 @@
     a {
       text-decoration: none;
       position: relative;
-      &[data-direction='backwards'] {
+      &[data-direction="backwards"] {
         &:after {
-          content: url('/icons/heart-purple.svg');
+          content: url("/icons/heart-purple.svg");
           width: var(--space-s);
           height: var(--space-s);
           right: -1.5rem;
@@ -83,7 +83,7 @@
           position: absolute;
         }
         &:hover:after {
-          content: url('/icons/heart-galaxy.png');
+          content: url("/icons/heart-galaxy.png");
           width: var(--space-s);
           height: var(--space-s);
           right: -1.5rem;
@@ -91,10 +91,10 @@
           position: absolute;
         }
       }
-      &[data-direction='forwards'] {
+      &[data-direction="forwards"] {
         position: relative;
         &:before {
-          content: url('/icons/heart-purple.svg');
+          content: url("/icons/heart-purple.svg");
           width: var(--space-s);
           height: var(--space-s);
           left: -1.5rem;
@@ -102,7 +102,7 @@
           position: absolute;
         }
         &:hover:before {
-          content: url('/icons/heart-galaxy.png');
+          content: url("/icons/heart-galaxy.png");
           width: var(--space-s);
           height: var(--space-s);
           left: -1.5rem;
@@ -131,6 +131,8 @@
 
       &:is(#submenu-trigger) {
         justify-content: center;
+        line-height: 2rem;
+
         &:after {
           margin-inline-end: -0.2rem;
           margin-inline-start: 0.2rem;
@@ -146,16 +148,16 @@
         position: absolute;
       }
       &:nth-of-type(4n):before {
-        content: url('/icons/heart-cyan.svg');
+        content: url("/icons/heart-cyan.svg");
       }
       &:nth-of-type(4n + 1):before {
-        content: url('/icons/heart-purple.svg');
+        content: url("/icons/heart-purple.svg");
       }
       &:nth-of-type(4n + 2):before {
-        content: url('/icons/heart-pink.svg');
+        content: url("/icons/heart-pink.svg");
       }
       &:nth-of-type(4n + 3):before {
-        content: url('/icons/heart-green.svg');
+        content: url("/icons/heart-green.svg");
       }
 
       &:hover {
@@ -163,7 +165,7 @@
         border-color: hsl(147, 70%, 85%);
 
         &:before {
-          content: url('/icons/heart-galaxy.png');
+          content: url("/icons/heart-galaxy.png");
           width: var(--space-s);
           height: var(--space-s);
           left: -0.75rem;
@@ -172,7 +174,7 @@
         }
       }
 
-      &[data-state='active'] {
+      &[data-state="active"] {
         background: hsl(189, 70%, 92%);
         border-color: hsl(189, 70%, 85%);
         transform: rotate(13deg);

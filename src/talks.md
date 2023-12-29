@@ -3,7 +3,7 @@ title: "Speaking"
 layout: "page.njk"
 ---
 
-I love public speaking, so if you’d like me to speak at your meetup or conference please send me an email at [sophie@localghost.dev](mailto:sophie@localghost.dev)!
+I love public speaking, so if you’d like me to speak at your meetup or conference please [send me an email](mailto:sophie@localghost.dev)!
 
 Some of the things I like to talk about include:
 
@@ -18,14 +18,18 @@ Some of the things I like to talk about include:
 </figure>
 
 ## Upcoming events
-- [CSS Day](https://cssday.nl/2023/speakers), Amsterdam, 8 - 9 June 2023
-- [Middlesbrough Frontend](https://www.middlesbroughfe.co.uk/), Middlesbrough, 19 July 2023
-- [Front Conference](https://frontconference.com/), Zurich, 31 Aug - 1 Sept 2023
+* [Smashing Conf Freiburg](https://smashingconf.com/freiburg-2024/), September 2024
+* [Beyond Tellerand Berlin](https://beyondtellerrand.com/events/berlin-2024), November 2024
+* More to be announced soon...
+
 ## Talk history
 
 ### Conferences
 Some of the events I've spoken at in the past include:
-- Beyond Tellerand Düsseldorf 2023
+- Front Conference Zurich 2023
+- CSS Day Amsterdam 2023
+- Beyond Tellerrand Düsseldorf 2023
+- Middlesbrough Frontend 2023
 - ffconf 2022
 - State of the Browser 2022
 - FullStack eXchange 2022

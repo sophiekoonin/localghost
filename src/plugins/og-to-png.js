@@ -11,10 +11,7 @@ module.exports = async function () {
   if (files.length > 0) {
     files.forEach(function (filename) {
       const outputFilename = filename.substring(0, filename.length - 4);
-      if (
-        filename.endsWith(".svg") &
-        !fs.existsSync(path.join(ogImagesDir, outputFilename))
-      ) {
+      if (filename.endsWith(".svg") & !fs.existsSync(path.join(ogImagesDir, outputFilename))) {
         const imageUrl = socialPreviewImagesDir + filename;
         Image(imageUrl, {
           formats: ["png"],

@@ -9,6 +9,7 @@ body {
   color: var(--body-color);
   font-family: var(--body-font-family);
   font-weight: 400;
+  line-height: 1.5;
 }
 
 select {
@@ -21,6 +22,7 @@ blockquote:not(.tweet-card) {
   margin-inline-start: var(--space-xs);
   background: var(--blockquote-bg);
   @include utils.fluid-padding;
+  @extend .flow;
 }
 
 main {
@@ -90,12 +92,12 @@ code:not(pre > code) {
 }
 
 p {
-  line-height: 1.5;
+  line-height: 1.2;
   max-inline-size: var(--max-inline-size);
   overflow-wrap: break-word;
 }
 
-ul:not(.main-nav-list) > * + *,
+ul:not(.main-nav-list):not(.tag-list) > * + *,
 ol > * + * {
   margin-block-start: var(--space-xs-s);
 }

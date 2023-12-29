@@ -1,0 +1,34 @@
+{% extends "base.njk" %}
+{% block content %}
+  <article class="content">
+    <h1 class="page-heading">{{ title }}</h1>
+    <div class="content-inner flow">
+      <div class="post-metadata">
+        <time class="dt-published" datetime="{{ date | w3DateFilter }}">{{ date | dateFilter }}</time>
+        {% if tags %}
+          <div class="tags">
+            <span id="tags-desc">Tags:</span>
+            <ul class="" aria-describedby="tags-desc">
+              {% for tag in tags %}
+                <li>
+                  <a href="/tags/{{ tag | slugify }}/">{{ tag }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      </div>
+      <div class="inset-image">
+      {% if image %}
+        <img src="/img/blog/{{ image }}" alt="{{ alt }}"/>
+        {%endif%}
+        <div class="flow">
+          {% block inner %}
+            {{ content | safe }}
+          {% endblock %}
+        </div>
+      </div>
+      {% include 'partials/webmentions.njk' %}
+    </div>
+  </article>
+{% endblock %}

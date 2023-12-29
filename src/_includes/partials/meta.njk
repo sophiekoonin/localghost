@@ -8,7 +8,7 @@
 {% endif %}
 {% endset %}
 {% set ogImageName %}
-{% if isBlog %}
+{% if hasCustomOGImage %}
   og-images/{{ title | slugify }}
   {% else %}img/og-image{% endif %}
 {% endset %} <meta property="og:title" content="{{ title }}{{ ' - localghost' if not isHome }}"/>
@@ -20,7 +20,7 @@
 <meta name="generator" content="Eleventy"/>
 <meta
   http-equiv="Content-Security-Policy"
-  content="default-src 'none'; manifest-src 'self'; frame-src 'self' https://codepen.io https://*.codepen.io; worker-src
+  content="default-src 'none'; manifest-src 'self'; frame-src 'self' https://codepen.io https://*.codepen.io https://*.youtube-nocookie.com; worker-src
     'self'; object-src 'self'; media-src 'self'; font-src 'self'; connect-src 'self' https://webring.yesterweb.org
     https://plausible.io; img-src * data:; style-src 'self' data:; script-src 'self' https://yesterweb.org
     https://*.codepen.io https://plausible.io {{ global.baseUrl }} {% if global.isDev %}'unsafe-inline'{% endif %};"/>

@@ -1,40 +1,53 @@
-{%- set absoluteUrl -%}{{ page.url | url | absoluteUrl(metadata.url) }}{%- endset -%}
-{%- set mentions = webmentions.children | webmentionsForUrl(absoluteUrl, aliases) -%}
+{% set absoluteUrl %}{{ page.url | url | absoluteUrl(metadata.url) }}{% endset %}
+{% set mentions = webmentions.children | webmentionsForUrl(absoluteUrl, aliases) %}
+{% set totalNumMentions = webmentions.children.length + webmentions.likes.length + webmentions.reposts.length %}
+{% set totalNumReactions = webmentions.likes.length + webmentions.reposts.length %}
 <div class="webmentions flow" id="webmentions">
   <h2>Webmentions</h2>
-  {%- if mentions.length > 0 -%}
+  {% if (totalNumMentions | isNan) or (totalNumMentions === 0) %}
+    <p class="webmentions-count">
+      No mentions yet... it's so quiet...
+    </p>
+  {% endif %}
+  {% if totalNumReactions > 0 %}
+    <div class="webmentions-likes-reposts">
+      {% set likes = webmentions.likes | webmentionsForUrl(absoluteUrl, aliases) %}
+      {% if likes.length > 0 %}
+        <h3>Likes</h3>
+        {% include "partials/webmention-avatars.njk" %}
+      {% endif %}
+      {% set likes = webmentions.reposts | webmentionsForUrl(absoluteUrl, aliases) %}
+      {% if likes.length > 0 %}
+        <h3>Reposts</h3>
+        {% include "partials/webmention-avatars.njk" %}
+      {% endif %}
+    </div>
+  {% endif %}
+  {% if mentions.length > 0 %}
+    <h3>Comments</h3>
     <ol class="webmentions-list flow">
       {% for webmention in mentions | reverse %}
         <li>
           <article class="webmention flow h-cite" id="webmention-{{ webmention['wm-id'] }}">
             <div class="webmention-meta">
-              {% if webmention.author %}
-                <a class="webmention-author p-author h-card u-url" href="{{ webmention.url }}" target="_blank" rel="noopener noreferrer">
-                  {% if webmention.author.photo %}
-                    <img class="u-photo" src="{{ webmention.author.photo }}" alt="{{ webmention.author.name }}">
-                    {% else %}
-                      <img src="{{ '/img/avatar-placeholder.png' | url }}" alt="">
-                      {% endif %}
-                      <span class="p-name">{{ webmention.author.name }}</span>
-                    </a>
-                  {% else %}
-                    <span class="webmention__author">
-                      <img class="webmention__author__photo" src="{{ '/img/webmention-avatar-default.svg' | url }}" alt="">
-                        <span>Anonymous</span>
-                      </span>
-                    {% endif %}
-                    {% if webmention.published %}
-                      <time class="webmention__pubdate dt-published" datetime="{{ webmention.published }}">{{ webmention.published | dateFilter }}</time>
-                    {% endif %}
-                  </div>
-                  <div class="webmention__content p-content">
-                    {{ webmention.content.value | safe }}
-                  </div>
-                </article>
-              </li>
-            {% endfor %}
-          </ol>
-        {% else %}
-          <p>No mentions yet.</p>
-        {% endif %}
-      </div>
+              <a class="webmention-author p-author h-card u-url" href="{{ webmention.url }}" target="_blank" rel="noopener">
+                {% if webmention.author.photo %}
+                  <img class="u-photo" src="{{ webmention.author.photo }}" alt="{{ webmention.author.name }}">
+                {% else %}
+                  <img src="{{ '/img/avatar-placeholder.png' | url }}" alt="">
+                {% endif %}
+                <span class="p-name">{{ webmention.author.name }}</span>
+              </a>
+              {% if webmention.published %}
+                <time class="webmention__pubdate dt-published" datetime="{{ webmention.published }}">{{ webmention.published | dateFilter }}</time>
+              {% endif %}
+            </div>
+            <div class="webmention__content p-content">
+              {{ webmention.content.value | safe }}
+            </div>
+          </article>
+        </li>
+      {% endfor %}
+    </ol>
+  {% endif %}
+</div>

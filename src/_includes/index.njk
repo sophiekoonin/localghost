@@ -9,7 +9,7 @@
         Recent posts
       </h2>
       <ol role="list" class="recent-posts">
-        {% set postListItems = collections.blog | head (3) %}
+        {% set postListItems = collections.blog | reverse | head (3) %}
         {% for item in postListItems %}
           <li>
             <article class="summary">
