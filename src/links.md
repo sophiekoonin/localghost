@@ -18,18 +18,8 @@ layout: 'page.njk'
 * [Compute Cuter](https://computecuter.com) - how to make your computer as cute as can be!
 
 ## Blogroll
-* [Andy Bell](https://andy-bell.co.uk/)
-* [Bruce Lawson](https://brucelawson.co.uk/)
-* [Carol Gilabert](https://carol.gg)
-* [Cassie Evans](https://cassie.codes)
-* [David Darnes](https://darn.es/)
-* [Heydon Pickering](https://heydonworks.com/)
-* [Hidde de Vries](https://hidde.blog)
-* [Kara Brightwell](https://ghost.computer)
-* [Manuel Matuzovic](https://www.matuzo.at/)
-* [Michelle Barker](https://css-irl.info)
-* [Miriam Suzanne](https://www.miriamsuzanne.com/)
-* [Rachel Andrew](https://rachelandrew.co.uk/)
-* [Sally Lait](https://sallylait.com/)
-* [Stephanie Eckles](https://thinkdobecreate.com/)
-* [Zach Leatherman](https://www.zachleat.com/)
+<ul>
+{% for item in blogroll %}
+<li><a href="{{ item.url }}">{{item.name}}</a></li>
+{% endfor %}
+</ul>
