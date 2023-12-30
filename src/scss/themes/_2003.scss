@@ -1,6 +1,6 @@
 @use "../utils";
 
-[data-theme="twothousandandfour"] {
+[data-theme="twothousandandthree"] {
   --header-font-family: "Bleeding Cowboys", cursive;
   --body-color: white;
   --body-font-family: "Arial Narrow", "Verdana", sans-serif;
@@ -31,16 +31,6 @@
     margin-inline: 0;
   }
 
-  h1:not(header h1),
-  h2,
-  h3,
-  h4 {
-    &:before {
-      content: "//";
-      display: inline-block;
-      margin-inline-end: 0.5rem;
-    }
-  }
   main {
     container-type: inline-size;
     container-name: main;
@@ -50,20 +40,16 @@
     gap: 1rem;
     width: min(100%, 60rem);
     margin: 0;
+    max-height: min(50vh, 25rem);
 
     a:not(h2 > a):hover {
       text-decoration: line-through;
     }
 
-    & > .content {
-      border: 1px solid white;
-    }
-
     .list-heading {
-      border: 1px solid white;
       padding: var(--space-xs-s);
       margin-block-start: 0;
-      text-transform: uppercase;
+      text-transform: lowercase;
       flex-basis: 100%;
       flex-direction: row;
       justify-content: space-between;
@@ -75,9 +61,9 @@
   .sidebar {
     padding: var(--space-xs-s);
     background: var(--content-bg);
-    border: 1px solid white;
     grid-column: 1 / span 2;
     grid-row: 1 / span 1;
+    overflow: hidden;
 
     @container main (min-width: 760px) {
       grid-column: 1 / span 1;
@@ -92,8 +78,9 @@
         display: none;
         height: 0;
       }
-      section {
-        font-size: var(--step--2);
+      font-size: var(--step--2);
+      & > * {
+        margin-block-start: 1rem;
       }
     }
 
@@ -101,7 +88,7 @@
       @container main (max-width: 760px) {
         display: none;
       }
-      text-transform: uppercase;
+      text-transform: lowercase;
       font-size: var(--step-0);
       margin-block-end: 0.5rem;
     }
@@ -137,7 +124,7 @@
 
       a,
       button {
-        text-transform: uppercase;
+        text-transform: lowercase;
       }
     }
 
@@ -178,7 +165,6 @@
     margin: 0;
 
     .content {
-      border: 1px solid white;
       padding: var(--space-xs-s);
     }
   }
@@ -188,6 +174,8 @@
 
   .content,
   .list-wrapper {
+    height: 100%;
+    overflow: auto;
     grid-column: 1 / span 2;
     grid-row: 2 / span 1;
 
@@ -200,21 +188,29 @@
   .content {
     padding: var(--space-xs-s);
 
-    font-size: var(--step--1);
+    font-size: var(--step--2);
     h1,
     h2,
     h3 {
-      text-transform: uppercase;
+      text-transform: lowercase;
     }
     h1 {
       font-size: var(--step-2);
     }
     h2,
     .post-subtitle {
-      font-size: var(--step-1);
+      font-size: var(--step-0);
     }
     h3 {
-      font-size: var(--step-0);
+      font-size: var(--step--1);
+    }
+
+    ol,
+    ul {
+      margin-block: 0;
+      & > * + * {
+        margin-block-start: 0.25rem;
+      }
     }
   }
 

@@ -32,7 +32,7 @@ const THEMES = {
   vaporwave: "vaporwave",
   pastel: "pastel",
   geocities: "geocities",
-  twothousandandfour: "twothousandandfour",
+  twothousandandthree: "twothousandandthree",
 };
 
 let palmtrees = [];
@@ -54,7 +54,7 @@ function changeTheme(newTheme) {
   if (themeOptions.length > 0) {
     const opt = (themeOptions.find((el) => el.id === newTheme).checked = true);
   }
-  clear2004Stuff();
+  clear2003Stuff();
   cleanupGeocities();
 
   switch (newTheme) {
@@ -66,8 +66,8 @@ function changeTheme(newTheme) {
         new fairyDustCursor({ colors: ["#F5B5FC", "#96F7D2", "#FCB1B1"] });
       }
       break;
-    case "twothousandandfour":
-      inject2004Stuff();
+    case "twothousandandthree":
+      inject2003Stuff();
       break;
     default:
       break;
@@ -306,37 +306,24 @@ function clearGeocitiesRubbish() {
   document.getElementById("content-end").innerHTML = "";
 }
 
-function clear2004Stuff() {
+function clear2003Stuff() {
   const sidebarExtras = document.querySelector(".sidebar-extras");
   if (sidebarExtras) {
     sidebarExtras.remove();
-    document.getElementById("navigation-heading").remove();
   }
 }
 
-function inject2004Stuff() {
+function inject2003Stuff() {
   const sidebar = document.getElementsByClassName("sidebar")[0];
   if (sidebar) {
-    const nav = document.querySelector("nav");
-    const navHeading = document.createElement("h2");
-    navHeading.setAttribute("id", "navigation-heading");
-    navHeading.innerText = "Navigation";
-    nav.prepend(navHeading);
     const wrapper = document.createElement("div");
     wrapper.classList.add("sidebar-extras");
 
-    const hr = document.createElement("hr");
-    wrapper.appendChild(hr);
-    const profile = document.createElement("section");
-    profile.innerHTML = `<h2>About a girl</h2><div class="sidebar-profile"><img src="/img/sophie-transparent.png"><p>Sophie; England; web developer; choir wrangler; dog botherer; musician; baker.</p></div>`;
-    wrapper.appendChild(profile);
-    wrapper.appendChild(hr.cloneNode());
     const siteStats = document.createElement("section");
-    siteStats.innerHTML = `<h2>Site stats</h2><dl class="sidebar-stats"><dt>Since</dt><dd>2019</dd><dt>Like it's</dt><dd>2004</dd><dt>Version</dt><dd>3.5</dd><dt>Host</dt><dd><a href="https://neocities.org">Neocities</a></dd></dl>`;
+    siteStats.innerHTML = `<div class="sidebar-stats"><p>v3.5 // since 2019, like it's 2003.</p><p>host: <a href="https://neocities.org">neocities</a></p></div>`;
     wrapper.appendChild(siteStats);
-    wrapper.appendChild(hr.cloneNode());
     const currently = document.createElement("section");
-    currently.innerHTML = `<h2>Currently:</h2><dl class="php-currently"><dt>Drinking:</dt><dd>sparkling water</dd><dt>Listening to:</dt><dd>lo-fi beats to build retro websites to</dd><dt>Wearing:</dt><dd><a href="https://dogecore.com">dogecore</a>, probably</dd><dt>Talking to:</dt><dd>anyone who'll listen on <a href="https://social.lol/@sophie">mastodon</a></dd></dl><p>(Not really) powered by <a href="https://web.archive.org/web/20040803171648/http://www.codegrrl.com/scripts/phpcurrently/index.php" target="_blank" rel="noopener">PHPCurrently</a>`;
+    currently.innerHTML = `<p>currently</p><dl class="php-currently"><dt>Drinking:</dt><dd>sparkling water</dd><dt>Listening to:</dt><dd>lo-fi beats to build retro websites to</dd><dt>Wearing:</dt><dd><a href="https://dogecore.com">dogecore</a>, probably</dd><dt>Talking to:</dt><dd>anyone who'll listen on <a href="https://social.lol/@sophie">mastodon</a></dd></dl><p>not powered by <a href="https://web.archive.org/web/20030803171648/http://www.codegrrl.com/scripts/phpcurrently/index.php" target="_blank" rel="noopener">PHPCurrently</a>`;
     wrapper.appendChild(currently);
     sidebar.appendChild(wrapper);
   }
