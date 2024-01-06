@@ -18,9 +18,8 @@
   display: none;
 }
 
-// TODO kill these with fire
-$desktop: 768px;
-$tablet: 480px;
+$med_breakpoint: 480px;
+$lg_breakpoint: 780px;
 
 .visually-hidden {
   border: 0;

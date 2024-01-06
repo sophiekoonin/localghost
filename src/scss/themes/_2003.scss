@@ -218,4 +218,7 @@
   .content-inner {
     max-inline-size: 100%;
   }
+  footer {
+    width: min(100%, 60rem);
+  }
 }
