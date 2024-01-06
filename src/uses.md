@@ -11,7 +11,7 @@ layout: 'page.njk'
 - [Music](#music)
 - [Coffee](#coffee)
 - [Beauty](#beauty)
-  - [Skincre](#skincre)
+  - [Skincare](#skincare)
   - [Makeup](#makeup)
   - [Fragrance](#fragrance)
 
@@ -89,7 +89,7 @@ I'd say we're coffee snobs compared to a lot of people, but less than a lot of f
 ## Beauty
 I can't claim to have my finger on the pulse of beauty any more. I used to be really into makeup and skincare, subscribe to loads of beauty blogs (this was some time ago) and constantly be buying makeup; working full time and not wearing makeup for the best part of two years over lockdown definitely made me less interested in it. I rarely wear a full face these days unless I'm doing a conference talk or dressing up for a special occasion. Most days if I'm in the office I'll just stick to eyeliner and mascara, or anything else that doesn't take long to apply. 
 
-### Skincre
+### Skincare
 My skincare regime, in order. I've been making my way through a backlog of minis I got from various advent calendars and beauty boxes, so I'm using a variety of different products.
 1. **Toner**: [Medik8 Press & Glow Tonic](https://www.cultbeauty.co.uk/medik8-press-and-glow-tonic-200ml/12708819.html) or [Glow Recipe Watermelon PHA + BHA Toner](https://www.cultbeauty.co.uk/glow-recipe-watermelon-glow-pha-bha-pore-tight-toner-various-sizes/13317625.html?autocomplete=productsuggestion)
 2. **Serum**: [The Ordinary Hyaluronic Acid](https://www.cultbeauty.co.uk/the-ordinary-hyaluronic-acid-2-b5-30ml/11363395.html)
