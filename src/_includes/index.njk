@@ -10,7 +10,7 @@
       </h2>
       <ol role="list" class="recent-posts">
         {% set postListItems = collections.blog | reverse | head (3) %}
-        {% for item in postListItems %}
+      {% for item in postListItems %}
           <li>
             <article class="summary">
               <a href="{{ item.url }}">{{ item.data.title }}</a>
@@ -20,8 +20,7 @@
       </ol>
     </div>
     <div id="content-end"></div>
-    <div class="buttons flow">
-      {% include "partials/neocities-badge.njk" %}
+    <div class="flow centered">
       <p aria-label="Yesterweb Webring">
         <a title="random" href="https://webring.yesterweb.org/noJS/index.php?d=rand&url=https://localghost.dev">
           ???

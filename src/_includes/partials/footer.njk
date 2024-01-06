@@ -1,4 +1,11 @@
 <footer class="footer" id="footer">
+    <div class="footer-buttons">
+      {% include "partials/neocities-badge.njk" %}
+
+        <a href="http://11ty.dev">
+            <img src="/img/made-with-11ty.gif" alt="Made with Eleventy"/>
+        </a>
+    </div>
     <span class="footer-text">© Sophie Koonin {{ global.currentYear() }}</span>
     <nav aria-label="Contact & RSS links" class="footer-links">
         <a href="/rss" title="RSS Feed">

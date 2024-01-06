@@ -706,6 +706,13 @@ body::after {
   gap: var(--space-xs-s);
   justify-content: center;
   align-items: center;
+
+  .neocities-badge {
+    text-decoration: none;
+    path[fill="#AAA"] {
+      fill: var(--accent-color);
+    }
+  }
 }
 
 .footer-links {
@@ -780,19 +787,6 @@ button.nav-link {
   font-size: inherit;
   color: inherit;
   font-weight: 600;
-}
-
-.buttons {
-  text-align: center;
-
-  .neocities-badge {
-    display: inline-block;
-    text-decoration: none;
-    margin-inline: auto;
-    path[fill="#AAA"] {
-      fill: var(--accent-color);
-    }
-  }
 }
 
 .inset-image {
