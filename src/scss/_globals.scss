@@ -92,16 +92,18 @@ code:not(pre > code) {
 }
 
 p {
-  line-height: 1.2;
   max-inline-size: var(--max-inline-size);
   overflow-wrap: break-word;
 }
 
-ul:not(.main-nav-list):not(.tag-list) > * + *,
-ol > * + * {
-  margin-block-start: var(--space-xs-s);
+ul:not(.main-nav-list):not(.tag-list):not(ul li ul) > li + li,
+ol li + li {
+  margin-block-start: var(--space-xs);
 }
 
+ul li ul li {
+  margin-block-start: var(--space-2xs);
+}
 ul,
 ol {
   margin-inline-start: var(--space-s);
