@@ -302,8 +302,12 @@ function injectGeocitiesGoodness() {
 }
 
 function clearGeocitiesRubbish() {
-  document.getElementById("content-start").innerHTML = "";
-  document.getElementById("content-end").innerHTML = "";
+  const start = document.getElementById("content-start");
+  const end = document.getElementById("content-end");
+  if (start && end) {
+    start.innerHTML = "";
+    end.innerHTML = "";
+  }
 }
 
 function clear2003Stuff() {
