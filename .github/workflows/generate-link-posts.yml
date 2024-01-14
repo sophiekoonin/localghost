@@ -1,0 +1,25 @@
+name: "Generate and publish weekly link post"
+on:
+  schedule:
+    - cron: 0 18 * * 0
+jobs:
+  generate-post:
+    name: "Run script to generate post"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+          cache: "yarn"
+      - run: yarn install
+      - run: yarn generate-links
+        env:
+          RAINDROP_TOKEN: ${{ secrets.RAINDROP_TOKEN }}
+          RAINDROP_COLLECTION_ID: ${{ secrets.RAINDROP_COLLECTION_ID }}
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Generate weekly link post
+  deploy:
+    needs: generate-post
+    uses: "./.github/workflows/deploy-neocities.yml"
