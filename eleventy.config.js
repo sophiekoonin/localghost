@@ -7,6 +7,7 @@ const redirectsPlugin = require("eleventy-plugin-redirects");
 const convertOGImage = require("./src/plugins/og-to-png");
 // Filters
 const dateFilter = require("./src/filters/date-filter");
+const urlDateFilter = require("./src/filters/date-filter-url");
 const w3DateFilter = require("./src/filters/w3-date-filter");
 const splitLines = require("./src/filters/split-lines");
 const markdownFilter = require("./src/filters/markdown-filter");
@@ -44,7 +45,7 @@ module.exports = (eleventyConfig) => {
   if (!process.env.CI) {
     eleventyConfig.on("afterBuild", ogToPng);
   }
-  
+
   if (process.env.IS_PREVIEW === "true") {
     eleventyConfig.addPassthroughCopy({
       "./src/robots.dev.txt": "/robots.txt",
@@ -54,10 +55,11 @@ module.exports = (eleventyConfig) => {
       "./src/robots.prod.txt": "/robots.txt",
     });
   }
-  
+
   eleventyConfig.addPassthroughCopy({ "./src/static": "/" });
   eleventyConfig.setLibrary("md", markdownLib);
   eleventyConfig.addFilter("dateFilter", dateFilter);
+  eleventyConfig.addFilter("urlDateFilter", urlDateFilter);
   eleventyConfig.addFilter("splitlines", splitLines);
   eleventyConfig.addFilter("w3DateFilter", w3DateFilter);
   eleventyConfig.addFilter("markdown", markdownFilter);

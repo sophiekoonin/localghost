@@ -135,6 +135,9 @@
   &.summary[data-type="website"]::after {
     content: "💻";
   }
+  &.summary[data-type="links"]::after {
+    content: "🔗";
+  }
 }
 
 .about-photo {

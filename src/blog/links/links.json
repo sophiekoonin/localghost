@@ -1,0 +1,13 @@
+{
+  "layout": "single-post.njk",
+  "hasCustomOGImage": true,
+  "eleventyComputed": {
+    "title": "Good links: {{ date | dateFilter }}"
+  },
+  "excerptText": "Links to posts and websites I've enjoyed this week, curated and automated.",
+  "type": "links",
+  "tags": [
+    "links"
+  ],
+  "permalink": "/blog/good-links-{{date | urlDateFilter }}/index.html"
+}

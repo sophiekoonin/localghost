@@ -1,4 +1,4 @@
 module.exports = function (thing) {
   debugger;
-  return JSON.stringify(thing, null, '\t');
+  return JSON.stringify(thing, null, "\t");
 };
