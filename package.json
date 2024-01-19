@@ -20,6 +20,7 @@
     "@11ty/eleventy-img": "^3.1.8",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@remy/webmention": "1.5.0",
     "cssnano": "^6.0.3",
     "date-fns": "^3.1.0",
     "eleventy-plugin-embed-tweet": "0.3.1",
@@ -38,8 +39,9 @@
   "scripts": {
     "start": "NODE_ENV=development BASE_URL=http://localhost:8080 eleventy --serve --quiet",
     "build": "NODE_ENV=production eleventy",
+    "postbuild": "webmention _site/feed.xml --limit 1",
     "full-build": "set CACHE_BUST=true && yarn run build",
     "clear-cache": "rm -rf tweets",
-    "generate-links": "node links/generate-links.js"
+    "generate-links": "node scripts/generate-links.js"
   }
 }

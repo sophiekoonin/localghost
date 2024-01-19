@@ -20,6 +20,3 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Generate weekly link post
-  deploy:
-    needs: generate-post
-    uses: "./.github/workflows/deploy-neocities.yml"

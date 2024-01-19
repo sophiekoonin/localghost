@@ -33,7 +33,7 @@ function writePost(raindrops) {
     return `* [${title}](${link}) - ${description}`;
   });
 
-  let postContent = fs.readFileSync("./links/template.md", "utf8");
+  let postContent = fs.readFileSync("./scripts/link_template.md", "utf8");
   postContent = postContent.replace("{{date}}", formattedToday);
   postContent = postContent.replace("{{links}}", formattedLinks.join("\n"));
   fs.writeFileSync(`./src/blog/links/${formattedToday}.md`, postContent);
