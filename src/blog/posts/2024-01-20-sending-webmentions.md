@@ -8,7 +8,7 @@ It occurred to me this week that even though I’ve been using webmentions as co
 
 <!--more-->
 
-Certified good egg [Remy Sharp](https://remysharp.com) has a tool called [webmention.app](https://webmention.app) which will send webmentions for you &ndash; you CURL it with the URL of your post, and it’ll search through it for any links and check to see if the owners of those sites have webmentions or wingbacks set up. There’s also an npm package, [@remy/webmention](https://www.npmjs.com/package/@remy/webmention), which you give an RSS feed and it does the same thing. That’s the version I’ve used.
+Certified good egg [Remy Sharp](https://remysharp.com) has a tool called [webmention.app](https://webmention.app) which will send webmentions for you &ndash; you CURL it with the URL of your post, and it’ll search through it for any links and check to see if the owners of those sites have webmentions or pingbacks set up. There’s also an npm package, [@remy/webmention](https://www.npmjs.com/package/@remy/webmention), which you give an RSS feed and it does the same thing. That’s the version I’ve used.
 
 I’ve added it as the `postbuild` script in my `package.json`, so it’ll run after every `yarn build`. 
 

@@ -1,6 +1,6 @@
 ---
 title: Automated weekly links posts with raindrop.io and Eleventy
-date: '2024-01-22'
+date: 2024-01-22
 draft: true
 tags: ['eleventy', 'how-to', 'projects']
 templateEngineOverride: md
