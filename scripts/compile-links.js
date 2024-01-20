@@ -21,8 +21,7 @@ async function fetchLinks() {
       Authorization: `Bearer ${token}`,
     },
   });
-  const json = await rsp.json();
-  return json;
+  return await rsp.json();
 }
 
 function writePost(raindrops) {
