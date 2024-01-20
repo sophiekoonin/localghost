@@ -11,8 +11,6 @@ Skip to the bit you care about:
 - [Continuous deployment to Neocities with Github Actions](#continuous-deployment-to-neocities-with-github-actions)
   - [Scheduling builds](#scheduling-builds)
 
-
-
 I’ve hosted this website in a few different places since I started it in 2019. It started out on Netlify, but after my post about everything I googled went viral, I exceeded the bandwidth of the free plan. Then I moved it to Vercel, which (at least at the time) had more generous bandwidth on the free tier. I enjoyed very quick deployment speeds, but it gave me big Corporate Web vibes. Now I host localghost.dev on [Neocities](https://neocities.org). 
 
 ## About Neocities
@@ -93,7 +91,7 @@ Branch pushes aren’t the only triggers for workflows! You can have time-based 
 
 For example, I automatically rebuild my site at 8am and 6pm every day to fetch the latest webmentions (there’s a script that runs every time the site is built). 
 
-```
+```yaml
 on:
   schedule:
     - cron: 0 8/9 * * *  
