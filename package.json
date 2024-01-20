@@ -23,7 +23,6 @@
     "@remy/webmention": "1.5.0",
     "cssnano": "^6.0.3",
     "date-fns": "^3.1.0",
-    "eleventy-plugin-embed-tweet": "0.3.1",
     "eleventy-plugin-redirects": "1.0.0",
     "lodash": "^4.17.21",
     "markdown-it-image-figures": "2.1.0",
