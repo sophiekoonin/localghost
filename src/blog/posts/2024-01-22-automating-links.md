@@ -3,6 +3,7 @@ title: Automated weekly links posts with raindrop.io and Eleventy
 date: '2024-01-22'
 tags: ['eleventy', 'how-to', 'projects']
 templateEngineOverride: md
+excerptText: "The quest: how could I mark a link or blog post as “good”, and have it show up in my blog on a Sunday without me having to do anything?"
 ---
 
 A post that’s been getting a lot of traction recently is [I miss human curation](https://blog.cassidoo.co/post/human-curation/) by Cassidy Williams, in which she laments that we’re so reliant on algorithms to show us new stuff now, instead of having it recommended to us by other humans. 

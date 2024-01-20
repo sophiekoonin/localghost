@@ -11,7 +11,7 @@
         {% if tags %}
           <div class="tags">
             <span id="tags-desc">Tags:</span>
-            <ul class="" aria-describedby="tags-desc">
+            <ul class="tag-list" aria-describedby="tags-desc">
               {% for tag in tags %}
                 <li class="p-category">
                   <a href="/tags/{{ tag | slugify }}/">{{ tag }}</a>
