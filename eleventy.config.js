@@ -1,6 +1,7 @@
 const slugify = require("@sindresorhus/slugify");
 // Plugins
 const rssPlugin = require("@11ty/eleventy-plugin-rss");
+const tweetPlugin = require("eleventy-plugin-embed-tweet");
 const syntaxPlugin = require("@11ty/eleventy-plugin-syntaxhighlight");
 const redirectsPlugin = require("eleventy-plugin-redirects");
 const convertOGImage = require("./src/plugins/og-to-png");
@@ -35,6 +36,10 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(draftPlugin);
   eleventyConfig.addPlugin(rssPlugin);
   eleventyConfig.addPlugin(syntaxPlugin);
+  eleventyConfig.addPlugin(tweetPlugin, {
+    useInlineStyles: false,
+    cacheDirectory: "tweets",
+  });
 
   // Don't run the OG image generator on CI cos it doesn't have the nice fonts
   if (!process.env.CI) {

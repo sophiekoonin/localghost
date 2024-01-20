@@ -20,10 +20,6 @@ jobs:
       - run: yarn build
         env:
           WEBMENTION_IO_TOKEN: ${{ secrets.WEBMENTION_IO_TOKEN }}
-          CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
-          CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
-          TOKEN: ${{ secrets.TOKEN }}
-          TOKEN_SECRET: ${{ secrets.TOKEN_SECRET }}
       - uses: bcomnes/deploy-to-neocities@v1
         with:
           api_token: ${{ secrets.NEOCITIES_TOKEN }}
