@@ -53,6 +53,23 @@ date: {{date}}
 
 {{links}}
 ```
+Using my method for creating [post types](/blog/building-post-types-and-category-rss-feeds-in-eleventy/), I've added a new `link` type which has its own shared config. I'm using a couple of custom date filters to get the dates in the right format for titles and URLs. 
+
+```json
+{
+  "layout": "single-post.njk",
+  "hasCustomOGImage": true,
+  "eleventyComputed": {
+    "title": "Good links: {{ date | dateFilter }}"
+  },
+  "excerptText": "Links to posts and websites I've enjoyed this week, curated and automated.",
+  "type": "link",
+  "tags": [
+    "links"
+  ],
+  "permalink": "/blog/good-links-{{date | urlDateFilter }}/index.html"
+}
+```
 
 I format the links into markdown, defaulting to raindrop’s excerpt if I didn’t write a note:
 ```js

@@ -135,7 +135,7 @@
   &.summary[data-type="website"]::after {
     content: "💻";
   }
-  &.summary[data-type="links"]::after {
+  &.summary[data-type="link"]::after {
     content: "🔗";
   }
 }

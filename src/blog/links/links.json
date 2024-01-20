@@ -5,7 +5,7 @@
     "title": "Good links: {{ date | dateFilter }}"
   },
   "excerptText": "Links to posts and websites I've enjoyed this week, curated and automated.",
-  "type": "links",
+  "type": "link",
   "tags": [
     "links"
   ],
