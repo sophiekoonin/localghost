@@ -2,7 +2,7 @@
 title: How I deploy my Eleventy site to Neocities
 date: 2024-01-20
 tags: ['eleventy', 'how-to', 'neocities']
-excerpt: "My setup for automatically deploying my Eleventy site to Neocities from GitHub." 
+excerptText: "My setup for automatically deploying my Eleventy site to Neocities from GitHub." 
 ---
 
 Skip to the bit you care about: 
