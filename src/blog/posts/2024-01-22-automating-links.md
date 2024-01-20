@@ -1,6 +1,7 @@
 ---
 title: Automated weekly links posts with raindrop.io and Eleventy
 date: '2024-01-22'
+draft: true
 tags: ['eleventy', 'how-to', 'projects']
 templateEngineOverride: md
 excerptText: "The quest: how could I mark a link or blog post as “good”, and have it show up in my blog on a Sunday without me having to do anything?"
