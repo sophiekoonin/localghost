@@ -1,6 +1,6 @@
 ---
 title: Sending webmentions from a static site
-date: '2024-01-20'
+date: 2024-01-20
 tags: ['webmentions']
 ---
 
