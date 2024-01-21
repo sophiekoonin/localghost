@@ -18,6 +18,9 @@ I’ve added it as the `postbuild` script in my `package.json`, so it’ll run a
 },
 ```
 
-I was concerned that if my build runs every 12 hours, it’ll keep sending webmentions for the same posts. Remy assures me that duplicate webmentions aren’t an issue, as the accepting server will just respond with a 200 if I send a webmention that it’s already seen.
+I was concerned that if my build runs every 12 hours, it’ll keep sending webmentions for the same posts. Remy assures me that duplicate webmentions aren’t an issue, as the accepting server will just respond with a 200 if I send a webmention that it’s already seen. However, if you build your site very often you might be at risk of nearly DOS-ing the websites you're sending mentions to. To get around this, you could:
+* write a script that runs the webmention CLI but only after checking the post timestamp of the last post to see if it's recent enough
+* keep a record somehow of the last post you sent webmentions for, e.g. in a text file in the repo
+* check the message from the last commit and only send the webmentions if you mention "new post" or similar 
 
 Now, every time I build and deploy my site, the script will send webmentions to anyone I’ve mentioned in the last post I wrote, as long as they have the webmention meta tags set up!
