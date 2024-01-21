@@ -42,6 +42,6 @@
     "postbuild": "webmention _site/feed.xml --limit 1 --send",
     "full-build": "set CACHE_BUST=true && yarn run build",
     "clear-cache": "rm -rf tweets",
-    "generate-links": "node scripts/generate-links.js"
+    "generate-links": "node scripts/compile-links.js"
   }
 }
