@@ -6,6 +6,7 @@ on:
     branches:
       - main
   workflow_call:
+  workflow_trigger:
 jobs:
   deploy:
     name: "Deploy to Neocities"
