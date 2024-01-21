@@ -5,8 +5,10 @@ on:
   push:
     branches:
       - main
-  workflow_call:
-  workflow_trigger:
+  workflow_run:
+    workflows: [Generate and publish weekly link post]
+      types:
+        - completed
 jobs:
   deploy:
     name: "Deploy to Neocities"
