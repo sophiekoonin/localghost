@@ -126,3 +126,14 @@ I'm storing the raindrop.io token and collection ID in the repository secrets.
 My script generates a new `.md` file with the post, so I need it to commit and push the changes. For this I used [git-auto-commit-action](https://github.com/stefanzweifel/git-auto-commit-action). It detects changed files during a workflow run and commits and pushes them back to the repo.
 
 My [deployment workflow](https://github.com/sophiekoonin/localghost/blob/main/.github/workflows/deploy-neocities.yml) listens for the link creation workflow to complete, so once this workflow finishes running and pushes the changes, the deployment one will kick off and deploy my new blog post. Magic! 
+
+```yaml
+# deploy-neocities.yml
+name: "Deploy to Neocities"
+on:
+  [...]
+  workflow_run:
+      workflows: [Generate and publish weekly link post]
+      types:
+        - completed
+```
