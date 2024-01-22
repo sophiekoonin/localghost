@@ -30,19 +30,19 @@
         <li>
           <article class="webmention flow h-cite" id="webmention-{{ webmention['wm-id'] }}">
             <div class="webmention-meta">
-              <a class="webmention-author p-author h-card u-url" href="{{ webmention.url }}" target="_blank" rel="noopener">
+              <a class="webmention-author" href="{{ webmention.url }}" target="_blank" rel="noopener">
                 {% if webmention.author.photo %}
-                  <img class="u-photo" src="{{ webmention.author.photo }}" alt="{{ webmention.author.name }}">
+                  <img class="webmention-photo" src="{{ webmention.author.photo }}" alt="{{ webmention.author.name }}">
                 {% else %}
                   <img src="{{ '/img/avatar-placeholder.png' | url }}" alt="">
                 {% endif %}
-                <span class="p-name">{{ webmention.author.name }}</span>
+                <span class="webmention-name">{{ webmention.author.name }}</span>
               </a>
               {% if webmention.published %}
                 <time class="webmention__pubdate dt-published" datetime="{{ webmention.published }}">{{ webmention.published | dateFilter }}</time>
               {% endif %}
             </div>
-            <div class="webmention__content p-content">
+            <div class="webmention__content">
               {{ webmention.content.value | safe }}
             </div>
           </article>

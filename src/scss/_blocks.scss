@@ -79,6 +79,10 @@
     }
   }
 
+  .p-author {
+    visibility: hidden;
+  }
+
   &.summary .content-inner {
     padding-block-end: 0;
   }
@@ -765,7 +769,7 @@ body::after {
         min-width: var(--space-m);
       }
     }
-    .p-name {
+    .webmention-name {
       font-weight: bold;
     }
     &-avatars {
