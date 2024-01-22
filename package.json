@@ -39,9 +39,10 @@
   "scripts": {
     "start": "NODE_ENV=development BASE_URL=http://localhost:8080 eleventy --serve --quiet",
     "build": "NODE_ENV=production eleventy",
-    "postbuild": "webmention _site/feed.xml --limit 1 --send",
     "full-build": "set CACHE_BUST=true && yarn run build",
     "clear-cache": "rm -rf tweets",
-    "generate-links": "node scripts/compile-links.js"
+    "generate-links": "node scripts/compile-links.js",
+    "postbuild": "scripts/send-webmentions",
+    "send-webmentions": "webmention _site/feed.xml --limit 1 --send"
   }
 }
