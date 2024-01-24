@@ -1,7 +1,7 @@
 name: "Generate and publish weekly link post"
 on:
   schedule:
-    - cron: 0 18 * * 0
+    - cron: 0 10 * * 0
   workflow_dispatch:
 jobs:
   generate-post:
