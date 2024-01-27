@@ -56,7 +56,7 @@ The colours tell you what kind of switch it is:
 * green: very loud, clicky, heavy resistance
 
  <figure>
- <img src="/img/keyboards/switches.JPG" alt="Three switches on a table. Two are brown and one is red. One of the brown ones is upside down showing its metal prongs underneath.">
+ <img src="/img/blog/mech-boards/switches.JPG" alt="Three switches on a table. Two are brown and one is red. One of the brown ones is upside down showing its metal prongs underneath.">
  <figcaption>Gateron red and brown switches</figcaption>
  </figure>
 
