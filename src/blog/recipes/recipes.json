@@ -3,7 +3,7 @@
   "hasCustomOGImage": true,
   "eleventyComputed": {
     "title": "A good recipe: {{ title | safe }}",
-    "linkText": "{{ source }}.", 
+    "linkText": "{{ source }}."
   },
   "type": "recipe",
   "prompt": "See the original at",
