@@ -1,10 +1,12 @@
 {
-  "layout": "good-book.njk",
+  "layout": "inset-with-link.njk",
   "hasCustomOGImage": true,
   "eleventyComputed": {
-    "title": "A good book: {{ book | safe }} by {{ author | safe }}"
+    "title": "A good book: {{ book | safe }} by {{ author | safe }}",
+    "linkText": "{{ book }}"
   },
   "type": "book",
+  "prompt": "Buy it:",
   "tags": [
     "book"
   ],

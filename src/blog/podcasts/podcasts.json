@@ -1,10 +1,12 @@
 {
-  "layout": "good-podcast.njk",
+  "layout": "inset-with-link.njk",
   "hasCustomOGImage": true,
   "eleventyComputed": {
-    "title": "A good podcast: {{ podcast }}"
+    "title": "A good podcast: {{ podcast }}",
+    "linkText": "{{ podcast }}"
   },
   "type": "podcast",
+  "prompt": "Listen now:",
   "tags": [
     "podcast"
   ],

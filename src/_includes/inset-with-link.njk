@@ -1,0 +1,9 @@
+{% extends "partials/blog/with-inset.njk" %}
+{% block inner %}
+  {{ content | safe }}
+  {% if url %}
+  <p>{{ prompt }}
+    <a href="{{ url }}" target="_blank" rel="noreferrer">{{ linkText }}</a>
+    {% endif %}
+  {% endblock %}
+</p>

@@ -2,7 +2,7 @@
 title: Smitten Kitchen's apple pie cookies
 source: Smitten Kitchen
 date: 2023-11-12
-sourceUrl: https://smittenkitchen.com/2011/10/apple-pie-cookies/
+url: https://smittenkitchen.com/2011/10/apple-pie-cookies/
 image: recipes/apple-pie-cookies.jpeg
 alt: A close-up of golden apple pie-shaped cookies, glossy from an egg wash, sprinkled with sugar crystals.  
 ---
