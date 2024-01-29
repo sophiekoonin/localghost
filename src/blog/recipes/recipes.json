@@ -1,5 +1,5 @@
 {
-  "layout": "inset-with-image.njk",
+  "layout": "inset-with-link.njk",
   "hasCustomOGImage": true,
   "eleventyComputed": {
     "title": "A good recipe: {{ title | safe }}",
