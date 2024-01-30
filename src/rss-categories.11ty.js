@@ -1,5 +1,5 @@
 function maybePlural(str) {
-  return str.endsWith("s") ? str : `${str}s`;
+  return str.endsWith("s") || str === "music" ? str : `${str}s`;
 }
 
 function stripPlural(str) {
