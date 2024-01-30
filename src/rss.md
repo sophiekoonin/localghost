@@ -9,6 +9,7 @@ localghost.dev has several RSS feeds for your enjoyment! Subscribe to all my pos
 * [Articles](https://localghost.dev/articles.xml) &ndash; writings and thoughts.
 * [Links](https://localghost.dev/links.xml) I curate each week.
 * [Books](https://localghost.dev/books.xml) I recommend. 
+* My questionable taste in [Music](https://localghost.dev/music.xml).
 * [Recipes](https://localghost.dev/recipes.xml) I swear by.
 * [Games](https://localghost.dev/games.xml) I've particularly enjoyed recently.
 * [Podcasts](https://localghost.dev/podcasts.xml) I recommend.
