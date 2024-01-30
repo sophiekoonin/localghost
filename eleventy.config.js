@@ -84,7 +84,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addCollection("blog", (collection) => {
     return collection.getFilteredByGlob("./src/blog/**/*.md");
   });
-  eleventyConfig.addCollection("categoryFeeds", () => ["recipe", "book", "game", "podcast", "links"]);
+  eleventyConfig.addCollection("categoryFeeds", () => ["recipe", "book", "music", "game", "podcast", "links"]);
   eleventyConfig.addCollection("articles", (collection) => {
     return collection.getFilteredByGlob("./src/blog/posts/*.md");
   });
