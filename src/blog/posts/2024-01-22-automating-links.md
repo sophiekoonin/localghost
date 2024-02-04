@@ -6,6 +6,8 @@ templateEngineOverride: md
 excerptText: "The quest: how could I mark a link or blog post as “good”, and have it show up in my blog on a Sunday without me having to do anything?"
 ---
 
+*Edit 04/02/24 to change the comparator date from midnight on previous Saturday to midnight on previous Sunday to prevent duplicate links being published.*
+
 A post that’s been getting a lot of traction recently is [I miss human curation](https://blog.cassidoo.co/post/human-curation/) by Cassidy Williams, in which she laments that we’re so reliant on algorithms to show us new stuff now, instead of having it recommended to us by other humans. 
 
 Inspired by that, I decided to start posting weekly collections of posts and links I liked that week. Knowing I wouldn’t keep it up if I had to manually post it every week, I set about finding a way to automate it. How could I mark a link or blog post as “good”, and have it show up in my blog on a Sunday without me having to do anything?
@@ -19,18 +21,18 @@ I’ve created a separate raindrop.io collection for these links, which I can ea
 
 I generated an API token for raindrop, and wrote a little script to pull the links from the collection using the `/raindrops/[collectionID]` [endpoint](https://developer.raindrop.io/v1/raindrops/multiple). 
 
-I made sure to only fetch links from the past week so I didn’t duplicate anything. You can pass specific [search parameters](https://help.raindrop.io/using-search/#operators) in the query, so I restricted the links to any created *after* the previous Saturday, and *before* the current day - so, Sunday to Saturday. That means any links I clip on the Sunday will appear in the following week’s link post. 
+I made sure to only fetch links from the past week so I didn’t duplicate anything. You can pass specific [search parameters](https://help.raindrop.io/using-search/#operators) in the query, so I restricted the links to any created *after* midnight on the previous Sunday, and *before* midnight on the current day - so, Sunday to Saturday. That means any links I clip on the Sunday will appear in the following week’s link post. 
 
 ```js
 const todayDate = new Date();
-const lastSatDate = subDays(todayDate, 8); // using date-fns here
-const lastSat = format(lastSatDate, "yyyy-MM-dd");
+const lastSunDate = subDays(todayDate, 7); // using date-fns here
+const lastSun = format(lastSunDate, "yyyy-MM-dd");
 const today = format(todayDate, "yyyy-MM-dd");
 
 async function fetchLinks() {
   // Get content bookmarked between last Sunday and this Saturday inclusive
   const search = new URLSearchParams({
-    search: `created:>${lastSat} created:<${today}`,
+    search: `created:>${lastSun} created:<${today}`,
   });
   const url = new URL(`https://api.raindrop.io/rest/v1/raindrops/${collectionId}`);
   url.search = search;
