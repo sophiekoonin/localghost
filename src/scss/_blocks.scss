@@ -50,7 +50,7 @@
       max-width: 100%;
     }
     figure {
-      img:not(.about-photo) {
+      img:not(.about-photo):not(.inset-image-wrapper img) {
         max-width: 80%;
         margin-inline: auto;
         margin-bottom: var(--space-2xs);
@@ -796,7 +796,7 @@ button.nav-link {
   font-weight: 600;
 }
 
-.inset-image {
+.inset-image-wrapper {
   container-type: inline-size;
   img {
     margin-inline: auto;

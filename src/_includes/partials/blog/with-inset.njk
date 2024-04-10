@@ -18,9 +18,9 @@
           </div>
         {% endif %}
       </div>
-      <div class="inset-image">
+      <div class="inset-image-wrapper">
       {% if image %}
-        <img src="/img/blog/{{ image }}" alt="{{ alt }}"/>
+        <img class="inset" src="/img/blog/{{ image }}" alt="{{ alt }}"/>
         {%endif%}
         <div class="flow">
           {% block inner %}
