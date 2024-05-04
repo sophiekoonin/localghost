@@ -2,6 +2,7 @@
 title: "All Day Hey 2024, and some stuff I bought in Leeds"
 date: '2024-05-04'
 tags: ["conferences", "new things"]
+excerptText: "First conference of the year done, followed by some very good purchases"
 ---
 
 First conference of the year is done, and what a conference it was! I begged Josh to let me speak at [All Day Hey](https://heypresents.com/conferences/2024) in 2022, and he promised me a slot in 2024 which at the time seemed forever away. As seems to happen a lot now, I blinked and it was just around the corner.
