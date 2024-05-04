@@ -2,5 +2,6 @@
   "layout": "single-post.njk",
   "hasCustomOGImage": true,
   "type": "post",
-  "permalink": "/blog/{{ title | slugify }}/index.html"
+  "permalink": "/blog/{{ title | slugify }}/index.html",
+  "showWebmentions": true
 }

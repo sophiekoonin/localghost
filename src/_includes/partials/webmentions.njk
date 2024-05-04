@@ -1,7 +1,8 @@
 {% set absoluteUrl %}{{ page.url | url | absoluteUrl(metadata.url) }}{% endset %}
 {% set mentions = webmentions.children | webmentionsForUrl(absoluteUrl, aliases) %}
-{% set totalNumMentions = webmentions.children.length + webmentions.likes.length + webmentions.reposts.length %}
-{% set totalNumReactions = webmentions.likes.length + webmentions.reposts.length %}
+{% set totalNumMentions = mentions.children.length + mentions.likes.length + mentions.reposts.length %}
+{% set totalNumReactions = mentions.likes.length + mentions.reposts.length %}
+
 <div class="webmentions flow" id="webmentions">
   <h2>Webmentions</h2>
   {% if (totalNumMentions | isNan) or (totalNumMentions === 0) %}
