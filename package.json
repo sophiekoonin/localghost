@@ -7,12 +7,12 @@
   },
   "devDependencies": {
     "@sindresorhus/slugify": "1.1.0",
-    "autoprefixer": "^10.4.16",
+    "autoprefixer": "^10.4.19",
     "eslint": "8.56.0",
     "markdown-it-anchor": "^8.6.7",
     "markdown-it-attrs": "^4.1.6",
     "md5": "^2.3.0",
-    "postcss": "^8.4.33",
+    "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0"
   },
   "dependencies": {
@@ -23,13 +23,13 @@
     "@remy/webmention": "1.5.0",
     "cssnano": "^6.0.3",
     "date-fns": "^3.1.0",
-    "eleventy-plugin-embed-tweet": "0.3.1",
+    "eleventy-plugin-embed-tweet": "0.3.3",
     "eleventy-plugin-redirects": "1.0.0",
     "lodash": "^4.17.21",
-    "markdown-it-image-figures": "2.1.0",
+    "markdown-it-image-figures": "2.1.1",
     "node-fetch": "^2.7.0",
-    "sanitize-html": "^2.11.0",
-    "sass": "^1.70.0"
+    "sanitize-html": "^2.13.0",
+    "sass": "^1.76.0"
   },
   "prettier": {
     "tabWidth": 2,
