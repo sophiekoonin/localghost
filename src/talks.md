@@ -18,14 +18,15 @@ Some of the things I like to talk about include:
 </figure>
 
 ## Upcoming events
+* [Pixel Pioneers](https://pixelpioneers.co/), June 2024
 * [Smashing Conf Freiburg](https://smashingconf.com/freiburg-2024/), September 2024
 * [Beyond Tellerand Berlin](https://beyondtellerrand.com/events/berlin-2024), November 2024
-* More to be announced soon...
 
 ## Talk history
 
 ### Conferences
 Some of the events I've spoken at in the past include:
+- All Day Hey! 2024
 - Front Conference Zurich 2023
 - CSS Day Amsterdam 2023
 - Beyond Tellerrand Düsseldorf 2023
@@ -44,13 +45,10 @@ Some of the events I've spoken at in the past include:
 - WeyWeyWeb 2022
 
 I've spoken about:
+- How to pull off a technical migration
 - [The history of personal websites, and why we should be building them](https://www.youtube.com/watch?v=2ZUqa-lTbnU)
 - [Building a website like it's 1999, using modern CSS, HTML and JS](https://www.youtube.com/watch?v=0Ks1aIchFiI&list=PL_xTCNiMz8sDYuzlyYNYKyUH4YBmuAziN&index=6)
 - [How I built a MIDI-enabled synthesizer in JavaScript](https://www.youtube.com/watch?v=YkKYuQBjmtA)
 - [The importance of clear writing in product development](https://vimeo.com/730047345)
 
 I'm always happy to present one of these talks, or we can chat about themes you'd be interested in. Get in touch!
-
-### Podcasts & Panels
-- Monzo x Ada’s List webinar for International Women’s Day 2021
-- Texthelp Talks, March 2021 &ndash; 6 myths designers and marketers believe about web accessibility [(recording)](https://www.texthelp.com/resources/podcasts/6-myths-designers-and-marketers-believe-about-web-accessibility/)

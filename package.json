@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "engines": {
-    "node": "18"
+    "node": "20"
   },
   "devDependencies": {
     "@sindresorhus/slugify": "1.1.0",
