@@ -11,8 +11,8 @@
         {{ title }} -
       {% endif %}
       localghost</title>
-    {# <script src="/js/main.js"></script> #}
-    {# <script src="/js/dropdown.js"></script> #}
+    <script src="/js/main.js"></script>
+    <script src="/js/dropdown.js"></script>
     {% if extraCSS %}
       {% for file in extraCSS %}
         <link rel="stylesheet" type="text/css" href="/css/{{ file }}">
@@ -20,8 +20,8 @@
     {% endif %}
     <link rel="preload" as="style" href={{ cssFilename }}>
     <link rel="stylesheet" type="text/css" href={{ cssFilename }}>
-{# <script data-goatcounter="https://localghost.goatcounter.com/count"
-        async defer src="//gc.zgo.at/count.js"></script> #}
+<script data-goatcounter="https://localghost.goatcounter.com/count"
+        async defer src="//gc.zgo.at/count.js"></script>
   </head>
   <body>
     {% include "partials/svg/defs.html" %}
