@@ -15,6 +15,13 @@ I’m now living out my gardening dreams, though those seem to involve more figh
 
 My sad little wind-battered acer is now loving life in a sheltered corner of the garden, and I’m hoping to put it in the ground. James is going to build some raised beds for a vegetable patch. I love going out there first thing and doing a bit of weeding, and it’s amazing to be able to just sit back on a deckchair in your own green space. 
 
+We now have things we could only dream of when we were living a flat: 
+- a barbecue
+- a fire pit
+- outdoor furniture
+- a dishwasher
+- an endless wave of slugs and snails eating my plants. 
+
 We do have a lot of parakeets in the area, and so far the only bird visitors I’ve had have been pigeons and magpies. I put up a feeder but I don’t think there’s enough shelter for little birds to feel safe, so hopefully when the SHED I BOUGHT (!!! so excited) arrives it’ll be a bit more welcoming to our little winged friends. 
 
 I can’t promise this won’t become a gardening blog.
