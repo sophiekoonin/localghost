@@ -1,8 +1,7 @@
 ---
 title: 'liveness probe'
 tags: ['personal']
-date: 2024-08-11
-draft: true
+date: 2024-08-12
 ---
 
 After an initial burst of blogging energy January followed by a series of automated posts featuring good things I’d read recently, it fell off a cliff towards the end of March. I didn't get bored, I promise!
