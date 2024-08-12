@@ -1,11 +1,13 @@
-——
-title: “liveness probe”
-tags: [“personal”]
+---
+title: 'liveness probe'
+tags: ['personal']
 date: 2024-08-11
 draft: true
-——
+---
 
-After an initial burst of blogging energy January followed by a series of automated posts featuring good things I’d read recently, it fell off a cliff towards the end of March. 
+After an initial burst of blogging energy January followed by a series of automated posts featuring good things I’d read recently, it fell off a cliff towards the end of March. I didn't get bored, I promise!
+
+<!--more-->
 
 Life got extremely busy and reading through an ever-growing mountain of RSS feeds became too much of a chore. Eventually I declared bankruptcy and marked all as read, so if I’ve missed anything particularly excellent please do send it my way. 
 
@@ -21,7 +23,8 @@ We now have things we could only dream of when we were living a flat:
 - outdoor furniture
 - a dishwasher
 - bifold doors 
-- an endless wave of slugs and snails eating my plants. 
+- room for a dog
+- an endless wave of slugs and snails eating my plants
 
 We do have a lot of parakeets in the area, and so far the only bird visitors I’ve had have been pigeons and magpies. I put up a feeder but I don’t think there’s enough shelter for little birds to feel safe, so hopefully when the SHED I BOUGHT (!!! so excited) arrives it’ll be a bit more welcoming to our little winged friends. 
 

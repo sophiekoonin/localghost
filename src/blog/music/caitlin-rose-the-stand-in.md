@@ -1,5 +1,5 @@
 ---
-recordTitle: "The Stand-In"
+recordTitle: "The Stand-in"
 artist: "Caitlin Rose"
 date: 2024-01-30
 image: music/the-stand-in.jpeg
