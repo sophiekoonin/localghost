@@ -20,6 +20,7 @@ We now have things we could only dream of when we were living a flat:
 - a fire pit
 - outdoor furniture
 - a dishwasher
+- bifold doors 
 - an endless wave of slugs and snails eating my plants. 
 
 We do have a lot of parakeets in the area, and so far the only bird visitors I’ve had have been pigeons and magpies. I put up a feeder but I don’t think there’s enough shelter for little birds to feel safe, so hopefully when the SHED I BOUGHT (!!! so excited) arrives it’ll be a bit more welcoming to our little winged friends. 
