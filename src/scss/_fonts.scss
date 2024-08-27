@@ -66,3 +66,19 @@
   font-family: "Impact Label";
   src: url("/fonts/Impact_Label.woff2") format("woff2");
 }
+
+@font-face {
+  font-family: "Vollkorn";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  src: url("/fonts/Vollkorn.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Vollkorn";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  src: url("/fonts/Vollkorn-Italic.woff2") format("woff2");
+}
