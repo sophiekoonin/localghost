@@ -227,7 +227,6 @@
 
   footer {
     background: linear-gradient(hsla(0, 0%, 100%, 0) 40%, hsla(303, 99%, 40%, 1));
-
     @include shared.grid-footer;
   }
 

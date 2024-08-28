@@ -61,7 +61,7 @@
     max-inline-size: var(--max-inline-size);
   }
 
-  footer {
+  footer .footer-content {
     @extend .flow;
   }
 }

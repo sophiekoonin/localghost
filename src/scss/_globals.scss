@@ -2,6 +2,7 @@
 
 html,
 body {
+  overscroll-behavior: none;
   min-height: 100vh;
 }
 body {
@@ -40,7 +41,11 @@ header {
 
 footer {
   @include utils.fluid-padding;
-  text-align: center;
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 img,

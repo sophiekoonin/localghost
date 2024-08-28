@@ -5,15 +5,60 @@
   --background: hsl(128, 34%, 56%);
   --content-bg: hsl(36, 95%, 71%);
   --body-color: hsl(29, 80%, 12%);
+  --link-color: hsl(29, 80%, 8%);
+  --link-hover-color: hsl(29, 80%, 25%);
 
   header {
-    width: 100%;
-    height: clamp(10rem, 30vh, 25rem);
+    display: grid;
+    width: 100vw;
     background-color: hsl(190, 86%, 75%);
+    height: clamp(10rem, 30vh, 25rem);
+    grid-template-rows: 1fr 2rem;
+    grid-template-columns: 1fr;
+    padding: 0;
+
+    .header {
+      grid-row: 1 / span 1;
+      justify-self: center;
+      align-self: center;
+    }
+
+    &:after {
+      grid-row: 2 / span 1;
+      display: block;
+      height: 2rem;
+      width: 100%;
+      content: "";
+    }
   }
 
   .content {
     border: 8px ridge hsl(29, 80%, 40%);
     @include utils.fluid-padding;
+  }
+
+  .wrapper {
+    @include utils.fluid-padding;
+    padding-inline: 0;
+  }
+
+  footer {
+    display: grid;
+    padding: 0;
+    grid-template-rows: 2rem 1fr;
+    min-height: 0.25vh;
+    grid-template-columns: 1fr;
+    color: hsl(0, 0%, 100%);
+    a {
+      color: inherit;
+    }
+    .footer-content {
+      @extend .flow;
+      @include utils.fluid-padding;
+      padding-inline: 0;
+      background-color: hsl(28, 74%, 18%);
+      grid-column: 1 / span 1;
+      grid-row: 2 / span 1;
+    }
   }
 }
