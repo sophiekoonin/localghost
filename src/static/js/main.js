@@ -30,7 +30,7 @@ const THEMES = {
   sunset: "sunset",
   minimalist: "minimalist",
   vaporwave: "vaporwave",
-  pastel: "pastel",
+  garden: "garden",
   geocities: "geocities",
   twothousandandthree: "twothousandandthree",
 };
@@ -46,7 +46,7 @@ changeTheme(theme);
 function changeTheme(newTheme) {
   if (theme !== newTheme) {
     if (!Object.keys(THEMES).includes(newTheme)) {
-      newTheme = "city";
+      newTheme = "garden";
     }
   }
   localStorage.setItem(THEME_STORAGE_KEY, newTheme);
