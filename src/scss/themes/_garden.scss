@@ -2,7 +2,6 @@
 
 [data-theme="garden"] {
   --body-font-family: "Vollkorn", serif;
-  // --background: hsl(128, 34%, 56%);
   --background: url(/img/garden-theme/grass-tile.png) repeat;
   --content-bg: hsl(36, 95%, 71%);
   --body-color: hsl(29, 80%, 12%);
@@ -40,19 +39,29 @@
 
   .content {
     border: 8px ridge hsl(29, 80%, 40%);
-    @include utils.fluid-padding;
+    padding: var(--space-s-m);
   }
 
   main {
-    background-position-y: -10px;
+    padding-block-end: var(--space-m);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &:before {
       content: "";
       display: block;
-      height: 10px;
+      height: 16px;
       width: 100%;
       position: relative;
       top: -8px;
       background: url(/img/garden-theme/grass-top-border.png) repeat-x;
+    }
+    > * {
+      margin-inline: var(--space-s-m);
+    }
+
+    aside {
+      width: 100%;
     }
   }
 
@@ -74,7 +83,14 @@
 
       padding-block-end: var(--space-s-m);
       background-position-y: top;
-      background: url(/img/garden-theme/grass-soil-border.png) repeat-x;
+      &:before {
+        background: url(/img/garden-theme/grass-soil-border.png) repeat-x;
+        content: "";
+        height: 15px;
+        width: 100%;
+        position: relative;
+        top: -7px;
+      }
     }
   }
 }
