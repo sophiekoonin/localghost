@@ -77,10 +77,6 @@
     }
     .footer-content {
       @extend .flow;
-      > :first-child {
-        margin-block-start: var(--space-m);
-      }
-
       padding-block-end: var(--space-s-m);
       background-position-y: top;
       &:before {
