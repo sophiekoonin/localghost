@@ -31,6 +31,7 @@
 }
 
 .content {
+  padding-inline: var(--space-2xs);
   margin-inline: auto;
   max-inline-size: var(--max-inline-size);
   background: var(--content-bg);

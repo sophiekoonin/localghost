@@ -2,7 +2,8 @@
 
 [data-theme="garden"] {
   --body-font-family: "Vollkorn", serif;
-  --background: hsl(128, 34%, 56%);
+  // --background: hsl(128, 34%, 56%);
+  --background: url(/img/garden-theme/grass-tile.png) repeat;
   --content-bg: hsl(36, 95%, 71%);
   --body-color: hsl(29, 80%, 12%);
   --link-color: hsl(29, 80%, 8%);
@@ -13,22 +14,27 @@
     width: 100vw;
     background-color: hsl(190, 86%, 75%);
     height: clamp(10rem, 30vh, 25rem);
-    grid-template-rows: 1fr 2rem;
+    grid-template-rows: 1fr 4rem;
     grid-template-columns: 1fr;
     padding: 0;
 
     .header {
-      grid-row: 1 / span 1;
+      grid-row: 1 / 3;
+      grid-column: 1 / 1;
       justify-self: center;
       align-self: center;
     }
 
     &:after {
-      grid-row: 2 / span 1;
+      grid-column: 1 / 1;
+      grid-row: 2 / 3;
       display: block;
-      height: 2rem;
+      height: 4rem;
       width: 100%;
+      z-index: 1;
       content: "";
+      background-size: contain;
+      background: url(/img/garden-theme/tree-border.png) repeat-x;
     }
   }
 
@@ -37,28 +43,38 @@
     @include utils.fluid-padding;
   }
 
-  .wrapper {
-    @include utils.fluid-padding;
-    padding-inline: 0;
+  main {
+    background-position-y: -10px;
+    &:before {
+      content: "";
+      display: block;
+      height: 10px;
+      width: 100%;
+      position: relative;
+      top: -8px;
+      background: url(/img/garden-theme/grass-top-border.png) repeat-x;
+    }
   }
 
   footer {
     display: grid;
     padding: 0;
-    grid-template-rows: 2rem 1fr;
     min-height: 0.25vh;
     grid-template-columns: 1fr;
     color: hsl(0, 0%, 100%);
+    background: url(/img/garden-theme/soil-tile.png);
     a {
       color: inherit;
     }
     .footer-content {
       @extend .flow;
-      @include utils.fluid-padding;
-      padding-inline: 0;
-      background-color: hsl(28, 74%, 18%);
-      grid-column: 1 / span 1;
-      grid-row: 2 / span 1;
+      > :first-child {
+        margin-block-start: var(--space-m);
+      }
+
+      padding-block-end: var(--space-s-m);
+      background-position-y: top;
+      background: url(/img/garden-theme/grass-soil-border.png) repeat-x;
     }
   }
 }

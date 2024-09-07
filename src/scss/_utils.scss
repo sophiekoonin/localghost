@@ -1,11 +1,3 @@
-.wrapper {
-  width: 90vw;
-  width: clamp(16rem, 95vw, 70rem);
-  margin-inline: auto;
-  padding-inline: var(--space-2xs);
-  position: relative;
-}
-
 .flow > * + * {
   margin-top: var(--space-xs-s);
 }
