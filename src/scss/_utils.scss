@@ -2,10 +2,6 @@
   margin-top: var(--space-xs-s);
 }
 
-@mixin fluid-padding {
-  padding: clamp(1rem, 5%, 2rem);
-}
-
 .centered {
   text-align: center;
 }

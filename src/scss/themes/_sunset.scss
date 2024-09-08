@@ -77,7 +77,7 @@
   }
 
   .content {
-    @include utils.fluid-padding;
+    padding: var(--space-s-m);
 
     h1 {
       color: hsl(329, 96%, 41%);

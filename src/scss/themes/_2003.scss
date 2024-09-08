@@ -173,7 +173,8 @@
   }
 
   .content,
-  .list-wrapper {
+  .list-wrapper,
+  .everything-else {
     height: 100%;
     overflow: auto;
     grid-column: 1 / span 2;
@@ -185,7 +186,8 @@
     }
   }
 
-  .content {
+  .content,
+  .everything-else {
     padding: var(--space-xs-s);
 
     font-size: var(--step--2);
@@ -215,10 +217,37 @@
   }
 
   .content,
-  .content-inner {
+  .content-inner,
+  .everything-else {
     max-inline-size: 100%;
   }
   footer {
     width: min(100%, 60rem);
+  }
+  .everything-else {
+    background-color: var(--content-bg);
+
+    ul {
+      display: block;
+      list-style: var(--bullet);
+      li {
+        background: none;
+        min-height: unset;
+        a,
+        p {
+          font-size: inherit;
+        }
+        a {
+          display: block;
+          text-align: initial;
+          &:hover {
+            text-decoration: none;
+            span {
+              text-decoration: line-through;
+            }
+          }
+        }
+      }
+    }
   }
 }

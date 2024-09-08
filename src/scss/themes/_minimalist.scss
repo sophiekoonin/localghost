@@ -1,7 +1,7 @@
 @use "../utils";
 
 [data-theme="minimalist"] {
-  --content-bg: none;
+  --content-bg: var(--background);
   --header-font-family: "Krungthep", var(--body-font-family);
   --header-color: hsl(0, 0%, 20%);
   --accent-color: hsl(0, 0%, 20%);

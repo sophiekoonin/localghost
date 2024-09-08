@@ -45,6 +45,15 @@
       padding-block-start: 0;
     }
 
+    ul,
+    ol {
+      margin-inline-start: var(--space-s);
+    }
+
+    ul:not(.main-nav-list):not(.tag-list):not(ul li ul) > li + li,
+    ol li + li {
+      margin-block-start: var(--space-xs);
+    }
     iframe {
       display: block;
       margin-inline: auto;
@@ -186,49 +195,6 @@
       .nav-link {
         padding: 0.25rem;
         display: inline-block;
-      }
-    }
-
-    .submenu {
-      position: relative;
-      &-list {
-        position: absolute;
-        top: calc(100% - 0.25rem);
-        left: 50%;
-        margin-inline-start: 0;
-        background-color: var(--content-bg);
-        min-width: 110%;
-        padding-block: var(--space-2xs);
-        z-index: 2;
-
-        // hide by default
-        transform: rotateX(-90deg) translateX(-50%);
-        transform-origin: top center;
-        opacity: 0.3;
-        transition: 280ms all ease-out;
-
-        li {
-          margin-inline: var(--space-2xs);
-        }
-      }
-
-      #submenu-trigger {
-        display: inline-flex;
-        align-items: center;
-        line-height: 1.5;
-        &:after {
-          content: "";
-          border: 0.35rem solid transparent;
-          border-top-color: var(--link-color);
-          margin-inline-start: var(--space-3xs);
-          transform: translateY(40%);
-        }
-      }
-      &:hover .submenu-list,
-      button#submenu-trigger[aria-expanded="true"] + .submenu-list {
-        opacity: 1;
-        transform: rotateX(0) translateX(-50%);
-        visibility: visible;
       }
     }
   }
@@ -812,6 +778,62 @@ button.nav-link {
     }
     ul {
       overflow: hidden;
+    }
+  }
+}
+
+.everything-else {
+  max-width: 80ch;
+  margin-inline: auto;
+  h1 {
+    color: var(--link-color);
+  }
+  ul {
+    display: grid;
+    list-style: none;
+    gap: var(--space-s);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    li {
+      background-color: var(--content-bg);
+      min-height: 20vh;
+
+      &[data-grow] {
+        grid-row-end: span 2;
+      }
+
+      &[data-bg] {
+        background: var(--etc-bg) no-repeat center;
+        background-size: cover;
+        a {
+          background-color: color-mix(in srgb, var(--content-bg), transparent 20%);
+          transition: background-color 0.4s ease;
+          &:hover {
+            background-color: var(--content-bg);
+          }
+        }
+      }
+
+      a {
+        display: flex;
+        text-decoration: none;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        font-size: var(--step-1);
+        padding: var(--space-2xs);
+
+        p {
+          text-decoration: none;
+          color: var(--body-color);
+          font-size: initial;
+          text-decoration: none;
+        }
+      }
     }
   }
 }

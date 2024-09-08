@@ -1,0 +1,16 @@
+{% extends "base.njk" %}
+{% block content %}
+<div class="everything-else flow">
+    <h1>Everything else</h1>
+  <ul>
+    {% for item in etc %}
+      <li {%if item.background%} data-bg style="--etc-bg: url('{{item.background}}')"{%endif%} {%if item.grow%}data-grow{%endif%}>
+        <a href="{{ item.url }}">
+          <span>{{ item.title }}</span>
+
+        <p>{{ item.description }}</p>
+        </a>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

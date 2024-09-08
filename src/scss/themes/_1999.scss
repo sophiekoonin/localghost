@@ -249,6 +249,39 @@
       }
     }
   }
+
+  .buttons {
+    margin-block-start: var(--space-s);
+  }
+
+  .list-heading {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .everything-else {
+    ul {
+      display: block;
+      list-style: var(--bullet);
+
+      li {
+        background: none;
+        min-height: unset;
+        a {
+          display: block;
+          text-align: left;
+          span {
+            text-decoration: underline;
+          }
+          p {
+            font-weight: initial;
+            text-decoration: none;
+            display: block;
+          }
+        }
+      }
+    }
+  }
 }
 
 .marquee {
@@ -286,13 +319,4 @@
   100% {
     visibility: visible;
   }
-}
-
-.buttons {
-  margin-block-start: var(--space-s);
-}
-
-.list-heading {
-  flex-direction: column;
-  gap: var(--space-xs);
 }
