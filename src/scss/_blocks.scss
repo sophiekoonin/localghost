@@ -44,6 +44,10 @@
       padding-block-start: 0;
     }
 
+    ul:not(.main-nav-list):not(.tag-list):not(ul li ul) > li + li,
+    ol li + li {
+      margin-block-start: var(--space-xs);
+    }
     iframe {
       display: block;
       margin-inline: auto;
@@ -811,6 +815,38 @@ button.nav-link {
     }
     ul {
       overflow: hidden;
+    }
+  }
+}
+
+.everything-else {
+  display: grid;
+  gap: var(--space-s);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  li {
+    background-color: var(--content-bg);
+    min-height: 20vh;
+
+    &[data-bg] {
+      background: var(--etc-bg) no-repeat center var(--content-bg);
+      background-size: cover;
+
+      a:before {
+        background-color: var(--content-bg);
+        opacity: 0.6;
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
     }
   }
 }

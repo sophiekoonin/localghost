@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Emojinator",
+    "url": "https://emojinator.fun",
+    "background": "emojinator.png",
+    "description": "Create ridiculous emojis, the only limit is your imagination (and the assets I have been able to upload)"
+  },
+  {
+    "title": "Virtual Piano",
+    "url": "https://virtualpiano.vercel.app",
+    "background": "virtual-piano.png",
+    "description": "MIDI-enabled virtual synthesizer that plays chords and scales."
+  },
+  {
+    "title": "Tasting menu generator",
+    "url": "https://tasting-menu.neocities.org",
+    "background": "tastingmenu.png",
+    "description": "Generate a 5-course tasting menu (ridiculous or not, you decide)."
+  },
+  {
+    "title": "Anything Ipsum",
+    "url": "https://sophiekoonin.github.io/anything-ipsum/",
+    "background": "anythingipsum.png",
+    "description": "Generate paragraphs of placeholder text with any words you want."
+  },
+  {
+    "title": "/uses",
+    "url": "/uses",
+    "description": "A list of things I use, from hardware and software to... skincare."
+  },
+  {
+    "title": "Game recommendations",
+    "url": "/games",
+    "description": "The best games I've played, and why I love them."
+  }
+]

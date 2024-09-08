@@ -96,11 +96,6 @@ p {
   overflow-wrap: break-word;
 }
 
-ul:not(.main-nav-list):not(.tag-list):not(ul li ul) > li + li,
-ol li + li {
-  margin-block-start: var(--space-xs);
-}
-
 ul li ul li {
   margin-block-start: var(--space-2xs);
 }

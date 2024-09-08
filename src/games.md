@@ -35,6 +35,7 @@ If you enjoy any of the games I recommend here, I'd love to [hear about it](http
   
 ## Adventure/Point & Click
 * [Undertale](https://undertale.com/): okay, this is more adventure than action, but it's another of those iconic indie games that everyone should play. 
+* [Heaven's Vault](https://www.inklestudios.com/heavensvault/): described as an "archaeological science-fiction adventure game" (all exciting words), you play Aliya, an archaeologist on the hunt for a missing roboticist in a strange futuristic nebula. You slowly build up a vocabulary of the language of the Ancients, and begin to understand more about what came before. 
 * [Hypnospace Outlaw](https://www.hypnospace.net/): a game unlike any other I've ever played, where you're a moderator on a version of the internet that you access in your sleep. It's all styled like late 90s GeoCities websites, and it's a brilliant nostalgia trip for those of us who used to make websites back then.
 * [Tunic](https://tunicgame.com/): for fans of Zelda but with extra puzzles and boss fights so fiendishly hard I ended up turning on invincibility in accessibility settings. 
 * [TOEM](https://www.somethingwemade.se/toem/): warm-and-fuzzy puzzle-solving by taking photos, very cute graphics, and a lovely little story. A really nice short indie game.
