@@ -2,31 +2,39 @@
   {
     "title": "Emojinator",
     "url": "https://emojinator.fun",
-    "background": "emojinator.png",
-    "description": "Create ridiculous emojis, the only limit is your imagination (and the assets I have been able to upload)"
+    "background": "/img/etc/emojinator.png",
+    "description": "Create ridiculous emoji, the only limit is your imagination (and the assets I have been able to upload)",
+    "grow": true
   },
   {
     "title": "Virtual Piano",
     "url": "https://virtualpiano.vercel.app",
-    "background": "virtual-piano.png",
+    "background": "/img/etc/virtual-piano.png",
     "description": "MIDI-enabled virtual synthesizer that plays chords and scales."
   },
   {
     "title": "Tasting menu generator",
     "url": "https://tasting-menu.neocities.org",
-    "background": "tastingmenu.png",
+    "background": "/img/etc/tastingmenu.png",
     "description": "Generate a 5-course tasting menu (ridiculous or not, you decide)."
   },
   {
     "title": "Anything Ipsum",
     "url": "https://sophiekoonin.github.io/anything-ipsum/",
-    "background": "anythingipsum.png",
+    "background": "/img/etc/anythingipsum.png",
     "description": "Generate paragraphs of placeholder text with any words you want."
+  },
+  {
+    "title": "Keyboards",
+    "url": "/keyboards",
+    "background": "/img/keyboards/ikki68-2.webp",
+    "description": "My mechanical keyboard collection",
+    "grow": true
   },
   {
     "title": "/uses",
     "url": "/uses",
-    "description": "A list of things I use, from hardware and software to... skincare."
+    "description": "A list of things I use, from hardware and software to makeup & skincare."
   },
   {
     "title": "Game recommendations",

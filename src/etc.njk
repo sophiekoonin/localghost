@@ -1,10 +1,16 @@
 {% extends "base.njk" %}
 {% block content %}
-    <h1 id="homepage-heading" class="page-heading">Everything else</h1>
-  <ul class="everything-else">
+<div class="everything-else flow">
+    <h1>Everything else</h1>
+  <ul>
     {% for item in etc %}
-      <li {%if item.background%} data-bg style="--etc-bg: url('/img/etc/{{item.background}}')"{%endif%}>
-        <a href="{{ item.url }}">{{ item.title }}</a>
+      <li {%if item.background%} data-bg style="--etc-bg: url('{{item.background}}')"{%endif%} {%if item.grow%}data-grow{%endif%}>
+        <a href="{{ item.url }}">
+          {{ item.title }}
+
+        <span>{{ item.description }}</span>
+        </a>
     {% endfor %}
   </ul>
+</div>
 {% endblock %}

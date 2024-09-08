@@ -185,7 +185,7 @@
 
   .content {
     border-radius: 0;
-    @include utils.fluid-padding;
+    padding: var(--space-s-m);
 
     box-shadow: 10px 10px 0 3px rgba(0, 0, 0, 0.2);
 

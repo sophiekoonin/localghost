@@ -21,7 +21,7 @@ blockquote:not(.tweet-card) {
   border-inline-start: 0.3rem solid var(--list-heading-color);
   margin-inline-start: var(--space-xs);
   background: var(--blockquote-bg);
-  @include utils.fluid-padding;
+  padding: var(--space-s-m);
   @extend .flow;
 }
 
@@ -35,11 +35,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  @include utils.fluid-padding;
+  padding: var(--space-s-m);
 }
 
 footer {
-  @include utils.fluid-padding;
+  padding: var(--space-s-m);
   text-align: center;
 }
 
@@ -98,10 +98,6 @@ p {
 
 ul li ul li {
   margin-block-start: var(--space-2xs);
-}
-ul,
-ol {
-  margin-inline-start: var(--space-s);
 }
 
 ul[class],
