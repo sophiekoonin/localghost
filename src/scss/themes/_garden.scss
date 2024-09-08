@@ -2,6 +2,7 @@
 
 [data-theme="garden"] {
   --body-font-family: "Vollkorn", serif;
+  --heading-font-family: "Pixelify Sans", monospace;
   --background: url(/img/garden-theme/grass-tile.png) repeat;
   --content-bg: hsl(36, 95%, 71%);
   --body-color: hsl(29, 80%, 12%);
@@ -22,6 +23,7 @@
       grid-column: 1 / 1;
       justify-self: center;
       align-self: center;
+      font-family: var(--heading-font-family);
     }
 
     &:after {
@@ -37,6 +39,10 @@
     }
   }
 
+  nav li {
+    font-family: var(--heading-font-family);
+    font-size: var(--step-1);
+  }
   .content {
     border: 8px ridge hsl(29, 80%, 40%);
     padding: var(--space-s-m);
