@@ -794,17 +794,19 @@ button.nav-link {
     color: var(--link-color);
   }
   ul {
-    display: flex;
+    display: grid;
     max-width: 100%;
-    flex-wrap: wrap;
     list-style: none;
     gap: var(--space-s);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
     li {
       background-color: var(--content-bg);
       height: min(20vh, 200px);
-      min-width: clamp(15vw, 200px, 100%);
-      flex: 1;
+
+      &:last-of-type {
+        grid-column: 1 / -1;
+      }
 
       &[data-bg] {
         background: var(--etc-bg) no-repeat center;

@@ -25,6 +25,24 @@
       justify-self: center;
       align-self: center;
       font-family: var(--heading-font-family);
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+
+      > * {
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+      }
+      &:after {
+        content: "";
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        justify-self: end;
+        display: block;
+        height: 19px;
+        width: 20px;
+        background: url(/img/garden-theme/robin.png) no-repeat;
+      }
     }
 
     &:after {

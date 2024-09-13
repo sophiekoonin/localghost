@@ -25,3 +25,10 @@ You're welcome to steal any code from this site, just promise me you'll have a g
 Like many other people in the early 00s, I learnt to build websites by clicking `View Source`, copying bits I liked, then changing them slightly (that, and absorbing the contents of [lissaexplains.com](https://lissaexplains.com)). It's a bit more complicated than it used to be, but I still strongly believe in learning from others and passing it on.
 
 If you encounter any accessibility/usability issues while on the site, or any images used without permission/proper credit, please do let me know and I'll fix it ASAP. 
+
+### Credits
+
+#### Garden theme
+* Trees and bushes: [100 nature things by shubibubi](https://shubibubi.itch.io/nature-things)
+* Grass tileset: [comp3interactive](https://comp3interactive.itch.io/simple-grass-tileset)
+* Soil pattern/fossil: [adventurekid](https://adventurekid.itch.io/pixel-art-grass-tile-sheet)
