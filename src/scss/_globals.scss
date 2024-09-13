@@ -28,6 +28,7 @@ blockquote:not(.tweet-card) {
 main {
   flex: 1;
   margin-inline: auto;
+  container: main / inline-size;
 }
 
 header {

@@ -10,9 +10,9 @@
   grid-template-rows: repeat(4, 1fr);
   align-content: center;
   justify-content: center;
-  height: min(50vh, 25rem);
+  height: min(60vh, 25rem);
 
-  @container wrapper (min-width: 480px) {
+  @container wrapper (width >= 480px) {
     grid-template-columns: repeat(8, 1fr);
   }
 

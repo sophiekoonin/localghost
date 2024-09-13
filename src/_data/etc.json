@@ -25,13 +25,6 @@
     "description": "Generate paragraphs of placeholder text with any words you want."
   },
   {
-    "title": "Keyboards",
-    "url": "/keyboards",
-    "background": "/img/keyboards/ikki68-2.webp",
-    "description": "My mechanical keyboard collection",
-    "grow": true
-  },
-  {
     "title": "/uses",
     "url": "/uses",
     "description": "A list of things I use, from hardware and software to makeup & skincare."
@@ -40,5 +33,12 @@
     "title": "Game recommendations",
     "url": "/games",
     "description": "The best games I've played, and why I love them."
+  },
+  {
+    "title": "Keyboards",
+    "url": "/keyboards",
+    "background": "/img/keyboards/ikki68-2.webp",
+    "description": "My mechanical keyboard collection",
+    "grow": true
   }
 ]
