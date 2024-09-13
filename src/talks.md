@@ -18,14 +18,14 @@ Some of the things I like to talk about include:
 </figure>
 
 ## Upcoming events
-* [Pixel Pioneers](https://pixelpioneers.co/), June 2024
-* [Smashing Conf Freiburg](https://smashingconf.com/freiburg-2024/), September 2024
 * [Beyond Tellerand Berlin](https://beyondtellerrand.com/events/berlin-2024), November 2024
 
 ## Talk history
 
 ### Conferences
 Some of the events I've spoken at in the past include:
+- Smashing Conf Freiburg 2024
+- Pixel Pioneers Bristol 2024
 - All Day Hey! 2024
 - Front Conference Zurich 2023
 - CSS Day Amsterdam 2023
