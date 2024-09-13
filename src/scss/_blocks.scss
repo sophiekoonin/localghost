@@ -41,6 +41,8 @@
 
   .content-inner {
     padding-block: var(--space-s);
+    max-inline-size: var(--max-inline-size);
+
     &[data-with-subtitle] {
       padding-block-start: 0;
     }
@@ -74,7 +76,6 @@
         text-align: center;
       }
     }
-    max-inline-size: var(--max-inline-size);
 
     .two-col {
       display: grid;
@@ -785,26 +786,34 @@ button.nav-link {
 .everything-else {
   max-width: 80ch;
   margin-inline: auto;
+
+  @container (width < 60vw) {
+    max-width: 100ch;
+  }
   h1 {
     color: var(--link-color);
   }
   ul {
-    display: grid;
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
     list-style: none;
     gap: var(--space-s);
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
     li {
       background-color: var(--content-bg);
-      min-height: 20vh;
+      height: min(20vh, 200px);
+      min-width: clamp(20vw, 200px, 100%);
+      flex: 1;
 
       &[data-grow] {
-        grid-row-end: span 2;
+        min-width: clamp(20vw, 400px, 100%);
       }
 
       &[data-bg] {
         background: var(--etc-bg) no-repeat center;
         background-size: cover;
+
         a {
           background-color: color-mix(in srgb, var(--content-bg), transparent 20%);
           transition: background-color 0.4s ease;

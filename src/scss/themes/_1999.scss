@@ -113,6 +113,8 @@
   .content {
     margin-block-start: var(--space-m-l);
     height: 100%;
+    color: hsl(287, 74%, 26%);
+    font-weight: 500;
 
     h1,
     h2,
@@ -120,9 +122,6 @@
     h4 {
       color: navy;
     }
-
-    color: hsl(287, 74%, 26%);
-    font-weight: 500;
 
     a {
       text-decoration-skip-ink: none;
@@ -200,13 +199,13 @@
     position: relative;
     margin-inline: auto;
     display: block;
+    background-repeat: no-repeat;
     @media (prefers-reduced-motion: no-preference) {
       background: url("/img/geocities/rainbow-divider-balls.gif");
     }
     @media (prefers-reduced-motion: reduce) {
       background: url("/img/geocities/static/rainbow-divider-balls.png");
     }
-    background-repeat: no-repeat;
   }
   footer {
     @media (prefers-reduced-motion: no-preference) {
