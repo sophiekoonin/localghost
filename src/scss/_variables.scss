@@ -38,16 +38,12 @@
   --space-2xl-3xl: clamp(5.25rem, calc(3.79rem + 7.32vw), 9rem);
 
   /* Font sizes */
-
-  --step--2: clamp(0.69rem, calc(0.68rem + 0.05vw), 0.72rem);
-  --step--1: clamp(0.83rem, calc(0.81rem + 0.13vw), 0.9rem);
-  --step-0: clamp(1rem, calc(0.95rem + 0.24vw), 1.13rem);
-  --step-1: clamp(1.2rem, calc(1.12rem + 0.4vw), 1.41rem);
-  --step-2: clamp(1.44rem, calc(1.32rem + 0.62vw), 1.76rem);
-  --step-3: clamp(1.73rem, calc(1.54rem + 0.92vw), 2.2rem);
-  --step-4: clamp(2.07rem, calc(1.81rem + 1.31vw), 2.75rem);
-  --step-5: clamp(2.49rem, calc(2.12rem + 1.84vw), 3.43rem);
-  --step-6: clamp(2.99rem, calc(2.48rem + 2.55vw), 4.29rem);
-  --step-7: clamp(3.58rem, calc(2.89rem + 3.48vw), 5.36rem);
-  --step-8: clamp(4.3rem, calc(3.36rem + 4.69vw), 6.71rem);
+  --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+  --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+  --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+  --step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+  --step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+  --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+  --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
 }
