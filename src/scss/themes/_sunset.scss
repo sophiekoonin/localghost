@@ -38,13 +38,13 @@
       font-weight: 400;
       color: hsl(190, 100%, 90%);
       text-decoration: none;
+      @include shared.neon-glow(hsla(190, 100%, 75%, 1), hsla(190, 100%, 50%, 1));
       &:hover,
       &:focus,
       &:active {
         text-decoration: none;
       }
 
-      @include shared.neon-glow(hsla(190, 100%, 75%, 1), hsla(190, 100%, 50%, 1));
       &:hover,
       &:focus {
         color: hsla(303, 88%, 90%, 1);
@@ -54,9 +54,9 @@
   }
 
   footer {
-    @include shared.grid-footer;
     text-transform: uppercase;
     font-style: italic;
+    @include shared.grid-footer;
   }
 
   .pagination {
@@ -114,12 +114,6 @@
       }
     }
     .nav-link {
-      &:is(#submenu-trigger) {
-        font-weight: 600;
-        &:after {
-          border-top-color: #fff;
-        }
-      }
       font-style: italic;
       text-transform: uppercase;
       color: #ffffff;
@@ -128,6 +122,14 @@
       font-size: var(--step-1);
 
       text-align: right;
+
+      &:is(#submenu-trigger) {
+        font-weight: 600;
+        &:after {
+          border-top-color: #fff;
+        }
+      }
+
       &[data-state="active"],
       &:hover {
         text-decoration: underline;
@@ -149,8 +151,7 @@
   .submenu a {
     text-decoration: none;
     --link-color: hsl(329, 96%, 31%);
-    @include shared.fancy-link-underlines(hsla(370, 100%, 76%, 1), hsla(330, 88%, 60%, 1));
-
     --bg-h: 3px;
+    @include shared.fancy-link-underlines(hsla(370, 100%, 76%, 1), hsla(330, 88%, 60%, 1));
   }
 }

@@ -56,13 +56,13 @@
         font-weight: 400;
         color: hsla(303, 88%, 90%, 1);
         text-decoration: none;
+        @include shared.neon-glow(hsla(303, 88%, 70%, 1), hsla(303, 88%, 50%, 1));
         &:hover,
         &:focus,
         &:active {
           text-decoration: none;
         }
 
-        @include shared.neon-glow(hsla(303, 88%, 70%, 1), hsla(303, 88%, 50%, 1));
         &:hover,
         &:focus {
           color: hsla(125, 88%, 90%, 1);

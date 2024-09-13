@@ -14,21 +14,22 @@
   padding: var(--space-3xs-2xs) var(--space-3xs);
   font-size: var(--step--2);
   min-width: 6rem;
+  background-color: var(--content-bg);
+  text-decoration: none;
+  color: var(--body-color);
+
   &:active {
-    span {
-      border: 1px dotted #000;
-    }
     border-right: 2px solid white;
     border-bottom: 2px solid white;
     border-left: 2px solid hsl(250, 100%, 20%);
     border-top: 2px solid hsl(250, 100%, 20%);
+    span {
+      border: 1px dotted #000;
+    }
   }
   &:hover {
     background-color: hsl(249, 51%, 80%);
   }
-  background-color: var(--content-bg);
-  text-decoration: none;
-  color: var(--body-color);
 }
 
 [data-theme="vaporwave"] {
@@ -45,17 +46,18 @@
   --list-heading-color: white;
   --photo-bg: linear-gradient(-45deg, hsl(172, 100%, 44%), hsl(306, 100%, 50%));
   --header-color: #fff;
+  cursor: url("/img/cursor-w95.png"), default;
 
   .skyscraper,
   .palmtree {
     display: none;
   }
 
-  cursor: url("/img/cursor-w95.png"), default;
   a,
   button {
     cursor: url("/img/pointer-w95.png"), pointer;
   }
+
   .page-wrapper {
     background: url("/img/vaporwave-bg.webp") no-repeat fixed;
     background-position: bottom center;
@@ -199,9 +201,9 @@
   .footer-links a,
   .content a,
   .submenu a {
-    @include shared.fancy-link-underlines(hsl(305.9, 100%, 50%), hsl(172, 100%, 44.3%));
     --bg-h: 100%;
     background-size: 0% var(--bg-h);
+    @include shared.fancy-link-underlines(hsl(305.9, 100%, 50%), hsl(172, 100%, 44.3%));
     &:hover {
       background-size: 100% var(--bg-h);
     }
