@@ -7,6 +7,7 @@
   --content-bg: hsl(36, 95%, 71%);
   --body-color: hsl(29, 80%, 12%);
   --link-color: hsl(29, 80%, 8%);
+  --accent-color: hsl(318, 67%, 52%);
   --link-hover-color: hsl(29, 80%, 25%);
 
   header {
@@ -92,6 +93,11 @@
         width: 100%;
         position: relative;
         top: -7px;
+      }
+
+      > p,
+      > nav {
+        background-color: hsla(319, 27%, 21%, 50);
       }
     }
   }
