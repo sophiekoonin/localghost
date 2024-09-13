@@ -3,8 +3,7 @@
     "title": "Emojinator",
     "url": "https://emojinator.fun",
     "background": "/img/etc/emojinator.png",
-    "description": "Create ridiculous emoji, the only limit is your imagination (and the assets I have been able to upload)",
-    "grow": true
+    "description": "Create ridiculous emoji, the only limit is your imagination (and the assets I have been able to upload)"
   },
   {
     "title": "Virtual Piano",
@@ -38,7 +37,6 @@
     "title": "Keyboards",
     "url": "/keyboards",
     "background": "/img/keyboards/ikki68-2.webp",
-    "description": "My mechanical keyboard collection",
-    "grow": true
+    "description": "My mechanical keyboard collection"
   }
 ]

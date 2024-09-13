@@ -803,12 +803,8 @@ button.nav-link {
     li {
       background-color: var(--content-bg);
       height: min(20vh, 200px);
-      min-width: clamp(20vw, 200px, 100%);
+      min-width: clamp(15vw, 200px, 100%);
       flex: 1;
-
-      &[data-grow] {
-        min-width: clamp(20vw, 400px, 100%);
-      }
 
       &[data-bg] {
         background: var(--etc-bg) no-repeat center;
