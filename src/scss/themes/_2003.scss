@@ -233,7 +233,7 @@
       list-style: var(--bullet);
       li {
         background: none;
-        min-height: unset;
+        height: unset;
         a,
         p {
           font-size: inherit;
