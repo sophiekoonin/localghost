@@ -1,15 +1,23 @@
 @use "../utils";
 
 [data-theme="garden"] {
-  --body-font-family: "Vollkorn", serif;
-  --heading-font-family: "Pixelify Sans", monospace;
+  --body-font-family: "Figtree", serif;
+  --heading-font-family: "Pixel Art Serif", monospace;
   --background: url(/img/garden-theme/grass-tile.png) repeat;
   --content-bg: hsl(36, 95%, 71%);
   --body-color: hsl(29, 80%, 12%);
   --link-color: hsl(29, 80%, 8%);
   --accent-color: hsl(318, 67%, 52%);
-  --link-hover-color: hsl(29, 80%, 25%);
+  --link-hover-color: var(--accent-color);
 
+  @keyframes link-anim {
+    0% {
+      background-size: 0% 12px;
+    }
+    100% {
+      background-size: 24px 12px;
+    }
+  }
   header {
     display: grid;
     width: 100vw;
@@ -25,10 +33,15 @@
       justify-self: center;
       align-self: center;
       font-family: var(--heading-font-family);
+      font-size: var(--step-6);
       display: grid;
+      color: oklch(32.06% 0.079 225.53);
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
-
+      a:hover {
+        color: oklch(55% 0.128 225.53);
+        -webkit-text-stroke: 1px oklch(32.06% 0.079 225.53);
+      }
       > * {
         grid-row: 1 / 1;
         grid-column: 1 / 1;
@@ -59,8 +72,12 @@
   }
 
   nav li {
+    text-transform: lowercase;
     font-family: var(--heading-font-family);
-    font-size: var(--step-1);
+    font-size: var(--step-2);
+    a {
+      text-decoration: none;
+    }
   }
   .content {
     border: 8px ridge hsl(29, 80%, 40%);
@@ -83,6 +100,25 @@
     }
     > * {
       margin-inline: var(--space-s-m);
+    }
+
+    a {
+      position: relative;
+      &:hover {
+        text-decoration: none;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          display: block;
+          bottom: -5px;
+          left: 0;
+          height: 24px;
+          background-image: url(/img/garden-theme/grass-top-border.png);
+          background-repeat: repeat-x;
+          background-position: right bottom;
+        }
+      }
     }
 
     aside {

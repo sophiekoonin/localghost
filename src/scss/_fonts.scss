@@ -46,25 +46,9 @@
 }
 
 @font-face {
-  font-family: "Vollkorn";
-  font-weight: 100 900;
+  font-family: "Pixel Art Serif";
   font-display: swap;
   font-style: normal;
-  src: url("/fonts/Vollkorn.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Vollkorn";
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: italic;
-  src: url("/fonts/Vollkorn-Italic.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Pixelify Sans";
   font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-  src: url("/fonts/PixelifySans.woff2") format("woff2");
+  src: url(/fonts/PixelSerif.woff2) format("woff2");
 }

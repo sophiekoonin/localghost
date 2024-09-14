@@ -32,3 +32,4 @@ If you encounter any accessibility/usability issues while on the site, or any im
 * Trees and bushes: [100 nature things by shubibubi](https://shubibubi.itch.io/nature-things)
 * Grass tileset: [comp3interactive](https://comp3interactive.itch.io/simple-grass-tileset)
 * Soil pattern/fossil: [adventurekid](https://adventurekid.itch.io/pixel-art-grass-tile-sheet)
+* Font: [Pixel Art Serif](https://reffpixels.itch.io/seriffont)
