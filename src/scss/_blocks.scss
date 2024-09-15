@@ -281,24 +281,10 @@
     }
   }
 
-  label[for="pastel"] {
-    .theme-option-icon-wrapper {
-      padding: 0.2rem;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-    svg {
-      width: 1.5rem;
-      height: 1.5rem;
-    }
+  label[for="garden"] {
     &:hover {
-      @media (prefers-reduced-motion: no-preference) {
-        animation: heartbeat 0.9s infinite;
-      }
-
-      #heart-fill {
-        fill: hsl(189, 70%, 77%);
-      }
+      background-image: url("/img/garden-icon-hover.png");
+      background-size: contain;
     }
   }
 
