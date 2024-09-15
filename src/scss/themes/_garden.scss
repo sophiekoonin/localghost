@@ -90,7 +90,7 @@
   }
   .content {
     border: 8px ridge hsl(29, 80%, 40%);
-    padding: var(--space-s-m);
+    padding: var(--space-2xs-xs);
     position: relative;
   }
 
@@ -113,7 +113,7 @@
     }
 
     > * {
-      margin-inline: var(--space-s-m);
+      margin-inline: 0.25rem;
     }
 
     a {
