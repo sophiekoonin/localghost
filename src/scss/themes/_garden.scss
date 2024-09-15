@@ -167,4 +167,45 @@
       }
     }
   }
+
+  .butterfly {
+    appearance: none;
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: start;
+    margin-left: var(--space-s-m);
+    margin-top: -2rem;
+    cursor: pointer;
+    offset-path: path(
+      "m23 189c8.406-10.997 34.333-67.368 52-62.868S103.119 192.515 129 216c27 24.5 85.667 59.11 108 57.132 22.333-1.979 28-50.667 26-69-2-18.334-6-41.869-38-41-23.23.63-71.96 71.472-105.627 75.784-31.885 4.083-83.183-27.48-94.806-46.8C24 191 22.294 189.924 23 189z"
+    );
+
+    z-index: 999;
+    width: 32px;
+    height: 32px;
+    img {
+      width: 32px;
+      height: 32px;
+      &:hover {
+        rotate: 10deg;
+      }
+    }
+
+    &.tweened {
+      animation: butterfly-fly 3s;
+    }
+  }
+
+  @keyframes butterfly-fly {
+    0% {
+      offset-distance: 0%;
+    }
+    100% {
+      offset-distance: 100%;
+    }
+  }
 }
