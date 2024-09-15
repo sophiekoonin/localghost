@@ -2,9 +2,9 @@
 @use "./shared";
 
 [data-theme="city"] {
-  --background: fixed linear-gradient(hsla(239, 50%, 20%, 1), hsla(251, 54%, 50%, 1) 80%);
+  --background: fixed linear-gradient(hsla(239, 50%, 20%, 1), oklch(47.35% 0.284 283.78) 80%);
   --body-color: white;
-  --accent-color: hsla(303, 88%, 50%, 1);
+  --accent-color: oklch(66.76% 0.328 330.95);
   --content-bg: hsla(239, 15%, 12%, 0.95);
   --header-color: hsla(303, 88%, 90%, 1);
   --header-font-family: "Bayshore", cursive;
@@ -17,7 +17,7 @@
   --inline-code-color: hsla(125, 88%, 70%, 1);
   --inline-code-bg: none;
   --list-heading-color: hsla(125, 88%, 70%, 1);
-  --photo-bg: linear-gradient(hsla(251, 78%, 68%, 1), hsla(303, 88%, 50%, 1));
+  --photo-bg: linear-gradient(oklch(62.65% 0.229 288.28), oklch(66.47% 0.321 330.95));
   --blockquote-bg: rgba(255, 255, 255, 0.15);
 
   .palmtree {
@@ -56,7 +56,7 @@
         font-weight: 400;
         color: hsla(303, 88%, 90%, 1);
         text-decoration: none;
-        @include shared.neon-glow(hsla(303, 88%, 70%, 1), hsla(303, 88%, 50%, 1));
+        @include shared.neon-glow(oklch(75.88% 0.264 329.46), oklch(67.06% 0.326 330.95));
         &:hover,
         &:focus,
         &:active {
@@ -66,7 +66,7 @@
         &:hover,
         &:focus {
           color: hsla(125, 88%, 90%, 1);
-          @include shared.neon-glow(hsla(125, 88%, 70%, 1), hsla(125, 88%, 50%, 1));
+          @include shared.neon-glow(hsla(125, 88%, 70%, 1), oklch(83.82% 0.326 143));
         }
       }
     }
@@ -190,16 +190,16 @@
     box-shadow: 10px 10px 0 3px rgba(0, 0, 0, 0.2);
 
     h1 {
-      color: hsla(251, 78%, 68%, 1);
+      color: oklch(0.69 0.19 288.75);
     }
     h2 {
-      color: hsla(303, 88%, 60%, 1);
+      color: oklch(0.75 0.3 330.29);
     }
     h3 {
-      color: hsla(125, 88%, 70%, 1);
+      color: oklch(0.9 0.21 145.05);
     }
     h4 {
-      color: hsla(303, 88%, 90%, 1);
+      color: oklch(0.89 0.12 327.81);
     }
 
     .tweet-card a:hover {
@@ -217,7 +217,7 @@
       font-size: var(--step-0);
       &:hover {
         color: hsla(125, 88%, 90%, 1);
-        @include shared.neon-glow(hsla(125, 88%, 70%, 1), hsla(125, 88%, 50%, 1));
+        @include shared.neon-glow(hsla(125, 88%, 70%, 1), oklch(86.18% 0.338 143));
       }
       &[data-state="active"] {
         text-decoration: underline;
@@ -226,7 +226,7 @@
   }
 
   footer {
-    background: linear-gradient(hsla(0, 0%, 100%, 0) 40%, hsla(303, 99%, 40%, 1));
+    background: linear-gradient(hsla(0, 0%, 100%, 0) 40%, oklch(59.41% 0.289 331.1));
     @include shared.grid-footer;
   }
 
@@ -236,6 +236,6 @@
     text-decoration: none;
     --bg-h: 2px;
 
-    @include shared.fancy-link-underlines(hsla(251, 78%, 68%, 1), hsla(303, 88%, 50%, 1));
+    @include shared.fancy-link-underlines(oklch(63.24% 0.224 288.28), oklch(66.47% 0.321 330.95));
   }
 }

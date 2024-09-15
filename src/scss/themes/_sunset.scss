@@ -4,7 +4,8 @@
 [data-theme="sunset"] {
   --header-font-family: "Bayshore", cursive;
   --heading-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --background: fixed linear-gradient(hsla(330, 88%, 70%, 1), hsla(370, 100%, 76%, 1) 40%, hsla(370, 100%, 86%, 1), hsla(380, 100%, 96%, 1));
+  --background: fixed
+    linear-gradient(oklch(73.53% 0.21 352.59), oklch(78.82% 0.148 32.2) 40%, oklch(87.35% 0.081 31.4), oklch(96.82% 0.017 48.54));
   --content-bg: rgba(255, 255, 255, 0.8);
   --accent-color: rgb(239, 44, 44);
   --bullet: url("/icons/triangle-bullet.svg");
@@ -38,7 +39,7 @@
       font-weight: 400;
       color: hsl(190, 100%, 90%);
       text-decoration: none;
-      @include shared.neon-glow(hsla(190, 100%, 75%, 1), hsla(190, 100%, 50%, 1));
+      @include shared.neon-glow(hsla(190, 100%, 75%, 1), oklch(87.65% 0.111 212.16));
       &:hover,
       &:focus,
       &:active {
