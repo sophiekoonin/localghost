@@ -9,7 +9,8 @@
   --link-color: hsl(319, 27%, 21%);
   --accent-color: oklch(0.57 0.3 310.32);
   --link-hover-color: var(--accent-color);
-
+  --inline-code-bg: hsl(30, 89%, 90%);
+  --inline-code-color: var(--link-color);
   header {
     display: grid;
     width: 100vw;
