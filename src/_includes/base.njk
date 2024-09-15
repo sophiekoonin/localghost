@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js" data-theme="city">
+<html lang="en" class="no-js" data-theme="garden">
   {% set cssFilename = global.cssFile() %}
+  {% set jsFilename = global.jsFile() %}
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +12,7 @@
         {{ title }} -
       {% endif %}
       localghost</title>
-    <script src="/js/main.js"></script>
+    <script src={{ jsFilename }}></script>
     {% if extraCSS %}
       {% for file in extraCSS %}
         <link rel="stylesheet" type="text/css" href="/css/{{ file }}">

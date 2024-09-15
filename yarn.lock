@@ -3317,6 +3317,7 @@ __metadata:
     sanitize-html: "npm:^2.13.0"
     sass: "npm:^1.78.0"
     sharp: "npm:0.33.3"
+    uglify-js: "npm:^3.19.3"
   languageName: unknown
   linkType: soft
 
@@ -5796,6 +5797,15 @@ __metadata:
   bin:
     uglifyjs: bin/uglifyjs
   checksum: 10c0/3eb388fb0899f707892df9d2b4673ea537b5d4e1b426d43f9d2783c79a3326b9c12a23af8acfb15bbd377e325b076e08a57bd336167fb6ddebe3091e86adc7b7
+  languageName: node
+  linkType: hard
+
+"uglify-js@npm:^3.19.3":
+  version: 3.19.3
+  resolution: "uglify-js@npm:3.19.3"
+  bin:
+    uglifyjs: bin/uglifyjs
+  checksum: 10c0/83b0a90eca35f778e07cad9622b80c448b6aad457c9ff8e568afed978212b42930a95f9e1be943a1ffa4258a3340fbb899f41461131c05bb1d0a9c303aed8479
   languageName: node
   linkType: hard
 

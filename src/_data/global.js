@@ -1,9 +1,9 @@
-const md5 = require('md5');
-const path = require('path');
-const fs = require('fs');
+const md5 = require("md5");
+const path = require("path");
+const fs = require("fs");
 
 module.exports = {
-  baseUrl: process.env.BASE_URL || 'https://localghost.dev',
+  baseUrl: process.env.BASE_URL || "https://localghost.dev",
   currentYear() {
     return new Date().getFullYear();
   },
@@ -14,12 +14,18 @@ module.exports = {
     return `${segment()}-${segment()}-${segment()}`;
   },
   isDev() {
-    return process.env.NODE_ENV !== 'production';
+    return process.env.NODE_ENV !== "production";
   },
   cssFile() {
-    const scssDir = path.join(__dirname, '..', 'scss');
-    const cssFile = fs.readFileSync(path.join(scssDir, 'style.scss'));
+    const scssDir = path.join(__dirname, "..", "scss");
+    const cssFile = fs.readFileSync(path.join(scssDir, "style.scss"));
     const hash = md5(cssFile).slice(0, 8);
     return `/css/style.${hash}.css`;
+  },
+  jsFile() {
+    const jsDir = path.join(__dirname, "..", "js");
+    const jsFile = fs.readFileSync(path.join(jsDir, "main.js"), "utf-8");
+    const hash = md5(jsFile).slice(0, 8);
+    return `/js/main.${hash}.js`;
   },
 };

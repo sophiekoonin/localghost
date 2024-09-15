@@ -30,7 +30,8 @@
     "node-fetch": "^2.7.0",
     "sanitize-html": "^2.13.0",
     "sass": "^1.78.0",
-    "sharp": "0.33.3"
+    "sharp": "0.33.3",
+    "uglify-js": "^3.19.3"
   },
   "prettier": {
     "tabWidth": 2,

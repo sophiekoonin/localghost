@@ -38,31 +38,51 @@ const THEMES = {
 let palmtrees = [];
 let skyscrapers = [];
 let themeOptions = [];
+let hasSetInitialTheme = false;
+let theme = "";
 
-const search = new URLSearchParams(window.location.search);
-let theme = search.get("theme") || localStorage.getItem(THEME_STORAGE_KEY) || "city";
-changeTheme(theme);
+function initThemes() {
+  const search = new URLSearchParams(window.location.search);
+  theme = search.get("theme") || localStorage.getItem(THEME_STORAGE_KEY) || "garden";
+  changeTheme(theme);
+  hasSetInitialTheme = true;
+}
+
+initThemes();
 
 function changeTheme(newTheme) {
-  if (theme !== newTheme) {
-    if (!Object.keys(THEMES).includes(newTheme)) {
-      newTheme = "garden";
-    }
+  if (theme === newTheme && hasSetInitialTheme) {
+    return;
+  }
+  if (!Object.keys(THEMES).includes(newTheme)) {
+    newTheme = "garden";
   }
   localStorage.setItem(THEME_STORAGE_KEY, newTheme);
   document.documentElement.setAttribute("data-theme", newTheme);
   if (themeOptions.length > 0) {
     const opt = (themeOptions.find((el) => el.id === newTheme).checked = true);
   }
-  clear2003Stuff();
-  cleanupGeocities();
-  cleanupGarden();
+
+  switch (theme) {
+    case "geocities":
+      cleanupGeocities();
+      break;
+    case "twothousandandthree":
+      clear2003Stuff();
+      break;
+    case "garden":
+      cleanupGarden();
+      break;
+    default:
+      break;
+  }
 
   switch (newTheme) {
     case "geocities":
       if (currentPage === "/") {
         injectGeocitiesGoodness();
       }
+      // this is presumably a proxy for "has the page loaded"
       if (palmtrees.length > 0) {
         new fairyDustCursor({ colors: ["#F5B5FC", "#96F7D2", "#FCB1B1"] });
       }
