@@ -38,22 +38,17 @@ const THEMES = {
 let palmtrees = [];
 let skyscrapers = [];
 let themeOptions = [];
-let hasSetInitialTheme = false;
 let theme = "";
 
 function initThemes() {
   const search = new URLSearchParams(window.location.search);
   theme = search.get("theme") || localStorage.getItem(THEME_STORAGE_KEY) || "garden";
   changeTheme(theme);
-  hasSetInitialTheme = true;
 }
 
 initThemes();
 
 function changeTheme(newTheme) {
-  if (theme === newTheme && hasSetInitialTheme) {
-    return;
-  }
   if (!Object.keys(THEMES).includes(newTheme)) {
     newTheme = "garden";
   }
@@ -63,18 +58,20 @@ function changeTheme(newTheme) {
     const opt = (themeOptions.find((el) => el.id === newTheme).checked = true);
   }
 
-  switch (theme) {
-    case "geocities":
-      cleanupGeocities();
-      break;
-    case "twothousandandthree":
-      clear2003Stuff();
-      break;
-    case "garden":
-      cleanupGarden();
-      break;
-    default:
-      break;
+  if (theme !== newTheme) {
+    switch (theme) {
+      case "geocities":
+        cleanupGeocities();
+        break;
+      case "twothousandandthree":
+        clear2003Stuff();
+        break;
+      case "garden":
+        cleanupGarden();
+        break;
+      default:
+        break;
+    }
   }
 
   switch (newTheme) {
@@ -105,20 +102,23 @@ function showElement(element) {
   element.classList.remove("hidden");
 }
 
+function eventListener(e) {
+  if (e.target.checked) {
+    const newTheme = e.target.value;
+    changeTheme(newTheme);
+  }
+}
 window.addEventListener("load", () => {
   skyscrapers = Array.from(document.getElementsByClassName("skyscraper"));
   palmtrees = Array.from(document.getElementsByClassName("palmtree"));
   themeOptions = Array.from(document.getElementsByClassName("theme-option"));
 
-  themeOptions.forEach((el) =>
-    addEventListener("change", function (e) {
-      if (e.target.checked) {
-        const newTheme = e.target.value;
-        changeTheme(newTheme);
-      }
-    })
-  );
+  themeOptions.forEach((el) => addEventListener("change", eventListener));
   changeTheme(theme);
+});
+
+window.addEventListener("unload", () => {
+  themeOptions.forEach((el) => removeEventListener("change", eventListener));
 });
 
 function cleanupGeocities() {
