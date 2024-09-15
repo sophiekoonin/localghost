@@ -251,6 +251,9 @@
     input:checked + * {
       border: 2px dotted var(--accent-color);
     }
+    input:focus-visible + * {
+      border: 2px solid var(--accent-color);
+    }
   }
 
   label[for="city"] {
