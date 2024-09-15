@@ -57,12 +57,15 @@ svg {
 }
 
 h1 {
-  font-size: var(--step-3);
+  font-size: var(--step-4);
 }
 h2 {
-  font-size: var(--step-2);
+  font-size: var(--step-3);
 }
 h3 {
+  font-size: var(--step-2);
+}
+h4 {
   font-size: var(--step-1);
 }
 *,

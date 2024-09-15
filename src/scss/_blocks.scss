@@ -181,6 +181,7 @@
 
   .main-nav {
     color: var(--link-color);
+    font-size: clamp(1rem, 1.2615rem + 0.75vw, 1.9531rem);
     max-inline-size: var(--max-inline-size);
     margin-inline: auto;
 
@@ -189,7 +190,7 @@
       flex-wrap: wrap;
       justify-content: center;
       text-align: center;
-      gap: var(--space-xs);
+      gap: var(--space-3xs-2xs);
       margin-block-end: var(--space-m);
       list-style: none;
       margin-inline-start: 0;

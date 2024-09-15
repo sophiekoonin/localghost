@@ -6,22 +6,17 @@
   --background: url(/img/garden-theme/grass-tile.png) repeat;
   --content-bg: hsl(36, 95%, 71%);
   --body-color: hsl(29, 80%, 12%);
-  --link-color: hsl(29, 80%, 8%);
-  --accent-color: hsl(318, 67%, 52%);
+  --link-color: hsl(319, 27%, 21%);
+  --accent-color: oklch(0.57 0.3 310.32);
   --link-hover-color: var(--accent-color);
 
-  @keyframes link-anim {
-    0% {
-      background-size: 0% 12px;
-    }
-    100% {
-      background-size: 24px 12px;
-    }
-  }
   header {
     display: grid;
     width: 100vw;
     background-color: hsl(190, 86%, 75%);
+    background-image: url(/img/garden-theme/sky.png);
+    background-repeat: repeat-x;
+    background-position: left center;
     height: clamp(10rem, 30vh, 25rem);
     grid-template-rows: 1fr 4rem;
     grid-template-columns: 1fr;
@@ -33,14 +28,16 @@
       justify-self: center;
       align-self: center;
       font-family: var(--heading-font-family);
-      font-size: var(--step-6);
+      font-size: var(--step-7);
       display: grid;
-      color: oklch(32.06% 0.079 225.53);
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
-      a:hover {
-        color: oklch(55% 0.128 225.53);
+      color: oklch(55% 0.128 225.53);
+      a {
         -webkit-text-stroke: 1px oklch(32.06% 0.079 225.53);
+        &:hover {
+          color: oklch(32.06% 0.079 225.53);
+        }
       }
       > * {
         grid-row: 1 / 1;
@@ -71,17 +68,29 @@
     }
   }
 
-  nav li {
-    text-transform: lowercase;
-    font-family: var(--heading-font-family);
-    font-size: var(--step-2);
-    a {
-      text-decoration: none;
+  nav {
+    &:before {
+      background: url(/img/garden-theme/flower-border.png) repeat-x;
+      content: "";
+      display: block;
+      height: 32px;
+      position: relative;
+      top: -20px;
+      z-index: 2;
+      width: 100%;
+    }
+    li {
+      text-transform: lowercase;
+      font-family: var(--heading-font-family);
+      a {
+        text-decoration: none;
+      }
     }
   }
   .content {
     border: 8px ridge hsl(29, 80%, 40%);
     padding: var(--space-s-m);
+    position: relative;
   }
 
   main {
@@ -95,16 +104,19 @@
       height: 16px;
       width: 100%;
       position: relative;
+      left: 0;
       top: -8px;
+      z-index: 0;
       background: url(/img/garden-theme/grass-top-border.png) repeat-x;
     }
+
     > * {
       margin-inline: var(--space-s-m);
     }
 
     a {
       position: relative;
-      &:hover {
+      &:not(:has(img)):hover {
         text-decoration: none;
         &::after {
           content: "";
@@ -151,7 +163,7 @@
 
       > p,
       > nav {
-        background-color: hsla(319, 27%, 21%, 50);
+        background-color: color-mix(in srgb, var(--link-color), transparent 50%);
       }
     }
   }
