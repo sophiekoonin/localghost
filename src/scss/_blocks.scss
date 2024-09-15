@@ -704,62 +704,6 @@ body::after {
   justify-content: center;
 }
 
-.webmentions {
-  &-counts {
-    gap: var(--space-3xs);
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    img {
-      aspect-ratio: 1;
-      height: var(--space-xs);
-      width: var(--space-xs);
-      min-width: var(--space-xs);
-    }
-  }
-
-  &-list {
-    margin-inline: 0;
-  }
-
-  .webmention {
-    &-meta {
-      display: flex;
-      align-items: center;
-      * + * {
-        margin-inline-start: var(--space-xs);
-      }
-    }
-    &-author {
-      display: flex;
-      align-items: center;
-      &:hover img {
-        box-shadow: 0 0 0 2px var(--link-color);
-      }
-      img {
-        border-radius: 50%;
-        height: var(--space-m);
-        width: var(--space-m);
-        min-width: var(--space-m);
-      }
-    }
-    .webmention-name {
-      font-weight: bold;
-    }
-    &-avatars {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      & > a + a {
-        margin-inline-start: -0.75rem;
-      }
-      span {
-        margin-inline-start: 0.75rem;
-      }
-    }
-  }
-}
-
 button.nav-link {
   border: 0;
   cursor: pointer;
