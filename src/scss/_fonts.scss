@@ -1,16 +1,4 @@
 @font-face {
-  font-family: "Fredoka";
-  font-weight: 400;
-  src: url("/fonts/Fredoka-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Fredoka";
-  font-weight: 500;
-  src: url("/fonts/Fredoka-Medium.woff") format("woff");
-}
-
-@font-face {
   font-family: "Bayshore";
   src: url("/fonts/Bayshore.woff2") format("woff2");
 }
@@ -40,16 +28,6 @@
 }
 
 @font-face {
-  font-family: "Sen";
-  src: url("/fonts/Sen-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Sen";
-  font-weight: bold;
-  src: url("/fonts/Sen-Bold.woff") format("woff");
-}
-@font-face {
   font-family: "Win95 sans";
   font-display: swap;
   font-style: normal;
@@ -65,4 +43,12 @@
 @font-face {
   font-family: "Impact Label";
   src: url("/fonts/Impact_Label.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Pixel Art Serif";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/PixelSerif.woff2) format("woff2");
 }

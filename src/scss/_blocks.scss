@@ -31,12 +31,18 @@
 }
 
 .content {
+  padding-inline: var(--space-2xs);
   margin-inline: auto;
   max-inline-size: var(--max-inline-size);
   background: var(--content-bg);
   flex-basis: 0;
   flex-grow: 999;
   font-size: var(--step-0);
+  line-height: 1.5;
+
+  @container (width < 50ch) {
+    line-height: 1.3;
+  }
 
   .content-inner {
     padding-block: var(--space-s);
@@ -175,6 +181,7 @@
 
   .main-nav {
     color: var(--link-color);
+    font-size: clamp(1rem, 1.2615rem + 0.75vw, 1.9531rem);
     max-inline-size: var(--max-inline-size);
     margin-inline: auto;
 
@@ -183,7 +190,7 @@
       flex-wrap: wrap;
       justify-content: center;
       text-align: center;
-      gap: var(--space-xs);
+      gap: var(--space-3xs-2xs);
       margin-block-end: var(--space-m);
       list-style: none;
       margin-inline-start: 0;
@@ -244,6 +251,9 @@
     input:checked + * {
       border: 2px dotted var(--accent-color);
     }
+    input:focus-visible + * {
+      border: 2px solid var(--accent-color);
+    }
   }
 
   label[for="city"] {
@@ -274,24 +284,10 @@
     }
   }
 
-  label[for="pastel"] {
-    .theme-option-icon-wrapper {
-      padding: 0.2rem;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-    svg {
-      width: 1.5rem;
-      height: 1.5rem;
-    }
+  label[for="garden"] {
     &:hover {
-      @media (prefers-reduced-motion: no-preference) {
-        animation: heartbeat 0.9s infinite;
-      }
-
-      #heart-fill {
-        fill: hsl(189, 70%, 77%);
-      }
+      background-image: url("/img/garden-icon-hover.png");
+      background-size: contain;
     }
   }
 
@@ -697,62 +693,6 @@ body::after {
   justify-content: center;
 }
 
-.webmentions {
-  &-counts {
-    gap: var(--space-3xs);
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    img {
-      aspect-ratio: 1;
-      height: var(--space-xs);
-      width: var(--space-xs);
-      min-width: var(--space-xs);
-    }
-  }
-
-  &-list {
-    margin-inline: 0;
-  }
-
-  .webmention {
-    &-meta {
-      display: flex;
-      align-items: center;
-      * + * {
-        margin-inline-start: var(--space-xs);
-      }
-    }
-    &-author {
-      display: flex;
-      align-items: center;
-      &:hover img {
-        box-shadow: 0 0 0 2px var(--link-color);
-      }
-      img {
-        border-radius: 50%;
-        height: var(--space-m);
-        width: var(--space-m);
-        min-width: var(--space-m);
-      }
-    }
-    .webmention-name {
-      font-weight: bold;
-    }
-    &-avatars {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      & > a + a {
-        margin-inline-start: -0.75rem;
-      }
-      span {
-        margin-inline-start: 0.75rem;
-      }
-    }
-  }
-}
-
 button.nav-link {
   border: 0;
   cursor: pointer;
@@ -793,20 +733,18 @@ button.nav-link {
     color: var(--link-color);
   }
   ul {
-    display: flex;
+    display: grid;
     max-width: 100%;
-    flex-wrap: wrap;
     list-style: none;
     gap: var(--space-s);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
     li {
       background-color: var(--content-bg);
       height: min(20vh, 200px);
-      min-width: clamp(20vw, 200px, 100%);
-      flex: 1;
 
-      &[data-grow] {
-        min-width: clamp(20vw, 400px, 100%);
+      &:last-of-type {
+        grid-column: 1 / -1;
       }
 
       &[data-bg] {
@@ -832,13 +770,14 @@ button.nav-link {
         width: 100%;
         height: 100%;
         position: relative;
-        font-size: var(--step-1);
+        font-size: var(--step-0);
         padding: var(--space-2xs);
 
         p {
           text-decoration: none;
           color: var(--body-color);
-          font-size: initial;
+          font-size: var(--step--1);
+          font-weight: 400;
           text-decoration: none;
         }
       }

@@ -18,7 +18,6 @@ const markdownItAttrs = require("markdown-it-attrs");
 const markdownItAnchor = require("markdown-it-anchor");
 const mdfigcaption = require("markdown-it-image-figures");
 const codeSnippet = require("./src/plugins/code-snippet");
-const webmentionsFilter = require("./src/filters/webmentions");
 const ogToPng = require("./src/plugins/og-to-png");
 const markdownItOptions = {
   html: true,
@@ -74,7 +73,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter("isNan", (value) => {
     return isNaN(value);
   });
-  eleventyConfig.addFilter("webmentionsForUrl", webmentionsFilter);
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: true,
     // Optional, default is "---"

@@ -30,7 +30,7 @@ const THEMES = {
   sunset: "sunset",
   minimalist: "minimalist",
   vaporwave: "vaporwave",
-  pastel: "pastel",
+  garden: "garden",
   geocities: "geocities",
   twothousandandthree: "twothousandandthree",
 };
@@ -46,7 +46,7 @@ changeTheme(theme);
 function changeTheme(newTheme) {
   if (theme !== newTheme) {
     if (!Object.keys(THEMES).includes(newTheme)) {
-      newTheme = "city";
+      newTheme = "garden";
     }
   }
   localStorage.setItem(THEME_STORAGE_KEY, newTheme);
@@ -56,6 +56,7 @@ function changeTheme(newTheme) {
   }
   clear2003Stuff();
   cleanupGeocities();
+  cleanupGarden();
 
   switch (newTheme) {
     case "geocities":
@@ -69,6 +70,8 @@ function changeTheme(newTheme) {
     case "twothousandandthree":
       inject2003Stuff();
       break;
+    case "garden":
+      injectGardenPizazz();
     default:
       break;
   }
@@ -331,4 +334,29 @@ function inject2003Stuff() {
     wrapper.appendChild(currently);
     sidebar.appendChild(wrapper);
   }
+}
+
+function injectGardenPizazz() {
+  const header = document.getElementsByTagName("header")[0];
+  if (header) {
+    const btn = document.createElement("button");
+    const img = document.createElement("img");
+    img.src = "/img/garden-theme/red-admiral.png";
+    btn.classList.add("butterfly");
+    btn.ariaHidden = true;
+    btn.id = "butterfly";
+    btn.onclick = function () {
+      btn.classList.add("tweened");
+      setTimeout(() => {
+        btn.classList.remove("tweened");
+      }, 4000);
+    };
+    btn.appendChild(img);
+    header.appendChild(btn);
+  }
+}
+
+function cleanupGarden() {
+  const bfly = document.getElementById("butterfly");
+  if (bfly) bfly.remove();
 }

@@ -105,6 +105,7 @@
   .content {
     @extend .windows;
     font-family: "Courier New", monospace;
+    padding-inline: 0;
 
     p > code {
       font-family: "Courier New", monospace;

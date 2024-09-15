@@ -26,8 +26,8 @@
     {% include "partials/svg/defs.html" %}
     <div class="page-wrapper">
       {% include "partials/header.njk" %}
-      <main class="wrapper">
-        {% include "partials/nav.njk" %}
+      <main>
+      {% include "partials/nav.njk" %}
         {% block content %}
           {{ content | safe }}
         {% endblock %}

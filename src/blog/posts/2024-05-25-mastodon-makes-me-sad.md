@@ -3,7 +3,6 @@ title: Twitter reply guys were bad, but Mastodon is no better
 date: 2024-05-04
 tags: ["mastodon"]
 excerptText: "People know you don't have to reply, right?"
-showWebmentions: false
 ---
 
 Mastodon has often been touted as some kind of grassroots utopia compared to the bro-niverse that is Twitter. But in my experience it's exactly the same: full of sanctimonious reply guys. 

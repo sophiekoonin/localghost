@@ -1,0 +1,213 @@
+@use "../utils";
+
+[data-theme="garden"] {
+  --body-font-family: "Figtree", serif;
+  --heading-font-family: "Pixel Art Serif", monospace;
+  --background: url(/img/garden-theme/grass-tile.png) repeat;
+  --content-bg: hsl(36, 95%, 71%);
+  --body-color: hsl(29, 80%, 12%);
+  --link-color: hsl(319, 27%, 21%);
+  --accent-color: oklch(0.57 0.3 310.32);
+  --link-hover-color: var(--accent-color);
+  --inline-code-bg: hsl(30, 89%, 90%);
+  --inline-code-color: var(--link-color);
+  header {
+    display: grid;
+    width: 100vw;
+    background-color: hsl(190, 86%, 75%);
+    background-image: url(/img/garden-theme/sky.png);
+    background-repeat: repeat-x;
+    background-position: left center;
+    height: clamp(10rem, 30vh, 25rem);
+    grid-template-rows: 1fr 4rem;
+    grid-template-columns: 1fr;
+    padding: 0;
+
+    .header {
+      grid-row: 1 / 3;
+      grid-column: 1 / 1;
+      justify-self: center;
+      align-self: center;
+      font-family: var(--heading-font-family);
+      font-size: var(--step-7);
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      color: oklch(55% 0.128 225.53);
+      a {
+        -webkit-text-stroke: 1px oklch(32.06% 0.079 225.53);
+        &:hover {
+          color: oklch(32.06% 0.079 225.53);
+        }
+      }
+      > * {
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+      }
+      &:after {
+        content: "";
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        justify-self: end;
+        display: block;
+        height: 19px;
+        width: 20px;
+        background: url(/img/garden-theme/robin.png) no-repeat;
+      }
+    }
+
+    &:after {
+      grid-column: 1 / 1;
+      grid-row: 2 / 3;
+      display: block;
+      height: 4rem;
+      width: 100%;
+      z-index: 1;
+      content: "";
+      background-size: contain;
+      background: url(/img/garden-theme/tree-border.png) repeat-x;
+    }
+  }
+
+  .main-nav {
+    &:before {
+      background: url(/img/garden-theme/flower-border.png) repeat-x;
+      content: "";
+      display: block;
+      height: 32px;
+      position: relative;
+      top: -20px;
+      z-index: 2;
+      width: 100%;
+    }
+    li {
+      text-transform: lowercase;
+      font-family: var(--heading-font-family);
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+  .content {
+    border: 8px ridge hsl(29, 80%, 40%);
+    padding: var(--space-s-m);
+    position: relative;
+  }
+
+  main {
+    padding-inline: 0;
+    padding-block-end: var(--space-m);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:before {
+      content: "";
+      display: block;
+      height: 16px;
+      width: 100%;
+      position: relative;
+      left: 0;
+      top: -8px;
+      z-index: 0;
+      background: url(/img/garden-theme/grass-top-border.png) repeat-x;
+    }
+
+    > * {
+      margin-inline: var(--space-s-m);
+    }
+
+    a {
+      position: relative;
+      &:not(:has(img)):hover {
+        text-decoration: none;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          display: block;
+          bottom: -5px;
+          left: 0;
+          height: 24px;
+          background-image: url(/img/garden-theme/grass-top-border.png);
+          background-repeat: repeat-x;
+          background-position: right bottom;
+        }
+      }
+    }
+
+    aside {
+      width: 100%;
+    }
+  }
+
+  footer {
+    display: grid;
+    padding: 0;
+    min-height: 0.25vh;
+    grid-template-columns: 1fr;
+    color: hsl(0, 0%, 100%);
+    background: url(/img/garden-theme/soil-tile.png);
+    a {
+      color: inherit;
+    }
+    .footer-content {
+      @extend .flow;
+      background: url(/img/garden-theme/fossil.png) no-repeat 20vw 50%;
+      padding-block-end: var(--space-s-m);
+      &:before {
+        background: url(/img/garden-theme/grass-soil-border.png) repeat-x;
+        content: "";
+        height: 15px;
+        width: 100%;
+        position: relative;
+        top: -7px;
+      }
+
+      > p,
+      > nav {
+        background-color: color-mix(in srgb, var(--link-color), transparent 50%);
+      }
+    }
+  }
+
+  .butterfly {
+    appearance: none;
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: start;
+    margin-left: var(--space-s-m);
+    margin-top: -2rem;
+    cursor: pointer;
+    offset-path: path(
+      "m23 189c8.406-10.997 34.333-67.368 52-62.868S103.119 192.515 129 216c27 24.5 85.667 59.11 108 57.132 22.333-1.979 28-50.667 26-69-2-18.334-6-41.869-38-41-23.23.63-71.96 71.472-105.627 75.784-31.885 4.083-83.183-27.48-94.806-46.8C24 191 22.294 189.924 23 189z"
+    );
+
+    z-index: 999;
+    width: 16px;
+    height: 16px;
+    img {
+      width: 16px;
+      height: 16px;
+      &:hover {
+        rotate: 10deg;
+      }
+    }
+
+    &.tweened {
+      animation: butterfly-fly 3s;
+    }
+  }
+
+  @keyframes butterfly-fly {
+    0% {
+      offset-distance: 0%;
+    }
+    100% {
+      offset-distance: 100%;
+    }
+  }
+}

@@ -2,6 +2,7 @@
 
 html,
 body {
+  overscroll-behavior: none;
   min-height: 100vh;
 }
 body {
@@ -9,7 +10,6 @@ body {
   color: var(--body-color);
   font-family: var(--body-font-family);
   font-weight: 400;
-  line-height: 1.5;
 }
 
 select {
@@ -27,8 +27,8 @@ blockquote:not(.tweet-card) {
 
 main {
   flex: 1;
-  margin-inline: auto;
   container: main / inline-size;
+  padding-inline: var(--space-s-m);
 }
 
 header {
@@ -41,7 +41,11 @@ header {
 
 footer {
   padding: var(--space-s-m);
-  text-align: center;
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 img,
@@ -54,12 +58,15 @@ svg {
 }
 
 h1 {
-  font-size: var(--step-3);
+  font-size: var(--step-4);
 }
 h2 {
-  font-size: var(--step-2);
+  font-size: var(--step-3);
 }
 h3 {
+  font-size: var(--step-2);
+}
+h4 {
   font-size: var(--step-1);
 }
 *,
