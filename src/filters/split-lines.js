@@ -9,7 +9,7 @@ module.exports = function (input) {
 
     const prevLine = acc[acc.length - 1];
 
-    const isTooLong = prevLine.length + ` ${current}`.length > 40;
+    const isTooLong = prevLine.length + ` ${current}`.length > 25;
 
     // If we're in danger of having an orphan, force the penultimate word onto a new line
     if (isTooLong && idx === parts.length - 1 && !current.includes("-")) {

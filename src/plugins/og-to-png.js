@@ -13,13 +13,18 @@ module.exports = async function () {
       const outputFilename = filename.substring(0, filename.length - 4);
       if (filename.endsWith(".svg") & !fs.existsSync(path.join(ogImagesDir, outputFilename))) {
         const imageUrl = socialPreviewImagesDir + filename;
-        Image(imageUrl, {
-          formats: ["png"],
-          outputDir: ogImagesDir,
-          filenameFormat: function (id, src, width, format, options) {
-            return `${outputFilename}.${format}`;
-          },
-        });
+        try {
+          Image(imageUrl, {
+            formats: ["png"],
+            outputDir: ogImagesDir,
+            filenameFormat: function (id, src, width, format, options) {
+              return `${outputFilename}.${format}`;
+            },
+          });
+        } catch (e) {
+          console.error("Error with image: ", imageUrl);
+          console.error(e);
+        }
       }
     });
   }
