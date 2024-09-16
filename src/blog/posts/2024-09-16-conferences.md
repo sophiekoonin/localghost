@@ -59,7 +59,7 @@ Events with a range indicate early bird pricing vs full pricing.
 ### Europe
 * [Beyond Tellerrand](https://beyondtellerrand.com/) (Berlin/Düsseldorf, web/art/creativity/all sorts, 2 days + workshops extra, ££-£££). Two events a year, in Berlin and Düsseldorf. How does one even begin to describe Beyond Tellerrand? A melting pot of web, code, art, stories and experiences. I laughed, I cried. Check out my [blog post](/blog/beyond-tellerrand-beyond-amazing) from Düsseldorf 2023.
 * [CSS Day](https://cssday.nl) (Amsterdam, web, 2 days, ££££) I got invited to speak here in 2023, and it was absolutely mindblowing to see all the new developments in CSS. Awesome venue &ndash; an old church! &ndash; and excellent folks.
-* [Smashing Conference](https://smashingconf.com) (Antwerp, design/UX; Freiburg, web/UI/UX; 2 days, ££) I just came back from Smashing Freiburg, and had a fantastic time. The organisers are some of the loveliest people I've ever known, and every talk was of an exceptional standard. What a great event, and a lovely setting too.
+* [Smashing Conference](https://smashingconf.com) (Antwerp, design/UX; Freiburg, web/UI/UX; 2 days, £££) I just came back from Smashing Freiburg, and had a fantastic time. The organisers are some of the loveliest people I've ever known, and every talk was of an exceptional standard. What a great event, and a lovely setting too.
 * [Front Conference](https://frontconference.com/) (Zurich, web/design/UX, 2 days, £££ at early bird price) &ndash; TBC if this returns for 2025. I really, really hope it does. Dual-track conference, one design/UX and one web/tech, with an excellently curated lineup. Zurich is a beautiful place, as well. 
 * [WeyWeyWeb](https://www.weyweyweb.com/) (Málaga, web, 2 days, ££ - group tickets available). The beautiful town of Málaga plays host to a small but lovingly put-together conference. A great chance to wear only a light jacket in November.
 * [JSHeroes](https://jsheroes.io/) (Cluj-Napoca, Romania, web/JS, 2 days, £-££). I've not been myself, but I have it on good authority this is a lovely community-led event. 
@@ -69,6 +69,6 @@ Events with a range indicate early bird pricing vs full pricing.
 
 
 ### Rest of world 
-* [Smashing Conference](https://smashingconf.com) (New York, web/UX, 2 days + workshops extra, ££) See above! 
+* [Smashing Conference](https://smashingconf.com) (New York, web/UX, 2 days + workshops extra, £££) See above! 
 * [JSConf](https://jsconf.com) (different countries) - I was lucky enough to go to the last CSSConf/JSconf EU in Berlin in 2019 and it was incredible. Lucky for us there are still a variety of JSConfs in different places including Budapest, Honolulu and Guadalajara!
 * ??? &ndash; would love to hear of more conferences outside of Europe that I should be mentioning here! 
