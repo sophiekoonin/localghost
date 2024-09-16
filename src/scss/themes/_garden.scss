@@ -95,6 +95,10 @@
     border: 8px ridge hsl(29, 80%, 40%);
     padding: var(--space-2xs-xs);
     position: relative;
+
+    &-inner {
+      padding-block-start: 0;
+    }
   }
 
   main {
