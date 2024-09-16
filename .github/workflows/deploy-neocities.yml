@@ -17,6 +17,9 @@ jobs:
         with:
           node-version: "20"
           cache: "yarn"
+      - run: |
+          mv PixelSerif_16px.ttf /usr/share/fonts/
+          fc-cache -fv
       - run: yarn install
       - run: yarn build
         env:

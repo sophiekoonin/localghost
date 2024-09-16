@@ -36,6 +36,7 @@
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
       color: oklch(55% 0.128 225.53);
+      text-transform: lowercase;
       a {
         -webkit-text-stroke: 1px oklch(32.06% 0.079 225.53);
         &:hover {

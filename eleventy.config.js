@@ -40,10 +40,7 @@ module.exports = (eleventyConfig) => {
     cacheDirectory: "tweets",
   });
 
-  // Don't run the OG image generator on CI cos it doesn't have the nice fonts
-  if (!process.env.CI) {
-    eleventyConfig.on("afterBuild", ogToPng);
-  }
+  eleventyConfig.on("afterBuild", ogToPng);
 
   if (process.env.IS_PREVIEW === "true") {
     eleventyConfig.addPassthroughCopy({
