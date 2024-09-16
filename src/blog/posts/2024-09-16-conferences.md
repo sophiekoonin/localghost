@@ -67,6 +67,8 @@ Events with a range indicate early bird pricing vs full pricing.
 * [PerfNow](https://perfnow.nl/) (Amsterdam, web performance, 2 days, ££££) [Sia](https://front-end.social/@sia/113147478766361053) says: "Single track, one topic, great speakers, cool venue".
 * [Future Frontend]() (Espoo, Finland, web, 2 days, £££). [Sylwia](https://github.com/sylwiavargas) says: "The organizers put a lot of care into the speaker selection, and the sessions are grouped into thematic clusters which is interesting (so you have for example a block on green tech or music tech). There are lots of local speakers which is great. Everything is very well-organized and folks attending it are lovely. It’s a good conference to both learn a lot (it’s not devrel pitches), meet some nice folks, and enjoy the Finnish never-ending summer days."
 
+
 ### Rest of world 
 * [Smashing Conference](https://smashingconf.com) (New York, web/UX, 2 days + workshops extra, ££) See above! 
+* [JSConf](https://jsconf.com) (different countries) - I was lucky enough to go to the last CSSConf/JSconf EU in Berlin in 2019 and it was incredible. Lucky for us there are still a variety of JSConfs in different places including Budapest, Honolulu and Guadalajara!
 * ??? &ndash; would love to hear of more conferences outside of Europe that I should be mentioning here! 
