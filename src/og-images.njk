@@ -17,13 +17,17 @@ markdown: false
     xmlns:xlink="http://www.w3.org/1999/xlink">
     {% set titleInLines = post.data.title | splitlines %}
     {% set numberOfLines = titleInLines.length %}
-    {% set verticalStartingPoint = 350 %}
+    {% set verticalStartingPoint = 380 %}
 
     {% if post.data.subtitle %}
     {% set subtitleInLines = post.data.subtitle | splitlines %}
     {% set numberOfLines = titleInLines.length + subtitleInLines.length %}
     {% endif %}
-
+    {% set fontSize = 90%}
+    {% if numberOfLines > 3 %} 
+        {% set fontSize = "75" %}
+        {% set verticalStartingPoint = 350 %}
+    {% endif %}
     {% if numberOfLines > 1 %}
     {% set verticalStartingPoint = verticalStartingPoint - (numberOfLines * 20 + (5 * numberOfLines - 1)) %}
     {% endif %}
@@ -31,7 +35,7 @@ markdown: false
     <text text-anchor="start" font-family="'ReffsPixelFont', sans-serif" font-size="45" fill="#132e23">
         <tspan x="30" y="600">localghost.dev</tspan>
     </text>
-    <text id="text" font-family="'ReffsPixelFont', sans-serif" font-size="70" fill="#132e23" font-weight="bold">
+    <text id="text" font-family="'ReffsPixelFont', sans-serif" font-size="{{ fontSize }}" fill="#132e23" font-weight="bold">
         {% for line in titleInLines %}
             <tspan text-anchor="middle" x="50%" y="{{ verticalStartingPoint + loop.index0 * 80 }}">{{ line }}</tspan>
         {% endfor %}

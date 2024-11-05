@@ -1,5 +1,14 @@
 // https://bnijenhuis.nl/notes/automatically-generate-open-graph-images-in-eleventy/
 module.exports = function (input) {
+  let lines = splitLines(input, 25);
+
+  if (lines.length >= 4) {
+    lines = splitLines(input, 30);
+  }
+  return lines;
+};
+
+function splitLines(input, maxLineLength) {
   const parts = input.split(" ");
 
   const lines = parts.reduce(function (acc, current, idx) {
@@ -9,7 +18,7 @@ module.exports = function (input) {
 
     const prevLine = acc[acc.length - 1];
 
-    const isTooLong = prevLine.length + ` ${current}`.length > 25;
+    const isTooLong = prevLine.length + ` ${current}`.length > maxLineLength;
 
     // If we're in danger of having an orphan, force the penultimate word onto a new line
     if (isTooLong && idx === parts.length - 1 && !current.includes("-")) {
@@ -20,7 +29,7 @@ module.exports = function (input) {
       return acc;
     }
 
-    if (isTooLong || prevLine.charAt(prevLine.length - 1) === ":") {
+    if (isTooLong || (prevLine.charAt(prevLine.length - 1) === ":" && prevLine.len > 1)) {
       return [...acc, current];
     }
 
@@ -29,4 +38,4 @@ module.exports = function (input) {
     return acc;
   }, []);
   return lines;
-};
+}

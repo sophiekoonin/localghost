@@ -45,7 +45,8 @@
     "clear-cache": "rm -rf tweets",
     "generate-links": "node scripts/compile-links.js",
     "postbuild": "scripts/send-webmentions",
-    "send-webmentions": "webmention _site/feed.xml --limit 1 --send"
+    "send-webmentions": "webmention _site/feed.xml --limit 1 --send",
+    "clear-og": "rm src/static/og-images/*"
   },
   "packageManager": "yarn@4.2.1"
 }
