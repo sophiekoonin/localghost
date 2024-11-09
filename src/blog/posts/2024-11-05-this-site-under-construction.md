@@ -1,11 +1,12 @@
 ---
-title: "This site is under construction: a love letter to the personal website"
+title: "This page is under construction"
+subtitle: “A love letter to the personal website”
 date: 2024-11-05
 draft: true
 tags: ["conferences", "tech", "nostalgia","personal websites"]
 ---
 
-*This is a written version of the talk I gave at several conferences throughout 2022/23, including Beyond Tellerrand, CSS Day and FFConf.*
+*This is an updated version of the talk I gave at several conferences throughout 2022/23, including Beyond Tellerrand, CSS Day and FFConf.*
 
 If you take one thing away from this post: I want you to build your own website. And I don’t mean build the website that everyone has with the sections, calls to action and feature grids. 
 
@@ -15,7 +16,9 @@ Your website looks the same though.' At the bottom there's a panel with three co
 <figcaption>Source: [novolume.co.uk](http://www.novolume.co.uk/blog/all-websites-look-the-same/)</figcaption>
 </figure>
 
-No, I mean a space that's *entirely yours*: a reflection of yourself in HTML and CSS (and a little bit of JS, as a treat). This could be a professional portfolio, listing your accomplishments... or it could be something very weird and pointless (even better). I love a good one-joke website. Ultimately it's your space and you can do whatever you want with it.
+No, I mean a space that's *entirely yours*: a reflection of your personality in HTML and CSS (and a little bit of JS, as a treat). This could be a professional portfolio, listing your accomplishments... or it could be something very weird and pointless (even better). I love a good one-joke website. 
+
+Ultimately, it's your space and you can do whatever you want with it.
 
 In the early days of the web, there were a lot of sites like this. People would build websites for their families, fansites for bands they liked, or just homepages they filled with random junk. It was a fun thing to do, and a great way to connect with people. But this seems to have been lost somewhere.
 
@@ -35,15 +38,30 @@ I'm not saying don't use frameworks, but you do need that foundational knowledge
 
 ### But I still have fun on the web!
 
-The websites we use for fun are also for business. Think about how you use the web today.
+Well, sure. But ultimately the websites we use for fun are also for business. Think about how you use the web today: chances are, many of you spend the majority of your time on a handful of websites and apps owned by big companies. 
 
-set of websites - owned by few companies
-web is centralised 
+Under the guise of a free service, these companies are making money from data they're harvesting from us. ("We are the product" may be a cliché at this point, but it's a cliché for a reason.) They might not be explicitly selling it on, but they are likely using your data to feed into advertising algorithms. We upload images, videos, run our social lives and even our businesses on these platforms. Instagram's terms of service give Meta carte blanche to reproduce, distribute or copy your images royalty-free. 
 
-guise of free service, making money from harvested data
-personalised advertising, sell to 3rd party
-running costs but at end of day, are businesses
-existing for the purpose of making money
+Meta makes an absolute killing on advertising that can reach highly specific target markets, and they wouldn't be able to do that without using your personal data and browsing habits to label your user account with things they think you like. 
+
+Have you looked at your Instagram/Facebook settings lately, in the ad preferences section? It's quite illuminating what they decide to use to target you.
+
+Laura Kalbag gave [a great talk about digital privacy](https://ffconf.org/talks/privacy/) at FFConf 2019, and it was this talk that spurred me on to ditch Gmail and set up a paid-for email account. I recommend giving it a watch.
+
+#### Internet of Slop
+
+When I originally wrote this talk, generative AI was something people were just starting to experiment with, mainly to make really stupid-looking generated images with DALL-E. Within a couple of years it's absolutely everywhere: we have a million identical "AI" startups popping up &ndash; many of whose products are just ChatGPT in a trenchcoat &ndash; and creators’ work is being ripped off left right and centre. Companies like LinkedIn are starting to use our data and the content we post on their platforms to train their models, but even worse, most are making it *opt-out*. (Side note, imagine a model trained on the entirety of LinkedIn; talk about garbage-in-garbage-out.)
+
+I’d like to point you towards Maggie Appleton’s excellent talk [The Expanding Dark Forest and Generative AI](https://maggieappleton.com/forest-talk) (there’s also a very good talk version that I saw at FFConf 2023) which goes into this in a little more detail and offers some food for thought that may give you indigestion. People have already started putting little badges on their site that say “Made by a human”, and Maggie asks: is there a future in which we need to have 
+
+> [It] feels like we’re surrounded by content that doesn’t feel authentic and human. Lots of this content is authored by bots, marketing automation, and growth hackers pumping out generic clickbait with ulterior motives.
+
+The moral of this is: we’ve come an awfully long way from the days when we were the creators, and we owned our own content.
+
+
+
+------ 
+
 
 social media biggest offender
 write post, upload videos, share images on centralised platforms
@@ -55,7 +73,7 @@ make money off us
 We’ve come a long way from the days when we were the creators, and we owned our own content.
 
 when it comes to content, moderate yourself
-aim to please your audience
+aim to please your audienc
 dopamine hits - follows, likes 
 “what can I post that people will respond positively to?”.  
 same thumbnail on youtube, same variations of tweets
@@ -85,5 +103,4 @@ interactions not transferrable
 when I left twitter I had to export my data - it didn’t come for ages
 
 sites die - e.g. Myspace, 12 years of data, 2019
-
 
