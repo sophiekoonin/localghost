@@ -219,9 +219,7 @@
       a span:first-of-type {
         @extend .visually-hidden;
       }
-      #twitter-link {
-        display: none;
-      }
+
       #mastodon-link {
         & + span {
           content: url("/img/geocities/guestbook.gif");
@@ -230,6 +228,16 @@
           }
         }
       }
+
+      #bluesky-link {
+        & + span {
+          content: url("/img/geocities/fax.gif");
+          @media (prefers-reduced-motion: reduce) {
+            content: url("/img/geocities/static/fax.png");
+          }
+        }
+      }
+
       #rss-link {
         & + span {
           content: url("/img/geocities/subscribe.gif");
