@@ -1,5 +1,5 @@
 ---
-title: "Creativity for creativity's sake"
+title: "The art in everyday life"
 date: 2024-11-12
 excerptText: "You don’t have to paint the Sistine Chapel to bring art into the world."
 tags: ["conferences", "art", "personal"]
