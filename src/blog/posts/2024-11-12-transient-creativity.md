@@ -25,6 +25,8 @@ The wonderful [Hidde de Vries](https://hidde.blog) stepped out of his usual role
 <figcaption>Hidde at Beyond Tellerrand Berlin 2024</figcaption>
 </figure>
 
+And it made me think some more. I should be broader in my definition of "art". Anything remotely creative can be art, if you want it to be. Anything that moves you, or makes you feel something, or brings you joy.
+
 Art is in the songs I teach to my choir, the arrangements I’m proud of even if they only exist as mp3s on a Google Drive and as individual parts in the brains of a handful of exhausted Londoners. We’ll perform those songs, bring joy to the audience (and ourselves), and people might remember it, or they might not. 
 
 Art is watching other people in the choir learn to arrange and conduct songs, their faces lighting up as the harmony comes together and the choir is brings their ideas to life. 
