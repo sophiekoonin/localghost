@@ -6,7 +6,7 @@ tags: ["conferences", "art", "personal"]
 ---
 I was very fortunate to speak at another excellent Beyond Tellerrand last week, alongside some brilliant and wonderful people. Once again I was inspired by the variety of topics and messages people shared on the stage. Alongside the usual artists’ inspiring career stories and techies’ (equally inspiring) web design magic, there was a strong undercurrent of anticapitalist messaging in a way that is more important than ever, especially relevant given the conference happened in the wake of a truly disastrous election result in the US. 
 
-Talented illustrator and lovely human, Paddy Donnelly, [spoke](https://beyondtellerrand.com/events/berlin-2024/speakers/paddy-donnelly#talk) about his career change from UX designer to children’s book author and illustrator. He reflected that before he changed career, he realised that everything he created was digital, and that he wanted to create a lasting legacy in the world &ndash; something that would be around long after he was. 
+Talented illustrator and lovely human Paddy Donnelly [spoke](https://beyondtellerrand.com/events/berlin-2024/speakers/paddy-donnelly#talk) about his career change from UX designer to children’s book author and illustrator. He reflected that before he changed career, he realised that everything he created was digital, and that he wanted to create a lasting legacy in the world &ndash; something that would be around long after he was. 
 
 At this point I had one of my multiple (and regular) existential crises wondering whether I could really say the same about anything I do. Will there be anything that I can point to when I’m old and say “I did that”? (What is the point of anything, what am I doing with my life, etc etc.)
 
