@@ -10,7 +10,7 @@ Talented illustrator and lovely human Paddy Donnelly [spoke](https://beyondtelle
 
 At this point I had one of my multiple (and regular) existential crises wondering whether I could really say the same about anything I do. Will there be anything that I can point to when I’m old and say “I did that”? (What is the point of anything, what am I doing with my life, etc etc.)
 
-Well, possibly not. I do software development for a bank. But I don’t actually think that matters very much. Because art is many things, as Hidde said, and some of those things are transient. And I relish things that bring me joy in the present moment. 
+Well, possibly not. I do software development for a bank. But I don’t actually think that matters very much. Because art is many things, and some of those things are transient. And I relish things that bring me joy in the present moment. 
 
 (To be clear, I totally respect Paddy’s thinking there and our world is all the richer for the beautiful books he writes; it’s actually my own immediate existential crisis that I’m disagreeing with here.)
 
