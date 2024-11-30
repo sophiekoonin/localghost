@@ -82,10 +82,11 @@
       }
     }
 
-    .two-col {
+    .content-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
       align-items: center;
+      justify-items: center;
 
       gap: 1rem;
       img,
@@ -122,7 +123,7 @@
   &[data-type] {
     position: relative;
 
-    .two-col {
+    .grid {
       align-items: start;
     }
   }

@@ -35,7 +35,7 @@ Art is in the weird and wonderful websites I make occasionally, which bring peop
 
 Art is in the food I make. I’m a great cook (and an even messier one) and the Jewish side of my family has instilled in me a primal need to feed everybody. I show love through my food, so I bake for people, I mail out homemade sweets at Christmas, and I love feeding a crowd. Hours of preparation is gone in minutes, but it’s worth it. 
 
-<div class="two-col"> 
+<div class="content-grid"> 
 <figure>
 <img src="/img/blog/creativity24/cardamom.JPG" alt="Small knotted cardamom buns sit carefully posed on a wooden board. They're glazed, and dusted with sugar.">
 <figcaption>Cardamom buns: recipe <a href="https://www.fixfeastflair.com/home/2015/2/9/swedish-cardamom-rolls-kardemummabullar-recipe">FixFeastFlair</a></figcaption>
@@ -52,7 +52,7 @@ Art is in the food I make. I’m a great cook (and an even messier one) and the 
 
 Art is in the flowers I grow, which bring colour and beauty to the garden for a brief season before dying back, but will sustain the insects and birds that pollinate our plants and underpin our ecosystem.
 
-<div class="two-col"> 
+<div class="content-grid"> 
 <figure>
 <img src="/img/blog/creativity24/verbena.JPG" alt="A hot pink verbena with clusters of tiny flowers against a backgrop of green foliage, next to some sage and mint and a fern that needs dead leaves cutting off">
 <figcaption>Verbena Sissinghurst</figcaption>

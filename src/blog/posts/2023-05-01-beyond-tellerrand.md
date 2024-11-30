@@ -17,7 +17,7 @@ From the first conversation with [Marc](http://www.marcthiele.com/) I knew this 
 
 Speaking of the incredible production quality: Marc got dina Amin to do these [unbelievably cool stop-motion videos of our names](https://youtu.be/SfIzk_9fdYs) (by the way, she's the loveliest person and I'm so excited to see her speak at All Day Hey next week). Even more impressive: there were posters for each of our talks, and they were AR-enabled! I managed to get my poster home on the plane, and I've framed it by my desk.
 
-<div class="two-col"> 
+<div class="content-grid"> 
 <a href="/img/blog/beyond-tellerrand-2023/bt-poster.JPG" target="_blank"><img src="/img/blog/beyond-tellerrand-2023/bt-poster.JPG" alt="My Beyond Tellerrand poster hanging up in the venue. It says 'A Beyond Tellerrand Film' and underneath has the title of my talk - 'This website is under construction - a love letter to the personal website'. Then it has a series of squares with household objects in, that when you scan it with a special app move to spell my name. Underneath are credits for the conference."></a>
 
 <video controls>
@@ -33,7 +33,7 @@ So, that's my speaker review (100/10 would speak again), but I attended the conf
 
 There were art talks: meditation and the art of Japanese calligraphy with Aoi Yamaguchi, psychedelic slogans and incredible murals from Gemma O'Brien, algorithmic art and machine learning with Mario Klingemann, stories of toasters and living as a goat from Thomas Thwaites, and light painting with the charming Hugh Elliott. The last talk by Eike König was more of a career retrospective which perhaps went over my head a little, but it was still something different. 
 
-<div class="two-col">
+<div class="content-grid">
 <a href="/img/blog/beyond-tellerrand-2023/gemma-obrien.JPG" target="_blank"><img src="/img/blog/beyond-tellerrand-2023/gemma-obrien.JPG" alt="Gemma O'Brien shows the illustrated sick bags she's done on various flights, all with puns relating to movie titles."></a>
 <a href="/img/blog/beyond-tellerrand-2023/thomas-thwaites.JPG" target="_blank"><img src="/img/blog/beyond-tellerrand-2023/thomas-thwaites.JPG" alt="Thomas Thwaites shows his handmade toaster, which he snuck onto the shelf of John Lewis"></a>
 </div>
