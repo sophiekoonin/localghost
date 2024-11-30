@@ -87,13 +87,13 @@ A couple of months ago I went to see *Fragile Beauty*, the [exhibition](https://
 
 ## Books
 
-Continuing my habit of alternating a good book with a trash book. Like main course and dessert. 
+Continuing my habit of alternating a good book with a trash book. One grown-up book, one fantasy romance book. Like main course and dessert.
 
 [Children of Time](https://en.wikipedia.org/wiki/Children_of_Time_(novel)) by Adrian Tchaikovsky: a sci-fi set in the far future where we've gone and trashed earth so they're trying to populate a new planet with primates and some virus to fast-forward evolution, only it doesn't quite go to plan. Not for arachnophobes. The second one didn't grab me quite so much but I'll finish it at some point! 
 
-I also enjoyed [Yellowface](https://uk.bookshop.org/p/books/yellowface-rebecca-f-kuang/6923283?ean=9780008532819) by Rebecca F Kuang &ndash; an excellent story of a white author who takes credit for her Chinese-American friend's work &ndash; and it took me *far* too long to realise she is also R.F. Kuang who wrote the brilliant [Babel](https://uk.bookshop.org/p/books/babel-or-the-necessity-of-violence-an-arcane-history-of-the-oxford-translators-revolution-r-f-kuang/6627642?ean=9780008501853) (linguistics! magical realism! colonialism!). So, an author to follow.
-
 I've been reading plenty of fantasy-romance books as well, like everyone else in my immediate sphere. I've ticked off some of the big series: Throne of Glass, Crescent City, From Blood and Ash, etc. They all blend into one at some point, but are still completely unputdownable. I read one recently called [Paladin's Grace](https://uk.bookshop.org/p/books/paladin-s-grace-t-kingfisher/7672899) (by T. Kingfisher) which was quite a nice change: the characters were over the age of about 25, and the male protagonist was a paladin who likes to knit socks for people. It was a nice break from all the brooding and snarling.
+
+I also enjoyed [Yellowface](https://uk.bookshop.org/p/books/yellowface-rebecca-f-kuang/6923283?ean=9780008532819) by Rebecca F Kuang &ndash; an excellent story of a white author who takes credit for her Chinese-American friend's work &ndash; and it took me *far* too long to realise she is also R.F. Kuang who wrote the brilliant [Babel](https://uk.bookshop.org/p/books/babel-or-the-necessity-of-violence-an-arcane-history-of-the-oxford-translators-revolution-r-f-kuang/6627642?ean=9780008501853) (linguistics! magical realism! colonialism!). So, an author to follow.
 
 
 ## Garden
