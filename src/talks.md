@@ -18,12 +18,13 @@ Some of the things I like to talk about include:
 </figure>
 
 ## Upcoming events
-* [Beyond Tellerand Berlin](https://beyondtellerrand.com/events/berlin-2024), November 2024
-
+- JSHeroes 2024
+  
 ## Talk history
 
 ### Conferences
 Some of the events I've spoken at in the past include:
+- Beyond Tellerrand Berlin 2024
 - Smashing Conf Freiburg 2024
 - Pixel Pioneers Bristol 2024
 - All Day Hey! 2024
