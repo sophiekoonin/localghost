@@ -1,7 +1,6 @@
 ---
 title: I repaired my Steam Deck and it was fine, actually
 date: 2025-01-13
-draft: true
 tags: ["personal", "gaming"]
 excerptText: "Hooray for right to repair!"
 ---
