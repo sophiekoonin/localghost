@@ -17,8 +17,8 @@ module.exports = class {
     };
   }
 
-  async render({ file, rawFilePath }) {
-    const transpiled = sass.renderSync({ file }).css.toString();
+  async render({ file }) {
+    const transpiled = sass.compile(file).css.toString();
     return await postcss([require("cssnano")])
       .process(transpiled, { from: file })
       .then((result) => result.css);
