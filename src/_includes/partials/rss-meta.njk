@@ -1,5 +1,5 @@
 <link rel="alternate" href="{{ metadata.feed.url | url }}" type="application/atom+xml" title="{{ metadata.title }}"/>
-<link rel="alternate" href="{{ metadata.url}}articles.xml" type="application/atom+xml" title="localghost.dev - just the articles"/>
+<link rel="alternate" href="{{ metadata.url}}/articles.xml" type="application/atom+xml" title="localghost.dev - just the articles"/>
 {% for feed in collections.categoryFeeds %}
-<link rel="alternate" href="{{metadata.url}}{{ feed }}s.xml" type="application/atom+xml" title="localghost.dev - just the {{ feed }} posts"/>
+<link rel="alternate" href="{{metadata.url}}/{{ feed }}s.xml" type="application/atom+xml" title="localghost.dev - just the {{ feed }} posts"/>
 {% endfor %}
