@@ -79,9 +79,9 @@ According to the World Health Organisation:
 
 > “Disability is not just a health problem. It is a complex phenomenon, reflecting the interaction between features of a person’s body and features of the society in which [they live]."
 
-So much of the world around us can influence whether or not we have, or consider ourselves to have, a disability. Summed up perfectly in this Tweet by [Amanda Leduc](https://twitter.com/amandaleduc/status/1300083052710899712):
-
-{% tweet "1300083052710899712" %}
+So much of the world around us can influence whether or not we have, or consider ourselves to have, a disability. Summed up perfectly by [Amanda Leduc](https://amandaleduc.com/) (originally on Twitter):
+> If you wear corrective lenses of any kind, you have a disability. And guess what: your disability has already been accommodated, which is part of why you might not see yourself as disabled.
+> @AmandaLeduc, Aug 30, 2020.
 
 ## Myth 4: Accessibility is a barrier to good design
 

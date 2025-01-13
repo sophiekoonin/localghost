@@ -68,11 +68,11 @@ Finally, I treated myself to lunch at [Fallow](https://fallowrestaurant.com/) on
 
 <div class="content-grid"> 
 <figure>
-<img src="/img/blog/fallow-starter.jpeg" alt="Golden slices of toast are stacked on a wooden board next to a scoop of caramel-coloured mushroom parfait. The parfait has shavings of white mushroom on top. In the background, out of focus, is a bowl of dark brown crispy corn ribs, served with a wedge of lime.">
+<img src="/img/blog/things-ive-been-enjoying/fallow-starter.jpeg" alt="Golden slices of toast are stacked on a wooden board next to a scoop of caramel-coloured mushroom parfait. The parfait has shavings of white mushroom on top. In the background, out of focus, is a bowl of dark brown crispy corn ribs, served with a wedge of lime.">
 <figcaption>Fallow's mushroom parfait, with corn ribs in the background</figcaption>
 </figure>
 <figure>
-<img src="/img/blog/fallow-dessert.JPG" alt="A scoop of rhubarb sorbet sits on top of a perfectly domed meringue, surrounded by a bright pink moat of rhubarb and jasmine sauce">
+<img src="/img/blog/things-ive-been-enjoying/fallow-dessert.JPG" alt="A scoop of rhubarb sorbet sits on top of a perfectly domed meringue, surrounded by a bright pink moat of rhubarb and jasmine sauce">
 <figcaption>Rhubarb pavlova with stem ginger and jasmine tea</figcaption>
 </figure>
 </div>

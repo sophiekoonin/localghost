@@ -62,4 +62,4 @@ Joining me in the web dev contingent were my pals Cassie Evans and Michelle Bark
 
 All in all, I came away feeling so inspired (and so very, very tired). I can't wait to go back next year.
 
-<img src="/img/blog/beyond-tellerrand-2023/coffee.JPG" />
+<img src="/img/blog/beyond-tellerrand-2023/coffee.JPG" alt="A mug with a line drawing of a spaceman on it, next to two Polaroid-style instant photos of me on stage at Beyond Tellerrand, and me at the breakfast table with two other speakers. " />

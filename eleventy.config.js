@@ -92,12 +92,12 @@ module.exports = (eleventyConfig) => {
   });
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     formats: ["webp", "jpeg"],
+    widths: [280, 640, 960],
     htmlOptions: {
       imgAttributes: {
         loading: "lazy",
         decoding: "async",
       },
-      pictureAttributes: {},
     },
   });
 
