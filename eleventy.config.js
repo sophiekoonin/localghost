@@ -5,6 +5,8 @@ const tweetPlugin = require("eleventy-plugin-embed-tweet");
 const syntaxPlugin = require("@11ty/eleventy-plugin-syntaxhighlight");
 const redirectsPlugin = require("eleventy-plugin-redirects");
 const convertOGImage = require("./src/plugins/og-to-png");
+const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+
 // Filters
 const dateFilter = require("./src/filters/date-filter");
 const urlDateFilter = require("./src/filters/date-filter-url");
@@ -19,6 +21,7 @@ const markdownItAnchor = require("markdown-it-anchor");
 const mdfigcaption = require("markdown-it-image-figures");
 const codeSnippet = require("./src/plugins/code-snippet");
 const ogToPng = require("./src/plugins/og-to-png");
+
 const markdownItOptions = {
   html: true,
   breaks: true,
@@ -87,6 +90,16 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(redirectsPlugin, {
     template: "clientSide",
   });
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    formats: ["webp", "jpeg"],
+    htmlOptions: {
+      imgAttributes: {
+        loading: "lazy",
+        decoding: "async",
+      },
+      pictureAttributes: {},
+    },
+  });
 
   // Return all the tags used in a collection
   eleventyConfig.addFilter("getAllTags", (collection) => {
@@ -103,6 +116,7 @@ module.exports = (eleventyConfig) => {
 
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   eleventyConfig.setUseGitIgnore(false);
+
   return {
     dir: {
       input: "src",
