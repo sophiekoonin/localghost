@@ -63,4 +63,4 @@ Ultimately, the productivity and success of the company will suffer more if your
 
 Sorry folks, I wrote a long article when I promised you you didn't have to read articles. Go and have a cup of tea and look out of the window for a bit. 
 
-{% tweet "1335331963243257857" %}
+> I guess what I'm saying is I'm really tired, it's okay if you're really tired, let's all be really tired and accept that the Google SRE Workbook will stay untouched on the shelf for a few more weeks
