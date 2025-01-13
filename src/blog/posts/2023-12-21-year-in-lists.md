@@ -45,10 +45,7 @@ My holidays this year took me to Copenhagen with my mum, then later to Norway to
 
 <figure>
 <a href="/img/blog/2023-recap/geiranger.JPG">
-<picture>
-<source srcset="/img/blog/2023-recap/geiranger.webp" type="image/webp">
 <img src="/img/blog/2023-recap/geiranger.JPG" alt="A view from the harbour of Geiranger in Norway, looking out over shimmering waters into the fjord.">
-</picture>
 </a>
 <figcaption>Geiranger
 </figcaption></figure>
@@ -57,20 +54,14 @@ My annual lads' trip with some of my best friends was in the Cotswolds this year
 
 <figure>
 <a href="/img/blog/2023-recap/slimbridge.JPG">
-<picture>
-<source srcset="/img/blog/2023-recap/slimbridge.webp" type="image/webp">
 <img src="/img/blog/2023-recap/slimbridge.JPG" alt="A landscape photo of WWT Slimbridge wetlands. It's bright and sunny with a lovely view over fields and the River Severn estuary, with Wales visible on the other side.">
-</picture>
 </a>
 <figcaption>WWT Slimbridge, looking out over the Severn estuary towards Wales
 </figcaption></figure>
 
 <figure>
 <a href="/img/blog/2023-recap/slimbridge2.JPG">
-<picture>
-<source srcset="/img/blog/2023-recap/slimbridge2.webp" type="image/webp">
 <img src="/img/blog/2023-recap/slimbridge2.JPG" alt="A variety of ducks sit on sunny, green wetlands">
-</picture>
 </a>
 <figcaption>Excellent duck action at Slimbridge
 </figcaption></figure>

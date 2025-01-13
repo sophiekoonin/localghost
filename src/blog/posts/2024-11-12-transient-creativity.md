@@ -41,9 +41,7 @@ Art is in the food I make. I’m a great cook (and an even messier one) and the 
 <figcaption>Cardamom buns: recipe <a href="https://www.fixfeastflair.com/home/2015/2/9/swedish-cardamom-rolls-kardemummabullar-recipe">FixFeastFlair</a></figcaption>
 </figure>
 <figure>
-<picture>
 <img src="/img/blog/creativity24/honey-tart.JPG" alt="A pale yellow tart in a pastry case, with a sprinkling of black and white sesame seeds in a circle on top.">
-</picture>
 <figcaption>Salted honey and sesame custard tart: recipe <a href="https://theguardian.com/food/2023/feb/24/salted-honey-sesame-custard-tart-recipe-benjamin-ebuehi">Benjamina Ebuehi</a></figcaption>
 </figure>
 </div>
@@ -58,9 +56,7 @@ Art is in the flowers I grow, which bring colour and beauty to the garden for a 
 <figcaption>Verbena Sissinghurst</figcaption>
 </figure>
 <figure>
-<picture>
 <img src="/img/blog/creativity24/geranium.JPG" alt="A blue-purple geranium flower with pink stripes and a centre that fades to white. It's set out against a backgrop of pointy geranium leaves.">
-</picture>
 <figcaption>Geranium Rozanne</figcaption>
 </figure>
 </div>

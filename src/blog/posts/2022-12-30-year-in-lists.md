@@ -53,20 +53,13 @@ International travel picked up again this year, with trips to Brussels and Spain
 Iceland was absolutely incredible, I really can't recommend it enough. A week of driving around, taking photos and being surrounded by the most incredible landscapes I've ever seen.
 <figure>
 <a href="/img/blog/2022-recap/skogafoss.webp">
-
-<picture>
-<source srcset="/img/blog/2022-recap/skogafoss.webp" type="image/webp">
 <img src="/img/blog/2022-recap/skogafoss.jpeg" alt="A photo of Skógafoss, a waterfall in Iceland. The waterfall is wide, set between two moss-covered rocks. There is a lot of spray in the air and the weather is overcast.">
-</picture>
 </a>
 <figcaption>Skógafoss, Iceland
 </figcaption></figure>
 
 <figure>
-<picture>
-<source srcset="/img/blog/2022-recap/sunset.webp" type="image/webp">
 <img src="/img/blog/2022-recap/sunset.jpeg" alt="A bright orange sunset, looking out onto the water with some very dark stretches of beach at the bottom, so dark they are black.">
-</picture>
 <figcaption>Sunset at Akranes
 </figcaption></figure>
 
@@ -74,10 +67,7 @@ I finally got the Eurostar (to Brussels) for the first time since it's been at S
 
 I also spent some time in Suffolk with friends, and we went birdwatching at RSBP Minsmere, where we saw an amazing murmuration of starlings!
 <figure>
-<picture>
-<source srcset="/img/blog/2022-recap/murmurations.webp" type="image/webp">
-<img src="/img/blog/2022-recap/murmurations.jpeg" alt="A flock of starlings moving together in a mushroom cloud shape, above a marsh. The starlings look like little black specks, almost like insects. There are larger gulls flying around.">
-</picture>
+<img src="/img/blog/2022-recap/murmurations.JPG" alt="A flock of starlings moving together in a mushroom cloud shape, above a marsh. The starlings look like little black specks, almost like insects. There are larger gulls flying around.">
 <figcaption>Murmuration at RSPB Minsmere
 </figcaption></figure>
 

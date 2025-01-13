@@ -14,7 +14,7 @@ I started writing this post a few days ago, and was so exhausted I couldn't actu
 
 A couple of weeks ago (possibly - I have no concept of time any more) I tweeted this, which seemed to resonate with folks:
 
-{% tweet "1335329159200055303" %}
+> the only coding I've done outside of work in quite a long time is a small bit of JS to apply hats to emoji. I don't know how anyone does tech stuff out of hours, it's exhausting enough doing it IN hours
 
 (A plug for [emojinator](https://emojinator.fun), the site in question where you can add hats to emoji) 
 

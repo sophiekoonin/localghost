@@ -42,16 +42,10 @@ We've well and truly settled in to our house, and I love it so much. Especially 
 
 <div class="content-grid">
 <a href="/img/blog/things-ive-been-enjoying/office-1.png">
-<picture>
-<source srcset="/img/blog/things-ive-been-enjoying/office-1.webp" type="image/webp">
 <img loading="lazy" src="/img/blog/things-ive-been-enjoying/office-1.png" alt="A photograph of my office, painted a peachy-pink colour. There's a light green armchair with two cushions: a black abstract one and a beige one with stylised foxes on it. Behind it is a framed print of the Brick Lane Beigel Bake, and a riso print of a dog catching a frisbee in various positions. There's a tall grey-green IKEA drawer tower with a candle on top, next to a tatty desk with a covered sewing machine and a hand-painted advent calendar on it. Above the desk is a framed movie-poster from Beyond Tellerrand with the title 'this website is under construction - a love letter to the personal website'. There's a healthy looking monstera plant next to the desk, and behind that is a leaning bookshelf covered in trinkets and plants.">
-</picture>
 </a>
 <a href="/img/blog/things-ive-been-enjoying/office-4.png">
-<picture>
-<source srcset="/img/blog/things-ive-been-enjoying/office-4.webp" type="image/webp">
 <img loading="lazy" src="/img/blog/things-ive-been-enjoying/office-4.png" alt="A photo of my desk in the evening. I have a monitor with a lo-fi style purple and blue illustration of a telegraph pole, a desk fan, and a space themed desk mat with a pastel coloured keyboard on it. THere is a mug with some different types of computers on it. I have an Elgato key light air behind my monitor and there's a leather-bound notebook on the desk. Behind the monitor are some pictures (an illustration of the indo-european and uralic language families as a tree, two risograph prints of illustrations of the Barbican conservatory, and a framed print of a caterpillar that says' I do not care, I will write whatever I want and post it online') and a framed cross-stitch sampler featuring the international phonetic alphabet. Next to the desk is a set of framed prints that are just propped up on a set of drawers.">
-</picture>
 </a>
 </div>
 
@@ -62,15 +56,10 @@ It's amazing to have enough space to leave craft stuff out on its own table, and
 Having space in my office for crafts means I've actually done a bit of sewing recently, though still haven't picked up dressmaking since the early days of the pandemic. A few of us in my choir decided to make a banner in the style of the [hand-sewn ones](https://www.artichoke.uk.com/project/women-making-history/) women traditionally made for protests and campaigns (suffrage, peace camps, etc), that we could display at gigs and performances. After brainstorming a few ideas we decided to keep it simple and create a banner with our logo on it. I could probably tell you what podcasts I was listening to while painstakingly zig-zagging edges. It was a joint effort between about five of us, which makes it really special, and I think it came out really well.
 
 It absolutely needs an iron, but it takes a lot more than a blog post to persuade me to get the iron out. 
-<picture>
 <img loading="lazy" src="/img/blog/things-ive-been-enjoying/banner.jpg" alt="A peach-coloured fabric banner with a navy blue fabric cassette tape appliquéd on top. It's emblazoned with the words 'MIXTAPE CHOIR'. It is horribly wrinkled.">
-</picture>
 
 I also decided it'd be a GREAT idea to DIY an advent calendar this year. It is definitely not cheaper than buying one, but it was a fun little project. I'd had lofty ambitions of filling it with non-edible things, but it turns out that gets very expensive very quickly, so I gave up and it's mostly treats. I'm not the *greatest* painter, but good enough &ndash; I think it looks cute! 
-<picture>
-<source srcset="/img/blog/things-ive-been-enjoying/advent-calendar.webp" type="image/webp">
 <img loading="lazy" src="/img/blog/things-ive-been-enjoying/advent-calendar.png" alt="A wooden advent calendar with 24 various-sized drawers. The drawers have been painted red, gold, silver, green and white, and decorated with christmas motifs such as trees, tinsel, wreaths, candy cane stripes and the smallest drawers have been painted to look like presents.">
-</picture>
 
 
 ## Art
@@ -78,9 +67,7 @@ I also decided it'd be a GREAT idea to DIY an advent calendar this year. It is d
 A couple of months ago I went to see *Fragile Beauty*, the [exhibition](https://www.vam.ac.uk/exhibitions/fragile-beauty-photographs-from-the-sir-elton-john-and-david-furnish-collection) of Elton John & David Furnish's photography collection at the V&A. I've always loved photography &ndash; specifically portrait and documentary photography &ndash; so this was a delight. And there was so much of it! I hadn't really known what to expect, but was amazed to see some prints of iconic works by David Avedon, Cindy Sherman and Nan Goldin amongst others. Each room had been expertly curated and I could've spent hours in there. It's on until early Jan 2025 but I think it's been doing a bit of a world tour, so if it pops up near you I highly recommend it. 
 
 <figure>
-<picture>
 <img loading="lazy" src="/img/blog/things-ive-been-enjoying/misty-jimmy-paulette.jpg" alt="Two drag queens sit in the back of a taxi. One of them is wearing a tight metallic tank sleeveless top and has a short, choppy blue wig; she is wearing large silver heart-shaped earrings, thick dark eyeshadow and deep crimson lipstick. The second drag queen is wearing a long-sleeved ripped white fishnet crop top under a metallic bra, with a curly blonde updo wig, very pale face powder with dark eyeshadow and dark red lips. The straps of her bra are hanging off her shoulders.">
-</picture>
 <figcaption><i>Misty and Jimmy Paulette in a taxi, NYC</i>, 1991. ©️ Nan Goldin </figcaption>
 </figure>
 
@@ -101,8 +88,6 @@ I also enjoyed [Yellowface](https://uk.bookshop.org/p/books/yellowface-rebecca-f
 Finally, the garden! It's wonderful and immensely overwhelming having a garden &ndash; well, two actually, as we have a front garden as well &ndash; but we've made such a difference in it already. I swapped out the summer planter for a winter one I put together myself, featuring some gorgeous ornamental brassicas (the cabbagey plants), a spiky blue grass and some other foliage for some texture, and gorgeous berries for colour ("Christmas cherry" apparently, though highly toxic which is not very Christmassy!). I love it, and so far the slugs have stayed off. 
 
 <figure>
-<picture>
 <img loading="lazy" src="/img/blog/things-ive-been-enjoying/planter-winter.jpg" alt="A planter within a larger raised bed. It contains a bushy plant covered in bright orange and green tomato-like berries, a tall spiky blue grass, three cabbage-like ornamental brassicas that are purple and white in the middle, some mossy looking blue grass, a little bit of green foliage spraying out the front, a white cyclamen at the back">
-</picture>
 <figcaption>The rose stems are to dissuade foxes from digging up the newly-planted heucheras around it...</figcaption>
 </figure>
