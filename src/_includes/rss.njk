@@ -23,7 +23,7 @@
       <link href="{{ absolutePostUrl }}"/>
       <updated>{{ post.date | dateToRfc3339 }}</updated>
       <id>{{ absolutePostUrl }}</id>
-      <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
-    </entry>
+    <content type="html">{{ post.content | renderTransforms(post.data.page, metadata.url) }}</content>
+        </entry>
   {%- endfor %}
 </feed>
