@@ -15,9 +15,9 @@ Instead, over the last three and a half weeks I’ve become such a potato that I
 
 My husband took some time off over Christmas as well, and we spent some great time together, visiting a very Christmassy National Trust house, going to the garden centre (haha just kidding that was hell on earth at that time of year), going out for dinner, playing video games together.
 
-I had the time to sit and arrange TWO songs for choir: Pink Pony Club by Chappell Roan (the most recent song I’ve ever arranged, by a solid 20 years), and Stacy’s Mom by Fountains of Wayne, which I’m very excited to teach in February.
+I had the time to sit and arrange TWO songs for choir: [Pink Pony Club by Chappell Roan](https://www.youtube.com/watch?v=GR3Liudev18) (the most recent song I’ve ever arranged, by a solid 20 years), and [Stacy’s Mom by Fountains of Wayne](https://www.youtube.com/watch?v=dZLfasMPOU4), which I’m very excited to teach in February. If you're interested, here are the arrangement recordings: [Pink Pony Club](https://drive.google.com/file/d/1LgXlMpsiaNr8LkFKs0APhM4tIwB0ca8W/view?usp=sharing) and [Stacy's Mom](https://drive.google.com/file/d/1yVwfxDeCxTF3K4obxac8oUBzP1Msulo3/view?usp=drive_link).
 
-I picked up my knitting again after ignoring it for two years, and found it was a great way to keep my attention on the TV instead of looking at my phone. 
+I picked up my knitting again after ignoring it for two years, and found it was a great way to keep my attention on the TV instead of looking at my phone. Yesterday I watched 7 episodes of Veronica Mars while knitting. (Can you believe I'd never watched it until now?) 
 
 Boris the dog came to stay as well, which vastly increased the desire to sit on the sofa playing video games (he likes to fall asleep with his head on your lap).
 
@@ -27,7 +27,7 @@ I went out a bit too:
 - got my hair cut at a tiny but well-rated local hairdressers and I came away with a nice bob with a 50/50 chance of looking like [Javier Bardem in No Country for Old Men](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages.complex.com%2Fcomplex%2Fimage%2Fupload%2Fc_limit%2Cw_680%2Ff_auto%2Cfl_lossy%2Cpg_1%2Cq_auto%2Flyizxjguhaksia3shnfb.jpg&f=1&nofb=1&ipt=f0d9bac6826a5d43b6dcc791819f449c1a3ef576f00c89fb0c21b4656f2177ac&ipo=images) as soon as I try to style it
 - went to see the [Barbie exhibition](https://designmuseum.org/exhibitions/barbie-the-exhibition) at the Design Museum in Kensington, which was decent but probably not worth the trek across London (and honestly disappointed at the lack of [Barbie Fashion Designer](https://en.wikipedia.org/wiki/Barbie_Fashion_Designer) in the collection). 
 
-### Re-evaluating
+### My month of re-evaluation
 
 This time off also gave me opportunity for some reflection. I spent a lot of my late 20s defining myself by my career: I was a software developer first, and a person with hobbies and interests second.  I was a Woman in Tech™, the only woman on my CS masters, and one of only a handful in the tech circles I moved in, so I had to Represent. I joined all the Women in Tech things. I went to tons of meetups (there were many more before the pandemic), I started going to and speaking at conferences. I loved my job and I didn’t understand why people would work jobs they didn’t love. I inexplicably made it onto some “Women in Tech Power List” in 2019. I was relatively well-known in web dev Twitter circles before it got bought out and I left in 2022; Twitter was a big part of my identity, which is horribly sad in retrospect. The most important thing was progression, being promoted and being the best (shout out to my fellow grammar school folks with lifelong overachievement complexes). I had lofty ambitions: I’d climb the ladder, and be a CTO someday! 
 
