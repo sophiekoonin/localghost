@@ -18,7 +18,8 @@ Some of the things I like to talk about include:
 </figure>
 
 ## Upcoming events
-- JSHeroes 2024
+- QCon London 2025
+- JSHeroes 2025
   
 ## Talk history
 
