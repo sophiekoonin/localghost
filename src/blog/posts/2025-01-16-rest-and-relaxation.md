@@ -1,0 +1,42 @@
+---
+title: My month of rest and relaxation
+date: 2025-01-16
+tags: ["personal"]
+excerptText: "Over the last three and a half weeks I’ve become such a potato that I’m considering changing my name to Maris Piper"
+---
+
+After 4 (cumulative) years of service at my job in late 2023, I became eligible for a 3-month paid sabbatical (honestly what a perk). My only prior experience of a work sabbatical had been the offer of a 6-month paid sabbatical after *25 years* of service at a past employer, so needless to say, this was very exciting indeed. 
+
+Cautious of being alone with my thoughts for 3 months &ndash; my husband couldn’t take that much time off work &ndash; I decided to break it up into 3 month-long blocks and take them spread throughout the following couple of years. I took the first month in September 2024, a welcome rest after an intense few months on a particularly difficult project. As with any amount of free time of more than a couple of days, I felt like I was supposed be making the most of this time off and doing as much as humanly possible. I decided I’d learn new (non-work-related) skills; improve the house; do stuff in the garden. I did a bit of that. I started an electronics project to dismantle, clean and rewire a vintage Jubilee line door button to turn it into a Philips Hue lightswitch, except I got stuck on the part of the instructions where I had to actually wire it up to power the LEDs, and realised my knowledge of electrical engineering was so basic that I actually had to go back and learn that stuff first. I promptly forgot everything I learned as soon as I went back to work.
+
+I strategically booked the second part of my sabbatical over Christmas and vowed that I was going to do as little as humanly possible for the first two weeks, then have a productive two weeks. As a sabbatical project I thought I’d have a go at learning some reverse engineering, as I’d done some CTFs at work and really enjoyed them, but it turned out I enjoyed them because they’re puzzles and I’m an absolute puzzle fiend. Re-learning how assembly works is *not* what I wanted to be spending my time doing (I learnt a fair bit about different processor architectures and low-level languages during my masters, but lack of use &ndash; and a very boring lecturer &ndash; has meant it’s all a distant memory), so I quickly abandoned that plan.
+
+Instead, over the last three and a half weeks I’ve become such a potato that I’m considering changing my name to Maris Piper. I started (and sunk lots of hours into) replaying The Witcher 3 on PS5, played many many hours of La Mulana 2 in a horizontal position (and cracked the Steam Deck screen and [replaced it myself](https://localghost.dev/blog/i-repaired-my-steam-deck-and-it-was-fine-actually/)), did a lot of leisurely cooking, planned the meals for our upcoming choir retreat. We did our usual quiet New Year tradition of having my friend over and playing board games, though this year we did manage to make it to midnight and walked up the hill in our local park to watch the fireworks over the river.  
+
+My husband took some time off over Christmas as well, and we spent some great time together, visiting a very Christmassy National Trust house, going to the garden centre (haha just kidding that was hell on earth at that time of year), going out for dinner, playing video games together.
+
+I had the time to sit and arrange TWO songs for choir: [Pink Pony Club by Chappell Roan](https://www.youtube.com/watch?v=GR3Liudev18) (the most recent song I’ve ever arranged, by a solid 20 years), and [Stacy’s Mom by Fountains of Wayne](https://www.youtube.com/watch?v=dZLfasMPOU4), which I’m very excited to teach in February. If you're interested, here are the arrangement recordings: [Pink Pony Club](https://drive.google.com/file/d/1LgXlMpsiaNr8LkFKs0APhM4tIwB0ca8W/view?usp=sharing) and [Stacy's Mom](https://drive.google.com/file/d/1yVwfxDeCxTF3K4obxac8oUBzP1Msulo3/view?usp=drive_link).
+
+I picked up my knitting again after ignoring it for two years, and found it was a great way to keep my attention on the TV instead of looking at my phone. Yesterday I watched 7 episodes of Veronica Mars while knitting. (Can you believe I'd never watched it until now?) 
+
+Boris the dog came to stay as well, which vastly increased the desire to sit on the sofa playing video games (he likes to fall asleep with his head on your lap).
+
+I went out a bit too: 
+- before Christmas I visited a friend who’s just had a baby, and then went to Oxford Street and regretted my life choices
+- met up with a friend at the Photographers’ Gallery in Soho and then had a delicious cardamom bun at Söderberg
+- got my hair cut at a tiny but well-rated local hairdressers and I came away with a nice bob with a 50/50 chance of looking like [Javier Bardem in No Country for Old Men](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages.complex.com%2Fcomplex%2Fimage%2Fupload%2Fc_limit%2Cw_680%2Ff_auto%2Cfl_lossy%2Cpg_1%2Cq_auto%2Flyizxjguhaksia3shnfb.jpg&f=1&nofb=1&ipt=f0d9bac6826a5d43b6dcc791819f449c1a3ef576f00c89fb0c21b4656f2177ac&ipo=images) as soon as I try to style it
+- went to see the [Barbie exhibition](https://designmuseum.org/exhibitions/barbie-the-exhibition) at the Design Museum in Kensington, which was decent but probably not worth the trek across London (and honestly disappointed at the lack of [Barbie Fashion Designer](https://en.wikipedia.org/wiki/Barbie_Fashion_Designer) in the collection). 
+
+### My month of re-evaluation
+
+This time off also gave me opportunity for some reflection. I spent a lot of my late 20s defining myself by my career: I was a software developer first, and a person with hobbies and interests second.  I was a Woman in Tech™, the only woman on my CS masters, and one of only a handful in the tech circles I moved in, so I had to Represent. I joined all the Women in Tech things. I went to tons of meetups (there were many more before the pandemic), I started going to and speaking at conferences. I loved my job and I didn’t understand why people would work jobs they didn’t love. I inexplicably made it onto some “Women in Tech Power List” in 2019. I was relatively well-known in web dev Twitter circles before it got bought out and I left in 2022; Twitter was a big part of my identity, which is horribly sad in retrospect. The most important thing was progression, being promoted and being the best (shout out to my fellow grammar school folks with lifelong overachievement complexes). I had lofty ambitions: I’d climb the ladder, and be a CTO someday! 
+
+(Having subsequently seen many CTOs in action over the years, I am fairly convinced this is not a role I want for myself. Props to CTOs.)
+
+Having time to spend doing hobbies, hanging out with the dog, pottering around the house and *not thinking about work* has made me really redefine how I see myself. In recent times I had worried a lot that I was some kind of fraud turning up at these web conferences and chatting to the friends I’d made there, when my job hardly involves web development any more and I don’t even write much about tech these days because I don’t have the energy or will to do so. 
+
+I’m not a software developer first and foremost, I’m a musician who arranges music for a choir; I’m a cook and a baker; I’m a fiend for puzzles to an embarrassing degree; I’m a fledgling gardener; I sink hours of my life into video games; I’m a person who sometimes does fun things on the web but mostly doesn’t. 
+
+I still like writing code, and I like solving problems. I’m good at what I do. But when I put so much pressure on myself to be The Best At Everything And Also Promoted Quickly And Also Why Am I Not Enjoying This As Much As I Should Be I come away feeling like I’m bad at my job or doing something wrong.
+
+I am grateful that I am paid well, I really like the folks I work with, and most all of that my job allows me to switch off when I finish work and enjoy the things that bring me the most joy. Of course I still have ambition, but it's not all-consuming like it used to be. I don’t have work Slack on my phone, and I can count the times I’ve worked past 6 on...  two fingers? I can be Sophie, the musician/gardener/baker/potato who goes to work and does a good job and comes home and cuddles the dog. That sounds like a much more appealing identity to me. 

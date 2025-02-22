@@ -35,22 +35,16 @@ The Turners are stunning, the [rough seascapes](https://www.tate.org.uk/visit/ta
 
 Later I popped into [Women in Revolt!](https://www.tate.org.uk/whats-on/tate-britain/women-in-revolt), the Tate's exhibition of feminist art and activism from 1970-1990. A real diverse range of artworks, protests, political pieces and campaigns: including equal pay & division of labour, perceptions of lesbianism, the DIY scene, protesting nuclear weaponry, Black feminist art, AIDS, and the Thatcher government. It's on until 7th April.
 
-<div class="two-col"> 
+<div class="content-grid"> 
 <figure>
 <a href="/img/blog/things-ive-been-enjoying/anne-bean.jpeg">
-<picture>
-<source srcset="/img/blog/things-ive-been-enjoying/anne-bean.webp" type="image/webp">
 <img src="/img/blog/things-ive-been-enjoying/anne-bean.jpeg" alt="An artwork hanging on the wall at the Tate Britain. A series of 9 framed photographs in a grid showing the artist's face appearing to be on fire">
-</picture>
 </a>
 <figcaption><i>Heat</i> by Anne Bean</figcaption>
 </figure>
 <figure>
 <a href="/img/blog/things-ive-been-enjoying/thatcher.jpeg">
-<picture>
-<source srcset="/img/blog/things-ive-been-enjoying/thatcher.webp" type="image/webp">
 <img src="/img/blog/things-ive-been-enjoying/thatcher.jpeg" alt="A 1980s artwork showing Margaret Thatcher with the words 'my message to the women of our nation' and a speech bubble coming from Thatcher's face saying 'TOUGH!'. The image of Thatcher is surrounded by illustrations describing ways in which her government has harmed women: hospitals closed, nurseries closed, council houses for sale, unemployment, £4,000,000,000 cut in public spending by 1981, elderly care centres closed, £308,000,000 cut from housing budget, fares increase, VAT up to 15%, £55,000,000 cut from education programme, gas and electricity up">
-</picture>
 </a>
 <figcaption>Tough (1979) - The See Red Women's Workshop</figcaption>
 </figure>
@@ -72,19 +66,13 @@ One of my favourite lunches near the office is at Spitalfields Market, a pricey 
 
 Finally, I treated myself to lunch at [Fallow](https://fallowrestaurant.com/) on Haymarket recently, managing to book a seat at the chef's table where you can watch the chefs working. In a bizarre and wonderful twist, a couple was seated next to me and it turned out to be my friend/tech lead from my first proper dev role (one of my favourite teams ever). We had a good catch up, and she let me try some of her, er, [cod's head](https://www.greatbritishchefs.com/recipes/cods-head-with-sriracha-butter-sauce-recipe). A couple of must-try dishes are the mushroom parfait which made me see stars, and the corn ribs which are very, very, *very* good. They have a set lunch menu which includes the mushroom parfait. For dessert, I had a rhubarb and ginger pavlova with jasmine tea, and it was so potent I felt like I was sitting next to an actual jasmine bush. Absolutely delightful. 
 
-<div class="two-col"> 
+<div class="content-grid"> 
 <figure>
-<picture>
-<source srcset="/img/blog/things-ive-been-enjoying/fallow-starter.webp" type="image/webp">
-<img src="/img/blog/fallow-starter.jpeg" alt="Golden slices of toast are stacked on a wooden board next to a scoop of caramel-coloured mushroom parfait. The parfait has shavings of white mushroom on top. In the background, out of focus, is a bowl of dark brown crispy corn ribs, served with a wedge of lime.">
-</picture>
+<img src="/img/blog/things-ive-been-enjoying/fallow-starter.jpeg" alt="Golden slices of toast are stacked on a wooden board next to a scoop of caramel-coloured mushroom parfait. The parfait has shavings of white mushroom on top. In the background, out of focus, is a bowl of dark brown crispy corn ribs, served with a wedge of lime.">
 <figcaption>Fallow's mushroom parfait, with corn ribs in the background</figcaption>
 </figure>
 <figure>
-<picture>
-<source srcset="/img/blog/things-ive-been-enjoying/fallow-dessert.webp" type="image/webp">
-<img src="/img/blog/fallow-dessert.JPG" alt="A scoop of rhubarb sorbet sits on top of a perfectly domed meringue, surrounded by a bright pink moat of rhubarb and jasmine sauce">
-</picture>
+<img src="/img/blog/things-ive-been-enjoying/fallow-dessert.JPG" alt="A scoop of rhubarb sorbet sits on top of a perfectly domed meringue, surrounded by a bright pink moat of rhubarb and jasmine sauce">
 <figcaption>Rhubarb pavlova with stem ginger and jasmine tea</figcaption>
 </figure>
 </div>

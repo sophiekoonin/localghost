@@ -6,11 +6,9 @@ layout: 'page.njk'
 
 I started building websites on Geocities at the age of 10, graduating over the years to various questionable free hosting sites, `.tk` domains, [Greymatter](https://en.wikipedia.org/wiki/Greymatter_(software))-powered personal sites hosted on other people's pretentiously-named `.org` domains, and eventually over-engineered Wordpress blogs. It was inevitable that I'd end up doing it for a living.
 
-![](/img/sophie-transparent.png){.about-photo}
-
-I lead the Web Discipline at [Monzo](https://www.monzo.com), where I'm also a senior web engineer.
+![](/static/img/sophie-transparent.png){.about-photo eleventy:formats="webp,png"}
   
-By day I build web things for fun and profit, but by night I make music with [Mixtape](https://www.mixtapechoir.co.uk). I also enjoy gardening, baking, dogs, crafting, [mechanical keyboards](/keyboards), surreal memes and [video games](/games). 
+By day I do computer things for profit, but by night I make music with [Mixtape](https://www.mixtapechoir.co.uk). I also enjoy gardening, baking, dogs, crafting, [mechanical keyboards](/keyboards), surreal memes and [video games](/games). 
 
 Find me on [Mastodon](https://social.lol/@sophie), or send me an email: [sophie@localghost.dev](mailto:sophie@localghost.dev).
 
