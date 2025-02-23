@@ -29,7 +29,7 @@ If you encounter any accessibility/usability issues while on the site, or any im
 #### Garden theme
 * Foliage and foxgloves: [100 nature things by shubibubi](https://shubibubi.itch.io/nature-things)
 * Flowers: [brysiaa](https://brysiaa.itch.io/8-flowers-with-growth-stages-16x16px)
-* Grass tileset: [comp3interactive](https://comp3interactive.itch.io/simple-grass-tileset)
+* Grass tileset: [Bonsaiheldin](https://opengameart.org/content/grass-tileset-16x16) /  [comp3interactive](https://comp3interactive.itch.io/simple-grass-tileset)
 * Soil pattern/fossil: [adventurekid](https://adventurekid.itch.io/pixel-art-grass-tile-sheet)
 * Clouds: [justajoke](https://justajoke.itch.io/clouds-set-icons)
 * Bird: [Pop Shop Packs](https://pop-shop-packs.itch.io/garden-birds-pixel-character-asset-pack)
