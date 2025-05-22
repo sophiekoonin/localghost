@@ -8,6 +8,7 @@ I love public speaking, so if you’d like me to speak at your meetup or confere
 Some of the things I like to talk about include:
 
 * The independent web and creativity
+* Challenges developers face and how to overcome them
 * Building accessible and inclusive web applications
 * How to write great documentation, clear product copy, and teach technical concepts
 * Fun web things I've built
@@ -18,33 +19,27 @@ Some of the things I like to talk about include:
 </figure>
 
 ## Upcoming events
-- QCon London 2025
-- JSHeroes 2025
+- [JSHeroes](https://jsheroes.io) May 2025
+- [NordicJS](https://nordicjs.com) October 2025
   
 ## Talk history
 
 ### Conferences
 Some of the events I've spoken at in the past include:
-- Beyond Tellerrand Berlin 2024
-- Smashing Conf Freiburg 2024
-- Pixel Pioneers Bristol 2024
-- All Day Hey! 2024
-- Front Conference Zurich 2023
-- CSS Day Amsterdam 2023
-- Beyond Tellerrand Düsseldorf 2023
-- Middlesbrough Frontend 2023
-- ffconf 2022
-- State of the Browser 2022
-- FullStack eXchange 2022
-- UX London 2022
-- JSConf EU 2019 (Community Stage) 
-- GDG Devfest 2021  
-- Next.js Conf 2020
-- JSCamp 2021
-- JSConf IN 2021
-- CityJS London 2022
-- BeJS Conf 2022
-- WeyWeyWeb 2022
+- [Beyond Tellerrand](https://beyondtellerrand.com)
+- [Smashing Conf](https://smashingconf.com) Freiburg
+- [Pixel Pioneers](https://pixelpioneers.co/) 
+- [All Day Hey!](https://heypresents.com) 
+- [QCon](https://qconlondon.com)
+- [Front Conference](https://frontconference.com/)
+- [CSS Day](https://cssday.nl) 
+- [Middlesbrough Frontend](https://www.middlesbroughfe.co.uk/)
+- [ffconf](https://ffconf.com) 
+- [State of the Browser](https://stateofthebrowser.com)
+- [UX London](https://uxlondon.com/) 
+- [CityJS London](https://london.cityjsconf.org/) 
+- [BeJS Conf](https://bejs.io)
+- [WeyWeyWeb](https://www.weyweyweb.com/)
 
 I've spoken about:
 - How to pull off a technical migration
