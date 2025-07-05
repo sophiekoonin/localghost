@@ -16,11 +16,10 @@
     "postcss-cli": "^11.0.0"
   },
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-img": "^6.0.0",
-    "@11ty/eleventy-plugin-rss": "^2.0.2",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@11ty/eleventy-upgrade-help": "3",
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-img": "^6.0.4",
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.1",
     "@remy/webmention": "1.5.0",
     "cssnano": "^7.0.6",
     "date-fns": "^3.1.0",
