@@ -19,13 +19,13 @@ Some of the things I like to talk about include:
 </figure>
 
 ## Upcoming events
-- [JSHeroes](https://jsheroes.io) May 2025
 - [NordicJS](https://nordicjs.com) October 2025
   
 ## Talk history
 
 ### Conferences
 Some of the events I've spoken at in the past include:
+- [JSHeroes](https://jsheroes.io) 
 - [Beyond Tellerrand](https://beyondtellerrand.com)
 - [Smashing Conf](https://smashingconf.com) Freiburg
 - [Pixel Pioneers](https://pixelpioneers.co/) 
