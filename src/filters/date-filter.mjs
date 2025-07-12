@@ -1,6 +1,6 @@
-const { format } = require("date-fns");
+import { format } from "date-fns";
 
-module.exports = (value) => {
+export default (value) => {
   const dateObject = new Date(value);
   return format(dateObject, "d MMMM yyyy");
 };

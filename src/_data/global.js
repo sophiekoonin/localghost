@@ -1,8 +1,9 @@
-const md5 = require("md5");
-const path = require("path");
-const fs = require("fs");
+import md5 from "md5";
+import path from "path";
+import fs from "fs";
+const __dirname = import.meta.dirname;
 
-module.exports = {
+const globalData = {
   baseUrl: process.env.BASE_URL || "https://localghost.dev",
   currentYear() {
     return new Date().getFullYear();
@@ -24,8 +25,10 @@ module.exports = {
   },
   jsFile() {
     const jsDir = path.join(__dirname, "..", "js");
-    const jsFile = fs.readFileSync(path.join(jsDir, "main.js"), "utf-8");
+    const jsFile = fs.readFileSync(path.join(jsDir, "main.mjs"), "utf-8");
     const hash = md5(jsFile).slice(0, 8);
-    return `/js/main.${hash}.js`;
+    return `/js/main.${hash}.mjs`;
   },
 };
+
+export default globalData;

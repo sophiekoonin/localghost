@@ -1,10 +1,12 @@
-const fs = require("fs");
-const path = require("path");
-const postcss = require("postcss");
-const sass = require("sass");
-const md5 = require("md5");
+import fs from "fs";
+import path from "path";
+import postcss from "postcss";
+import * as sass from "sass";
+import md5 from "md5";
 
-module.exports = class {
+const __dirname = import.meta.dirname;
+
+export default class {
   async data() {
     const scssDir = path.join(__dirname, "..", "scss");
     const rawFilePath = path.join(scssDir, "style.scss");
@@ -19,8 +21,10 @@ module.exports = class {
 
   async render({ file }) {
     const transpiled = sass.compile(file).css.toString();
-    return await postcss([require("cssnano")])
-      .process(transpiled, { from: file })
-      .then((result) => result.css);
+    return await import("cssnano").then(async (cssnano) =>
+      postcss([cssnano.default])
+        .process(transpiled, { from: file })
+        .then((result) => result.css)
+    );
   }
-};
+}

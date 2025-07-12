@@ -1,25 +1,25 @@
-const slugify = require("@sindresorhus/slugify");
+import slugify from "@sindresorhus/slugify";
 // Plugins
-const rssPlugin = require("@11ty/eleventy-plugin-rss");
-const syntaxPlugin = require("@11ty/eleventy-plugin-syntaxhighlight");
-const redirectsPlugin = require("eleventy-plugin-redirects");
-const convertOGImage = require("./src/plugins/og-to-png");
-const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+import rssPlugin from "@11ty/eleventy-plugin-rss";
+import syntaxPlugin from "@11ty/eleventy-plugin-syntaxhighlight";
+import redirectsPlugin from "eleventy-plugin-redirects";
+import convertOGImage from "./src/plugins/og-to-png.mjs";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 // Filters
-const dateFilter = require("./src/filters/date-filter");
-const urlDateFilter = require("./src/filters/date-filter-url");
-const w3DateFilter = require("./src/filters/w3-date-filter");
-const splitLines = require("./src/filters/split-lines");
-const markdownFilter = require("./src/filters/markdown-filter");
-const debugFilter = require("./src/filters/debug");
-const draftPlugin = require("./src/plugins/drafts");
-const markdownIt = require("markdown-it");
-const markdownItAttrs = require("markdown-it-attrs");
-const markdownItAnchor = require("markdown-it-anchor");
-const mdfigcaption = require("markdown-it-image-figures");
-const codeSnippet = require("./src/plugins/code-snippet");
-const ogToPng = require("./src/plugins/og-to-png");
+import dateFilter from "./src/filters/date-filter.mjs";
+import urlDateFilter from "./src/filters/date-filter-url.mjs";
+import w3DateFilter from "./src/filters/w3-date-filter.mjs";
+import splitLines from "./src/filters/split-lines.mjs";
+import markdownFilter from "./src/filters/markdown-filter.mjs";
+import debugFilter from "./src/filters/debug.mjs";
+import draftPlugin from "./src/plugins/drafts.mjs";
+import markdownIt from "markdown-it";
+import markdownItAttrs from "markdown-it-attrs";
+import markdownItAnchor from "markdown-it-anchor";
+import mdfigcaption from "markdown-it-image-figures";
+import codeSnippet from "./src/plugins/code-snippet.mjs";
+import ogToPng from "./src/plugins/og-to-png.mjs";
 
 const markdownItOptions = {
   html: true,
@@ -32,7 +32,7 @@ const markdownLib = markdownIt(markdownItOptions)
   .use(markdownItAnchor, { slugify: (s) => slugify(s) })
   .use(mdfigcaption, { figcaption: true, lazy: true, async: true });
 
-module.exports = (eleventyConfig) => {
+const config = (eleventyConfig) => {
   eleventyConfig.addWatchTarget("./src");
   eleventyConfig.addPlugin(draftPlugin);
   eleventyConfig.addPlugin(rssPlugin);
@@ -122,3 +122,5 @@ module.exports = (eleventyConfig) => {
     htmlTemplateEngine: "njk",
   };
 };
+
+export default config;

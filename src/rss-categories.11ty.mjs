@@ -29,4 +29,4 @@ class RSSCategories {
   }
 }
 
-module.exports = RSSCategories;
+export default RSSCategories;

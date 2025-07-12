@@ -1,12 +1,12 @@
 // https://bnijenhuis.nl/notes/automatically-generate-open-graph-images-in-eleventy/
-module.exports = function (input) {
+export default function (input) {
   let lines = splitLines(input, 25);
 
   if (lines.length >= 4) {
     lines = splitLines(input, 30);
   }
   return lines;
-};
+}
 
 function splitLines(input, maxLineLength) {
   const parts = input.split(" ");

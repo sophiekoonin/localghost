@@ -4,7 +4,7 @@ function isScheduledPost(data) {
   return data.date != null && data.date > now;
 }
 
-function eleventyComputedPermalink() {
+export function eleventyComputedPermalink() {
   // When using `addGlobalData` and you *want* to return a function, you must nest functions like this.
   // `addGlobalData` acts like a global data file and runs the top level function it receives.
   return (data) => {
@@ -17,7 +17,7 @@ function eleventyComputedPermalink() {
   };
 }
 
-function eleventyComputedExcludeFromCollections() {
+export function eleventyComputedExcludeFromCollections() {
   // When using `addGlobalData` and you *want* to return a function, you must nest functions like this.
   // `addGlobalData` acts like a global data file and runs the top level function it receives.
   return (data) => {
@@ -30,10 +30,7 @@ function eleventyComputedExcludeFromCollections() {
   };
 }
 
-module.exports.eleventyComputedPermalink = eleventyComputedPermalink;
-module.exports.eleventyComputedExcludeFromCollections = eleventyComputedExcludeFromCollections;
-
-module.exports = (eleventyConfig) => {
+export default (eleventyConfig) => {
   eleventyConfig.addGlobalData("eleventyComputed.permalink", eleventyComputedPermalink);
   eleventyConfig.addGlobalData("eleventyComputed.eleventyExcludeFromCollections", eleventyComputedExcludeFromCollections);
 

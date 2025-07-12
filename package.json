@@ -5,6 +5,7 @@
   "engines": {
     "node": "22"
   },
+  "type": "module",
   "devDependencies": {
     "@sindresorhus/slugify": "1.1.0",
     "autoprefixer": "^10.4.19",

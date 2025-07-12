@@ -1,4 +1,4 @@
-module.exports = function create(options = {}) {
+export default function create(options = {}) {
   const excerptSeparator = options.excerptSeparator || "</p>";
 
   if (typeof excerptSeparator !== "string") {
@@ -15,15 +15,11 @@ module.exports = function create(options = {}) {
     }
 
     if (typeof template?.content !== "string") {
-      throw new Error(
-        "template content must be a string but was: " + templateContent
-      );
+      throw new Error("template content must be a string but was: " + templateContent);
     }
 
     const index = template.content.indexOf(excerptSeparator);
     // slice from 3, to remove initial `<p>`
-    return index !== -1
-      ? template.content.slice(3, index + excerptSeparator.length)
-      : "";
+    return index !== -1 ? template.content.slice(3, index + excerptSeparator.length) : "";
   };
-};
+}

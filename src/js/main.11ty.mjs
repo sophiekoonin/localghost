@@ -1,16 +1,18 @@
-const fs = require("fs");
-const path = require("path");
-const md5 = require("md5");
-const UglifyJS = require("uglify-js");
+import fs from "fs";
+import path from "path";
+import md5 from "md5";
+import UglifyJS from "uglify-js";
 
-module.exports = class {
+const __dirname = import.meta.dirname;
+
+export default class {
   async data() {
-    const rawFilePath = path.join(__dirname, "main.js");
+    const rawFilePath = path.join(__dirname, "main.mjs");
     const fileContents = fs.readFileSync(rawFilePath, "utf-8");
     const hash = md5(fileContents).slice(0, 8);
 
     return {
-      permalink: `js/main.${hash}.js`,
+      permalink: `js/main.${hash}.mjs`,
       file: rawFilePath,
       contents: fileContents,
     };
@@ -19,4 +21,4 @@ module.exports = class {
   async render({ contents }) {
     return UglifyJS.minify(contents).code;
   }
-};
+}

@@ -1,4 +1,4 @@
-module.exports = function (id, title, author) {
+export default function (id, title, author) {
   return `
 <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="${author}" data-slug-hash="${id}" data-preview="true" data-pen-title="${title}">
   <span>See the Pen 
@@ -8,4 +8,4 @@ module.exports = function (id, title, author) {
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 `;
-};
+}

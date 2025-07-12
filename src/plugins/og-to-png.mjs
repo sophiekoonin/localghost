@@ -1,11 +1,11 @@
-const fsPromises = require("fs/promises");
-const fs = require("fs");
-const path = require("path");
-const Image = require("@11ty/eleventy-img");
+import fsPromises from "fs/promises";
+import fs from "fs";
+import path from "path";
+import Image from "@11ty/eleventy-img";
 const ogImagesDir = "./src/static/og-images";
 // with thanks to
 // https://bnijenhuis.nl/notes/automatically-generate-open-graph-images-in-eleventy/
-module.exports = async function () {
+export default async function () {
   const socialPreviewImagesDir = "_site/og-images/";
   const files = await fsPromises.readdir(socialPreviewImagesDir);
 
@@ -31,4 +31,4 @@ module.exports = async function () {
       }
     });
   }
-};
+}
