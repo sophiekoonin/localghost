@@ -1,11 +1,10 @@
-const fetch = require("node-fetch");
 const { format, subDays, addHours } = require("date-fns");
 const fs = require("fs");
 
 const collectionId = process.env.RAINDROP_COLLECTION_ID;
 const token = process.env.RAINDROP_TOKEN;
-const today = new Date().setHours(09).setMinutes(59).setSeconds(59);
-const lastSunday = subDays(today, 7).setHours(10).setMinutes(00).setSeconds(00);
+const today = new Date().setHours(9).setMinutes(59).setSeconds(59);
+const lastSunday = subDays(today, 7).setHours(10).setMinutes(0).setSeconds(0);
 const formattedLastSunday = format(lastSunday, "yyyy-MM-dd");
 const formattedToday = format(today, "yyyy-MM-dd");
 

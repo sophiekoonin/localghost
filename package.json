@@ -27,7 +27,6 @@
     "eleventy-plugin-redirects": "1.0.0",
     "lodash": "^4.17.21",
     "markdown-it-image-figures": "2.1.1",
-    "node-fetch": "^2.7.0",
     "sanitize-html": "^2.13.0",
     "sass": "^1.78.0",
     "sharp": "0.33.3",

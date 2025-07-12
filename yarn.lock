@@ -3093,7 +3093,6 @@ __metadata:
     markdown-it-attrs: "npm:^4.1.6"
     markdown-it-image-figures: "npm:2.1.1"
     md5: "npm:^2.3.0"
-    node-fetch: "npm:^2.7.0"
     postcss: "npm:^8.4.38"
     postcss-cli: "npm:^11.0.0"
     sanitize-html: "npm:^2.13.0"
@@ -3646,7 +3645,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.6.1, node-fetch@npm:^2.7.0":
+"node-fetch@npm:^2.6.1":
   version: 2.7.0
   resolution: "node-fetch@npm:2.7.0"
   dependencies:
