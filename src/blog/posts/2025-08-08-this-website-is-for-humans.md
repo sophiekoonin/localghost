@@ -2,6 +2,7 @@
 title: This website is for humans
 date: 2025-08-08
 tags: ["ai", "site"]
+excerptText: "I don't want Google's shitty AI-generated ramen"
 ---
 
 Walking past a bus stop yesterday I saw an advert for Google’s AI search. The person in the ad had pointed their phone’s camera at a bowl of ramen, and the AI result explained how to reproduce it at home.
