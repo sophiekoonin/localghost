@@ -13,7 +13,7 @@ layout: 'page.njk'
 * [Neocities](https://neocities.org/) - a free web host supporting creative personal websites
 * [CSS Utopia](https://utopia.fyi/) - generate type and spacing scales without breakpoints
 * [Modern CSS](https://moderncss.dev/) - modern CSS solutions for old problems
-* [Every Layout](https://everylayout.dev) - loads of excellent layout primitives, and not a breakpoint in sight.
+* [Every Layout](https://every-layout.dev) - loads of excellent layout primitives, and not a breakpoint in sight.
 * [Tiny Helpers](https://tiny-helpers.dev/) - little tools for web developers
 * [Compute Cuter](https://computecuter.com) - how to make your computer as cute as can be!
 
