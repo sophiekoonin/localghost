@@ -33,7 +33,7 @@
 .content {
   padding-inline: var(--space-2xs);
   margin-inline: auto;
-  max-inline-size: var(--max-inline-size);
+  max-inline-size: min(var(--max-inline-size), 100%);
   background: var(--content-bg);
   flex-basis: 0;
   flex-grow: 999;
