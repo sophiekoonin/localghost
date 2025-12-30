@@ -81,7 +81,7 @@ Some other great albums this year:
 ### ...video games
 This year we bought a Switch 2, and I played a ton of [Hades 2](https://store.steampowered.com/app/1145350/Hades_II/)! I'm actually getting pretty good at it. The soundtrack is great, too. 
 
-I also played [Hollow Knight](https://www.hollowknight.com/)for the first time, and beat the game even though at times I wanted to rage quit and throw the console across the room. I used to avoid roguelikes as I thought they were too hard, but it turns out I needed to approach the boss fights differently from the Borderlands-style games where you just spray-and-pray. It was an exercise in patience, and it ultimately paid off (plus it made Hades seem a lot more attainable). James played the sequel this year and I can safely say that I will not be going near it, having watched him play.
+I also played [Hollow Knight](https://www.hollowknight.com/)for the first time, and beat the game even though at times I wanted to rage quit and throw the console across the room. I used to avoid soulslikes as I thought they were too hard, but it turns out I needed to approach the boss fights differently from the Borderlands-style games where you just spray-and-pray. It was an exercise in patience, and it ultimately paid off (plus it made Hades seem a lot more attainable). James played the sequel this year and I can safely say that I will not be going near it, having watched him play.
 
 I spent a LOT of time on [Blue Prince](https://www.blueprincegame.com/), which was exactly my brand of mystery/puzzle game. 
 
