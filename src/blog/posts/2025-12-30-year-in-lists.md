@@ -88,12 +88,12 @@ I spent a LOT of time on [Blue Prince](https://www.blueprincegame.com/), which w
 ### ...blog posts
 Considerably fewer than last year, but they still seemed to resonate with folks, especially the one about AI slop!
 
-* [I repaired my Steam Deck and it was fine actually](http://localhost:8080/blog/i-repaired-my-steam-deck-and-it-was-fine-actually/): replacing the screen on a console that's designed to be DIYed. 
-* [My month of rest and relaxation](http://localhost:8080/blog/my-month-of-rest-and-relaxation/): reflections from my first month's sabbatical from work.
-* [The blog questions challenge](http://localhost:8080/blog/the-blog-questions-challenge/): a fun little quiz doing the rounds earlier this year.
+* [I repaired my Steam Deck and it was fine actually](/blog/i-repaired-my-steam-deck-and-it-was-fine-actually/): replacing the screen on a console that's designed to be DIYed. 
+* [My month of rest and relaxation](/blog/my-month-of-rest-and-relaxation/): reflections from my first month's sabbatical from work.
+* [The blog questions challenge](/blog/the-blog-questions-challenge/): a fun little quiz doing the rounds earlier this year.
 * [This page is under construction: a love letter to the personal website](/blog/this-page-is-under-construction)
-* [Touching grass, and shrubs, and flowers, and dog](http://localhost:8080/blog/touching-grass-and-shrubs-and-flowers-and-dog/): designing my garden, and a new furry companion.
-* [This website is for humans](http://localhost:8080/blog/this-website-is-for-humans/): a diatribe against AI slop stealing people's work
+* [Touching grass, and shrubs, and flowers, and dog](/blog/touching-grass-and-shrubs-and-flowers-and-dog/): designing my garden, and a new furry companion.
+* [This website is for humans](/blog/this-website-is-for-humans/): a diatribe against AI slop stealing people's work
 
 I also wrote a [guest post](https://piccalil.li/blog/building-a-typed-fetch-in-typescript-with-conditional-types-and-infer/) for Piccalilli about conditional types in TypeScript. 
 
