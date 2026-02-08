@@ -12,8 +12,8 @@ jobs:
     name: "Deploy to Neocities"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
           node-version: "22"
           cache: "yarn"
@@ -24,8 +24,8 @@ jobs:
       - run: yarn build
         env:
           WEBMENTION_IO_TOKEN: ${{ secrets.WEBMENTION_IO_TOKEN }}
-      - uses: bcomnes/deploy-to-neocities@v1
+      - uses: bcomnes/deploy-to-neocities@v3
         with:
-          api_token: ${{ secrets.NEOCITIES_TOKEN }}
+          api_key: ${{ secrets.NEOCITIES_TOKEN }}
           dist_dir: "_site/"
           cleanup: false
