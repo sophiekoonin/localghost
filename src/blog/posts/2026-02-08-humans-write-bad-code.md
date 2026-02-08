@@ -2,6 +2,7 @@
 title: Stop generating, start thinking  
 date: 2026-02-08
 tags: ["ai", "engineering"]
+excerptText: "Instead of wanting to learn and improve as humans, and build better software, we’ve outsourced our mistakes to an unthinking algorithm."
 ---
 
 Throughout my career, I feel like I’ve done a pretty decent job of staying top of new developments in the industry: attending conferences, following (and later befriending!) some of the very smart people writing the specs, being the one sharing news on Slack about exciting new features of CSS or JS with my colleagues. The joys of working on an internal tool where you only need to worry about latest Chrome, and playing with anchor positioning in a production app while it’s still experimental!
