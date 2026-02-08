@@ -1,5 +1,5 @@
 ---
-title: Humans write bad code. Generative AI is only making it worse 
+title: Stop generating, start thinking  
 date: 2026-02-08
 draft: true
 tags: ["ai"]
