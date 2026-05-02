@@ -48,6 +48,10 @@
     padding-block: var(--space-s);
     max-inline-size: var(--max-inline-size);
 
+    picture {
+      margin: 0 auto;
+      max-width: 80%;
+    }
     &[data-with-subtitle] {
       padding-block-start: 0;
     }
@@ -86,10 +90,11 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
       align-items: center;
-      justify-items: center;
 
       gap: 1rem;
+
       img,
+      picture,
       video {
         width: 100%;
       }
