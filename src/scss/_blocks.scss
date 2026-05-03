@@ -49,7 +49,7 @@
     max-inline-size: var(--max-inline-size);
 
     picture {
-      margin: 0 auto;
+      margin-inline: auto;
       max-width: 80%;
     }
     &[data-with-subtitle] {
