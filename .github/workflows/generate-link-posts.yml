@@ -11,14 +11,14 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
-          node-version: "22"
-          cache: "yarn"
-      - run: yarn install
-      - run: yarn generate-links
+          node-version: "24"
+          cache: "npm"
+      - run: npm install
+      - run: npm run generate-links
         env:
           RAINDROP_TOKEN: ${{ secrets.RAINDROP_TOKEN }}
           RAINDROP_COLLECTION_ID: ${{ secrets.RAINDROP_COLLECTION_ID }}
-      - run: yarn build
+      - run: npm run build
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Generate weekly link post

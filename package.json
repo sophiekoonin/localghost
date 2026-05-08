@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "engines": {
-    "node": "22"
+    "node": "24"
   },
   "type": "module",
   "devDependencies": {
@@ -40,11 +40,10 @@
   "scripts": {
     "start": "NODE_ENV=development BASE_URL=http://localhost:8080 eleventy --serve --quiet",
     "build": "NODE_ENV=production eleventy",
-    "full-build": "set CACHE_BUST=true && yarn run build",
+    "full-build": "set CACHE_BUST=true && npm run build",
     "generate-links": "node scripts/compile-links.js",
     "postbuild": "scripts/send-webmentions",
     "send-webmentions": "webmention _site/feed.xml --limit 1 --send",
     "clear-og": "rm src/static/og-images/*"
-  },
-  "packageManager": "yarn@4.2.1"
+  }
 }
