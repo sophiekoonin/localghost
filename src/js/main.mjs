@@ -27,7 +27,6 @@ const currentPage = window.location.pathname;
 const THEME_STORAGE_KEY = "user-theme";
 const THEMES = {
   city: "city",
-  lofi: "lofi",
   minimalist: "minimalist",
   vaporwave: "vaporwave",
   garden: "garden",
@@ -385,83 +384,6 @@ const sunset = Temporal.PlainTime.from("19:30:00");
 const night = Temporal.PlainTime.from("21:00:00");
 const root = document.documentElement;
 
-const instant = new Date().toTemporalInstant();
-const zoned = instant.toZonedDateTimeISO(Intl.DateTimeFormat().resolvedOptions().timeZone);
-
-const transparent = "rgba(0,0,0,0)";
-let timeNow = zoned.toPlainTime().round("minute");
-
-const colourValues = {
-  sunrise: {
-    top: {
-      l: 0,
-      c: 0,
-      h: 0,
-    },
-    mid: {
-      l: 0,
-      c: 0,
-      h: 0,
-    },
-    bottom: {
-      l: 0,
-      c: 0,
-      h: 0,
-    },
-  },
-  day: {
-    top: {
-      l: 58,
-      c: 0.15433,
-      h: 300,
-    },
-    mid: {
-      l: 85,
-      c: 0.22133,
-      h: 302,
-      pct: 50,
-    },
-    bottom: {
-      l: 98,
-      c: 0.22133,
-      h: 302,
-    },
-    footer: transparent,
-  },
-  sunset: {
-    top: {
-      h: 33,
-    },
-    mid: {
-      h: 339.8,
-      pct: 80,
-    },
-    bottom: {
-      h: 42.35,
-    },
-  },
-  night: {
-    top: {
-      l: 25.27,
-      c: 0.0919,
-      h: 276.73,
-    },
-    mid: {
-      l: 47.35,
-      c: 0.284,
-      h: 283.78,
-      pct: 80,
-    },
-    bottom: {
-      l: 47.35,
-      c: 0.284,
-      h: 283.78,
-    },
-    footer: "oklch(59.41% 0.289 331.1)",
-  },
-};
-
-const compare = Temporal.PlainTime.compare;
 function setColoursForTime() {
   let timeOfDay = "day";
   switch (true) {

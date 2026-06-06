@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js" data-theme="garden">
   {% set cssFilename = global.cssFile() %}
-  {% set jsFilename = global.jsFile() %}
+  {% set jsFiles = global.jsFiles() %}
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +13,9 @@
         {{ title }} -
       {% endif %}
       localghost</title>
-    <script src={{ jsFilename }}></script>
+    {% for k, filename in jsFiles %}
+      <script src={{filename}} type="module"></script>
+    {% endfor %}
     {% if extraCSS %}
       {% for file in extraCSS %}
         <link rel="stylesheet" type="text/css" href="/css/{{ file }}">
@@ -21,15 +23,14 @@
     {% endif %}
     <link rel="preload" as="style" href={{ cssFilename }}>
     <link rel="stylesheet" type="text/css" href={{ cssFilename }}>
-<script data-goatcounter="https://localghost.goatcounter.com/count"
-        async defer src="//gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://localghost.goatcounter.com/count" async defer src="//gc.zgo.at/count.js"></script>
   </head>
   <body>
     {% include "partials/svg/defs.html" %}
     <div class="page-wrapper">
       {% include "partials/header.njk" %}
       <main>
-      {% include "partials/nav.njk" %}
+        {% include "partials/nav.njk" %}
         {% block content %}
           {{ content | safe }}
         {% endblock %}
