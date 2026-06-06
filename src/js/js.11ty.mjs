@@ -33,6 +33,6 @@ export default class {
   }
 
   async render({ jsFile }) {
-    return UglifyJS.minify(jsFile.contents).code;
+    return process.env.NODE_ENV === "production" ? UglifyJS.minify(jsFile.contents).code : jsFile.contents;
   }
 }
