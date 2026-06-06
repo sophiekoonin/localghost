@@ -1,3 +1,5 @@
+import { setColoursForTime } from "./gradients.mjs";
+
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 function pictureEl(name, alt) {
   return `
@@ -90,6 +92,8 @@ function changeTheme(newTheme) {
       break;
     case "garden":
       initGardenTheme();
+    case "city":
+      setColoursForTime();
     default:
       break;
   }
@@ -374,48 +378,4 @@ function initGardenTheme() {
 function cleanupGarden() {
   const bfly = document.getElementById("butterfly");
   if (bfly) bfly.remove();
-}
-
-// CITY SUNRISE/SUNSET LOGIC
-// Without location data, let's hardcode sunrise/sunset times.
-const sunrise = Temporal.PlainTime.from("06:30:00");
-const day = Temporal.PlainTime.from("08:00:00");
-const sunset = Temporal.PlainTime.from("19:30:00");
-const night = Temporal.PlainTime.from("21:00:00");
-const root = document.documentElement;
-
-function setColoursForTime() {
-  let timeOfDay = "day";
-  switch (true) {
-    case compare(timeNow, sunrise) < 0 || compare(timeNow, night) >= 0:
-      timeOfDay = "night";
-      break;
-    case compare(timeNow, sunrise) >= 0 && compare(timeNow, day) < 0:
-      timeOfDay = "sunrise";
-      break;
-    case compare(timeNow, day) >= 0 && compare(timeNow, sunset) < 0:
-      timeOfDay = "day";
-      break;
-    case compare(timeNow, sunset) >= 0 && compare(timeNow, night) < 0:
-      timeOfDay = "sunset";
-      break;
-    default:
-      break;
-  }
-
-  for (let pos of ["top", "mid", "bottom"]) {
-    root.style.setProperty(`--bg-${pos}-l`, `${colourValues[timeOfDay][pos].l}%`);
-    root.style.setProperty(`--bg-${pos}-c`, colourValues[timeOfDay][pos].c);
-    root.style.setProperty(`--bg-${pos}-h`, colourValues[timeOfDay][pos].h);
-  }
-
-  root.style.setProperty("--bg-footer", colourValues[timeOfDay].footer);
-  root.style.setProperty("--bg-mid-pct", `${colourValues[timeOfDay].mid.pct}%`);
-}
-
-setColoursForTime();
-
-function setTime(time) {
-  timeNow = Temporal.PlainTime.from(time);
-  setColoursForTime();
 }

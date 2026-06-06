@@ -43,7 +43,7 @@ function getUserTime() {
   return zoned.toPlainTime().round("minute");
 }
 
-function setColoursForTime() {
+export function setColoursForTime() {
   let timeOfDay = "day";
   switch (true) {
     case compare(timeNow, times.sunrise.start) < 0 || compare(timeNow, times.night.start) >= 0: {
@@ -92,26 +92,24 @@ function setColoursForTime() {
     percentageProgress = (diff / entireDurationMs) * 100;
   }
 
-  console.log(percentageProgress);
-
   root.style.setProperty(
-    "--color1",
+    "--bg-gradient-top",
     `color-mix(in oklch, ${times[nextTimeOfDay].color1} ${percentageProgress}%, ${times[timeOfDay].color1})`,
   );
   root.style.setProperty(
-    "--color2",
+    "--bg-gradient-mid",
     `color-mix(in oklch, ${times[nextTimeOfDay].color2} ${percentageProgress}%,  ${times[timeOfDay].color2})`,
   );
 
-  // Don't set this to colour mix if we're doing night -> sunset because this comes out green ew
+  // Don't set this to colour mix the bottom row if we're doing night -> sunset because this comes out green ew
   if (nextTimeOfDay === "sunrise" && percentageProgress > 0) {
     root.style.setProperty(
-      "--color3",
+      "--bg-gradient-bottom",
       `color-mix(in oklch, ${times[nextTimeOfDay].color3} ${percentageProgress}%,  ${times[nextTimeOfDay].color3})`,
     );
   } else {
     root.style.setProperty(
-      "--color3",
+      "--bg-gradient-bottom",
       `color-mix(in oklch, ${times[nextTimeOfDay].color3} ${percentageProgress}%,  ${times[timeOfDay].color3})`,
     );
   }

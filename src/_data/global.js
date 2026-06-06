@@ -33,7 +33,7 @@ const globalData = {
           const contents = fs.readFileSync(path.join(jsDir, f), "utf-8");
           const hash = md5(contents).slice(0, 8);
           const name = path.basename(f, ".mjs");
-          return [name, `/js/${name}.${hash}.mjs`];
+          return [name, `/js/${name}.mjs?md5=${hash}`];
         }),
     );
   },

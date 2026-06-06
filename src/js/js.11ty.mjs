@@ -12,9 +12,8 @@ function getJsFiles() {
     .map((f) => {
       const filePath = path.join(__dirname, f);
       const contents = fs.readFileSync(filePath, "utf-8");
-      const hash = md5(contents).slice(0, 8);
       const name = path.basename(f, ".mjs");
-      return { filePath, contents, hash, name };
+      return { filePath, contents, name };
     });
 }
 
@@ -28,7 +27,7 @@ export default class {
         addAllPagesToCollections: true,
       },
       jsFiles: getJsFiles(),
-      permalink: ({ jsFile }) => `js/${jsFile.name}.${jsFile.hash}.mjs`,
+      permalink: ({ jsFile }) => `js/${jsFile.name}.mjs`,
     };
   }
 
