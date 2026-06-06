@@ -2,7 +2,10 @@
 @use "./shared";
 
 [data-theme="city"] {
-  --background: fixed linear-gradient(hsla(239, 50%, 20%, 1), oklch(47.35% 0.284 283.78) 80%);
+  --bg-gradient-top: oklch(25.27% 0.0919 276.73);
+  --bg-gradient-mid: oklch(47.35% 0.284 283.78);
+  --bg-gradient-bottom: oklch(47.35% 0.284 283.78);
+  --background: fixed linear-gradient(var(--bg-gradient-top), var(--bg-gradient-mid) 80%, var(--bg-gradient-bottom));
   --body-color: white;
   --accent-color: oklch(66.76% 0.328 330.95);
   --content-bg: hsla(239, 15%, 12%, 0.95);
