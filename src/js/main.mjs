@@ -322,6 +322,8 @@ function injectGeocitiesGoodness() {
     start.innerHTML = contentStart(prefersReducedMotion);
     end.innerHTML = contentEnd(prefersReducedMotion);
   }
+
+  document.querySelectorAll(".footer-links a").forEach((el) => el.appendChild(document.createElement("span")));
 }
 
 function clearGeocitiesRubbish() {
