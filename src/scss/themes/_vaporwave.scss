@@ -40,13 +40,13 @@
   --background: fixed linear-gradient(hsl(171, 100%, 50%), hsl(263, 81%, 77%), hsl(306, 100%, 50%));
   --link-color: hsla(250, 100%, 20%, 1);
   --link-hover-color: white;
-  --bullet: url("/icons/cd-bullet.png");
+  --bullet: url("/img/themes/cd-bullet.png");
   --tweet-bg: hsl(177, 93%, 77%);
   --inline-code-bg: hsl(172, 100%, 67%);
   --list-heading-color: white;
   --photo-bg: linear-gradient(-45deg, hsl(172, 100%, 44%), hsl(306, 100%, 50%));
   --header-color: #fff;
-  cursor: url("/img/cursor-w95.png"), default;
+  cursor: url("/img/themes/cursor-w95.png"), default;
 
   .skyscraper,
   .palmtree {
@@ -55,11 +55,11 @@
 
   a,
   button {
-    cursor: url("/img/pointer-w95.png"), pointer;
+    cursor: url("/img/themes/pointer-w95.png"), pointer;
   }
 
   .page-wrapper {
-    background: url("/img/vaporwave-bg.webp") no-repeat fixed;
+    background: url("/img/themes/vaporwave-bg.webp") no-repeat fixed;
     background-position: bottom center;
     background-size: cover;
   }

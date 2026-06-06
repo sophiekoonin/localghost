@@ -6,7 +6,7 @@
   --body-font-family: "Arial Narrow", "Verdana", sans-serif;
   --content-bg: hsl(271, 31%, 33%);
   --max-inline-size: 100ch;
-  --bullet: url("/img/heart-bullet.svg");
+  --bullet: url("/img/themes/heart-bullet.svg");
   --accent-color: hsl(271, 50%, 23%);
   --link-hover-color: hsl(273, 49%, 79%);
   --photo-bg: hsl(271, 31%, 23%);
@@ -14,7 +14,7 @@
   --bullet: "x";
   body {
     background-color: hsl(271, 31%, 23%);
-    background-image: url("/img/grunge-header.png");
+    background-image: url("/img/themes/grunge-header.png");
     background-repeat: no-repeat;
   }
 

@@ -264,7 +264,7 @@
 
   label[for="city"] {
     &:hover img {
-      background: url("/img/city-icon-hover.png");
+      background: url("/img/themes/city-icon-hover.png");
       background-size: contain;
       background-repeat: no-repeat;
     }
@@ -272,7 +272,7 @@
 
   label[for="sunset"] {
     &:hover img {
-      background: url("/img/sunset-icon-hover.png");
+      background: url("/img/themes/sunset-icon-hover.png");
       background-size: contain;
     }
   }
@@ -285,14 +285,14 @@
 
   label[for="twothousandandthree"] {
     &:hover img {
-      background: url("/img/2003-icon-hover.png");
+      background: url("/img/themes/2003-icon-hover.png");
       background-size: contain;
     }
   }
 
   label[for="garden"] {
     &:hover {
-      background-image: url("/img/garden-icon-hover.png");
+      background-image: url("/img/themes/garden-icon-hover.png");
       background-size: contain;
     }
   }
@@ -587,7 +587,7 @@ body::after {
   height: 0;
   overflow: hidden;
   z-index: -1; // hide images
-  content: url("/img/vaporwave-bg.webp") url("/img/geocities/1999-bg.webp"); // load images
+  content: url("/img/themes/vaporwave-bg.webp") url("/img/themes/geocities/1999-bg.webp"); // load images
 }
 
 .tweet-card {

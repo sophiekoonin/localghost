@@ -2,9 +2,9 @@ const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)
 function pictureEl(name, alt) {
   return `
 <picture>
-    <source srcset="/img/geocities/${name}.gif" 
+    <source srcset="/img/themes/geocities/${name}.gif" 
     media="(prefers-reduced-motion: no-preference)">
-    <img src="/img/geocities/static/${name}.png" 
+    <img src="/img/themes/geocities/static/${name}.png" 
     alt="${alt}" />
   </picture>`;
 }
@@ -18,7 +18,7 @@ function contentEnd(reducedMotion) {
     `<p>This site is</p>` +
     pictureEl("consbar", "under construction") +
     pictureEl("flames", "") +
-    '<p>You are visitor number <img src="/img/geocities/static/counter.png" alt="hit counter showing 2147483648" /></p>'
+    '<p>You are visitor number <img src="/img/themes/geocities/static/counter.png" alt="hit counter showing 2147483648" /></p>'
   );
 }
 document.documentElement.classList.remove("no-js");
@@ -300,7 +300,7 @@ function fairyDustCursor(options) {
         this.position.x - (this.canv.width / 2) * scale,
         this.position.y - this.canv.height / 2,
         this.canv.width * scale,
-        this.canv.height * scale
+        this.canv.height * scale,
       );
     };
   }
@@ -361,7 +361,7 @@ function injectGardenPizazz() {
   if (header) {
     const btn = document.createElement("button");
     const img = document.createElement("img");
-    img.src = "/img/garden-theme/red-admiral.png";
+    img.src = "/img/themes/garden-theme/red-admiral.png";
     btn.classList.add("butterfly");
     btn.ariaHidden = true;
     btn.id = "butterfly";
