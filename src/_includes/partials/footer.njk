@@ -1,44 +1,42 @@
 <footer class="footer" id="footer">
     <div class="footer-content">
-    <div class="footer-buttons">
-      {% include "partials/neocities-badge.njk" %}
-
-        <a href="http://11ty.dev">
-            <img eleventy:ignore src="/img/made-with-11ty.gif" alt="Made with Eleventy"/>
-        </a>
+        <div class="footer-buttons">
+            {% include "partials/neocities-badge.njk" %}
+            <a href="http://11ty.dev">
+                <img eleventy:ignore src="/img/made-with-11ty.gif" alt="Made with Eleventy"/>
+            </a>
+        </div>
+        <p class="footer-text">© Sophie Koonin {{ global.currentYear() }}</p>
+        <nav aria-label="Contact & RSS links" class="footer-links">
+            <a href="/rss-feeds" title="RSS Feeds">
+                <span id="rss-link">rss</span>
+                <span></span>
+            </a>
+            <a rel="me" href="https://social.lol/@sophie">
+                <span id="mastodon-link">mastodon</span>
+                <span></span>
+            </a>
+            <a rel="me" href="https://bsky.app/profile/localghost.dev">
+                <span id="bluesky-link">bluesky</span>
+                <span></span>
+            </a>
+            <a href="mailto:sophie@localghost.dev">
+                <span id="email-link">email</span>
+                <span></span>
+            </a>
+        </nav>
     </div>
-    <p class="footer-text">© Sophie Koonin {{ global.currentYear() }}</p>
-    <nav aria-label="Contact & RSS links" class="footer-links">
-        <a href="/rss-feeds" title="RSS Feeds">
-            <span id="rss-link">rss</span>
-            <span></span>
-        </a>
-        <a rel="me" href="https://social.lol/@sophie">
-            <span id="mastodon-link">mastodon</span>
-            <span></span>
-        </a>
-           <a rel="me" href="https://bsky.app/profile/localghost.dev">
-            <span id="bluesky-link">bluesky</span>
-            <span></span>
-        </a>
-        <a href="mailto:sophie@localghost.dev">
-        <span id="email-link">email</span>
-            <span></span>
-        </a>
-    </nav>
-    </div>
-    <div class="skyscraper" id="skyscraper-1">
         {% include "partials/svg/skyscraper-1.html" %}
-    </div>
-    <div class="skyscraper" id="skyscraper-2">
-        {% include "partials/svg/skyscraper-2.html" %}
-    </div>
-    <div class="skyscraper" id="skyscraper-3">
-        {% include "partials/svg/skyscraper-2.html" %}
-    </div>
-    <div class="skyscraper" id="skyscraper-4">
-        {% include "partials/svg/skyscraper-2.html" %}
-    </div>
+
+        {{ svg('skyscraper-2', {
+            name: 'skyscraper-2'
+        }) }}
+        {{ svg('skyscraper-2', {
+            name: 'skyscraper-3'
+        }) }}
+        {{ svg('skyscraper-2', {
+            name: 'skyscraper-4'
+        }) }}
     <div class="palmtree" id="palmtree-1">
         {% include "partials/svg/palmtree.html" %}
     </div>
