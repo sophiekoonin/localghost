@@ -20,10 +20,6 @@
   --photo-bg: linear-gradient(oklch(62.65% 0.229 288.28), oklch(66.47% 0.321 330.95));
   --blockquote-bg: rgba(255, 255, 255, 0.15);
 
-  .palmtree {
-    display: none;
-  }
-
   .skyscraper {
     display: initial;
   }
@@ -236,5 +232,76 @@
     --bg-h: 2px;
 
     @include shared.fancy-link-underlines(oklch(63.24% 0.224 288.28), oklch(66.47% 0.321 330.95));
+  }
+
+  #skyscraper-3 {
+    .sky2-side {
+      color: hsl(298, 95%, 15%);
+    }
+    .sky2-front {
+      color: hsl(298, 64%, 42%);
+    }
+    .sky2-frontshadow {
+      color: hsl(298, 73%, 30%);
+    }
+    .sky2-sidestripe {
+      color: hsl(298, 72%, 25%);
+    }
+    .sky2-top-side {
+      color: hsl(298, 44%, 26%);
+    }
+    .sky2-top-front {
+      color: hsl(298, 62%, 56%);
+    }
+
+    .sky2-frontstripe {
+      color: hsl(298, 60%, 53%);
+    }
+  }
+
+  #skyscraper-1 {
+    .sky1-topfront {
+      color: hsl(249, 100%, 81%);
+    }
+    .sky1-topside {
+      color: hsl(249, 43%, 60%);
+    }
+    .sky1-front {
+      color: hsl(249, 100%, 78%);
+    }
+    .sky1-side {
+      color: hsl(249, 50%, 45%);
+    }
+    .sky1-frontstripe {
+      color: hsl(249, 43%, 60%);
+    }
+    .sky1-sidestripe {
+      color: hsl(248, 17%, 42%);
+    }
+  }
+
+  #skyscraper-2,
+  #skyscraper-4 {
+    .sky2-front {
+      color: hsl(190, 43%, 40%);
+    }
+    .sky2-side {
+      color: hsl(256, 55%, 22%);
+    }
+    .sky2-frontshadow {
+      color: hsl(222, 60%, 36%);
+    }
+    .sky2-frontstripe {
+      color: hsl(190, 73%, 52%);
+    }
+    .sky2-sidestripe {
+      color: hsl(256, 65%, 45%);
+    }
+    .sky2-top-side {
+      color: hsl(256, 55%, 52%);
+    }
+    .sky2-top-front {
+      color: hsl(222, 72%, 77%);
+    }
   }
 }

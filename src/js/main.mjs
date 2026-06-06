@@ -27,7 +27,7 @@ const currentPage = window.location.pathname;
 const THEME_STORAGE_KEY = "user-theme";
 const THEMES = {
   city: "city",
-  sunset: "sunset",
+  lofi: "lofi",
   minimalist: "minimalist",
   vaporwave: "vaporwave",
   garden: "garden",
@@ -35,7 +35,6 @@ const THEMES = {
   twothousandandthree: "twothousandandthree",
 };
 
-let palmtrees = [];
 let skyscrapers = [];
 let themeOptions = [];
 let theme = "";
@@ -49,13 +48,16 @@ function initThemes() {
 initThemes();
 
 function changeTheme(newTheme) {
-  if (!Object.keys(THEMES).includes(newTheme)) {
-    newTheme = "garden";
-  }
+  // if (!Object.keys(THEMES).includes(newTheme)) {
+  //   newTheme = "garden";
+  // }
   localStorage.setItem(THEME_STORAGE_KEY, newTheme);
   document.documentElement.setAttribute("data-theme", newTheme);
   if (themeOptions.length > 0) {
-    const opt = (themeOptions.find((el) => el.id === newTheme).checked = true);
+    const t = themeOptions.find((el) => el.id === newTheme);
+    if (t) {
+      t.checked = true;
+    }
   }
 
   if (theme !== newTheme) {
@@ -77,10 +79,10 @@ function changeTheme(newTheme) {
   switch (newTheme) {
     case "geocities":
       if (currentPage === "/") {
-        injectGeocitiesGoodness();
+        initGeocities();
       }
-      // this is presumably a proxy for "has the page loaded"
-      if (palmtrees.length > 0) {
+      // this is a proxy for "has the page loaded"
+      if (skyscrapers.length > 0) {
         new fairyDustCursor({ colors: ["#F5B5FC", "#96F7D2", "#FCB1B1"] });
       }
       break;
@@ -88,18 +90,11 @@ function changeTheme(newTheme) {
       inject2003Stuff();
       break;
     case "garden":
-      injectGardenPizazz();
+      initGardenTheme();
     default:
       break;
   }
   theme = newTheme;
-}
-
-function hideElement(element) {
-  element.classList.add("hidden");
-}
-function showElement(element) {
-  element.classList.remove("hidden");
 }
 
 function eventListener(e) {
@@ -110,7 +105,6 @@ function eventListener(e) {
 }
 window.addEventListener("load", () => {
   skyscrapers = Array.from(document.getElementsByClassName("skyscraper"));
-  palmtrees = Array.from(document.getElementsByClassName("palmtree"));
   themeOptions = Array.from(document.getElementsByClassName("theme-option"));
 
   themeOptions.forEach((el) => addEventListener("change", eventListener));
@@ -125,7 +119,7 @@ function cleanupGeocities() {
   destroyCursor();
   if (theme === "geocities") {
     if (currentPage === "/") {
-      clearGeocitiesRubbish();
+      clearGeocities();
     }
   }
 }
@@ -315,7 +309,7 @@ function destroyCursor() {
   }
 }
 
-function injectGeocitiesGoodness() {
+function initGeocities() {
   const start = document.getElementById("content-start");
   const end = document.getElementById("content-end");
   if (start && end) {
@@ -326,7 +320,7 @@ function injectGeocitiesGoodness() {
   document.querySelectorAll(".footer-links a").forEach((el) => el.appendChild(document.createElement("span")));
 }
 
-function clearGeocitiesRubbish() {
+function clearGeocities() {
   const start = document.getElementById("content-start");
   const end = document.getElementById("content-end");
   if (start && end) {
@@ -358,7 +352,7 @@ function inject2003Stuff() {
   }
 }
 
-function injectGardenPizazz() {
+function initGardenTheme() {
   const header = document.getElementsByTagName("header")[0];
   if (header) {
     const btn = document.createElement("button");
@@ -381,4 +375,125 @@ function injectGardenPizazz() {
 function cleanupGarden() {
   const bfly = document.getElementById("butterfly");
   if (bfly) bfly.remove();
+}
+
+// CITY SUNRISE/SUNSET LOGIC
+// Without location data, let's hardcode sunrise/sunset times.
+const sunrise = Temporal.PlainTime.from("06:30:00");
+const day = Temporal.PlainTime.from("08:00:00");
+const sunset = Temporal.PlainTime.from("19:30:00");
+const night = Temporal.PlainTime.from("21:00:00");
+const root = document.documentElement;
+
+const instant = new Date().toTemporalInstant();
+const zoned = instant.toZonedDateTimeISO(Intl.DateTimeFormat().resolvedOptions().timeZone);
+
+const transparent = "rgba(0,0,0,0)";
+let timeNow = zoned.toPlainTime().round("minute");
+
+const colourValues = {
+  sunrise: {
+    top: {
+      l: 0,
+      c: 0,
+      h: 0,
+    },
+    mid: {
+      l: 0,
+      c: 0,
+      h: 0,
+    },
+    bottom: {
+      l: 0,
+      c: 0,
+      h: 0,
+    },
+  },
+  day: {
+    top: {
+      l: 58,
+      c: 0.15433,
+      h: 300,
+    },
+    mid: {
+      l: 85,
+      c: 0.22133,
+      h: 302,
+      pct: 50,
+    },
+    bottom: {
+      l: 98,
+      c: 0.22133,
+      h: 302,
+    },
+    footer: transparent,
+  },
+  sunset: {
+    top: {
+      h: 33,
+    },
+    mid: {
+      h: 339.8,
+      pct: 80,
+    },
+    bottom: {
+      h: 42.35,
+    },
+  },
+  night: {
+    top: {
+      l: 25.27,
+      c: 0.0919,
+      h: 276.73,
+    },
+    mid: {
+      l: 47.35,
+      c: 0.284,
+      h: 283.78,
+      pct: 80,
+    },
+    bottom: {
+      l: 47.35,
+      c: 0.284,
+      h: 283.78,
+    },
+    footer: "oklch(59.41% 0.289 331.1)",
+  },
+};
+
+const compare = Temporal.PlainTime.compare;
+function setColoursForTime() {
+  let timeOfDay = "day";
+  switch (true) {
+    case compare(timeNow, sunrise) < 0 || compare(timeNow, night) >= 0:
+      timeOfDay = "night";
+      break;
+    case compare(timeNow, sunrise) >= 0 && compare(timeNow, day) < 0:
+      timeOfDay = "sunrise";
+      break;
+    case compare(timeNow, day) >= 0 && compare(timeNow, sunset) < 0:
+      timeOfDay = "day";
+      break;
+    case compare(timeNow, sunset) >= 0 && compare(timeNow, night) < 0:
+      timeOfDay = "sunset";
+      break;
+    default:
+      break;
+  }
+
+  for (let pos of ["top", "mid", "bottom"]) {
+    root.style.setProperty(`--bg-${pos}-l`, `${colourValues[timeOfDay][pos].l}%`);
+    root.style.setProperty(`--bg-${pos}-c`, colourValues[timeOfDay][pos].c);
+    root.style.setProperty(`--bg-${pos}-h`, colourValues[timeOfDay][pos].h);
+  }
+
+  root.style.setProperty("--bg-footer", colourValues[timeOfDay].footer);
+  root.style.setProperty("--bg-mid-pct", `${colourValues[timeOfDay].mid.pct}%`);
+}
+
+setColoursForTime();
+
+function setTime(time) {
+  timeNow = Temporal.PlainTime.from(time);
+  setColoursForTime();
 }
