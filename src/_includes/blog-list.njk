@@ -18,7 +18,7 @@ eleventyImport:
   </div>
   <div
     class="content-inner flow" {% if subtitle %} data-with-subtitle {% endif %}>
-    <ol role="list" class="posts-list flow">
+    <ol class="posts-list flow">
       {% for item in postListItems %}
         {% set excerpt %}
         {% if item.data.excerptText %}
