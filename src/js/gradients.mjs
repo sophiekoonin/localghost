@@ -79,12 +79,10 @@ export function setColoursForTime(time) {
     case compare(timeNow, stages.sunrise.start) < 0 || compare(timeNow, stages.night.start) >= 0: {
       currentStageName = "night";
       timeUntilNextStage = durationBetween(timeNow, stages.sunrise.start);
-      if (timeUntilNextStage < 0) {
-        // it comes out negative when it's before midnight,
-        // and we're comparing to a morning timestamp because it's date-agnostic
-        // so we force it to a positive number so the diff is always negative
-        timeUntilNextStage = Math.abs(timeUntilNextStage);
-      }
+      // it comes out negative when it's before midnight,
+      // and we're comparing to a morning timestamp because it's date-agnostic
+      // so we force it to a positive number so the diff is always negative
+      timeUntilNextStage = typeof timeUntilNextStage === "number" ? Math.abs(timeUntilNextStage) : timeUntilNextStage.abs();
       break;
     }
     case compare(timeNow, stages.sunrise.start) >= 0 && compare(timeNow, stages.day.start) < 0: {
