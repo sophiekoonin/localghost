@@ -1,11 +1,12 @@
 // globals
 const root = document.documentElement;
+const compare = Temporal.PlainTime.compare;
 
 let interval;
 let timeNow = getUserTime();
-const compare = Temporal.PlainTime.compare;
 let timeUntilNext = 0;
 let timeOfDay = "day";
+
 const times = {
   sunrise: {
     start: Temporal.PlainTime.from("06:30:00"),
@@ -47,12 +48,7 @@ export function setColoursForTime() {
   switch (true) {
     case compare(timeNow, times.sunrise.start) < 0 || compare(timeNow, times.night.start) >= 0: {
       timeOfDay = "night";
-      // is it before sunrise?
-      if (compare(timeNow, times.sunrise.start) < 0) {
-        timeUntilNext = timeNow.until(times.sunrise.start);
-      } else {
-        timeUntilNext = Temporal.Duration.from("PT24H");
-      }
+      timeUntilNext = timeNow.until(times.sunrise.start);
       break;
     }
     case compare(timeNow, times.sunrise.start) >= 0 && compare(timeNow, times.day.start) < 0: {
@@ -76,19 +72,19 @@ export function setColoursForTime() {
 
   const nextTimeOfDay = times[timeOfDay].next;
 
-  let entireDuration;
+  let timeBlockDuration;
   if (timeOfDay === "night" || timeOfDay === "day") {
-    // We only start the transition ~2h before.
-    entireDuration = Temporal.Duration.from("PT2H00M");
+    // We only start the transition ~2h before for these longer blocks.
+    timeBlockDuration = Temporal.Duration.from("PT2H00M");
   } else {
-    entireDuration = times[timeOfDay].start.until(times[nextTimeOfDay].start);
+    timeBlockDuration = times[timeOfDay].start.until(times[nextTimeOfDay].start);
   }
 
-  const diff = entireDuration.subtract(timeUntilNext).total({ unit: "milliseconds" });
+  const diff = timeBlockDuration.subtract(timeUntilNext).total({ unit: "milliseconds" });
   let percentageProgress = 0;
   if (diff > 0) {
-    const entireDurationMs = entireDuration.total({ unit: "milliseconds" });
-    percentageProgress = (diff / entireDurationMs) * 100;
+    const timeBlockDurationMs = timeBlockDuration.total({ unit: "milliseconds" });
+    percentageProgress = (diff / timeBlockDurationMs) * 100;
   }
 
   root.style.setProperty(
@@ -100,12 +96,9 @@ export function setColoursForTime() {
     `color-mix(in oklch, ${times[nextTimeOfDay].color2} ${percentageProgress}%,  ${times[timeOfDay].color2})`,
   );
 
-  // Don't set this to colour mix the bottom row if we're doing night -> sunset because this comes out green ew
+  // Don't colour mix the bottom row if we're doing night -> sunset because this comes out green...
   if (nextTimeOfDay === "sunrise" && percentageProgress > 0) {
-    root.style.setProperty(
-      "--bg-gradient-bottom",
-      `color-mix(in oklch, ${times[nextTimeOfDay].color3} ${percentageProgress}%,  ${times[nextTimeOfDay].color3})`,
-    );
+    root.style.setProperty("--bg-gradient-bottom", `${times[nextTimeOfDay].color3}`);
   } else {
     root.style.setProperty(
       "--bg-gradient-bottom",
@@ -113,7 +106,6 @@ export function setColoursForTime() {
     );
   }
 
-  root.style.setProperty("--stars-display", timeOfDay === "night" ? "grid" : "none");
   root.setAttribute("data-time", timeOfDay);
 }
 
