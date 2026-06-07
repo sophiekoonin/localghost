@@ -2,18 +2,20 @@
 @use "./shared";
 
 [data-theme="city"] {
+  color-scheme: light dark;
   --bg-gradient-top: oklch(25.27% 0.0919 276.73);
   --bg-gradient-mid: oklch(47.35% 0.284 283.78);
   --bg-gradient-bottom: oklch(47.35% 0.284 283.78);
   --background: fixed linear-gradient(var(--bg-gradient-top), var(--bg-gradient-mid) 80%, var(--bg-gradient-bottom));
-  --body-color: white;
+  --body-color: oklch(34.34% 0.02056 309.631);
   --accent-color: oklch(66.76% 0.328 330.95);
-  --content-bg: hsla(239, 15%, 12%, 0.95);
+  --content-bg: hsla(282.4, 68%, 95.1%, 0.5);
+  --stars-display: none;
   --header-color: hsla(303, 88%, 90%, 1);
   --header-font-family: "Bayshore", cursive;
   --heading-font-family: "Krungthep", "Figtree", sans-serif;
   --bullet: url("data:image/svg+xml,%3Csvg viewBox='0 0 9 9' height='10' width='10' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='2'%3E%3Cpath fill='%23fff' d='M4 2h1v5H4z'/%3E%3Cpath fill='%23fff' d='M3 3h3.167v3H3z'/%3E%3Cpath fill='%23fff' d='M7 4v1H2V4z'/%3E%3Cpath fill='%23fff' d='M4 0h1v1H4z'/%3E%3Cpath fill='%23fff' d='M8 4h1v1H8z'/%3E%3Cpath fill='%23fff' d='M0 4h1v1H0z'/%3E%3Cpath fill='%23fff' d='M4 8h1v1H4z'/%3E%3C/svg%3E");
-  --link-color: hsla(164, 97%, 84%, 1);
+  --link-color: light-dark(hsl(258, 67%, 47%), hsl(164, 97%, 84%));
   --link-hover-color: hsla(164, 97%, 84%, 1);
   --tweet-bg: hsla(239, 15%, 26%, 0.95);
   --tweet-border: hsla(239, 15%, 56%, 0.95);
@@ -29,7 +31,7 @@
 
   .star-grid {
     height: clamp(10rem, 35vh, 25rem);
-    display: grid;
+    display: var(--stars-display);
     align-items: center;
     position: fixed;
     z-index: -1;
@@ -183,9 +185,9 @@
   }
 
   .content {
-    border-radius: 0;
+    border-radius: 10px;
     padding: var(--space-s-m);
-    box-shadow: 10px 10px 0 3px rgba(0, 0, 0, 0.2);
+    // box-shadow: 10px 10px 0 3px rgba(0, 0, 0, 0.2);
 
     h1 {
       color: oklch(0.69 0.19 288.75);
@@ -224,7 +226,6 @@
   }
 
   footer {
-    background: linear-gradient(hsla(0, 0%, 100%, 0) 40%, oklch(59.41% 0.289 331.1));
     @include shared.grid-footer;
   }
 
@@ -259,6 +260,86 @@
 
     .sky2-frontstripe {
       color: hsl(298, 60%, 53%);
+    }
+  }
+
+  &[data-time="night"] {
+    color-scheme: dark;
+    footer {
+      background: linear-gradient(hsla(0, 0%, 100%, 0) 40%, oklch(59.41% 0.289 331.1));
+    }
+  }
+  &[data-time="day"],
+  &[data-time="sunrise"] {
+    #skyscraper-3 {
+      .sky2-side {
+        color: hsl(279, 60%, 50%);
+      }
+      .sky2-front {
+        color: hsl(298, 73%, 56%);
+      }
+      .sky2-frontshadow {
+        color: hsl(298, 55%, 43%);
+      }
+      .sky2-sidestripe {
+        color: hsl(298, 63%, 55%);
+      }
+      .sky2-top-side {
+        color: hsl(298, 44%, 26%);
+      }
+      .sky2-top-front {
+        color: hsl(298, 62%, 56%);
+      }
+
+      .sky2-frontstripe {
+        color: hsl(298, 63%, 74%);
+      }
+    }
+
+    #skyscraper-1 {
+      .sky1-topfront {
+        color: hsl(261, 100%, 81%);
+      }
+      .sky1-topside {
+        color: hsl(261, 43%, 60%);
+      }
+      .sky1-front {
+        color: hsl(264, 100%, 84%);
+      }
+      .sky1-side {
+        color: hsl(264, 100%, 75%);
+      }
+      .sky1-frontstripe {
+        color: hsl(261, 80%, 65%);
+      }
+      .sky1-sidestripe {
+        color: hsl(261, 80%, 60%);
+      }
+    }
+
+    #skyscraper-2,
+    #skyscraper-4 {
+      .sky2-front {
+        color: hsl(227, 43%, 57%);
+      }
+      .sky2-side {
+        color: hsl(238, 81%, 65%);
+      }
+      .sky2-frontshadow {
+        color: hsl(257, 63%, 52%);
+      }
+      .sky2-frontstripe {
+        color: hsl(203, 97%, 75%);
+      }
+      .sky2-sidestripe {
+        color: hsl(203, 97%, 55%);
+      }
+      .sky2-top-side {
+        color: hsl(203, 97%, 35%);
+      }
+      .sky2-top-front {
+        color: hsl(222, 72%, 77%);
+      }
     }
   }
 

@@ -5,7 +5,7 @@ let interval;
 let timeNow = getUserTime();
 const compare = Temporal.PlainTime.compare;
 let timeUntilNext = 0;
-
+let timeOfDay = "day";
 const times = {
   sunrise: {
     start: Temporal.PlainTime.from("06:30:00"),
@@ -44,7 +44,6 @@ function getUserTime() {
 }
 
 export function setColoursForTime() {
-  let timeOfDay = "day";
   switch (true) {
     case compare(timeNow, times.sunrise.start) < 0 || compare(timeNow, times.night.start) >= 0: {
       timeOfDay = "night";
@@ -113,4 +112,13 @@ export function setColoursForTime() {
       `color-mix(in oklch, ${times[nextTimeOfDay].color3} ${percentageProgress}%,  ${times[timeOfDay].color3})`,
     );
   }
+
+  root.style.setProperty("--stars-display", timeOfDay === "night" ? "grid" : "none");
+  root.setAttribute("data-time", timeOfDay);
 }
+
+window.setTime = (time) => {
+  timeNow = Temporal.PlainTime.from(time);
+  setColoursForTime();
+};
+window.getTimeOfDay = () => timeOfDay;
