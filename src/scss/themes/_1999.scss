@@ -7,7 +7,6 @@
   --link-color: hsl(276, 100%, 50%);
   --link-hover-color: hsl(129, 74%, 30%);
   --background: url("/img/themes/geocities/1999-bg.webp");
-  --tweet-bg: hsl(49, 80%, 96%);
   --bullet: url("/img/themes/geocities/redball.gif");
   --inline-code-color: hsl(123, 100%, 50%);
   --inline-code-bg: #000;
@@ -96,7 +95,7 @@
     }
 
     .submenu-list {
-      background-color: var(--tweet-bg);
+      background-color: hsl(49, 80%, 96%);
       @include oldschool-border(9px);
       z-index: 2;
       padding: 0;
