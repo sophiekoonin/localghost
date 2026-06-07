@@ -145,17 +145,8 @@
     }
   }
 
-  .tweet-card {
-    .tweet-header {
-      .tweet-author-name {
-        text-transform: uppercase;
-        font-style: italic;
-      }
-    }
-  }
-
   .footer-links a,
-  .content a:not(.tweet-card a):not(.neocities-badge):not(.webmention-author),
+  .content a:not(.neocities-badge):not(.webmention-author),
   .submenu a {
     text-decoration: none;
     --link-color: hsl(329, 96%, 31%);

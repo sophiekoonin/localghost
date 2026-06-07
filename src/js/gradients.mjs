@@ -37,7 +37,7 @@ const stages = {
     next: "night",
     color1: "oklch(0.6933 0.1899 297.53)",
     color2: "oklch(73.53% 0.21 352.59)",
-    color3: "oklch(78.82% 0.148 32.2)",
+    color3: "oklch(59.41% 0.289 331.1)",
   },
   night: {
     start: newTimeInstance("21:00:00"),
@@ -133,15 +133,15 @@ export function setColoursForTime(time) {
     `color-mix(in oklch, ${stages[nextStageName].color2} ${transitionProgressPercent}%, ${stages[currentStageName].color2})`,
   );
 
-  // Don't colour mix the bottom row if we're doing night -> sunset because this comes out green...
-  if (nextStageName === "sunrise" && transitionProgressPercent > 0) {
-    root.style.setProperty("--bg-gradient-bottom", `${stages[nextStageName].color3}`);
-  } else {
-    root.style.setProperty(
-      "--bg-gradient-bottom",
-      `color-mix(in oklch, ${stages[nextStageName].color3} ${transitionProgressPercent}%, ${stages[currentStageName].color3})`,
-    );
-  }
+  // // Don't colour mix the bottom row if we're doing night -> sunset because this comes out green...
+  // if (nextStageName === "sunrise" && transitionProgressPercent > 0) {
+  //   root.style.setProperty("--bg-gradient-bottom", `${stages[nextStageName].color3}`);
+  // } else {
+  root.style.setProperty(
+    "--bg-gradient-bottom",
+    `color-mix(in oklch, ${stages[nextStageName].color3} ${transitionProgressPercent}%, ${stages[currentStageName].color3})`,
+  );
+  // }
 
   root.setAttribute("data-time", currentStageName);
 }

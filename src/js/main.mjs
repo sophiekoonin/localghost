@@ -42,7 +42,7 @@ let theme = "";
 
 function initThemes() {
   const search = new URLSearchParams(window.location.search);
-  theme = search.get("theme") || localStorage.getItem(THEME_STORAGE_KEY) || "garden";
+  theme = search.get("theme") || localStorage.getItem(THEME_STORAGE_KEY) || "city";
   changeTheme(theme);
 }
 

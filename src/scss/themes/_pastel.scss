@@ -46,12 +46,8 @@
       color: hsl(172, 72%, 42%);
     }
 
-    a:not(.tweet-card a):not(.webmention-author):not(.neocities-badge) {
-      background: linear-gradient(
-        to bottom,
-        var(--link-color) 0%,
-        var(--link-color) 100%
-      );
+    a:not(.webmention-author):not(.neocities-badge) {
+      background: linear-gradient(to bottom, var(--link-color) 0%, var(--link-color) 100%);
       background-position: 0 100%;
       background-repeat: repeat-x;
       background-size: 3px 3px;

@@ -134,21 +134,6 @@
       background: none;
       border: none;
     }
-    .tweet-card {
-      padding: var(--space-2xs);
-      border-radius: 0;
-      @include oldschool-border(9px);
-
-      .tweet-header,
-      .tweet-body,
-      .tweet-footer {
-        padding: var(--space-3xs);
-        @include oldschool-border(2px);
-      }
-      a {
-        text-decoration: underline;
-      }
-    }
   }
 
   #homepage-heading {
