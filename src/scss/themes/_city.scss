@@ -2,6 +2,7 @@
 @use "./shared";
 
 [data-theme="city"] {
+  // vars
   color-scheme: light dark;
   --bg-gradient-top: oklch(0.25 0.09 276.73 / 1);
   --bg-gradient-mid: oklch(0.47 0.28 283.78 / 1);
@@ -14,8 +15,7 @@
   --header-color: light-dark(black, oklch(0.91 0.07 327.77 / 1));
   --header-font-family: "Bayshore", cursive;
   --bullet: url("/img/themes/heart-purple-small.svg");
-
-  --heading-font-family: "Asap Condensed", "Figtree", sans-serif;
+  --heading-font-family: "Krungthep", var(--body-font-family);
   --link-color: light-dark(oklch(0.45 0.22 287.16 / 1), oklch(0.94 0.08 175.91 / 1));
   --link-hover-color: light-dark(oklch(0.76 0.17 327.1 / 1), oklch(0.94 0.08 175.91 / 1));
   --tweet-bg: oklch(0.35 0.03 283.76 / 0.95);
@@ -26,8 +26,87 @@
   --photo-bg: linear-gradient(oklch(0.63 0.23 288.28 / 1), oklch(79.365% 0.19842 329.093));
   --blockquote-bg: oklch(1 0 0 / 0.15);
 
+  main {
+    display: grid;
+  }
   footer {
+    @include shared.grid-footer;
     background: linear-gradient(hsla(0, 0%, 100%, 0) 40%, var(--bg-gradient-bottom));
+  }
+
+  header {
+    width: 100%;
+    height: clamp(10rem, 30vh, 25rem);
+
+    .header {
+      transform: rotate(-5deg);
+      text-align: center;
+      font-size: var(--step-8);
+
+      a {
+        font-weight: 400;
+        color: hsla(303, 88%, 90%, 1);
+        text-decoration: none;
+        @include shared.neon-glow(oklch(75.88% 0.264 329.46), oklch(67.06% 0.326 330.95));
+        &:hover,
+        &:focus,
+        &:active {
+          text-decoration: none;
+        }
+
+        &:hover,
+        &:focus {
+          color: hsla(125, 88%, 90%, 1);
+          @include shared.neon-glow(hsla(125, 88%, 70%, 1), oklch(83.82% 0.326 143));
+        }
+      }
+    }
+  }
+
+  .footer-links a,
+  .content a:not(.neocities-badge):not(.webmention-author),
+  .submenu a {
+    text-decoration: none;
+    --bg-h: 2px;
+
+    @include shared.fancy-link-underlines(oklch(63.24% 0.224 288.28), oklch(66.47% 0.321 330.95));
+  }
+
+  .content {
+    border-radius: 10px;
+    padding: var(--space-s-m);
+    // box-shadow: 10px 10px 0 3px rgba(0, 0, 0, 0.2);
+
+    h1 {
+      color: light-dark(oklch(56.47% 0.20652 286.801), oklch(0.69 0.19 288.75));
+    }
+    h2 {
+      color: light-dark(oklch(45.666% 0.23509 280.684), oklch(0.75 0.3 330.29));
+    }
+    h3 {
+      color: light-dark(oklch(55.612% 0.25769 305.516), oklch(0.9 0.21 145.05));
+    }
+    h4 {
+      color: light-dark(oklch(56.763% 0.25056 330.007), oklch(0.89 0.12 327.81));
+    }
+  }
+
+  .sidebar .main-nav {
+    .nav-link,
+    button.nav-link {
+      color: var(--link-color);
+      font-family: var(--heading-font-family);
+      text-transform: lowercase;
+      text-decoration: none;
+      font-size: var(--step-0);
+      &:hover {
+        color: hsla(125, 88%, 90%, 1);
+        @include shared.neon-glow(hsla(125, 88%, 70%, 1), oklch(86.18% 0.338 143));
+      }
+      &[data-state="active"] {
+        text-decoration: underline;
+      }
+    }
   }
 
   &[data-time="night"] {
@@ -239,85 +318,6 @@
     @container wrapper (min-width: #{utils.$lg_breakpoint}) {
       grid-template-columns: repeat(40, 1fr);
     }
-  }
-
-  header {
-    width: 100%;
-    height: clamp(10rem, 30vh, 25rem);
-
-    .header {
-      transform: rotate(-5deg);
-      text-align: center;
-      font-size: var(--step-8);
-
-      a {
-        font-weight: 400;
-        color: hsla(303, 88%, 90%, 1);
-        text-decoration: none;
-        @include shared.neon-glow(oklch(75.88% 0.264 329.46), oklch(67.06% 0.326 330.95));
-        &:hover,
-        &:focus,
-        &:active {
-          text-decoration: none;
-        }
-
-        &:hover,
-        &:focus {
-          color: hsla(125, 88%, 90%, 1);
-          @include shared.neon-glow(hsla(125, 88%, 70%, 1), oklch(83.82% 0.326 143));
-        }
-      }
-    }
-  }
-
-  .content {
-    border-radius: 10px;
-    padding: var(--space-s-m);
-    // box-shadow: 10px 10px 0 3px rgba(0, 0, 0, 0.2);
-
-    h1 {
-      color: light-dark(oklch(56.47% 0.20652 286.801), oklch(0.69 0.19 288.75));
-    }
-    h2 {
-      color: light-dark(oklch(45.666% 0.23509 280.684), oklch(0.75 0.3 330.29));
-    }
-    h3 {
-      color: light-dark(oklch(55.612% 0.25769 305.516), oklch(0.9 0.21 145.05));
-    }
-    h4 {
-      color: light-dark(oklch(56.763% 0.25056 330.007), oklch(0.89 0.12 327.81));
-    }
-  }
-
-  .sidebar .main-nav {
-    .nav-link,
-    button.nav-link {
-      color: var(--link-color);
-      font-family: var(--heading-font-family);
-      text-transform: lowercase;
-      text-decoration: none;
-      font-size: var(--step-0);
-      &:hover {
-        color: hsla(125, 88%, 90%, 1);
-        @include shared.neon-glow(hsla(125, 88%, 70%, 1), oklch(86.18% 0.338 143));
-      }
-      &[data-state="active"] {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  footer {
-    @include shared.grid-footer;
-  }
-
-  .footer-links a,
-  .content a:not(.neocities-badge):not(.webmention-author),
-  .submenu a {
-    text-decoration: none;
-    --bg-h: 2px;
-
-    @include shared.fancy-link-underlines(oklch(63.24% 0.224 288.28), oklch(66.47% 0.321 330.95));
   }
 
   #skyscraper-3 {

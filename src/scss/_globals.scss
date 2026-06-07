@@ -9,7 +9,7 @@ body {
   background: var(--background);
   color: var(--body-color);
   font-family: var(--body-font-family);
-  font-weight: 400;
+  font-variation-settings: "wght" 350;
 }
 
 select {
@@ -58,6 +58,12 @@ svg {
   height: auto;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-variation-settings: "wght" 700;
+}
 h1 {
   font-size: var(--step-4);
 }

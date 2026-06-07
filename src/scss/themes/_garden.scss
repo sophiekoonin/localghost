@@ -1,7 +1,6 @@
 @use "../utils";
 
 [data-theme="garden"] {
-  --body-font-family: "Figtree", serif;
   --heading-font-family: "Pixel Art Serif", monospace;
   --background: url(/img/themes/garden-theme/grass-tile.png) repeat;
   --content-bg: hsl(36, 95%, 71%);
