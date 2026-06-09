@@ -59,16 +59,16 @@ svg {
 }
 
 h1 {
-  font-size: var(--step-4);
-}
-h2 {
   font-size: var(--step-3);
 }
-h3 {
+h2 {
   font-size: var(--step-2);
 }
-h4 {
+h3 {
   font-size: var(--step-1);
+}
+h4 {
+  font-size: var(--step-0);
 }
 *,
 *::before,
@@ -90,6 +90,12 @@ h3,
 h4,
 h5,
 h6 {
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
   overflow-wrap: break-word;
   font-family: var(--heading-font-family);
 }

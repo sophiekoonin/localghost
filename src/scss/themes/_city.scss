@@ -10,7 +10,7 @@
   --background: fixed linear-gradient(var(--bg-gradient-top), var(--bg-gradient-mid) 80%);
   --body-color: light-dark(oklch(0.34 0.02 309.63 / 1), white);
   --accent-color: oklch(0.67 0.33 330.95 / 1);
-  --content-bg: light-dark(oklch(0.95 0.03 316.17 / 0.5), oklch(0.22 0.02 284.12 / 0.95));
+  --content-bg: light-dark(oklch(0.95 0.03 316.17 / 0.7), oklch(0.22 0.02 284.12 / 0.95));
   --stars-display: none;
   --header-color: light-dark(black, oklch(0.91 0.07 327.77 / 1));
   --header-font-family: "Bayshore", cursive;
@@ -19,7 +19,6 @@
   --link-hover-color: light-dark(oklch(64.081% 0.23752 328.48), oklch(0.94 0.08 175.91 / 1));
   --inline-code-color: light-dark(oklch(48.376% 0.23141 274.82), oklch(0.87 0.2 145.12 / 1));
   --inline-code-bg: light-dark(oklch(89.965% 0.0713 326.829), transparent);
-  --list-heading-color: white;
   --photo-bg: linear-gradient(oklch(0.63 0.23 288.28 / 1), oklch(79.365% 0.19842 329.093));
   --blockquote-bg: oklch(1 0 0 / 0.15);
 

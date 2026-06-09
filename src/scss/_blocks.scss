@@ -17,7 +17,6 @@
 
 .list-heading {
   font-size: var(--step-0);
-  margin-block: var(--space-s);
   max-inline-size: var(--max-inline-size);
   margin-inline: auto;
   display: flex;
@@ -25,7 +24,6 @@
   justify-content: space-between;
   h1 {
     display: inline-block;
-    color: var(--list-heading-color);
   }
 }
 
@@ -53,8 +51,15 @@
     }
   }
 
-  .content-inner {
+  .page-heading {
+    margin-bottom: var(--space-s-m);
+  }
+
+  :not(.summary) .content-inner {
     padding-block: var(--space-s);
+  }
+
+  .content-inner {
     max-inline-size: var(--max-inline-size);
 
     picture {

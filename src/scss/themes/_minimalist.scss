@@ -1,10 +1,15 @@
 @use "../utils";
 
 [data-theme="minimalist"] {
+  color-scheme: light dark;
+  --white: hsl(0, 0%, 98%);
+  --black: hsl(0, 0%, 20%);
+  --background: light-dark(--white, --black);
+  --body-color: light-dark(--black, --white);
   --content-bg: var(--background);
-  --header-font-family: "Krungthep", var(--body-font-family);
-  --header-color: hsl(0, 0%, 20%);
-  --accent-color: hsl(0, 0%, 20%);
+  --header-font-family: "DM Serif Text", var(--body-font-family);
+  --header-color: light-dark(--white, --black);
+  --accent-color: light-dark(--white, --black);
   --bullet: disc;
 
   .skyscraper {
@@ -45,9 +50,14 @@
   .sidebar {
     margin-block-end: var(--space-xs);
     a {
+      font-family: var(--heading-font-family);
+      text-decoration-thickness: from-font;
       span {
         display: block;
         margin-right: auto;
+      }
+      &[data-state="active"] {
+        color: light-dark(oklch(67.392% 0.19499 303.833) oklch(76.189% 0.11596 317.459));
       }
     }
     .submenu-list {
