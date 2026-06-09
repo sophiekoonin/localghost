@@ -10,7 +10,7 @@ title: "Everything else"
     {% for item in etc %}
       <li {%if item.background%} data-bg style="--etc-bg: url('{{item.background}}')"{%endif%}>
         <a href="{{ item.url }}">
-          <span>{{ item.title }}</span>
+          <h2>{{ item.title }}</h2>
 
         <p>{{ item.description }}</p>
         </a>

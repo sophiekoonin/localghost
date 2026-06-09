@@ -3,6 +3,7 @@
 [data-theme="geocities"] {
   --body-font-family: "Times New Roman", serif;
   --header-font-family: "Comic Sans MS", serif;
+  --heading-font-family: var(--body-font-family);
   --accent-color: hsl(210, 100%, 56%);
   --link-color: hsl(276, 100%, 50%);
   --link-hover-color: hsl(129, 74%, 30%);
