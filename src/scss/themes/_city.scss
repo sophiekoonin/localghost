@@ -15,12 +15,11 @@
   --header-color: light-dark(black, oklch(0.91 0.07 327.77 / 1));
   --header-font-family: "Bayshore", cursive;
   --bullet: url("/img/themes/heart-purple-small.svg");
-  --heading-font-family: "Krungthep", var(--body-font-family);
   --link-color: light-dark(oklch(0.45 0.22 287.16 / 1), oklch(0.94 0.08 175.91 / 1));
-  --link-hover-color: light-dark(oklch(0.76 0.17 327.1 / 1), oklch(0.94 0.08 175.91 / 1));
+  --link-hover-color: light-dark(oklch(64.081% 0.23752 328.48), oklch(0.94 0.08 175.91 / 1));
   --inline-code-color: light-dark(oklch(48.376% 0.23141 274.82), oklch(0.87 0.2 145.12 / 1));
   --inline-code-bg: light-dark(oklch(89.965% 0.0713 326.829), transparent);
-  --list-heading-color: light-dark(oklch(0.76 0.17 327.1 / 1), oklch(0.87 0.2 145.12 / 1));
+  --list-heading-color: light-dark(oklch(48.01% 0.20765 328.948), oklch(0.87 0.2 145.12 / 1));
   --photo-bg: linear-gradient(oklch(0.63 0.23 288.28 / 1), oklch(79.365% 0.19842 329.093));
   --blockquote-bg: oklch(1 0 0 / 0.15);
 
@@ -62,8 +61,7 @@
   }
 
   .footer-links a,
-  .content a:not(.neocities-badge):not(.webmention-author),
-  .submenu a {
+  .content a:not(.neocities-badge):not(.webmention-author) {
     text-decoration: none;
     --bg-h: 2px;
 
@@ -73,7 +71,7 @@
   .content {
     border-radius: 10px;
     padding: var(--space-s-m);
-    // box-shadow: 10px 10px 0 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 8px 8px 0 3px rgba(0, 0, 0, 0.2);
 
     h1 {
       color: light-dark(oklch(56.47% 0.20652 286.801), oklch(0.69 0.19 288.75));
@@ -99,7 +97,8 @@
       font-size: var(--step-0);
       &:hover {
         color: hsla(125, 88%, 90%, 1);
-        @include shared.neon-glow(hsla(125, 88%, 70%, 1), oklch(86.18% 0.338 143));
+
+        @include shared.neon-glow(oklch(76.307% 0.11729 250.663), oklch(71.309% 0.15694 248.578));
       }
       &[data-state="active"] {
         text-decoration: underline;
