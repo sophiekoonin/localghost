@@ -58,12 +58,6 @@ svg {
   height: auto;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  letter-spacing: 0.05;
-}
 h1 {
   font-size: var(--step-4);
 }
@@ -121,6 +115,7 @@ ol[class] {
 }
 
 a {
+  font-variation-settings: "wght" 550;
   font-weight: 600;
 
   color: var(--link-color);

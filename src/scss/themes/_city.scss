@@ -15,11 +15,11 @@
   --header-color: light-dark(black, oklch(0.91 0.07 327.77 / 1));
   --header-font-family: "Bayshore", cursive;
   --bullet: url("/img/themes/heart-purple-small.svg");
-  --link-color: light-dark(oklch(0.45 0.22 287.16 / 1), oklch(0.94 0.08 175.91 / 1));
+  --link-color: light-dark(oklch(0.46 0.21 292.12 / 1), oklch(0.94 0.08 175.91 / 1));
   --link-hover-color: light-dark(oklch(64.081% 0.23752 328.48), oklch(0.94 0.08 175.91 / 1));
   --inline-code-color: light-dark(oklch(48.376% 0.23141 274.82), oklch(0.87 0.2 145.12 / 1));
   --inline-code-bg: light-dark(oklch(89.965% 0.0713 326.829), transparent);
-  --list-heading-color: light-dark(oklch(48.01% 0.20765 328.948), oklch(0.87 0.2 145.12 / 1));
+  --list-heading-color: white;
   --photo-bg: linear-gradient(oklch(0.63 0.23 288.28 / 1), oklch(79.365% 0.19842 329.093));
   --blockquote-bg: oklch(1 0 0 / 0.15);
 
@@ -54,14 +54,15 @@
         &:hover,
         &:focus {
           color: hsla(125, 88%, 90%, 1);
-          @include shared.neon-glow(hsla(125, 88%, 70%, 1), oklch(83.82% 0.326 143));
+          @include shared.neon-glow(oklch(92.234% 0.1166 182.659), oklch(89.294% 0.16945 170.274));
         }
       }
     }
   }
 
   .footer-links a,
-  .content a:not(.neocities-badge):not(.webmention-author) {
+  .list-heading a,
+  .content a:not(.neocities-badge):not(.webmention-author):not(.page-heading a) {
     text-decoration: none;
     --bg-h: 2px;
 
@@ -88,17 +89,15 @@
   }
 
   .sidebar .main-nav {
-    .nav-link,
-    button.nav-link {
+    .nav-link {
       color: var(--link-color);
       font-family: var(--heading-font-family);
       text-transform: lowercase;
       text-decoration: none;
       font-size: var(--step-0);
-      &:hover {
-        color: hsla(125, 88%, 90%, 1);
 
-        @include shared.neon-glow(oklch(76.307% 0.11729 250.663), oklch(71.309% 0.15694 248.578));
+      &:hover {
+        color: light-dark(oklch(87.189% 0.09484 316.427), hsla(125, 88%, 90%, 1));
       }
       &[data-state="active"] {
         text-decoration: underline;
@@ -106,6 +105,13 @@
     }
   }
 
+  .list-heading,
+  .pagination {
+    a {
+      font-variation-settings: "wght" 500;
+      color: white;
+    }
+  }
   .everything-else {
     li,
     a {
@@ -117,6 +123,15 @@
     color-scheme: dark;
     --bullet: url("data:image/svg+xml,%3Csvg viewBox='0 0 9 9' height='10' width='10' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='2'%3E%3Cpath fill='%23fff' d='M4 2h1v5H4z'/%3E%3Cpath fill='%23fff' d='M3 3h3.167v3H3z'/%3E%3Cpath fill='%23fff' d='M7 4v1H2V4z'/%3E%3Cpath fill='%23fff' d='M4 0h1v1H4z'/%3E%3Cpath fill='%23fff' d='M8 4h1v1H8z'/%3E%3Cpath fill='%23fff' d='M0 4h1v1H0z'/%3E%3Cpath fill='%23fff' d='M4 8h1v1H4z'/%3E%3C/svg%3E");
 
+    .list-heading h1 {
+      color: oklch(0.87 0.2 145.12 / 1);
+    }
+
+    .nav-link {
+      &:hover {
+        @include shared.neon-glow(hsla(125, 88%, 70%, 1), oklch(83.82% 0.326 143));
+      }
+    }
     .star-grid {
       display: grid;
     }

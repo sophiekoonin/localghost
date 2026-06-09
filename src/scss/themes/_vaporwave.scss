@@ -35,6 +35,7 @@
 [data-theme="vaporwave"] {
   --body-font-family: "Win95 sans", monospace;
   --header-font-family: "VCR OSD Mono", monospace;
+  --heading-font-family: var(--body-font-family);
   --content-bg: hsl(250, 100%, 89%);
   --accent-color: hsl(306, 100%, 50%);
   --background: fixed linear-gradient(hsl(171, 100%, 50%), hsl(263, 81%, 77%), hsl(306, 100%, 50%));

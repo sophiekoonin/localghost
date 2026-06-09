@@ -133,10 +133,6 @@ export function setColoursForTime(time) {
     `color-mix(in oklch, ${stages[nextStageName].color2} ${transitionProgressPercent}%, ${stages[currentStageName].color2})`,
   );
 
-  // // Don't colour mix the bottom row if we're doing night -> sunset because this comes out green...
-  // if (nextStageName === "sunrise" && transitionProgressPercent > 0) {
-  //   root.style.setProperty("--bg-gradient-bottom", `${stages[nextStageName].color3}`);
-  // } else {
   root.style.setProperty(
     "--bg-gradient-bottom",
     `color-mix(in oklch, ${stages[nextStageName].color3} ${transitionProgressPercent}%, ${stages[currentStageName].color3})`,
@@ -147,3 +143,7 @@ export function setColoursForTime(time) {
 }
 
 window.getTimeOfDay = () => currentStageName;
+
+export function setStage(stage) {
+  setColoursForTime(stages[stage].start);
+}

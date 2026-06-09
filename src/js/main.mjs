@@ -1,4 +1,4 @@
-import { setColoursForTime } from "./gradients.mjs";
+import { setColoursForTime, setStage } from "./gradients.mjs";
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 function pictureEl(name, alt) {
@@ -25,7 +25,6 @@ function contentEnd(reducedMotion) {
 }
 document.documentElement.classList.remove("no-js");
 const currentPage = window.location.pathname;
-
 const THEME_STORAGE_KEY = "user-theme";
 const THEMES = {
   city: "city",
@@ -36,6 +35,7 @@ const THEMES = {
   twothousandandthree: "twothousandandthree",
 };
 
+let debug = false;
 let skyscrapers = [];
 let themeOptions = [];
 let theme = "";
@@ -43,15 +43,11 @@ let theme = "";
 function initThemes() {
   const search = new URLSearchParams(window.location.search);
   theme = search.get("theme") || localStorage.getItem(THEME_STORAGE_KEY) || "city";
+  debug = search.get("debug") || false;
   changeTheme(theme);
 }
 
-initThemes();
-
 function changeTheme(newTheme) {
-  // if (!Object.keys(THEMES).includes(newTheme)) {
-  //   newTheme = "garden";
-  // }
   localStorage.setItem(THEME_STORAGE_KEY, newTheme);
   document.documentElement.setAttribute("data-theme", newTheme);
   if (themeOptions.length > 0) {
@@ -72,6 +68,8 @@ function changeTheme(newTheme) {
       case "garden":
         cleanupGarden();
         break;
+      case "city":
+        cleanupCity();
       default:
         break;
     }
@@ -93,6 +91,7 @@ function changeTheme(newTheme) {
     case "garden":
       initGardenTheme();
     case "city":
+      initCity();
       setColoursForTime();
     default:
       break;
@@ -111,7 +110,7 @@ window.addEventListener("load", () => {
   themeOptions = Array.from(document.getElementsByClassName("theme-option"));
 
   themeOptions.forEach((el) => addEventListener("change", eventListener));
-  changeTheme(theme);
+  initThemes();
 });
 
 window.addEventListener("unload", () => {
@@ -378,4 +377,23 @@ function initGardenTheme() {
 function cleanupGarden() {
   const bfly = document.getElementById("butterfly");
   if (bfly) bfly.remove();
+}
+
+function initCity() {
+  if (!debug) return;
+  const wrapper = document.createElement("div");
+  wrapper.id = "stage-switch-wrapper";
+
+  ["sunrise", "day", "sunset", "night"].forEach((stage) => {
+    const btn = document.createElement("button");
+    btn.textContent = stage;
+    btn.onclick = () => setStage(stage);
+    wrapper.appendChild(btn);
+  });
+  document.querySelector("header").appendChild(wrapper);
+}
+
+function cleanupCity() {
+  if (!debug) return;
+  document.getElementById("stage-switch-wrapper").remove();
 }
