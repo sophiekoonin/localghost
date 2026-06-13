@@ -25,7 +25,7 @@
     <link rel="stylesheet" type="text/css" href={{ cssFilename }}>
     <script data-goatcounter="https://localghost.goatcounter.com/count" async defer src="//gc.zgo.at/count.js"></script>
   </head>
-  <body>
+  <body {% if isHome%}data-page="index"{%endif%}>
     {% include "partials/svg/defs.html" %}
     <div class="page-wrapper">
       {% include "partials/header.njk" %}
