@@ -75,13 +75,16 @@
     padding-block-start: 0;
     margin-block-start: var(--space-m);
 
-    width: 100%;
     li {
       text-transform: lowercase;
       font-family: var(--heading-font-family);
       a {
         text-decoration: none;
       }
+    }
+
+    @container (width < 50vw) {
+      padding-block-start: var(--space-s);
     }
   }
   .content {
