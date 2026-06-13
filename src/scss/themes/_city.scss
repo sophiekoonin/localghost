@@ -100,7 +100,7 @@
       }
     }
     .nav-link {
-      color: var(--link-color);
+      color: light-dark(oklch(94.127% 0.02625 300.161), oklch(0.94 0.08 175.91 / 1));
       font-family: var(--heading-font-family);
       text-transform: lowercase;
       text-decoration: none;
