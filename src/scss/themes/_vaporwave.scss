@@ -100,6 +100,10 @@
     }
   }
 
+  main {
+    display: block;
+  }
+
   .content {
     @extend .windows;
     font-family: "Courier New", monospace;
@@ -111,6 +115,7 @@
     }
 
     .page-heading {
+      margin-bottom: 0;
       text-transform: uppercase;
       background: fixed linear-gradient(90deg, hsl(172, 100%, 44.3%), hsl(259.1, 100%, 54.3%));
       border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
@@ -158,18 +163,57 @@
   }
 
   .sidebar .main-nav {
-    margin-block-start: 1px;
+    @extend .windows;
+    background-color: var(--content-bg);
+    padding: 2px;
+    margin-block-end: var(--space-s);
+    li {
+      display: inline-flex;
+    }
+    ul {
+      flex-wrap: wrap;
+    }
+
     .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       @extend .link-button;
       &[data-state="active"],
       &[aria-expanded="true"] {
-        text-decoration: underline;
+        background-color: hsl(250, 100%, 92%);
         border-right: 2px solid #fff;
         border-bottom: 2px solid #fff;
         border-left: 2px solid hsl(250, 100%, 20%);
         border-top: 2px solid hsl(250, 100%, 20%);
       }
+
+      &::before {
+        content: " ";
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-size: contain;
+        display: inline-block;
+      }
+
+      &[data-title="About"]::before {
+        background-image: url("/img/themes/city/my-computer.png");
+      }
+      &[data-title="Speaking"]::before {
+        background-image: url("/img/themes/city/speaker.png");
+      }
+      &[data-title="Links"]::before {
+        background-image: url("/img/themes/city/internet.png");
+      }
+      &[data-title="Blog"]::before {
+        background-image: url("/img/themes/city/notepad.png");
+      }
+      &[data-title="etc"]::before {
+        background-image: url("/img/themes/city/folder.png");
+      }
     }
+
     .submenu-list {
       font-size: var(--step--2);
       z-index: 2;

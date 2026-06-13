@@ -37,11 +37,14 @@
       text-align: center;
       font-size: var(--step-8);
 
-      a {
+      a,
+      &:is(h1) {
         font-weight: 400;
         color: hsla(303, 88%, 90%, 1);
-        text-decoration: none;
         @include shared.neon-glow(oklch(75.88% 0.264 329.46), oklch(67.06% 0.326 330.95));
+      }
+      a {
+        text-decoration: none;
         &:hover,
         &:focus,
         &:active {
@@ -100,7 +103,7 @@
       }
     }
     .nav-link {
-      color: light-dark(oklch(94.127% 0.02625 300.161), oklch(0.94 0.08 175.91 / 1));
+      color: light-dark(oklch(88.409% 0.0422 300.662), oklch(0.94 0.08 175.91 / 1));
       font-family: var(--heading-font-family);
       text-transform: lowercase;
       text-decoration: none;

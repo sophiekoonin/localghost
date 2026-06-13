@@ -246,13 +246,25 @@
   display: none;
 }
 
-.theme-switcher {
-  border: 0;
+button[popovertarget="theme-switcher"] {
   position: absolute;
-  top: var(--space-xs);
-  right: var(--space-xs);
-  display: flex;
+  top: 16px;
+  right: 16px;
+}
+
+.theme-switcher {
+  &:popover-open {
+    display: flex;
+  }
+  margin: 0;
+  border: 0;
+  inset: unset;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  flex-direction: column;
   align-items: center;
+  background: none;
 
   input {
     opacity: 0;
