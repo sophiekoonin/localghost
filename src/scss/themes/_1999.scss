@@ -38,76 +38,64 @@
     display: block;
   }
 
-  .sidebar .main-nav-list {
-    display: block;
+  .sidebar .main-nav {
+    width: 100%;
+    &-list {
+      display: block;
+      .nav-link {
+        font-size: var(--step-0);
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        display: inline-flex;
+        align-items: center;
+        margin-inline-end: 0;
+        padding-inline-end: 0;
+        color: hsl(332, 95%, 42%);
+        font-weight: bold;
+        &:visited {
+          color: hsl(270, 95%, 42%);
+        }
 
-    .nav-link {
-      font-size: var(--step-0);
-      text-decoration: underline;
-      text-decoration-skip-ink: none;
-      display: inline-flex;
-      align-items: center;
-      margin-inline-end: 0;
-      padding-inline-end: 0;
-      color: hsl(332, 95%, 42%);
-      font-weight: bold;
-      &:visited {
-        color: hsl(270, 95%, 42%);
-      }
+        &[data-state="active"] {
+          color: hsl(307, 88%, 45%);
+        }
 
-      &[data-state="active"] {
-        color: hsl(307, 88%, 45%);
-      }
-
-      &:not(:first-of-type)::before {
-        content: "";
-        position: relative;
-        background: url("/img/themes/geocities/static/flashingballbullet.png");
-        height: 1rem;
-        width: 1rem;
-        right: 0;
-        margin-inline: var(--space-2xs);
-        display: inline-block;
-        @media (prefers-reduced-motion: no-preference) {
-          background: url("/img/themes/geocities/flashingballbullet.gif");
+        &:not(:first-of-type)::before {
+          content: "";
+          position: relative;
+          background: url("/img/themes/geocities/static/flashingballbullet.png");
+          height: 1rem;
+          width: 1rem;
+          right: 0;
+          margin-inline: var(--space-2xs);
+          display: inline-block;
+          @media (prefers-reduced-motion: no-preference) {
+            background: url("/img/themes/geocities/flashingballbullet.gif");
+          }
         }
       }
-    }
-    &:after,
-    &:before {
-      content: " ";
-      bottom: calc(var(--space-xs) * -1);
-      left: 0;
-      width: 100%;
-      height: 2px;
-      position: relative;
-      display: block;
-      @media (prefers-reduced-motion: no-preference) {
-        background: url("/img/themes/geocities/colorbar.gif");
-      }
-      @media (prefers-reduced-motion: reduce) {
-        background: url("/img/themes/geocities/static/colorbar.png");
-      }
-    }
-
-    &:before {
-      top: calc(var(--space-xs) * -1);
-    }
-
-    .submenu-list {
-      background-color: hsl(49, 80%, 96%);
-      @include oldschool-border(9px);
-      z-index: 2;
-      padding: 0;
-      li {
-        padding: 0.25rem;
+      &:after,
+      &:before {
+        content: " ";
+        bottom: calc(var(--space-xs) * -1);
+        left: 0;
+        width: 100%;
+        height: 2px;
+        position: relative;
         display: block;
-        margin: 0;
-        @include oldschool-border(2px);
+        @media (prefers-reduced-motion: no-preference) {
+          background: url("/img/themes/geocities/colorbar.gif");
+        }
+        @media (prefers-reduced-motion: reduce) {
+          background: url("/img/themes/geocities/static/colorbar.png");
+        }
+      }
+
+      &:before {
+        top: calc(var(--space-xs) * -1);
       }
     }
   }
-
   .content {
     margin: 0 auto;
     margin-block-start: var(--space-m-l);
