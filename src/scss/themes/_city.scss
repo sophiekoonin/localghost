@@ -30,12 +30,17 @@
 
   header {
     width: 100%;
-    height: clamp(8rem, 25vh, 20rem);
+    align-items: center;
+    height: clamp(8rem, 10vh + 10vw, 30rem);
 
     .header {
       transform: rotate(-5deg);
       text-align: center;
       font-size: var(--step-8);
+      &:is([data-page="index"] .header) {
+        font-size: var(--step-9);
+        margin-top: var(--space-m);
+      }
 
       a,
       &:is(h1) {
@@ -89,7 +94,6 @@
   }
 
   .sidebar {
-    // background: var(--content-bg);
     border-radius: var(--border-radius);
     @container (width < 50vw) {
       .main-nav {
@@ -103,7 +107,7 @@
       }
     }
     .nav-link {
-      color: light-dark(oklch(88.409% 0.0422 300.662), oklch(0.94 0.08 175.91 / 1));
+      color: light-dark(oklch(96.335% 0.02068 301.001), oklch(0.94 0.08 175.91 / 1));
       font-family: var(--heading-font-family);
       text-transform: lowercase;
       text-decoration: none;

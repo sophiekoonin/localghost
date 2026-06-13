@@ -33,9 +33,12 @@ main {
   grid-template-columns: 1fr;
   flex: 1;
 
-  @container (width > 600px) {
-    gap: 25px;
-    grid-template-columns: 20cqi 1fr 20cqi;
+  @container (width > 800px > 1050px) {
+    grid-template-columns: 20cqi max-content;
+  }
+
+  @container (width > 1050px) {
+    grid-template-columns: 20cqi max-content 20cqi;
   }
 }
 

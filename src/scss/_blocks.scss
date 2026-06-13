@@ -3,7 +3,11 @@
 .header {
   color: var(--header-color);
   font-family: var(--header-font-family);
-  font-size: var(--step-4);
+  &:is([data-page="index"] .header) {
+    font-size: var(--step-8);
+  }
+
+  font-size: var(--step-3);
   font-display: optional;
   a {
     color: inherit;
