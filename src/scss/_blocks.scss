@@ -197,6 +197,8 @@
 .sidebar {
   container-type: inline-size;
   container-name: sidebar;
+  display: flex;
+  justify-content: center;
 
   .main-nav {
     color: var(--link-color);
@@ -205,23 +207,30 @@
     margin-inline: auto;
     padding: 20px;
 
-    &-list {
-      @container sidebar (width > 60vw) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-        gap: var(--space-3xs-2xs);
-        list-style: none;
-        margin-inline-start: 0;
-        width: 100%;
+    @container sidebar (width < 50vw) {
+      display: inline-block;
+    }
 
-        li {
-          display: inline-block;
-          .nav-link {
-            padding: 0.25rem;
-            display: inline-block;
-          }
+    &-list {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      gap: var(--space-3xs-2xs);
+      list-style: none;
+      margin-inline-start: 0;
+      width: 100%;
+
+      @container (width < 50vw) {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: initial;
+      }
+
+      li {
+        display: inline;
+        .nav-link {
+          padding: 0.25rem;
+          display: inline;
         }
       }
     }

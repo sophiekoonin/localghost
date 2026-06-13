@@ -30,11 +30,12 @@ main {
   container: main / inline-size;
   padding-inline: var(--space-s-m);
   display: grid;
-  grid-template-columns: 25cqi 1fr 25cqi;
+  grid-template-columns: 1fr;
   flex: 1;
 
-  @container (width < 600px) {
-    grid-template-columns: 1fr;
+  @container (width > 600px) {
+    gap: 25px;
+    grid-template-columns: 20cqi 1fr 20cqi;
   }
 }
 

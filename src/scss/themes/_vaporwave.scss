@@ -161,7 +161,6 @@
     margin-block-start: 1px;
     .nav-link {
       @extend .link-button;
-
       &[data-state="active"],
       &[aria-expanded="true"] {
         text-decoration: underline;
