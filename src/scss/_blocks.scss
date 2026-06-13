@@ -29,11 +29,10 @@
 
 .content {
   padding-inline: var(--space-2xs);
-  margin-inline: auto;
   max-inline-size: min(var(--max-inline-size), 100%);
   background: var(--content-bg);
-  flex-basis: 0;
-  flex-grow: 999;
+  margin-inline: auto;
+
   font-size: var(--step-0);
   line-height: 1.5;
 
@@ -197,30 +196,33 @@
 
 .sidebar {
   container-type: inline-size;
+  container-name: sidebar;
 
   .main-nav {
     color: var(--link-color);
-    font-size: clamp(1rem, 1.2615rem + 0.75vw, 1.9531rem);
+    font-size: var(--step-1);
     max-inline-size: var(--max-inline-size);
     margin-inline: auto;
+    padding: 20px;
 
     &-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      text-align: center;
-      gap: var(--space-3xs-2xs);
-      margin-block-end: var(--space-m);
-      list-style: none;
-      margin-inline-start: 0;
-      width: 100%;
-    }
+      @container sidebar (width > 60vw) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        gap: var(--space-3xs-2xs);
+        list-style: none;
+        margin-inline-start: 0;
+        width: 100%;
 
-    li {
-      display: inline-block;
-      .nav-link {
-        padding: 0.25rem;
-        display: inline-block;
+        li {
+          display: inline-block;
+          .nav-link {
+            padding: 0.25rem;
+            display: inline-block;
+          }
+        }
       }
     }
   }

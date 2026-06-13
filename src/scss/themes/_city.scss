@@ -10,7 +10,7 @@
   --background: fixed linear-gradient(var(--bg-gradient-top), var(--bg-gradient-mid) 80%);
   --body-color: light-dark(oklch(0.34 0.02 309.63 / 1), white);
   --accent-color: oklch(0.67 0.33 330.95 / 1);
-  --content-bg: light-dark(oklch(0.95 0.03 316.17 / 0.7), oklch(0.22 0.02 284.12 / 0.95));
+  --content-bg: light-dark(oklch(0.95 0.03 316.17 / 0.7), oklch(0.28 0.02 284.12 / 0.95));
   --stars-display: none;
   --header-color: light-dark(black, oklch(0.91 0.07 327.77 / 1));
   --header-font-family: "Bayshore", cursive;
@@ -21,10 +21,8 @@
   --inline-code-bg: light-dark(oklch(89.965% 0.0713 326.829), transparent);
   --photo-bg: linear-gradient(oklch(0.63 0.23 288.28 / 1), oklch(79.365% 0.19842 329.093));
   --blockquote-bg: oklch(1 0 0 / 0.15);
+  --border-radius: 10px;
 
-  main {
-    display: grid;
-  }
   footer {
     @include shared.grid-footer;
     background: linear-gradient(hsla(0, 0%, 100%, 0) 40%, var(--bg-gradient-bottom));
@@ -32,7 +30,7 @@
 
   header {
     width: 100%;
-    height: clamp(10rem, 30vh, 25rem);
+    height: clamp(8rem, 25vh, 20rem);
 
     .header {
       transform: rotate(-5deg);
@@ -69,7 +67,7 @@
   }
 
   .content {
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     padding: var(--space-s-m);
     box-shadow: 8px 8px 0 3px rgba(0, 0, 0, 0.2);
 
@@ -87,19 +85,24 @@
     }
   }
 
-  .sidebar .main-nav {
-    .nav-link {
-      color: var(--link-color);
-      font-family: var(--heading-font-family);
-      text-transform: lowercase;
-      text-decoration: none;
-      font-size: var(--step-0);
+  .sidebar {
+    // background: var(--content-bg);
+    border-radius: var(--border-radius);
+    .main-nav {
+      .nav-link {
+        color: var(--link-color);
+        font-family: var(--heading-font-family);
+        text-transform: lowercase;
+        text-decoration: none;
+        // font-size: var(--step-0);
 
-      &:hover {
-        color: light-dark(oklch(87.189% 0.09484 316.427), hsla(125, 88%, 90%, 1));
-      }
-      &[data-state="active"] {
-        text-decoration: underline;
+        &:hover {
+          color: light-dark(oklch(90.189% 0.09484 316.427), hsla(125, 88%, 90%, 1));
+          padding-inline-start: 1rem;
+        }
+        &[data-state="active"] {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -114,7 +117,7 @@
   .everything-else {
     li,
     a {
-      border-radius: 10px;
+      border-radius: var(--border-radius);
     }
   }
 

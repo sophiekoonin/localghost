@@ -31,9 +31,11 @@
       {% include "partials/header.njk" %}
       <main>
         {% include "partials/nav.njk" %}
+        <div class="content-wrapper">
         {% block content %}
           {{ content | safe }}
         {% endblock %}
+        </div>
       </main>
       {% include "partials/footer.njk" %}
     </div>

@@ -72,16 +72,10 @@
   }
 
   .main-nav {
-    &:before {
-      background: url(/img/themes/garden-theme/flower-border.png) repeat-x;
-      content: "";
-      display: block;
-      height: 32px;
-      position: relative;
-      top: -20px;
-      z-index: 2;
-      width: 100%;
-    }
+    padding-block-start: 0;
+    margin-block-start: var(--space-m);
+
+    width: 100%;
     li {
       text-transform: lowercase;
       font-family: var(--heading-font-family);
@@ -94,19 +88,22 @@
     border: 8px ridge hsl(29, 80%, 40%);
     padding: var(--space-2xs-xs);
     position: relative;
-
     &-inner {
       padding-block-start: 0;
+    }
+
+    @container (width > 600px) {
+      margin-block-start: var(--space-m);
     }
   }
 
   main {
     padding-inline: 0;
     padding-block-end: var(--space-m);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: url(/img/themes/garden-theme/flower-border.png) repeat-x;
+    background-position-y: 10px;
     &:before {
+      grid-column: 1 / -1;
       content: "";
       display: block;
       height: 16px;
@@ -141,7 +138,7 @@
       }
     }
 
-    aside {
+    .sidebar {
       width: 100%;
     }
   }
