@@ -250,6 +250,13 @@ button[popovertarget="theme-switcher"] {
   position: absolute;
   top: 16px;
   right: 16px;
+  background: none;
+  border: 0;
+  padding: 0;
+
+  img {
+    width: var(--space-m-l);
+  }
 }
 
 .theme-switcher {
@@ -260,12 +267,11 @@ button[popovertarget="theme-switcher"] {
   border: 0;
   inset: unset;
   position: absolute;
-  top: 40px;
-  right: 10px;
+  top: var(--space-l-xl);
+  right: 16px;
   flex-direction: column;
   align-items: center;
   background: none;
-
   input {
     opacity: 0;
     position: absolute;

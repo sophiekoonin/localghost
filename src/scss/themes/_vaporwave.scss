@@ -45,6 +45,8 @@
   --inline-code-bg: hsl(172, 100%, 67%);
   --photo-bg: linear-gradient(-45deg, hsl(172, 100%, 44%), hsl(306, 100%, 50%));
   --header-color: #fff;
+  --button-selected-bg: oklch(0.89 0.06 292.88 / 1);
+
   cursor: url("/img/themes/cursor-w95.png"), default;
 
   .skyscraper {
@@ -63,7 +65,25 @@
   }
 
   .theme-switcher {
+    @extend .windows;
+    background-color: var(--content-bg);
     font-size: var(--step--2);
+    padding: 2px;
+    gap: 6px;
+    label {
+      padding: 2px;
+      @extend .windows;
+      &:has(input:checked) {
+        border-right: 2px solid white;
+        border-bottom: 2px solid white;
+        border-left: 2px solid hsl(250, 100%, 20%);
+        border-top: 2px solid hsl(250, 100%, 20%);
+        background-color: var(--button-selected-bg);
+        img {
+          border: 0;
+        }
+      }
+    }
   }
 
   .list-heading {
@@ -181,7 +201,7 @@
       @extend .link-button;
       &[data-state="active"],
       &[aria-expanded="true"] {
-        background-color: hsl(250, 100%, 92%);
+        background-color: var(--button-selected-bg);
         border-right: 2px solid #fff;
         border-bottom: 2px solid #fff;
         border-left: 2px solid hsl(250, 100%, 20%);
