@@ -20,7 +20,7 @@
 
   header {
     justify-content: flex-start;
-    padding-block: var(--space-xl);
+    padding-block: var(--space-m);
     .header {
       text-transform: lowercase;
       font-size: var(--step-6);
@@ -59,13 +59,13 @@
   }
 
   .sidebar {
-    padding: var(--space-xs-s);
     background: var(--content-bg);
     grid-column: 1 / span 2;
     grid-row: 1 / span 1;
     overflow: hidden;
-
+    display: block;
     @container main (min-width: 760px) {
+      padding: var(--space-xs-s);
       grid-column: 1 / span 1;
       grid-row: 1 / span 2;
     }
@@ -173,7 +173,7 @@
     padding: 0;
   }
 
-  .content,
+  .content-wrapper,
   .list-wrapper,
   .everything-else {
     height: 100%;
