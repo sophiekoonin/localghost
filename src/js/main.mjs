@@ -103,7 +103,11 @@ function themeEventListener(e) {
 
 function timeEventListener(e) {
   const newTime = e.target.value;
-  setStage(newTime);
+  if (newTime === "now") {
+    setColoursForTime();
+  } else {
+    setStage(newTime);
+  }
 }
 
 window.addEventListener("load", () => {
