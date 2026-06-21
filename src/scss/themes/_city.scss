@@ -28,9 +28,11 @@
   }
 
   header {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
     width: 100%;
     align-items: center;
-    height: clamp(8rem, 10vh + 10vw, 30rem);
+    height: clamp(7rem, 8vh + 10vw, 30rem);
 
     .header {
       transform: rotate(-5deg);
@@ -122,6 +124,11 @@
 
   .sidebar {
     border-radius: var(--border-radius);
+    @container (width > 50vw) {
+      .main-nav {
+        padding-top: 0;
+      }
+    }
     @container (width < 50vw) {
       .main-nav {
         &-list {
@@ -172,11 +179,9 @@
         @include shared.neon-glow(hsla(125, 88%, 70%, 1), oklch(83.82% 0.326 143));
       }
     }
-    .star-grid {
-      display: grid;
-    }
 
     .star {
+      display: initial;
       color: #ffffff;
       &.star-1 {
         width: 7px;
@@ -365,14 +370,13 @@
     display: initial;
   }
 
-  .star-grid {
+  .header-grid {
+    display: grid;
     height: clamp(10rem, 35vh, 25rem);
     align-items: center;
-    position: fixed;
-    z-index: -1;
     width: 100%;
     justify-items: center;
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
     grid-template-columns: repeat(20, 1fr);
     @container wrapper (width > 650px) {
       grid-template-columns: repeat(40, 1fr);

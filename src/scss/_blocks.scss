@@ -243,12 +243,8 @@
   }
 }
 
-/* Keep the SVG stuff out the way when theme doesn't use it */
-.star-grid {
-  display: none;
-}
-
-.defs {
+.defs,
+.star {
   display: none;
 }
 
