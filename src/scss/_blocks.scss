@@ -4,7 +4,9 @@
   color: var(--header-color);
   font-family: var(--header-font-family);
   &:is([data-page="index"] .header) {
-    font-size: var(--step-8);
+    @container wrapper (width > 600px) {
+      font-size: var(--step-8);
+    }
   }
 
   font-size: var(--step-3);
@@ -456,14 +458,14 @@ button[popovertarget="theme-switcher"] {
 
 #skyscraper-1 {
   grid-column: 2 / span 1;
-  @container wrapper (min-width: #{utils.$med_breakpoint}) {
+  @container wrapper (width > 600px) {
     grid-column: 4 / span 1;
   }
 }
 #skyscraper-2 {
   grid-column: 3 / span 1;
   justify-self: start;
-  @container wrapper (min-width: #{utils.$med_breakpoint}) {
+  @container wrapper (width > 600px) {
     grid-column: 5 / span 1;
     justify-self: center;
   }
@@ -473,11 +475,8 @@ button[popovertarget="theme-switcher"] {
   grid-column: 3 / span 2;
   justify-self: center;
   margin-bottom: -1.5rem;
-  @container wrapper (min-width: #{utils.$med_breakpoint}) {
+  @container wrapper (width > 600px) {
     grid-column: 5 / span 2;
-    justify-self: end;
-  }
-  @container wrapper (min-width: #{utils.$lg_breakpoint}) {
     justify-self: center;
   }
 }
@@ -486,7 +485,7 @@ button[popovertarget="theme-switcher"] {
   margin-bottom: -2rem;
   grid-column: 1 / span 1;
   justify-self: end;
-  @container wrapper (min-width: #{utils.$med_breakpoint}) {
+  @container wrapper (width > 600px) {
     grid-column: 6 / span 2;
   }
 }
@@ -551,6 +550,10 @@ body::after {
   display: flex;
   align-items: center;
   justify-content: center;
+  @container wrapper (width < 850px) {
+    gap: 0;
+    flex-direction: column;
+  }
 }
 
 button.nav-link {

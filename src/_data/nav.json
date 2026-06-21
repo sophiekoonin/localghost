@@ -15,32 +15,6 @@
     {
       "label": "Links",
       "url": "/links"
-    },
-    {
-      "label": "etc",
-      "url": "/etc"
-    }
-  ],
-  "submenu_pages": [
-    {
-      "label": "Projects",
-      "url": "/projects"
-    },
-    {
-      "label": "Keyboards",
-      "url": "/keyboards"
-    },
-    {
-      "label": "Things I use",
-      "url": "/uses"
-    },
-    {
-      "label": "Favourite games",
-      "url": "/games"
-    },
-    {
-      "label": "Twitter archive",
-      "url": "https://twitter.localghost.dev"
     }
   ]
 }

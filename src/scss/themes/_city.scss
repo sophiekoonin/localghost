@@ -374,7 +374,7 @@
     justify-items: center;
     grid-template-rows: repeat(10, 1fr);
     grid-template-columns: repeat(20, 1fr);
-    @container wrapper (min-width: #{utils.$lg_breakpoint}) {
+    @container wrapper (width > 650px) {
       grid-template-columns: repeat(40, 1fr);
     }
   }

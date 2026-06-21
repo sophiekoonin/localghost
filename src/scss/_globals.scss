@@ -28,17 +28,19 @@ blockquote {
 
 main {
   container: main / inline-size;
-  padding-inline: var(--space-s-m);
   display: grid;
   grid-template-columns: 1fr;
   flex: 1;
 
+  @container (width < 800px) {
+    padding-inline: var(--space-s-m);
+  }
   @container (width > 800px > 1050px) {
     grid-template-columns: 20cqi max-content;
   }
 
   @container (width > 1050px) {
-    grid-template-columns: 20cqi max-content 20cqi;
+    grid-template-columns: 20cqi 1fr 20cqi;
   }
 }
 

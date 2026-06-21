@@ -12,7 +12,7 @@
   overflow: hidden;
   margin-top: 2rem;
 
-  @container wrapper (width >= 480px) {
+  @container wrapper (width >= 600px) {
     grid-template-columns: repeat(8, 1fr);
   }
 
@@ -25,7 +25,7 @@
     grid-row: 1 / span 4;
     grid-column: 1 / span 4;
 
-    @container wrapper (width >= 480px) {
+    @container wrapper (width >= 600px) {
       grid-column: 3 / span 4;
     }
   }
