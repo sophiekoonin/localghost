@@ -21,41 +21,31 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: var(--space-s-m);
     grid-row: 1 / span 4;
     grid-column: 1 / span 4;
 
     @container wrapper (width >= 480px) {
       grid-column: 3 / span 4;
     }
-
-    @supports (grid-template-columns: subgrid) {
-      display: grid;
-      grid-template-columns: subgrid;
-      grid-template-rows: subgrid;
-      .footer-buttons {
-        grid-column: 1 / -1;
-        grid-row: 1 / span 1;
-      }
-
-      .footer-text {
-        grid-row: 2 / span 1;
-        justify-self: center;
-        align-self: start;
-        grid-column: 1 / -1;
-      }
-
-      .footer-links {
-        grid-column: 1 / span 8;
-        grid-row: 2 / span 1;
-        align-self: center;
-      }
-    }
   }
 }
 
 @mixin neon-glow($color1, $color2) {
-  text-shadow: 0 0 0 $color1, 0 0 0 $color1, 0 0 0 $color1, 0 0 1px $color1, 0 0 1px $color1, 0 0 1px $color1, 1px 0 20px $color1,
-    1px 0 20px $color1, 1px 0 20px $color1, 1px 0 10px $color2, 1px 0 10px $color2, 1px 0 50px $color2, 1px 0 50px $color2;
+  text-shadow:
+    0 0 0 $color1,
+    0 0 0 $color1,
+    0 0 0 $color1,
+    0 0 1px $color1,
+    0 0 1px $color1,
+    0 0 1px $color1,
+    1px 0 20px $color1,
+    1px 0 20px $color1,
+    1px 0 20px $color1,
+    1px 0 10px $color2,
+    1px 0 10px $color2,
+    1px 0 50px $color2,
+    1px 0 50px $color2;
 }
 
 @mixin fancy-link-underlines($gradientFrom, $gradientTo) {

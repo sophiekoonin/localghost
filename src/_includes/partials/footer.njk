@@ -9,10 +9,12 @@
             <img eleventy:ignore src="/img/buttons/made-by-a-human.png" alt="Made by a human" />
             </a>
         </div>
-        <p class="footer-text">© Sophie Koonin {{ global.currentYear() }}</p>
         <nav aria-label="Contact & RSS links" class="footer-links">
             <a href="/rss-feeds" title="RSS Feeds">
-                <span id="rss-link">rss</span>
+                <span id="rss-link">subscribe via rss</span>
+            </a>
+            <a href="mailto:sophie@localghost.dev">
+                <span id="email-link">send me an email</span>
             </a>
             <a rel="me" href="https://social.lol/@sophie">
                 <span id="mastodon-link">mastodon</span>
@@ -20,10 +22,8 @@
             <a rel="me" href="https://bsky.app/profile/localghost.dev">
                 <span id="bluesky-link">bluesky</span>
             </a>
-            <a href="mailto:sophie@localghost.dev">
-                <span id="email-link">email</span>
-            </a>
         </nav>
+        <p class="footer-text">© Sophie Koonin {{ global.currentYear() }}</p>
     </div>
         {% include "partials/svg/skyscraper-1.html" %}
 
