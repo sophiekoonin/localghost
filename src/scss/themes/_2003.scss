@@ -62,12 +62,16 @@
     background: var(--content-bg);
     grid-column: 1 / span 2;
     grid-row: 1 / span 1;
-    overflow: hidden;
+    overflow-y: scroll;
     display: block;
     @container main (min-width: 760px) {
       padding: var(--space-xs-s);
       grid-column: 1 / span 1;
       grid-row: 1 / span 2;
+    }
+
+    .main-nav {
+      padding: 0;
     }
 
     .main-nav-list {

@@ -348,7 +348,8 @@ function inject2003Stuff() {
     siteStats.innerHTML = `<div class="sidebar-stats"><p>v3.5 // since 2019, like it's 2003.</p><p>host: <a href="https://neocities.org">neocities</a></p></div>`;
     wrapper.appendChild(siteStats);
     const currently = document.createElement("section");
-    currently.innerHTML = `<p>currently</p><dl class="php-currently"><dt>Drinking:</dt><dd>sparkling water</dd><dt>Listening to:</dt><dd>lo-fi beats to build retro websites to</dd><dt>Wearing:</dt><dd><a href="https://dogecore.com">dogecore</a>, probably</dd><dt>Talking to:</dt><dd>anyone who'll listen on <a href="https://social.lol/@sophie">mastodon</a></dd></dl><p>not powered by <a href="https://web.archive.org/web/20030803171648/http://www.codegrrl.com/scripts/phpcurrently/index.php" target="_blank" rel="noopener">PHPCurrently</a>`;
+    currently.classList.add("flow");
+    currently.innerHTML = `<h2>currently</h2><dl class="php-currently"><dt>Drinking:</dt><dd>diet coke</dd><dt>Listening to:</dt><dd>evanescence</dd><dt>Wearing:</dt><dd>massive flares</dd><dt>Talking to:</dt><dd>friends on MSN</dd></dl><p>not powered by <a href="https://web.archive.org/web/20030803171648/http://www.codegrrl.com/scripts/phpcurrently/index.php" target="_blank" rel="noopener">PHPCurrently</a>`;
     wrapper.appendChild(currently);
     sidebar.appendChild(wrapper);
   }
