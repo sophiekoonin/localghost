@@ -137,7 +137,6 @@ export function setColoursForTime(time) {
     "--bg-gradient-bottom",
     `color-mix(in oklch, ${stages[nextStageName].color3} ${transitionProgressPercent}%, ${stages[currentStageName].color3})`,
   );
-  // }
 
   root.setAttribute("data-time", currentStageName);
 }

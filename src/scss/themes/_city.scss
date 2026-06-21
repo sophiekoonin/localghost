@@ -11,7 +11,6 @@
   --body-color: light-dark(oklch(0.34 0.02 309.63 / 1), white);
   --accent-color: oklch(0.67 0.33 330.95 / 1);
   --content-bg: light-dark(oklch(0.95 0.03 316.17 / 0.7), oklch(0.28 0.02 284.12 / 0.95));
-  --stars-display: none;
   --header-color: light-dark(black, oklch(0.91 0.07 327.77 / 1));
   --header-font-family: "Bayshore", cursive;
   --bullet: url("/img/themes/heart-purple-small.svg");
@@ -40,6 +39,9 @@
       &:is([data-page="index"] .header) {
         font-size: var(--step-9);
         margin-top: var(--space-m);
+        @container (width > 400px) {
+          margin-bottom: var(--space-m);
+        }
       }
 
       a,
