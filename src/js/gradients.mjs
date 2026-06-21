@@ -36,15 +36,15 @@ const stages = {
     start: newTimeInstance("19:30:00"),
     next: "night",
     color1: "oklch(0.6933 0.1899 297.53)",
-    color2: "oklch(73.53% 0.21 352.59)",
-    color3: "oklch(59.41% 0.289 331.1)",
+    color2: "oklch(75.504% 0.24612 357.26)",
+    color3: "oklch(88.591% 0.1422 62.595)",
   },
   night: {
     start: newTimeInstance("21:00:00"),
     next: "sunrise",
     color1: "oklch(25.27% 0.0919 276.73)",
     color2: "oklch(47.35% 0.284 283.78)",
-    color3: "oklch(47.35% 0.284 283.78)",
+    color3: "oklch(62.831% 0.23521 310.291)",
   },
 };
 

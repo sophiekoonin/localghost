@@ -67,7 +67,7 @@
   .content-inner {
     max-inline-size: var(--max-inline-size);
 
-    picture {
+    picture:not(.image-grid picture) {
       margin-inline: auto;
       max-width: 80%;
     }
@@ -665,4 +665,13 @@ button.nav-link {
 
 button[popovertarget="time-selector"] {
   display: none;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-xs);
+  img {
+    margin-inline: auto;
+  }
 }
