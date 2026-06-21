@@ -68,8 +68,6 @@ function changeTheme(newTheme) {
       case "garden":
         cleanupGarden();
         break;
-      case "city":
-        cleanupCity();
       default:
         break;
     }
@@ -91,7 +89,6 @@ function changeTheme(newTheme) {
     case "garden":
       initGardenTheme();
     case "city":
-      initCity();
       setColoursForTime();
     default:
       break;
@@ -99,22 +96,28 @@ function changeTheme(newTheme) {
   theme = newTheme;
 }
 
-function eventListener(e) {
-  if (e.target.checked) {
-    const newTheme = e.target.value;
-    changeTheme(newTheme);
-  }
+function themeEventListener(e) {
+  const newTheme = e.target.value;
+  changeTheme(newTheme);
 }
+
+function timeEventListener(e) {
+  const newTime = e.target.value;
+  setStage(newTime);
+}
+
 window.addEventListener("load", () => {
   skyscrapers = Array.from(document.getElementsByClassName("skyscraper"));
-  themeOptions = Array.from(document.getElementsByClassName("theme-option"));
 
-  themeOptions.forEach((el) => addEventListener("change", eventListener));
+  document.querySelector("#theme-switcher").addEventListener("change", themeEventListener);
+  document.querySelector("#time-selector").addEventListener("change", timeEventListener);
   initThemes();
 });
 
 window.addEventListener("unload", () => {
-  themeOptions.forEach((el) => removeEventListener("change", eventListener));
+  document.querySelector("#theme-switcher").removeEventListener("change", themeEventListener);
+
+  document.querySelector("#time-selector").removeEventListener("change", timeEventListener);
 });
 
 function cleanupGeocities() {
@@ -378,23 +381,4 @@ function initGardenTheme() {
 function cleanupGarden() {
   const bfly = document.getElementById("butterfly");
   if (bfly) bfly.remove();
-}
-
-function initCity() {
-  if (!debug) return;
-  const wrapper = document.createElement("div");
-  wrapper.id = "stage-switch-wrapper";
-
-  ["sunrise", "day", "sunset", "night"].forEach((stage) => {
-    const btn = document.createElement("button");
-    btn.textContent = stage;
-    btn.onclick = () => setStage(stage);
-    wrapper.appendChild(btn);
-  });
-  document.querySelector("header").appendChild(wrapper);
-}
-
-function cleanupCity() {
-  if (!debug) return;
-  document.getElementById("stage-switch-wrapper").remove();
 }

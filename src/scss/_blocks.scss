@@ -263,7 +263,8 @@ button[popovertarget="theme-switcher"] {
   }
 }
 
-.theme-switcher {
+.theme-switcher,
+.time-selector {
   &:popover-open {
     display: flex;
   }
@@ -661,4 +662,8 @@ button.nav-link {
   100% {
     width: 40px;
   }
+}
+
+button[popovertarget="time-selector"] {
+  display: none;
 }

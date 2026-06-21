@@ -95,6 +95,31 @@
     }
   }
 
+  button[popovertarget="time-selector"] {
+    display: unset;
+    background: none;
+    border: 0;
+    padding: 0;
+    width: 40px;
+    position: absolute;
+    top: 72px;
+    right: 16px;
+
+    cursor: pointer;
+    img:hover {
+      transform: rotate(25deg);
+    }
+  }
+  .time-selector {
+    top: 128px;
+    width: auto;
+    overflow: initial;
+    padding-inline: var(--space-xs-s);
+    input + span:hover {
+      text-decoration: underline;
+    }
+  }
+
   .sidebar {
     border-radius: var(--border-radius);
     @container (width < 50vw) {
