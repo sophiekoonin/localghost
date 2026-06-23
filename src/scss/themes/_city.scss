@@ -24,7 +24,7 @@
 
   footer {
     @include shared.grid-footer;
-    background: linear-gradient(hsla(0, 0%, 100%, 0) 40%, var(--bg-gradient-bottom));
+    background: linear-gradient(oklch(0 0 0 / 0) 40%, var(--bg-gradient-bottom));
   }
 
   header {

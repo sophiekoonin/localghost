@@ -50,6 +50,7 @@ const stages = {
 
 function getUserTime() {
   if (!supportsTemporal) {
+    // TODO - this is not localised
     const date = new Date();
     return;
   }
