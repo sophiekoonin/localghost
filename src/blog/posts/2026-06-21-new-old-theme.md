@@ -20,7 +20,7 @@ Then I remembered that the Temporal API was available experimentally in Chrome a
 ## Introducing Temporal 
 For the uninitiated, Temporal is a solution to the objectively terrible Date API in JavaScript. Date was based on Java's Date library, which was also objectively terrible and has long been deprecated. 
 
-It's always really fiddly to figure out if your `Date` objects are showing local or zoned time, and date operations are so fiddly that most of us turn to third party libraries. 
+It's always really confusing that `Date` instances show either local or UTC time depending on which function you use to display them, and date operations are so fiddly that most of us turn to third party libraries. 
 
 Temporal massively simplifies the API, introducing some new concepts:
 - `PlainDateTime`: a date and time with no timezone (TZ) 
@@ -32,14 +32,11 @@ Temporal massively simplifies the API, introducing some new concepts:
 
 ### Getting the user's local time
 The first thing to do was figure out the time according to the user's browser. 
-They've added a `toTemporalInstant()` function to the `Date` API, so for now that was the easiest way I could find: Chrome doesn't seem to support `Temporal.Now.plainTimeISO()` yet. 
+The [`Temporal.Now` namespace](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Now) has various methods for interacting with the current time, including `plainTimeISO()` which by default gives us a `PlainTime` in local time. (You can also pass in a time zone to get a zoned time.)
 
-Given we still have to mess around with a `Date` here, I'm grabbing the zoned time to get the local time for the user. 
 
 ```js
-const instant = new Date().toTemporalInstant()
-  const zoned = instant.toZonedDateTimeISO(Intl.DateTimeFormat().resolvedOptions().timeZone);
-  return zoned.toPlainTime().round("minute");
+const timeNow = Temporal.Now.plainTimeISO();
 ```
 
 Now we need to know when to show the different colours.
@@ -169,17 +166,24 @@ First, I calculated the time until the next stage - super simple with the `until
 time1.until(time2)
 ```
 
-This gives us a `Temporal.Duration`. It represents a period between two time points. So, for example, if it's 7pm now and we're calculating `timeUntilNextStage`: 
+This gives us a `Temporal.Duration` which represents a period between two time points. So, for example, if it's 7:45pm now and we're calculating `timeUntilNextStage`: 
 
 ```js
 const timeUntilNextStage = timeNow.until(stages.night.start)
 
-console.log(timeUntilNextStage) // 
+console.log(timeUntilNextStage.toString()) // PT1H15M
 
 ```
 
-Then, we need to calculate the duration 
+`Duration`s are stringified (and specified) using the ISO 8601 duration format, so "PT2H15M" stands for "period, time, 1 hour, 15 minutes". If the duration had any date information in it, it'd appear before the `T`. 
 
+Once we've got the duration representing time until the next stage, we need to know the duration between the start of the current stage and the start of the next stage - let's call it the transition duration. For sunset-night and sunrise-day, the transition duration is always 90 minutes; for night-sunrise and day-sunset, it'd be 11.5 hours. I didn't want the colour mixing to happen all throughout the day, only around sunrise/sunset like in real life, so I just decided to hardcode the transition duration for day and night to be 90 minutes so it matches the other two. 
+
+So for that, I can instantiate a `Duration` using the same ISO 8601 syntax:
+
+```js
+const entireTransitionDuration = Temporal.Duration.from("PT1H30M")
+```
 
 ## Polyfilling Temporal for Safari
 Alas, Safari is behind the times (/doesn't want to commit to a not-yet-official API, even though it's *basically* final). We love progressive enhancement, and of course I could have just removed any of the transition logic for people whose browsers don't support Temporal, but that's no fun. They deserve sunsets too!

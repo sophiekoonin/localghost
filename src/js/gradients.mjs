@@ -17,7 +17,7 @@ let interval;
 let timeUntilNextStage = 0;
 let currentStageName = "day";
 
-const stages = {
+export const stages = {
   sunrise: {
     start: newTimeInstance("06:30:00"),
     next: "day",
@@ -44,19 +44,15 @@ const stages = {
     next: "sunrise",
     color1: "oklch(25.27% 0.0919 276.73)",
     color2: "oklch(47.35% 0.284 283.78)",
-    color3: "oklch(62.831% 0.23521 310.291)",
+    color3: "oklch(0.7 0.33 332.4)",
   },
 };
 
 function getUserTime() {
   if (!supportsTemporal) {
-    // TODO - this is not localised
-    const date = new Date();
-    return;
+    return new Date();
   }
-  const instant = new Date().toTemporalInstant();
-  const zoned = instant.toZonedDateTimeISO(Intl.DateTimeFormat().resolvedOptions().timeZone);
-  return zoned.toPlainTime().round("minute");
+  return Temporal.Now.plainTimeISO();
 }
 
 export function durationBetween(time1, time2) {
@@ -107,13 +103,7 @@ export function setColoursForTime(time) {
 
   const nextStageName = stages[currentStageName].next;
 
-  let entireTransitionDuration;
-  if (currentStageName === "night" || currentStageName === "day") {
-    // We only start the transition ~2h before for these longer blocks.
-    entireTransitionDuration = supportsTemporal ? Temporal.Duration.from("PT2H00M") : 7200;
-  } else {
-    entireTransitionDuration = durationBetween(stages[currentStageName].start, stages[nextStageName].start);
-  }
+  const entireTransitionDuration = supportsTemporal ? Temporal.Duration.from("PT1H30M") : 5400;
 
   const diff = supportsTemporal
     ? entireTransitionDuration.subtract(timeUntilNextStage).total({ unit: "seconds" })
