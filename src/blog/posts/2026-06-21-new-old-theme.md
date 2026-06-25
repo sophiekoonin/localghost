@@ -177,13 +177,15 @@ console.log(timeUntilNextStage.toString()) // PT1H15M
 
 `Duration`s are stringified (and specified) using the ISO 8601 duration format, so "PT2H15M" stands for "period, time, 1 hour, 15 minutes". If the duration had any date information in it, it'd appear before the `T`. 
 
-Once we've got the duration representing time until the next stage, we need to know the duration between the start of the current stage and the start of the next stage - let's call it the transition duration. For sunset-night and sunrise-day, the transition duration is always 90 minutes; for night-sunrise and day-sunset, it'd be 11.5 hours. I didn't want the colour mixing to happen all throughout the day, only around sunrise/sunset like in real life, so I just decided to hardcode the transition duration for day and night to be 90 minutes so it matches the other two. 
+Once we've got the duration representing time until the next stage, we need to know the duration between the start of the current stage and the start of the next stage - let's call it the transition duration. For sunset-to-night and sunrise-to-day, the transition duration is always 90 minutes; for night-sunrise and day-sunset, it'd be 11.5 hours. I didn't want the colour mixing to happen all throughout the day, only around sunrise/sunset like in real life, so I just decided to hardcode the transition duration for day and night to be 90 minutes so it matches the other two. 
 
 So for that, I can instantiate a `Duration` using the same ISO 8601 syntax:
 
 ```js
 const entireTransitionDuration = Temporal.Duration.from("PT1H30M")
 ```
+Now I need to calculate the difference between the total duration and the time until next stage - basically, how far into the transition period we are, and therefore how much of a percentage we should mix in of the next colour.
+
 
 ## Polyfilling Temporal for Safari
 Alas, Safari is behind the times (/doesn't want to commit to a not-yet-official API, even though it's *basically* final). We love progressive enhancement, and of course I could have just removed any of the transition logic for people whose browsers don't support Temporal, but that's no fun. They deserve sunsets too!

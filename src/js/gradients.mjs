@@ -84,7 +84,7 @@ export function setColoursForTime(time) {
     }
     case compare(timeNow, stages.sunrise.start) >= 0 && compare(timeNow, stages.day.start) < 0: {
       currentStageName = "sunrise";
-      timeUntilNextStage = durationBetween(timeNow, stages.day.start);
+      timeUntilNextStage = durationBetween(timeNow, stages.night.start);
       break;
     }
     case compare(timeNow, stages.day.start) >= 0 && compare(timeNow, stages.sunset.start) < 0: {
