@@ -5,9 +5,9 @@ draft: true
 tags: ["site"]
 ---
 
-I've given my website a bit of a refresh with a slightly updated layout if you're on desktop. The <a href="https://localghost.dev?theme=vaporwave" target="_new">Vaporwave theme</a> also has a newly jazzed-up nav bar with some adorable little icons. But the biggest change is to the city theme, which was previously a starry-sky dark mode theme.
+I've given my website a bit of a refresh! There's a slightly updated layout if you're on desktop, plus I ditched the `etc` page and I've revamped my blogroll to be powered by [raindrop.io](https://raindrop.io). The <a href="https://localghost.dev?theme=vaporwave" target="_new">Vaporwave theme</a> also has a newly jazzed-up nav bar with some adorable little icons. But the biggest change is to the city theme, which was previously a starry-sky dark mode theme.
 
-If you're reading this between the hours of 9pm and 6:30am, you're probably wondering what all the fuss is about - it looks pretty much the same. That's because the theme changes depending on the time of day! 
+If you're reading this between the hours of 9pm - 5am, you're probably wondering what all the fuss is about - it looks pretty much the same. That's because the theme changes depending on the time of day! 
 
 <div class="image-grid">
 <img alt="A screenshot of the sunrise version of this layout, with pixel art skyscrapers at the bottom. The background is a blue to pink to light orange gradient" src="/img/blog/new-city-theme/sunrise-screenshot.png"><img alt="A screenshot of the daytime version of this layout, with pixel art skyscrapers at the bottom. The background is a purple to pink gradient" src="/img/blog/new-city-theme/day-screenshot.png"><img alt="A screenshot of the sunset version of this layout, with pixel art skyscrapers at the bottom. The background is a purple to pink to orange gradient" src="/img/blog/new-city-theme/sunset-screenshot.png"><img alt="A screenshot of the nighttime version of this layout, with pixel art skyscrapers at the bottom. There are pixel art stars in the header and the theme is now dark mode. The background is a dark blue to light blue to purple gradient" src="/img/blog/new-city-theme/night-screenshot.png">
@@ -95,7 +95,7 @@ CSS custom properties are easy to set via JS - you can use `root.style.setProper
 
 When the page loads, I'm running a function that gets the user time and compares it to each of these start times to see where it fits.
 
-Unlike `Date`, we don't have to do any complicated gymnastics to compare Temporal instances. There's literally a `compare` function on each type of instance. Just like with other JS comparison functions, it returns `1` if the first instance is greater than the second, `0` if the two instances are the same, and `-1` if the first instance is less than the second. 
+Unlike `Date`, we don't have to do any complicated gymnastics to compare Temporal instances: there's literally a `compare` function on each type of instance. Just like with other JS comparison functions, it returns `1` if the first instance is greater than the second, `0` if the two instances are the same, and `-1` if the first instance is less than the second. 
 
 ```js
   const compare = Temporal.PlainTime.compare // extracted for brevity
@@ -142,13 +142,14 @@ Once we've got the stage name, we can look up the colours and set the custom pro
   ```
 
 I'm also setting a data attribute on the root so we can do some additional stage-based customisations, such as showing the stars when it's night.
+
 ```js
 root.setAttribute("data-time", currentStageName);
 ```
 
 And that will give us our different gradient colours at different times of day!
 
-And *then* I remembered that `color-mix` exists. Why restrict ourselves to just 4 times of day and 4 sets of colours, when we could make them transition into each other?
+And *then* I remembered that `color-mix` exists. Why restrict ourselves to just 4 times of day and 4 sets of colours, when we could make them... transition into each other?????
 
 ## Blending transitions with color-mix
 `color-mix` is an extremely cool CSS function that lets you, well, mix two colours together. You tell it what colour space you're working with, and the colours, and the browser magically outputs the mix between the two. 
@@ -156,11 +157,12 @@ And *then* I remembered that `color-mix` exists. Why restrict ourselves to just 
 ```css
 background: color-mix(in oklch, color1, color2)
 ```
+
 Much like with gradients, you can also specify a percentage value for the colours, which indicates the proportions of the colours. So I could gradually feed in a bit of the next stage's colour until the next stage took over completely. 
 
 To get a percentage value for the next stage colour to feed in, I had to figure out how far through the current stage we were. 
 
-First, I calculated the time until the next stage - super simple with the `until` function on `Temporal` instances:
+First, I'm calculating the time until the next stage - super simple with the `until` function on `Temporal` instances:
 
 ```js
 time1.until(time2)
@@ -177,7 +179,17 @@ console.log(timeUntilNextStage.toString()) // PT1H15M
 
 `Duration`s are stringified (and specified) using the ISO 8601 duration format, so "PT2H15M" stands for "period, time, 1 hour, 15 minutes". If the duration had any date information in it, it'd appear before the `T`. 
 
-Once we've got the duration representing time until the next stage, we need to know the duration between the start of the current stage and the start of the next stage - let's call it the transition duration. For sunset-to-night and sunrise-to-day, the transition duration is always 90 minutes; for night-sunrise and day-sunset, it'd be 11.5 hours. I didn't want the colour mixing to happen all throughout the day, only around sunrise/sunset like in real life, so I just decided to hardcode the transition duration for day and night to be 90 minutes so it matches the other two. 
+We set `timeUntilNextStage` in the switch statement where we're deciding that time it is, for example: 
+
+```js
+  case compare(timeNow, stages.sunrise.start) >= 0 && compare(timeNow, stages.day.start) < 0: {
+      currentStageName = "sunrise";
+      timeUntilNextStage = timeNow.until(stages.night.start);
+      break;
+    }
+```
+
+Once we've got the duration representing time until the next stage, we need to know the duration between the start of the current stage and the start of the next stage - let's call it the "transition duration". For sunset-to-night and sunrise-to-day, the transition duration is always 90 minutes; for night-sunrise and day-sunset, it'd be 11.5 hours. I didn't want the colour mixing to happen all throughout the day, only around sunrise/sunset like in real life, so I just decided to hardcode the transition duration for day and night to be 90 minutes so it matches the other two. 
 
 So for that, I can instantiate a `Duration` using the same ISO 8601 syntax:
 
@@ -186,9 +198,85 @@ const entireTransitionDuration = Temporal.Duration.from("PT1H30M")
 ```
 Now I need to calculate the difference between the total duration and the time until next stage - basically, how far into the transition period we are, and therefore how much of a percentage we should mix in of the next colour.
 
+Handily, Temporal gives us a `subtract` function as well:
+
+```js
+const diff = entireTransitionDuration.subtract(timeUntilNextStage)
+```
+
+Then to figure out the transition progress as a percentage, we can divide `diff` by `entireTransitionDuration`. We'll do that with the time values in seconds so we can divide them, using the instance's `total` function:
+
+```js
+const entireTransitionDurationInSeconds = entireTransitionDuration.total({ unit: "seconds" })
+const diffInSeconds = diff.total({ unit: "seconds" })
+const transitionProgressPercent = Math.round((diffInSeconds / entireTransitionDurationInSeconds)*100).toFixed() // gives us a string representation with 0 d.p.
+```
+
+### The midnight problem
+
+It's a little more complicated for the "night" stage, because that crosses midnight into the next day. Remember that our `PlainTime` only has time information, not date information - so if it's 10pm and you're asking it how long until sunrise at 6:30am, it'll give you a negative number!
+
+```js
+
+const now = Temporal.PlainTime.from("22:00")
+const sunrise = Temporal.PlainTime.from("06:30")
+const d = now.until(sunrise) // Temporal.Duration -PT15H30M
+```
+
+This causes problems at the point where I calculate the difference, as it'll come out as a large number and completely throw off the calculations. I got around this by getting the absolute value of the duration with `.abs()`, forcing the diff to always be negative:
+
+```js
+ case compare(timeNow, stages.sunrise.start) < 0 || compare(timeNow, stages.night.start) >= 0: {
+      currentStageName = "night";
+      timeUntilNextStage = timeNow.until(stages.sunrise.start).abs();
+      break;
+    }
+```
+
+Then, we only calculate the percentage if `diff` is greater than 0:
+```js
+  let transitionProgressPercent = 0;
+  if (diffInSeconds > 0) {
+    transitionProgressPercent = Math.round((diffInSeconds / entireTransitionDurationInSeconds) * 100).toFixed();
+  }
+```
+
+That way, if it's before midnight all the percentages will be 0 and we'll only show the nighttime colours.  
+
+This works for the daytime stage too: if it's more than 90 mins before sunset, it'll come out with a negative diff - so that will just display the daytime colours and no transition. 
+
+### Let's mix!
+
+Now we can use that percentage value (which will always be an integer) in the `color-mix` function to dictate how much of the next colour we should interpolate.
+
+```css
+color-mix(in oklch, ${color1} ${transitionProgressPercent}%, ${color2})
+```
+
+I updated my `stages` object to include the next stage name as well as the current stage name:
+
+```js
+ night: {
+    start: Temporal.PlainTime.from("21:00:00"),
+    next: "sunrise",
+    color1: "oklch(25.27% 0.0919 276.73)",
+    color2: "oklch(47.35% 0.284 283.78)",
+    color3: "oklch(62.831% 0.23521 310.291)",
+  }, // etc
+```
+So we can get both colours dynamically when we set the variables with `color-mix`:
+
+```js
+ root.style.setProperty(
+    "--bg-gradient-top",
+    `color-mix(in oklch, ${stages[nextStageName].color1} ${transitionProgressPercent}%, ${stages[currentStageName].color1})`,
+  );
+```
+
+And that's how we transition the colours!
 
 ## Polyfilling Temporal for Safari
-Alas, Safari is behind the times (/doesn't want to commit to a not-yet-official API, even though it's *basically* final). We love progressive enhancement, and of course I could have just removed any of the transition logic for people whose browsers don't support Temporal, but that's no fun. They deserve sunsets too!
+Alas, Safari is behind the times. We love progressive enhancement, and of course I could have just removed any of the transition logic for people whose browsers don't support Temporal, but that's no fun. They deserve sunsets too!
 
 Writing a shim for Temporal was also no fun, but I did it because I love you. 
 
@@ -201,9 +289,18 @@ const supportsTemporal = typeof window.Temporal?.PlainTime !== "undefined";
 
 I'm checking for `PlainTime` specifically as some browsers may have very high level Temporal implementations, but we can't do much without `PlainTime`. 
 
-<!-- To get the user's time in a non-Temporal world, we can -->
+To get the user's time in a non-Temporal world, we can just call the good old-fashioned `new Date()`:
 
-To compare dates, we do it the old-fashioned way: comparing epoch timestamps. These represent the number of milliseconds since the Unix epoch, 01 Jan 1970. 
+```js
+function getUserTime() {
+  if (!supportsTemporal) {
+    return new Date();
+  }
+  return Temporal.Now.plainTimeISO();
+}
+```
+
+To compare dates, we do it by comparing epoch timestamps. These represent the number of milliseconds since the Unix epoch, 01 Jan 1970. 
 
 ```js
 export function jsDateCompare(date1, date2) {
@@ -218,3 +315,26 @@ Then, we can just assign whichever version of the function we need:
 ```js
 const compare = supportsTemporal ? Temporal.PlainTime.compare : jsDateCompare;
 ```
+
+To polyfill `until`, I've got a `durationBetween` function which will call `until` if Temporal's supported, otherwise it'll subtract two epoch timestamps, and divide the result by 1000 to get the duration as seconds:
+
+```js
+export function durationBetween(time1, time2) {
+  if (!supportsTemporal) {
+    return (time2.getTime() - time1.getTime()) / 1000;
+  }
+
+  return time1.until(time2);
+}
+```
+Then I call it like this:
+
+```js
+ case compare(timeNow, stages.sunset.start) >= 0 && compare(timeNow, stages.night.start) < 0: {
+      currentStageName = "sunset";
+      timeUntilNextStage = durationBetween(timeNow, stages.night.start);
+      break;
+    }
+```
+
+I wrote a whole suite of unit tests (for a PERSONAL project! I know!) to make sure behaviour was exactly the same, and it seems to be working nicely. I'm hoping I can remove the polyfills in time, but given that the web is beautifully backwards-compatible, it's not the end of the world if it stays around longer than it needs to.
