@@ -32,7 +32,11 @@
     grid-row: 1 / -1;
     width: 100%;
     align-items: center;
-    height: clamp(7rem, 8vh + 10vw, 30rem);
+    padding: 0;
+    &:not([data-page="index"] header) {
+      padding: var(--space-s);
+      height: clamp(7rem, 8vh + 10vw, 30rem);
+    }
 
     .header {
       transform: rotate(-5deg);
@@ -374,7 +378,9 @@
 
   .header-grid {
     display: grid;
-    height: clamp(10rem, 35vh, 25rem);
+    &:is([data-page="index"]) {
+      height: clamp(10rem, 35vh, 25rem);
+    }
     align-items: center;
     width: 100%;
     justify-items: center;
