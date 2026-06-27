@@ -13,7 +13,6 @@ import w3DateFilter from "./src/filters/w3-date-filter.mjs";
 import splitLines from "./src/filters/split-lines.mjs";
 import markdownFilter from "./src/filters/markdown-filter.mjs";
 import debugFilter from "./src/filters/debug.mjs";
-import draftPlugin from "./src/plugins/drafts.mjs";
 import markdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
 import markdownItAnchor from "markdown-it-anchor";
@@ -34,7 +33,6 @@ const markdownLib = markdownIt(markdownItOptions)
 
 const config = (eleventyConfig) => {
   eleventyConfig.addWatchTarget("./src");
-  eleventyConfig.addPlugin(draftPlugin);
   eleventyConfig.addPlugin(rssPlugin);
   eleventyConfig.addPlugin(syntaxPlugin);
 
@@ -80,6 +78,12 @@ const config = (eleventyConfig) => {
   eleventyConfig.addCollection("categoryFeeds", () => ["recipe", "book", "music", "game", "podcast", "links"]);
   eleventyConfig.addCollection("articles", (collection) => {
     return collection.getFilteredByGlob("./src/blog/posts/*.md");
+  });
+
+  eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
+    if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+      return false;
+    }
   });
 
   eleventyConfig.addPlugin(redirectsPlugin, {
