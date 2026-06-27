@@ -415,8 +415,10 @@ button[popovertarget="theme-switcher"] {
 }
 
 .pagination {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
   max-inline-size: var(--max-inline-size);
   margin-inline: auto;
   a {
@@ -424,10 +426,6 @@ button[popovertarget="theme-switcher"] {
     &:hover {
       text-decoration: underline;
     }
-  }
-
-  &.next-only {
-    justify-content: flex-end;
   }
 }
 
