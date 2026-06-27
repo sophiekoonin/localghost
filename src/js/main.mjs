@@ -35,17 +35,9 @@ const THEMES = {
   twothousandandthree: "twothousandandthree",
 };
 
-let debug = false;
 let skyscrapers = [];
 let themeOptions = [];
 let theme = "";
-
-function initThemes() {
-  const search = new URLSearchParams(window.location.search);
-  theme = search.get("theme") || localStorage.getItem(THEME_STORAGE_KEY) || "city";
-  debug = search.get("debug") || false;
-  changeTheme(theme);
-}
 
 function changeTheme(newTheme) {
   localStorage.setItem(THEME_STORAGE_KEY, newTheme);
@@ -115,7 +107,6 @@ window.addEventListener("load", () => {
 
   document.querySelector("#theme-switcher").addEventListener("change", themeEventListener);
   document.querySelector("#time-selector").addEventListener("change", timeEventListener);
-  initThemes();
 });
 
 window.addEventListener("unload", () => {

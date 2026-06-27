@@ -1,11 +1,12 @@
 ---
-title: "A new old theme featuring Temporal and color-mix"
+title: "Creating background colour transitions with Temporal and color-mix"
 date: 2026-06-21
 draft: true
 tags: ["site"]
+excerptText: "A visual refresh with a background that changes colour according to the time of day, using the new Temporal API."
 ---
 
-I've given my website a bit of a refresh! There's a slightly updated layout if you're on desktop, plus I ditched the `etc` page and I've revamped my blogroll to be powered by [raindrop.io](https://raindrop.io). The <a href="https://localghost.dev?theme=vaporwave" target="_new">Vaporwave theme</a> also has a newly jazzed-up nav bar with some adorable little icons. But the biggest change is to the city theme, which was previously a starry-sky dark mode theme.
+I've given my website a bit of a refresh! There's a slightly updated layout if you're on desktop, plus I ditched the `etc` page and I've revamped my [links page](/links) to be powered by [raindrop.io](https://raindrop.io). The <a href="https://localghost.dev?theme=vaporwave" target="_new">Vaporwave theme</a> also has a newly jazzed-up nav bar with some adorable little icons. But the biggest change is to the city theme, which was previously a starry-sky dark mode theme.
 
 If you're reading this between the hours of 9pm - 5am, you're probably wondering what all the fuss is about - it looks pretty much the same. That's because the theme changes depending on the time of day! 
 
@@ -13,14 +14,14 @@ If you're reading this between the hours of 9pm - 5am, you're probably wondering
 <img alt="A screenshot of the sunrise version of this layout, with pixel art skyscrapers at the bottom. The background is a blue to pink to light orange gradient" src="/img/blog/new-city-theme/sunrise-screenshot.png"><img alt="A screenshot of the daytime version of this layout, with pixel art skyscrapers at the bottom. The background is a purple to pink gradient" src="/img/blog/new-city-theme/day-screenshot.png"><img alt="A screenshot of the sunset version of this layout, with pixel art skyscrapers at the bottom. The background is a purple to pink to orange gradient" src="/img/blog/new-city-theme/sunset-screenshot.png"><img alt="A screenshot of the nighttime version of this layout, with pixel art skyscrapers at the bottom. There are pixel art stars in the header and the theme is now dark mode. The background is a dark blue to light blue to purple gradient" src="/img/blog/new-city-theme/night-screenshot.png">
 </div>
 
-I was going to just turn the layout into a pastel lo-fi-aesthetic thing, but then I realised that a) I needed *some* kind of dark mode and b) I'd miss the stars! So I thought... why not both? And why stop at just night and day? ([Alistair Shepherd](https://alistairshepherd.me) did something similar with his beautiful Firewatch-themed website.)
+I was going to just turn the layout into a pastel lo-fi-aesthetic thing, but then I realised that a) I needed *some* kind of dark mode and b) I'd miss the stars! So I thought... why not both? And why stop at just night and day? ([Alistair Shepherd](https://alistairshepherd.uk/) did something similar with his beautiful Firewatch-themed website.)
 
-Then I remembered that the Temporal API was available experimentally in Chrome and Firefox, and I'd wanted an excuse to try it opportunity.
+Then I remembered that the Temporal API was available experimentally in Chrome and Firefox, and I'd wanted an excuse to try it out.
 
 ## Introducing Temporal 
 For the uninitiated, Temporal is a solution to the objectively terrible Date API in JavaScript. Date was based on Java's Date library, which was also objectively terrible and has long been deprecated. 
 
-It's always really confusing that `Date` instances show either local or UTC time depending on which function you use to display them, and date operations are so fiddly that most of us turn to third party libraries. 
+It's always really confusing that `Date` instances show either local or UTC time depending on which function you use to display them, and date operations are so fiddly that most of us turn to third party libraries like `date-fns` or `luxon`. 
 
 Temporal massively simplifies the API, introducing some new concepts:
 - `PlainDateTime`: a date and time with no timezone (TZ) 
@@ -32,7 +33,7 @@ Temporal massively simplifies the API, introducing some new concepts:
 
 ### Getting the user's local time
 The first thing to do was figure out the time according to the user's browser. 
-The [`Temporal.Now` namespace](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Now) has various methods for interacting with the current time, including `plainTimeISO()` which by default gives us a `PlainTime` in local time. (You can also pass in a time zone to get a zoned time.)
+The `Temporal.Now` [namespace](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Now) has various methods for interacting with the current time, including `plainTimeISO()` which by default gives us a `PlainTime` in local time. (You can also pass in a time zone to get a zoned time.)
 
 
 ```js
@@ -91,11 +92,17 @@ const stages = {
 };
 ```
 
-CSS custom properties are easy to set via JS - you can use `root.style.setProperty`. 
+CSS custom properties are easy to set via JS - you can use `root.style.setProperty`:
+```js
+ root.style.setProperty(
+    "--bg-gradient-top",
+    "oklch(25.27% 0.0919 276.73)",
+  );
+```
 
 When the page loads, I'm running a function that gets the user time and compares it to each of these start times to see where it fits.
 
-Unlike `Date`, we don't have to do any complicated gymnastics to compare Temporal instances: there's literally a `compare` function on each type of instance. Just like with other JS comparison functions, it returns `1` if the first instance is greater than the second, `0` if the two instances are the same, and `-1` if the first instance is less than the second. 
+Unlike `Date`, we don't have to do any gymnastics to compare Temporal instances: there's literally a `compare` function on each type of instance. Just like with other JS comparison functions, it returns `1` if the first instance is greater than the second, `0` if the two instances are the same, and `-1` if the first instance is less than the second. 
 
 ```js
   const compare = Temporal.PlainTime.compare // extracted for brevity
@@ -137,7 +144,7 @@ Once we've got the stage name, we can look up the colours and set the custom pro
 
   root.style.setProperty(
     "--bg-gradient-bottom",
-      stages[currentStageName].color3`,
+      stages[currentStageName].color3,
   );
   ```
 
@@ -158,9 +165,13 @@ And *then* I remembered that `color-mix` exists. Why restrict ourselves to just 
 background: color-mix(in oklch, color1, color2)
 ```
 
-Much like with gradients, you can also specify a percentage value for the colours, which indicates the proportions of the colours. So I could gradually feed in a bit of the next stage's colour until the next stage took over completely. 
+Much like with gradients, you can also specify a percentage value for the colours, which indicates the proportions of the colours:
+```css
+background: color-mix(in oklch, color1 20%, color2)
+```
+So I could gradually feed in a bit of the next stage's colour until the next stage took over completely. 
 
-To get a percentage value for the next stage colour to feed in, I had to figure out how far through the current stage we were. 
+To get a percentage value for the next stage colour to feed in, I had to figure out how far through the current stage we are. 
 
 First, I'm calculating the time until the next stage - super simple with the `until` function on `Temporal` instances:
 
@@ -177,9 +188,9 @@ console.log(timeUntilNextStage.toString()) // PT1H15M
 
 ```
 
-`Duration`s are stringified (and specified) using the ISO 8601 duration format, so "PT2H15M" stands for "period, time, 1 hour, 15 minutes". If the duration had any date information in it, it'd appear before the `T`. 
+`Duration`s are stringified (and specified) using the [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601#Durations), so "PT2H15M" stands for "period, time, 1 hour, 15 minutes". If the duration had any date information in it, it'd appear before the `T`. 
 
-We set `timeUntilNextStage` in the switch statement where we're deciding that time it is, for example: 
+We set `timeUntilNextStage` in the switch statement where we're deciding what stage we're in, for example: 
 
 ```js
   case compare(timeNow, stages.sunrise.start) >= 0 && compare(timeNow, stages.day.start) < 0: {

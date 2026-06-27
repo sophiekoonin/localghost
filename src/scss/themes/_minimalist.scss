@@ -61,7 +61,7 @@
         margin-right: auto;
       }
       &[data-state="active"] {
-        color: light-dark(oklch(67.392% 0.19499 303.833) oklch(76.189% 0.11596 317.459));
+        color: light-dark(oklch(67.392% 0.19499 303.833), oklch(76.189% 0.11596 317.459));
       }
     }
     .submenu-list {

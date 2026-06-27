@@ -1,20 +1,40 @@
 {%- from "macros/svg.njk" import svg -%}
 <!DOCTYPE html>
-<html lang="en" class="no-js" data-theme="city">
+<html lang="en" class="no-js">
   {% set cssFilename = global.cssFile() %}
   {% set jsFiles = global.jsFiles() %}
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      {% include "partials/meta.njk" %}
+    {% include "partials/meta.njk" %}
     <title>
       {% if not isHome %}
         {{ title }} -
       {% endif %}
       localghost</title>
+    <script>
+      const search = new URLSearchParams(window.location.search);
+      const theme = search.get("theme") || localStorage.getItem("user-theme") || "city"
+      document.documentElement.setAttribute("data-theme", theme);
+      if (theme === "city") {
+        const compare = Temporal.PlainTime.compare
+        let stage;
+        const timeNow = Temporal.Now.plainTimeISO()
+        if (
+          compare(timeNow, Temporal.PlainTime.from("21:00:00")) >= 0 &&
+          compare(timeNow, Temporal.PlainTime.from("06:30:00")) < 0
+        ) {
+          stage = "night"
+        } else if (compare(timeNow, Temporal.PlainTime.from("08:00:00")) < 0) {
+          stage = "sunrise"
+        } else if (compare(timeNow, Temporal.PlainTime.from("19:30:00")) < 0) {
+          stage = "day"
+        } else {
+          stage = "sunset"
+        }
+        document.documentElement.setAttribute("data-time", stage)
+      }
+    </script>
     {% for k, filename in jsFiles %}
-      <script src={{filename}} type="module"></script>
+      <script rel="subresource" src={{ filename }} type="module"></script>
     {% endfor %}
     {% if extraCSS %}
       {% for file in extraCSS %}
@@ -25,16 +45,16 @@
     <link rel="stylesheet" type="text/css" href={{ cssFilename }}>
     <script data-goatcounter="https://localghost.goatcounter.com/count" async defer src="//gc.zgo.at/count.js"></script>
   </head>
-  <body {% if isHome%}data-page="index"{%endif%}>
+  <body {% if isHome %} data-page="index" {% endif %}>
     {% include "partials/svg/defs.html" %}
     <div class="page-wrapper">
       {% include "partials/header.njk" %}
       <main>
         {% include "partials/nav.njk" %}
         <div class="content-wrapper">
-        {% block content %}
-          {{ content | safe }}
-        {% endblock %}
+          {% block content %}
+            {{ content | safe }}
+          {% endblock %}
         </div>
       </main>
       {% include "partials/footer.njk" %}

@@ -4,9 +4,6 @@
 [data-theme="city"] {
   // vars
   color-scheme: light dark;
-  --bg-gradient-top: oklch(0.25 0.09 276.73 / 1);
-  --bg-gradient-mid: oklch(0.47 0.28 283.78 / 1);
-  --bg-gradient-bottom: oklch(59.41% 0.289 331.1);
   --background: fixed linear-gradient(var(--bg-gradient-top), var(--bg-gradient-mid) 80%);
   --body-color: light-dark(oklch(0.34 0.02 309.63 / 1), white);
   --accent-color: oklch(0.67 0.33 330.95 / 1);
@@ -172,8 +169,26 @@
     }
   }
 
+  &[data-time="sunrise"] {
+    --bg-gradient-top: oklch(0.618 0.3157 265.76);
+    --bg-gradient-mid: oklch(0.8867 0.1222 328.24);
+    --bg-gradient-bottom: oklch(0.9529 0.1222 106.94);
+  }
+  &[data-time="day"] {
+    --bg-gradient-top: oklch(58% 0.15433 300);
+    --bg-gradient-mid: oklch(85% 0.22133 302);
+    --bg-gradient-bottom: oklch(98 0.22133 302);
+  }
+  &[data-time="sunset"] {
+    --bg-gradient-top: oklch(0.6933 0.1899 297.53);
+    --bg-gradient-mid: oklch(75.504% 0.24612 357.26);
+    --bg-gradient-bottom: oklch(88.591% 0.1422 62.595);
+  }
   &[data-time="night"] {
     color-scheme: dark;
+    --bg-gradient-top: oklch(25.27% 0.0919 276.73);
+    --bg-gradient-mid: oklch(47.35% 0.284 283.78);
+    --bg-gradient-bottom: oklch(0.7 0.33 332.4);
     --bullet: url("data:image/svg+xml,%3Csvg viewBox='0 0 9 9' height='10' width='10' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='2'%3E%3Cpath fill='%23fff' d='M4 2h1v5H4z'/%3E%3Cpath fill='%23fff' d='M3 3h3.167v3H3z'/%3E%3Cpath fill='%23fff' d='M7 4v1H2V4z'/%3E%3Cpath fill='%23fff' d='M4 0h1v1H4z'/%3E%3Cpath fill='%23fff' d='M8 4h1v1H8z'/%3E%3Cpath fill='%23fff' d='M0 4h1v1H0z'/%3E%3Cpath fill='%23fff' d='M4 8h1v1H4z'/%3E%3C/svg%3E");
 
     .list-heading h1 {
