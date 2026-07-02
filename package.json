@@ -7,6 +7,7 @@
   },
   "type": "module",
   "devDependencies": {
+    "@11ty/eleventy-fetch": "5.1.2",
     "@sindresorhus/slugify": "^3",
     "autoprefixer": "^10.4.19",
     "eslint": "^10",

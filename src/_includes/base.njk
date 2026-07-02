@@ -10,29 +10,7 @@
         {{ title }} -
       {% endif %}
       localghost</title>
-    <script>
-      const search = new URLSearchParams(window.location.search);
-      const theme = search.get("theme") || localStorage.getItem("user-theme") || "city"
-      document.documentElement.setAttribute("data-theme", theme);
-      if (theme === "city") {
-        const compare = Temporal.PlainTime.compare
-        let stage;
-        const timeNow = Temporal.Now.plainTimeISO()
-        if (
-          compare(timeNow, Temporal.PlainTime.from("21:00:00")) >= 0 &&
-          compare(timeNow, Temporal.PlainTime.from("06:30:00")) < 0
-        ) {
-          stage = "night"
-        } else if (compare(timeNow, Temporal.PlainTime.from("08:00:00")) < 0) {
-          stage = "sunrise"
-        } else if (compare(timeNow, Temporal.PlainTime.from("19:30:00")) < 0) {
-          stage = "day"
-        } else {
-          stage = "sunset"
-        }
-        document.documentElement.setAttribute("data-time", stage)
-      }
-    </script>
+    {% include "partials/inline-scripts.njk"%}
     {% for k, filename in jsFiles %}
       <script rel="subresource" src={{ filename }} type="module"></script>
     {% endfor %}

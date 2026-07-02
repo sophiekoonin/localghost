@@ -1,3 +1,4 @@
+import { Fetch } from "@11ty/eleventy-fetch";
 const collectionId = process.env.RAINDROP_BLOGROLL_COLLECTION_ID;
 const token = process.env.RAINDROP_TOKEN;
 
@@ -8,13 +9,13 @@ async function fetchLinks() {
   const url = new URL(`https://api.raindrop.io/rest/v1/raindrops/${collectionId}`);
 
   while (!fetchedAll) {
-    const rsp = await (
-      await fetch(`${url}?page=${page}&sort=title`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-    ).json();
+    const rsp = await Fetch(`${url}?page=${page}&sort=title`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      duration: "7d",
+      type: "json",
+    });
 
     if (rsp.items == null) {
       fetchedAll = true;
