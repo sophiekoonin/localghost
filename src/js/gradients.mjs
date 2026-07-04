@@ -52,13 +52,6 @@ export function durationBetween(time1, time2) {
   return time1.until(time2);
 }
 
-// export function jsDateCompare(date1, date2) {
-//   const date1Ms = date1.getTime();
-//   const date2Ms = date2.getTime();
-//   if (date1Ms === date2Ms) return 0;
-//   return date1Ms < date2Ms ? -1 : 1;
-// }
-
 export function setColoursForTime(time) {
   const timeNow = time ? window.getNewTimeInstance(time) : getUserTime();
   switch (true) {
@@ -104,6 +97,34 @@ export function setColoursForTime(time) {
     transitionProgressPercent = Math.round((diff / timeBlockDurationSecs) * 100).toFixed();
   }
 
+  setProperties(nextStageName, transitionProgressPercent);
+  root.setAttribute("data-time", currentStageName);
+}
+
+window.getTimeOfDay = () => currentStageName;
+
+export function setStage(stage) {
+  setColoursForTime(stages[stage].start);
+}
+
+window.setColoursForTime = setColoursForTime;
+
+export function manualStageChange(newStage) {
+  for (let i = 0; i <= 10; i++) {
+    console.log(i);
+    setTimeout(
+      () => {
+        setProperties(newStage, i * 10);
+        if (i === 10) {
+          setColoursForTime(stages[newStage].start);
+        }
+      },
+      250 * i + 1,
+    );
+  }
+}
+
+function setProperties(nextStageName, transitionProgressPercent) {
   root.style.setProperty(
     "--bg-gradient-top",
     `color-mix(in oklch, ${stages[nextStageName].color1} ${transitionProgressPercent}%, ${stages[currentStageName].color1})`,
@@ -117,14 +138,4 @@ export function setColoursForTime(time) {
     "--bg-gradient-bottom",
     `color-mix(in oklch, ${stages[nextStageName].color3} ${transitionProgressPercent}%, ${stages[currentStageName].color3})`,
   );
-
-  root.setAttribute("data-time", currentStageName);
 }
-
-window.getTimeOfDay = () => currentStageName;
-
-export function setStage(stage) {
-  setColoursForTime(stages[stage].start);
-}
-
-window.setColoursForTime = setColoursForTime;

@@ -1,10 +1,41 @@
 @use "../utils";
 @use "./shared";
 
+@property --bg-gradient-top {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #fff;
+}
+@property --bg-gradient-mid {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #fff;
+}
+@property --bg-gradient-bottom {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #fff;
+}
+
 [data-theme="city"] {
   // vars
+  &[data-time="sunrise"] {
+    --bg-gradient-top: oklch(0.618 0.3157 265.76);
+    --bg-gradient-mid: oklch(0.8867 0.1222 328.24);
+    --bg-gradient-bottom: oklch(0.9529 0.1222 106.94);
+  }
+  &[data-time="day"] {
+    --bg-gradient-top: oklch(58% 0.15433 300);
+    --bg-gradient-mid: oklch(85% 0.22133 302);
+    --bg-gradient-bottom: oklch(98% 0.22133 302);
+  }
+  &[data-time="sunset"] {
+    --bg-gradient-top: oklch(0.6933 0.1899 297.53);
+    --bg-gradient-mid: oklch(75.504% 0.24612 357.26);
+    --bg-gradient-bottom: oklch(88.591% 0.1422 62.595);
+  }
+
   color-scheme: light dark;
-  --background: fixed linear-gradient(var(--bg-gradient-top), var(--bg-gradient-mid) 80%);
   --body-color: light-dark(oklch(0.34 0.02 309.63 / 1), white);
   --accent-color: oklch(0.67 0.33 330.95 / 1);
   --content-bg: light-dark(oklch(0.95 0.03 316.17 / 0.7), oklch(0.28 0.02 284.12 / 0.95));
@@ -19,9 +50,16 @@
   --blockquote-bg: oklch(1 0 0 / 0.15);
   --border-radius: 10px;
 
+  body {
+    --background: fixed linear-gradient(var(--bg-gradient-top), var(--bg-gradient-mid) 80%);
+
+    transition-property: --bg-gradient-top, --bg-gradient-mid;
+    transition-duration: 0.5s;
+  }
   footer {
     @include shared.grid-footer;
     background: linear-gradient(oklch(0 0 0 / 0) 40%, var(--bg-gradient-bottom));
+    transition: --bg-gradient-bottom 0.5s;
   }
 
   header {
@@ -169,21 +207,6 @@
     }
   }
 
-  &[data-time="sunrise"] {
-    --bg-gradient-top: oklch(0.618 0.3157 265.76);
-    --bg-gradient-mid: oklch(0.8867 0.1222 328.24);
-    --bg-gradient-bottom: oklch(0.9529 0.1222 106.94);
-  }
-  &[data-time="day"] {
-    --bg-gradient-top: oklch(58% 0.15433 300);
-    --bg-gradient-mid: oklch(85% 0.22133 302);
-    --bg-gradient-bottom: oklch(98 0.22133 302);
-  }
-  &[data-time="sunset"] {
-    --bg-gradient-top: oklch(0.6933 0.1899 297.53);
-    --bg-gradient-mid: oklch(75.504% 0.24612 357.26);
-    --bg-gradient-bottom: oklch(88.591% 0.1422 62.595);
-  }
   &[data-time="night"] {
     color-scheme: dark;
     --bg-gradient-top: oklch(25.27% 0.0919 276.73);

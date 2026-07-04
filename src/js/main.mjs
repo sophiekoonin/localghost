@@ -1,4 +1,4 @@
-import { setColoursForTime, setStage } from "./gradients.mjs";
+import { setColoursForTime, manualStageChange, setStage } from "./gradients.mjs";
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 function pictureEl(name, alt) {
