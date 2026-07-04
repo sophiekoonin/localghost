@@ -30,8 +30,10 @@
 
   .header {
     margin-block-start: var(--space-l);
-    margin-block-end: var(--space-m);
     font-size: var(--step-5);
+    &:is([data-page="index"] .header) {
+      font-size: var(--step-7);
+    }
   }
 
   main {

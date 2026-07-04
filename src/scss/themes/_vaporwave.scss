@@ -114,7 +114,6 @@
   .header {
     text-transform: uppercase;
     font-size: var(--step-4);
-    margin-block: var(--space-m);
     a {
       letter-spacing: clamp(0.31rem, calc(0.14rem + 0.85vw), 1ch);
     }
