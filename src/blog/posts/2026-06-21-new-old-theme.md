@@ -6,7 +6,7 @@ tags: ["site"]
 excerptText: "A visual refresh with a background that changes colour according to the time of day, using the new Temporal API."
 ---
 
-I've given my website a bit of a refresh! There's a slightly updated layout if you're on desktop, plus I ditched the `etc` page and I've revamped my [links page](/links) to be powered by [raindrop.io](https://raindrop.io). The <a href="https://localghost.dev?theme=vaporwave" target="_new">Vaporwave theme</a> also has a newly jazzed-up nav bar with some adorable little icons. But the biggest change is to the city theme, which was previously a starry-sky dark mode theme.
+I've given my website a bit of a refresh! There's a slightly updated layout if you're on desktop, plus I ditched the `etc` page and I've revamped my [links page](/links) to be powered by [raindrop.io](https://raindrop.io). The [Vaporwave theme](?theme=vaporwave) also has a newly jazzed-up nav bar with some adorable little icons. But the biggest change is to the [city theme](?theme=city), which was previously a starry-sky dark mode theme.
 
 If you're reading this between the hours of 9pm - 5am, you're probably wondering what all the fuss is about - it looks pretty much the same. That's because the theme changes depending on the time of day! 
 
@@ -14,7 +14,7 @@ If you're reading this between the hours of 9pm - 5am, you're probably wondering
 <img alt="A screenshot of the sunrise version of this layout, with pixel art skyscrapers at the bottom. The background is a blue to pink to light orange gradient" src="/img/blog/new-city-theme/sunrise-screenshot.png"><img alt="A screenshot of the daytime version of this layout, with pixel art skyscrapers at the bottom. The background is a purple to pink gradient" src="/img/blog/new-city-theme/day-screenshot.png"><img alt="A screenshot of the sunset version of this layout, with pixel art skyscrapers at the bottom. The background is a purple to pink to orange gradient" src="/img/blog/new-city-theme/sunset-screenshot.png"><img alt="A screenshot of the nighttime version of this layout, with pixel art skyscrapers at the bottom. There are pixel art stars in the header and the theme is now dark mode. The background is a dark blue to light blue to purple gradient" src="/img/blog/new-city-theme/night-screenshot.png">
 </div>
 
-I was going to just turn the layout into a pastel lo-fi-aesthetic thing, but then I realised that a) I needed *some* kind of dark mode and b) I'd miss the stars! So I thought... why not both? And why stop at just night and day? ([Alistair Shepherd](https://alistairshepherd.uk/) did something similar with his beautiful Firewatch-themed website.)
+I was going to just turn the layout into a pastel lo-fi-aesthetic thing, but then I realised that a) I needed *some* kind of dark mode and b) I'd miss the stars! So I thought... why not both? And why stop at just night and day? ([Alistair Shepherd](https://alistairshepherd.uk/) did something similar with his beautiful Firewatch-inspired website.)
 
 Then I remembered that the Temporal API was available experimentally in Chrome and Firefox, and I'd wanted an excuse to try it out.
 
@@ -100,7 +100,7 @@ CSS custom properties are easy to set via JS - you can use `root.style.setProper
   );
 ```
 
-When the page loads, I'm running a function that gets the user time and compares it to each of these start times to see where it fits.
+When the page loads, I'm running a function that gets the user time and compares it to each of these start times to see where it fits. I had to stick it in an inline script, for my sins, as I needed to make sure it ran before the rest of the page rendered - otherwise you end up with flashes of unstyled content between page loads.
 
 Unlike `Date`, we don't have to do any gymnastics to compare Temporal instances: there's literally a `compare` function on each type of instance. Just like with other JS comparison functions, it returns `1` if the first instance is greater than the second, `0` if the two instances are the same, and `-1` if the first instance is less than the second. 
 
@@ -285,6 +285,43 @@ So we can get both colours dynamically when we set the variables with `color-mix
 ```
 
 And that's how we transition the colours!
+
+## Animating the transitions
+As a bonus touch, I wanted the colour change to transition smoothly when you switch between stages manually using the picker on the top right. By declaring my `bg-gradient-xx` variables using `@property`, I can tell the browsers that yes, they are definitely colours - and therefore they can be transitioned.
+
+Without this explicit custom property declaration, I could set the value of `--bg-gradient-top` to a number, or a position, or anything I wanted. By saying it's definitely a colour, the browser knows how to transition it into other values of the same type.
+
+```css
+@property --bg-gradient-top {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #fff;
+}
+@property --bg-gradient-mid {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #fff;
+}
+@property --bg-gradient-bottom {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #fff;
+}
+
+  body {
+    --background: fixed linear-gradient(var(--bg-gradient-top), var(--bg-gradient-mid) 80%);
+
+    transition-property: --bg-gradient-top, --bg-gradient-mid;
+    transition-duration: 0.5s;
+  }
+
+  footer {
+    background: linear-gradient(oklch(0 0 0 / 0) 40%, var(--bg-gradient-bottom));
+    transition: --bg-gradient-bottom 0.5s;
+  }
+```
+
+And like motherflipping magic, the colours transition seamlessly into each other! I love CSS.
 
 ## Polyfilling Temporal for Safari
 Alas, Safari is behind the times. We love progressive enhancement, and of course I could have just removed any of the transition logic for people whose browsers don't support Temporal, but that's no fun. They deserve sunsets too!

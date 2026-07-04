@@ -23,7 +23,7 @@ function contentEnd(reducedMotion) {
     '<p>You are visitor number <img src="/img/themes/geocities/static/counter.png" alt="hit counter showing 2147483648" /></p>'
   );
 }
-document.documentElement.classList.remove("no-js");
+
 const currentPage = window.location.pathname;
 const THEME_STORAGE_KEY = "user-theme";
 const THEMES = {
@@ -107,12 +107,6 @@ window.addEventListener("load", () => {
 
   document.querySelector("#theme-switcher").addEventListener("change", themeEventListener);
   document.querySelector("#time-selector").addEventListener("change", timeEventListener);
-});
-
-window.addEventListener("unload", () => {
-  document.querySelector("#theme-switcher").removeEventListener("change", themeEventListener);
-
-  document.querySelector("#time-selector").removeEventListener("change", timeEventListener);
 });
 
 function cleanupGeocities() {
@@ -377,3 +371,5 @@ function cleanupGarden() {
   const bfly = document.getElementById("butterfly");
   if (bfly) bfly.remove();
 }
+
+console.log("hi");
