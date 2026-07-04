@@ -41,6 +41,7 @@
   },
   "scripts": {
     "start": "NODE_ENV=development BASE_URL=http://localhost:8080 eleventy --serve --quiet",
+    "dev": "NODE_ENV=development BASE_URL=http://localhost:8080 eleventy --serve",
     "build": "NODE_ENV=production eleventy",
     "test": "vitest",
     "full-build": "set CACHE_BUST=true && npm run build",

@@ -1,4 +1,4 @@
-import { Fetch } from "@11ty/eleventy-fetch";
+import Fetch from "@11ty/eleventy-fetch";
 const collectionId = process.env.RAINDROP_BLOGROLL_COLLECTION_ID;
 const token = process.env.RAINDROP_TOKEN;
 
@@ -9,32 +9,38 @@ async function fetchLinks() {
   const url = new URL(`https://api.raindrop.io/rest/v1/raindrops/${collectionId}`);
 
   while (!fetchedAll) {
-    const rsp = await Fetch(`${url}?page=${page}&sort=title`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      duration: "7d",
-      type: "json",
-    });
+    try {
+      const rsp = await Fetch(`${url}?page=${page}&sort=title`, {
+        fetchOptions: {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        },
+        duration: "7d",
+        type: "json",
+      });
 
-    if (rsp.items == null) {
+      if (rsp.items == null) {
+        fetchedAll = true;
+        return;
+      }
+      raindrops = raindrops.concat(
+        rsp.items.map((raindrop) => {
+          const { link, title, excerpt, note, tags } = raindrop;
+
+          const description = note === "" ? excerpt : note;
+          return { link, title, description, tags };
+        }),
+      );
+
+      if (raindrops.length >= rsp.count) {
+        fetchedAll = true;
+      } else {
+        page++;
+      }
+    } catch (error) {
+      console.error(`Failed to fetch raindrop links:`, error);
       fetchedAll = true;
-      return;
-    }
-
-    raindrops = raindrops.concat(
-      rsp.items.map((raindrop) => {
-        const { link, title, excerpt, note, tags } = raindrop;
-
-        const description = note === "" ? excerpt : note;
-        return { link, title, description, tags };
-      }),
-    );
-
-    if (raindrops.length >= rsp.count) {
-      fetchedAll = true;
-    } else {
-      page++;
     }
   }
   return raindrops.reduce((acc, curr) => {
