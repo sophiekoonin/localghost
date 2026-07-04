@@ -10,7 +10,7 @@
         {{ title }} -
       {% endif %}
       localghost</title>
-    {% include "partials/inline-scripts.njk"%}
+    <script src="/init.js"></script>
     {% for k, filename in jsFiles %}
       <script rel="subresource" src={{ filename }} type="module"></script>
     {% endfor %}
