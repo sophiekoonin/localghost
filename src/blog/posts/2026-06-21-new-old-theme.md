@@ -6,9 +6,9 @@ tags: ["site"]
 excerptText: "A visual refresh with a background that changes colour according to the time of day, using the new Temporal API."
 ---
 
-I've given my website a bit of a refresh! There's a slightly updated layout if you're on desktop, plus I ditched the `etc` page and I've revamped my [links page](/links) to be powered by [raindrop.io](https://raindrop.io). The [Vaporwave theme](?theme=vaporwave) also has a newly jazzed-up nav bar with some adorable little icons. But the biggest change is to the [city theme](?theme=city), which was previously a starry-sky dark mode theme.
+I've given my website a bit of a refresh! There's a slightly updated layout if you're on desktop, plus I ditched the `etc` page and I've revamped my [links page](/links) to be powered by [raindrop.io](https://raindrop.io). The [minimalist theme](?theme=minimalist) is still minimalist, but a bit more fancy. The [vaporwave theme](?theme=vaporwave) has a newly jazzed-up nav bar with some adorable little icons. But the biggest change is to the [city theme](?theme=city), which was previously a starry-sky dark mode theme.
 
-If you're reading this between the hours of 9pm - 5am, you're probably wondering what all the fuss is about - it looks pretty much the same. That's because the theme changes depending on the time of day! 
+If you're reading this between the hours of 9pm - 5am, you might be wondering what all the fuss is about - it looks pretty much the same as it did before. That's because the theme changes depending on the time of day! 
 
 <div class="image-grid">
 <img alt="A screenshot of the sunrise version of this layout, with pixel art skyscrapers at the bottom. The background is a blue to pink to light orange gradient" src="/img/blog/new-city-theme/sunrise-screenshot.png"><img alt="A screenshot of the daytime version of this layout, with pixel art skyscrapers at the bottom. The background is a purple to pink gradient" src="/img/blog/new-city-theme/day-screenshot.png"><img alt="A screenshot of the sunset version of this layout, with pixel art skyscrapers at the bottom. The background is a purple to pink to orange gradient" src="/img/blog/new-city-theme/sunset-screenshot.png"><img alt="A screenshot of the nighttime version of this layout, with pixel art skyscrapers at the bottom. There are pixel art stars in the header and the theme is now dark mode. The background is a dark blue to light blue to purple gradient" src="/img/blog/new-city-theme/night-screenshot.png">
@@ -16,9 +16,9 @@ If you're reading this between the hours of 9pm - 5am, you're probably wondering
 
 You can select the time of day using the picker in the top right, after the theme switcher. Note that your selection won't be persisted between pages (unlike theme choice) as I wanted to make sure it didn't get stuck if you come back at a later date. 
 
-I was going to just turn the layout into a pastel lo-fi-aesthetic thing, but then I realised that a) I needed *some* kind of dark mode and b) I'd miss the stars! So I thought... why not both? And why stop at just night and day? ([Alistair Shepherd](https://alistairshepherd.uk/) did something similar with his beautiful Firewatch-inspired website.)
+I was going to just turn the layout into a pastel lo-fi-aesthetic thing, but then I realised that a) I needed *some* kind of dark mode and b) I'd miss the stars! So I thought... why not both? And why stop at just night and day? (Hat tip to [Alistair Shepherd](https://alistairshepherd.uk/) who did something similar with his beautiful Firewatch-inspired website.)
 
-Then I remembered that the Temporal API was available experimentally in Chrome and Firefox, and I'd wanted an excuse to try it out.
+Then I remembered that the Temporal API was available experimentally in Chrome and Firefox, and I'd been looking for an excuse to try it out.
 
 ## Introducing Temporal 
 For the uninitiated, Temporal is a solution to the objectively terrible Date API in JavaScript. Date was based on Java's Date library, which was also objectively terrible and has long been deprecated. 
@@ -236,7 +236,7 @@ const sunrise = Temporal.PlainTime.from("06:30")
 const d = now.until(sunrise) // Temporal.Duration -PT15H30M
 ```
 
-This causes problems at the point where I calculate the difference, as it'll come out as a large number and completely throw off the calculations. I got around this by getting the absolute value of the duration with `.abs()`, forcing the diff to always be negative:
+This causes problems at the point where I calculate the difference, as it'll come out as a large number and completely throw off the calculations. I got around this by getting the absolute value of the duration with `.abs()`, forcing the diff to always be negative. What was e.g.`-PT15H30M` will now be `PT15H30M`, and subtracting that from a `transitionDuration` of 90 mins will always yield a negative number.
 
 ```js
  case compare(timeNow, stages.sunrise.start) < 0 || compare(timeNow, stages.night.start) >= 0: {
@@ -266,7 +266,7 @@ Now we can use that percentage value (which will always be an integer) in the `c
 color-mix(in oklch, ${color1} ${transitionProgressPercent}%, ${color2})
 ```
 
-I updated my `stages` object to include the next stage name as well as the current stage name:
+I updated my `stages` object to include the next stage name as well:
 
 ```js
  night: {
@@ -288,8 +288,8 @@ So we can get both colours dynamically when we set the variables with `color-mix
 
 And that's how we transition the colours!
 
-## Animating the transitions
-As a bonus touch, I wanted the colour change to transition smoothly when you switch between stages manually using the picker on the top right. By declaring my `bg-gradient-xx` variables using `@property`, I can tell the browsers that yes, they are definitely colours - and therefore they can be transitioned.
+## Transitioning the transitions
+As a bonus touch, I wanted the colour change to transition smoothly when you switch between stages manually using the picker on the top right. By declaring my `bg-gradient-xx` variables using `@property`, I can tell the browsers that yes, they are definitely colours - and therefore they can be animated.
 
 Without this explicit custom property declaration, I could set the value of `--bg-gradient-top` to a number, or a position, or anything I wanted. By saying it's definitely a colour, the browser knows how to transition it into other values of the same type.
 
@@ -310,6 +310,11 @@ Without this explicit custom property declaration, I could set the value of `--b
   initial-value: #fff;
 }
 
+```
+
+On the `body` and `footer` I set `transition-property` and `transition-duration` to tell it which properties I want to animate:
+
+```css
   body {
     --background: fixed linear-gradient(var(--bg-gradient-top), var(--bg-gradient-mid) 80%);
 
@@ -323,7 +328,7 @@ Without this explicit custom property declaration, I could set the value of `--b
   }
 ```
 
-And like motherflipping magic, the colours transition seamlessly into each other! I love CSS.
+And like motherflipping magic, the colours transition seamlessly into each other when the values change! I love CSS.
 
 ## Polyfilling Temporal for Safari
 Alas, Safari is behind the times. We love progressive enhancement, and of course I could have just removed any of the transition logic for people whose browsers don't support Temporal, but that's no fun. They deserve sunsets too!
