@@ -10,9 +10,9 @@
         {{ title }} -
       {% endif %}
       localghost</title>
-    <script src="/init.js"></script>
+    {# <script src="/init.js"></script> #}
     {% for k, filename in jsFiles %}
-      <script rel="subresource" src={{ filename }} type="module"></script>
+      <script rel="subresource" blocking='render' src={{ filename }} type="module"></script>
     {% endfor %}
     {% if extraCSS %}
       {% for file in extraCSS %}

@@ -8,41 +8,16 @@ const expectationsFn = (timeOfDay, expectedTopFn, expectedMidFn, expectedBottomF
   expect(setAttributeSpy).toHaveBeenCalledWith("data-time", timeOfDay);
 };
 
-// these functions are copied from init.js for testing purposes
-function jsDateCompare(date1, date2) {
-  const date1Ms = date1.getTime();
-  const date2Ms = date2.getTime();
-  if (date1Ms === date2Ms) return 0;
-
-  return date1Ms < date2Ms ? -1 : 1;
-}
-function initGlobals() {
-  window.supportsTemporal = typeof window.Temporal?.PlainTime !== "undefined";
-  window.compareTimes = supportsTemporal ? Temporal.PlainTime.compare : jsDateCompare;
-  window.getNewTimeInstance = supportsTemporal
-    ? Temporal.PlainTime.from
-    : (time) => {
-        const date = new Date();
-        const timeParts = time.split(":");
-        date.setMilliseconds(0);
-        date.setHours(timeParts[0]);
-        date.setMinutes(timeParts[1]);
-        return date;
-      };
-}
-
 describe("with Temporal support", () => {
   // Importing the modules dynamically here so we can test the non-Temporal path separately.
   // Once Temporal is baseline, we can move the imports to top level and get rid of the shims
-  let setColoursForTime, stages, durationBetween;
+  let setColoursForTime, stages, newTimeInstance, durationBetween;
   beforeEach(async () => {
-    initGlobals();
-
-    ({ stages, durationBetween, setColoursForTime } = await import("../gradients.mjs"));
+    ({ newTimeInstance, stages, durationBetween, setColoursForTime } = await import("../gradients.mjs"));
   });
 
   test("newTimeInstance gives me a Temporal PlainTime", () => {
-    const timeInstance = window.getNewTimeInstance("13:45");
+    const timeInstance = newTimeInstance("13:45");
     expect(timeInstance instanceof Temporal.PlainTime).toBe(true);
   });
 
@@ -152,18 +127,17 @@ describe("with Temporal support", () => {
 });
 
 describe("without temporal support", () => {
-  let setColoursForTime, stages, durationBetween;
+  let setColoursForTime, stages, newTimeInstance, durationBetween, jsDateCompare;
   beforeEach(async () => {
     window.Temporal = undefined;
-    initGlobals();
     vi.resetModules();
-    ({ setColoursForTime, stages, durationBetween } = await import("../gradients.mjs"));
+    ({ setColoursForTime, stages, newTimeInstance, durationBetween, jsDateCompare } = await import("../gradients.mjs"));
   });
   afterEach(() => {
     vi.resetModules();
   });
   test("newTimeInstance successfully creates a new Date when temporal isn't supported", () => {
-    const timeInstance = window.getNewTimeInstance("13:45");
+    const timeInstance = newTimeInstance("13:45");
     expect(timeInstance instanceof Date).toBe(true);
     expect(timeInstance.getHours()).toEqual(13);
     expect(timeInstance.getMinutes()).toEqual(45);

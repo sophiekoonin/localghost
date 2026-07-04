@@ -1,4 +1,4 @@
-import { setColoursForTime, manualStageChange, setStage } from "./gradients.mjs";
+import { setColoursForTime, setStage } from "./gradients.mjs";
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 function pictureEl(name, alt) {
@@ -371,3 +371,8 @@ function cleanupGarden() {
   const bfly = document.getElementById("butterfly");
   if (bfly) bfly.remove();
 }
+
+document.documentElement.classList.remove("no-js");
+const search = new URLSearchParams(window.location.search);
+theme = search.get("theme") || localStorage.getItem("user-theme") || "city";
+changeTheme(theme);
