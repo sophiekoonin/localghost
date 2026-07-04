@@ -190,7 +190,7 @@ console.log(timeUntilNextStage.toString()) // PT1H15M
 
 ```
 
-`Duration`s are stringified (and specified) using the [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601#Durations), so "PT2H15M" stands for "period, time, 1 hour, 15 minutes". If the duration had any date information in it, it'd appear before the `T`. 
+`Duration`s are stringified (and specified) using the [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601#Durations), so "PT1H15M" means "period, time separator, 1 hour, 15 minutes".Time information appears after the `T`; if the duration had any date information in it, it'd appear before the `T`. 
 
 We set `timeUntilNextStage` in the switch statement where we're deciding what stage we're in, for example: 
 
