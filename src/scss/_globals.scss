@@ -35,7 +35,7 @@ main {
   @container (width < 800px) {
     padding-inline: var(--space-s-m);
   }
-  @container (width > 800px > 1050px) {
+  @container (800px < width < 1050px) {
     grid-template-columns: 20cqi max-content;
   }
 
