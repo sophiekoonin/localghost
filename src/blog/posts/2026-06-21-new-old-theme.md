@@ -102,7 +102,7 @@ CSS custom properties are easy to set via JS - you can use `root.style.setProper
   );
 ```
 
-When the page loads, I'm running a function that gets the user time and compares it to each of these start times to see where it fits. I had to stick it in an inline script, for my sins, as I needed to make sure it ran before the rest of the page rendered - otherwise you end up with flashes of unstyled content between page loads.
+When the page loads, I'm running a function that gets the user time and compares it to each of these start times to see where it fits. I had to make my JS render-blocking, for my sins, as I needed to make sure it ran before the rest of the page rendered - otherwise you end up with flashes of unstyled content between page loads. Thankfully it still only takes a few ms to execute, and the page looks good if you have JS disabled.
 
 Unlike `Date`, we don't have to do any gymnastics to compare Temporal instances: there's literally a `compare` function on each type of instance. Just like with other JS comparison functions, it returns `1` if the first instance is greater than the second, `0` if the two instances are the same, and `-1` if the first instance is less than the second. 
 
@@ -236,7 +236,7 @@ const sunrise = Temporal.PlainTime.from("06:30")
 const d = now.until(sunrise) // Temporal.Duration -PT15H30M
 ```
 
-This causes problems at the point where I calculate the difference, as it'll come out as a large number and completely throw off the calculations. I got around this by getting the absolute value of the duration with `.abs()`, forcing the diff to always be negative. What was e.g.`-PT15H30M` will now be `PT15H30M`, and subtracting that from a `transitionDuration` of 90 mins will always yield a negative number.
+This causes problems at the point where I calculate the diff, as it'll come out as a large number and completely throw off the calculations. I got around this by getting the absolute value of the duration with `.abs()`, so `timeUntilNextStage` will always be positive, even if it's before midnight: e.g. what was`-PT15H30M` will now be `PT15H30M`. Calculating the diff by subtracting that from a `transitionDuration` of 90 mins will always yield a negative number.
 
 ```js
  case compare(timeNow, stages.sunrise.start) < 0 || compare(timeNow, stages.night.start) >= 0: {
@@ -250,7 +250,7 @@ Then, we only calculate the percentage if `diff` is greater than 0:
 ```js
   let transitionProgressPercent = 0;
   if (diffInSeconds > 0) {
-    transitionProgressPercent = Math.round((diffInSeconds / entireTransitionDurationInSeconds) * 100).toFixed();
+    transitionProgressPercent = Math.round((diffInSeconds / entireTransitionDurationInSeconds) * 100);
   }
 ```
 
@@ -260,7 +260,7 @@ This works for the daytime stage too: if it's more than 90 mins before sunset, i
 
 ### Let's mix!
 
-Now we can use that percentage value (which will always be an integer) in the `color-mix` function to dictate how much of the next colour we should interpolate.
+Now we can use that percentage value (which will always be a whole number) in the `color-mix` function to dictate how much of the next colour we should interpolate.
 
 ```css
 color-mix(in oklch, ${color1} ${transitionProgressPercent}%, ${color2})

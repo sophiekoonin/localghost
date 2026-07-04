@@ -60,6 +60,9 @@ function changeTheme(newTheme) {
       case "garden":
         cleanupGarden();
         break;
+      case "city":
+        setColoursForTime();
+        break;
       default:
         break;
     }

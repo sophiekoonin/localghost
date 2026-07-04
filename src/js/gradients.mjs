@@ -113,7 +113,7 @@ export function setColoursForTime(time) {
   let transitionProgressPercent = 0;
   if (diff > 0) {
     const timeBlockDurationSecs = supportsTemporal ? entireTransitionDuration.total({ unit: "seconds" }) : entireTransitionDuration;
-    transitionProgressPercent = Math.round((diff / timeBlockDurationSecs) * 100).toFixed();
+    transitionProgressPercent = Math.round((diff / timeBlockDurationSecs) * 100);
   }
 
   setProperties(nextStageName, transitionProgressPercent);
