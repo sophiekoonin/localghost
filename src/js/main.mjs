@@ -371,5 +371,3 @@ function cleanupGarden() {
   const bfly = document.getElementById("butterfly");
   if (bfly) bfly.remove();
 }
-
-console.log("hi");

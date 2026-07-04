@@ -71,9 +71,6 @@
       text-align: left;
     }
   }
-  .content {
-    max-inline-size: var(--max-inline-size);
-  }
 
   footer .footer-content {
     @extend .flow;

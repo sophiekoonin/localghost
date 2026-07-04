@@ -14,6 +14,8 @@ If you're reading this between the hours of 9pm - 5am, you're probably wondering
 <img alt="A screenshot of the sunrise version of this layout, with pixel art skyscrapers at the bottom. The background is a blue to pink to light orange gradient" src="/img/blog/new-city-theme/sunrise-screenshot.png"><img alt="A screenshot of the daytime version of this layout, with pixel art skyscrapers at the bottom. The background is a purple to pink gradient" src="/img/blog/new-city-theme/day-screenshot.png"><img alt="A screenshot of the sunset version of this layout, with pixel art skyscrapers at the bottom. The background is a purple to pink to orange gradient" src="/img/blog/new-city-theme/sunset-screenshot.png"><img alt="A screenshot of the nighttime version of this layout, with pixel art skyscrapers at the bottom. There are pixel art stars in the header and the theme is now dark mode. The background is a dark blue to light blue to purple gradient" src="/img/blog/new-city-theme/night-screenshot.png">
 </div>
 
+You can select the time of day using the picker in the top right, after the theme switcher. Note that your selection won't be persisted between pages (unlike theme choice) as I wanted to make sure it didn't get stuck if you come back at a later date. 
+
 I was going to just turn the layout into a pastel lo-fi-aesthetic thing, but then I realised that a) I needed *some* kind of dark mode and b) I'd miss the stars! So I thought... why not both? And why stop at just night and day? ([Alistair Shepherd](https://alistairshepherd.uk/) did something similar with his beautiful Firewatch-inspired website.)
 
 Then I remembered that the Temporal API was available experimentally in Chrome and Firefox, and I'd wanted an excuse to try it out.

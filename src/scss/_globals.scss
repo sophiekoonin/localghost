@@ -2,7 +2,7 @@
 
 html,
 body {
-  overscroll-behavior-y: none;
+  overscroll-behavior: none;
   min-height: 100vh;
 }
 body {
@@ -33,10 +33,7 @@ main {
   flex: 1;
 
   @container (width < 800px) {
-    padding-inline: var(--space-s-m);
-  }
-  @container (800px < width < 1050px) {
-    grid-template-columns: 20cqi max-content;
+    padding-inline: var(--space-xs-s);
   }
 
   @container (width > 1050px) {
