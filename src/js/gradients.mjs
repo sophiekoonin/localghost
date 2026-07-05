@@ -72,7 +72,15 @@ export function durationBetween(time1, time2) {
 }
 
 export function setColoursForTime(specificTime) {
-  const timeNow = specificTime ? newTimeInstance(specificTime) : getUserTime();
+  let timeNow;
+  if (typeof specificTime === "string") {
+    timeNow = newTimeInstance(specificTime);
+  } else if (specificTime != null) {
+    timeNow = specificTime;
+  } else {
+    timeNow = getUserTime();
+  }
+
   switch (true) {
     case compare(timeNow, stages.sunrise.start) < 0 || compare(timeNow, stages.night.start) >= 0: {
       currentStageName = "night";
