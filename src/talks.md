@@ -8,7 +8,6 @@ I love public speaking, so if you’d like me to speak at your meetup or confere
 Some of the things I like to talk about include:
 
 * The independent web and creativity
-* Technical debt and migrations
 * Challenges developers face and how to overcome them
 * Building accessible and inclusive web applications
 * How to write great documentation, clear product copy, and teach technical concepts
@@ -19,6 +18,9 @@ Some of the things I like to talk about include:
 <figcaption>On stage at ffconf 2022. Photo: <a href="https://twitter.com/rem/status/1591044568249606144">Remy Sharp</a></figcaption>
 </figure>
 
+## Upcoming events
+- [NordicJS](https://nordicjs.com) October 2025
+  
 ## Talk history
 
 ### Conferences
@@ -26,7 +28,6 @@ Some of the events I've spoken at in the past include:
 - [JSHeroes](https://jsheroes.io) 
 - [Beyond Tellerrand](https://beyondtellerrand.com)
 - [Smashing Conf](https://smashingconf.com) Freiburg
-- [NordicJS](https://nordicjs.com)
 - [Pixel Pioneers](https://pixelpioneers.co/) 
 - [All Day Hey!](https://heypresents.com) 
 - [QCon](https://qconlondon.com)

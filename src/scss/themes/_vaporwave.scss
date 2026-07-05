@@ -35,21 +35,21 @@
 [data-theme="vaporwave"] {
   --body-font-family: "Win95 sans", monospace;
   --header-font-family: "VCR OSD Mono", monospace;
-  --heading-font-family: var(--body-font-family);
   --content-bg: hsl(250, 100%, 89%);
   --accent-color: hsl(306, 100%, 50%);
   --background: fixed linear-gradient(hsl(171, 100%, 50%), hsl(263, 81%, 77%), hsl(306, 100%, 50%));
   --link-color: hsla(250, 100%, 20%, 1);
   --link-hover-color: white;
   --bullet: url("/img/themes/cd-bullet.png");
-  --code-bg: hsl(172, 100%, 67%);
+  --tweet-bg: hsl(177, 93%, 77%);
+  --inline-code-bg: hsl(172, 100%, 67%);
+  --list-heading-color: white;
   --photo-bg: linear-gradient(-45deg, hsl(172, 100%, 44%), hsl(306, 100%, 50%));
   --header-color: #fff;
-  --button-selected-bg: oklch(0.89 0.06 292.88 / 1);
-
   cursor: url("/img/themes/cursor-w95.png"), default;
 
-  .skyscraper {
+  .skyscraper,
+  .palmtree {
     display: none;
   }
 
@@ -65,25 +65,7 @@
   }
 
   .theme-switcher {
-    @extend .windows;
-    background-color: var(--content-bg);
     font-size: var(--step--2);
-    padding: 2px;
-    gap: 6px;
-    label {
-      padding: 2px;
-      @extend .windows;
-      &:has(input:checked) {
-        border-right: 2px solid white;
-        border-bottom: 2px solid white;
-        border-left: 2px solid hsl(250, 100%, 20%);
-        border-top: 2px solid hsl(250, 100%, 20%);
-        background-color: var(--button-selected-bg);
-        img {
-          border: 0;
-        }
-      }
-    }
   }
 
   .list-heading {
@@ -114,13 +96,10 @@
   .header {
     text-transform: uppercase;
     font-size: var(--step-4);
+    margin-block: var(--space-m);
     a {
       letter-spacing: clamp(0.31rem, calc(0.14rem + 0.85vw), 1ch);
     }
-  }
-
-  main {
-    display: block;
   }
 
   .content {
@@ -134,7 +113,6 @@
     }
 
     .page-heading {
-      margin-bottom: 0;
       text-transform: uppercase;
       background: fixed linear-gradient(90deg, hsl(172, 100%, 44.3%), hsl(259.1, 100%, 54.3%));
       border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
@@ -166,8 +144,7 @@
       }
     }
 
-    .content-inner,
-    .p-author {
+    .content-inner {
       padding: var(--space-s);
       margin-inline: auto;
       --heading-font-family: "VCR OSD Mono", monospace;
@@ -178,62 +155,32 @@
     }
   }
 
+  .tweet-card {
+    border-radius: 0;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid hsl(250, 100%, 20%);
+    border-bottom: 2px solid hsl(250, 100%, 20%);
+  }
+
   .post-subtitle {
     text-transform: uppercase;
   }
 
   .sidebar .main-nav {
-    @extend .windows;
-    background-color: var(--content-bg);
-    padding: 2px;
-    margin-block-end: var(--space-s);
-    li {
-      display: inline-flex;
-    }
-    ul {
-      flex-wrap: wrap;
-    }
-
+    margin-block-start: 1px;
     .nav-link {
-      display: flex;
-      align-items: center;
-      gap: 12px;
       @extend .link-button;
+
       &[data-state="active"],
       &[aria-expanded="true"] {
-        background-color: var(--button-selected-bg);
+        text-decoration: underline;
         border-right: 2px solid #fff;
         border-bottom: 2px solid #fff;
         border-left: 2px solid hsl(250, 100%, 20%);
         border-top: 2px solid hsl(250, 100%, 20%);
       }
-
-      &::before {
-        content: " ";
-        width: 24px;
-        height: 24px;
-        background-position: center;
-        background-size: contain;
-        display: inline-block;
-      }
-
-      &[data-title="About"]::before {
-        background-image: url("/img/themes/city/my-computer.png");
-      }
-      &[data-title="Talks"]::before {
-        background-image: url("/img/themes/city/speaker.png");
-      }
-      &[data-title="Links"]::before {
-        background-image: url("/img/themes/city/internet.png");
-      }
-      &[data-title="Blog"]::before {
-        background-image: url("/img/themes/city/notepad.png");
-      }
-      &[data-title="etc"]::before {
-        background-image: url("/img/themes/city/folder.png");
-      }
     }
-
     .submenu-list {
       font-size: var(--step--2);
       z-index: 2;

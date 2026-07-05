@@ -1,14 +1,18 @@
-<button popovertarget="theme-switcher"><span class="visually-hidden">Choose a theme</span><img eleventy:ignore alt="" src="/img/themes/dropper.png" /></button>
-<fieldset popover class="theme-switcher" id="theme-switcher">
-  <legend class="visually-hidden">Theme options</legend>
-  <label for="city"><input class="theme-option" name="theme" type="radio" id="city" value="city"/>
-    <img eleventy:ignore src="/img/themes/city-icon.png" title="lofi city" alt=""/>
-    <span class="visually-hidden">lofi city</span>
-  </label>
-  <label for="garden" title="garden">
+<fieldset class="theme-switcher" id="theme-switcher">
+  <legend class="visually-hidden">choose a theme</legend>
+    <label for="garden" title="garden">
     <input class="theme-option" name="theme" type="radio" id="garden" value="garden">
       <img eleventy:ignore src="/img/themes/garden-icon.png" alt=""/>
       <span class="visually-hidden">garden</span>
+  </label>
+  <label for="city"><input class="theme-option" name="theme" type="radio" id="city" value="city"/>
+    <img eleventy:ignore src="/img/themes/city-icon.png" title="midnight city" alt=""/>
+    <span class="visually-hidden">midnight city</span>
+  </label>
+  <label for="sunset">
+    <input class="theme-option" name="theme" type="radio" id="sunset" value="sunset">
+    <img eleventy:ignore src="/img/themes/sunset-icon.png" alt="" title="miami sunset"/>
+    <span class="visually-hidden">miami sunset</span>
   </label>
   <label for="minimalist">
     <span class="visually-hidden">minimalist</span>
@@ -31,27 +35,3 @@
     <span class="visually-hidden">1999</span>
   </label>
 </fieldset>
-<button popovertarget="time-selector"><span class="visually-hidden">Change time of day</span><img eleventy:ignore src="/img/themes/city/sun.png" alt="" title="Change time of day"></button>
-<fieldset class="time-selector" id="time-selector" popover>
-    <legend class="visually-hidden">Time options</legend>
-  <label>
-    <input class="theme-option" name="time" type="radio" id="now" value="now"/>
-    <span>Now</span>
-    </label>
-  <label>
-    <input class="theme-option" name="time" type="radio" id="sunrise" value="sunrise"/>
-    <span>Sunrise</span>
-    </label>
-  <label>
-    <input class="theme-option" name="time" type="radio" id="day" value="day"/>
-    <span>Daytime</span>
-    </label>
-  <label>
-    <input class="theme-option" name="time" type="radio" id="sunset" value="sunset"/>
-    <span>Sunset</span>
-    </label>
-  <label>
-    <input class="theme-option" name="time" type="radio" id="night" value="night"/>
-    <span>Night</span>
-    </label>
-    </fieldset>

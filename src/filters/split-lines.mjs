@@ -1,13 +1,9 @@
 // https://bnijenhuis.nl/notes/automatically-generate-open-graph-images-in-eleventy/
 export default function (input) {
-  if (input.startsWith("A good") && input.includes(":")) {
-    const lines = input.split(":");
-    return [`${lines[0]}:`, ...lines.slice(1)];
-  }
-  let lines = splitLines(input, 35);
+  let lines = splitLines(input, 25);
 
   if (lines.length >= 4) {
-    lines = splitLines(input, 40);
+    lines = splitLines(input, 30);
   }
   return lines;
 }

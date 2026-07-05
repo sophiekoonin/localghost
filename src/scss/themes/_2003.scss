@@ -6,11 +6,11 @@
   --body-font-family: "Arial Narrow", "Verdana", sans-serif;
   --content-bg: hsl(271, 31%, 33%);
   --max-inline-size: 100ch;
-  --heading-font-family: var(--body-font-family);
   --bullet: url("/img/themes/heart-bullet.svg");
   --accent-color: hsl(271, 50%, 23%);
   --link-hover-color: hsl(273, 49%, 79%);
   --photo-bg: hsl(271, 31%, 23%);
+  --list-heading-color: white;
   --bullet: "x";
   body {
     background-color: hsl(271, 31%, 23%);
@@ -20,7 +20,7 @@
 
   header {
     justify-content: flex-start;
-    padding-block: var(--space-m);
+    padding-block: var(--space-xl);
     .header {
       text-transform: lowercase;
       font-size: var(--step-6);
@@ -59,19 +59,15 @@
   }
 
   .sidebar {
+    padding: var(--space-xs-s);
     background: var(--content-bg);
     grid-column: 1 / span 2;
     grid-row: 1 / span 1;
-    overflow-y: scroll;
-    display: block;
+    overflow: hidden;
+
     @container main (min-width: 760px) {
-      padding: var(--space-xs-s);
       grid-column: 1 / span 1;
       grid-row: 1 / span 2;
-    }
-
-    .main-nav {
-      padding: 0;
     }
 
     .main-nav-list {
@@ -166,9 +162,6 @@
     margin-inline: 0;
   }
 
-  .p-author {
-    font-size: var(--step--2);
-  }
   .posts-list {
     margin: 0;
 
@@ -180,7 +173,7 @@
     padding: 0;
   }
 
-  .content-wrapper,
+  .content,
   .list-wrapper,
   .everything-else {
     height: 100%;

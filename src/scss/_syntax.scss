@@ -5,11 +5,12 @@
  * Ported for PrismJS by Albert Vallverdu [@byverdu]
  */
 
-code[class*="language-"],
-pre[class*="language-"] {
-  color: light-dark(#282a36, #f8f8f2);
+code[class*='language-'],
+pre[class*='language-'] {
+  color: #f8f8f2;
   background: none;
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -26,20 +27,20 @@ pre[class*="language-"] {
 }
 
 /* Code blocks */
-pre[class*="language-"] {
+pre[class*='language-'] {
   padding: 1em;
   margin: 0.5em 0;
   overflow: auto;
   border-radius: 0.3em;
 }
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  background: var(--code-bg);
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  background: #282a36;
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
+:not(pre) > code[class*='language-'] {
   padding: 0.1em;
   border-radius: 0.3em;
   white-space: normal;
@@ -53,7 +54,7 @@ pre[class*="language-"] {
 }
 
 .token.punctuation {
-  color: light-dark(#1931b5, #f8f8f2);
+  color: #f8f8f2;
 }
 
 .namespace {
@@ -65,12 +66,12 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: light-dark(#7b0146, #ff79c6);
+  color: #ff79c6;
 }
 
 .token.boolean,
 .token.number {
-  color: light-dark(#6a0bef, #bd93f9);
+  color: #bd93f9;
 }
 
 .token.selector,
@@ -79,7 +80,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-  color: light-dark(#4d0886, #50fa7b);
+  color: #50fa7b;
 }
 
 .token.operator,
@@ -88,23 +89,23 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string,
 .token.variable {
-  color: light-dark(#6c0da8, #f8f8f2);
+  color: #f8f8f2;
 }
 
 .token.atrule,
 .token.attr-value,
 .token.function,
 .token.class-name {
-  color: light-dark(#bb06a3, #f1fa8c);
+  color: #f1fa8c;
 }
 
 .token.keyword {
-  color: light-dark(#038aa8, #8be9fd);
+  color: #8be9fd;
 }
 
 .token.regex,
 .token.important {
-  color: light-dark(#ae5d06, #ffb86c);
+  color: #ffb86c;
 }
 
 .token.important,
