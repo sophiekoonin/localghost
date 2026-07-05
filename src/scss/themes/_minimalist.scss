@@ -1,54 +1,67 @@
 @use "../utils";
 
 [data-theme="minimalist"] {
+  color-scheme: light dark;
+  --white: oklch(97.476% 0.0065 106.786);
+  --black: oklch(25.615% 0.00003 271.152);
+  --background: light-dark(var(--white), var(--black));
+  --body-color: light-dark(var(--black), var(--white));
   --content-bg: var(--background);
-  --header-font-family: "Krungthep", var(--body-font-family);
-  --header-color: hsl(0, 0%, 20%);
-  --accent-color: hsl(0, 0%, 20%);
+  --header-font-family: "DM Serif Text", var(--body-font-family);
+  --header-color: light-dark(var(--black), var(--white));
+  --accent-color: light-dark(oklch(0.61 0.17 299.8 / 1), oklch(92.68% 0.05627 216.115));
   --bullet: disc;
 
-  .skyscraper,
-  .palmtree {
+  .skyscraper {
     display: none;
   }
-
   a,
   button.nav-link {
-    text-decoration: underline;
     font-size: inherit;
     &,
     &:visited {
       color: var(--body-color);
     }
     &:hover {
-      color: hsl(264, 59%, 62%);
+      text-decoration-style: dotted;
+      color: var(--accent-color);
     }
   }
 
   header {
-    padding-block-end: 0;
+    justify-content: flex-start;
+    .header {
+      font-size: var(--step-5);
+    }
+    @container (width < 600px) {
+      padding: 0;
+      justify-content: center;
+      padding-top: var(--space-l);
+    }
   }
-  .header {
-    margin-block-start: var(--space-l);
-    margin-block-end: var(--space-ms-);
-    font-size: var(--step-5);
-    a {
-      text-decoration: none;
+
+  [data-page="index"] {
+    header h1 {
+      font-size: var(--step-8);
     }
   }
 
   main {
-    margin-block-start: var(--space-xs);
-
+    @container (width > 600px) {
+      margin-block-start: var(--space-s);
+    }
     padding: 0;
   }
 
   .sidebar {
-    margin-block-end: var(--space-xs);
     a {
+      font-family: var(--heading-font-family);
+      text-decoration-thickness: from-font;
       span {
-        display: block;
         margin-right: auto;
+      }
+      &[data-state="active"] {
+        color: light-dark(oklch(67.392% 0.19499 303.833), oklch(76.189% 0.11596 317.459));
       }
     }
     .submenu-list {
@@ -56,9 +69,6 @@
       background: var(--background);
       text-align: left;
     }
-  }
-  .content {
-    max-inline-size: var(--max-inline-size);
   }
 
   footer .footer-content {

@@ -27,7 +27,7 @@ const globalData = {
     const jsDir = path.join(__dirname, "..", "js");
     const jsFile = fs.readFileSync(path.join(jsDir, "main.mjs"), "utf-8");
     const hash = md5(jsFile).slice(0, 8);
-    return `/js/main.${hash}.mjs`;
+    return `/js/main.mjs?md5=${hash}`;
   },
 };
 

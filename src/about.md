@@ -8,13 +8,13 @@ I started building websites on Geocities at the age of 10, graduating over the y
 
 ![](/static/img/sophie-transparent.png){.about-photo eleventy:formats="webp,png"}
   
-By day I do computer things for profit, but by night I make music with [Mixtape](https://www.mixtapechoir.co.uk). I also enjoy gardening, baking, dogs, crafting, [mechanical keyboards](/keyboards), surreal memes and [video games](/games). 
+By day I do computer things for profit, but by night I make music with [Mixtape](https://www.mixtapechoir.co.uk). I also enjoy gardening, baking, dogs, crafting, [mechanical keyboards](/keyboards) and [video games](/games). 
 
-Find me on [Mastodon](https://social.lol/@sophie), or send me an email: [sophie@localghost.dev](mailto:sophie@localghost.dev).
+I don't check social media much, so if you want to get in touch send me an email: [sophie@localghost.dev](mailto:sophie@localghost.dev).
 
 ## About this site
 
-As well as being somewhere I occasionally write things, this site is a throwback to the time when web design was a bit more maximalist than it is now, and websites were collections of weird little code snippets you picked up on your internet travels. Though hopefully it's a little more accessible and performant than sites were back then.
+As well as being somewhere I occasionally write things, this site is a throwback to the time when web design was a bit more maximalist than it is now, and websites were collections of weird little code snippets you picked up on your internet travels. Though hopefully it's a little more accessible than sites were back then.
 
 It's built using the static site generator [Eleventy](https://11ty.dev).
 
@@ -34,3 +34,6 @@ If you encounter any accessibility/usability issues while on the site, or any im
 * Clouds: [justajoke](https://justajoke.itch.io/clouds-set-icons)
 * Bird: [Pop Shop Packs](https://pop-shop-packs.itch.io/garden-birds-pixel-character-asset-pack)
 * Font: [Pixel Art Serif](https://reffpixels.itch.io/seriffont)
+
+#### Vaporwave & theme picker
+* Icons: [Magical Designer Girl by Mayke Arth](https://mayke-arth.itch.io/cute-desktop-icons-32x32)

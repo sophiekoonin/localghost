@@ -1,9 +1,9 @@
 <aside class="sidebar">
-  <nav class="main-nav" aria-label="Main navigation">
+  <nav class="main-nav" aria-label="Main">
     <ul class="main-nav-list">
       {% for item in nav.pages %}
         <li class="main-nav-list-item">
-          <a class="nav-link" href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>
+          <a class="nav-link" href="{{ item.url }}" data-title="{{ item.label }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>
             <span>{{ item.label }}</span>
           </a>
         </li>

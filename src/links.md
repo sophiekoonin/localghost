@@ -1,25 +1,36 @@
 ---
-title: "Links & blogroll"
+title: "Links"
 layout: 'page.njk'
 ---
 
-## Lovely things
+Jump to:
+[Projects](#projects)
+[My favourite things on the web](#my-favourite-things-on-the-web)
+[Useful things](#useful-things)
+[Personal sites & blogs](#personal-sites--blogs)
 
-* [The Yesterweb](https://yesterweb.org) - A monument to everything I love(d) about the internet, and a movement to reclaim that lost creativity and independence. I've tried to encompass some of that spirit in this website. They publish a zine which is a delight to read.
-* [The Useless Web](https://theuselessweb.com) - remember when the internet was pointless?
+## Projects
+
+Some things I've built.
+
+* [Emojinator](https://emojinator.localghost.dev) - drag & drop to create ridiculous emoji. The only limit is your imagination (and the assets I've been able to upload)
+* [Virtual Piano](https://virtualpiano.vercel.app) - MIDI-enabled Web Audio API-powered virtual synthesizer that plays chords and scales
+* [Tasting menu generator](https://tasting-menu.neocities.org) - Generate a 5-course tasting menu (ridiculous or not, you decide).
+
+## My favourite things on the web
+
+{% for l in delightful %}
+* [{{l.title}}]({{l.link}}) - {{ l.description}}
+{% endfor %}
 
 ## Useful things
-* [omg.lol](https://home.omg.lol/referred-by/sophie) - a cute set of tools including a homepage (yourname.omg.lol), email (yourname@omg.lol) forwarding, pastebin (paste.lol), url shortener (url.lol) and Mastodon instance (social.lol).
-* [Neocities](https://neocities.org/) - a free web host supporting creative personal websites
-* [CSS Utopia](https://utopia.fyi/) - generate type and spacing scales without breakpoints
-* [Modern CSS](https://moderncss.dev/) - modern CSS solutions for old problems
-* [Every Layout](https://every-layout.dev) - loads of excellent layout primitives, and not a breakpoint in sight.
-* [Tiny Helpers](https://tiny-helpers.dev/) - little tools for web developers
-* [Compute Cuter](https://computecuter.com) - how to make your computer as cute as can be!
-
-## Blogroll
-<ul>
-{% for item in blogroll %}
-<li><a href="{{ item.url }}">{{item.name}}</a></li>
+{% for l in useful %}
+* [{{l.title}}]({{l.link}}) - {{ l.description}}
 {% endfor %}
-</ul>
+
+
+## Personal sites & blogs
+
+{% for l in blogroll %}
+* [{{l.title}}]({{l.link}})
+{% endfor %}

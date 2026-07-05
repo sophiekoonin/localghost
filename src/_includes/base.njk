@@ -1,19 +1,17 @@
 {%- from "macros/svg.njk" import svg -%}
 <!DOCTYPE html>
-<html lang="en" class="no-js" data-theme="garden">
+<html lang="en" data-theme="city" class="no-js">
   {% set cssFilename = global.cssFile() %}
-  {% set jsFilename = global.jsFile() %}
+  {% set jsFile = global.jsFile() %}
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      {% include "partials/meta.njk" %}
+    {% include "partials/meta.njk" %}
     <title>
       {% if not isHome %}
         {{ title }} -
       {% endif %}
       localghost</title>
-    <script src={{ jsFilename }}></script>
+    <script src="/init.js"></script>
+      <script rel="subresource" src={{ jsFile }} type="module"></script>
     {% if extraCSS %}
       {% for file in extraCSS %}
         <link rel="stylesheet" type="text/css" href="/css/{{ file }}">
@@ -21,18 +19,19 @@
     {% endif %}
     <link rel="preload" as="style" href={{ cssFilename }}>
     <link rel="stylesheet" type="text/css" href={{ cssFilename }}>
-<script data-goatcounter="https://localghost.goatcounter.com/count"
-        async defer src="//gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://localghost.goatcounter.com/count" async defer src="//gc.zgo.at/count.js"></script>
   </head>
-  <body>
+  <body {% if isHome %} data-page="index" {% endif %}>
     {% include "partials/svg/defs.html" %}
     <div class="page-wrapper">
       {% include "partials/header.njk" %}
       <main>
-      {% include "partials/nav.njk" %}
-        {% block content %}
-          {{ content | safe }}
-        {% endblock %}
+        {% include "partials/nav.njk" %}
+        <div class="content-wrapper">
+          {% block content %}
+            {{ content | safe }}
+          {% endblock %}
+        </div>
       </main>
       {% include "partials/footer.njk" %}
     </div>
