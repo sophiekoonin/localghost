@@ -22,7 +22,7 @@ jobs:
         env:
           WEBMENTION_IO_TOKEN: ${{ secrets.WEBMENTION_IO_TOKEN }}
           RAINDROP_BLOGROLL_COLLECTION_ID: ${{ secrets.RAINDROP_BLOGROLL_COLLECTION_ID }}
-          RAINDROP_COLLECTION_ID: ${{ secrets.RAINDROP_COLLECTION_ID }}
+          RAINDROP_TOKEN: ${{ secrets.RAINDROP_TOKEN }}
       - uses: bcomnes/deploy-to-neocities@v3
         with:
           api_key: ${{ secrets.NEOCITIES_TOKEN }}
