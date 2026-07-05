@@ -15,11 +15,8 @@ jobs:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
         with:
-          node-version: "24"
+          node-version: "26"
           cache: "npm"
-      - run: |
-          mv PixelSerif_16px.ttf /usr/share/fonts/
-          fc-cache -fv
       - run: npm install
       - run: npm run build
         env:
