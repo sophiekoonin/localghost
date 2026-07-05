@@ -1,13 +1,26 @@
-const { format, subDays, addHours } = require("date-fns");
-const fs = require("fs");
+import { format, subDays, addHours } from "date-fns";
+import fs from "fs";
 
 const collectionId = process.env.RAINDROP_COLLECTION_ID;
 const token = process.env.RAINDROP_TOKEN;
-const today = new Date().setHours(9).setMinutes(59).setSeconds(59);
-const lastSunday = subDays(today, 7).setHours(10).setMinutes(0).setSeconds(0);
-const formattedLastSunday = format(lastSunday, "yyyy-MM-dd");
-const formattedToday = format(today, "yyyy-MM-dd");
+const today = Temporal.Now.plainDateTimeISO().with({
+  hour: 9,
+  minutes: 59,
+  seconds: 59,
+  milliseconds: 59,
+});
 
+const lastSunday = today.subtract("P7D").with({
+  hour: 10,
+  minutes: 0,
+  seconds: 0,
+  milliseconds: 0,
+});
+
+const formattedLastSunday = lastSunday.toPlainDate().toString();
+const formattedToday = today.toPlainDate().toString();
+
+console.log(formattedLastSunday, formattedToday);
 async function fetchLinks() {
   // Get content bookmarked between last Sunday and this Saturday inclusive
   const search = new URLSearchParams({

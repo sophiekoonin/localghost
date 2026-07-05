@@ -45,7 +45,7 @@
     "build": "NODE_ENV=production eleventy",
     "test": "vitest",
     "full-build": "set CACHE_BUST=true && npm run build",
-    "generate-links": "node scripts/compile-links.js",
+    "generate-links": "node scripts/compile-links.mjs",
     "postbuild": "scripts/send-webmentions",
     "send-webmentions": "webmention _site/feed.xml --limit 1 --send",
     "clear-og": "rm src/static/og-images/*"
