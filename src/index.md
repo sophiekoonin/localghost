@@ -3,7 +3,7 @@ title: 'localghost'
 layout: 'index.njk'
 ---
 
-I [build fun things](/projects) out of HTML, CSS and JavaScript, write [blog posts](/blog) about tech, mental health and things I love, and [give conference talks](/talks) on things I'm passionate about. 
+I write [blog posts](/blog) about tech, mental health and things I love, [give conference talks](/talks) on things I'm passionate about, and occasionally [build fun things using HTML, JS and CSS](/links#projects). 
 
 While you're here, see my small but mighty [mechanical keyboard collection](/keyboards) and check out my [all-time favourite video games](/games)!
 

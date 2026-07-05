@@ -421,10 +421,28 @@ Then I call it like this:
 
 I wrote a whole suite of unit tests (for a PERSONAL project! I know!) to make sure behaviour was exactly the same, and it seems to be working nicely. I'm hoping I can remove the polyfills in time, but given that the web is beautifully backwards-compatible, it's not the end of the world if it stays around longer than it needs to.
 
+## Fixing a weird background glitch in Safari
+![A screenshot of the bottom half of my website, with a big white space in the background where the background should be. The background gradient cuts off a third of the way down the screen.](/img/blog/safari-visual-glitch.png)
+SAFARI WHY.
+
+I started experiencing a very odd glitch in Safari for MacOS where the background gradient would only show up in the initial viewport - when you scrolled, it went white or black depending on whether it was light or dark mode. I narrowed it down to the `background-attachment: fixed` property of the body. 
+
+
+<video controls loading="lazy"><source src="/img/background-glitch-safari-demo.mp4" type="video/mp4" /></video>
+
+After a lot of disabling random CSS and diffing against the `main` branch, which doesn't have that problem, I found out that it really doesn't play nicely with `container-type: inline-size`. In the course of redesigning the site, I'd added a new container context to the `<body>` element and in the process broken the gradient rendering for Safari, as something goes wrong when it tries to render the gradient background with a `fixed` attachment. Chrome, Firefox and iOS Safari were totally fine. 
+
+When I half-jokingly said I'd have to find out what the modern equivalent of `<!--[IF IE]>` was, David Bushell [pointed me to](https://social.lol/@db/116867834799255143) Eric Meyer's [post about accessible table headers](https://meyerweb.com/eric/thoughts/2026/05/28/accessible-i-think-split-cell-table-headers/#:~:text=@supports%20(font:%20-apple-system-body)), which in turn led me to [Browser Strangeness](https://browserstrangeness.github.io/css_hacks.html#safari). That did indeed have a `@supports` query that targeted Safari for MacOS:
+
+```css
+@supports (not (-webkit-text-size-adjust:none)) and (font: -apple-system-body) { .selector { property:value; } } }
+```
+
+I stuck a `position-attachment: initial` in there, and lo and behold, the problem went away. It means the background isn't quite how I wanted it to look in Safari, but I'll survive.
 
 ## This was surprisingly complex
 
-The individual moving parts of this project - getting the time and choosing colours, mixing the colours by percentages, animating the transitions - were not that complicated in isolation. Sure, they required me to learn things and look things up, but it was a fun thing to build. 
+The individual moving parts of this project - getting the time and choosing colours, mixing the colours by percentages, animating the transitions - were not that complicated in isolation. Sure, they required me to learn things and look things up, but it was a fun thing to build (until the point where Safari came into the picture). 
 
 The challenge came wiring it all together in a way that didn't cause flashes of unstyled content (the dreaded FOUC) or flashes of the wrong stage before we calculate the current time. This is a static site, so it's all client-side JS. Ideally I'd compute user's the current time on the server and serve the content with the correct colour values in the HTML, but my web host only supports static sites. 
 
