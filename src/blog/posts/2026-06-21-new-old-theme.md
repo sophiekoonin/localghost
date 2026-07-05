@@ -102,8 +102,6 @@ CSS custom properties are easy to set via JS - you can use `root.style.setProper
   );
 ```
 
-When the page loads, I'm running a function that gets the user time and compares it to each of these start times to see where it fits. I had to make my JS render-blocking, for my sins, as I needed to make sure it ran before the rest of the page rendered - otherwise you end up with flashes of unstyled content between page loads. Thankfully it still only takes a few ms to execute, and the page looks good if you have JS disabled (it shows the 'minimalist' theme).
-
 Unlike `Date`, we don't have to do any gymnastics to compare Temporal instances: there's literally a `compare` function on each type of instance. Just like with other JS comparison functions, it returns `1` if the first instance is greater than the second, `0` if the two instances are the same, and `-1` if the first instance is less than the second. 
 
 ```js
@@ -430,6 +428,6 @@ The individual moving parts of this project - getting the time and choosing colo
 
 The challenge came wiring it all together in a way that didn't cause flashes of unstyled content (the dreaded FOUC) or flashes of the wrong stage before we calculate the current time. This is a static site, so it's all client-side JS. Ideally I'd compute user's the current time on the server and serve the content with the correct colour values in the HTML, but my web host only supports static sites. 
 
-To get around that I had to add another separate `init.js` script which runs instantly - it's got a bit of a copy and paste job going on with some of the functions, but it does a very rudimentary check of the user's current time and sets the stage accordingly with no transitions, just so there's *some* styling. My JS is all modules, so is [deferred by default](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script#defer). I could've also done this in an inline script. I experimented with making all the js render-blocking with `blocking="render"`, but that felt a bit gross and also didn't fix the FOUC in Firefox. 
+To get around that I had to add another separate `init.js` script which runs instantly - it's got a bit of a copy and paste job going on with some of the functions, but it does a very rudimentary check of the user's current time and sets the stage accordingly with no transitions, just so there's *some* styling on initial load. My JS is all modules, so is [deferred by default](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script#defer). I experimented with making *all* the JS render-blocking with `blocking="render"`, but that felt a bit gross and also didn't fix the FOUC in Firefox. 
 
-But that's fine, y'know? It's my personal site and it doesn't need to be perfect. 
+But that's fine, y'know? It still loads in well under a second, and still looks good if you have JS disabled. It's my personal site and it doesn't need to be perfect. 
