@@ -1,22 +1,6 @@
 @use "../utils";
 @use "./shared";
 
-@property --bg-gradient-top {
-  syntax: "<color>";
-  inherits: true;
-  initial-value: #fff;
-}
-@property --bg-gradient-mid {
-  syntax: "<color>";
-  inherits: true;
-  initial-value: #fff;
-}
-@property --bg-gradient-bottom {
-  syntax: "<color>";
-  inherits: true;
-  initial-value: #fff;
-}
-
 [data-theme="city"] {
   // vars
   color-scheme: light dark;
@@ -37,13 +21,19 @@
   body {
     --background: fixed linear-gradient(var(--bg-gradient-top), var(--bg-gradient-mid) 80%);
 
-    transition-property: --bg-gradient-top, --bg-gradient-mid;
-    transition-duration: 0.5s;
+    // Don't want it to transition on first load - only when the user selects a new time.
+    &.with-transition {
+      transition-property: --bg-gradient-top, --bg-gradient-mid;
+      transition-duration: 0.5s;
+    }
   }
   footer {
     @include shared.grid-footer;
     background: linear-gradient(oklch(0 0 0 / 0) 40%, var(--bg-gradient-bottom));
-    transition: --bg-gradient-bottom 0.5s;
+
+    &:is(.with-transition footer) {
+      transition: --bg-gradient-bottom 0.5s;
+    }
   }
 
   header {
@@ -256,7 +246,7 @@
     }
 
     #star-2 {
-      grid-area: 9/4/10/5;
+      grid-area: 5/4/6/5;
     }
     #star-3 {
       grid-area: 4/8/5/9;
@@ -294,7 +284,7 @@
     #star-8 {
       grid-area: 6 / 2 / 7 / 3;
       @container wrapper (min-width: #{utils.$lg_breakpoint}) {
-        grid-area: 9 / 25 / 10 / 26;
+        grid-area: 8 / 25 / 9 / 26;
       }
     }
     #star-9 {
@@ -307,7 +297,7 @@
       grid-area: 7/20/8/21;
 
       @container wrapper (min-width: #{utils.$lg_breakpoint}) {
-        grid-area: 10/16/11/17;
+        grid-area: 6/16/7/17;
       }
     }
 
@@ -331,7 +321,7 @@
     #star-14 {
       grid-area: 2 / 15 / 3 / 16;
       @container wrapper (min-width: #{utils.$lg_breakpoint}) {
-        grid-area: 8/ 20 / 9 / 21;
+        grid-area: 7/ 20 / 8 / 21;
       }
     }
   }
