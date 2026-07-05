@@ -387,6 +387,7 @@ button[popovertarget="theme-switcher"] {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  font-size: var(--step--1);
 
   .tags {
     display: flex;

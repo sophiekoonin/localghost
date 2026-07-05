@@ -383,3 +383,21 @@ function cleanupGarden() {
 const search = new URLSearchParams(window.location.search);
 theme = search.get("theme") || localStorage.getItem("user-theme") || "city";
 changeTheme(theme);
+
+const interestingFacts = [
+  "amateur but enthusiastic gardener",
+  "dog botherer",
+  "baker of delicious treats",
+  "arranger of pop songs for choirs",
+  "occasional public speaker",
+  "inconsistent crafter",
+  "Stardew Valley-dweller",
+  "hoarder of recipes",
+  "maker of terrible jokes",
+];
+
+const interestingFactEl = document.getElementById("interesting-fact");
+if (interestingFactEl) {
+  const randomInterestingFact = interestingFacts[Math.floor(Math.random() * interestingFacts.length)];
+  interestingFactEl.textContent = randomInterestingFact;
+}

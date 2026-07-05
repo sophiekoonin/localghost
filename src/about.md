@@ -14,7 +14,7 @@ I don't check social media much, so if you want to get in touch send me an email
 
 ## About this site
 
-As well as being somewhere I occasionally write things, this site is a throwback to the time when web design was a bit more maximalist than it is now, and websites were collections of weird little code snippets you picked up on your internet travels. Though hopefully it's a little more accessible and performant than sites were back then.
+As well as being somewhere I occasionally write things, this site is a throwback to the time when web design was a bit more maximalist than it is now, and websites were collections of weird little code snippets you picked up on your internet travels. Though hopefully it's a little more accessible than sites were back then.
 
 It's built using the static site generator [Eleventy](https://11ty.dev).
 

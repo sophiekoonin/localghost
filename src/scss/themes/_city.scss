@@ -167,13 +167,6 @@
     }
   }
 
-  .list-heading,
-  .pagination {
-    a {
-      font-variation-settings: "wght" 500;
-      color: white;
-    }
-  }
   .everything-else {
     li,
     a {
@@ -195,6 +188,11 @@
     --bg-gradient-top: oklch(0.6933 0.1899 297.53);
     --bg-gradient-mid: oklch(75.504% 0.24612 357.26);
     --bg-gradient-bottom: oklch(88.591% 0.1422 62.595);
+    .footer,
+    .pagination {
+      --link-color: white;
+      --link-hover-color: oklch(56.763% 0.25056 330.007);
+    }
   }
   &[data-time="night"],
   &.no-js {
