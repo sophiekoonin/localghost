@@ -166,7 +166,8 @@
       }
     }
 
-    .content-inner {
+    .content-inner,
+    .p-author {
       padding: var(--space-s);
       margin-inline: auto;
       --heading-font-family: "VCR OSD Mono", monospace;

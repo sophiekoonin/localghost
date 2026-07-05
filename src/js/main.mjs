@@ -393,6 +393,7 @@ const interestingFacts = [
   "inconsistent crafter",
   "Stardew Valley-dweller",
   "hoarder of recipes",
+  "habitual half-finisher of projects",
   "maker of terrible jokes",
 ];
 
