@@ -114,21 +114,21 @@ export function setColoursForTime(specificTime) {
   if (diff > 0) {
     const timeBlockDurationSecs = supportsTemporal ? entireTransitionDuration.total({ unit: "seconds" }) : entireTransitionDuration;
     transitionProgressPercent = Math.round((diff / timeBlockDurationSecs) * 100);
-
-    root.style.setProperty(
-      "--bg-gradient-top",
-      `color-mix(in oklch, ${stages[nextStageName].color1} ${transitionProgressPercent}%, ${stages[currentStageName].color1})`,
-    );
-    root.style.setProperty(
-      "--bg-gradient-mid",
-      `color-mix(in oklch, ${stages[nextStageName].color2} ${transitionProgressPercent}%, ${stages[currentStageName].color2})`,
-    );
-
-    root.style.setProperty(
-      "--bg-gradient-bottom",
-      `color-mix(in oklch, ${stages[nextStageName].color3} ${transitionProgressPercent}%, ${stages[currentStageName].color3})`,
-    );
   }
+
+  root.style.setProperty(
+    "--bg-gradient-top",
+    `color-mix(in oklch, ${stages[nextStageName].color1} ${transitionProgressPercent}%, ${stages[currentStageName].color1})`,
+  );
+  root.style.setProperty(
+    "--bg-gradient-mid",
+    `color-mix(in oklch, ${stages[nextStageName].color2} ${transitionProgressPercent}%, ${stages[currentStageName].color2})`,
+  );
+
+  root.style.setProperty(
+    "--bg-gradient-bottom",
+    `color-mix(in oklch, ${stages[nextStageName].color3} ${transitionProgressPercent}%, ${stages[currentStageName].color3})`,
+  );
 
   if (!specificTime) {
     window.CSS.registerProperty({

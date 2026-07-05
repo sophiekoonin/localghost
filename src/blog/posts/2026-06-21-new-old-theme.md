@@ -246,20 +246,13 @@ This causes problems at the point where I calculate the diff, as it'll come out 
     }
 ```
 
-Then, we only calculate the percentage and set the variables via JS if `diff` is greater than 0:
+Then, we only calculate a transition percentage if `diff` is greater than 0:
 ```js
   let transitionProgressPercent = 0;
   if (diffInSeconds > 0) {
     transitionProgressPercent = Math.round((diffInSeconds / entireTransitionDurationInSeconds) * 100);
-    root.style.setProperty(
-      "--bg-gradient-top",
-      `color-mix(in oklch, ${stages[nextStageName].color1} ${transitionProgressPercent}%, ${stages[currentStageName].color1})`,
-    );
-    [...]
   }
 ```
-
-That way, if it's before midnight we'll only show the plain ol' nighttime colours that are in the CSS.  
 
 This works for the daytime stage too: if it's more than 90 mins before sunset, it'll come out with a negative diff - so that will just display the daytime colours and no transition. 
 
@@ -367,7 +360,7 @@ On the `body` and `footer` I set `transition-property` and `transition-duration`
   }
 ```
 
-And like motherflipping magic, the colours transition seamlessly into each other when the values change! I love CSS.
+And like motherflipping magic, the colours transition seamlessly into each other when the values change! I love CSS. The animation is such an unnecessary touch, but this is my website so unnecessary is the name of the game. 
 
 ## Polyfilling Temporal for Safari
 Alas, Safari is behind the times. We love progressive enhancement, and of course I could have just removed any of the transition logic for people whose browsers don't support Temporal, but that's no fun. They deserve sunsets too!
