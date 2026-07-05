@@ -32,6 +32,9 @@ const markdownLib = markdownIt(markdownItOptions)
   .use(mdfigcaption, { figcaption: true, lazy: true, async: true });
 
 const config = (eleventyConfig) => {
+  eleventyConfig.setServerOptions({
+    domDiff: false,
+  });
   eleventyConfig.addWatchTarget("./src");
   eleventyConfig.addPlugin(rssPlugin);
   eleventyConfig.addPlugin(syntaxPlugin);
