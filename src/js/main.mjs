@@ -1,4 +1,6 @@
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+import { setColoursForTime, setStage } from "./gradients.mjs";
+
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 function pictureEl(name, alt) {
   return `
 <picture>
@@ -21,13 +23,11 @@ function contentEnd(reducedMotion) {
     '<p>You are visitor number <img src="/img/themes/geocities/static/counter.png" alt="hit counter showing 2147483648" /></p>'
   );
 }
-document.documentElement.classList.remove("no-js");
-const currentPage = window.location.pathname;
 
+const currentPage = window.location.pathname;
 const THEME_STORAGE_KEY = "user-theme";
 const THEMES = {
   city: "city",
-  sunset: "sunset",
   minimalist: "minimalist",
   vaporwave: "vaporwave",
   garden: "garden",
@@ -35,27 +35,18 @@ const THEMES = {
   twothousandandthree: "twothousandandthree",
 };
 
-let palmtrees = [];
 let skyscrapers = [];
 let themeOptions = [];
 let theme = "";
 
-function initThemes() {
-  const search = new URLSearchParams(window.location.search);
-  theme = search.get("theme") || localStorage.getItem(THEME_STORAGE_KEY) || "garden";
-  changeTheme(theme);
-}
-
-initThemes();
-
 function changeTheme(newTheme) {
-  if (!Object.keys(THEMES).includes(newTheme)) {
-    newTheme = "garden";
-  }
   localStorage.setItem(THEME_STORAGE_KEY, newTheme);
   document.documentElement.setAttribute("data-theme", newTheme);
   if (themeOptions.length > 0) {
-    const opt = (themeOptions.find((el) => el.id === newTheme).checked = true);
+    const t = themeOptions.find((el) => el.id === newTheme);
+    if (t) {
+      t.checked = true;
+    }
   }
 
   if (theme !== newTheme) {
@@ -77,10 +68,10 @@ function changeTheme(newTheme) {
   switch (newTheme) {
     case "geocities":
       if (currentPage === "/") {
-        injectGeocitiesGoodness();
+        initGeocities();
       }
-      // this is presumably a proxy for "has the page loaded"
-      if (palmtrees.length > 0) {
+      // this is a proxy for "has the page loaded"
+      if (skyscrapers.length > 0) {
         new fairyDustCursor({ colors: ["#F5B5FC", "#96F7D2", "#FCB1B1"] });
       }
       break;
@@ -88,44 +79,49 @@ function changeTheme(newTheme) {
       inject2003Stuff();
       break;
     case "garden":
-      injectGardenPizazz();
+      initGardenTheme();
+      break;
+    case "city":
+      const savedPref = sessionStorage.getItem("stage") ?? "now";
+      changeStage(savedPref);
+      break;
     default:
       break;
   }
   theme = newTheme;
 }
 
-function hideElement(element) {
-  element.classList.add("hidden");
-}
-function showElement(element) {
-  element.classList.remove("hidden");
+function themeEventListener(e) {
+  const newTheme = e.target.value;
+  changeTheme(newTheme);
 }
 
-function eventListener(e) {
-  if (e.target.checked) {
-    const newTheme = e.target.value;
-    changeTheme(newTheme);
+function timeEventListener(e) {
+  document.body.classList.add("with-transition");
+  const newStage = e.target.value;
+  window.sessionStorage.setItem("stage", newStage);
+  changeStage(newStage);
+}
+
+function changeStage(newStage) {
+  if (newStage === "now") {
+    setColoursForTime();
+  } else {
+    setStage(newStage);
   }
 }
 window.addEventListener("load", () => {
   skyscrapers = Array.from(document.getElementsByClassName("skyscraper"));
-  palmtrees = Array.from(document.getElementsByClassName("palmtree"));
-  themeOptions = Array.from(document.getElementsByClassName("theme-option"));
 
-  themeOptions.forEach((el) => addEventListener("change", eventListener));
-  changeTheme(theme);
-});
-
-window.addEventListener("unload", () => {
-  themeOptions.forEach((el) => removeEventListener("change", eventListener));
+  document.querySelector("#theme-switcher").addEventListener("change", themeEventListener);
+  document.querySelector("#time-selector").addEventListener("change", timeEventListener);
 });
 
 function cleanupGeocities() {
   destroyCursor();
   if (theme === "geocities") {
     if (currentPage === "/") {
-      clearGeocitiesRubbish();
+      clearGeocities();
     }
   }
 }
@@ -315,7 +311,7 @@ function destroyCursor() {
   }
 }
 
-function injectGeocitiesGoodness() {
+function initGeocities() {
   const start = document.getElementById("content-start");
   const end = document.getElementById("content-end");
   if (start && end) {
@@ -326,7 +322,7 @@ function injectGeocitiesGoodness() {
   document.querySelectorAll(".footer-links a").forEach((el) => el.appendChild(document.createElement("span")));
 }
 
-function clearGeocitiesRubbish() {
+function clearGeocities() {
   const start = document.getElementById("content-start");
   const end = document.getElementById("content-end");
   if (start && end) {
@@ -352,13 +348,14 @@ function inject2003Stuff() {
     siteStats.innerHTML = `<div class="sidebar-stats"><p>v3.5 // since 2019, like it's 2003.</p><p>host: <a href="https://neocities.org">neocities</a></p></div>`;
     wrapper.appendChild(siteStats);
     const currently = document.createElement("section");
-    currently.innerHTML = `<p>currently</p><dl class="php-currently"><dt>Drinking:</dt><dd>sparkling water</dd><dt>Listening to:</dt><dd>lo-fi beats to build retro websites to</dd><dt>Wearing:</dt><dd><a href="https://dogecore.com">dogecore</a>, probably</dd><dt>Talking to:</dt><dd>anyone who'll listen on <a href="https://social.lol/@sophie">mastodon</a></dd></dl><p>not powered by <a href="https://web.archive.org/web/20030803171648/http://www.codegrrl.com/scripts/phpcurrently/index.php" target="_blank" rel="noopener">PHPCurrently</a>`;
+    currently.classList.add("flow");
+    currently.innerHTML = `<h2>currently</h2><dl class="php-currently"><dt>Drinking:</dt><dd>diet coke</dd><dt>Listening to:</dt><dd>evanescence</dd><dt>Wearing:</dt><dd>massive flares</dd><dt>Talking to:</dt><dd>friends on MSN</dd></dl><p>not powered by <a href="https://web.archive.org/web/20030803171648/http://www.codegrrl.com/scripts/phpcurrently/index.php" target="_blank" rel="noopener">PHPCurrently</a>`;
     wrapper.appendChild(currently);
     sidebar.appendChild(wrapper);
   }
 }
 
-function injectGardenPizazz() {
+function initGardenTheme() {
   const header = document.getElementsByTagName("header")[0];
   if (header) {
     const btn = document.createElement("button");
@@ -381,4 +378,27 @@ function injectGardenPizazz() {
 function cleanupGarden() {
   const bfly = document.getElementById("butterfly");
   if (bfly) bfly.remove();
+}
+
+const search = new URLSearchParams(window.location.search);
+theme = search.get("theme") || localStorage.getItem("user-theme") || "city";
+changeTheme(theme);
+
+const interestingFacts = [
+  "amateur but enthusiastic gardener",
+  "dog botherer",
+  "baker of delicious treats",
+  "arranger of pop songs for choirs",
+  "occasional public speaker",
+  "inconsistent crafter",
+  "Stardew Valley-dweller",
+  "hoarder of recipes",
+  "habitual half-finisher of projects",
+  "maker of terrible jokes",
+];
+
+const interestingFactEl = document.getElementById("interesting-fact");
+if (interestingFactEl) {
+  const randomInterestingFact = interestingFacts[Math.floor(Math.random() * interestingFacts.length)];
+  interestingFactEl.textContent = randomInterestingFact;
 }

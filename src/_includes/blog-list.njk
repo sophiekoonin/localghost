@@ -11,10 +11,7 @@ eleventyImport:
   {% endif %}
   <div class="list-wrapper">
   <div class="list-heading">
-    <h1>{{ title }}</h1>
-    {% if not tag %}
-    <a href="/tags">Browse by tag</a>
-    {% endif %}
+    <h1 class="visually-hidden">{{ title }}</h1>
   </div>
   <div
     class="content-inner flow" {% if subtitle %} data-with-subtitle {% endif %}>

@@ -57,7 +57,6 @@ function writePost(raindrops) {
 
 async function main() {
   fetchLinks().then((res) => {
-    debugger;
     if (res.items.length === 0) {
       console.log("No links found, exiting");
       return;

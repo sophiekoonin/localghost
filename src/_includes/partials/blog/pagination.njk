@@ -5,7 +5,10 @@
         <span class="pagination-arrow" aria-hidden="true">←</span>
         <span>Previous page</span>
       </a>
+      {% else %}
+       <div></div>
     {% endif %}
+    <a href="/tags">Browse by tag</a>
     {% if pagination.href.next %}
       <a href="{{ pagination.href.next }}{{ paginationAnchor }}" data-direction="forwards">
         <span>Next page</span>
