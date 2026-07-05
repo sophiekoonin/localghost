@@ -101,7 +101,6 @@ export function setColoursForTime(specificTime) {
     default:
       break;
   }
-
   const nextStageName = stages[currentStageName].next;
 
   const entireTransitionDuration = supportsTemporal ? Temporal.Duration.from("PT1H30M") : 5400;

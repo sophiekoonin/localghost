@@ -21,16 +21,19 @@ const getNewTimeInstance = supportsTemporal
       return date;
     };
 if (theme === "city") {
-  let stage;
-  const timeNow = supportsTemporal ? Temporal.Now.plainTimeISO() : new Date();
-  if (compareTimes(timeNow, getNewTimeInstance("21:00:00")) >= 0 || compareTimes(timeNow, getNewTimeInstance("06:30:00")) < 0) {
-    stage = "night";
-  } else if (compareTimes(timeNow, getNewTimeInstance("08:00:00")) < 0) {
-    stage = "sunrise";
-  } else if (compareTimes(timeNow, getNewTimeInstance("19:30:00")) < 0) {
-    stage = "day";
-  } else {
-    stage = "sunset";
+  let stage = window.sessionStorage.getItem("stage");
+
+  if (!stage) {
+    const timeNow = supportsTemporal ? Temporal.Now.plainTimeISO() : new Date();
+    if (compareTimes(timeNow, getNewTimeInstance("21:00:00")) >= 0 || compareTimes(timeNow, getNewTimeInstance("06:30:00")) < 0) {
+      stage = "night";
+    } else if (compareTimes(timeNow, getNewTimeInstance("08:00:00")) < 0) {
+      stage = "sunrise";
+    } else if (compareTimes(timeNow, getNewTimeInstance("19:30:00")) < 0) {
+      stage = "day";
+    } else {
+      stage = "sunset";
+    }
   }
   document.documentElement.setAttribute("data-time", stage);
 }

@@ -60,9 +60,6 @@ function changeTheme(newTheme) {
       case "garden":
         cleanupGarden();
         break;
-      case "city":
-        setColoursForTime();
-        break;
       default:
         break;
     }
@@ -83,8 +80,11 @@ function changeTheme(newTheme) {
       break;
     case "garden":
       initGardenTheme();
+      break;
     case "city":
-      setColoursForTime();
+      const savedPref = sessionStorage.getItem("stage") ?? "now";
+      changeStage(savedPref);
+      break;
     default:
       break;
   }
@@ -98,14 +98,18 @@ function themeEventListener(e) {
 
 function timeEventListener(e) {
   document.body.classList.add("with-transition");
-  const newTime = e.target.value;
-  if (newTime === "now") {
-    setColoursForTime();
-  } else {
-    setStage(newTime);
-  }
+  const newStage = e.target.value;
+  window.sessionStorage.setItem("stage", newStage);
+  changeStage(newStage);
 }
 
+function changeStage(newStage) {
+  if (newStage === "now") {
+    setColoursForTime();
+  } else {
+    setStage(newStage);
+  }
+}
 window.addEventListener("load", () => {
   skyscrapers = Array.from(document.getElementsByClassName("skyscraper"));
 
