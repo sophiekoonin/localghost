@@ -19,8 +19,15 @@
   --border-radius: 10px;
 
   body {
-    --background: fixed linear-gradient(var(--bg-gradient-top), var(--bg-gradient-mid) 80%);
-
+    background-image: linear-gradient(var(--bg-gradient-top), var(--bg-gradient-mid) 80%);
+    background-attachment: fixed;
+    // https://browserstrangeness.github.io/css_hacks.html#safari
+    @supports (not (-webkit-text-size-adjust: none)) and (font: -apple-system-body) {
+      // YIKES: this is a workaround for an issue where Safari on MacOS glitches out with the background gradient
+      // when it's fixed in a container context
+      // body is container-type: inline-size
+      background-attachment: initial;
+    }
     // Don't want it to transition on first load - only when the user selects a new time.
     &.with-transition {
       transition-property: --bg-gradient-top, --bg-gradient-mid;
