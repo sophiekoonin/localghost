@@ -1,8 +1,7 @@
 ---
 title: "Time-based background colour transitions with Temporal and CSS color-mix"
-date: 2026-06-21
-draft: true
-tags: ["site"]
+date: 2026-07-05
+tags: ["site", "temporal", "javascript", "css"]
 excerptText: "A visual refresh with a background that changes colour according to the time of day, using the new Temporal API along with CSS custom properties that blend into each other."
 ---
 
