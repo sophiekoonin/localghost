@@ -1,9 +1,9 @@
 ---
-title: "Creating background colour transitions with Temporal and color-mix"
+title: "Time-based background colour transitions with Temporal and CSS color-mix"
 date: 2026-06-21
 draft: true
 tags: ["site"]
-excerptText: "A visual refresh with a background that changes colour according to the time of day, using the new Temporal API."
+excerptText: "A visual refresh with a background that changes colour according to the time of day, using the new Temporal API along with CSS custom properties that blend into each other."
 ---
 
 I've given my website a bit of a refresh! There's a slightly updated layout if you're on desktop, plus I ditched the `etc` page and I've revamped my [links page](/links) to be powered by [raindrop.io](https://raindrop.io). The [minimalist theme](?theme=minimalist) is still minimalist, but a bit more fancy. The [vaporwave theme](?theme=vaporwave) has a newly jazzed-up nav bar with some adorable little icons. But the biggest change is to the [city theme](?theme=city), which was previously a starry-sky dark mode theme.
@@ -313,12 +313,9 @@ I initially did this with `@property` declarations in the CSS:
 ```
 Unfortunately, setting these in the CSS meant that you got a flash of whichever initial values I'd set before the JS kicked in and set the appropriate colours for time of day. If this page were server-driven, or always started from the same colour for everyone, it would've been fine. But the starting colour depends on your time zone and is only calculated when the initial JS runs. 
 
-I got around this by setting the properties via JS instead, when we set the time to "now":
+I got around this by setting the properties via JS instead:
 
 ```js
-// we only provide a time if we're setting a specific stage
-// so "now" means no time provided 
-if (!specificTime) {
   window.CSS.registerProperty({
     name: "--bg-gradient-top",
     syntax: "<color>",
@@ -339,9 +336,9 @@ if (!specificTime) {
     inherits: true,
     initialValue: stages[currentStageName].color3,
   });
-}
 ```
 
+I had to wrap these in a `try/catch` as it will throw if the property's already been defined. It wasn't super trivial to figure out if this property had already been set, as the CSS does define some values for these with the regular `--bg-gradient-xx: ...` syntax.
 
 
 On the `body` and `footer` I set `transition-property` and `transition-duration` to tell it which properties I want to animate:
@@ -427,6 +424,12 @@ Then I call it like this:
 I wrote a whole suite of unit tests (for a PERSONAL project! I know!) to make sure behaviour was exactly the same, and it seems to be working nicely. I'm hoping I can remove the polyfills in time, but given that the web is beautifully backwards-compatible, it's not the end of the world if it stays around longer than it needs to.
 
 
-## It's not perfect
+## This was surprisingly complex
 
-Because this is a static site, it's all client-side JS. There might be a little bit of a flash when you navigate between pages in Firefox (it seems to be fine with Chrome). Ideally I'd compute this on the server and serve the content with the correct colour values, but my web host only supports static sites. 
+The individual moving parts of this project - getting the time and choosing colours, mixing the colours by percentages, animating the transitions - were not that complicated in isolation. Sure, they required me to learn things and look things up, but it was a fun thing to build. 
+
+The challenge came wiring it all together in a way that didn't cause flashes of unstyled content (the dreaded FOUC) or flashes of the wrong stage before we calculate the current time. This is a static site, so it's all client-side JS. Ideally I'd compute user's the current time on the server and serve the content with the correct colour values in the HTML, but my web host only supports static sites. 
+
+To get around that I had to add another separate `init.js` script which runs instantly - it's got a bit of a copy and paste job going on with some of the functions, but it does a very rudimentary check of the user's current time and sets the stage accordingly with no transitions, just so there's *some* styling. My JS is all modules, so is [deferred by default](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script#defer). I could've also done this in an inline script. I experimented with making all the js render-blocking with `blocking="render"`, but that felt a bit gross and also didn't fix the FOUC in Firefox. 
+
+But that's fine, y'know? It's my personal site and it doesn't need to be perfect. 

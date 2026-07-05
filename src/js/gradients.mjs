@@ -137,7 +137,7 @@ export function setColoursForTime(specificTime) {
     `color-mix(in oklch, ${stages[nextStageName].color3} ${transitionProgressPercent}%, ${stages[currentStageName].color3})`,
   );
 
-  if (!specificTime) {
+  try {
     window.CSS.registerProperty({
       name: "--bg-gradient-top",
       syntax: "<color>",
@@ -158,6 +158,8 @@ export function setColoursForTime(specificTime) {
       inherits: true,
       initialValue: stages[currentStageName].color3,
     });
+  } catch {
+    // it's not trivial to figure out if we've set these already, so just swallow the error
   }
 
   root.setAttribute("data-time", currentStageName);

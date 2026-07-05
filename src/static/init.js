@@ -1,3 +1,4 @@
+document.documentElement.classList.remove("no-js");
 const search = new URLSearchParams(location.search);
 const theme = search.get("theme") || localStorage.getItem("user-theme") || "city";
 document.documentElement.setAttribute("data-theme", theme);

@@ -112,7 +112,7 @@
 
   color: oklch(78.591% 0.1422 62.595);
 
-  button[popovertarget="time-selector"] {
+  button[popovertarget="time-selector"]:not(.no-js button) {
     display: unset;
     background: none;
     border: 0;
@@ -196,7 +196,8 @@
     --bg-gradient-mid: oklch(75.504% 0.24612 357.26);
     --bg-gradient-bottom: oklch(88.591% 0.1422 62.595);
   }
-  &[data-time="night"] {
+  &[data-time="night"],
+  &.no-js {
     color-scheme: dark;
     --bg-gradient-top: oklch(25.27% 0.0919 276.73);
     --bg-gradient-mid: oklch(47.35% 0.284 283.78);
