@@ -1,7 +1,6 @@
 @use "../utils";
 
-[data-theme="minimalist"],
-.no-js {
+[data-theme="minimalist"] {
   color-scheme: light dark;
   --white: oklch(97.476% 0.0065 106.786);
   --black: oklch(25.615% 0.00003 271.152);

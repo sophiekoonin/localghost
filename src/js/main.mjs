@@ -97,6 +97,7 @@ function themeEventListener(e) {
 }
 
 function timeEventListener(e) {
+  document.body.classList.add("with-transition");
   const newTime = e.target.value;
   if (newTime === "now") {
     setColoursForTime();
@@ -375,7 +376,6 @@ function cleanupGarden() {
   if (bfly) bfly.remove();
 }
 
-document.documentElement.classList.remove("no-js");
 const search = new URLSearchParams(window.location.search);
 theme = search.get("theme") || localStorage.getItem("user-theme") || "city";
 changeTheme(theme);

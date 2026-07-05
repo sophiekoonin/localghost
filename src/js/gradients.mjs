@@ -4,7 +4,7 @@ const root = document.documentElement;
 let interval;
 let timeUntilNextStage = 0;
 let currentStageName = "day";
-const supportsTemporal = typeof Temporal?.PlainTime !== "undefined";
+const supportsTemporal = typeof Temporal !== "undefined";
 const compare = supportsTemporal ? Temporal.PlainTime.compare : jsDateCompare;
 export function jsDateCompare(date1, date2) {
   const date1Ms = date1.getTime();
@@ -71,8 +71,8 @@ export function durationBetween(time1, time2) {
   return time1.until(time2);
 }
 
-export function setColoursForTime(time) {
-  const timeNow = time ? newTimeInstance(time) : getUserTime();
+export function setColoursForTime(specificTime) {
+  const timeNow = specificTime ? newTimeInstance(specificTime) : getUserTime();
   switch (true) {
     case compare(timeNow, stages.sunrise.start) < 0 || compare(timeNow, stages.night.start) >= 0: {
       currentStageName = "night";
@@ -114,9 +114,45 @@ export function setColoursForTime(time) {
   if (diff > 0) {
     const timeBlockDurationSecs = supportsTemporal ? entireTransitionDuration.total({ unit: "seconds" }) : entireTransitionDuration;
     transitionProgressPercent = Math.round((diff / timeBlockDurationSecs) * 100);
+
+    root.style.setProperty(
+      "--bg-gradient-top",
+      `color-mix(in oklch, ${stages[nextStageName].color1} ${transitionProgressPercent}%, ${stages[currentStageName].color1})`,
+    );
+    root.style.setProperty(
+      "--bg-gradient-mid",
+      `color-mix(in oklch, ${stages[nextStageName].color2} ${transitionProgressPercent}%, ${stages[currentStageName].color2})`,
+    );
+
+    root.style.setProperty(
+      "--bg-gradient-bottom",
+      `color-mix(in oklch, ${stages[nextStageName].color3} ${transitionProgressPercent}%, ${stages[currentStageName].color3})`,
+    );
   }
 
-  setProperties(nextStageName, transitionProgressPercent);
+  if (!specificTime) {
+    window.CSS.registerProperty({
+      name: "--bg-gradient-top",
+      syntax: "<color>",
+      inherits: true,
+      initialValue: stages[currentStageName].color1,
+    });
+
+    window.CSS.registerProperty({
+      name: "--bg-gradient-mid",
+      syntax: "<color>",
+      inherits: true,
+      initialValue: stages[currentStageName].color2,
+    });
+
+    window.CSS.registerProperty({
+      name: "--bg-gradient-bottom",
+      syntax: "<color>",
+      inherits: true,
+      initialValue: stages[currentStageName].color3,
+    });
+  }
+
   root.setAttribute("data-time", currentStageName);
 }
 
@@ -126,19 +162,3 @@ export function setStage(stage) {
 
 window.getTimeOfDay = () => currentStageName;
 window.setColoursForTime = setColoursForTime;
-
-function setProperties(nextStageName, transitionProgressPercent) {
-  root.style.setProperty(
-    "--bg-gradient-top",
-    `color-mix(in oklch, ${stages[nextStageName].color1} ${transitionProgressPercent}%, ${stages[currentStageName].color1})`,
-  );
-  root.style.setProperty(
-    "--bg-gradient-mid",
-    `color-mix(in oklch, ${stages[nextStageName].color2} ${transitionProgressPercent}%, ${stages[currentStageName].color2})`,
-  );
-
-  root.style.setProperty(
-    "--bg-gradient-bottom",
-    `color-mix(in oklch, ${stages[nextStageName].color3} ${transitionProgressPercent}%, ${stages[currentStageName].color3})`,
-  );
-}

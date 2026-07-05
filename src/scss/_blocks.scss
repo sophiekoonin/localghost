@@ -10,7 +10,6 @@
   }
 
   font-size: var(--step-3);
-  font-display: optional;
   a {
     color: inherit;
     text-decoration: none;
@@ -427,11 +426,6 @@ button[popovertarget="theme-switcher"] {
       text-decoration: underline;
     }
   }
-}
-
-.no-js #theme-switcher-button,
-.no-js #theme-switcher-blurb {
-  display: none;
 }
 
 .page-wrapper {

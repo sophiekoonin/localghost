@@ -102,7 +102,7 @@ CSS custom properties are easy to set via JS - you can use `root.style.setProper
   );
 ```
 
-When the page loads, I'm running a function that gets the user time and compares it to each of these start times to see where it fits. I had to make my JS render-blocking, for my sins, as I needed to make sure it ran before the rest of the page rendered - otherwise you end up with flashes of unstyled content between page loads. Thankfully it still only takes a few ms to execute, and the page looks good if you have JS disabled.
+When the page loads, I'm running a function that gets the user time and compares it to each of these start times to see where it fits. I had to make my JS render-blocking, for my sins, as I needed to make sure it ran before the rest of the page rendered - otherwise you end up with flashes of unstyled content between page loads. Thankfully it still only takes a few ms to execute, and the page looks good if you have JS disabled (it shows the 'minimalist' theme).
 
 Unlike `Date`, we don't have to do any gymnastics to compare Temporal instances: there's literally a `compare` function on each type of instance. Just like with other JS comparison functions, it returns `1` if the first instance is greater than the second, `0` if the two instances are the same, and `-1` if the first instance is less than the second. 
 
@@ -246,15 +246,20 @@ This causes problems at the point where I calculate the diff, as it'll come out 
     }
 ```
 
-Then, we only calculate the percentage if `diff` is greater than 0:
+Then, we only calculate the percentage and set the variables via JS if `diff` is greater than 0:
 ```js
   let transitionProgressPercent = 0;
   if (diffInSeconds > 0) {
     transitionProgressPercent = Math.round((diffInSeconds / entireTransitionDurationInSeconds) * 100);
+    root.style.setProperty(
+      "--bg-gradient-top",
+      `color-mix(in oklch, ${stages[nextStageName].color1} ${transitionProgressPercent}%, ${stages[currentStageName].color1})`,
+    );
+    [...]
   }
 ```
 
-That way, if it's before midnight all the percentages will be 0 and we'll only show the nighttime colours.  
+That way, if it's before midnight we'll only show the plain ol' nighttime colours that are in the CSS.  
 
 This works for the daytime stage too: if it's more than 90 mins before sunset, it'll come out with a negative diff - so that will just display the daytime colours and no transition. 
 
@@ -293,24 +298,58 @@ As a bonus touch, I wanted the colour change to transition smoothly when you swi
 
 Without this explicit custom property declaration, I could set the value of `--bg-gradient-top` to a number, or a position, or anything I wanted. By saying it's definitely a colour, the browser knows how to transition it into other values of the same type.
 
+I initially did this with `@property` declarations in the CSS:
+
 ```css
 @property --bg-gradient-top {
   syntax: "<color>";
   inherits: true;
-  initial-value: #fff;
+  initial-value: oklch(...);
 }
 @property --bg-gradient-mid {
   syntax: "<color>";
   inherits: true;
-  initial-value: #fff;
+  initial-value: oklch(...);
 }
 @property --bg-gradient-bottom {
   syntax: "<color>";
   inherits: true;
-  initial-value: #fff;
+  initial-value: oklch(...);
 }
 
 ```
+Unfortunately, setting these in the CSS meant that you got a flash of whichever initial values I'd set before the JS kicked in and set the appropriate colours for time of day. If this page were server-driven, or always started from the same colour for everyone, it would've been fine. But the starting colour depends on your time zone and is only calculated when the initial JS runs. 
+
+I got around this by setting the properties via JS instead, when we set the time to "now":
+
+```js
+// we only provide a time if we're setting a specific stage
+// so "now" means no time provided 
+if (!specificTime) {
+  window.CSS.registerProperty({
+    name: "--bg-gradient-top",
+    syntax: "<color>",
+    inherits: true,
+    initialValue: stages[currentStageName].color1,
+  });
+
+  window.CSS.registerProperty({
+    name: "--bg-gradient-mid",
+    syntax: "<color>",
+    inherits: true,
+    initialValue: stages[currentStageName].color2,
+  });
+
+  window.CSS.registerProperty({
+    name: "--bg-gradient-bottom",
+    syntax: "<color>",
+    inherits: true,
+    initialValue: stages[currentStageName].color3,
+  });
+}
+```
+
+
 
 On the `body` and `footer` I set `transition-property` and `transition-duration` to tell it which properties I want to animate:
 
@@ -393,3 +432,12 @@ Then I call it like this:
 ```
 
 I wrote a whole suite of unit tests (for a PERSONAL project! I know!) to make sure behaviour was exactly the same, and it seems to be working nicely. I'm hoping I can remove the polyfills in time, but given that the web is beautifully backwards-compatible, it's not the end of the world if it stays around longer than it needs to.
+
+
+## It's not perfect
+
+Because this is a static site, it's all client-side JS. There might be a little bit of a flash when you navigate between pages in Firefox (it seems to be fine with Chrome). Ideally I'd compute this on the server and serve the content with the correct colour values, but my web host only supports static sites. 
+
+## See the full code 
+
+The [repo](https://github.com/sophiekoonin/localghost) for this website is public, feel free to have a look at the code in `src/js/gradients.mjs`. My CSS is definitely extremely messy, but then so is my brain...! 
