@@ -23,19 +23,11 @@ const globalData = {
     const hash = md5(cssFile).slice(0, 8);
     return `/css/style.${hash}.css`;
   },
-  jsFiles() {
+  jsFile() {
     const jsDir = path.join(__dirname, "..", "js");
-    return Object.fromEntries(
-      fs
-        .readdirSync(jsDir)
-        .filter((f) => f.endsWith(".mjs") && f !== "js.11ty.mjs")
-        .map((f) => {
-          const contents = fs.readFileSync(path.join(jsDir, f), "utf-8");
-          const hash = md5(contents).slice(0, 8);
-          const name = path.basename(f, ".mjs");
-          return [name, `/js/${name}.mjs?md5=${hash}`];
-        }),
-    );
+    const jsFile = fs.readFileSync(path.join(jsDir, "main.mjs"), "utf-8");
+    const hash = md5(jsFile).slice(0, 8);
+    return `/js/main.${hash}.mjs`;
   },
 };
 

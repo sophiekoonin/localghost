@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="city" class="no-js">
   {% set cssFilename = global.cssFile() %}
-  {% set jsFiles = global.jsFiles() %}
+  {% set jsFile = global.jsFile() %}
   <head>
     {% include "partials/meta.njk" %}
     <title>
@@ -11,9 +11,7 @@
       {% endif %}
       localghost</title>
     <script src="/init.js"></script>
-    {% for k, filename in jsFiles %}
-      <script rel="subresource" src={{ filename }} type="module"></script>
-    {% endfor %}
+      <script rel="subresource" src={{ jsFile }} type="module"></script>
     {% if extraCSS %}
       {% for file in extraCSS %}
         <link rel="stylesheet" type="text/css" href="/css/{{ file }}">
