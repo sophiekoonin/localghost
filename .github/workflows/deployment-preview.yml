@@ -1,0 +1,26 @@
+name: "Deploy to Neocities"
+on:
+  push:
+    branches:
+      - 'preview-*'
+jobs:
+  deploy:
+    name: "Deploy to Neocities preview site"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "26"
+          cache: "npm"
+      - run: npm install
+      - run: npm run build:preview
+        env:
+          WEBMENTION_IO_TOKEN: ${{ secrets.WEBMENTION_IO_TOKEN }}
+          RAINDROP_BLOGROLL_COLLECTION_ID: ${{ secrets.RAINDROP_BLOGROLL_COLLECTION_ID }}
+          RAINDROP_TOKEN: ${{ secrets.RAINDROP_TOKEN }}
+      - uses: bcomnes/deploy-to-neocities@v3
+        with:
+          api_key: ${{ secrets.NEOCITIES_PREVIEW_TOKEN }}
+          dist_dir: "_site/"
+          cleanup: false
