@@ -5,9 +5,9 @@ eleventyImport:
 
 {% extends "base.njk" %}
 {% block content %}
-  {% set postListItems = pagination.items %}
+  {% set postListItems = pagination.items | filterRSSClub %}
   {% if tag %}
-    {% set postListItems = collections[tag] | reverse %}
+    {% set postListItems = collections[tag] | reverse | filterRSSClub  %}
   {% endif %}
   <div class="list-wrapper">
   <div class="list-heading">

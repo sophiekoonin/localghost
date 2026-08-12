@@ -3,7 +3,7 @@ title: "RSS feeds"
 layout: "page.njk"
 ---
 
-localghost.dev has several RSS feeds for your enjoyment! Subscribe to all my posts, or just the categories of the ones you're interested in.
+localghost.dev has several RSS feeds for your enjoyment! Subscribe to all my posts, or just the categories of the ones you're interested in. Sometimes I'll even publish special RSS-only posts... 
 
 * [All posts](https://localghost.dev/feed.xml) &ndash; the default feed of everything I post.
 * [Articles](https://localghost.dev/articles.xml) &ndash; writings and thoughts.

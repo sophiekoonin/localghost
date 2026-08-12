@@ -116,6 +116,13 @@ const config = (eleventyConfig) => {
     return (tags || []).filter((tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
   });
 
+  eleventyConfig.addFilter("filterRSSClub", function filterRSSClub(collection) {
+    return (collection || []).filter((item) => {
+      if (typeof item === "string") return true; // tag pages
+      return !item.data.tags.includes("rss-club");
+    });
+  });
+
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   eleventyConfig.setUseGitIgnore(false);
 
