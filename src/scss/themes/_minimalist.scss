@@ -11,6 +11,7 @@
   --header-color: light-dark(var(--black), var(--white));
   --accent-color: light-dark(oklch(0.61 0.17 299.8 / 1), oklch(92.68% 0.05627 216.115));
   --bullet: disc;
+  --code-bg: light-dark(hsl(0, 0%, 92%), hsl(0, 0%, 20%));
 
   .skyscraper {
     display: none;
