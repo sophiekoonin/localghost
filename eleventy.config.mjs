@@ -1,3 +1,4 @@
+import fs from "fs";
 import slugify from "@sindresorhus/slugify";
 // Plugins
 import rssPlugin from "@11ty/eleventy-plugin-rss";

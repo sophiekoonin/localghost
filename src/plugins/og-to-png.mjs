@@ -16,10 +16,11 @@ export default async function () {
       }
       const outputFilename = `${filename.substring(0, filename.length - 4)}.png`;
 
-      if (!fs.existsSync(path.join(ogImagesDir, outputFilename))) {
+      const pngFileExists = await fsPromises.stat(path.join(ogImagesDir, outputFilename), { throwIfNoEntry: false });
+      if (!pngFileExists) {
         const imageUrl = socialPreviewImagesDir + filename;
         try {
-          Image(imageUrl, {
+          await Image(imageUrl, {
             formats: ["png"],
             outputDir: ogImagesDir,
             filenameFormat: (id, src, width, format, options) => outputFilename,
@@ -29,6 +30,7 @@ export default async function () {
           console.error(e);
         }
       }
+      await fsPromises.rm(path.join(socialPreviewImagesDir, filename));
     });
   }
 }
