@@ -83,8 +83,10 @@ const config = (eleventyConfig) => {
     return collection.getFilteredByGlob("./src/blog/posts/*.md");
   });
 
+  const now = new Date();
+
   eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
-    if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+    if (shouldHidePost(data, now) && process.env.ELEVENTY_RUN_MODE === "build") {
       return false;
     }
   });
@@ -138,3 +140,7 @@ const config = (eleventyConfig) => {
 };
 
 export default config;
+
+function shouldHidePost(data, now) {
+  return data.draft || (data.date && data.date > now);
+}
