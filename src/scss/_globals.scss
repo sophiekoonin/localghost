@@ -9,9 +9,13 @@ body {
   background: var(--background);
   color: var(--body-color);
   font-family: var(--body-font-family);
-  font-variation-settings: "wght" 350;
   container-type: inline-size;
   contain: layout;
+  font-variation-settings: "wght" 350;
+
+  strong {
+    font-variation-settings: "wght" 650;
+  }
 }
 
 select {
